@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Pack Example": {
+      "commandName": "Project",
+      "commandLineArgs": "\"YGO_2020\""
+    },
+    "Unpack Example": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\SteamLibrary\\steamapps\\common\\Yu-Gi-Oh! Legacy of the Duelist Link Evolution\\YGO_2020.toc\""
+    }
+  }
+}

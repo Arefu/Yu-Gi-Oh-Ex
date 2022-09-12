@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1b14e366-56ba-408b-997b-3853210fc42e}</ProjectGuid>
+    <RootNamespace>YuGiOh</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)-$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)-$(Platform)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(ProjectDir)Dependencies\Dear-ImGui;$(ProjectDir)Headers</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>$(ProjectName)-$(Platform).def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);detours.lib;Shlwapi.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(ProjectDir)Dependencies\Dear-ImGui;$(ProjectDir)Headers</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>$(ProjectName)-$(Platform).def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);detours.lib;Shlwapi.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui.cpp" />
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\ImGui\D3D11\D3D11.cpp" />
+    <ClCompile Include="Source\ImGui\YuGIOh_ImGui.cpp" />
+    <ClCompile Include="Source\Handlers\Avatar.cpp" />
+    <ClCompile Include="Source\Config.cpp" />
+    <ClCompile Include="Source\Detours\Game.cpp" />
+    <ClCompile Include="Source\Utilities\Memory.cpp" />
+    <ClCompile Include="Source\Handlers\Player.cpp" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Yu-Gi-Oh-x64.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\Dear-ImGui\imconfig.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui_internal.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imstb_textedit.h" />
+    <ClInclude Include="Dependencies\Dear-ImGui\imstb_truetype.h" />
+    <ClInclude Include="Headers\ImGui\D3D11\D3D11.h" />
+    <ClInclude Include="Headers\Handlers\Avatar.h" />
+    <ClInclude Include="Headers\Types\CardID.h" />
+    <ClInclude Include="Headers\Config.h" />
+    <ClInclude Include="Headers\Detours\Game.h" />
+    <ClInclude Include="Headers\Utilities\Memory.h" />
+    <ClInclude Include="Headers\Handlers\Player.h" />
+    <ClInclude Include="Headers\Types\Cards.h" />
+    <ClInclude Include="Headers\Yu-Gi-Oh.h" />
+    <ClInclude Include="Headers\ImGui\YuGiOh_ImGui.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

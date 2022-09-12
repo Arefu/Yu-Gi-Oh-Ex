@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Yu-Gi-Oh">
+      <UniqueIdentifier>{6342f906-b557-4a90-b662-5cee070606f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Yu-Gi-Oh">
+      <UniqueIdentifier>{49c4526d-279f-4c89-a405-3014f3fef698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{69ed9766-f8d2-4fb1-90da-4e2b3981e9dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Types">
+      <UniqueIdentifier>{028a151a-623a-4061-b6e3-1e1a30699956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Handlers">
+      <UniqueIdentifier>{dce7369e-d832-4f40-837e-deac42e74e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Handlers">
+      <UniqueIdentifier>{e8f5ec6d-9725-43b2-9772-6e5c20179478}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Detours\Game.cpp">
+      <Filter>Source Files\Yu-Gi-Oh</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Config.cpp">
+      <Filter>Source Files\Yu-Gi-Oh</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utilities\Memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Handlers\Player.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Handlers\Avatar.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ImGui\YuGIOh_ImGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ImGui\D3D11\D3D11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_impl_dx11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\Dear-ImGui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Yu-Gi-Oh-x64.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Yu-Gi-Oh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Detours\Game.h">
+      <Filter>Header Files\Yu-Gi-Oh</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Config.h">
+      <Filter>Header Files\Yu-Gi-Oh</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Types\CardID.h">
+      <Filter>Header Files\Yu-Gi-Oh</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Utilities\Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Handlers\Player.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Types\Cards.h">
+      <Filter>Header Files\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Handlers\Avatar.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGui\YuGiOh_ImGui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGui\D3D11\D3D11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui_impl_dx11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui_impl_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imgui_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imstb_rectpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imstb_textedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Dear-ImGui\imstb_truetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

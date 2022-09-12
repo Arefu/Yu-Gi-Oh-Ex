@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh_Loader", "Yu-Gi-Oh_Loader\Yu-Gi-Oh_Loader.vcxproj", "{4B364AFE-FDBF-4FDC-94A2-638A441E3536}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B14E366-56BA-408B-997B-3853210FC42E} = {1B14E366-56BA-408B-997B-3853210FC42E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh", "Yu-Gi-Oh\Yu-Gi-Oh.vcxproj", "{1B14E366-56BA-408B-997B-3853210FC42E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WolfX", "Tools\WolfX\WolfX.csproj", "{F2BD313D-D540-4511-81BC-801C86196BBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yami-Yugi", "Tools\Yami-Yugi\Yami-Yugi.csproj", "{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Debug|Any CPU.Build.0 = Debug|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Debug|x64.ActiveCfg = Debug|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Debug|x64.Build.0 = Debug|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|Any CPU.ActiveCfg = Release|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|Any CPU.Build.0 = Release|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|x64.ActiveCfg = Release|x64
+		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|x64.Build.0 = Release|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|Any CPU.Build.0 = Debug|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|x64.ActiveCfg = Debug|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|x64.Build.0 = Debug|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|Any CPU.ActiveCfg = Release|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|Any CPU.Build.0 = Release|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|x64.ActiveCfg = Release|x64
+		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|x64.Build.0 = Release|x64
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|x64.Build.0 = Debug|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Release|x64.ActiveCfg = Release|Any CPU
+		{F2BD313D-D540-4511-81BC-801C86196BBD}.Release|x64.Build.0 = Release|Any CPU
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Debug|Any CPU.Build.0 = Debug|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Debug|x64.ActiveCfg = Debug|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Debug|x64.Build.0 = Debug|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|Any CPU.ActiveCfg = Release|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|Any CPU.Build.0 = Release|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|x64.ActiveCfg = Release|x64
+		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6909B26-71E9-46F1-A575-81A2F94AC431}
+	EndGlobalSection
+EndGlobal
