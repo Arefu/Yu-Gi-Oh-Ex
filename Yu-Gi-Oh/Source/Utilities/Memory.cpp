@@ -23,6 +23,21 @@ int Memory::GetSceneValue()
 	return Base;
 }
 
+void Memory::SetSceneValue(DWORD Value)
+{
+	DWORD Address = Memory::GetThreadStackAddr(0);
+	DWORD Base = 0;
+
+	Address = Address - 2752;
+	Base = *(long long*)Address;
+	Base += 0x10;
+	Base = *(long long*)Base;
+	Base += 0x358;
+	Base = *(long long*)Base;
+
+	*(long long*)Base = Value;
+}
+
 DWORD Memory::GetThreadStackAddr(int AddrToGet)
 {
 	DWORD ThreadId = 0;
@@ -73,7 +88,7 @@ DWORD Memory::GetThreadStartAddress(HANDLE processHandle, HANDLE hThread) {
 	CloseHandle(hThread);
 
 	if (stacktop) {
-		DWORD* buf32 = new DWORD[4096];
+		auto* buf32 = new DWORD[4096];
 
 		if (ReadProcessMemory(processHandle, (LPCVOID)(stacktop - 4096), buf32, 4096, NULL)) {
 			for (int i = 4096 / 4 - 1; i >= 0; --i) {

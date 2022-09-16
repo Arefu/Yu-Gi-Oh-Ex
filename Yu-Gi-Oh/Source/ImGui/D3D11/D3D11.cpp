@@ -1,7 +1,7 @@
 #include "ImGui/D3D11/D3D11.h"
 
 Address DirectX::_ImGuiD3D11SetupPatchAddres;
-Address YuGiOh_ImGui::_ImGuiPresentAddress;
+Address YuGiOh_ImGui::im_gui_present_address;
 
 IDXGISwapChain* DirectX::pD3D11SwapChain;
 ID3D11Device* DirectX::pD3D11Device;
@@ -10,7 +10,7 @@ ID3D11DeviceContext* DirectX::pD3D11DeviceContext;
 void DirectX::Patch_ImGUi_D3D11Setup(BYTE* a1)
 {
 	typedef __int64 sub_1408CA830(BYTE*);
-	sub_1408CA830* func_1408CA830 = (sub_1408CA830*)DirectX::_ImGuiD3D11SetupPatchAddres;
+	auto* func_1408CA830 = (sub_1408CA830*)DirectX::_ImGuiD3D11SetupPatchAddres;
 
 	D3D_FEATURE_LEVEL featureLevel = D3D_FEATURE_LEVEL_11_0;
 	DXGI_SWAP_CHAIN_DESC swapChainDesc;
@@ -32,8 +32,8 @@ void DirectX::Patch_ImGUi_D3D11Setup(BYTE* a1)
 	DetourTransactionBegin();
 	DetourUpdateThread(GetCurrentThread());
 
-	YuGiOh_ImGui::_ImGuiPresentAddress = reinterpret_cast<Address>(vmt[8]);
-	DetourAttach((PVOID*)(&YuGiOh_ImGui::_ImGuiPresentAddress), YuGiOh_ImGui::Start_DearImGui);
+	YuGiOh_ImGui::im_gui_present_address = reinterpret_cast<Address>(vmt[8]);
+	DetourAttach((PVOID*)(&YuGiOh_ImGui::im_gui_present_address), YuGiOh_ImGui::Start_DearImGui);
 
 	DetourTransactionCommit();
 

@@ -6,7 +6,6 @@
 #include "ImGui/D3D11/D3D11.h"
 
 //Global Variables
-static Config g_Config;
 static Player g_Player1(0x143497C40, TRUE);
 static Player g_Player2(0x1434989D4, TRUE);
 

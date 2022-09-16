@@ -30,6 +30,21 @@
         {
             this.WolfX_TabManager = new System.Windows.Forms.TabControl();
             this.Page_CardManager = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CB_IsThisCardDLC = new System.Windows.Forms.CheckBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.CB_CardAttribute = new System.Windows.Forms.ComboBox();
+            this.CB_CardTypes = new System.Windows.Forms.ComboBox();
+            this.CB_CardImageID = new System.Windows.Forms.ComboBox();
+            this.CB_CardID = new System.Windows.Forms.ComboBox();
+            this.CB_CardLevel = new System.Windows.Forms.Label();
+            this.CB_CardLimitedStatus = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PB_LevelStarFour = new System.Windows.Forms.PictureBox();
             this.PB_LevelStarFive = new System.Windows.Forms.PictureBox();
@@ -56,23 +71,9 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CB_CardLimitedStatus = new System.Windows.Forms.Label();
-            this.CB_CardLevel = new System.Windows.Forms.Label();
-            this.CB_CardID = new System.Windows.Forms.ComboBox();
-            this.CB_CardImageID = new System.Windows.Forms.ComboBox();
-            this.CB_CardTypes = new System.Windows.Forms.ComboBox();
-            this.CB_CardAttribute = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.CB_IsThisCardDLC = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.WolfX_TabManager.SuspendLayout();
             this.Page_CardManager.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFive)).BeginInit();
@@ -85,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).BeginInit();
             this.Status.SuspendLayout();
             this.MenuBar.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // WolfX_TabManager
@@ -97,7 +97,7 @@
             this.WolfX_TabManager.Location = new System.Drawing.Point(0, 24);
             this.WolfX_TabManager.Name = "WolfX_TabManager";
             this.WolfX_TabManager.SelectedIndex = 0;
-            this.WolfX_TabManager.Size = new System.Drawing.Size(1264, 657);
+            this.WolfX_TabManager.Size = new System.Drawing.Size(659, 657);
             this.WolfX_TabManager.TabIndex = 0;
             this.WolfX_TabManager.EnabledChanged += new System.EventHandler(this.WolfX_TabManager_EnabledChanged);
             // 
@@ -109,10 +109,162 @@
             this.Page_CardManager.Location = new System.Drawing.Point(4, 24);
             this.Page_CardManager.Name = "Page_CardManager";
             this.Page_CardManager.Padding = new System.Windows.Forms.Padding(3);
-            this.Page_CardManager.Size = new System.Drawing.Size(1256, 629);
+            this.Page_CardManager.Size = new System.Drawing.Size(651, 629);
             this.Page_CardManager.TabIndex = 0;
             this.Page_CardManager.Text = "Card Manager";
             this.Page_CardManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.CB_IsThisCardDLC);
+            this.groupBox2.Controls.Add(this.comboBox6);
+            this.groupBox2.Controls.Add(this.CB_CardAttribute);
+            this.groupBox2.Controls.Add(this.CB_CardTypes);
+            this.groupBox2.Controls.Add(this.CB_CardImageID);
+            this.groupBox2.Controls.Add(this.CB_CardID);
+            this.groupBox2.Controls.Add(this.CB_CardLevel);
+            this.groupBox2.Controls.Add(this.CB_CardLimitedStatus);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.comboBox5);
+            this.groupBox2.Location = new System.Drawing.Point(334, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(320, 397);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Card Information";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(6, 313);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 20);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Miscellaneous";
+            // 
+            // CB_IsThisCardDLC
+            // 
+            this.CB_IsThisCardDLC.AutoSize = true;
+            this.CB_IsThisCardDLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CB_IsThisCardDLC.Location = new System.Drawing.Point(6, 336);
+            this.CB_IsThisCardDLC.Name = "CB_IsThisCardDLC";
+            this.CB_IsThisCardDLC.Size = new System.Drawing.Size(89, 24);
+            this.CB_IsThisCardDLC.TabIndex = 13;
+            this.CB_IsThisCardDLC.Text = "DLC Card";
+            this.CB_IsThisCardDLC.UseVisualStyleBackColor = true;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(6, 287);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(297, 23);
+            this.comboBox6.TabIndex = 12;
+            // 
+            // CB_CardAttribute
+            // 
+            this.CB_CardAttribute.FormattingEnabled = true;
+            this.CB_CardAttribute.Location = new System.Drawing.Point(6, 189);
+            this.CB_CardAttribute.Name = "CB_CardAttribute";
+            this.CB_CardAttribute.Size = new System.Drawing.Size(297, 23);
+            this.CB_CardAttribute.TabIndex = 10;
+            // 
+            // CB_CardTypes
+            // 
+            this.CB_CardTypes.FormattingEnabled = true;
+            this.CB_CardTypes.Location = new System.Drawing.Point(6, 140);
+            this.CB_CardTypes.Name = "CB_CardTypes";
+            this.CB_CardTypes.Size = new System.Drawing.Size(297, 23);
+            this.CB_CardTypes.TabIndex = 9;
+            // 
+            // CB_CardImageID
+            // 
+            this.CB_CardImageID.FormattingEnabled = true;
+            this.CB_CardImageID.Location = new System.Drawing.Point(6, 91);
+            this.CB_CardImageID.Name = "CB_CardImageID";
+            this.CB_CardImageID.Size = new System.Drawing.Size(297, 23);
+            this.CB_CardImageID.TabIndex = 8;
+            // 
+            // CB_CardID
+            // 
+            this.CB_CardID.FormattingEnabled = true;
+            this.CB_CardID.Location = new System.Drawing.Point(6, 42);
+            this.CB_CardID.Name = "CB_CardID";
+            this.CB_CardID.Size = new System.Drawing.Size(297, 23);
+            this.CB_CardID.TabIndex = 7;
+            // 
+            // CB_CardLevel
+            // 
+            this.CB_CardLevel.AutoSize = true;
+            this.CB_CardLevel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CB_CardLevel.Location = new System.Drawing.Point(6, 215);
+            this.CB_CardLevel.Name = "CB_CardLevel";
+            this.CB_CardLevel.Size = new System.Drawing.Size(78, 20);
+            this.CB_CardLevel.TabIndex = 5;
+            this.CB_CardLevel.Text = "Card Level";
+            // 
+            // CB_CardLimitedStatus
+            // 
+            this.CB_CardLimitedStatus.AutoSize = true;
+            this.CB_CardLimitedStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CB_CardLimitedStatus.Location = new System.Drawing.Point(6, 264);
+            this.CB_CardLimitedStatus.Name = "CB_CardLimitedStatus";
+            this.CB_CardLimitedStatus.Size = new System.Drawing.Size(138, 20);
+            this.CB_CardLimitedStatus.TabIndex = 4;
+            this.CB_CardLimitedStatus.Text = "Card Limited Status";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(6, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Card Image ID";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(6, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Card Type";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(6, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Card Attribute";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(6, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Card ID";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(6, 238);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(297, 23);
+            this.comboBox5.TabIndex = 11;
             // 
             // groupBox1
             // 
@@ -266,7 +418,7 @@
             this.LBL_GameStatusLabel});
             this.Status.Location = new System.Drawing.Point(3, 604);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(1250, 22);
+            this.Status.Size = new System.Drawing.Size(645, 22);
             this.Status.TabIndex = 0;
             this.Status.Text = "statusStrip1";
             // 
@@ -299,7 +451,7 @@
             this.fileToolStripMenuItem});
             this.MenuBar.Location = new System.Drawing.Point(0, 0);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(1264, 24);
+            this.MenuBar.Size = new System.Drawing.Size(659, 24);
             this.MenuBar.TabIndex = 1;
             this.MenuBar.Text = "menuStrip1";
             // 
@@ -341,163 +493,11 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.CB_IsThisCardDLC);
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.CB_CardAttribute);
-            this.groupBox2.Controls.Add(this.CB_CardTypes);
-            this.groupBox2.Controls.Add(this.CB_CardImageID);
-            this.groupBox2.Controls.Add(this.CB_CardID);
-            this.groupBox2.Controls.Add(this.CB_CardLevel);
-            this.groupBox2.Controls.Add(this.CB_CardLimitedStatus);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.comboBox5);
-            this.groupBox2.Location = new System.Drawing.Point(334, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(320, 397);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Card Information";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(6, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Card ID";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(6, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Card Attribute";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(6, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Card Type";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(6, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Card Image ID";
-            // 
-            // CB_CardLimitedStatus
-            // 
-            this.CB_CardLimitedStatus.AutoSize = true;
-            this.CB_CardLimitedStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CB_CardLimitedStatus.Location = new System.Drawing.Point(6, 264);
-            this.CB_CardLimitedStatus.Name = "CB_CardLimitedStatus";
-            this.CB_CardLimitedStatus.Size = new System.Drawing.Size(138, 20);
-            this.CB_CardLimitedStatus.TabIndex = 4;
-            this.CB_CardLimitedStatus.Text = "Card Limited Status";
-            // 
-            // CB_CardLevel
-            // 
-            this.CB_CardLevel.AutoSize = true;
-            this.CB_CardLevel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CB_CardLevel.Location = new System.Drawing.Point(6, 215);
-            this.CB_CardLevel.Name = "CB_CardLevel";
-            this.CB_CardLevel.Size = new System.Drawing.Size(78, 20);
-            this.CB_CardLevel.TabIndex = 5;
-            this.CB_CardLevel.Text = "Card Level";
-            // 
-            // CB_CardID
-            // 
-            this.CB_CardID.FormattingEnabled = true;
-            this.CB_CardID.Location = new System.Drawing.Point(6, 42);
-            this.CB_CardID.Name = "CB_CardID";
-            this.CB_CardID.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardID.TabIndex = 7;
-            // 
-            // CB_CardImageID
-            // 
-            this.CB_CardImageID.FormattingEnabled = true;
-            this.CB_CardImageID.Location = new System.Drawing.Point(6, 91);
-            this.CB_CardImageID.Name = "CB_CardImageID";
-            this.CB_CardImageID.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardImageID.TabIndex = 8;
-            // 
-            // CB_CardTypes
-            // 
-            this.CB_CardTypes.FormattingEnabled = true;
-            this.CB_CardTypes.Location = new System.Drawing.Point(6, 140);
-            this.CB_CardTypes.Name = "CB_CardTypes";
-            this.CB_CardTypes.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardTypes.TabIndex = 9;
-            // 
-            // CB_CardAttribute
-            // 
-            this.CB_CardAttribute.FormattingEnabled = true;
-            this.CB_CardAttribute.Location = new System.Drawing.Point(6, 189);
-            this.CB_CardAttribute.Name = "CB_CardAttribute";
-            this.CB_CardAttribute.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardAttribute.TabIndex = 10;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 238);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(297, 23);
-            this.comboBox5.TabIndex = 11;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(6, 287);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(297, 23);
-            this.comboBox6.TabIndex = 12;
-            // 
-            // CB_IsThisCardDLC
-            // 
-            this.CB_IsThisCardDLC.AutoSize = true;
-            this.CB_IsThisCardDLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CB_IsThisCardDLC.Location = new System.Drawing.Point(6, 336);
-            this.CB_IsThisCardDLC.Name = "CB_IsThisCardDLC";
-            this.CB_IsThisCardDLC.Size = new System.Drawing.Size(89, 24);
-            this.CB_IsThisCardDLC.TabIndex = 13;
-            this.CB_IsThisCardDLC.Text = "DLC Card";
-            this.CB_IsThisCardDLC.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(6, 313);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 20);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Miscellaneous";
-            // 
             // WolfUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(659, 681);
             this.Controls.Add(this.WolfX_TabManager);
             this.Controls.Add(this.MenuBar);
             this.MainMenuStrip = this.MenuBar;
@@ -506,6 +506,8 @@
             this.WolfX_TabManager.ResumeLayout(false);
             this.Page_CardManager.ResumeLayout(false);
             this.Page_CardManager.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFour)).EndInit();
@@ -521,8 +523,6 @@
             this.Status.PerformLayout();
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

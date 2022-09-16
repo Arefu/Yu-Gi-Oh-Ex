@@ -3,10 +3,12 @@
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
+#include "ImGui/Windows/Connect To Server/Connect.h"
 
 Address YuGiOh_ImGui::_ImGuiD3D11SetupPatchAddres;
 BOOL YuGiOh_ImGui::g_bInitialised;
 BOOL YuGiOh_ImGui::g_ShowMenu = FALSE;
+bool YuGiOh_ImGui::g_ShowConsole = false;
 ID3D11RenderTargetView* DirectX::pmainRenderTargetView;
 WNDPROC YuGiOh_ImGui::_WndProcHandler;
 
@@ -14,7 +16,7 @@ WNDPROC YuGiOh_ImGui::_WndProcHandler;
 
 void YuGiOh_ImGui::Start_DearImGui(IDXGISwapChain* pChain, UINT SyncInterval, UINT Flags)
 {
-	PresentFunc DirectX_PresentFunc = (PresentFunc)YuGiOh_ImGui::_ImGuiPresentAddress;
+	auto DirectX_PresentFunc = (PresentFunc)YuGiOh_ImGui::im_gui_present_address;
 
 	if (!g_bInitialised)
 	{
@@ -52,6 +54,14 @@ void YuGiOh_ImGui::Start_DearImGui(IDXGISwapChain* pChain, UINT SyncInterval, UI
 	if (YuGiOh_ImGui::g_ShowMenu == TRUE)
 	{
 		ImGui::ShowDemoWindow();
+	}
+	if (YuGiOh_ImGui::g_ShowConsole == TRUE)
+	{
+		Console::ShowConsole(&YuGiOh_ImGui::g_ShowConsole);
+	}
+	if (YuGiOh_ImGui::g_ShowConnectWindow == TRUE)
+	{
+		Connect::Show_ConnectWindow(&YuGiOh_ImGui::g_ShowConnectWindow);
 	}
 
 	ImGui::EndFrame();
@@ -97,13 +107,15 @@ LRESULT YuGiOh_ImGui::Hooked_YuGiOhImGuiWndProc(HWND hWnd, UINT uMsg, WPARAM wPa
 		{
 			YuGiOh_ImGui::g_ShowMenu = !YuGiOh_ImGui::g_ShowMenu;
 		}
+		if (wParam == VK_OEM_3)
+		{
+			YuGiOh_ImGui::g_ShowConsole = !YuGiOh_ImGui::g_ShowConsole;
+		}
 	}
 
-	if (YuGiOh_ImGui::g_ShowMenu)
+	if (YuGiOh_ImGui::g_ShowMenu || YuGiOh_ImGui::g_ShowConsole || YuGiOh_ImGui::g_ShowConnectWindow)
 	{
 		ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam);
-		io.ClearInputCharacters();
-		io.ClearInputKeys();
 		return true;
 	}
 	else

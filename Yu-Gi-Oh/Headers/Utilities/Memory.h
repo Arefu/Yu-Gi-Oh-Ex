@@ -8,6 +8,7 @@ class Memory
 {
 public:
 	static int GetSceneValue();
+	static void SetSceneValue(DWORD);
 private:
 	static DWORD GetThreadStackAddr(int);
 	static DWORD GetThreadStartAddress(HANDLE, HANDLE);

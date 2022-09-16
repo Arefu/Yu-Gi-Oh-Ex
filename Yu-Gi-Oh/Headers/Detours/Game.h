@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <detours.h>
 
+#include "Types/Scenes.h"
 #include "Types/CardID.h"
 #include "Yu-Gi-Oh.h"
 #include "Config.h"

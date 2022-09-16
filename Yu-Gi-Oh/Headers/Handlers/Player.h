@@ -16,6 +16,7 @@ using Cards::Card;
 using Cards::Position;
 using Cards::Simple_Card;
 
+//This is incomplete, there are more vars in the state in memory that I haven't mapped.... :(
 class Player
 {
 public:

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -57,15 +57,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(ProjectDir)Dependencies\Dear-ImGui;$(ProjectDir)Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(ProjectDir)Dependencies\Dear-ImGui;$(ProjectDir)Headers;$(ProjectDir)Dependencies\enet</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>$(ProjectName)-$(Platform).def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);detours.lib;Shlwapi.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\enet</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);detours.lib;Shlwapi.lib;d3d11.lib;d3dcompiler.lib;Ws2_32.lib;Mswsock.lib;dxgi.lib;AdvApi32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(ProjectDir)Dependencies\Dear-ImGui;$(ProjectDir)Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(ProjectDir)Dependencies\Dear-ImGui;$(ProjectDir)Headers;$(ProjectDir)Dependencies\enet</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -85,11 +85,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>$(ProjectName)-$(Platform).def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);detours.lib;Shlwapi.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\enet</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);detours.lib;Shlwapi.lib;d3d11.lib;d3dcompiler.lib;Ws2_32.lib;Mswsock.lib;dxgi.lib;AdvApi32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\ImGui\Windows\Connect To Server\Connect.cpp" />
+    <ClCompile Include="Source\Detours\Multiplayer\Client\Client.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_demo.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_draw.cpp" />
@@ -97,7 +99,9 @@
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_impl_win32.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_tables.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\Detours\Multiplayer\MPatcher.cpp" />
     <ClCompile Include="Source\ImGui\D3D11\D3D11.cpp" />
+    <ClCompile Include="Source\ImGui\Windows\Console\Console.cpp" />
     <ClCompile Include="Source\ImGui\YuGIOh_ImGui.cpp" />
     <ClCompile Include="Source\Handlers\Avatar.cpp" />
     <ClCompile Include="Source\Config.cpp" />
@@ -110,6 +114,8 @@
     <None Include="Yu-Gi-Oh-x64.def" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\ImGui\Windows\Connect To Server\Connect.h" />
+    <ClInclude Include="Headers\Detours\Multiplayer\Client\Client.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imconfig.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imgui.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imgui_impl_dx11.h" />
@@ -120,14 +126,17 @@
     <ClInclude Include="Dependencies\Dear-ImGui\imstb_truetype.h" />
     <ClInclude Include="Headers\ImGui\D3D11\D3D11.h" />
     <ClInclude Include="Headers\Handlers\Avatar.h" />
+    <ClInclude Include="Headers\ImGui\Windows\Console\Console.h" />
     <ClInclude Include="Headers\Types\CardID.h" />
     <ClInclude Include="Headers\Config.h" />
     <ClInclude Include="Headers\Detours\Game.h" />
+    <ClInclude Include="Headers\Types\Scenes.h" />
     <ClInclude Include="Headers\Utilities\Memory.h" />
     <ClInclude Include="Headers\Handlers\Player.h" />
     <ClInclude Include="Headers\Types\Cards.h" />
     <ClInclude Include="Headers\Yu-Gi-Oh.h" />
     <ClInclude Include="Headers\ImGui\YuGiOh_ImGui.h" />
+    <ClInclude Include="Headers\Detours\Multiplayer\MPatcher.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
