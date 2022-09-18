@@ -26,8 +26,8 @@ namespace WolfX.Handlers
         {
             if (WolfX_UI_State.HasArchiveOpen == true)
             {
-                if (new FileInfo(WolfUI.Form.lv_ArchivePreviewer.SelectedItems[0].Text).Extension == ".ydc")
-                  else;
+                //if (new FileInfo(WolfUI.Form.lv_ArchivePreviewer.SelectedItems[0].Text).Extension == ".ydc")
+                //   else;
                 return;
             }
 

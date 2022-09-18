@@ -78,6 +78,7 @@
             this.lbl_NumberOfItemsPrompt = new System.Windows.Forms.Label();
             this.lbl_FileSizePrompt = new System.Windows.Forms.Label();
             this.lbl_NamePrompt = new System.Windows.Forms.Label();
+            this.Page_AnimationManager = new System.Windows.Forms.TabPage();
             this.MenuBar = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.File_Open = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,9 +87,20 @@
             this.File_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tools_Verify = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_english = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_french = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_german = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_italian = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_japanese = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_russian = new System.Windows.Forms.ToolStripMenuItem();
+            this.Language_spanish = new System.Windows.Forms.ToolStripMenuItem();
             this.Status = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.WolfX_TabManager.SuspendLayout();
             this.Page_CardManager.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,6 +126,7 @@
             // 
             this.WolfX_TabManager.Controls.Add(this.Page_CardManager);
             this.WolfX_TabManager.Controls.Add(this.Page_ZibManager);
+            this.WolfX_TabManager.Controls.Add(this.Page_AnimationManager);
             this.WolfX_TabManager.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WolfX_TabManager.Enabled = false;
             this.WolfX_TabManager.Location = new System.Drawing.Point(0, 24);
@@ -124,6 +137,8 @@
             // 
             // Page_CardManager
             // 
+            this.Page_CardManager.Controls.Add(this.button3);
+            this.Page_CardManager.Controls.Add(this.button2);
             this.Page_CardManager.Controls.Add(this.groupBox2);
             this.Page_CardManager.Controls.Add(this.groupBox1);
             this.Page_CardManager.Location = new System.Drawing.Point(4, 24);
@@ -610,6 +625,16 @@
             this.lbl_NamePrompt.TabIndex = 0;
             this.lbl_NamePrompt.Text = "Name:";
             // 
+            // Page_AnimationManager
+            // 
+            this.Page_AnimationManager.Location = new System.Drawing.Point(4, 24);
+            this.Page_AnimationManager.Name = "Page_AnimationManager";
+            this.Page_AnimationManager.Padding = new System.Windows.Forms.Padding(3);
+            this.Page_AnimationManager.Size = new System.Drawing.Size(651, 629);
+            this.Page_AnimationManager.TabIndex = 2;
+            this.Page_AnimationManager.Text = "Animation Manager";
+            this.Page_AnimationManager.UseVisualStyleBackColor = true;
+            // 
             // MenuBar
             // 
             this.MenuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -663,17 +688,90 @@
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tools_Verify});
+            this.Tools_Verify,
+            this.toolStripSeparator2,
+            this.languageToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // Tools_Verify
             // 
+            this.Tools_Verify.Enabled = false;
             this.Tools_Verify.Name = "Tools_Verify";
             this.Tools_Verify.Size = new System.Drawing.Size(181, 22);
             this.Tools_Verify.Text = "&Verify Extracted Files";
             this.Tools_Verify.Click += new System.EventHandler(this.Tools_Verify_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
+            // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Language_english,
+            this.Language_french,
+            this.Language_german,
+            this.Language_italian,
+            this.Language_japanese,
+            this.Language_russian,
+            this.Language_spanish});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.languageToolStripMenuItem.Text = "Language";
+            // 
+            // Language_english
+            // 
+            this.Language_english.Checked = true;
+            this.Language_english.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Language_english.Name = "Language_english";
+            this.Language_english.Size = new System.Drawing.Size(117, 22);
+            this.Language_english.Text = "English";
+            this.Language_english.Click += new System.EventHandler(this.Language_english_Click);
+            // 
+            // Language_french
+            // 
+            this.Language_french.Name = "Language_french";
+            this.Language_french.Size = new System.Drawing.Size(117, 22);
+            this.Language_french.Text = "Français";
+            this.Language_french.Click += new System.EventHandler(this.Language_french_Click);
+            // 
+            // Language_german
+            // 
+            this.Language_german.Name = "Language_german";
+            this.Language_german.Size = new System.Drawing.Size(117, 22);
+            this.Language_german.Text = "Deutsch";
+            this.Language_german.Click += new System.EventHandler(this.Language_german_Click);
+            // 
+            // Language_italian
+            // 
+            this.Language_italian.Name = "Language_italian";
+            this.Language_italian.Size = new System.Drawing.Size(117, 22);
+            this.Language_italian.Text = "Italiano";
+            this.Language_italian.Click += new System.EventHandler(this.Language_italian_Click);
+            // 
+            // Language_japanese
+            // 
+            this.Language_japanese.Name = "Language_japanese";
+            this.Language_japanese.Size = new System.Drawing.Size(117, 22);
+            this.Language_japanese.Text = "Nihon";
+            this.Language_japanese.Click += new System.EventHandler(this.Language_japanese_Click);
+            // 
+            // Language_russian
+            // 
+            this.Language_russian.Name = "Language_russian";
+            this.Language_russian.Size = new System.Drawing.Size(117, 22);
+            this.Language_russian.Text = "Russkiy";
+            this.Language_russian.Click += new System.EventHandler(this.Language_russian_Click);
+            // 
+            // Language_spanish
+            // 
+            this.Language_spanish.Name = "Language_spanish";
+            this.Language_spanish.Size = new System.Drawing.Size(117, 22);
+            this.Language_spanish.Text = "Español";
+            this.Language_spanish.Click += new System.EventHandler(this.Language_spanish_Click);
             // 
             // Status
             // 
@@ -699,6 +797,24 @@
             this.LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
             this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
             this.LBL_GameStatusLabel.Text = "Not Loaded";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(334, 409);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 25);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Previous Card";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(334, 440);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 25);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Next Card";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // WolfUI
             // 
@@ -760,9 +876,6 @@
         private TextBox TB_CardAtk;
         private Label label2;
         private Label label1;
-        private TextBox TB_CardDesc;
-        private TextBox TB_CardName;
-        private PictureBox PB_CardPicture;
         private PictureBox PB_LevelStarFour;
         private PictureBox PB_LevelStarFive;
         private PictureBox PB_LevelStarSix;
@@ -808,5 +921,20 @@
         private GroupBox groupBox5;
         private CheckBox checkBox1;
         private Button button1;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem languageToolStripMenuItem;
+        private ToolStripMenuItem Language_english;
+        private ToolStripMenuItem Language_french;
+        private ToolStripMenuItem Language_german;
+        private ToolStripMenuItem Language_italian;
+        private ToolStripMenuItem Language_japanese;
+        private ToolStripMenuItem Language_russian;
+        private ToolStripMenuItem Language_spanish;
+        private TabPage Page_AnimationManager;
+        public TextBox TB_CardDesc;
+        public TextBox TB_CardName;
+        private Button button3;
+        private Button button2;
+        public PictureBox PB_CardPicture;
     }
 }

@@ -1,5 +1,7 @@
+using System.Text.RegularExpressions;
 using WolfX.Handler.Tools;
 using WolfX.Handlers;
+using WolfX.Types;
 
 namespace WolfX
 {
@@ -26,6 +28,7 @@ namespace WolfX
                     LBL_GameStatusLabel.ForeColor = Color.Green;
 
                     WolfX_TabManager.Enabled = true;
+                    Tools_Verify.Enabled = true;
                     WolfX_UI_State.WorkingDirectory = FolderBrowser.SelectedPath;
                     WolfX_UI_State.IsLoaded = true;
                     new Thread(Handlers.Card_Loader.Load).Start();
@@ -45,8 +48,24 @@ namespace WolfX
             new Thread(() => Archive_Handler.OpenArchive(lv_ArchivePreviewer.SelectedItems[0].Text)).Start();
         }
 
-        private void Tools_Verify_Click(object sender, EventArgs e)
+        internal void Tools_Verify_Click(object sender, EventArgs e)
         {
+            using var OpenFile = new OpenFileDialog();
+            OpenFile.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020.toc File";
+            OpenFile.Filter = "YGO_2020.toc|YGO_2020.toc";
+            if (OpenFile.ShowDialog() != DialogResult.OK) return;
+
+            foreach (var Line in System.IO.File.ReadLines(OpenFile.FileName))
+            {
+                if (Line == "UT") continue;
+
+                var CLine = Line.TrimStart(' ');
+                CLine = Regex.Replace(CLine, @"  +", " ", RegexOptions.Compiled);
+                var Information = CLine.Split(' ', 3);
+
+                if (File.Exists($"{WolfX_UI_State.WorkingDirectory}/{Information[2]}") == false)
+                    MessageBox.Show($@"File {Information[2]} is missing from the game directory.");
+            }
         }
 
         private void btn_CloseArchive_Click(object sender, EventArgs e)
@@ -78,6 +97,90 @@ namespace WolfX
                 Reader.BaseStream.Position = File.Offset;
                 System.IO.File.WriteAllBytes($"{Archive}\\{File.Name}", Reader.ReadBytes((int)File.Size));
             }
+        }
+
+        private void Language_english_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_english.Checked = true;
+            WolfX_UI_State.Language = Language.English;
+        }
+
+        private void Language_french_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_french.Checked = true;
+            WolfX_UI_State.Language = Language.French;
+        }
+
+        private void Language_german_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_german.Checked = true;
+            WolfX_UI_State.Language = Language.German;
+        }
+
+        private void Language_italian_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_italian.Checked = true;
+            WolfX_UI_State.Language = Language.Italian;
+        }
+
+        private void Language_japanese_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_japanese.Checked = true;
+            WolfX_UI_State.Language = Language.Japanese;
+        }
+
+        private void Language_russian_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_russian.Checked = true;
+            WolfX_UI_State.Language = Language.Russian;
+        }
+
+        private void Language_spanish_Click(object sender, EventArgs e)
+        {
+            foreach (var Item in languageToolStripMenuItem.DropDownItems)
+            {
+                var Language = (ToolStripMenuItem)Item;
+                Language.Checked = false;
+            }
+
+            Language_spanish.Checked = true;
+            WolfX_UI_State.Language = Language.Spanish;
         }
     }
 }
