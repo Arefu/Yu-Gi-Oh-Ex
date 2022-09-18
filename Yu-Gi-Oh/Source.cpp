@@ -8,12 +8,9 @@
 #include "Detours/Game.h"
 #include "ImGui/YuGiOh_ImGui.h"
 
-#include "Yu-Gi-Oh.h"
-#include "Memory.h"
 #include "Detours/Multiplayer/MPatcher.h"
 
 void StartDetours();
-void Stop();
 
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 {
@@ -26,6 +23,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 
 	case DLL_PROCESS_DETACH:
 		break;
+	default: break;
 	}
 
 	return TRUE;

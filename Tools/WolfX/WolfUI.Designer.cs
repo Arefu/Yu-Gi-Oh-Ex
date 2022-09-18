@@ -61,16 +61,34 @@
             this.TB_CardDesc = new System.Windows.Forms.TextBox();
             this.TB_CardName = new System.Windows.Forms.TextBox();
             this.PB_CardPicture = new System.Windows.Forms.PictureBox();
-            this.Status = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Page_ZibManager = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_CloseArchive = new System.Windows.Forms.Button();
+            this.cb_ShowFileName = new System.Windows.Forms.CheckBox();
+            this.btn_ExtractAll = new System.Windows.Forms.Button();
+            this.cb_ShowPicturePreview = new System.Windows.Forms.CheckBox();
+            this.lv_ArchivePreviewer = new System.Windows.Forms.ListView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbl_ItemCount = new System.Windows.Forms.Label();
+            this.lbl_Size = new System.Windows.Forms.Label();
+            this.lbl_Name = new System.Windows.Forms.Label();
+            this.lbl_NumberOfItemsPrompt = new System.Windows.Forms.Label();
+            this.lbl_FileSizePrompt = new System.Windows.Forms.Label();
+            this.lbl_NamePrompt = new System.Windows.Forms.Label();
             this.MenuBar = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.File_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.File_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tools_Verify = new System.Windows.Forms.ToolStripMenuItem();
+            this.Status = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.WolfX_TabManager.SuspendLayout();
             this.Page_CardManager.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,14 +102,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarEight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).BeginInit();
-            this.Status.SuspendLayout();
+            this.Page_ZibManager.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.MenuBar.SuspendLayout();
+            this.Status.SuspendLayout();
             this.SuspendLayout();
             // 
             // WolfX_TabManager
             // 
             this.WolfX_TabManager.Controls.Add(this.Page_CardManager);
-            this.WolfX_TabManager.Controls.Add(this.tabPage2);
+            this.WolfX_TabManager.Controls.Add(this.Page_ZibManager);
             this.WolfX_TabManager.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WolfX_TabManager.Enabled = false;
             this.WolfX_TabManager.Location = new System.Drawing.Point(0, 24);
@@ -99,13 +121,11 @@
             this.WolfX_TabManager.SelectedIndex = 0;
             this.WolfX_TabManager.Size = new System.Drawing.Size(659, 657);
             this.WolfX_TabManager.TabIndex = 0;
-            this.WolfX_TabManager.EnabledChanged += new System.EventHandler(this.WolfX_TabManager_EnabledChanged);
             // 
             // Page_CardManager
             // 
             this.Page_CardManager.Controls.Add(this.groupBox2);
             this.Page_CardManager.Controls.Add(this.groupBox1);
-            this.Page_CardManager.Controls.Add(this.Status);
             this.Page_CardManager.Location = new System.Drawing.Point(4, 24);
             this.Page_CardManager.Name = "Page_CardManager";
             this.Page_CardManager.Padding = new System.Windows.Forms.Padding(3);
@@ -411,44 +431,190 @@
             this.PB_CardPicture.TabIndex = 0;
             this.PB_CardPicture.TabStop = false;
             // 
-            // Status
+            // Page_ZibManager
             // 
-            this.Status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.LBL_GameStatusLabel});
-            this.Status.Location = new System.Drawing.Point(3, 604);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(645, 22);
-            this.Status.TabIndex = 0;
-            this.Status.Text = "statusStrip1";
+            this.Page_ZibManager.Controls.Add(this.groupBox5);
+            this.Page_ZibManager.Controls.Add(this.groupBox4);
+            this.Page_ZibManager.Controls.Add(this.lv_ArchivePreviewer);
+            this.Page_ZibManager.Controls.Add(this.groupBox3);
+            this.Page_ZibManager.Location = new System.Drawing.Point(4, 24);
+            this.Page_ZibManager.Name = "Page_ZibManager";
+            this.Page_ZibManager.Padding = new System.Windows.Forms.Padding(3);
+            this.Page_ZibManager.Size = new System.Drawing.Size(651, 629);
+            this.Page_ZibManager.TabIndex = 1;
+            this.Page_ZibManager.Text = "Archive Manager";
+            this.Page_ZibManager.UseVisualStyleBackColor = true;
             // 
-            // toolStripStatusLabel1
+            // groupBox5
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(44, 17);
-            this.toolStripStatusLabel1.Text = "Game: ";
+            this.groupBox5.Controls.Add(this.checkBox1);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Location = new System.Drawing.Point(420, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 100);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Packing Tools";
             // 
-            // LBL_GameStatusLabel
+            // checkBox1
             // 
-            this.LBL_GameStatusLabel.ForeColor = System.Drawing.Color.Red;
-            this.LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
-            this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
-            this.LBL_GameStatusLabel.Text = "Not Loaded";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 22);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(158, 19);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "Auto Copy When Packed";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // button1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1256, 629);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(6, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 25);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Pack Content";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btn_CloseArchive);
+            this.groupBox4.Controls.Add(this.cb_ShowFileName);
+            this.groupBox4.Controls.Add(this.btn_ExtractAll);
+            this.groupBox4.Controls.Add(this.cb_ShowPicturePreview);
+            this.groupBox4.Location = new System.Drawing.Point(214, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 100);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Archive Tools";
+            // 
+            // btn_CloseArchive
+            // 
+            this.btn_CloseArchive.Enabled = false;
+            this.btn_CloseArchive.Location = new System.Drawing.Point(119, 69);
+            this.btn_CloseArchive.Name = "btn_CloseArchive";
+            this.btn_CloseArchive.Size = new System.Drawing.Size(75, 25);
+            this.btn_CloseArchive.TabIndex = 4;
+            this.btn_CloseArchive.Text = "Close";
+            this.btn_CloseArchive.UseVisualStyleBackColor = true;
+            this.btn_CloseArchive.Click += new System.EventHandler(this.btn_CloseArchive_Click);
+            // 
+            // cb_ShowFileName
+            // 
+            this.cb_ShowFileName.AutoSize = true;
+            this.cb_ShowFileName.Checked = true;
+            this.cb_ShowFileName.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_ShowFileName.Location = new System.Drawing.Point(6, 44);
+            this.cb_ShowFileName.Name = "cb_ShowFileName";
+            this.cb_ShowFileName.Size = new System.Drawing.Size(111, 19);
+            this.cb_ShowFileName.TabIndex = 3;
+            this.cb_ShowFileName.Text = "Show File Name";
+            this.cb_ShowFileName.UseVisualStyleBackColor = true;
+            // 
+            // btn_ExtractAll
+            // 
+            this.btn_ExtractAll.Location = new System.Drawing.Point(6, 69);
+            this.btn_ExtractAll.Name = "btn_ExtractAll";
+            this.btn_ExtractAll.Size = new System.Drawing.Size(107, 25);
+            this.btn_ExtractAll.TabIndex = 2;
+            this.btn_ExtractAll.Text = "Extract Content";
+            this.btn_ExtractAll.UseVisualStyleBackColor = true;
+            this.btn_ExtractAll.Click += new System.EventHandler(this.btn_ExtractAll_Click);
+            // 
+            // cb_ShowPicturePreview
+            // 
+            this.cb_ShowPicturePreview.AutoSize = true;
+            this.cb_ShowPicturePreview.Checked = true;
+            this.cb_ShowPicturePreview.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_ShowPicturePreview.Location = new System.Drawing.Point(6, 22);
+            this.cb_ShowPicturePreview.Name = "cb_ShowPicturePreview";
+            this.cb_ShowPicturePreview.Size = new System.Drawing.Size(139, 19);
+            this.cb_ShowPicturePreview.TabIndex = 1;
+            this.cb_ShowPicturePreview.Text = "Show Picture Preview";
+            this.cb_ShowPicturePreview.UseVisualStyleBackColor = true;
+            // 
+            // lv_ArchivePreviewer
+            // 
+            this.lv_ArchivePreviewer.Location = new System.Drawing.Point(6, 112);
+            this.lv_ArchivePreviewer.MultiSelect = false;
+            this.lv_ArchivePreviewer.Name = "lv_ArchivePreviewer";
+            this.lv_ArchivePreviewer.ShowGroups = false;
+            this.lv_ArchivePreviewer.Size = new System.Drawing.Size(637, 496);
+            this.lv_ArchivePreviewer.TabIndex = 1;
+            this.lv_ArchivePreviewer.UseCompatibleStateImageBehavior = false;
+            this.lv_ArchivePreviewer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Lv_ArchivePreviewer_MouseDoubleClick);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lbl_ItemCount);
+            this.groupBox3.Controls.Add(this.lbl_Size);
+            this.groupBox3.Controls.Add(this.lbl_Name);
+            this.groupBox3.Controls.Add(this.lbl_NumberOfItemsPrompt);
+            this.groupBox3.Controls.Add(this.lbl_FileSizePrompt);
+            this.groupBox3.Controls.Add(this.lbl_NamePrompt);
+            this.groupBox3.Location = new System.Drawing.Point(8, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Archive Info";
+            // 
+            // lbl_ItemCount
+            // 
+            this.lbl_ItemCount.AutoSize = true;
+            this.lbl_ItemCount.Location = new System.Drawing.Point(114, 65);
+            this.lbl_ItemCount.Name = "lbl_ItemCount";
+            this.lbl_ItemCount.Size = new System.Drawing.Size(0, 15);
+            this.lbl_ItemCount.TabIndex = 5;
+            // 
+            // lbl_Size
+            // 
+            this.lbl_Size.AutoSize = true;
+            this.lbl_Size.Location = new System.Drawing.Point(63, 42);
+            this.lbl_Size.Name = "lbl_Size";
+            this.lbl_Size.Size = new System.Drawing.Size(0, 15);
+            this.lbl_Size.TabIndex = 4;
+            // 
+            // lbl_Name
+            // 
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.Location = new System.Drawing.Point(54, 19);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(0, 15);
+            this.lbl_Name.TabIndex = 3;
+            // 
+            // lbl_NumberOfItemsPrompt
+            // 
+            this.lbl_NumberOfItemsPrompt.AutoSize = true;
+            this.lbl_NumberOfItemsPrompt.Location = new System.Drawing.Point(6, 65);
+            this.lbl_NumberOfItemsPrompt.Name = "lbl_NumberOfItemsPrompt";
+            this.lbl_NumberOfItemsPrompt.Size = new System.Drawing.Size(102, 15);
+            this.lbl_NumberOfItemsPrompt.TabIndex = 2;
+            this.lbl_NumberOfItemsPrompt.Text = "Number Of Items:";
+            // 
+            // lbl_FileSizePrompt
+            // 
+            this.lbl_FileSizePrompt.AutoSize = true;
+            this.lbl_FileSizePrompt.Location = new System.Drawing.Point(6, 42);
+            this.lbl_FileSizePrompt.Name = "lbl_FileSizePrompt";
+            this.lbl_FileSizePrompt.Size = new System.Drawing.Size(51, 15);
+            this.lbl_FileSizePrompt.TabIndex = 1;
+            this.lbl_FileSizePrompt.Text = "File Size:";
+            // 
+            // lbl_NamePrompt
+            // 
+            this.lbl_NamePrompt.AutoSize = true;
+            this.lbl_NamePrompt.Location = new System.Drawing.Point(6, 19);
+            this.lbl_NamePrompt.Name = "lbl_NamePrompt";
+            this.lbl_NamePrompt.Size = new System.Drawing.Size(42, 15);
+            this.lbl_NamePrompt.TabIndex = 0;
+            this.lbl_NamePrompt.Text = "Name:";
             // 
             // MenuBar
             // 
             this.MenuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem});
             this.MenuBar.Location = new System.Drawing.Point(0, 0);
             this.MenuBar.Name = "MenuBar";
             this.MenuBar.Size = new System.Drawing.Size(659, 24);
@@ -461,7 +627,7 @@
             this.File_Open,
             this.closeToolStripMenuItem,
             this.toolStripSeparator1,
-            this.exitToolStripMenuItem});
+            this.File_Exit});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -486,26 +652,68 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
             // 
-            // exitToolStripMenuItem
+            // File_Exit
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
+            this.File_Exit.Name = "File_Exit";
+            this.File_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.File_Exit.Size = new System.Drawing.Size(148, 22);
+            this.File_Exit.Text = "E&xit";
+            this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Tools_Verify});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // Tools_Verify
+            // 
+            this.Tools_Verify.Name = "Tools_Verify";
+            this.Tools_Verify.Size = new System.Drawing.Size(181, 22);
+            this.Tools_Verify.Text = "&Verify Extracted Files";
+            this.Tools_Verify.Click += new System.EventHandler(this.Tools_Verify_Click);
+            // 
+            // Status
+            // 
+            this.Status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.LBL_GameStatusLabel});
+            this.Status.Location = new System.Drawing.Point(0, 659);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(659, 22);
+            this.Status.SizingGrip = false;
+            this.Status.TabIndex = 2;
+            this.Status.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabel1.Text = "Game: ";
+            // 
+            // LBL_GameStatusLabel
+            // 
+            this.LBL_GameStatusLabel.ForeColor = System.Drawing.Color.Red;
+            this.LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
+            this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
+            this.LBL_GameStatusLabel.Text = "Not Loaded";
             // 
             // WolfUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 681);
+            this.Controls.Add(this.Status);
             this.Controls.Add(this.WolfX_TabManager);
             this.Controls.Add(this.MenuBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.MenuBar;
             this.Name = "WolfUI";
             this.Text = "WolfX";
             this.WolfX_TabManager.ResumeLayout(false);
             this.Page_CardManager.ResumeLayout(false);
-            this.Page_CardManager.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -519,10 +727,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarEight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).EndInit();
-            this.Status.ResumeLayout(false);
-            this.Status.PerformLayout();
+            this.Page_ZibManager.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
+            this.Status.ResumeLayout(false);
+            this.Status.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,18 +745,16 @@
 
         #endregion
 
+
         private TabControl WolfX_TabManager;
         private TabPage Page_CardManager;
-        private TabPage tabPage2;
+        private TabPage Page_ZibManager;
         private MenuStrip MenuBar;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem File_Open;
         private ToolStripMenuItem closeToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem exitToolStripMenuItem;
-        private StatusStrip Status;
-        private ToolStripStatusLabel toolStripStatusLabel1;
-        private ToolStripStatusLabel LBL_GameStatusLabel;
+        private ToolStripMenuItem File_Exit;
         private GroupBox groupBox1;
         private TextBox TB_CardDef;
         private TextBox TB_CardAtk;
@@ -573,5 +786,27 @@
         private Label label4;
         private Label label3;
         private ComboBox comboBox5;
+        private GroupBox groupBox4;
+        private Button btn_ExtractAll;
+        public ListView lv_ArchivePreviewer;
+        private GroupBox groupBox3;
+        private Label lbl_NumberOfItemsPrompt;
+        private Label lbl_FileSizePrompt;
+        private Label lbl_NamePrompt;
+        public static WolfUI Form;
+        private ToolStripMenuItem toolsToolStripMenuItem;
+        private ToolStripMenuItem Tools_Verify;
+        private StatusStrip Status;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        public ToolStripStatusLabel LBL_GameStatusLabel;
+        public Button btn_CloseArchive;
+        public CheckBox cb_ShowPicturePreview;
+        public Label lbl_Size;
+        public Label lbl_Name;
+        public Label lbl_ItemCount;
+        public CheckBox cb_ShowFileName;
+        private GroupBox groupBox5;
+        private CheckBox checkBox1;
+        private Button button1;
     }
 }

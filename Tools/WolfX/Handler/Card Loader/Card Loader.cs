@@ -10,10 +10,8 @@ namespace WolfX.Handlers
     {
         internal static void Load()
         {
-            MessageBox.Show(WolfX.WolfX_UI_State.Working_Directory);
-            if (!File.Exists($"{WolfX.WolfX_UI_State.Working_Directory}\\2020.full.illust_a.jpg.zib") || !File.Exists($"{WolfX.WolfX_UI_State.Working_Directory}\\2020.full.illust_j.jpg.zib"))
+            if (!File.Exists($"{WolfX.WolfX_UI_State.WorkingDirectory}\\2020.full.illust_a.jpg.zib") || !File.Exists($"{WolfX.WolfX_UI_State.WorkingDirectory}\\2020.full.illust_j.jpg.zib"))
             {
-                MessageBox.Show("fuck");
             }
         }
     }
