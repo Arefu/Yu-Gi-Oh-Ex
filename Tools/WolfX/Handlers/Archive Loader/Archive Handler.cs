@@ -93,7 +93,7 @@ namespace WolfX.Handlers
         public static List<Archive_File> GetFiles(string Archive)
         {
             using var Reader = new BinaryReader(File.Open($"{WolfX_UI_State.WorkingDirectory}\\{Archive}",
-                FileMode.Open, FileAccess.Read, FileShare.Read));
+                FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite));
 
             var Files = new List<Archive_File>();
             var Size = 4;
@@ -118,7 +118,7 @@ namespace WolfX.Handlers
 
                 Files.Add(new Archive_File(FileStart, FileSize, FileName));
             }
-
+            Reader.Close();
             return Files;
         }
 

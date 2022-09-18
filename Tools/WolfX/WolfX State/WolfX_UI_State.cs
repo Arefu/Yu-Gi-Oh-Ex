@@ -15,5 +15,8 @@ namespace WolfX
         public static bool HasArchiveOpen { get; set; }
 
         public static Language Language { get; set; } = Language.English;
+        public static List<Card> Cards { get; set; } = new List<Card>();
+
+        public static int CardIndex = 1;
     }
 }

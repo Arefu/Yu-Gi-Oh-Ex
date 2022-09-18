@@ -31,7 +31,7 @@ namespace WolfX
                     Tools_Verify.Enabled = true;
                     WolfX_UI_State.WorkingDirectory = FolderBrowser.SelectedPath;
                     WolfX_UI_State.IsLoaded = true;
-                    new Thread(Handlers.Card_Loader.Load).Start();
+                    new Thread(Handlers.CardLoader.Load).Start();
                     new Thread(Handlers.Archive_Handler.Load).Start();
                 }
             }
@@ -181,6 +181,54 @@ namespace WolfX
 
             Language_spanish.Checked = true;
             WolfX_UI_State.Language = Language.Spanish;
+        }
+
+        private void btn_NextCard_Click(object sender, EventArgs e)
+        {
+            if (WolfX_UI_State.CardIndex == WolfX_UI_State.Cards.Count) return;
+            WolfX_UI_State.CardIndex++;
+            Form.TB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
+            Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
+            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
+            Form.PB_CardPicture.Image =
+                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+        }
+
+        private void btn_LastCard_Click(object sender, EventArgs e)
+        {
+            if (WolfX_UI_State.CardIndex == 0) return;
+            WolfX_UI_State.CardIndex--;
+            Form.TB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
+            Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
+            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
+            Form.PB_CardPicture.Image =
+                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+        }
+
+        private void CB_CardID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WolfX_UI_State.CardIndex = Form.CB_CardID.SelectedIndex;
+
+            Form.TB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
+            Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
+            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
+            Form.PB_CardPicture.Image =
+                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
         }
     }
 }

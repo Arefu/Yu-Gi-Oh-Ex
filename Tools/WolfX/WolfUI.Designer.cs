@@ -30,9 +30,12 @@
         {
             this.WolfX_TabManager = new System.Windows.Forms.TabControl();
             this.Page_CardManager = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.btn_NextCard = new System.Windows.Forms.Button();
+            this.btn_LastCard = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CB_IsThisCardDLC = new System.Windows.Forms.CheckBox();
+            this.Nud_CardLevel = new System.Windows.Forms.NumericUpDown();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.CB_CardAttribute = new System.Windows.Forms.ComboBox();
             this.CB_CardTypes = new System.Windows.Forms.ComboBox();
@@ -44,22 +47,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.PB_LevelStarFour = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarFive = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarSix = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarThree = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarTwo = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarSeven = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarEight = new System.Windows.Forms.PictureBox();
-            this.PB_LevelStarOne = new System.Windows.Forms.PictureBox();
             this.TB_CardDef = new System.Windows.Forms.TextBox();
             this.TB_CardAtk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TB_CardDesc = new System.Windows.Forms.TextBox();
-            this.TB_CardName = new System.Windows.Forms.TextBox();
             this.PB_CardPicture = new System.Windows.Forms.PictureBox();
             this.Page_ZibManager = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -99,20 +92,13 @@
             this.Status = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.TB_CardName = new System.Windows.Forms.ComboBox();
             this.WolfX_TabManager.SuspendLayout();
             this.Page_CardManager.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Nud_CardLevel)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFive)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarSix)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarThree)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarTwo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarSeven)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarEight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).BeginInit();
             this.Page_ZibManager.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -137,8 +123,9 @@
             // 
             // Page_CardManager
             // 
-            this.Page_CardManager.Controls.Add(this.button3);
-            this.Page_CardManager.Controls.Add(this.button2);
+            this.Page_CardManager.Controls.Add(this.groupBox6);
+            this.Page_CardManager.Controls.Add(this.btn_NextCard);
+            this.Page_CardManager.Controls.Add(this.btn_LastCard);
             this.Page_CardManager.Controls.Add(this.groupBox2);
             this.Page_CardManager.Controls.Add(this.groupBox1);
             this.Page_CardManager.Location = new System.Drawing.Point(4, 24);
@@ -149,10 +136,49 @@
             this.Page_CardManager.Text = "Card Manager";
             this.Page_CardManager.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.checkBox2);
+            this.groupBox6.Location = new System.Drawing.Point(334, 409);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(303, 154);
+            this.groupBox6.TabIndex = 5;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "DLC Cards";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 22);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(110, 19);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "Load DLC Cards";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // btn_NextCard
+            // 
+            this.btn_NextCard.Location = new System.Drawing.Point(334, 366);
+            this.btn_NextCard.Name = "btn_NextCard";
+            this.btn_NextCard.Size = new System.Drawing.Size(107, 25);
+            this.btn_NextCard.TabIndex = 4;
+            this.btn_NextCard.Text = "Next Card";
+            this.btn_NextCard.UseVisualStyleBackColor = true;
+            this.btn_NextCard.Click += new System.EventHandler(this.btn_NextCard_Click);
+            // 
+            // btn_LastCard
+            // 
+            this.btn_LastCard.Location = new System.Drawing.Point(334, 335);
+            this.btn_LastCard.Name = "btn_LastCard";
+            this.btn_LastCard.Size = new System.Drawing.Size(107, 25);
+            this.btn_LastCard.TabIndex = 3;
+            this.btn_LastCard.Text = "Previous Card";
+            this.btn_LastCard.UseVisualStyleBackColor = true;
+            this.btn_LastCard.Click += new System.EventHandler(this.btn_LastCard_Click);
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.CB_IsThisCardDLC);
+            this.groupBox2.Controls.Add(this.Nud_CardLevel);
             this.groupBox2.Controls.Add(this.comboBox6);
             this.groupBox2.Controls.Add(this.CB_CardAttribute);
             this.groupBox2.Controls.Add(this.CB_CardTypes);
@@ -164,34 +190,19 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.comboBox5);
             this.groupBox2.Location = new System.Drawing.Point(334, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(320, 397);
+            this.groupBox2.Size = new System.Drawing.Size(320, 323);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Card Information";
             // 
-            // label9
+            // Nud_CardLevel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(6, 313);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 20);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Miscellaneous";
-            // 
-            // CB_IsThisCardDLC
-            // 
-            this.CB_IsThisCardDLC.AutoSize = true;
-            this.CB_IsThisCardDLC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CB_IsThisCardDLC.Location = new System.Drawing.Point(6, 336);
-            this.CB_IsThisCardDLC.Name = "CB_IsThisCardDLC";
-            this.CB_IsThisCardDLC.Size = new System.Drawing.Size(89, 24);
-            this.CB_IsThisCardDLC.TabIndex = 13;
-            this.CB_IsThisCardDLC.Text = "DLC Card";
-            this.CB_IsThisCardDLC.UseVisualStyleBackColor = true;
+            this.Nud_CardLevel.Location = new System.Drawing.Point(6, 238);
+            this.Nud_CardLevel.Name = "Nud_CardLevel";
+            this.Nud_CardLevel.Size = new System.Drawing.Size(297, 23);
+            this.Nud_CardLevel.TabIndex = 15;
             // 
             // comboBox6
             // 
@@ -204,6 +215,17 @@
             // CB_CardAttribute
             // 
             this.CB_CardAttribute.FormattingEnabled = true;
+            this.CB_CardAttribute.Items.AddRange(new object[] {
+            "Unknown",
+            "Light Monster",
+            "Dark Monster",
+            "Water Monster",
+            "Fire Monster",
+            "Earth Monster",
+            "Wind Monster",
+            "Divine Monster",
+            "Spell",
+            "Trap"});
             this.CB_CardAttribute.Location = new System.Drawing.Point(6, 189);
             this.CB_CardAttribute.Name = "CB_CardAttribute";
             this.CB_CardAttribute.Size = new System.Drawing.Size(297, 23);
@@ -227,11 +249,13 @@
             // 
             // CB_CardID
             // 
+            this.CB_CardID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.CB_CardID.FormattingEnabled = true;
             this.CB_CardID.Location = new System.Drawing.Point(6, 42);
             this.CB_CardID.Name = "CB_CardID";
             this.CB_CardID.Size = new System.Drawing.Size(297, 23);
             this.CB_CardID.TabIndex = 7;
+            this.CB_CardID.SelectedIndexChanged += new System.EventHandler(this.CB_CardID_SelectedIndexChanged);
             // 
             // CB_CardLevel
             // 
@@ -293,30 +317,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Card ID";
             // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 238);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(297, 23);
-            this.comboBox5.TabIndex = 11;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.PB_LevelStarFour);
-            this.groupBox1.Controls.Add(this.PB_LevelStarFive);
-            this.groupBox1.Controls.Add(this.PB_LevelStarSix);
-            this.groupBox1.Controls.Add(this.PB_LevelStarThree);
-            this.groupBox1.Controls.Add(this.PB_LevelStarTwo);
-            this.groupBox1.Controls.Add(this.PB_LevelStarSeven);
-            this.groupBox1.Controls.Add(this.PB_LevelStarEight);
-            this.groupBox1.Controls.Add(this.PB_LevelStarOne);
+            this.groupBox1.Controls.Add(this.TB_CardName);
             this.groupBox1.Controls.Add(this.TB_CardDef);
             this.groupBox1.Controls.Add(this.TB_CardAtk);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.TB_CardDesc);
-            this.groupBox1.Controls.Add(this.TB_CardName);
             this.groupBox1.Controls.Add(this.PB_CardPicture);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
@@ -324,70 +332,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Card Preview";
-            // 
-            // PB_LevelStarFour
-            // 
-            this.PB_LevelStarFour.Location = new System.Drawing.Point(162, 51);
-            this.PB_LevelStarFour.Name = "PB_LevelStarFour";
-            this.PB_LevelStarFour.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarFour.TabIndex = 14;
-            this.PB_LevelStarFour.TabStop = false;
-            // 
-            // PB_LevelStarFive
-            // 
-            this.PB_LevelStarFive.Location = new System.Drawing.Point(123, 51);
-            this.PB_LevelStarFive.Name = "PB_LevelStarFive";
-            this.PB_LevelStarFive.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarFive.TabIndex = 13;
-            this.PB_LevelStarFive.TabStop = false;
-            // 
-            // PB_LevelStarSix
-            // 
-            this.PB_LevelStarSix.Location = new System.Drawing.Point(84, 51);
-            this.PB_LevelStarSix.Name = "PB_LevelStarSix";
-            this.PB_LevelStarSix.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarSix.TabIndex = 12;
-            this.PB_LevelStarSix.TabStop = false;
-            // 
-            // PB_LevelStarThree
-            // 
-            this.PB_LevelStarThree.Location = new System.Drawing.Point(201, 51);
-            this.PB_LevelStarThree.Name = "PB_LevelStarThree";
-            this.PB_LevelStarThree.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarThree.TabIndex = 11;
-            this.PB_LevelStarThree.TabStop = false;
-            // 
-            // PB_LevelStarTwo
-            // 
-            this.PB_LevelStarTwo.Location = new System.Drawing.Point(240, 51);
-            this.PB_LevelStarTwo.Name = "PB_LevelStarTwo";
-            this.PB_LevelStarTwo.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarTwo.TabIndex = 10;
-            this.PB_LevelStarTwo.TabStop = false;
-            // 
-            // PB_LevelStarSeven
-            // 
-            this.PB_LevelStarSeven.Location = new System.Drawing.Point(45, 51);
-            this.PB_LevelStarSeven.Name = "PB_LevelStarSeven";
-            this.PB_LevelStarSeven.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarSeven.TabIndex = 9;
-            this.PB_LevelStarSeven.TabStop = false;
-            // 
-            // PB_LevelStarEight
-            // 
-            this.PB_LevelStarEight.Location = new System.Drawing.Point(6, 51);
-            this.PB_LevelStarEight.Name = "PB_LevelStarEight";
-            this.PB_LevelStarEight.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarEight.TabIndex = 8;
-            this.PB_LevelStarEight.TabStop = false;
-            // 
-            // PB_LevelStarOne
-            // 
-            this.PB_LevelStarOne.Location = new System.Drawing.Point(279, 51);
-            this.PB_LevelStarOne.Name = "PB_LevelStarOne";
-            this.PB_LevelStarOne.Size = new System.Drawing.Size(32, 32);
-            this.PB_LevelStarOne.TabIndex = 7;
-            this.PB_LevelStarOne.TabStop = false;
             // 
             // TB_CardDef
             // 
@@ -428,21 +372,15 @@
             this.TB_CardDesc.Location = new System.Drawing.Point(6, 403);
             this.TB_CardDesc.Multiline = true;
             this.TB_CardDesc.Name = "TB_CardDesc";
+            this.TB_CardDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TB_CardDesc.Size = new System.Drawing.Size(305, 154);
             this.TB_CardDesc.TabIndex = 2;
             // 
-            // TB_CardName
-            // 
-            this.TB_CardName.Location = new System.Drawing.Point(6, 22);
-            this.TB_CardName.Name = "TB_CardName";
-            this.TB_CardName.Size = new System.Drawing.Size(305, 23);
-            this.TB_CardName.TabIndex = 1;
-            // 
             // PB_CardPicture
             // 
-            this.PB_CardPicture.Location = new System.Drawing.Point(6, 89);
+            this.PB_CardPicture.Location = new System.Drawing.Point(6, 51);
             this.PB_CardPicture.Name = "PB_CardPicture";
-            this.PB_CardPicture.Size = new System.Drawing.Size(305, 308);
+            this.PB_CardPicture.Size = new System.Drawing.Size(305, 346);
             this.PB_CardPicture.TabIndex = 0;
             this.PB_CardPicture.TabStop = false;
             // 
@@ -521,9 +459,9 @@
             this.cb_ShowFileName.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_ShowFileName.Location = new System.Drawing.Point(6, 44);
             this.cb_ShowFileName.Name = "cb_ShowFileName";
-            this.cb_ShowFileName.Size = new System.Drawing.Size(111, 19);
+            this.cb_ShowFileName.Size = new System.Drawing.Size(116, 19);
             this.cb_ShowFileName.TabIndex = 3;
-            this.cb_ShowFileName.Text = "Show File Name";
+            this.cb_ShowFileName.Text = "Show File _Name";
             this.cb_ShowFileName.UseVisualStyleBackColor = true;
             // 
             // btn_ExtractAll
@@ -621,9 +559,9 @@
             this.lbl_NamePrompt.AutoSize = true;
             this.lbl_NamePrompt.Location = new System.Drawing.Point(6, 19);
             this.lbl_NamePrompt.Name = "lbl_NamePrompt";
-            this.lbl_NamePrompt.Size = new System.Drawing.Size(42, 15);
+            this.lbl_NamePrompt.Size = new System.Drawing.Size(47, 15);
             this.lbl_NamePrompt.TabIndex = 0;
-            this.lbl_NamePrompt.Text = "Name:";
+            this.lbl_NamePrompt.Text = "_Name:";
             // 
             // Page_AnimationManager
             // 
@@ -798,23 +736,14 @@
             this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
             this.LBL_GameStatusLabel.Text = "Not Loaded";
             // 
-            // button2
+            // TB_CardName
             // 
-            this.button2.Location = new System.Drawing.Point(334, 409);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 25);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Previous Card";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(334, 440);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 25);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Next Card";
-            this.button3.UseVisualStyleBackColor = true;
+            this.TB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.TB_CardName.FormattingEnabled = true;
+            this.TB_CardName.Location = new System.Drawing.Point(6, 19);
+            this.TB_CardName.Name = "TB_CardName";
+            this.TB_CardName.Size = new System.Drawing.Size(305, 23);
+            this.TB_CardName.TabIndex = 7;
             // 
             // WolfUI
             // 
@@ -826,22 +755,18 @@
             this.Controls.Add(this.MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.MenuBar;
+            this.MaximizeBox = false;
             this.Name = "WolfUI";
             this.Text = "WolfX";
             this.WolfX_TabManager.ResumeLayout(false);
             this.Page_CardManager.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Nud_CardLevel)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarFive)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarSix)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarThree)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarTwo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarSeven)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarEight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_LevelStarOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).EndInit();
             this.Page_ZibManager.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -872,33 +797,17 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem File_Exit;
         private GroupBox groupBox1;
-        private TextBox TB_CardDef;
-        private TextBox TB_CardAtk;
         private Label label2;
         private Label label1;
-        private PictureBox PB_LevelStarFour;
-        private PictureBox PB_LevelStarFive;
-        private PictureBox PB_LevelStarSix;
-        private PictureBox PB_LevelStarThree;
-        private PictureBox PB_LevelStarTwo;
-        private PictureBox PB_LevelStarSeven;
-        private PictureBox PB_LevelStarEight;
-        private PictureBox PB_LevelStarOne;
         private GroupBox groupBox2;
-        private Label label9;
-        private CheckBox CB_IsThisCardDLC;
         private ComboBox comboBox6;
-        private ComboBox CB_CardAttribute;
-        private ComboBox CB_CardTypes;
         private ComboBox CB_CardImageID;
-        private ComboBox CB_CardID;
         private Label CB_CardLevel;
         private Label CB_CardLimitedStatus;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
-        private ComboBox comboBox5;
         private GroupBox groupBox4;
         private Button btn_ExtractAll;
         public ListView lv_ArchivePreviewer;
@@ -932,9 +841,17 @@
         private ToolStripMenuItem Language_spanish;
         private TabPage Page_AnimationManager;
         public TextBox TB_CardDesc;
-        public TextBox TB_CardName;
-        private Button button3;
-        private Button button2;
+        private Button btn_NextCard;
+        private Button btn_LastCard;
         public PictureBox PB_CardPicture;
+        public ComboBox CB_CardID;
+        public TextBox TB_CardDef;
+        public TextBox TB_CardAtk;
+        public ComboBox CB_CardAttribute;
+        public NumericUpDown Nud_CardLevel;
+        public ComboBox CB_CardTypes;
+        private GroupBox groupBox6;
+        private CheckBox checkBox2;
+        public ComboBox TB_CardName;
     }
 }

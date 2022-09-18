@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Configuration.Internal;
 using System.DirectoryServices;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using WolfX.Handlers;
 using WolfX.Types;
 
 namespace WolfX.Handler.Tools
@@ -47,7 +49,31 @@ namespace WolfX.Handler.Tools
             }
             ImageList.ImageSize = new Size(128, 128);
             ImageList.ColorDepth = ColorDepth.Depth32Bit;
+            Reader.Close();
             return ImageList;
+        }
+
+        public static Image Get_ImageFromArchive(string Archive, string FileId)
+        {
+            var ArchivePath = $"{WolfX_UI_State.WorkingDirectory}\\{Archive}";
+
+            var Files = Archive_Handler.GetFiles(Archive);
+            using var Reader = new BinaryReader(File.Open(ArchivePath, FileMode.Open, FileAccess.Read));
+
+            foreach (var File in Files)
+            {
+                if (Path.GetFileNameWithoutExtension(File.Name) == FileId)
+                {
+                    Reader.BaseStream.Position = File.Offset;
+                    var Data = Reader.ReadBytes((int)File.Size);
+                    System.IO.File.WriteAllBytes(File.Name, Data);
+                    return Image.FromStream(new MemoryStream(Data));
+                }
+
+                Reader.ReadBytes((int)File.Size);
+            }
+            Reader.Close();
+            return null;
         }
 
         public static ImageList Get_DefaultImageFromDll()
