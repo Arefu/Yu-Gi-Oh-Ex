@@ -48,6 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TB_CardName = new System.Windows.Forms.ComboBox();
             this.TB_CardDef = new System.Windows.Forms.TextBox();
             this.TB_CardAtk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,7 +93,7 @@
             this.Status = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.TB_CardName = new System.Windows.Forms.ComboBox();
+            this.btn_SaveCard = new System.Windows.Forms.Button();
             this.WolfX_TabManager.SuspendLayout();
             this.Page_CardManager.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -123,6 +124,7 @@
             // 
             // Page_CardManager
             // 
+            this.Page_CardManager.Controls.Add(this.btn_SaveCard);
             this.Page_CardManager.Controls.Add(this.groupBox6);
             this.Page_CardManager.Controls.Add(this.btn_NextCard);
             this.Page_CardManager.Controls.Add(this.btn_LastCard);
@@ -332,6 +334,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Card Preview";
+            // 
+            // TB_CardName
+            // 
+            this.TB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.TB_CardName.FormattingEnabled = true;
+            this.TB_CardName.Location = new System.Drawing.Point(6, 19);
+            this.TB_CardName.Name = "TB_CardName";
+            this.TB_CardName.Size = new System.Drawing.Size(305, 23);
+            this.TB_CardName.TabIndex = 7;
             // 
             // TB_CardDef
             // 
@@ -736,14 +747,15 @@
             this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
             this.LBL_GameStatusLabel.Text = "Not Loaded";
             // 
-            // TB_CardName
+            // btn_SaveCard
             // 
-            this.TB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.TB_CardName.FormattingEnabled = true;
-            this.TB_CardName.Location = new System.Drawing.Point(6, 19);
-            this.TB_CardName.Name = "TB_CardName";
-            this.TB_CardName.Size = new System.Drawing.Size(305, 23);
-            this.TB_CardName.TabIndex = 7;
+            this.btn_SaveCard.Location = new System.Drawing.Point(447, 335);
+            this.btn_SaveCard.Name = "btn_SaveCard";
+            this.btn_SaveCard.Size = new System.Drawing.Size(107, 25);
+            this.btn_SaveCard.TabIndex = 6;
+            this.btn_SaveCard.Text = "Save Card";
+            this.btn_SaveCard.UseVisualStyleBackColor = true;
+            this.btn_SaveCard.Click += new System.EventHandler(this.btn_SaveCard_Click);
             // 
             // WolfUI
             // 
@@ -853,5 +865,6 @@
         private GroupBox groupBox6;
         private CheckBox checkBox2;
         public ComboBox TB_CardName;
+        private Button btn_SaveCard;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,10 @@ namespace WolfX.Types
         internal Attribute _Attribute { get; set; }
 
         internal Type _Type { get; set; }
+
+        public BitVector32 _Bit1 { get; set; }
+
+        public BitVector32 _Bit2 { get; set; }
         //RelatedCards
         //EffectTags
         //NameTypes

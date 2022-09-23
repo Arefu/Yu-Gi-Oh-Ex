@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using WolfX.Handler.Tools;
 using WolfX.Handlers;
@@ -229,6 +230,10 @@ namespace WolfX
             WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
             Form.PB_CardPicture.Image =
                 Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+        }
+
+        private void btn_SaveCard_Click(object sender, EventArgs e)
+        {
         }
     }
 }

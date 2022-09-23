@@ -71,14 +71,10 @@ namespace WolfX.Handlers
 
                 var bit2_unused = BitVector32.CreateSection(1, bit2_scaleR);
 
-                //card.CardType = (CardType)bit2[bit2_kind];
-                //card.SpellType = (SpellType)bit2[bit2_icon];
-                //card.MonsterType = (MonsterType)bit2[bit2_type];
-                //card.PendulumScale1 = (byte)bit2[bit2_scaleL];
-                //card.PendulumScale2 = (byte)bit2[bit2_scaleR];
-
                 var Card = new Card
                 {
+                    _Bit1 = Bit1,
+                    _Bit2 = bit2,
                     _Id = (short)Bit1[bit1_mrk],
                     _Name = NameDict[NameOffset],
                     _Description = DescDict[DescOffset],
