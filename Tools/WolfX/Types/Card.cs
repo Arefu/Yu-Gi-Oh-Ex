@@ -23,6 +23,10 @@ namespace WolfX.Types
         public BitVector32 _Bit1 { get; set; }
 
         public BitVector32 _Bit2 { get; set; }
+
+        public byte _PendulumScale1 { get; set; }
+
+        public byte _PendulumScale2 { get; set; }
         //RelatedCards
         //EffectTags
         //NameTypes

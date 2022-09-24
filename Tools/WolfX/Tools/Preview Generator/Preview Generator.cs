@@ -50,6 +50,7 @@ namespace WolfX.Handler.Tools
             ImageList.ImageSize = new Size(128, 128);
             ImageList.ColorDepth = ColorDepth.Depth32Bit;
             Reader.Close();
+            Reader.Dispose();
             return ImageList;
         }
 

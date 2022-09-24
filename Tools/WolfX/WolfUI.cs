@@ -25,7 +25,7 @@ namespace WolfX
             if (Res != DialogResult.OK || string.IsNullOrWhiteSpace(FolderBrowser.SelectedPath)) return;
             if (new DirectoryInfo(FolderBrowser.SelectedPath).Name != "YGO_2020") return;
 
-            LBL_GameStatusLabel.Text = @"Ready";
+            LBL_GameStatusLabel.Text = @"Opening Game Directory...";
             LBL_GameStatusLabel.ForeColor = Color.Green;
 
             WolfX_TabManager.Enabled = true;

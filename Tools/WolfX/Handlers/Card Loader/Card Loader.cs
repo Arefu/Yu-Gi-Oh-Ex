@@ -14,6 +14,8 @@ namespace WolfX.Handlers
 
         internal static void Load()
         {
+            WolfUI.Form.LBL_GameStatusLabel.Text = @"Opening Cards...";
+            WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Orange;
             var CardIndxFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Indx_{(char)WolfX_UI_State.Language}.bin";
             var CardNameFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Name_{(char)WolfX_UI_State.Language}.bin";
             var CardDescFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Desc_{(char)WolfX_UI_State.Language}.bin";
@@ -83,7 +85,9 @@ namespace WolfX.Handlers
                     _Def = (int)(FirstQuadChunk[QuadCardDef] * 10),
                     _Level = (byte)SecondQuadChunk[MonsterLevel],
                     _Attribute = (Types.Card.Attribute)SecondQuadChunk[Attribute],
-                    _Type = (Types.Card.Type)SecondQuadChunk[Kind]
+                    _Type = (Types.Card.Type)SecondQuadChunk[Kind],
+                    _PendulumScale1 = (byte)SecondQuadChunk[LeftScale],
+                    _PendulumScale2 = (byte)SecondQuadChunk[RightScale]
                 };
 
                 WolfX_UI_State.Cards.Add(Card);
@@ -103,6 +107,9 @@ namespace WolfX.Handlers
 
             WolfUI.Form.PB_CardPicture.Image =
                 Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+
+            WolfUI.Form.LBL_GameStatusLabel.Text = @"Ready";
+            WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Green;
         }
     }
 }
