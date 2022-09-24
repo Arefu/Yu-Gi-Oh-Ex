@@ -30,6 +30,7 @@
         {
             this.WolfX_TabManager = new System.Windows.Forms.TabControl();
             this.Page_CardManager = new System.Windows.Forms.TabPage();
+            this.btn_SaveCard = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.btn_NextCard = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TB_CardName = new System.Windows.Forms.ComboBox();
+            this.CB_CardName = new System.Windows.Forms.ComboBox();
             this.TB_CardDef = new System.Windows.Forms.TextBox();
             this.TB_CardAtk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -93,7 +94,6 @@
             this.Status = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btn_SaveCard = new System.Windows.Forms.Button();
             this.WolfX_TabManager.SuspendLayout();
             this.Page_CardManager.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -137,6 +137,16 @@
             this.Page_CardManager.TabIndex = 0;
             this.Page_CardManager.Text = "Card Manager";
             this.Page_CardManager.UseVisualStyleBackColor = true;
+            // 
+            // btn_SaveCard
+            // 
+            this.btn_SaveCard.Location = new System.Drawing.Point(447, 335);
+            this.btn_SaveCard.Name = "btn_SaveCard";
+            this.btn_SaveCard.Size = new System.Drawing.Size(107, 25);
+            this.btn_SaveCard.TabIndex = 6;
+            this.btn_SaveCard.Text = "Save Card";
+            this.btn_SaveCard.UseVisualStyleBackColor = true;
+            this.btn_SaveCard.Click += new System.EventHandler(this.btn_SaveCard_Click);
             // 
             // groupBox6
             // 
@@ -321,7 +331,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TB_CardName);
+            this.groupBox1.Controls.Add(this.CB_CardName);
             this.groupBox1.Controls.Add(this.TB_CardDef);
             this.groupBox1.Controls.Add(this.TB_CardAtk);
             this.groupBox1.Controls.Add(this.label2);
@@ -335,14 +345,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Card Preview";
             // 
-            // TB_CardName
+            // CB_CardName
             // 
-            this.TB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.TB_CardName.FormattingEnabled = true;
-            this.TB_CardName.Location = new System.Drawing.Point(6, 19);
-            this.TB_CardName.Name = "TB_CardName";
-            this.TB_CardName.Size = new System.Drawing.Size(305, 23);
-            this.TB_CardName.TabIndex = 7;
+            this.CB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CB_CardName.FormattingEnabled = true;
+            this.CB_CardName.Location = new System.Drawing.Point(6, 19);
+            this.CB_CardName.Name = "CB_CardName";
+            this.CB_CardName.Size = new System.Drawing.Size(305, 23);
+            this.CB_CardName.TabIndex = 7;
             // 
             // TB_CardDef
             // 
@@ -747,16 +757,6 @@
             this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
             this.LBL_GameStatusLabel.Text = "Not Loaded";
             // 
-            // btn_SaveCard
-            // 
-            this.btn_SaveCard.Location = new System.Drawing.Point(447, 335);
-            this.btn_SaveCard.Name = "btn_SaveCard";
-            this.btn_SaveCard.Size = new System.Drawing.Size(107, 25);
-            this.btn_SaveCard.TabIndex = 6;
-            this.btn_SaveCard.Text = "Save Card";
-            this.btn_SaveCard.UseVisualStyleBackColor = true;
-            this.btn_SaveCard.Click += new System.EventHandler(this.btn_SaveCard_Click);
-            // 
             // WolfUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -864,7 +864,7 @@
         public ComboBox CB_CardTypes;
         private GroupBox groupBox6;
         private CheckBox checkBox2;
-        public ComboBox TB_CardName;
+        public ComboBox CB_CardName;
         private Button btn_SaveCard;
     }
 }

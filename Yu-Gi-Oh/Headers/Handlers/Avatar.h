@@ -7,7 +7,6 @@ typedef unsigned __int64 QWORD;
 class Avatar
 {
 public:
+
 private:
-	QWORD _BaseAddr;
-	BOOL _Debug = FALSE;
 };

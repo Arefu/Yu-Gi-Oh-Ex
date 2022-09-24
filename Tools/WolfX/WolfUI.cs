@@ -1,4 +1,5 @@
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using WolfX.Handler.Tools;
 using WolfX.Handlers;
@@ -21,21 +22,18 @@ namespace WolfX
             using var FolderBrowser = new FolderBrowserDialog();
             var Res = FolderBrowser.ShowDialog();
 
-            if (Res == DialogResult.OK && !string.IsNullOrWhiteSpace(FolderBrowser.SelectedPath))
-            {
-                if (new DirectoryInfo(FolderBrowser.SelectedPath).Name == "YGO_2020")
-                {
-                    LBL_GameStatusLabel.Text = @"Ready";
-                    LBL_GameStatusLabel.ForeColor = Color.Green;
+            if (Res != DialogResult.OK || string.IsNullOrWhiteSpace(FolderBrowser.SelectedPath)) return;
+            if (new DirectoryInfo(FolderBrowser.SelectedPath).Name != "YGO_2020") return;
 
-                    WolfX_TabManager.Enabled = true;
-                    Tools_Verify.Enabled = true;
-                    WolfX_UI_State.WorkingDirectory = FolderBrowser.SelectedPath;
-                    WolfX_UI_State.IsLoaded = true;
-                    new Thread(Handlers.CardLoader.Load).Start();
-                    new Thread(Handlers.Archive_Handler.Load).Start();
-                }
-            }
+            LBL_GameStatusLabel.Text = @"Ready";
+            LBL_GameStatusLabel.ForeColor = Color.Green;
+
+            WolfX_TabManager.Enabled = true;
+            Tools_Verify.Enabled = true;
+            WolfX_UI_State.WorkingDirectory = FolderBrowser.SelectedPath;
+            WolfX_UI_State.IsLoaded = true;
+            new Thread(Handlers.CardLoader.Load).Start();
+            new Thread(Handlers.Archive_Handler.Load).Start();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -188,7 +186,7 @@ namespace WolfX
         {
             if (WolfX_UI_State.CardIndex == WolfX_UI_State.Cards.Count) return;
             WolfX_UI_State.CardIndex++;
-            Form.TB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
+            Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
             Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
             Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
             Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
@@ -204,7 +202,7 @@ namespace WolfX
         {
             if (WolfX_UI_State.CardIndex == 0) return;
             WolfX_UI_State.CardIndex--;
-            Form.TB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
+            Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
             Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
             Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
             Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
@@ -220,7 +218,7 @@ namespace WolfX
         {
             WolfX_UI_State.CardIndex = Form.CB_CardID.SelectedIndex;
 
-            Form.TB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
+            Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
             Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
             Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
             Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
@@ -234,6 +232,22 @@ namespace WolfX
 
         private void btn_SaveCard_Click(object sender, EventArgs e)
         {
+            var thing = WolfX_UI_State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]));
+            var Message =
+                $"{WolfX_UI_State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]))._Bit1.ToString()}";
+            Debug.WriteLine(Message);
+
+            var Bit1 = thing._Bit1;
+            var bit1_mrk = BitVector32.CreateSection(16383);
+            var bit1_attack = BitVector32.CreateSection(511, bit1_mrk);
+            var bit1_defence = BitVector32.CreateSection(511, bit1_attack);
+            Bit1[bit1_attack] = Convert.ToInt32(Form.TB_CardAtk.Text) / 10;
+            Bit1[bit1_defence] = Convert.ToInt32(Form.TB_CardDef.Text) / 10;
+            Debug.WriteLine(Bit1.ToString());
+            /*
+             * _Atk = (int)(Bit1[bit1_attack] * 10),
+            _Def = (int)(Bit1[bit1_defence] * 10),
+             */
         }
     }
 }

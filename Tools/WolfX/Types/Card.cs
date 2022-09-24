@@ -16,9 +16,9 @@ namespace WolfX.Types
         public int _Atk { get; set; }
         public int _Def { get; set; }
         public byte _Level { get; set; }
-        internal Attribute _Attribute { get; set; }
+        public Attribute _Attribute { get; set; }
 
-        internal Type _Type { get; set; }
+        public Type _Type { get; set; }
 
         public BitVector32 _Bit1 { get; set; }
 
