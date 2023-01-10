@@ -1,14 +1,16 @@
 #include <Windows.h>
+#include <detours.h>
 #include <iostream>
 
-#include <detours.h>
-
+#include "ImGui/YuGiOh_ImGui.h"
 #include "ImGui/D3D11/D3D11.h"
 
+#include "Detours/Multiplayer/Patcher.h"
+#include "Detours/Engine/Threading.h"
 #include "Detours/Game.h"
-#include "ImGui/YuGiOh_ImGui.h"
 
-#include "Detours/Multiplayer/MPatcher.h"
+
+
 
 void StartDetours();
 
@@ -55,9 +57,10 @@ void StartDetours()
 	//DetourAttach(reinterpret_cast<PVOID*>(&MultiplayerHost), MPatcher::Patch_MultiplayerHost);
 
 	auto MultiplayerFind = reinterpret_cast<Address>(0x1408D82B0);
-	DetourAttach(reinterpret_cast<PVOID*>(&MultiplayerFind), MPatcher::Patch_MultiplayerFind);
+	//DetourAttach(reinterpret_cast<PVOID*>(&MultiplayerFind), MPatcher::Patch_MultiplayerFind);
 
 	DetourTransactionCommit();
 
+	
 	DirectX::Set_ImGuiD3D11SetupPatchAddress(ImGui_D3D11Setup);
 }

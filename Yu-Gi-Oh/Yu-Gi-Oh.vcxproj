@@ -91,7 +91,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\ImGui\Windows\Connect To Server\Connect.cpp" />
-    <ClCompile Include="Source\Detours\Multiplayer\Client\Client.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_demo.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_draw.cpp" />
@@ -99,23 +98,22 @@
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_impl_win32.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_tables.cpp" />
     <ClCompile Include="Dependencies\Dear-ImGui\imgui_widgets.cpp" />
-    <ClCompile Include="Source\Detours\Multiplayer\MPatcher.cpp" />
+    <ClCompile Include="Source\Detours\Multiplayer\Patcher.cpp" />
     <ClCompile Include="Source\ImGui\D3D11\D3D11.cpp" />
     <ClCompile Include="Source\ImGui\Windows\Console\Console.cpp" />
     <ClCompile Include="Source\ImGui\YuGIOh_ImGui.cpp" />
-    <ClCompile Include="Source\Handlers\Avatar.cpp" />
     <ClCompile Include="Source\Config.cpp" />
     <ClCompile Include="Source\Detours\Game.cpp" />
     <ClCompile Include="Source\Utilities\Memory.cpp" />
     <ClCompile Include="Source\Handlers\Player.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Source\Detours\Engine\Threading.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh-x64.def" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\ImGui\Windows\Connect To Server\Connect.h" />
-    <ClInclude Include="Headers\Detours\Multiplayer\Client\Client.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imconfig.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imgui.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imgui_impl_dx11.h" />
@@ -125,7 +123,6 @@
     <ClInclude Include="Dependencies\Dear-ImGui\imstb_textedit.h" />
     <ClInclude Include="Dependencies\Dear-ImGui\imstb_truetype.h" />
     <ClInclude Include="Headers\ImGui\D3D11\D3D11.h" />
-    <ClInclude Include="Headers\Handlers\Avatar.h" />
     <ClInclude Include="Headers\ImGui\Windows\Console\Console.h" />
     <ClInclude Include="Headers\Types\CardID.h" />
     <ClInclude Include="Headers\Config.h" />
@@ -136,7 +133,9 @@
     <ClInclude Include="Headers\Types\Cards.h" />
     <ClInclude Include="Headers\Yu-Gi-Oh.h" />
     <ClInclude Include="Headers\ImGui\YuGiOh_ImGui.h" />
-    <ClInclude Include="Headers\Detours\Multiplayer\MPatcher.h" />
+    <ClInclude Include="Headers\Detours\Multiplayer\Patcher.h" />
+    <ClInclude Include="Headers\Detours\Engine\Threading.h" />
+    <ClInclude Include="Threading.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

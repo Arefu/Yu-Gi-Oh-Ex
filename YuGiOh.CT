@@ -95,19 +95,17 @@
           <VariableType>4 Bytes</VariableType>
           <Address>143497C5C</Address>
         </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>5</ID>
-      <Description>"Monster Zone"</Description>
-      <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
         <CheatEntry>
-          <ID>4</ID>
-          <Description>"Card #1"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <DropDownList DisplayValueAsItem="1">3900:Insect Monster Token
+          <ID>5</ID>
+          <Description>"Player 1 Monster Zone"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>4</ID>
+              <Description>"Card #1"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <DropDownList DisplayValueAsItem="1">3900:Insect Monster Token
 3901:Kuriboh Token
 3902:Sheep Token
 3903:Sheep Token
@@ -10273,45 +10271,45 @@ Angel of Oblivion?:?Rui
 14967:Resh Shaddoll Incarnation
 14968:El Shaddoll Apkallone
 </DropDownList>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497C8C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>168</ID>
-              <Description>"Card #1 Picture"</Description>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497C8E</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>169</ID>
-              <Description>"Card #1 UNK"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497C90</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>170</ID>
-              <Description>"Card #1 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497C8C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>168</ID>
+                  <Description>"Card #1 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497C8E</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>169</ID>
+                  <Description>"Card #1 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497C90</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>170</ID>
+                  <Description>"Card #1 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497C92</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497C92</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>6</ID>
-          <Description>"Card #2"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <DropDownList DisplayValueAsItem="1">3900:Insect Monster Token
+            <CheatEntry>
+              <ID>6</ID>
+              <Description>"Card #2"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <DropDownList DisplayValueAsItem="1">3900:Insect Monster Token
 3901:Kuriboh Token
 3902:Sheep Token
 3903:Sheep Token
@@ -20477,44 +20475,44 @@ Angel of Oblivion?:?Rui
 14967:Resh Shaddoll Incarnation
 14968:El Shaddoll Apkallone
 </DropDownList>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497CA4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>146</ID>
-              <Description>"Card #2 Picture"</Description>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CA6</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>145</ID>
-              <Description>"Card #2 UNK"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CA8</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>144</ID>
-              <Description>"Card #2 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497CA4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>146</ID>
+                  <Description>"Card #2 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CA6</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>145</ID>
+                  <Description>"Card #2 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CA8</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>144</ID>
+                  <Description>"Card #2 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CAA</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CAA</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>7</ID>
-          <Description>"Card #3"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <DropDownList DisplayValueAsItem="1">3900:Insect Monster Token
+            <CheatEntry>
+              <ID>7</ID>
+              <Description>"Card #3"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <DropDownList DisplayValueAsItem="1">3900:Insect Monster Token
 3901:Kuriboh Token
 3902:Sheep Token
 3903:Sheep Token
@@ -30680,1725 +30678,1734 @@ Angel of Oblivion?:?Rui
 14967:Resh Shaddoll Incarnation
 14968:El Shaddoll Apkallone
 </DropDownList>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497CBC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>143</ID>
-              <Description>"Card #3 Picture"</Description>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CBE</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>154</ID>
-              <Description>"Card #3 UNK"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CC0</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>155</ID>
-              <Description>"Card #3 Postion"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497CBC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>143</ID>
+                  <Description>"Card #3 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CBE</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>154</ID>
+                  <Description>"Card #3 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CC0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>155</ID>
+                  <Description>"Card #3 Postion"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CC2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>171</ID>
-          <Description>"Card #4"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497CD4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>172</ID>
-              <Description>"Card #4 Image"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CD6</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CC2</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>173</ID>
-              <Description>"Card #4 UNK"</Description>
+              <ID>171</ID>
+              <Description>"Card #4"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CD8</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>174</ID>
-              <Description>"Card #4 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497CD4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>172</ID>
+                  <Description>"Card #4 Image"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CD6</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>173</ID>
+                  <Description>"Card #4 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CD8</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>174</ID>
+                  <Description>"Card #4 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497CDA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>175</ID>
-          <Description>"Card #5"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497CEC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>176</ID>
-              <Description>"Card #5 Image"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3497CEE</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497CDA</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>177</ID>
-              <Description>"Card #5 UNK"</Description>
+              <ID>175</ID>
+              <Description>"Card #5"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497CF0</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>178</ID>
-              <Description>"Card #5 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497CEC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>176</ID>
+                  <Description>"Card #5 Image"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3497CEE</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>177</ID>
+                  <Description>"Card #5 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497CF0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>178</ID>
+                  <Description>"Card #5 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497CF2</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497CF2</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>163</ID>
-      <Description>"Magic Zone"</Description>
-      <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
         <CheatEntry>
-          <ID>164</ID>
-          <Description>"Card #1"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497D34</Address>
+          <ID>163</ID>
+          <Description>"Player 1 Magic Zone"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>165</ID>
-              <Description>"Card #1 Picture"</Description>
+              <ID>164</ID>
+              <Description>"Card #1"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497D36</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>166</ID>
-              <Description>"Card #1  UNK"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D38</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>167</ID>
-              <Description>"Card #1 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497D34</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>165</ID>
+                  <Description>"Card #1 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D36</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>166</ID>
+                  <Description>"Card #1  UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D38</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>167</ID>
+                  <Description>"Card #1 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D3A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>180</ID>
-          <Description>"Card #2"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497D4C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>181</ID>
-              <Description>"Card #2 Picture"</Description>
-              <ShowAsHex>1</ShowAsHex>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D4E</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D3A</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>182</ID>
-              <Description>"Card #2 UNK"</Description>
+              <ID>180</ID>
+              <Description>"Card #2"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497D50</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>183</ID>
-              <Description>"Card #2 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497D4C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>181</ID>
+                  <Description>"Card #2 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D4E</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>182</ID>
+                  <Description>"Card #2 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D50</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>183</ID>
+                  <Description>"Card #2 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D52</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>159</ID>
-          <Description>"Card #3"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497D64</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>160</ID>
-              <Description>"Card #3 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D66</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D52</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>161</ID>
-              <Description>"Card #3 UNK"</Description>
+              <ID>159</ID>
+              <Description>"Card #3"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497D68</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>162</ID>
-              <Description>"Card #3 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497D64</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>160</ID>
+                  <Description>"Card #3 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D66</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>161</ID>
+                  <Description>"Card #3 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D68</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>162</ID>
+                  <Description>"Card #3 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D6A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>189</ID>
-          <Description>"Card #4"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497D7C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>190</ID>
-              <Description>"Card #4 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D7E</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D6A</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>191</ID>
-              <Description>"Card #4 UNK"</Description>
+              <ID>189</ID>
+              <Description>"Card #4"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497D80</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>192</ID>
-              <Description>"Card #4 Positon"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497D7C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>190</ID>
+                  <Description>"Card #4 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D7E</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>191</ID>
+                  <Description>"Card #4 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D80</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>192</ID>
+                  <Description>"Card #4 Positon"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D82</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>184</ID>
-          <Description>"Card #5"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497D94</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>185</ID>
-              <Description>"Card #5 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D96</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D82</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>186</ID>
-              <Description>"Card #5 UNK"</Description>
+              <ID>184</ID>
+              <Description>"Card #5"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497D98</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>187</ID>
-              <Description>"Card #5 Position"</Description>
-              <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
+              <Address>143497D94</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>185</ID>
+                  <Description>"Card #5 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D96</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>186</ID>
+                  <Description>"Card #5 UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D98</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>187</ID>
+                  <Description>"Card #5 Position"</Description>
+                  <DropDownList ReadOnly="1" DisplayValueAsItem="1">0:Face Down Attack
 1:Face Down Defense
 257:Defense
 256:Attack
 </DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497D9A</Address>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497D9A</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>201</ID>
-      <Description>"Field Spell"</Description>
-      <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
         <CheatEntry>
-          <ID>194</ID>
-          <Description>"Card #1"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DAC</Address>
+          <ID>201</ID>
+          <Description>"Player 1 Field Spell"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>195</ID>
-              <Description>"Field Spell Picture"</Description>
+              <ID>194</ID>
+              <Description>"Card #1"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497DAE</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>196</ID>
-              <Description>"Field Spell UNK"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DB0</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>197</ID>
-              <Description>"Field Spell Position"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DB2</Address>
+              <Address>143497DAC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>195</ID>
+                  <Description>"Field Spell Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DAE</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>196</ID>
+                  <Description>"Field Spell UNK"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DB0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>197</ID>
+                  <Description>"Field Spell Position"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DB2</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>128</ID>
-      <Description>"Player 1 Card Hands"</Description>
-      <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
         <CheatEntry>
-          <ID>129</ID>
-          <Description>"Card #1"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DDC</Address>
+          <ID>128</ID>
+          <Description>"Player 1 Card Hands"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>130</ID>
-              <Description>"Player Hand Card #1 Picture"</Description>
+              <ID>129</ID>
+              <Description>"Card #1"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143497DDE</Address>
+              <Address>143497DDC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>130</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DDE</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>131</ID>
-          <Description>"Card #2"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DE0</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>132</ID>
-              <Description>"Player Hand Card #2 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DE2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>133</ID>
-          <Description>"Card #3"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DE4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>134</ID>
-              <Description>"Player Hand Card #3 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DE6</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>135</ID>
-          <Description>"Card #4"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DE8</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>136</ID>
-              <Description>"Player Hand Card #4 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DEA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>137</ID>
-          <Description>"Card #5"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DEC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>138</ID>
-              <Description>"Player Hand Card #5 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DEE</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>139</ID>
-          <Description>"Card #6"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DF0</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>140</ID>
-              <Description>"Player Hand Card #6 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DF2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>141</ID>
-          <Description>"Card #7"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497DF4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>142</ID>
-              <Description>"Player Hand Card #7 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497DF6</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>15</ID>
-      <Description>"Player 1 Deck Cards"</Description>
-      <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>16</ID>
-          <Description>"1"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FBC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>23</ID>
-              <Description>"1_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FBE</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>17</ID>
-          <Description>"2"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FC0</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>24</ID>
-              <Description>"2_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FC2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>20</ID>
-          <Description>"3"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FC4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>21</ID>
-              <Description>"3_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FC6</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>22</ID>
-          <Description>"4"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FC8</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>25</ID>
-              <Description>"4_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FCA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>26</ID>
-          <Description>"5"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FCC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>27</ID>
-              <Description>"5_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FCE</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>28</ID>
-          <Description>"6"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FD0</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>29</ID>
-              <Description>"6_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FD2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>30</ID>
-          <Description>"7"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FD4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>31</ID>
-              <Description>"7_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FD6</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>32</ID>
-          <Description>"8"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FD8</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>33</ID>
-              <Description>"8_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FDA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>34</ID>
-          <Description>"9"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FDC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>35</ID>
-              <Description>"9_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FDE</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>36</ID>
-          <Description>"10"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FE0</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>37</ID>
-              <Description>"10_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FE2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>38</ID>
-          <Description>"11"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FE4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>39</ID>
-              <Description>"11_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FE6</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>40</ID>
-          <Description>"12"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FE8</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>41</ID>
-              <Description>"12_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FEA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>42</ID>
-          <Description>"13"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FEC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>43</ID>
-              <Description>"13_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FEE</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>44</ID>
-          <Description>"14"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FF0</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>45</ID>
-              <Description>"14_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FF2</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>46</ID>
-          <Description>"15"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FF4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>47</ID>
-              <Description>"15_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FF6</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>48</ID>
-          <Description>"16"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FF8</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>49</ID>
-              <Description>"16_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FFA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>50</ID>
-          <Description>"17"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143497FFC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>51</ID>
-              <Description>"17_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143497FFE</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>52</ID>
-          <Description>"18"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498000</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>53</ID>
-              <Description>"18_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498002</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>54</ID>
-          <Description>"19"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498004</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>55</ID>
-              <Description>"19_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498006</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>56</ID>
-          <Description>"20"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498008</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>57</ID>
-              <Description>"20_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349800A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>58</ID>
-          <Description>"21"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349800C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>59</ID>
-              <Description>"21_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349800E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>60</ID>
-          <Description>"22"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498010</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>61</ID>
-              <Description>"22_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498012</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>62</ID>
-          <Description>"23"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498014</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>63</ID>
-              <Description>"23_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498016</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>64</ID>
-          <Description>"24"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498018</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>65</ID>
-              <Description>"24_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349801A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>66</ID>
-          <Description>"25"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349801C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>67</ID>
-              <Description>"25_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349801E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>68</ID>
-          <Description>"26"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498020</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>69</ID>
-              <Description>"26_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498022</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>70</ID>
-          <Description>"27"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498024</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>71</ID>
-              <Description>"27_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498026</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>72</ID>
-          <Description>"28"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498028</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>73</ID>
-              <Description>"28_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349802A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>74</ID>
-          <Description>"29"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349802C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>75</ID>
-              <Description>"29_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349802E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>76</ID>
-          <Description>"30"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498030</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>77</ID>
-              <Description>"30_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498032</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>78</ID>
-          <Description>"31"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498034</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>79</ID>
-              <Description>"31_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498036</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>80</ID>
-          <Description>"32"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498038</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>81</ID>
-              <Description>"32_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349803A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>82</ID>
-          <Description>"33"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349803C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>83</ID>
-              <Description>"33_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349803E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>84</ID>
-          <Description>"34"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498040</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>85</ID>
-              <Description>"34_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498042</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>86</ID>
-          <Description>"35"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498044</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>87</ID>
-              <Description>"35_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498046</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>88</ID>
-          <Description>"36"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498048</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>89</ID>
-              <Description>"36_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349804A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>90</ID>
-          <Description>"37"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349804C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>91</ID>
-              <Description>"37_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349804E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>92</ID>
-          <Description>"38"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498050</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>93</ID>
-              <Description>"38_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498052</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>94</ID>
-          <Description>"39"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498054</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>95</ID>
-              <Description>"39_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498056</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>96</ID>
-          <Description>"40"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498058</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>97</ID>
-              <Description>"40_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349805A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>98</ID>
-          <Description>"41"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349805C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>99</ID>
-              <Description>"41_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349805E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>100</ID>
-          <Description>"42"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498060</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>101</ID>
-              <Description>"42_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498062</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>102</ID>
-          <Description>"43"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498064</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>103</ID>
-              <Description>"43_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498066</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>104</ID>
-          <Description>"44"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498068</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>105</ID>
-              <Description>"44_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349806A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>106</ID>
-          <Description>"45"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349806C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>107</ID>
-              <Description>"45_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349806E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>108</ID>
-          <Description>"46"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498070</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>109</ID>
-              <Description>"46_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498072</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>110</ID>
-          <Description>"47"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498074</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>111</ID>
-              <Description>"47_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498076</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>112</ID>
-          <Description>"48"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498078</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>113</ID>
-              <Description>"48_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349807A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>114</ID>
-          <Description>"49"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349807C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>115</ID>
-              <Description>"49_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349807E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>116</ID>
-          <Description>"50"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498080</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>117</ID>
-              <Description>"50_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498082</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>118</ID>
-          <Description>"51"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498084</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>119</ID>
-              <Description>"51_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498086</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>120</ID>
-          <Description>"52"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498088</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>121</ID>
-              <Description>"52_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349808A</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>122</ID>
-          <Description>"53"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349808C</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>123</ID>
-              <Description>"53_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>14349808E</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>124</ID>
-          <Description>"54"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498090</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>125</ID>
-              <Description>"54_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498092</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>126</ID>
-          <Description>"55"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498094</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>127</ID>
-              <Description>"55_picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>143498096</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>200</ID>
-      <Description>"Graveyard Cards"</Description>
-      <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>198</ID>
-          <Description>"Card #1"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>1434983F4</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>199</ID>
-              <Description>"Card #1 Picture"</Description>
+              <ID>131</ID>
+              <Description>"Card #2"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>1434983F6</Address>
+              <Address>143497DE0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>132</ID>
+                  <Description>"Player Hand Card #2 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DE2</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>202</ID>
-          <Description>"Card #2"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>1434983F8</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>203</ID>
-              <Description>"Card #2 Picture"</Description>
+              <ID>133</ID>
+              <Description>"Card #3"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>1434983FA</Address>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>204</ID>
-          <Description>"Card #3"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>1434983FC</Address>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>205</ID>
-              <Description>"Card #3 Picture"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>1434983FE</Address>
+              <Address>143497DE4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>134</ID>
+                  <Description>"Player Hand Card #3 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DE6</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>207</ID>
-              <Description>"Card #4 Picture"</Description>
+              <ID>135</ID>
+              <Description>"Card #4"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498402</Address>
+              <Address>143497DE8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>136</ID>
+                  <Description>"Player Hand Card #4 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DEA</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>206</ID>
-          <Description>"Card #4"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498400</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>208</ID>
-          <Description>"Card #5"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498404</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>209</ID>
-              <Description>"Card #5 Picture"</Description>
+              <ID>137</ID>
+              <Description>"Card #5"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498406</Address>
+              <Address>143497DEC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>138</ID>
+                  <Description>"Player Hand Card #5 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DEE</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>210</ID>
-          <Description>"Card #6"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498408</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>211</ID>
-              <Description>"Card #6 Picture"</Description>
+              <ID>139</ID>
+              <Description>"Card #6"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>14349840A</Address>
+              <Address>143497DF0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>140</ID>
+                  <Description>"Player Hand Card #6 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DF2</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>212</ID>
-          <Description>"Card #7"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349840C</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>213</ID>
-              <Description>"Card #7 Picture"</Description>
+              <ID>141</ID>
+              <Description>"Card #7"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>14349840E</Address>
+              <Address>143497DF4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>142</ID>
+                  <Description>"Player Hand Card #7 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497DF6</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
-          <ID>214</ID>
-          <Description>"Card #8"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498410</Address>
+          <ID>15</ID>
+          <Description>"Player 1 Deck Cards"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>215</ID>
-              <Description>"Card #8 Picture"</Description>
+              <ID>16</ID>
+              <Description>"1"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FBC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>23</ID>
+                  <Description>"1_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FBE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>17</ID>
+              <Description>"2"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FC0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>24</ID>
+                  <Description>"2_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FC2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>20</ID>
+              <Description>"3"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FC4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>21</ID>
+                  <Description>"3_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FC6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>22</ID>
+              <Description>"4"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FC8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>25</ID>
+                  <Description>"4_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FCA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>26</ID>
+              <Description>"5"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FCC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>27</ID>
+                  <Description>"5_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FCE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>28</ID>
+              <Description>"6"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FD0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>29</ID>
+                  <Description>"6_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FD2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>30</ID>
+              <Description>"7"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FD4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>31</ID>
+                  <Description>"7_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FD6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>32</ID>
+              <Description>"8"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FD8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>33</ID>
+                  <Description>"8_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FDA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>34</ID>
+              <Description>"9"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FDC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>35</ID>
+                  <Description>"9_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FDE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>36</ID>
+              <Description>"10"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FE0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>37</ID>
+                  <Description>"10_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FE2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>38</ID>
+              <Description>"11"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FE4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>39</ID>
+                  <Description>"11_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FE6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>40</ID>
+              <Description>"12"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FE8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>41</ID>
+                  <Description>"12_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FEA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>42</ID>
+              <Description>"13"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FEC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>43</ID>
+                  <Description>"13_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FEE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>44</ID>
+              <Description>"14"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FF0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>45</ID>
+                  <Description>"14_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FF2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>46</ID>
+              <Description>"15"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FF4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>47</ID>
+                  <Description>"15_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FF6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>48</ID>
+              <Description>"16"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FF8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>49</ID>
+                  <Description>"16_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FFA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>50</ID>
+              <Description>"17"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143497FFC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>51</ID>
+                  <Description>"17_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143497FFE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>52</ID>
+              <Description>"18"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498000</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>53</ID>
+                  <Description>"18_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498002</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>54</ID>
+              <Description>"19"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498004</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>55</ID>
+                  <Description>"19_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498006</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>56</ID>
+              <Description>"20"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498008</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>57</ID>
+                  <Description>"20_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349800A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>58</ID>
+              <Description>"21"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349800C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>59</ID>
+                  <Description>"21_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349800E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>60</ID>
+              <Description>"22"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498010</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>61</ID>
+                  <Description>"22_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498012</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>62</ID>
+              <Description>"23"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498014</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>63</ID>
+                  <Description>"23_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498016</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>64</ID>
+              <Description>"24"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498018</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>65</ID>
+                  <Description>"24_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349801A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>66</ID>
+              <Description>"25"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349801C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>67</ID>
+                  <Description>"25_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349801E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>68</ID>
+              <Description>"26"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498020</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>69</ID>
+                  <Description>"26_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498022</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>70</ID>
+              <Description>"27"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498024</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>71</ID>
+                  <Description>"27_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498026</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>72</ID>
+              <Description>"28"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498028</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>73</ID>
+                  <Description>"28_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349802A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>74</ID>
+              <Description>"29"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349802C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>75</ID>
+                  <Description>"29_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349802E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>76</ID>
+              <Description>"30"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498030</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>77</ID>
+                  <Description>"30_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498032</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>78</ID>
+              <Description>"31"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498034</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>79</ID>
+                  <Description>"31_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498036</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>80</ID>
+              <Description>"32"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498038</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>81</ID>
+                  <Description>"32_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349803A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>82</ID>
+              <Description>"33"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349803C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>83</ID>
+                  <Description>"33_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349803E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>84</ID>
+              <Description>"34"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498040</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>85</ID>
+                  <Description>"34_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498042</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>86</ID>
+              <Description>"35"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498044</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>87</ID>
+                  <Description>"35_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498046</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>88</ID>
+              <Description>"36"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498048</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>89</ID>
+                  <Description>"36_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349804A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>90</ID>
+              <Description>"37"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349804C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>91</ID>
+                  <Description>"37_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349804E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>92</ID>
+              <Description>"38"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498050</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>93</ID>
+                  <Description>"38_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498052</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>94</ID>
+              <Description>"39"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498054</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>95</ID>
+                  <Description>"39_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498056</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>96</ID>
+              <Description>"40"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498058</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>97</ID>
+                  <Description>"40_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349805A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>98</ID>
+              <Description>"41"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349805C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>99</ID>
+                  <Description>"41_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349805E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>100</ID>
+              <Description>"42"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498060</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>101</ID>
+                  <Description>"42_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498062</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>102</ID>
+              <Description>"43"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498064</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>103</ID>
+                  <Description>"43_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498066</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>104</ID>
+              <Description>"44"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498068</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>105</ID>
+                  <Description>"44_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349806A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>106</ID>
+              <Description>"45"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349806C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>107</ID>
+                  <Description>"45_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349806E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>108</ID>
+              <Description>"46"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498070</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>109</ID>
+                  <Description>"46_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498072</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>110</ID>
+              <Description>"47"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498074</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>111</ID>
+                  <Description>"47_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498076</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>112</ID>
+              <Description>"48"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498078</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>113</ID>
+                  <Description>"48_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349807A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>114</ID>
+              <Description>"49"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349807C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>115</ID>
+                  <Description>"49_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349807E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>116</ID>
+              <Description>"50"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498080</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>117</ID>
+                  <Description>"50_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498082</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>118</ID>
+              <Description>"51"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498084</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>119</ID>
+                  <Description>"51_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498086</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>120</ID>
+              <Description>"52"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498088</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>121</ID>
+                  <Description>"52_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349808A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>122</ID>
+              <Description>"53"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349808C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>123</ID>
+                  <Description>"53_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349808E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>124</ID>
+              <Description>"54"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498090</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>125</ID>
+                  <Description>"54_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498092</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>126</ID>
+              <Description>"55"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498094</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>127</ID>
+                  <Description>"55_picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498096</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>200</ID>
+          <Description>"Player 1 Graveyard Cards"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>198</ID>
+              <Description>"Card #1"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498412</Address>
+              <Address>1434983F4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>199</ID>
+                  <Description>"Card #1 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>1434983F6</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>216</ID>
-          <Description>"Card #9"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498414</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>217</ID>
-              <Description>"Card #9 Picture"</Description>
+              <ID>202</ID>
+              <Description>"Card #2"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498416</Address>
+              <Address>1434983F8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>203</ID>
+                  <Description>"Card #2 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>1434983FA</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>218</ID>
-          <Description>"Card #10"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsHex>1</ShowAsHex>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498418</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>219</ID>
-              <Description>"Card #10 Picture"</Description>
+              <ID>204</ID>
+              <Description>"Card #3"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>14349841A</Address>
+              <Address>1434983FC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>205</ID>
+                  <Description>"Card #3 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>1434983FE</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>207</ID>
+                  <Description>"Card #4 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498402</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>220</ID>
-          <Description>"Card #11"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349841C</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>221</ID>
-              <Description>"Card #11 Picture"</Description>
+              <ID>206</ID>
+              <Description>"Card #4"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>14349841E</Address>
+              <Address>143498400</Address>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>222</ID>
-          <Description>"Card #12"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498420</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>223</ID>
-              <Description>"Card #12 Picture"</Description>
+              <ID>208</ID>
+              <Description>"Card #5"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498422</Address>
+              <Address>143498404</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>209</ID>
+                  <Description>"Card #5 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498406</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>224</ID>
-          <Description>"Card #13"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498424</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>225</ID>
-              <Description>"Card #13 Picture"</Description>
+              <ID>210</ID>
+              <Description>"Card #6"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498426</Address>
+              <Address>143498408</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>211</ID>
+                  <Description>"Card #6 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349840A</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>226</ID>
-          <Description>"Card #14"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498428</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>227</ID>
-              <Description>"Card #14 Picture"</Description>
+              <ID>212</ID>
+              <Description>"Card #7"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>14349842A</Address>
+              <Address>14349840C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>213</ID>
+                  <Description>"Card #7 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349840E</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>228</ID>
-          <Description>"Card #15"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>14349842C</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>229</ID>
-              <Description>"Card #15 Picture"</Description>
+              <ID>214</ID>
+              <Description>"Card #8"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>14349842E</Address>
+              <Address>143498410</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>215</ID>
+                  <Description>"Card #8 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498412</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>230</ID>
-          <Description>"Card #16"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498430</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>231</ID>
-              <Description>"Card #16 Picture"</Description>
+              <ID>216</ID>
+              <Description>"Card #9"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498432</Address>
+              <Address>143498414</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>217</ID>
+                  <Description>"Card #9 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498416</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>232</ID>
-          <Description>"Card #17"</Description>
-          <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>2 Bytes</VariableType>
-          <Address>143498434</Address>
-          <CheatEntries>
             <CheatEntry>
-              <ID>233</ID>
-              <Description>"Card #17 Picture"</Description>
+              <ID>218</ID>
+              <Description>"Card #10"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>143498436</Address>
+              <Address>143498418</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>219</ID>
+                  <Description>"Card #10 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349841A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>220</ID>
+              <Description>"Card #11"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349841C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>221</ID>
+                  <Description>"Card #11 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349841E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>222</ID>
+              <Description>"Card #12"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498420</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>223</ID>
+                  <Description>"Card #12 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498422</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>224</ID>
+              <Description>"Card #13"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498424</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>225</ID>
+                  <Description>"Card #13 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498426</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>226</ID>
+              <Description>"Card #14"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498428</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>227</ID>
+                  <Description>"Card #14 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349842A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>228</ID>
+              <Description>"Card #15"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>14349842C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>229</ID>
+                  <Description>"Card #15 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>14349842E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>230</ID>
+              <Description>"Card #16"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498430</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>231</ID>
+                  <Description>"Card #16 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498432</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>232</ID>
+              <Description>"Card #17"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>143498434</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>233</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>143498436</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -32422,7 +32429,7 @@ Angel of Oblivion?:?Rui
     </CheatEntry>
     <CheatEntry>
       <ID>237</ID>
-      <Description>"Grid Loc"</Description>
+      <Description>"Grid Loc / Mouse?"</Description>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>2 Bytes</VariableType>
@@ -32435,596 +32442,14 @@ Angel of Oblivion?:?Rui
       <VariableType>4 Bytes</VariableType>
       <Address>140C8D1E6</Address>
     </CheatEntry>
+    <CheatEntry>
+      <ID>239</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>14F578</Address>
+    </CheatEntry>
   </CheatEntries>
-  <CheatCodes>
-    <CodeEntry>
-      <Description>Code :mov [rdi-10],eax</Description>
-      <AddressString>YuGiOh.exe+7695E6</AddressString>
-      <Before>
-        <Byte>8B</Byte>
-        <Byte>CB</Byte>
-        <Byte>0F</Byte>
-        <Byte>44</Byte>
-        <Byte>C5</Byte>
-      </Before>
-      <Actual>
-        <Byte>89</Byte>
-        <Byte>47</Byte>
-        <Byte>F0</Byte>
-      </Actual>
-      <After>
-        <Byte>E8</Byte>
-        <Byte>62</Byte>
-        <Byte>60</Byte>
-        <Byte>09</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov edi,[rsi+rbp+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+3CD32</AddressString>
-      <Before>
-        <Byte>5B</Byte>
-        <Byte>49</Byte>
-        <Byte>8D</Byte>
-        <Byte>34</Byte>
-        <Byte>C8</Byte>
-      </Before>
-      <Actual>
-        <Byte>8B</Byte>
-        <Byte>BC</Byte>
-        <Byte>2E</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E7</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ecx,[rbx+rbp+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+46B90</AddressString>
-      <Before>
-        <Byte>85</Byte>
-        <Byte>FB</Byte>
-        <Byte>02</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Before>
-      <Actual>
-        <Byte>8B</Byte>
-        <Byte>8C</Byte>
-        <Byte>2B</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E1</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov eax,[r14+rbp+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+43A05</AddressString>
-      <Before>
-        <Byte>00</Byte>
-        <Byte>85</Byte>
-        <Byte>C0</Byte>
-        <Byte>75</Byte>
-        <Byte>51</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>84</Byte>
-        <Byte>2E</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>25</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ecx,[r14]</Description>
-      <AddressString>YuGiOh.exe+80258</AddressString>
-      <Before>
-        <Byte>04</Byte>
-        <Byte>D3</Byte>
-        <Byte>4C</Byte>
-        <Byte>03</Byte>
-        <Byte>F0</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>0E</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E1</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ecx,[r14+rbp+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+4387A</AddressString>
-      <Before>
-        <Byte>7F</Byte>
-        <Byte>4B</Byte>
-        <Byte>8D</Byte>
-        <Byte>2C</Byte>
-        <Byte>C1</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>8C</Byte>
-        <Byte>2E</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E1</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ebx,[r14+r13+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+47096</AddressString>
-      <Before>
-        <Byte>E1</Byte>
-        <Byte>4F</Byte>
-        <Byte>8D</Byte>
-        <Byte>34</Byte>
-        <Byte>C1</Byte>
-      </Before>
-      <Actual>
-        <Byte>43</Byte>
-        <Byte>8B</Byte>
-        <Byte>9C</Byte>
-        <Byte>2E</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E3</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ecx,[r12+r13+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+1FF00</AddressString>
-      <Before>
-        <Byte>7F</Byte>
-        <Byte>4F</Byte>
-        <Byte>8D</Byte>
-        <Byte>24</Byte>
-        <Byte>C1</Byte>
-      </Before>
-      <Actual>
-        <Byte>43</Byte>
-        <Byte>8B</Byte>
-        <Byte>8C</Byte>
-        <Byte>2C</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E1</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :test [r14+r15+03497C8C],00003FFF</Description>
-      <AddressString>YuGiOh.exe+62647</AddressString>
-      <Before>
-        <Byte>DD</Byte>
-        <Byte>4F</Byte>
-        <Byte>8D</Byte>
-        <Byte>34</Byte>
-        <Byte>D3</Byte>
-      </Before>
-      <Actual>
-        <Byte>43</Byte>
-        <Byte>F7</Byte>
-        <Byte>84</Byte>
-        <Byte>3E</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Actual>
-      <After>
-        <Byte>0F</Byte>
-        <Byte>84</Byte>
-        <Byte>0D</Byte>
-        <Byte>02</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov esi,[rax]</Description>
-      <AddressString>YuGiOh.exe+7B9527</AddressString>
-      <Before>
-        <Byte>48</Byte>
-        <Byte>85</Byte>
-        <Byte>C0</Byte>
-        <Byte>74</Byte>
-        <Byte>15</Byte>
-      </Before>
-      <Actual>
-        <Byte>8B</Byte>
-        <Byte>30</Byte>
-      </Actual>
-      <After>
-        <Byte>C1</Byte>
-        <Byte>EE</Byte>
-        <Byte>0E</Byte>
-        <Byte>40</Byte>
-        <Byte>F6</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :test [rbx-14],00003FFF</Description>
-      <AddressString>YuGiOh.exe+335A0</AddressString>
-      <Before>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Before>
-      <Actual>
-        <Byte>F7</Byte>
-        <Byte>43</Byte>
-        <Byte>EC</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Actual>
-      <After>
-        <Byte>0F</Byte>
-        <Byte>84</Byte>
-        <Byte>9F</Byte>
-        <Byte>11</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :test [r15],00003FFF</Description>
-      <AddressString>YuGiOh.exe+39902</AddressString>
-      <Before>
-        <Byte>8B</Byte>
-        <Byte>EA</Byte>
-        <Byte>4C</Byte>
-        <Byte>03</Byte>
-        <Byte>F9</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>F7</Byte>
-        <Byte>07</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Actual>
-      <After>
-        <Byte>0F</Byte>
-        <Byte>84</Byte>
-        <Byte>9A</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov r8d,[rdi+rbp+4C]</Description>
-      <AddressString>YuGiOh.exe+39574</AddressString>
-      <Before>
-        <Byte>FD</Byte>
-        <Byte>48</Byte>
-        <Byte>8D</Byte>
-        <Byte>3C</Byte>
-        <Byte>C1</Byte>
-      </Before>
-      <Actual>
-        <Byte>44</Byte>
-        <Byte>8B</Byte>
-        <Byte>44</Byte>
-        <Byte>2F</Byte>
-        <Byte>4C</Byte>
-      </Actual>
-      <After>
-        <Byte>41</Byte>
-        <Byte>81</Byte>
-        <Byte>E0</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov edi,[r15+rbp+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+48023</AddressString>
-      <Before>
-        <Byte>F1</Byte>
-        <Byte>4B</Byte>
-        <Byte>8D</Byte>
-        <Byte>2C</Byte>
-        <Byte>CA</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>BC</Byte>
-        <Byte>2F</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E7</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ebx,[rdi+r13+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+3B4C0</AddressString>
-      <Before>
-        <Byte>3C</Byte>
-        <Byte>C1</Byte>
-        <Byte>44</Byte>
-        <Byte>8B</Byte>
-        <Byte>F9</Byte>
-      </Before>
-      <Actual>
-        <Byte>42</Byte>
-        <Byte>8B</Byte>
-        <Byte>9C</Byte>
-        <Byte>2F</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>4C</Byte>
-        <Byte>8D</Byte>
-        <Byte>4C</Byte>
-        <Byte>24</Byte>
-        <Byte>74</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ebx,[r15+rsi+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+3BFE6</AddressString>
-      <Before>
-        <Byte>3C</Byte>
-        <Byte>CA</Byte>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>D5</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>9C</Byte>
-        <Byte>37</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>CC</Byte>
-        <Byte>81</Byte>
-        <Byte>E3</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ebx,[r14+rax+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+3A0CE</AddressString>
-      <Before>
-        <Byte>CE</Byte>
-        <Byte>89</Byte>
-        <Byte>54</Byte>
-        <Byte>24</Byte>
-        <Byte>40</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>9C</Byte>
-        <Byte>06</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>4D</Byte>
-        <Byte>8D</Byte>
-        <Byte>4B</Byte>
-        <Byte>B8</Byte>
-        <Byte>49</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov edx,[r14+r11+03497C8C]</Description>
-      <AddressString>YuGiOh.exe+3A2D9</AddressString>
-      <Before>
-        <Byte>84</Byte>
-        <Byte>BE</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Before>
-      <Actual>
-        <Byte>43</Byte>
-        <Byte>8B</Byte>
-        <Byte>94</Byte>
-        <Byte>1E</Byte>
-        <Byte>8C</Byte>
-        <Byte>7C</Byte>
-        <Byte>49</Byte>
-        <Byte>03</Byte>
-      </Actual>
-      <After>
-        <Byte>8B</Byte>
-        <Byte>C2</Byte>
-        <Byte>C1</Byte>
-        <Byte>E8</Byte>
-        <Byte>17</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov ecx,[rdi+r12+4C]</Description>
-      <AddressString>YuGiOh.exe+3B2F2</AddressString>
-      <Before>
-        <Byte>40</Byte>
-        <Byte>49</Byte>
-        <Byte>8D</Byte>
-        <Byte>3C</Byte>
-        <Byte>D0</Byte>
-      </Before>
-      <Actual>
-        <Byte>42</Byte>
-        <Byte>8B</Byte>
-        <Byte>4C</Byte>
-        <Byte>27</Byte>
-        <Byte>4C</Byte>
-      </Actual>
-      <After>
-        <Byte>81</Byte>
-        <Byte>E1</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :test [rax],7F800000</Description>
-      <AddressString>YuGiOh.exe+76FCA8</AddressString>
-      <Before>
-        <Byte>48</Byte>
-        <Byte>85</Byte>
-        <Byte>C0</Byte>
-        <Byte>74</Byte>
-        <Byte>29</Byte>
-      </Before>
-      <Actual>
-        <Byte>F7</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-        <Byte>80</Byte>
-        <Byte>7F</Byte>
-      </Actual>
-      <After>
-        <Byte>76</Byte>
-        <Byte>21</Byte>
-        <Byte>44</Byte>
-        <Byte>8B</Byte>
-        <Byte>C6</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :test [rax],00003FFF</Description>
-      <AddressString>YuGiOh.exe+7A773E</AddressString>
-      <Before>
-        <Byte>48</Byte>
-        <Byte>85</Byte>
-        <Byte>C0</Byte>
-        <Byte>74</Byte>
-        <Byte>08</Byte>
-      </Before>
-      <Actual>
-        <Byte>F7</Byte>
-        <Byte>00</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-        <Byte>00</Byte>
-      </Actual>
-      <After>
-        <Byte>75</Byte>
-        <Byte>02</Byte>
-        <Byte>33</Byte>
-        <Byte>C0</Byte>
-        <Byte>48</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Code :mov edx,[r8+rbp+4C]</Description>
-      <AddressString>YuGiOh.exe+444BB</AddressString>
-      <Before>
-        <Byte>40</Byte>
-        <Byte>4C</Byte>
-        <Byte>8D</Byte>
-        <Byte>04</Byte>
-        <Byte>CB</Byte>
-      </Before>
-      <Actual>
-        <Byte>41</Byte>
-        <Byte>8B</Byte>
-        <Byte>54</Byte>
-        <Byte>28</Byte>
-        <Byte>4C</Byte>
-      </Actual>
-      <After>
-        <Byte>F7</Byte>
-        <Byte>C2</Byte>
-        <Byte>FF</Byte>
-        <Byte>3F</Byte>
-        <Byte>00</Byte>
-      </After>
-    </CodeEntry>
-  </CheatCodes>
   <UserdefinedSymbols/>
   <Structures StructVersion="2">
     <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">

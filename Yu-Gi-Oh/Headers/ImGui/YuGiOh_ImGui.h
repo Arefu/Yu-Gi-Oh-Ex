@@ -23,7 +23,7 @@ public:
 
 	static void Set_ImGui_PresentPatchAddress(Address Address);
 	static Address im_gui_present_address;
-	static BOOL g_ShowConnectWindow;
+	static bool g_ShowConnectWindow;
 	static LRESULT CALLBACK Hooked_YuGiOhImGuiWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 private:
 	static HRESULT GetDeviceAndCtxFromSwapchain(IDXGISwapChain* pSwapChain, ID3D11Device** ppDevice, ID3D11DeviceContext** ppContext);
