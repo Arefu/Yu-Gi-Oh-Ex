@@ -37,6 +37,17 @@ BOOL Game::Start()
 	return Status;
 }
 
+BOOL Game::Start(LPSTR CustomPath)
+{
+	Set_GamePath(CustomPath);
+
+	STARTUPINFO info = { sizeof(info) };
+	PROCESS_INFORMATION processInfo;
+	BOOL Status = DetourCreateProcessWithDllExA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDllLocation, NULL);
+	
+	return Status;
+}
+
 void Game::Set_GamePath(CHAR Path[MAX_PATH])
 {
 	strncpy(Game::gGamePath, Path, MAX_PATH);

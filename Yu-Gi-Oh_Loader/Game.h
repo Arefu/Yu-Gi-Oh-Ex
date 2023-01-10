@@ -6,6 +6,7 @@ public:
 	static BOOL Locate();
 	static BOOL Start();
 
+	static BOOL Start(LPSTR CustomPath);
 	static void Set_GamePath(CHAR Path[MAX_PATH]);
 
 private:

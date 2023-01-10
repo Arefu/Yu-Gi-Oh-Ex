@@ -2,11 +2,10 @@
 
 #include "ImGui/YuGiOh_ImGui.h"
 
-void Connect::Show_ConnectWindow(BOOL* g_show_connect_window)
+void Connect::Show_ConnectWindow()
 {
 	ImGui::SetNextWindowSize(ImVec2(250, 300), ImGuiCond_FirstUseEver);
-	if (!ImGui::Begin("Connect To Server...", reinterpret_cast<bool*>(*g_show_connect_window),
-		ImGuiWindowFlags_NoCollapse))
+	if (!ImGui::Begin("Connect To Server...", &YuGiOh_ImGui::g_ShowConnectWindow, ImGuiWindowFlags_NoCollapse))
 	{
 		ImGui::End();
 		return;
@@ -17,8 +16,6 @@ void Connect::Show_ConnectWindow(BOOL* g_show_connect_window)
 	if (ImGui::Button(("Connect")))
 	{
 		std::string Host = buf;
-		Client::ConectToHost(Host);
-		*g_show_connect_window = false;
 		ImGui::End();
 		return;
 	}

@@ -61,7 +61,7 @@ void YuGiOh_ImGui::Start_DearImGui(IDXGISwapChain* pChain, UINT SyncInterval, UI
 	}
 	if (YuGiOh_ImGui::g_ShowConnectWindow == TRUE)
 	{
-		Connect::Show_ConnectWindow(&YuGiOh_ImGui::g_ShowConnectWindow);
+		Connect::Show_ConnectWindow();
 	}
 
 	ImGui::EndFrame();
@@ -90,10 +90,10 @@ HRESULT YuGiOh_ImGui::GetDeviceAndCtxFromSwapchain(IDXGISwapChain* pSwapChain, I
 
 LRESULT YuGiOh_ImGui::Hooked_YuGiOhImGuiWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-	ImGuiIO& io = ImGui::GetIO();
 	POINT mPos;
 	GetCursorPos(&mPos);
 	ScreenToClient(GetForegroundWindow(), &mPos);
+
 	ImGui::GetIO().MousePos.x = mPos.x;
 	ImGui::GetIO().MousePos.y = mPos.y;
 

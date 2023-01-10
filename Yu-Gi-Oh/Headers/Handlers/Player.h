@@ -20,7 +20,7 @@ using Cards::Simple_Card;
 class Player
 {
 public:
-	Player(QWORD BaseAddr, BOOL Debu = FALSE);
+	Player(QWORD BaseAddr, BOOL Debug = FALSE);
 
 	BOOL Is_FieldSpellActive();
 

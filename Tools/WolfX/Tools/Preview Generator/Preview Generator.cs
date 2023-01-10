@@ -67,7 +67,7 @@ namespace WolfX.Handler.Tools
                 {
                     Reader.BaseStream.Position = File.Offset;
                     var Data = Reader.ReadBytes((int)File.Size);
-                    System.IO.File.WriteAllBytes(File.Name, Data);
+                //    System.IO.File.WriteAllBytes(File.Name, Data);
                     return Image.FromStream(new MemoryStream(Data));
                 }
 
