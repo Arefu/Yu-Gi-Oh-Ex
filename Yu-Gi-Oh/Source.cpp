@@ -59,8 +59,12 @@ void StartDetours()
 	auto MultiplayerFind = reinterpret_cast<Address>(0x1408D82B0);
 	//DetourAttach(reinterpret_cast<PVOID*>(&MultiplayerFind), MPatcher::Patch_MultiplayerFind);
 
+	auto StartThreadEx = reinterpret_cast<Address>(0x1408D6860);
+	DetourAttach(reinterpret_cast<PVOID*>(&StartThreadEx), Threading::Patch_StartThreadEx);
+
 	DetourTransactionCommit();
 
-	
+	Threading::Set_StartThreadExAddress(StartThreadEx);
+
 	DirectX::Set_ImGuiD3D11SetupPatchAddress(ImGui_D3D11Setup);
 }
