@@ -57,6 +57,10 @@
       <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours</AdditionalLibraryDirectories>
       <AdditionalDependencies>detours.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -76,6 +80,10 @@
       <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours</AdditionalLibraryDirectories>
       <AdditionalDependencies>detours.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
