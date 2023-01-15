@@ -14,7 +14,8 @@ static Player g_Player2(0x1434989D4, TRUE);
 //TODO: Player 3-4
 
 static BOOL g_IsRunning = *(BOOL*)0x14332A391;
-
+static BOOL g_IsReadyDuelModule = *(BOOL*)0x1429275D1;
+static BYTE g_vSyncMode = *(BYTE*)0x140D29F1C;
 //Types
 typedef INT64(__stdcall* Address)();
 typedef unsigned __int64 QWORD;

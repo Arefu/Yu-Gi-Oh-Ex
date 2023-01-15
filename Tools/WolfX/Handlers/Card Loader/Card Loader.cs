@@ -1,13 +1,11 @@
-﻿using Microsoft.VisualBasic;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.Text;
 using WolfX.Extensions;
 using WolfX.Handler.Tools;
-using WolfX.Types;
 
 namespace WolfX.Handlers
 {
-    internal static class CardLoader
+    internal static class Card_Loader
     {
         internal static Dictionary<uint, string> NameDict = new();
         internal static Dictionary<uint, string> DescDict = new();
@@ -16,10 +14,10 @@ namespace WolfX.Handlers
         {
             WolfUI.Form.LBL_GameStatusLabel.Text = @"Opening Cards...";
             WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Orange;
-            var CardIndxFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Indx_{(char)WolfX_UI_State.Language}.bin";
-            var CardNameFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Name_{(char)WolfX_UI_State.Language}.bin";
-            var CardDescFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Desc_{(char)WolfX_UI_State.Language}.bin";
-            var CardPropFile = $"{WolfX_UI_State.WorkingDirectory}\\bin\\CARD_Prop.bin";
+            var CardIndxFile = $"{WolfUI.State.WorkingDirectory}\\bin\\CARD_Indx_{(char)WolfUI.State.Language}.bin";
+            var CardNameFile = $"{WolfUI.State.WorkingDirectory}\\bin\\CARD_Name_{(char)WolfUI.State.Language}.bin";
+            var CardDescFile = $"{WolfUI.State.WorkingDirectory}\\bin\\CARD_Desc_{(char)WolfUI.State.Language}.bin";
+            var CardPropFile = $"{WolfUI.State.WorkingDirectory}\\bin\\CARD_Prop.bin";
 
             if (!File.Exists(CardIndxFile) || !File.Exists(CardNameFile) || !File.Exists(CardDescFile))
                 return;
@@ -90,23 +88,25 @@ namespace WolfX.Handlers
                     _PendulumScale2 = (byte)SecondQuadChunk[RightScale]
                 };
 
-                WolfX_UI_State.Cards.Add(Card);
-                WolfUI.Form.CB_CardID.Items.Add($"{Card._Id}");
-                WolfUI.Form.CB_CardName.Items.Add($"{Card._Name}");
-                WolfUI.Form.CB_CardTypes.Items.Add($"{Card._Type}");
+                if (Card.IsCardEmpty() == false)
+                {
+                    WolfUI.State.Cards.Add(Card);
+                    WolfUI.Form.CB_CardID.Items.Add($"{Card._Id}");
+                    WolfUI.Form.CB_CardName.Items.Add($"{Card._Name}");
+                    WolfUI.Form.CB_CardTypes.Items.Add($"{Card._Type}");
+                }
             }
 
-            WolfUI.Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
-            WolfUI.Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
-            WolfUI.Form.CB_CardID.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString();
-            WolfUI.Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
-            WolfUI.Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
-            WolfUI.Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
-            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
-            WolfUI.Form.CB_CardAttribute.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute.ToString();
+            WolfUI.Form.CB_CardName.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Name;
+            WolfUI.Form.TB_CardDesc.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Description;
+            WolfUI.Form.CB_CardID.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Id.ToString();
+            WolfUI.Form.TB_CardAtk.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Atk.ToString();
+            WolfUI.Form.TB_CardDef.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Def.ToString();
+            WolfUI.Form.Nud_CardLevel.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Level.ToString();
+            WolfUI.Form.CB_CardTypes.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Type.ToString();
+            WolfUI.Form.CB_CardAttribute.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Attribute.ToString();
 
-            WolfUI.Form.PB_CardPicture.Image =
-                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+            WolfUI.Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(WolfUI.State.Cards[WolfUI.State.CardIndex]._Id.ToString(), WolfUI.Form.CB_LoadCensoredCards.Checked);
 
             WolfUI.Form.LBL_GameStatusLabel.Text = @"Ready";
             WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Green;
