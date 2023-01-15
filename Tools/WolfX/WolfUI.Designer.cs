@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.WolfX_TabManager = new System.Windows.Forms.TabControl();
             this.Page_CardManager = new System.Windows.Forms.TabPage();
             this.btn_SaveCard = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.CB_LoadCensoredCards = new System.Windows.Forms.CheckBox();
             this.btn_NextCard = new System.Windows.Forms.Button();
             this.btn_LastCard = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,7 +57,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TB_CardDesc = new System.Windows.Forms.TextBox();
             this.PB_CardPicture = new System.Windows.Forms.PictureBox();
+            this.Context = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ReplaceImage = new System.Windows.Forms.ToolStripMenuItem();
             this.Page_ZibManager = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -101,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Nud_CardLevel)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).BeginInit();
+            this.Context.SuspendLayout();
             this.Page_ZibManager.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -150,23 +155,24 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.checkBox2);
+            this.groupBox6.Controls.Add(this.CB_LoadCensoredCards);
             this.groupBox6.Location = new System.Drawing.Point(334, 409);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(303, 154);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "DLC Cards";
+            this.groupBox6.Text = "Options";
             // 
-            // checkBox2
+            // CB_LoadCensoredCards
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 22);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(110, 19);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "Load DLC Cards";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CB_LoadCensoredCards.AutoSize = true;
+            this.CB_LoadCensoredCards.Location = new System.Drawing.Point(6, 22);
+            this.CB_LoadCensoredCards.Name = "CB_LoadCensoredCards";
+            this.CB_LoadCensoredCards.Size = new System.Drawing.Size(138, 19);
+            this.CB_LoadCensoredCards.TabIndex = 0;
+            this.CB_LoadCensoredCards.Text = "Load Censored Cards";
+            this.CB_LoadCensoredCards.UseVisualStyleBackColor = true;
+            this.CB_LoadCensoredCards.CheckedChanged += new System.EventHandler(this.CB_LoadCensoredCards_CheckedChanged);
             // 
             // btn_NextCard
             // 
@@ -347,12 +353,13 @@
             // 
             // CB_CardName
             // 
-            this.CB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.CB_CardName.FormattingEnabled = true;
             this.CB_CardName.Location = new System.Drawing.Point(6, 19);
             this.CB_CardName.Name = "CB_CardName";
             this.CB_CardName.Size = new System.Drawing.Size(305, 23);
             this.CB_CardName.TabIndex = 7;
+            this.CB_CardName.SelectedIndexChanged += new System.EventHandler(this.CB_CardName_SelectedIndexChanged);
             // 
             // TB_CardDef
             // 
@@ -399,14 +406,31 @@
             // 
             // PB_CardPicture
             // 
+            this.PB_CardPicture.ContextMenuStrip = this.Context;
             this.PB_CardPicture.Location = new System.Drawing.Point(6, 51);
             this.PB_CardPicture.Name = "PB_CardPicture";
             this.PB_CardPicture.Size = new System.Drawing.Size(305, 346);
             this.PB_CardPicture.TabIndex = 0;
             this.PB_CardPicture.TabStop = false;
             // 
+            // Context
+            // 
+            this.Context.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ReplaceImage});
+            this.Context.Name = "Context";
+            this.Context.Size = new System.Drawing.Size(155, 26);
+            // 
+            // ReplaceImage
+            // 
+            this.ReplaceImage.Name = "ReplaceImage";
+            this.ReplaceImage.Size = new System.Drawing.Size(154, 22);
+            this.ReplaceImage.Text = "Replace Image";
+            this.ReplaceImage.Click += new System.EventHandler(this.ReplaceImage_Click);
+            // 
             // Page_ZibManager
             // 
+            this.Page_ZibManager.Controls.Add(this.textBox1);
             this.Page_ZibManager.Controls.Add(this.groupBox5);
             this.Page_ZibManager.Controls.Add(this.groupBox4);
             this.Page_ZibManager.Controls.Add(this.lv_ArchivePreviewer);
@@ -418,6 +442,13 @@
             this.Page_ZibManager.TabIndex = 1;
             this.Page_ZibManager.Text = "Archive Manager";
             this.Page_ZibManager.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(24, 398);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(8, 23);
+            this.textBox1.TabIndex = 3;
             // 
             // groupBox5
             // 
@@ -480,9 +511,9 @@
             this.cb_ShowFileName.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_ShowFileName.Location = new System.Drawing.Point(6, 44);
             this.cb_ShowFileName.Name = "cb_ShowFileName";
-            this.cb_ShowFileName.Size = new System.Drawing.Size(116, 19);
+            this.cb_ShowFileName.Size = new System.Drawing.Size(111, 19);
             this.cb_ShowFileName.TabIndex = 3;
-            this.cb_ShowFileName.Text = "Show File _Name";
+            this.cb_ShowFileName.Text = "Show File Name";
             this.cb_ShowFileName.UseVisualStyleBackColor = true;
             // 
             // btn_ExtractAll
@@ -507,15 +538,16 @@
             this.cb_ShowPicturePreview.Text = "Show Picture Preview";
             this.cb_ShowPicturePreview.UseVisualStyleBackColor = true;
             // 
-            // lv_ArchivePreviewer
+            // lv_ArchivePreviefwer
             // 
-            this.lv_ArchivePreviewer.Location = new System.Drawing.Point(6, 112);
+            this.lv_ArchivePreviewer.Location = new System.Drawing.Point(8, 112);
             this.lv_ArchivePreviewer.MultiSelect = false;
-            this.lv_ArchivePreviewer.Name = "lv_ArchivePreviewer";
+            this.lv_ArchivePreviewer.Name = "lv_ArchivePreviefwer";
             this.lv_ArchivePreviewer.ShowGroups = false;
             this.lv_ArchivePreviewer.Size = new System.Drawing.Size(637, 496);
             this.lv_ArchivePreviewer.TabIndex = 1;
             this.lv_ArchivePreviewer.UseCompatibleStateImageBehavior = false;
+            this.lv_ArchivePreviewer.View = System.Windows.Forms.View.SmallIcon;
             this.lv_ArchivePreviewer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Lv_ArchivePreviewer_MouseDoubleClick);
             // 
             // groupBox3
@@ -580,9 +612,9 @@
             this.lbl_NamePrompt.AutoSize = true;
             this.lbl_NamePrompt.Location = new System.Drawing.Point(6, 19);
             this.lbl_NamePrompt.Name = "lbl_NamePrompt";
-            this.lbl_NamePrompt.Size = new System.Drawing.Size(47, 15);
+            this.lbl_NamePrompt.Size = new System.Drawing.Size(42, 15);
             this.lbl_NamePrompt.TabIndex = 0;
-            this.lbl_NamePrompt.Text = "_Name:";
+            this.lbl_NamePrompt.Text = "Name:";
             // 
             // Page_AnimationManager
             // 
@@ -780,7 +812,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).EndInit();
+            this.Context.ResumeLayout(false);
             this.Page_ZibManager.ResumeLayout(false);
+            this.Page_ZibManager.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -862,9 +896,12 @@
         public ComboBox CB_CardAttribute;
         public NumericUpDown Nud_CardLevel;
         public ComboBox CB_CardTypes;
-        private GroupBox groupBox6;
-        private CheckBox checkBox2;
         public ComboBox CB_CardName;
         private Button btn_SaveCard;
+        private ContextMenuStrip Context;
+        private ToolStripMenuItem ReplaceImage;
+        private GroupBox groupBox6;
+        public CheckBox CB_LoadCensoredCards;
+        private TextBox textBox1;
     }
 }

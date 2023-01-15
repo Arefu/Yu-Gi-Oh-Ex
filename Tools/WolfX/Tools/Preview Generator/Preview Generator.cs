@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration.Internal;
-using System.DirectoryServices;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 using WolfX.Handlers;
 using WolfX.Types;
 
@@ -35,17 +27,18 @@ namespace WolfX.Handler.Tools
             return ImageList;
         }
 
-        public static ImageList Get_ImagePreviewFromArchiveData(List<Archive_File> Files, string Archive)
+        static readonly ImageConverter Converter = new();
+        public static ImageList Get_ImagePreviewFromArchiveData(List<YGO_ArchiveFileEntry> Files, string Archive)
         {
             var ImageList = new ImageList();
-            var ArchivePath = $"{WolfX_UI_State.WorkingDirectory}\\{Archive}";
+            var ArchivePath = $"{WolfUI.State.WorkingDirectory}\\{Archive}";
 
             using var Reader = new BinaryReader(File.Open(ArchivePath, FileMode.Open, FileAccess.Read));
-            var Converter = new ImageConverter();
+
             foreach (var File in Files)
             {
                 Reader.BaseStream.Position = File.Offset;
-                ImageList.Images.Add((Bitmap)((Converter.ConvertFrom(Reader.ReadBytes((int)File.Size)))));
+                ImageList.Images.Add(Converter.ConvertFrom(Reader.ReadBytes((int)File.Size)) as Bitmap);
             }
             ImageList.ImageSize = new Size(128, 128);
             ImageList.ColorDepth = ColorDepth.Depth32Bit;
@@ -54,27 +47,14 @@ namespace WolfX.Handler.Tools
             return ImageList;
         }
 
-        public static Image Get_ImageFromArchive(string Archive, string FileId)
+        public static byte[]? Get_ImageFromArchive(string Archive, string FileId)
         {
-            var ArchivePath = $"{WolfX_UI_State.WorkingDirectory}\\{Archive}";
-
-            var Files = Archive_Handler.GetFiles(Archive);
-            using var Reader = new BinaryReader(File.Open(ArchivePath, FileMode.Open, FileAccess.Read));
-
-            foreach (var File in Files)
-            {
-                if (Path.GetFileNameWithoutExtension(File.Name) == FileId)
-                {
-                    Reader.BaseStream.Position = File.Offset;
-                    var Data = Reader.ReadBytes((int)File.Size);
-                //    System.IO.File.WriteAllBytes(File.Name, Data);
-                    return Image.FromStream(new MemoryStream(Data));
-                }
-
-                Reader.ReadBytes((int)File.Size);
-            }
-            Reader.Close();
-            return null;
+            var Image = Handlers.Files.Get_File(Archive, FileId);
+            
+            if (Image.Length == 0)
+                return null;
+            else
+                return Image;
         }
 
         public static ImageList Get_DefaultImageFromDll()
@@ -84,6 +64,31 @@ namespace WolfX.Handler.Tools
             ImageList.Images.Add(Shell);
             ImageList.ImageSize = new Size(32, 32);
             return ImageList;
+        }
+
+
+        /// <summary>
+        /// Get Card's Image From "2020.full.illust_j.jpg.zib", appends 'jpg' to Name
+        /// </summary>
+        /// <param name="Name">The CardID Of The Card</param>
+        /// <param name="Censored">Load "2020.full.illust_a.jpg.zib" Instead.</param>
+        /// <returns></returns>
+        internal static Image Get_CardImageFromArchive(string Name, bool Censored = false)
+        {
+            if (Censored)
+            {
+                var Image = Get_ImageFromArchive("2020.full.illust_j.jpg.zib", $"{Name}.jpg");
+                Image ??= Get_ImageFromArchive("2020.full.illust_a.jpg.zib", $"{Name}.jpg");
+
+                return Extensions.Convert.ToImage(Image);
+            }
+            else
+            {
+                var Image = Get_ImageFromArchive("2020.full.illust_a.jpg.zib", $"{Name}.jpg");
+                Image ??= Get_ImageFromArchive("2020.full.illust_j.jpg.zib", $"{Name}.jpg");
+
+                return Extensions.Convert.ToImage(Image);
+            }
         }
     }
 }

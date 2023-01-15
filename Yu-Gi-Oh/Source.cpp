@@ -62,6 +62,7 @@ void StartDetours()
 	auto StartThreadEx = reinterpret_cast<Address>(0x1408D6860);
 	DetourAttach(reinterpret_cast<PVOID*>(&StartThreadEx), Threading::Patch_StartThreadEx);
 
+
 	DetourTransactionCommit();
 
 	Threading::Set_StartThreadExAddress(StartThreadEx);

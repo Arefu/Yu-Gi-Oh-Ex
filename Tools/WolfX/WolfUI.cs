@@ -14,7 +14,7 @@ namespace WolfX
             CheckForIllegalCrossThreadCalls = false;
             Form = this;
             InitializeComponent();
-            this.lv_ArchivePreviewer.LargeImageList = Preview_Generator.Get_ArchiveImageFromDll();
+            this.lv_ArchivePreviewer.SmallImageList = Preview_Generator.Get_ArchiveImageFromDll();
         }
 
         private void File_Open_Click(object sender, EventArgs e)
@@ -23,17 +23,22 @@ namespace WolfX
             var Res = FolderBrowser.ShowDialog();
 
             if (Res != DialogResult.OK || string.IsNullOrWhiteSpace(FolderBrowser.SelectedPath)) return;
-            if (new DirectoryInfo(FolderBrowser.SelectedPath).Name != "YGO_2020") return;
+            if (new DirectoryInfo(FolderBrowser.SelectedPath).Name != "YGO_2020")
+            {
+                MessageBox.Show("Please Select \"YGO_2020\"", "Incorrect Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             LBL_GameStatusLabel.Text = @"Opening Game Directory...";
             LBL_GameStatusLabel.ForeColor = Color.Green;
 
             WolfX_TabManager.Enabled = true;
             Tools_Verify.Enabled = true;
-            WolfX_UI_State.WorkingDirectory = FolderBrowser.SelectedPath;
-            WolfX_UI_State.IsLoaded = true;
-            new Thread(Handlers.CardLoader.Load).Start();
-            new Thread(Handlers.Archive_Handler.Load).Start();
+            State.WorkingDirectory = FolderBrowser.SelectedPath;
+            State.IsLoaded = true;
+
+            new Thread(Card_Loader.Load).Start();
+            new Thread(Archive.Load).Start();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -44,17 +49,18 @@ namespace WolfX
         private void Lv_ArchivePreviewer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.lv_ArchivePreviewer.SuspendLayout();
-            new Thread(() => Archive_Handler.OpenArchive(lv_ArchivePreviewer.SelectedItems[0].Text)).Start();
+            new Thread(() => Archive.OpenArchive(lv_ArchivePreviewer.SelectedItems[0].Text)).Start();
         }
 
         internal void Tools_Verify_Click(object sender, EventArgs e)
         {
+            var Missing = false;
             using var OpenFile = new OpenFileDialog();
             OpenFile.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020.toc File";
             OpenFile.Filter = "YGO_2020.toc|YGO_2020.toc";
             if (OpenFile.ShowDialog() != DialogResult.OK) return;
 
-            foreach (var Line in System.IO.File.ReadLines(OpenFile.FileName))
+            foreach (var Line in File.ReadLines(OpenFile.FileName))
             {
                 if (Line == "UT") continue;
 
@@ -62,14 +68,22 @@ namespace WolfX
                 CLine = Regex.Replace(CLine, @"  +", " ", RegexOptions.Compiled);
                 var Information = CLine.Split(' ', 3);
 
-                if (File.Exists($"{WolfX_UI_State.WorkingDirectory}/{Information[2]}") == false)
-                    MessageBox.Show($@"File {Information[2]} is missing from the game directory.");
+                if (File.Exists($"{State.WorkingDirectory}/{Information[2]}") == false)
+                {
+                    Missing = true;
+                    File.AppendAllLines("Missing.txt", new[] { Information[2] });
+                }
             }
+
+            if (Missing)
+                MessageBox.Show("Missing Files Found, Please Check Missing.txt and Re-Run Yami-Yugi.exe", "Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("No Missing Files Found", "No Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_CloseArchive_Click(object sender, EventArgs e)
         {
-            Archive_Handler.CloseArchive();
+            Archive.CloseArchive();
         }
 
         private void btn_ExtractAll_Click(object sender, EventArgs e)
@@ -85,10 +99,10 @@ namespace WolfX
             else
                 Archive = lbl_Name.Text;
 
-            var Files = Archive_Handler.GetFiles(Archive);
+            var Files = Handlers.Archive.Get_FilesInArchive(Archive);
             new DirectoryInfo(new FileInfo(Archive).Name).Create();
 
-            using var Reader = new BinaryReader(File.Open($"{WolfX_UI_State.WorkingDirectory}\\{Archive}",
+            using var Reader = new BinaryReader(File.Open($"{State.WorkingDirectory}\\{Archive}",
                 FileMode.Open, FileAccess.Read, FileShare.Read));
 
             foreach (var File in Files)
@@ -107,7 +121,7 @@ namespace WolfX
             }
 
             Language_english.Checked = true;
-            WolfX_UI_State.Language = Language.English;
+            State.Language = Language.English;
         }
 
         private void Language_french_Click(object sender, EventArgs e)
@@ -119,7 +133,7 @@ namespace WolfX
             }
 
             Language_french.Checked = true;
-            WolfX_UI_State.Language = Language.French;
+            State.Language = Language.French;
         }
 
         private void Language_german_Click(object sender, EventArgs e)
@@ -131,7 +145,7 @@ namespace WolfX
             }
 
             Language_german.Checked = true;
-            WolfX_UI_State.Language = Language.German;
+            State.Language = Language.German;
         }
 
         private void Language_italian_Click(object sender, EventArgs e)
@@ -143,7 +157,7 @@ namespace WolfX
             }
 
             Language_italian.Checked = true;
-            WolfX_UI_State.Language = Language.Italian;
+            State.Language = Language.Italian;
         }
 
         private void Language_japanese_Click(object sender, EventArgs e)
@@ -155,7 +169,7 @@ namespace WolfX
             }
 
             Language_japanese.Checked = true;
-            WolfX_UI_State.Language = Language.Japanese;
+            State.Language = Language.Japanese;
         }
 
         private void Language_russian_Click(object sender, EventArgs e)
@@ -167,7 +181,7 @@ namespace WolfX
             }
 
             Language_russian.Checked = true;
-            WolfX_UI_State.Language = Language.Russian;
+            State.Language = Language.Russian;
         }
 
         private void Language_spanish_Click(object sender, EventArgs e)
@@ -179,62 +193,68 @@ namespace WolfX
             }
 
             Language_spanish.Checked = true;
-            WolfX_UI_State.Language = Language.Spanish;
+            State.Language = Language.Spanish;
         }
 
         private void btn_NextCard_Click(object sender, EventArgs e)
         {
-            if (WolfX_UI_State.CardIndex == WolfX_UI_State.Cards.Count) return;
-            WolfX_UI_State.CardIndex++;
-            Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
-            Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
-            Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
-            Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute;
-            Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
-            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
+            if (State.CardIndex == State.Cards.Count)
+                return;
+            
+            State.CardIndex++;
+            
+            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
+            Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             Form.PB_CardPicture.Image =
-                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void btn_LastCard_Click(object sender, EventArgs e)
         {
-            if (WolfX_UI_State.CardIndex == 0) return;
-            WolfX_UI_State.CardIndex--;
-            Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
-            Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
-            Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
-            Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute;
-            Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
-            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
+            if (State.CardIndex == 0)
+                return;
+            
+            State.CardIndex--;
+            
+            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
+            Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             Form.PB_CardPicture.Image =
-                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void CB_CardID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            WolfX_UI_State.CardIndex = Form.CB_CardID.SelectedIndex;
+            State.CardIndex = Form.CB_CardID.SelectedIndex;
 
-            Form.CB_CardName.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Name;
-            Form.TB_CardDesc.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = WolfX_UI_State.CardIndex;
-            Form.TB_CardAtk.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Atk.ToString();
-            Form.TB_CardDef.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Attribute;
-            Form.Nud_CardLevel.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Level.ToString();
-            WolfUI.Form.CB_CardTypes.Text = WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Type.ToString();
+            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
+            Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             Form.PB_CardPicture.Image =
-                Preview_Generator.Get_ImageFromArchive("2020.full.illust_j.jpg.zib", WolfX_UI_State.Cards[WolfX_UI_State.CardIndex]._Id.ToString());
+                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void btn_SaveCard_Click(object sender, EventArgs e)
         {
-            var thing = WolfX_UI_State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]));
+            var thing = State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]));
             var Message =
-                $"{WolfX_UI_State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]))._Bit1.ToString()}";
+                $"{State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]))._Bit1}";
             Debug.WriteLine(Message);
 
             var Bit1 = thing._Bit1;
@@ -248,6 +268,32 @@ namespace WolfX
              * _Atk = (int)(Bit1[bit1_attack] * 10),
             _Def = (int)(Bit1[bit1_defence] * 10),
              */
+        }
+
+        private void CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            State.CardIndex = CB_CardName.SelectedIndex;
+            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
+            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
+            Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
+            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
+            Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
+            Form.PB_CardPicture.Image =
+                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
+        }
+
+        private void ReplaceImage_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void CB_LoadCensoredCards_CheckedChanged(object sender, EventArgs e)
+        {
+            Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
         }
     }
 }

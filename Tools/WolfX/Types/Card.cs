@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Specialized;
 
 namespace WolfX.Types
 {
@@ -88,15 +83,21 @@ namespace WolfX.Types
             UnionTunerEffect = 37,
             RitualSpiritEffect = 38,
             Underscores = 39,
-            Link = 43,
-            AnyNormal = 37,
-            AnySynchro = 38,
-            AnyXyz = 39,
             AnyTuner = 40,
             AnyFusion = 41,
             AnyRitual = 42,
-            AnyPendulum = 43,
+            Link = 43,
             AnyFlip = 44
+                
+            //AnyNormal = 37,
+            //AnySynchro = 38,
+            //AnyXyz = 39,
+            //AnyPendulum = 43,
+        }
+
+        internal bool IsCardEmpty()
+        {
+            return _Name?.Length == 0;
         }
     }
 }

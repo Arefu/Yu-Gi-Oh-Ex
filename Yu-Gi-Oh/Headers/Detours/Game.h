@@ -15,5 +15,6 @@ public:
 	static QWORD Patch_DefaultMaxNumberOfCards(unsigned int UNK);
 	static QWORD Patch_IsGameOutOfFocus();
 
+
 private:
 };

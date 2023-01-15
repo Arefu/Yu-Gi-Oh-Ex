@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace WolfX.Extensions
 {
-    internal static class Extensions
+    internal static partial class Extensions
     {
         public static string ReadNullTerminatedString(this BinaryReader reader, Encoding encoding)
         {
