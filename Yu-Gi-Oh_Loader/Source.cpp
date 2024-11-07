@@ -6,12 +6,11 @@
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
-	if (lpCmdLine)
-		Game::Start(lpCmdLine);
 
 	Game::Locate();
 
-	Game::Start();
+	Game::Start(false);
 
-		system("pause");
+//	Game::Start(true);
+
 }
