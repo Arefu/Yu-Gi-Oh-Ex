@@ -10,53 +10,43 @@
 #include <windows.h>
 
 
-typedef void(__stdcall* PresentFunc)(IDXGISwapChain* pChain, UINT SyncInterval, UINT Flags);
+typedef HRESULT(__stdcall* PresentFn)(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags);
 
-IDXGISwapChain* g_pSwapChain = nullptr;
-ID3D11Device* g_pD3D11Device = nullptr;
-ID3D11DeviceContext* g_pD3D11DeviceContext = nullptr;;
- ID3D11RenderTargetView* g_pmainRenderTargetView = nullptr;
+IDXGISwapChain* g_pSwapChain = reinterpret_cast<IDXGISwapChain*>(0x14332D380);
+ID3D11Device* g_pD3D11Device = reinterpret_cast<ID3D11Device*>(0x14332BBB8);
+ID3D11DeviceContext* g_pD3D11DeviceContext = nullptr;
 
-uintptr_t pSwapChainAddress = 0x14332D380;
-uintptr_t pDeviceAddress = 0x14332BBB8;
-uintptr_t pPresentAddress = 0x0;
+PresentFn pPresentAddress = nullptr;
 
-BOOL g_bInitialised = FALSE;
 
 void Start_DearImGui(IDXGISwapChain* pChain, UINT SyncInterval, UINT Flags)
 {
-	std::cout << "Dear ImGui started!" << std::endl;
-	auto DirectX_PresentFunc = (PresentFunc)pPresentAddress;
-
-	if (!g_bInitialised)
-	{
-		if (FAILED(pChain->GetDevice(__uuidof(g_pD3D11Device), (void**)&g_pD3D11Device)))
-		{
-			std::cout << "Failed to get D3D11 device!" << std::endl;
-			return;
-		}
-
+	static bool initialized = false;
+	if (!initialized) {
+		// Initialize ImGui for DirectX 11 and Win32
 		g_pD3D11Device->GetImmediateContext(&g_pD3D11DeviceContext);
 
-		DXGI_SWAP_CHAIN_DESC sd;
-		pChain->GetDesc(&sd);
-
-		ID3D11Texture2D* pBackBuffer = nullptr;
-		pChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
-		g_pD3D11Device->CreateRenderTargetView(pBackBuffer, nullptr, &g_pmainRenderTargetView);
-		pBackBuffer->Release();
-
 		ImGui::CreateContext();
-		ImGuiIO& io = ImGui::GetIO(); (void)io;
-		ImGui::StyleColorsDark();
-
-		HWND hwnd = FindWindowA("UnityWndClass", nullptr);
-		ImGui_ImplWin32_Init(GetCurrentWindow());
 		ImGui_ImplDX11_Init(g_pD3D11Device, g_pD3D11DeviceContext);
-
-
-		g_bInitialised = true;
+		ImGui_ImplWin32_Init(GetActiveWindow());
+		initialized = true;
 	}
+
+	// Start ImGui frame
+	ImGui_ImplDX11_NewFrame();
+	ImGui_ImplWin32_NewFrame();
+	ImGui::NewFrame();
+
+	// Draw UI
+	ImGui::Begin("Overlay");
+	ImGui::Text("Hello, world!");
+	ImGui::End();
+
+	// Render ImGui
+	ImGui::Render();
+	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
+	 pPresentAddress(pChain, SyncInterval, Flags);
 }
 
 void WaitForSwapChainInitialization()
@@ -64,20 +54,21 @@ void WaitForSwapChainInitialization()
 	//We should be able to use a loop to poll and see if we have a reasonable value as well, but for now, I'm lazy to get a PoC working.
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
-	g_pSwapChain = reinterpret_cast<IDXGISwapChain*>(pSwapChainAddress);
+	void** vTable = *reinterpret_cast<void***>(g_pSwapChain);
+	pPresentAddress = reinterpret_cast<PresentFn>(vTable[8]);
 	
 	std::cout << "IDXGISwapChain initialized at address: " << g_pSwapChain << std::endl;
-
-	pPresentAddress = *(uintptr_t*)(g_pSwapChain)+0x8 * sizeof(uintptr_t);
+	std::cout << "IDXGISwapChain vTable address: " << vTable << std::endl;
 	std::cout << "Present function address: " << pPresentAddress << std::endl;
-
 
 	DetourTransactionBegin();
 	DetourUpdateThread(GetCurrentThread());
 
-	DetourAttach((PVOID*)pPresentAddress, Start_DearImGui);
-
+	DetourAttach(&(PVOID&)pPresentAddress, Start_DearImGui);
+	system("pause");
 	DetourTransactionCommit();
+	std::cout << "New present function address: " << pPresentAddress << std::endl;
+
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)

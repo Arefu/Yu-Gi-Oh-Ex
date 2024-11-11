@@ -13,10 +13,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Dear-ImGui">
+      <UniqueIdentifier>{85109f78-10f0-48f2-bae3-0d9b22640ef6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_demo.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_draw.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_impl_dx11.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_impl_win32.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_tables.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_widgets.cpp">
+      <Filter>Source Files\Dear-ImGui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

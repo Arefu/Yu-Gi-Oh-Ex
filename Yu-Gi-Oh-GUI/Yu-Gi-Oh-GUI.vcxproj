@@ -171,6 +171,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui.cpp" />
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_demo.cpp" />
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_draw.cpp" />
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_tables.cpp" />
+    <ClCompile Include="..\Dependencies\Dear ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
   <ItemGroup>
