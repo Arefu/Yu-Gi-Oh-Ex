@@ -61,10 +61,11 @@ void StartDetours()
 
 	auto StartThreadEx = reinterpret_cast<Address>(0x1408D6860);
 	DetourAttach(reinterpret_cast<PVOID*>(&StartThreadEx), Threading::Patch_StartThreadEx);
-
-
-	DetourTransactionCommit();
-
+	
+	LONG commitResult = DetourTransactionCommit();
+	if (commitResult == NO_ERROR) {
+		std::cerr << "DetourTransactionCommit failed: " << commitResult << std::endl;
+	}
 	Threading::Set_StartThreadExAddress(StartThreadEx);
 
 	DirectX::Set_ImGuiD3D11SetupPatchAddress(ImGui_D3D11Setup);
