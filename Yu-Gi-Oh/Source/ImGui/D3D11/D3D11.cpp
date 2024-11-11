@@ -34,7 +34,7 @@ void DirectX::Patch_ImGUi_D3D11Setup(BYTE* a1)
 
 	YuGiOh_ImGui::im_gui_present_address = reinterpret_cast<Address>(vmt[8]);
 	DetourAttach((PVOID*)(&YuGiOh_ImGui::im_gui_present_address), YuGiOh_ImGui::Start_DearImGui);
-
+	MessageBox(NULL, "Detours attached", "Detours", MB_OK);
 	DetourTransactionCommit();
 
 	func_1408CA830(a1);
