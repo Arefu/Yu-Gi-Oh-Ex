@@ -22,7 +22,7 @@ public:
 	/// </summary>
 	/// <param name="Plugins">Enable Plugin Loading</param>
 	/// <returns>TRUE if Process Created</returns>
-	static BOOL Start(bool Plugins);
+	static BOOL Start();
 
 	/// <summary>
 	/// Starts the game with a custom path
@@ -30,7 +30,7 @@ public:
 	/// <param name="CustomPath">Custom Path to load from</param>
 	/// <param name="Plugins">Enable Plugin Loading</param>
 	/// <returns>TRUE if Process Created</returns>
-	static BOOL Start(LPSTR CustomPath, bool Plugins);
+	static BOOL Start(LPSTR CustomPath);
 
 	/// <summary>
 	/// Looks for plugins in the Plugins folder from the Loader's directory

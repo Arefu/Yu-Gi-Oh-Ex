@@ -33,29 +33,20 @@ BOOL Game::Locate()
 		return FALSE;
 }
 
-BOOL Game::Start(bool Plugins = true)
+BOOL Game::Start()
 {
 	if (Game::Check(gGamePath) == FALSE)
 		return FALSE;
 
 	STARTUPINFO info = { sizeof(info) };
 	PROCESS_INFORMATION processInfo;
-	BOOL Status = false;
-	if (Plugins)
-	{
-		Game::LookForPlugins();
 
-		Status = DetourCreateProcessWithDlls(gGameLocation, NULL, NULL, NULL, TRUE, NULL, NULL, NULL, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
-	}
-	else
-	{
-		 Status = DetourCreateProcessWithDllExA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo,  "C:/Users/Johnathon/source/repos/Yu-Gi-Oh-Ex/x64/Debug/Plugins/Yu-Gi-Oh-GUI.dll", NULL);
+	Game::LookForPlugins();
 
-	}
-	return Status;
+	return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
 
-BOOL Game::Start(LPSTR CustomPath, bool Plugins = true)
+BOOL Game::Start(LPSTR CustomPath)
 {
 	if (Game::Check(CustomPath) == FALSE)
 		return FALSE;
@@ -67,8 +58,7 @@ BOOL Game::Start(LPSTR CustomPath, bool Plugins = true)
 
 	Game::LookForPlugins();
 
-	BOOL Status = DetourCreateProcessWithDlls(gGameLocation, NULL, NULL, NULL, TRUE, NULL, NULL, NULL, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
-	return Status;
+	return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, TRUE, NULL, NULL, NULL, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
 
 void Game::LookForPlugins()
@@ -81,7 +71,7 @@ void Game::LookForPlugins()
 
 	HANDLE hFind = FindFirstFileA(CurrentDir, &FindFileData);
 
-	
+
 	CHAR FullPathOfDll[MAX_PATH];
 	GetCurrentDirectoryA(MAX_PATH, FullPathOfDll);
 	strncat(FullPathOfDll, "\\Plugins\\", sizeof("\\Plugins\\"));
