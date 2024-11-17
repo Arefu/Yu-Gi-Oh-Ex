@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh_Loader", "Yu-Gi-Oh_Loader\Yu-Gi-Oh_Loader.vcxproj", "{4B364AFE-FDBF-4FDC-94A2-638A441E3536}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1B14E366-56BA-408B-997B-3853210FC42E} = {1B14E366-56BA-408B-997B-3853210FC42E}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh", "Yu-Gi-Oh\Yu-Gi-Oh.vcxproj", "{1B14E366-56BA-408B-997B-3853210FC42E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WolfX", "Tools\WolfX\WolfX.csproj", "{F2BD313D-D540-4511-81BC-801C86196BBD}"
 EndProject
@@ -16,9 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yami-Yugi", "Tools\Yami-Yug
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "File Handler Programs", "File Handler Programs", "{A3EEF00F-6B23-4623-8595-A1A109282E11}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu-Gi-Oh_Server", "Yu-Gi-Oh_Server\Yu-Gi-Oh_Server.csproj", "{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh-GUI", "Yu-Gi-Oh-GUI\Yu-Gi-Oh-GUI.vcxproj", "{D054A217-3757-4F23-845C-7242016415AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3240BD5-215F-46CF-93AA-5ABE97102910}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencies\Yu-Gi-Oh-Ex.h = Dependencies\Yu-Gi-Oh-Ex.h
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,17 +40,6 @@ Global
 		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|x64.Build.0 = Release|x64
 		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|x86.ActiveCfg = Release|x64
 		{4B364AFE-FDBF-4FDC-94A2-638A441E3536}.Release|x86.Build.0 = Release|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|x64.ActiveCfg = Debug|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|x64.Build.0 = Debug|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|x86.ActiveCfg = Debug|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Debug|x86.Build.0 = Debug|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|Any CPU.ActiveCfg = Release|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|Any CPU.Build.0 = Release|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|x64.ActiveCfg = Release|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|x64.Build.0 = Release|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|x86.ActiveCfg = Release|x64
-		{1B14E366-56BA-408B-997B-3853210FC42E}.Release|x86.Build.0 = Release|x64
 		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2BD313D-D540-4511-81BC-801C86196BBD}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -77,17 +64,6 @@ Global
 		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|x64.Build.0 = Release|x64
 		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|x86.ActiveCfg = Release|x64
 		{AC1D4F98-BB29-48D2-B8BB-4EC1F60B13A3}.Release|x86.Build.0 = Release|x64
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Debug|x64.Build.0 = Debug|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Debug|x86.Build.0 = Debug|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Release|x64.ActiveCfg = Release|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Release|x64.Build.0 = Release|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Release|x86.ActiveCfg = Release|Any CPU
-		{244BFCAA-9CA7-4F0E-81A9-8C86A1FC3FC1}.Release|x86.Build.0 = Release|Any CPU
 		{D054A217-3757-4F23-845C-7242016415AC}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{D054A217-3757-4F23-845C-7242016415AC}.Debug|Any CPU.Build.0 = Debug|x64
 		{D054A217-3757-4F23-845C-7242016415AC}.Debug|x64.ActiveCfg = Debug|x64

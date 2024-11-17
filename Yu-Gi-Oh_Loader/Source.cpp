@@ -4,13 +4,10 @@
 #include <iostream>
 #include "Game.h"
 
-int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+	PSTR lpCmdLine, int nCmdShow)
 {
-
 	Game::Locate();
 
-	Game::Start(false);
-
-//	Game::Start(true);
-
+	return Game::Start();
 }
