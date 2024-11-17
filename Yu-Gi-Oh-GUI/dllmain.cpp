@@ -7,90 +7,53 @@
 #include <imgui_impl_win32.h>
 #include <iostream>
 #include <thread>
+#include <string>
 #include <windows.h>
 
+typedef __int64 Address;
 
-typedef HRESULT(__stdcall* PresentFn)(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags);
+//typedef HRESULT(__stdcall* Present)(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags);
 
-IDXGISwapChain* g_pSwapChain = 0x0;
-ID3D11Device* g_pD3D11Device = 0x0;
-ID3D11DeviceContext* g_pD3D11DeviceContext = nullptr;
+static Address oCreateDeviceAndSwapChain = 0x14090D2B0;
+static Address nCreateDeviceAndSwapChain = 0x0;
 
-PresentFn pPresentAddress = nullptr;
+static Address oPresent = 0x0;
+static Address nPresent = 0x0;
 
 
-void Start_DearImGui(IDXGISwapChain* pChain, UINT SyncInterval, UINT Flags)
+HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, HMODULE Software, UINT Flags, const D3D_FEATURE_LEVEL* pFeatureLevels, UINT FeatureLevels, UINT SDKVersion, const DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext)
 {
-	static bool initialized = false;
-	if (!initialized) {
-		// Initialize ImGui for DirectX 11 and Win32
-		g_pD3D11Device->GetImmediateContext(&g_pD3D11DeviceContext);
-
-		ImGui::CreateContext();
-		ImGui_ImplDX11_Init(g_pD3D11Device, g_pD3D11DeviceContext);
-		ImGui_ImplWin32_Init(GetActiveWindow());
-		initialized = true;
-	}
-
-	// Start ImGui frame
-	ImGui_ImplDX11_NewFrame();
-	ImGui_ImplWin32_NewFrame();
-	ImGui::NewFrame();
-
-	// Draw UI
-	ImGui::Begin("Overlay");
-	ImGui::Text("Hello, world!");
-	ImGui::End();
-
-	// Render ImGui
-	ImGui::Render();
-	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
-
-	 pPresentAddress(pChain, SyncInterval, Flags);
-}
-
-void WaitForSwapChainInitialization()
-{
-	//We should be able to use a loop to poll and see if we have a reasonable value as well, but for now, I'm lazy to get a PoC working.
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-
-	void** vmt = *(void***)g_pSwapChain;
-	pPresentAddress = reinterpret_cast<PresentFn>(vmt[8]);
+	auto result = reinterpret_cast<HRESULT(__stdcall*)(IDXGIAdapter*, D3D_DRIVER_TYPE, HMODULE, UINT, const D3D_FEATURE_LEVEL*, UINT, UINT, const DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, ID3D11Device**, D3D_FEATURE_LEVEL*, ID3D11DeviceContext**)>(nCreateDeviceAndSwapChain)(pAdapter, DriverType, Software, Flags, pFeatureLevels, FeatureLevels, SDKVersion, pSwapChainDesc, ppSwapChain, ppDevice, pFeatureLevel, ppImmediateContext);
 	
-	std::cout << "ID3D11Device initialized at address: " << g_pD3D11Device << std::endl;
-	std::cout << "IDXGISwapChain initialized at address: " << g_pSwapChain << std::endl;
-	std::cout << "IDXGISwapChain vTable address: " << vmt << std::endl;
-	for (int i = 0; i < 10; ++i) {
-		std::cout << "vTable[" << i << "]: " << vmt[i] << std::endl;
-	}
-	std::cout << "Present function address: " << pPresentAddress << std::endl;
+	//Get VMT of SwapChain
+	IDXGISwapChain* pSwapChain = *ppSwapChain;
+	void** vmt = *(void***)(pSwapChain);
 
-	DetourTransactionBegin();
-	DetourUpdateThread(GetCurrentThread());
+	//Get Present function address
+	oPresent = reinterpret_cast<Address>(vmt[8]);
 
-	DetourAttach((PVOID*)&pPresentAddress, Start_DearImGui);
+	//Show Present Address messagebox
+	std::string message = "Present function address: " + std::to_string(oPresent);
+	MessageBoxA(NULL, message.c_str(), "Present Address", MB_OK);
 
-	DetourTransactionCommit();
-	std::cout << "New present function address: " << pPresentAddress << std::endl;
-
+	return result;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-	DetourRestoreAfterWith();
-	AllocConsole();
-	FILE* f;
-	freopen_s(&f, "CONOUT$", "w", stdout);
-	freopen_s(&f, "CONOUT$", "w", stderr);
-
-
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-		g_pSwapChain = reinterpret_cast<IDXGISwapChain*>(0x14332D380);
-		g_pD3D11Device = reinterpret_cast<ID3D11Device*>(0x14332BBB8);
+		DetourRestoreAfterWith();
 
-		std::thread(WaitForSwapChainInitialization).detach();
+		DetourTransactionBegin();
+		DetourUpdateThread(GetCurrentThread());
+		
+		DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
+		DetourTransactionCommit();
+
+		//Update nCreateDeviceAndSwapChain with the address of where the original function is stored
+		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
 
 		break;
 	case DLL_THREAD_ATTACH:
