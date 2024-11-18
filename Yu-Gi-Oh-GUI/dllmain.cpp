@@ -79,7 +79,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
 		{
-			
 			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
 		}
 		if (ImGui::CollapsingHeader("Player Two"))
@@ -87,6 +86,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			ImGui::Text("Number of Cards in Hand: %d", g_Player2.Get_NumberOfCardsInHand());
 		}
 		ImGui::EndGroup();
+		
 		ImGui::End();
 	}
 
