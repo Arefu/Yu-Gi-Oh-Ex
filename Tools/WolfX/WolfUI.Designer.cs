@@ -28,806 +28,784 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.WolfX_TabManager = new System.Windows.Forms.TabControl();
-            this.Page_CardManager = new System.Windows.Forms.TabPage();
-            this.btn_SaveCard = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.CB_LoadCensoredCards = new System.Windows.Forms.CheckBox();
-            this.btn_NextCard = new System.Windows.Forms.Button();
-            this.btn_LastCard = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Nud_CardLevel = new System.Windows.Forms.NumericUpDown();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.CB_CardAttribute = new System.Windows.Forms.ComboBox();
-            this.CB_CardTypes = new System.Windows.Forms.ComboBox();
-            this.CB_CardImageID = new System.Windows.Forms.ComboBox();
-            this.CB_CardID = new System.Windows.Forms.ComboBox();
-            this.CB_CardLevel = new System.Windows.Forms.Label();
-            this.CB_CardLimitedStatus = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CB_CardName = new System.Windows.Forms.ComboBox();
-            this.TB_CardDef = new System.Windows.Forms.TextBox();
-            this.TB_CardAtk = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TB_CardDesc = new System.Windows.Forms.TextBox();
-            this.PB_CardPicture = new System.Windows.Forms.PictureBox();
-            this.Context = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ReplaceImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.Page_ZibManager = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btn_CloseArchive = new System.Windows.Forms.Button();
-            this.cb_ShowFileName = new System.Windows.Forms.CheckBox();
-            this.btn_ExtractAll = new System.Windows.Forms.Button();
-            this.cb_ShowPicturePreview = new System.Windows.Forms.CheckBox();
-            this.lv_ArchivePreviewer = new System.Windows.Forms.ListView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbl_ItemCount = new System.Windows.Forms.Label();
-            this.lbl_Size = new System.Windows.Forms.Label();
-            this.lbl_Name = new System.Windows.Forms.Label();
-            this.lbl_NumberOfItemsPrompt = new System.Windows.Forms.Label();
-            this.lbl_FileSizePrompt = new System.Windows.Forms.Label();
-            this.lbl_NamePrompt = new System.Windows.Forms.Label();
-            this.Page_AnimationManager = new System.Windows.Forms.TabPage();
-            this.MenuBar = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.File_Open = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.File_Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tools_Verify = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_english = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_french = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_german = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_italian = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_japanese = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_russian = new System.Windows.Forms.ToolStripMenuItem();
-            this.Language_spanish = new System.Windows.Forms.ToolStripMenuItem();
-            this.Status = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.LBL_GameStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.WolfX_TabManager.SuspendLayout();
-            this.Page_CardManager.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Nud_CardLevel)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).BeginInit();
-            this.Context.SuspendLayout();
-            this.Page_ZibManager.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.MenuBar.SuspendLayout();
-            this.Status.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            WolfX_TabManager = new TabControl();
+            Page_CardManager = new TabPage();
+            btn_SaveCard = new Button();
+            groupBox6 = new GroupBox();
+            CB_LoadCensoredCards = new CheckBox();
+            btn_NextCard = new Button();
+            btn_LastCard = new Button();
+            groupBox2 = new GroupBox();
+            Nud_CardLevel = new NumericUpDown();
+            comboBox6 = new ComboBox();
+            CB_CardAttribute = new ComboBox();
+            CB_CardTypes = new ComboBox();
+            CB_CardImageID = new ComboBox();
+            CB_CardID = new ComboBox();
+            CB_CardLevel = new Label();
+            CB_CardLimitedStatus = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            groupBox1 = new GroupBox();
+            CB_CardName = new ComboBox();
+            TB_CardDef = new TextBox();
+            TB_CardAtk = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            TB_CardDesc = new TextBox();
+            PB_CardPicture = new PictureBox();
+            Context = new ContextMenuStrip(components);
+            ReplaceImage = new ToolStripMenuItem();
+            Page_ZibManager = new TabPage();
+            textBox1 = new TextBox();
+            groupBox5 = new GroupBox();
+            checkBox1 = new CheckBox();
+            button1 = new Button();
+            groupBox4 = new GroupBox();
+            btn_CloseArchive = new Button();
+            cb_ShowFileName = new CheckBox();
+            btn_ExtractAll = new Button();
+            cb_ShowPicturePreview = new CheckBox();
+            lv_ArchivePreviewer = new ListView();
+            groupBox3 = new GroupBox();
+            lbl_ItemCount = new Label();
+            lbl_Size = new Label();
+            lbl_Name = new Label();
+            lbl_NumberOfItemsPrompt = new Label();
+            lbl_FileSizePrompt = new Label();
+            lbl_NamePrompt = new Label();
+            Page_AnimationManager = new TabPage();
+            MenuBar = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            File_Open = new ToolStripMenuItem();
+            closeToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            File_Exit = new ToolStripMenuItem();
+            toolsToolStripMenuItem = new ToolStripMenuItem();
+            Tools_Verify = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            languageToolStripMenuItem = new ToolStripMenuItem();
+            Language_english = new ToolStripMenuItem();
+            Language_french = new ToolStripMenuItem();
+            Language_german = new ToolStripMenuItem();
+            Language_italian = new ToolStripMenuItem();
+            Language_japanese = new ToolStripMenuItem();
+            Language_russian = new ToolStripMenuItem();
+            Language_spanish = new ToolStripMenuItem();
+            Status = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            LBL_GameStatusLabel = new ToolStripStatusLabel();
+            createCardIDEnumToolStripMenuItem = new ToolStripMenuItem();
+            WolfX_TabManager.SuspendLayout();
+            Page_CardManager.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Nud_CardLevel).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PB_CardPicture).BeginInit();
+            Context.SuspendLayout();
+            Page_ZibManager.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox4.SuspendLayout();
+            groupBox3.SuspendLayout();
+            MenuBar.SuspendLayout();
+            Status.SuspendLayout();
+            SuspendLayout();
             // 
             // WolfX_TabManager
             // 
-            this.WolfX_TabManager.Controls.Add(this.Page_CardManager);
-            this.WolfX_TabManager.Controls.Add(this.Page_ZibManager);
-            this.WolfX_TabManager.Controls.Add(this.Page_AnimationManager);
-            this.WolfX_TabManager.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WolfX_TabManager.Enabled = false;
-            this.WolfX_TabManager.Location = new System.Drawing.Point(0, 24);
-            this.WolfX_TabManager.Name = "WolfX_TabManager";
-            this.WolfX_TabManager.SelectedIndex = 0;
-            this.WolfX_TabManager.Size = new System.Drawing.Size(659, 657);
-            this.WolfX_TabManager.TabIndex = 0;
+            WolfX_TabManager.Controls.Add(Page_CardManager);
+            WolfX_TabManager.Controls.Add(Page_ZibManager);
+            WolfX_TabManager.Controls.Add(Page_AnimationManager);
+            WolfX_TabManager.Dock = DockStyle.Fill;
+            WolfX_TabManager.Enabled = false;
+            WolfX_TabManager.Location = new Point(0, 24);
+            WolfX_TabManager.Name = "WolfX_TabManager";
+            WolfX_TabManager.SelectedIndex = 0;
+            WolfX_TabManager.Size = new Size(659, 657);
+            WolfX_TabManager.TabIndex = 0;
             // 
             // Page_CardManager
             // 
-            this.Page_CardManager.Controls.Add(this.btn_SaveCard);
-            this.Page_CardManager.Controls.Add(this.groupBox6);
-            this.Page_CardManager.Controls.Add(this.btn_NextCard);
-            this.Page_CardManager.Controls.Add(this.btn_LastCard);
-            this.Page_CardManager.Controls.Add(this.groupBox2);
-            this.Page_CardManager.Controls.Add(this.groupBox1);
-            this.Page_CardManager.Location = new System.Drawing.Point(4, 24);
-            this.Page_CardManager.Name = "Page_CardManager";
-            this.Page_CardManager.Padding = new System.Windows.Forms.Padding(3);
-            this.Page_CardManager.Size = new System.Drawing.Size(651, 629);
-            this.Page_CardManager.TabIndex = 0;
-            this.Page_CardManager.Text = "Card Manager";
-            this.Page_CardManager.UseVisualStyleBackColor = true;
+            Page_CardManager.Controls.Add(btn_SaveCard);
+            Page_CardManager.Controls.Add(groupBox6);
+            Page_CardManager.Controls.Add(btn_NextCard);
+            Page_CardManager.Controls.Add(btn_LastCard);
+            Page_CardManager.Controls.Add(groupBox2);
+            Page_CardManager.Controls.Add(groupBox1);
+            Page_CardManager.Location = new Point(4, 24);
+            Page_CardManager.Name = "Page_CardManager";
+            Page_CardManager.Padding = new Padding(3);
+            Page_CardManager.Size = new Size(651, 629);
+            Page_CardManager.TabIndex = 0;
+            Page_CardManager.Text = "Card Manager";
+            Page_CardManager.UseVisualStyleBackColor = true;
             // 
             // btn_SaveCard
             // 
-            this.btn_SaveCard.Location = new System.Drawing.Point(447, 335);
-            this.btn_SaveCard.Name = "btn_SaveCard";
-            this.btn_SaveCard.Size = new System.Drawing.Size(107, 25);
-            this.btn_SaveCard.TabIndex = 6;
-            this.btn_SaveCard.Text = "Save Card";
-            this.btn_SaveCard.UseVisualStyleBackColor = true;
-            this.btn_SaveCard.Click += new System.EventHandler(this.btn_SaveCard_Click);
+            btn_SaveCard.Location = new Point(447, 335);
+            btn_SaveCard.Name = "btn_SaveCard";
+            btn_SaveCard.Size = new Size(107, 25);
+            btn_SaveCard.TabIndex = 6;
+            btn_SaveCard.Text = "Save Card";
+            btn_SaveCard.UseVisualStyleBackColor = true;
+            btn_SaveCard.Click += btn_SaveCard_Click;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.CB_LoadCensoredCards);
-            this.groupBox6.Location = new System.Drawing.Point(334, 409);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(303, 154);
-            this.groupBox6.TabIndex = 5;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Options";
+            groupBox6.Controls.Add(CB_LoadCensoredCards);
+            groupBox6.Location = new Point(334, 409);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(303, 154);
+            groupBox6.TabIndex = 5;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Options";
             // 
             // CB_LoadCensoredCards
             // 
-            this.CB_LoadCensoredCards.AutoSize = true;
-            this.CB_LoadCensoredCards.Location = new System.Drawing.Point(6, 22);
-            this.CB_LoadCensoredCards.Name = "CB_LoadCensoredCards";
-            this.CB_LoadCensoredCards.Size = new System.Drawing.Size(138, 19);
-            this.CB_LoadCensoredCards.TabIndex = 0;
-            this.CB_LoadCensoredCards.Text = "Load Censored Cards";
-            this.CB_LoadCensoredCards.UseVisualStyleBackColor = true;
-            this.CB_LoadCensoredCards.CheckedChanged += new System.EventHandler(this.CB_LoadCensoredCards_CheckedChanged);
+            CB_LoadCensoredCards.AutoSize = true;
+            CB_LoadCensoredCards.Location = new Point(6, 22);
+            CB_LoadCensoredCards.Name = "CB_LoadCensoredCards";
+            CB_LoadCensoredCards.Size = new Size(138, 19);
+            CB_LoadCensoredCards.TabIndex = 0;
+            CB_LoadCensoredCards.Text = "Load Censored Cards";
+            CB_LoadCensoredCards.UseVisualStyleBackColor = true;
+            CB_LoadCensoredCards.CheckedChanged += CB_LoadCensoredCards_CheckedChanged;
             // 
             // btn_NextCard
             // 
-            this.btn_NextCard.Location = new System.Drawing.Point(334, 366);
-            this.btn_NextCard.Name = "btn_NextCard";
-            this.btn_NextCard.Size = new System.Drawing.Size(107, 25);
-            this.btn_NextCard.TabIndex = 4;
-            this.btn_NextCard.Text = "Next Card";
-            this.btn_NextCard.UseVisualStyleBackColor = true;
-            this.btn_NextCard.Click += new System.EventHandler(this.btn_NextCard_Click);
+            btn_NextCard.Location = new Point(334, 366);
+            btn_NextCard.Name = "btn_NextCard";
+            btn_NextCard.Size = new Size(107, 25);
+            btn_NextCard.TabIndex = 4;
+            btn_NextCard.Text = "Next Card";
+            btn_NextCard.UseVisualStyleBackColor = true;
+            btn_NextCard.Click += btn_NextCard_Click;
             // 
             // btn_LastCard
             // 
-            this.btn_LastCard.Location = new System.Drawing.Point(334, 335);
-            this.btn_LastCard.Name = "btn_LastCard";
-            this.btn_LastCard.Size = new System.Drawing.Size(107, 25);
-            this.btn_LastCard.TabIndex = 3;
-            this.btn_LastCard.Text = "Previous Card";
-            this.btn_LastCard.UseVisualStyleBackColor = true;
-            this.btn_LastCard.Click += new System.EventHandler(this.btn_LastCard_Click);
+            btn_LastCard.Location = new Point(334, 335);
+            btn_LastCard.Name = "btn_LastCard";
+            btn_LastCard.Size = new Size(107, 25);
+            btn_LastCard.TabIndex = 3;
+            btn_LastCard.Text = "Previous Card";
+            btn_LastCard.UseVisualStyleBackColor = true;
+            btn_LastCard.Click += btn_LastCard_Click;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.Nud_CardLevel);
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.CB_CardAttribute);
-            this.groupBox2.Controls.Add(this.CB_CardTypes);
-            this.groupBox2.Controls.Add(this.CB_CardImageID);
-            this.groupBox2.Controls.Add(this.CB_CardID);
-            this.groupBox2.Controls.Add(this.CB_CardLevel);
-            this.groupBox2.Controls.Add(this.CB_CardLimitedStatus);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(334, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(320, 323);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Card Information";
+            groupBox2.Controls.Add(Nud_CardLevel);
+            groupBox2.Controls.Add(comboBox6);
+            groupBox2.Controls.Add(CB_CardAttribute);
+            groupBox2.Controls.Add(CB_CardTypes);
+            groupBox2.Controls.Add(CB_CardImageID);
+            groupBox2.Controls.Add(CB_CardID);
+            groupBox2.Controls.Add(CB_CardLevel);
+            groupBox2.Controls.Add(CB_CardLimitedStatus);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Location = new Point(334, 6);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(320, 323);
+            groupBox2.TabIndex = 2;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Card Information";
             // 
             // Nud_CardLevel
             // 
-            this.Nud_CardLevel.Location = new System.Drawing.Point(6, 238);
-            this.Nud_CardLevel.Name = "Nud_CardLevel";
-            this.Nud_CardLevel.Size = new System.Drawing.Size(297, 23);
-            this.Nud_CardLevel.TabIndex = 15;
+            Nud_CardLevel.Location = new Point(6, 238);
+            Nud_CardLevel.Name = "Nud_CardLevel";
+            Nud_CardLevel.Size = new Size(297, 23);
+            Nud_CardLevel.TabIndex = 15;
             // 
             // comboBox6
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(6, 287);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(297, 23);
-            this.comboBox6.TabIndex = 12;
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Location = new Point(6, 287);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(297, 23);
+            comboBox6.TabIndex = 12;
             // 
             // CB_CardAttribute
             // 
-            this.CB_CardAttribute.FormattingEnabled = true;
-            this.CB_CardAttribute.Items.AddRange(new object[] {
-            "Unknown",
-            "Light Monster",
-            "Dark Monster",
-            "Water Monster",
-            "Fire Monster",
-            "Earth Monster",
-            "Wind Monster",
-            "Divine Monster",
-            "Spell",
-            "Trap"});
-            this.CB_CardAttribute.Location = new System.Drawing.Point(6, 189);
-            this.CB_CardAttribute.Name = "CB_CardAttribute";
-            this.CB_CardAttribute.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardAttribute.TabIndex = 10;
+            CB_CardAttribute.FormattingEnabled = true;
+            CB_CardAttribute.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
+            CB_CardAttribute.Location = new Point(6, 189);
+            CB_CardAttribute.Name = "CB_CardAttribute";
+            CB_CardAttribute.Size = new Size(297, 23);
+            CB_CardAttribute.TabIndex = 10;
             // 
             // CB_CardTypes
             // 
-            this.CB_CardTypes.FormattingEnabled = true;
-            this.CB_CardTypes.Location = new System.Drawing.Point(6, 140);
-            this.CB_CardTypes.Name = "CB_CardTypes";
-            this.CB_CardTypes.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardTypes.TabIndex = 9;
+            CB_CardTypes.FormattingEnabled = true;
+            CB_CardTypes.Location = new Point(6, 140);
+            CB_CardTypes.Name = "CB_CardTypes";
+            CB_CardTypes.Size = new Size(297, 23);
+            CB_CardTypes.TabIndex = 9;
             // 
             // CB_CardImageID
             // 
-            this.CB_CardImageID.FormattingEnabled = true;
-            this.CB_CardImageID.Location = new System.Drawing.Point(6, 91);
-            this.CB_CardImageID.Name = "CB_CardImageID";
-            this.CB_CardImageID.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardImageID.TabIndex = 8;
+            CB_CardImageID.FormattingEnabled = true;
+            CB_CardImageID.Location = new Point(6, 91);
+            CB_CardImageID.Name = "CB_CardImageID";
+            CB_CardImageID.Size = new Size(297, 23);
+            CB_CardImageID.TabIndex = 8;
             // 
             // CB_CardID
             // 
-            this.CB_CardID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.CB_CardID.FormattingEnabled = true;
-            this.CB_CardID.Location = new System.Drawing.Point(6, 42);
-            this.CB_CardID.Name = "CB_CardID";
-            this.CB_CardID.Size = new System.Drawing.Size(297, 23);
-            this.CB_CardID.TabIndex = 7;
-            this.CB_CardID.SelectedIndexChanged += new System.EventHandler(this.CB_CardID_SelectedIndexChanged);
+            CB_CardID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CB_CardID.FormattingEnabled = true;
+            CB_CardID.Location = new Point(6, 42);
+            CB_CardID.Name = "CB_CardID";
+            CB_CardID.Size = new Size(297, 23);
+            CB_CardID.TabIndex = 7;
+            CB_CardID.SelectedIndexChanged += CB_CardID_SelectedIndexChanged;
             // 
             // CB_CardLevel
             // 
-            this.CB_CardLevel.AutoSize = true;
-            this.CB_CardLevel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CB_CardLevel.Location = new System.Drawing.Point(6, 215);
-            this.CB_CardLevel.Name = "CB_CardLevel";
-            this.CB_CardLevel.Size = new System.Drawing.Size(78, 20);
-            this.CB_CardLevel.TabIndex = 5;
-            this.CB_CardLevel.Text = "Card Level";
+            CB_CardLevel.AutoSize = true;
+            CB_CardLevel.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            CB_CardLevel.Location = new Point(6, 215);
+            CB_CardLevel.Name = "CB_CardLevel";
+            CB_CardLevel.Size = new Size(78, 20);
+            CB_CardLevel.TabIndex = 5;
+            CB_CardLevel.Text = "Card Level";
             // 
             // CB_CardLimitedStatus
             // 
-            this.CB_CardLimitedStatus.AutoSize = true;
-            this.CB_CardLimitedStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CB_CardLimitedStatus.Location = new System.Drawing.Point(6, 264);
-            this.CB_CardLimitedStatus.Name = "CB_CardLimitedStatus";
-            this.CB_CardLimitedStatus.Size = new System.Drawing.Size(138, 20);
-            this.CB_CardLimitedStatus.TabIndex = 4;
-            this.CB_CardLimitedStatus.Text = "Card Limited Status";
+            CB_CardLimitedStatus.AutoSize = true;
+            CB_CardLimitedStatus.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            CB_CardLimitedStatus.Location = new Point(6, 264);
+            CB_CardLimitedStatus.Name = "CB_CardLimitedStatus";
+            CB_CardLimitedStatus.Size = new Size(138, 20);
+            CB_CardLimitedStatus.TabIndex = 4;
+            CB_CardLimitedStatus.Text = "Card Limited Status";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(6, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Card Image ID";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(6, 68);
+            label6.Name = "label6";
+            label6.Size = new Size(105, 20);
+            label6.TabIndex = 3;
+            label6.Text = "Card Image ID";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(6, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Card Type";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(6, 117);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Card Type";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(6, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Card Attribute";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(6, 166);
+            label4.Name = "label4";
+            label4.Size = new Size(103, 20);
+            label4.TabIndex = 1;
+            label4.Text = "Card Attribute";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(6, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Card ID";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(6, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Card ID";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CB_CardName);
-            this.groupBox1.Controls.Add(this.TB_CardDef);
-            this.groupBox1.Controls.Add(this.TB_CardAtk);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.TB_CardDesc);
-            this.groupBox1.Controls.Add(this.PB_CardPicture);
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(320, 595);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Card Preview";
+            groupBox1.Controls.Add(CB_CardName);
+            groupBox1.Controls.Add(TB_CardDef);
+            groupBox1.Controls.Add(TB_CardAtk);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(TB_CardDesc);
+            groupBox1.Controls.Add(PB_CardPicture);
+            groupBox1.Location = new Point(8, 6);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(320, 595);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Card Preview";
             // 
             // CB_CardName
             // 
-            this.CB_CardName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CB_CardName.FormattingEnabled = true;
-            this.CB_CardName.Location = new System.Drawing.Point(6, 19);
-            this.CB_CardName.Name = "CB_CardName";
-            this.CB_CardName.Size = new System.Drawing.Size(305, 23);
-            this.CB_CardName.TabIndex = 7;
-            this.CB_CardName.SelectedIndexChanged += new System.EventHandler(this.CB_CardName_SelectedIndexChanged);
+            CB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CB_CardName.FormattingEnabled = true;
+            CB_CardName.Location = new Point(6, 19);
+            CB_CardName.Name = "CB_CardName";
+            CB_CardName.Size = new Size(305, 23);
+            CB_CardName.TabIndex = 7;
+            CB_CardName.SelectedIndexChanged += CB_CardName_SelectedIndexChanged;
             // 
             // TB_CardDef
             // 
-            this.TB_CardDef.Location = new System.Drawing.Point(254, 561);
-            this.TB_CardDef.Name = "TB_CardDef";
-            this.TB_CardDef.Size = new System.Drawing.Size(57, 23);
-            this.TB_CardDef.TabIndex = 6;
+            TB_CardDef.Location = new Point(254, 561);
+            TB_CardDef.Name = "TB_CardDef";
+            TB_CardDef.Size = new Size(57, 23);
+            TB_CardDef.TabIndex = 6;
             // 
             // TB_CardAtk
             // 
-            this.TB_CardAtk.Location = new System.Drawing.Point(50, 563);
-            this.TB_CardAtk.Name = "TB_CardAtk";
-            this.TB_CardAtk.Size = new System.Drawing.Size(57, 23);
-            this.TB_CardAtk.TabIndex = 5;
+            TB_CardAtk.Location = new Point(50, 563);
+            TB_CardAtk.Name = "TB_CardAtk";
+            TB_CardAtk.Size = new Size(57, 23);
+            TB_CardAtk.TabIndex = 5;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(210, 564);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "DEF:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(210, 564);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 20);
+            label2.TabIndex = 4;
+            label2.Text = "DEF:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(6, 564);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ATK:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(6, 564);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 20);
+            label1.TabIndex = 3;
+            label1.Text = "ATK:";
             // 
             // TB_CardDesc
             // 
-            this.TB_CardDesc.Location = new System.Drawing.Point(6, 403);
-            this.TB_CardDesc.Multiline = true;
-            this.TB_CardDesc.Name = "TB_CardDesc";
-            this.TB_CardDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TB_CardDesc.Size = new System.Drawing.Size(305, 154);
-            this.TB_CardDesc.TabIndex = 2;
+            TB_CardDesc.Location = new Point(6, 403);
+            TB_CardDesc.Multiline = true;
+            TB_CardDesc.Name = "TB_CardDesc";
+            TB_CardDesc.ScrollBars = ScrollBars.Vertical;
+            TB_CardDesc.Size = new Size(305, 154);
+            TB_CardDesc.TabIndex = 2;
             // 
             // PB_CardPicture
             // 
-            this.PB_CardPicture.ContextMenuStrip = this.Context;
-            this.PB_CardPicture.Location = new System.Drawing.Point(6, 51);
-            this.PB_CardPicture.Name = "PB_CardPicture";
-            this.PB_CardPicture.Size = new System.Drawing.Size(305, 346);
-            this.PB_CardPicture.TabIndex = 0;
-            this.PB_CardPicture.TabStop = false;
+            PB_CardPicture.ContextMenuStrip = Context;
+            PB_CardPicture.Location = new Point(6, 51);
+            PB_CardPicture.Name = "PB_CardPicture";
+            PB_CardPicture.Size = new Size(305, 346);
+            PB_CardPicture.TabIndex = 0;
+            PB_CardPicture.TabStop = false;
             // 
             // Context
             // 
-            this.Context.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ReplaceImage});
-            this.Context.Name = "Context";
-            this.Context.Size = new System.Drawing.Size(155, 26);
+            Context.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Context.Items.AddRange(new ToolStripItem[] { ReplaceImage });
+            Context.Name = "Context";
+            Context.Size = new Size(155, 26);
             // 
             // ReplaceImage
             // 
-            this.ReplaceImage.Name = "ReplaceImage";
-            this.ReplaceImage.Size = new System.Drawing.Size(154, 22);
-            this.ReplaceImage.Text = "Replace Image";
-            this.ReplaceImage.Click += new System.EventHandler(this.ReplaceImage_Click);
+            ReplaceImage.Name = "ReplaceImage";
+            ReplaceImage.Size = new Size(154, 22);
+            ReplaceImage.Text = "Replace Image";
+            ReplaceImage.Click += ReplaceImage_Click;
             // 
             // Page_ZibManager
             // 
-            this.Page_ZibManager.Controls.Add(this.textBox1);
-            this.Page_ZibManager.Controls.Add(this.groupBox5);
-            this.Page_ZibManager.Controls.Add(this.groupBox4);
-            this.Page_ZibManager.Controls.Add(this.lv_ArchivePreviewer);
-            this.Page_ZibManager.Controls.Add(this.groupBox3);
-            this.Page_ZibManager.Location = new System.Drawing.Point(4, 24);
-            this.Page_ZibManager.Name = "Page_ZibManager";
-            this.Page_ZibManager.Padding = new System.Windows.Forms.Padding(3);
-            this.Page_ZibManager.Size = new System.Drawing.Size(651, 629);
-            this.Page_ZibManager.TabIndex = 1;
-            this.Page_ZibManager.Text = "Archive Manager";
-            this.Page_ZibManager.UseVisualStyleBackColor = true;
+            Page_ZibManager.Controls.Add(textBox1);
+            Page_ZibManager.Controls.Add(groupBox5);
+            Page_ZibManager.Controls.Add(groupBox4);
+            Page_ZibManager.Controls.Add(lv_ArchivePreviewer);
+            Page_ZibManager.Controls.Add(groupBox3);
+            Page_ZibManager.Location = new Point(4, 24);
+            Page_ZibManager.Name = "Page_ZibManager";
+            Page_ZibManager.Padding = new Padding(3);
+            Page_ZibManager.Size = new Size(651, 629);
+            Page_ZibManager.TabIndex = 1;
+            Page_ZibManager.Text = "Archive Manager";
+            Page_ZibManager.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 398);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(8, 23);
-            this.textBox1.TabIndex = 3;
+            textBox1.Location = new Point(24, 398);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(8, 23);
+            textBox1.TabIndex = 3;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.checkBox1);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Location = new System.Drawing.Point(420, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(200, 100);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Packing Tools";
+            groupBox5.Controls.Add(checkBox1);
+            groupBox5.Controls.Add(button1);
+            groupBox5.Location = new Point(420, 6);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(200, 100);
+            groupBox5.TabIndex = 2;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Packing Tools";
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 22);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(158, 19);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Auto Copy When Packed";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(6, 22);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(158, 19);
+            checkBox1.TabIndex = 1;
+            checkBox1.Text = "Auto Copy When Packed";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Pack Content";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(6, 69);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 25);
+            button1.TabIndex = 0;
+            button1.Text = "Pack Content";
+            button1.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btn_CloseArchive);
-            this.groupBox4.Controls.Add(this.cb_ShowFileName);
-            this.groupBox4.Controls.Add(this.btn_ExtractAll);
-            this.groupBox4.Controls.Add(this.cb_ShowPicturePreview);
-            this.groupBox4.Location = new System.Drawing.Point(214, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 100);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Archive Tools";
+            groupBox4.Controls.Add(btn_CloseArchive);
+            groupBox4.Controls.Add(cb_ShowFileName);
+            groupBox4.Controls.Add(btn_ExtractAll);
+            groupBox4.Controls.Add(cb_ShowPicturePreview);
+            groupBox4.Location = new Point(214, 6);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(200, 100);
+            groupBox4.TabIndex = 1;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Archive Tools";
             // 
             // btn_CloseArchive
             // 
-            this.btn_CloseArchive.Enabled = false;
-            this.btn_CloseArchive.Location = new System.Drawing.Point(119, 69);
-            this.btn_CloseArchive.Name = "btn_CloseArchive";
-            this.btn_CloseArchive.Size = new System.Drawing.Size(75, 25);
-            this.btn_CloseArchive.TabIndex = 4;
-            this.btn_CloseArchive.Text = "Close";
-            this.btn_CloseArchive.UseVisualStyleBackColor = true;
-            this.btn_CloseArchive.Click += new System.EventHandler(this.btn_CloseArchive_Click);
+            btn_CloseArchive.Enabled = false;
+            btn_CloseArchive.Location = new Point(119, 69);
+            btn_CloseArchive.Name = "btn_CloseArchive";
+            btn_CloseArchive.Size = new Size(75, 25);
+            btn_CloseArchive.TabIndex = 4;
+            btn_CloseArchive.Text = "Close";
+            btn_CloseArchive.UseVisualStyleBackColor = true;
+            btn_CloseArchive.Click += btn_CloseArchive_Click;
             // 
             // cb_ShowFileName
             // 
-            this.cb_ShowFileName.AutoSize = true;
-            this.cb_ShowFileName.Checked = true;
-            this.cb_ShowFileName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ShowFileName.Location = new System.Drawing.Point(6, 44);
-            this.cb_ShowFileName.Name = "cb_ShowFileName";
-            this.cb_ShowFileName.Size = new System.Drawing.Size(111, 19);
-            this.cb_ShowFileName.TabIndex = 3;
-            this.cb_ShowFileName.Text = "Show File Name";
-            this.cb_ShowFileName.UseVisualStyleBackColor = true;
+            cb_ShowFileName.AutoSize = true;
+            cb_ShowFileName.Checked = true;
+            cb_ShowFileName.CheckState = CheckState.Checked;
+            cb_ShowFileName.Location = new Point(6, 44);
+            cb_ShowFileName.Name = "cb_ShowFileName";
+            cb_ShowFileName.Size = new Size(111, 19);
+            cb_ShowFileName.TabIndex = 3;
+            cb_ShowFileName.Text = "Show File Name";
+            cb_ShowFileName.UseVisualStyleBackColor = true;
             // 
             // btn_ExtractAll
             // 
-            this.btn_ExtractAll.Location = new System.Drawing.Point(6, 69);
-            this.btn_ExtractAll.Name = "btn_ExtractAll";
-            this.btn_ExtractAll.Size = new System.Drawing.Size(107, 25);
-            this.btn_ExtractAll.TabIndex = 2;
-            this.btn_ExtractAll.Text = "Extract Content";
-            this.btn_ExtractAll.UseVisualStyleBackColor = true;
-            this.btn_ExtractAll.Click += new System.EventHandler(this.btn_ExtractAll_Click);
+            btn_ExtractAll.Location = new Point(6, 69);
+            btn_ExtractAll.Name = "btn_ExtractAll";
+            btn_ExtractAll.Size = new Size(107, 25);
+            btn_ExtractAll.TabIndex = 2;
+            btn_ExtractAll.Text = "Extract Content";
+            btn_ExtractAll.UseVisualStyleBackColor = true;
+            btn_ExtractAll.Click += btn_ExtractAll_Click;
             // 
             // cb_ShowPicturePreview
             // 
-            this.cb_ShowPicturePreview.AutoSize = true;
-            this.cb_ShowPicturePreview.Checked = true;
-            this.cb_ShowPicturePreview.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ShowPicturePreview.Location = new System.Drawing.Point(6, 22);
-            this.cb_ShowPicturePreview.Name = "cb_ShowPicturePreview";
-            this.cb_ShowPicturePreview.Size = new System.Drawing.Size(139, 19);
-            this.cb_ShowPicturePreview.TabIndex = 1;
-            this.cb_ShowPicturePreview.Text = "Show Picture Preview";
-            this.cb_ShowPicturePreview.UseVisualStyleBackColor = true;
+            cb_ShowPicturePreview.AutoSize = true;
+            cb_ShowPicturePreview.Checked = true;
+            cb_ShowPicturePreview.CheckState = CheckState.Checked;
+            cb_ShowPicturePreview.Location = new Point(6, 22);
+            cb_ShowPicturePreview.Name = "cb_ShowPicturePreview";
+            cb_ShowPicturePreview.Size = new Size(139, 19);
+            cb_ShowPicturePreview.TabIndex = 1;
+            cb_ShowPicturePreview.Text = "Show Picture Preview";
+            cb_ShowPicturePreview.UseVisualStyleBackColor = true;
             // 
-            // lv_ArchivePreviefwer
+            // lv_ArchivePreviewer
             // 
-            this.lv_ArchivePreviewer.Location = new System.Drawing.Point(8, 112);
-            this.lv_ArchivePreviewer.MultiSelect = false;
-            this.lv_ArchivePreviewer.Name = "lv_ArchivePreviefwer";
-            this.lv_ArchivePreviewer.ShowGroups = false;
-            this.lv_ArchivePreviewer.Size = new System.Drawing.Size(637, 496);
-            this.lv_ArchivePreviewer.TabIndex = 1;
-            this.lv_ArchivePreviewer.UseCompatibleStateImageBehavior = false;
-            this.lv_ArchivePreviewer.View = System.Windows.Forms.View.SmallIcon;
-            this.lv_ArchivePreviewer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Lv_ArchivePreviewer_MouseDoubleClick);
+            lv_ArchivePreviewer.Location = new Point(8, 112);
+            lv_ArchivePreviewer.MultiSelect = false;
+            lv_ArchivePreviewer.Name = "lv_ArchivePreviewer";
+            lv_ArchivePreviewer.ShowGroups = false;
+            lv_ArchivePreviewer.Size = new Size(637, 496);
+            lv_ArchivePreviewer.TabIndex = 1;
+            lv_ArchivePreviewer.UseCompatibleStateImageBehavior = false;
+            lv_ArchivePreviewer.View = View.SmallIcon;
+            lv_ArchivePreviewer.MouseDoubleClick += Lv_ArchivePreviewer_MouseDoubleClick;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lbl_ItemCount);
-            this.groupBox3.Controls.Add(this.lbl_Size);
-            this.groupBox3.Controls.Add(this.lbl_Name);
-            this.groupBox3.Controls.Add(this.lbl_NumberOfItemsPrompt);
-            this.groupBox3.Controls.Add(this.lbl_FileSizePrompt);
-            this.groupBox3.Controls.Add(this.lbl_NamePrompt);
-            this.groupBox3.Location = new System.Drawing.Point(8, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Archive Info";
+            groupBox3.Controls.Add(lbl_ItemCount);
+            groupBox3.Controls.Add(lbl_Size);
+            groupBox3.Controls.Add(lbl_Name);
+            groupBox3.Controls.Add(lbl_NumberOfItemsPrompt);
+            groupBox3.Controls.Add(lbl_FileSizePrompt);
+            groupBox3.Controls.Add(lbl_NamePrompt);
+            groupBox3.Location = new Point(8, 6);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(200, 100);
+            groupBox3.TabIndex = 0;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Archive Info";
             // 
             // lbl_ItemCount
             // 
-            this.lbl_ItemCount.AutoSize = true;
-            this.lbl_ItemCount.Location = new System.Drawing.Point(114, 65);
-            this.lbl_ItemCount.Name = "lbl_ItemCount";
-            this.lbl_ItemCount.Size = new System.Drawing.Size(0, 15);
-            this.lbl_ItemCount.TabIndex = 5;
+            lbl_ItemCount.AutoSize = true;
+            lbl_ItemCount.Location = new Point(114, 65);
+            lbl_ItemCount.Name = "lbl_ItemCount";
+            lbl_ItemCount.Size = new Size(0, 15);
+            lbl_ItemCount.TabIndex = 5;
             // 
             // lbl_Size
             // 
-            this.lbl_Size.AutoSize = true;
-            this.lbl_Size.Location = new System.Drawing.Point(63, 42);
-            this.lbl_Size.Name = "lbl_Size";
-            this.lbl_Size.Size = new System.Drawing.Size(0, 15);
-            this.lbl_Size.TabIndex = 4;
+            lbl_Size.AutoSize = true;
+            lbl_Size.Location = new Point(63, 42);
+            lbl_Size.Name = "lbl_Size";
+            lbl_Size.Size = new Size(0, 15);
+            lbl_Size.TabIndex = 4;
             // 
             // lbl_Name
             // 
-            this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(54, 19);
-            this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(0, 15);
-            this.lbl_Name.TabIndex = 3;
+            lbl_Name.AutoSize = true;
+            lbl_Name.Location = new Point(54, 19);
+            lbl_Name.Name = "lbl_Name";
+            lbl_Name.Size = new Size(0, 15);
+            lbl_Name.TabIndex = 3;
             // 
             // lbl_NumberOfItemsPrompt
             // 
-            this.lbl_NumberOfItemsPrompt.AutoSize = true;
-            this.lbl_NumberOfItemsPrompt.Location = new System.Drawing.Point(6, 65);
-            this.lbl_NumberOfItemsPrompt.Name = "lbl_NumberOfItemsPrompt";
-            this.lbl_NumberOfItemsPrompt.Size = new System.Drawing.Size(102, 15);
-            this.lbl_NumberOfItemsPrompt.TabIndex = 2;
-            this.lbl_NumberOfItemsPrompt.Text = "Number Of Items:";
+            lbl_NumberOfItemsPrompt.AutoSize = true;
+            lbl_NumberOfItemsPrompt.Location = new Point(6, 65);
+            lbl_NumberOfItemsPrompt.Name = "lbl_NumberOfItemsPrompt";
+            lbl_NumberOfItemsPrompt.Size = new Size(102, 15);
+            lbl_NumberOfItemsPrompt.TabIndex = 2;
+            lbl_NumberOfItemsPrompt.Text = "Number Of Items:";
             // 
             // lbl_FileSizePrompt
             // 
-            this.lbl_FileSizePrompt.AutoSize = true;
-            this.lbl_FileSizePrompt.Location = new System.Drawing.Point(6, 42);
-            this.lbl_FileSizePrompt.Name = "lbl_FileSizePrompt";
-            this.lbl_FileSizePrompt.Size = new System.Drawing.Size(51, 15);
-            this.lbl_FileSizePrompt.TabIndex = 1;
-            this.lbl_FileSizePrompt.Text = "File Size:";
+            lbl_FileSizePrompt.AutoSize = true;
+            lbl_FileSizePrompt.Location = new Point(6, 42);
+            lbl_FileSizePrompt.Name = "lbl_FileSizePrompt";
+            lbl_FileSizePrompt.Size = new Size(51, 15);
+            lbl_FileSizePrompt.TabIndex = 1;
+            lbl_FileSizePrompt.Text = "File Size:";
             // 
             // lbl_NamePrompt
             // 
-            this.lbl_NamePrompt.AutoSize = true;
-            this.lbl_NamePrompt.Location = new System.Drawing.Point(6, 19);
-            this.lbl_NamePrompt.Name = "lbl_NamePrompt";
-            this.lbl_NamePrompt.Size = new System.Drawing.Size(42, 15);
-            this.lbl_NamePrompt.TabIndex = 0;
-            this.lbl_NamePrompt.Text = "Name:";
+            lbl_NamePrompt.AutoSize = true;
+            lbl_NamePrompt.Location = new Point(6, 19);
+            lbl_NamePrompt.Name = "lbl_NamePrompt";
+            lbl_NamePrompt.Size = new Size(42, 15);
+            lbl_NamePrompt.TabIndex = 0;
+            lbl_NamePrompt.Text = "Name:";
             // 
             // Page_AnimationManager
             // 
-            this.Page_AnimationManager.Location = new System.Drawing.Point(4, 24);
-            this.Page_AnimationManager.Name = "Page_AnimationManager";
-            this.Page_AnimationManager.Padding = new System.Windows.Forms.Padding(3);
-            this.Page_AnimationManager.Size = new System.Drawing.Size(651, 629);
-            this.Page_AnimationManager.TabIndex = 2;
-            this.Page_AnimationManager.Text = "Animation Manager";
-            this.Page_AnimationManager.UseVisualStyleBackColor = true;
+            Page_AnimationManager.Location = new Point(4, 24);
+            Page_AnimationManager.Name = "Page_AnimationManager";
+            Page_AnimationManager.Padding = new Padding(3);
+            Page_AnimationManager.Size = new Size(651, 629);
+            Page_AnimationManager.TabIndex = 2;
+            Page_AnimationManager.Text = "Animation Manager";
+            Page_AnimationManager.UseVisualStyleBackColor = true;
             // 
             // MenuBar
             // 
-            this.MenuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.toolsToolStripMenuItem});
-            this.MenuBar.Location = new System.Drawing.Point(0, 0);
-            this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(659, 24);
-            this.MenuBar.TabIndex = 1;
-            this.MenuBar.Text = "menuStrip1";
+            MenuBar.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem });
+            MenuBar.Location = new Point(0, 0);
+            MenuBar.Name = "MenuBar";
+            MenuBar.Size = new Size(659, 24);
+            MenuBar.TabIndex = 1;
+            MenuBar.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.File_Open,
-            this.closeToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.File_Exit});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "&File";
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { File_Open, closeToolStripMenuItem, toolStripSeparator1, File_Exit });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "&File";
             // 
             // File_Open
             // 
-            this.File_Open.Name = "File_Open";
-            this.File_Open.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.File_Open.Size = new System.Drawing.Size(148, 22);
-            this.File_Open.Text = "&Open";
-            this.File_Open.Click += new System.EventHandler(this.File_Open_Click);
+            File_Open.Name = "File_Open";
+            File_Open.ShortcutKeys = Keys.Control | Keys.O;
+            File_Open.Size = new Size(148, 22);
+            File_Open.Text = "&Open";
+            File_Open.Click += File_Open_Click;
             // 
             // closeToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.closeToolStripMenuItem.Text = "&Close";
+            closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            closeToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.W;
+            closeToolStripMenuItem.Size = new Size(148, 22);
+            closeToolStripMenuItem.Text = "&Close";
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(145, 6);
             // 
             // File_Exit
             // 
-            this.File_Exit.Name = "File_Exit";
-            this.File_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.File_Exit.Size = new System.Drawing.Size(148, 22);
-            this.File_Exit.Text = "E&xit";
-            this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
+            File_Exit.Name = "File_Exit";
+            File_Exit.ShortcutKeys = Keys.Alt | Keys.F4;
+            File_Exit.Size = new Size(148, 22);
+            File_Exit.Text = "E&xit";
+            File_Exit.Click += File_Exit_Click;
             // 
             // toolsToolStripMenuItem
             // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Tools_Verify,
-            this.toolStripSeparator2,
-            this.languageToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.toolsToolStripMenuItem.Text = "&Tools";
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Tools_Verify, toolStripSeparator2, languageToolStripMenuItem, createCardIDEnumToolStripMenuItem });
+            toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            toolsToolStripMenuItem.Size = new Size(46, 20);
+            toolsToolStripMenuItem.Text = "&Tools";
             // 
             // Tools_Verify
             // 
-            this.Tools_Verify.Enabled = false;
-            this.Tools_Verify.Name = "Tools_Verify";
-            this.Tools_Verify.Size = new System.Drawing.Size(181, 22);
-            this.Tools_Verify.Text = "&Verify Extracted Files";
-            this.Tools_Verify.Click += new System.EventHandler(this.Tools_Verify_Click);
+            Tools_Verify.Enabled = false;
+            Tools_Verify.Name = "Tools_Verify";
+            Tools_Verify.Size = new Size(184, 22);
+            Tools_Verify.Text = "&Verify Extracted Files";
+            Tools_Verify.Click += Tools_Verify_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(181, 6);
             // 
             // languageToolStripMenuItem
             // 
-            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Language_english,
-            this.Language_french,
-            this.Language_german,
-            this.Language_italian,
-            this.Language_japanese,
-            this.Language_russian,
-            this.Language_spanish});
-            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.languageToolStripMenuItem.Text = "Language";
+            languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Language_english, Language_french, Language_german, Language_italian, Language_japanese, Language_russian, Language_spanish });
+            languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            languageToolStripMenuItem.Size = new Size(184, 22);
+            languageToolStripMenuItem.Text = "Language";
             // 
             // Language_english
             // 
-            this.Language_english.Checked = true;
-            this.Language_english.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Language_english.Name = "Language_english";
-            this.Language_english.Size = new System.Drawing.Size(117, 22);
-            this.Language_english.Text = "English";
-            this.Language_english.Click += new System.EventHandler(this.Language_english_Click);
+            Language_english.Checked = true;
+            Language_english.CheckState = CheckState.Checked;
+            Language_english.Name = "Language_english";
+            Language_english.Size = new Size(117, 22);
+            Language_english.Text = "English";
+            Language_english.Click += Language_english_Click;
             // 
             // Language_french
             // 
-            this.Language_french.Name = "Language_french";
-            this.Language_french.Size = new System.Drawing.Size(117, 22);
-            this.Language_french.Text = "Français";
-            this.Language_french.Click += new System.EventHandler(this.Language_french_Click);
+            Language_french.Name = "Language_french";
+            Language_french.Size = new Size(117, 22);
+            Language_french.Text = "Français";
+            Language_french.Click += Language_french_Click;
             // 
             // Language_german
             // 
-            this.Language_german.Name = "Language_german";
-            this.Language_german.Size = new System.Drawing.Size(117, 22);
-            this.Language_german.Text = "Deutsch";
-            this.Language_german.Click += new System.EventHandler(this.Language_german_Click);
+            Language_german.Name = "Language_german";
+            Language_german.Size = new Size(117, 22);
+            Language_german.Text = "Deutsch";
+            Language_german.Click += Language_german_Click;
             // 
             // Language_italian
             // 
-            this.Language_italian.Name = "Language_italian";
-            this.Language_italian.Size = new System.Drawing.Size(117, 22);
-            this.Language_italian.Text = "Italiano";
-            this.Language_italian.Click += new System.EventHandler(this.Language_italian_Click);
+            Language_italian.Name = "Language_italian";
+            Language_italian.Size = new Size(117, 22);
+            Language_italian.Text = "Italiano";
+            Language_italian.Click += Language_italian_Click;
             // 
             // Language_japanese
             // 
-            this.Language_japanese.Name = "Language_japanese";
-            this.Language_japanese.Size = new System.Drawing.Size(117, 22);
-            this.Language_japanese.Text = "Nihon";
-            this.Language_japanese.Click += new System.EventHandler(this.Language_japanese_Click);
+            Language_japanese.Name = "Language_japanese";
+            Language_japanese.Size = new Size(117, 22);
+            Language_japanese.Text = "Nihon";
+            Language_japanese.Click += Language_japanese_Click;
             // 
             // Language_russian
             // 
-            this.Language_russian.Name = "Language_russian";
-            this.Language_russian.Size = new System.Drawing.Size(117, 22);
-            this.Language_russian.Text = "Russkiy";
-            this.Language_russian.Click += new System.EventHandler(this.Language_russian_Click);
+            Language_russian.Name = "Language_russian";
+            Language_russian.Size = new Size(117, 22);
+            Language_russian.Text = "Russkiy";
+            Language_russian.Click += Language_russian_Click;
             // 
             // Language_spanish
             // 
-            this.Language_spanish.Name = "Language_spanish";
-            this.Language_spanish.Size = new System.Drawing.Size(117, 22);
-            this.Language_spanish.Text = "Español";
-            this.Language_spanish.Click += new System.EventHandler(this.Language_spanish_Click);
+            Language_spanish.Name = "Language_spanish";
+            Language_spanish.Size = new Size(117, 22);
+            Language_spanish.Text = "Español";
+            Language_spanish.Click += Language_spanish_Click;
             // 
             // Status
             // 
-            this.Status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.LBL_GameStatusLabel});
-            this.Status.Location = new System.Drawing.Point(0, 659);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(659, 22);
-            this.Status.SizingGrip = false;
-            this.Status.TabIndex = 2;
-            this.Status.Text = "statusStrip1";
+            Status.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, LBL_GameStatusLabel });
+            Status.Location = new Point(0, 659);
+            Status.Name = "Status";
+            Status.Size = new Size(659, 22);
+            Status.SizingGrip = false;
+            Status.TabIndex = 2;
+            Status.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(44, 17);
-            this.toolStripStatusLabel1.Text = "Game: ";
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(44, 17);
+            toolStripStatusLabel1.Text = "Game: ";
             // 
             // LBL_GameStatusLabel
             // 
-            this.LBL_GameStatusLabel.ForeColor = System.Drawing.Color.Red;
-            this.LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
-            this.LBL_GameStatusLabel.Size = new System.Drawing.Size(69, 17);
-            this.LBL_GameStatusLabel.Text = "Not Loaded";
+            LBL_GameStatusLabel.ForeColor = Color.Red;
+            LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
+            LBL_GameStatusLabel.Size = new Size(69, 17);
+            LBL_GameStatusLabel.Text = "Not Loaded";
+            // 
+            // createCardIDEnumToolStripMenuItem
+            // 
+            createCardIDEnumToolStripMenuItem.Name = "createCardIDEnumToolStripMenuItem";
+            createCardIDEnumToolStripMenuItem.Size = new Size(184, 22);
+            createCardIDEnumToolStripMenuItem.Text = "Create Card ID enum";
+            createCardIDEnumToolStripMenuItem.Click += createCardIDEnumToolStripMenuItem_Click;
             // 
             // WolfUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 681);
-            this.Controls.Add(this.Status);
-            this.Controls.Add(this.WolfX_TabManager);
-            this.Controls.Add(this.MenuBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.MenuBar;
-            this.MaximizeBox = false;
-            this.Name = "WolfUI";
-            this.Text = "WolfX";
-            this.WolfX_TabManager.ResumeLayout(false);
-            this.Page_CardManager.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Nud_CardLevel)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_CardPicture)).EndInit();
-            this.Context.ResumeLayout(false);
-            this.Page_ZibManager.ResumeLayout(false);
-            this.Page_ZibManager.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.MenuBar.ResumeLayout(false);
-            this.MenuBar.PerformLayout();
-            this.Status.ResumeLayout(false);
-            this.Status.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(659, 681);
+            Controls.Add(Status);
+            Controls.Add(WolfX_TabManager);
+            Controls.Add(MenuBar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MainMenuStrip = MenuBar;
+            MaximizeBox = false;
+            Name = "WolfUI";
+            Text = "WolfX";
+            WolfX_TabManager.ResumeLayout(false);
+            Page_CardManager.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Nud_CardLevel).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PB_CardPicture).EndInit();
+            Context.ResumeLayout(false);
+            Page_ZibManager.ResumeLayout(false);
+            Page_ZibManager.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            MenuBar.ResumeLayout(false);
+            MenuBar.PerformLayout();
+            Status.ResumeLayout(false);
+            Status.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -903,5 +881,6 @@
         private GroupBox groupBox6;
         public CheckBox CB_LoadCensoredCards;
         private TextBox textBox1;
+        private ToolStripMenuItem createCardIDEnumToolStripMenuItem;
     }
 }
