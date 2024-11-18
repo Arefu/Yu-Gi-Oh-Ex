@@ -27,9 +27,13 @@ static ID3D11Device* pDevice = nullptr;
 
 static WNDPROC oWndProc = nullptr;
 
-static bool bShowMenu = false;
+static bool bShowMenu = true;
 static bool bShowDemo = false;
 
+using namespace YGO::Duel::Player;
+
+Player g_Player1 = Player(PLAYER_ONE);
+Player g_Player2 = Player(PLAYER_TWO);
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -67,18 +71,22 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		ImGui::Begin("Yu-Gi-Oh!", &bShowMenu);
 		ImGui::Text("Yu-Gi-Oh-Ex: WolfX");
 		ImGui::Separator();
-		
-		if (ImGui::Button("Quit"))
 
+		if (ImGui::Button("Quit Game"))
 			YuGiOhEx::g_bIsQuitReady = true;
 
 
-		if(ImGui::CollapsingHeader("Player One", ImGuiTreeNodeFlags_DefaultOpen))
-		{ 
-		ImGui::Text("Number of Cards in Deck %d", 1);
-		ImGui::Separator();
-		
-	}
+		ImGui::BeginGroup();
+		if (ImGui::CollapsingHeader("Player One"))
+		{
+			
+			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
+		}
+		if (ImGui::CollapsingHeader("Player Two"))
+		{
+			ImGui::Text("Number of Cards in Hand: %d", g_Player2.Get_NumberOfCardsInHand());
+		}
+		ImGui::EndGroup();
 		ImGui::End();
 	}
 

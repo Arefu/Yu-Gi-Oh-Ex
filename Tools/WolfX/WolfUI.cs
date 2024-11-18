@@ -200,9 +200,9 @@ namespace WolfX
         {
             if (State.CardIndex == State.Cards.Count)
                 return;
-            
+
             State.CardIndex++;
-            
+
             Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
             Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
             Form.CB_CardID.SelectedIndex = State.CardIndex;
@@ -219,9 +219,9 @@ namespace WolfX
         {
             if (State.CardIndex == 0)
                 return;
-            
+
             State.CardIndex--;
-            
+
             Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
             Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
             Form.CB_CardID.SelectedIndex = State.CardIndex;
@@ -288,12 +288,29 @@ namespace WolfX
 
         private void ReplaceImage_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void CB_LoadCensoredCards_CheckedChanged(object sender, EventArgs e)
         {
             Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
+        }
+
+        private void createCardIDEnumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(State.IsLoaded == false)
+            {
+                MessageBox.Show("Please Load the Game Directory First", "Game Directory Not Loaded", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            foreach(var CardID in State.Cards)
+            {
+             File.AppendAllText("CardID.cs", $"public enum {CardID._Name.Replace(" ", "_").Replace("-", "_").Replace("'", "")} = {CardID._Id};\n");
+            }
+
+            MessageBox.Show("CardID Enum Created", "CardID Enum Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }
