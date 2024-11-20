@@ -85,6 +85,8 @@
             toolStripSeparator1 = new ToolStripSeparator();
             File_Exit = new ToolStripMenuItem();
             toolsToolStripMenuItem = new ToolStripMenuItem();
+            extractGameToolStripMenuItem = new ToolStripMenuItem();
+            packGameToolStripMenuItem = new ToolStripMenuItem();
             Tools_Verify = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             languageToolStripMenuItem = new ToolStripMenuItem();
@@ -98,7 +100,6 @@
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
-            createCardIDEnumToolStripMenuItem = new ToolStripMenuItem();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -269,7 +270,7 @@
             // CB_CardLevel
             // 
             CB_CardLevel.AutoSize = true;
-            CB_CardLevel.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            CB_CardLevel.Font = new Font("Segoe UI", 11F);
             CB_CardLevel.Location = new Point(6, 215);
             CB_CardLevel.Name = "CB_CardLevel";
             CB_CardLevel.Size = new Size(78, 20);
@@ -279,7 +280,7 @@
             // CB_CardLimitedStatus
             // 
             CB_CardLimitedStatus.AutoSize = true;
-            CB_CardLimitedStatus.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            CB_CardLimitedStatus.Font = new Font("Segoe UI", 11F);
             CB_CardLimitedStatus.Location = new Point(6, 264);
             CB_CardLimitedStatus.Name = "CB_CardLimitedStatus";
             CB_CardLimitedStatus.Size = new Size(138, 20);
@@ -289,7 +290,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 11F);
             label6.Location = new Point(6, 68);
             label6.Name = "label6";
             label6.Size = new Size(105, 20);
@@ -299,7 +300,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI", 11F);
             label5.Location = new Point(6, 117);
             label5.Name = "label5";
             label5.Size = new Size(75, 20);
@@ -309,7 +310,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11F);
             label4.Location = new Point(6, 166);
             label4.Name = "label4";
             label4.Size = new Size(103, 20);
@@ -319,7 +320,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 11F);
             label3.Location = new Point(6, 19);
             label3.Name = "label3";
             label3.Size = new Size(59, 20);
@@ -369,7 +370,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 11F);
             label2.Location = new Point(210, 564);
             label2.Name = "label2";
             label2.Size = new Size(38, 20);
@@ -379,7 +380,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 11F);
             label1.Location = new Point(6, 564);
             label1.Name = "label1";
             label1.Size = new Size(38, 20);
@@ -406,7 +407,7 @@
             // 
             // Context
             // 
-            Context.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Context.Font = new Font("Comic Sans MS", 9F);
             Context.Items.AddRange(new ToolStripItem[] { ReplaceImage });
             Context.Name = "Context";
             Context.Size = new Size(155, 26);
@@ -662,10 +663,26 @@
             // 
             // toolsToolStripMenuItem
             // 
-            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Tools_Verify, toolStripSeparator2, languageToolStripMenuItem, createCardIDEnumToolStripMenuItem });
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { extractGameToolStripMenuItem, packGameToolStripMenuItem, Tools_Verify, toolStripSeparator2, languageToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             toolsToolStripMenuItem.Size = new Size(46, 20);
             toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // extractGameToolStripMenuItem
+            // 
+            extractGameToolStripMenuItem.Name = "extractGameToolStripMenuItem";
+            extractGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
+            extractGameToolStripMenuItem.Size = new Size(184, 22);
+            extractGameToolStripMenuItem.Text = "&Extract Game";
+            extractGameToolStripMenuItem.Click += extractGameToolStripMenuItem_Click;
+            // 
+            // packGameToolStripMenuItem
+            // 
+            packGameToolStripMenuItem.Name = "packGameToolStripMenuItem";
+            packGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.P;
+            packGameToolStripMenuItem.Size = new Size(184, 22);
+            packGameToolStripMenuItem.Text = "&Pack Game";
+            packGameToolStripMenuItem.Click += packGameToolStripMenuItem_Click;
             // 
             // Tools_Verify
             // 
@@ -692,49 +709,49 @@
             Language_english.Checked = true;
             Language_english.CheckState = CheckState.Checked;
             Language_english.Name = "Language_english";
-            Language_english.Size = new Size(117, 22);
+            Language_english.Size = new Size(180, 22);
             Language_english.Text = "English";
             Language_english.Click += Language_english_Click;
             // 
             // Language_french
             // 
             Language_french.Name = "Language_french";
-            Language_french.Size = new Size(117, 22);
+            Language_french.Size = new Size(180, 22);
             Language_french.Text = "Français";
             Language_french.Click += Language_french_Click;
             // 
             // Language_german
             // 
             Language_german.Name = "Language_german";
-            Language_german.Size = new Size(117, 22);
+            Language_german.Size = new Size(180, 22);
             Language_german.Text = "Deutsch";
             Language_german.Click += Language_german_Click;
             // 
             // Language_italian
             // 
             Language_italian.Name = "Language_italian";
-            Language_italian.Size = new Size(117, 22);
+            Language_italian.Size = new Size(180, 22);
             Language_italian.Text = "Italiano";
             Language_italian.Click += Language_italian_Click;
             // 
             // Language_japanese
             // 
             Language_japanese.Name = "Language_japanese";
-            Language_japanese.Size = new Size(117, 22);
+            Language_japanese.Size = new Size(180, 22);
             Language_japanese.Text = "Nihon";
             Language_japanese.Click += Language_japanese_Click;
             // 
             // Language_russian
             // 
             Language_russian.Name = "Language_russian";
-            Language_russian.Size = new Size(117, 22);
+            Language_russian.Size = new Size(180, 22);
             Language_russian.Text = "Russkiy";
             Language_russian.Click += Language_russian_Click;
             // 
             // Language_spanish
             // 
             Language_spanish.Name = "Language_spanish";
-            Language_spanish.Size = new Size(117, 22);
+            Language_spanish.Size = new Size(180, 22);
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
@@ -760,13 +777,6 @@
             LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
-            // 
-            // createCardIDEnumToolStripMenuItem
-            // 
-            createCardIDEnumToolStripMenuItem.Name = "createCardIDEnumToolStripMenuItem";
-            createCardIDEnumToolStripMenuItem.Size = new Size(184, 22);
-            createCardIDEnumToolStripMenuItem.Text = "Create Card ID enum";
-            createCardIDEnumToolStripMenuItem.Click += createCardIDEnumToolStripMenuItem_Click;
             // 
             // WolfUI
             // 
@@ -881,6 +891,7 @@
         private GroupBox groupBox6;
         public CheckBox CB_LoadCensoredCards;
         private TextBox textBox1;
-        private ToolStripMenuItem createCardIDEnumToolStripMenuItem;
+        private ToolStripMenuItem extractGameToolStripMenuItem;
+        private ToolStripMenuItem packGameToolStripMenuItem;
     }
 }

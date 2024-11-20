@@ -9,7 +9,7 @@ namespace Yami_Yugi.Workers
             var File = new FileInfo(Args[0]);
             var Archive = new FileInfo($"{File.FullName.Replace("toc", "dat")}");
             var Folder = Path.GetFileNameWithoutExtension(File.FullName);
-            Console.WriteLine($"Unpacking {Archive.Name} with {File.Name}");
+            Console.Out.WriteLine($"Unpacking {Archive.Name} with {File.Name}");
             Directory.CreateDirectory(Folder);
 
             using var Stream = System.IO.File.Open(Archive.FullName, FileMode.Open, FileAccess.Read);
@@ -26,7 +26,7 @@ namespace Yami_Yugi.Workers
 
                 Information[0] = Int32.Parse(Information[0], System.Globalization.NumberStyles.HexNumber).ToString();
 
-                Console.WriteLine($"Unpacking: {Information[2]}, It's {Information[0]} Bytes Big.");
+                Console.Out.WriteLine($"Unpacking: {Information[2]}, It's {Information[0]} Bytes Big.");
 
                 var Bytes = Convert.ToInt32(Information[0]);
                 if (Bytes % 4 != 0)

@@ -1,6 +1,8 @@
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.IO;
 using System.Text.RegularExpressions;
+
 using WolfX.Handler.Tools;
 using WolfX.Handlers;
 using WolfX.Types;
@@ -296,21 +298,69 @@ namespace WolfX
             Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
         }
 
-        private void createCardIDEnumToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void extractGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(State.IsLoaded == false)
+            
+
+            using var OpenFile = new OpenFileDialog();
+            if (!File.Exists("Yami-Yugi.exe"))
             {
-                MessageBox.Show("Please Load the Game Directory First", "Game Directory Not Loaded", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                OpenFile.Title = "Select Yami-Yugi.exe";
+                OpenFile.Filter = "Yami-Yugi.exe|Yami-Yugi.exe";
+                if (OpenFile.ShowDialog() != DialogResult.OK)
+                {
+                    MessageBox.Show("Please Re-Download WolfX", "Yami-Yugi Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            OpenFile.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020.toc File";
+            OpenFile.Filter = "YGO_2020.toc|YGO_2020.toc";
+            if (OpenFile.ShowDialog() != DialogResult.OK)
+            {
+                MessageBox.Show("Please Select a YGO_2020.toc File", "No YGO_2020.toc File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            foreach(var CardID in State.Cards)
+            var Process = new Process();
+            Process.StartInfo.FileName = "Yami-Yugi.exe";
+            Process.StartInfo.Arguments = $"\"{OpenFile.FileName}\"";
+
+            Process.Start();
+
+
+        }
+
+        private void packGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            var FolderBrowser = new Microsoft.Win32.OpenFolderDialog();
+            using var OpenFile = new OpenFileDialog();
+            if (!File.Exists("Yami-Yugi.exe"))
             {
-             File.AppendAllText("CardID.cs", $"public enum {CardID._Name.Replace(" ", "_").Replace("-", "_").Replace("'", "")} = {CardID._Id};\n");
+                OpenFile.Title = "Select Yami-Yugi.exe";
+                OpenFile.Filter = "Yami-Yugi.exe|Yami-Yugi.exe";
+                if (OpenFile.ShowDialog() != DialogResult.OK)
+                {
+                    MessageBox.Show("Please Re-Download WolfX", "Yami-Yugi Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
-            MessageBox.Show("CardID Enum Created", "CardID Enum Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FolderBrowser.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020 Folder";
+            if (FolderBrowser.ShowDialog() != true)
+            {
+                MessageBox.Show("Please Select a YGO_2020 Folder", "No YGO_2020 Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+           
+            var Process = new Process();
+            Process.StartInfo.FileName = "Yami-Yugi.exe";
+            Process.StartInfo.Arguments = $"\"{FolderBrowser.FolderName}\"";
             
+            Process.Start();
+
         }
     }
 }
