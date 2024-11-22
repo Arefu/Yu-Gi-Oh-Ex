@@ -30,10 +30,7 @@ static WNDPROC oWndProc = nullptr;
 static bool bShowMenu = true;
 static bool bShowDemo = false;
 
-using namespace YGO::Duel::Player;
-
 Player g_Player1 = Player(PLAYER_ONE);
-Player g_Player2 = Player(PLAYER_TWO);
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -79,11 +76,24 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
 		{
+			ImGui::Text("Address:0x%X", g_Player1.Get_Player());
 			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
+			ImGui::Text("Number of Cards in Deck: %d", g_Player1.Get_NumberOfCardsInDeck());
+			ImGui::Text("Number Of Cards in Grave Yard: %d", g_Player1.Get_NumberOfCardsInGraveYard());
+			ImGui::Text("Number Of Cards in Discard Pile: %d", g_Player1.Get_NumberOfDiscardPile());
+
+			if (ImGui::TreeNodeEx("Monsters"))
+			{
+				for (int i = 0; i < 5; i++)
+				{
+					ImGui::Text("Monster %d: %d", i, g_Player1.Get_MonsterInSlot(i));
+				}
+				ImGui::TreePop();
+			}
+		
 		}
 		if (ImGui::CollapsingHeader("Player Two"))
 		{
-			ImGui::Text("Number of Cards in Hand: %d", g_Player2.Get_NumberOfCardsInHand());
 		}
 		ImGui::EndGroup();
 		
