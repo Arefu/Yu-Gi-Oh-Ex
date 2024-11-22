@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Dear-ImGui">
       <UniqueIdentifier>{85109f78-10f0-48f2-bae3-0d9b22640ef6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Yu-Gi-Oh-Ex">
+      <UniqueIdentifier>{1a553dbf-e05c-4e3a-a5a7-4612dc8efcee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="..\Dependencies\Dear ImGui\imgui_widgets.cpp">
       <Filter>Source Files\Dear-ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.cpp">
+      <Filter>Source Files\Yu-Gi-Oh-Ex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +77,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Dependencies\Dear ImGui\imstb_truetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

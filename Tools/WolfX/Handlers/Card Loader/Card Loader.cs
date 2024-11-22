@@ -94,6 +94,10 @@ namespace WolfX.Handlers
                     WolfUI.State.Cards.Add(Card);
                     WolfUI.Form.CB_CardID.Items.Add($"{Card._Id}");
                     WolfUI.Form.CB_CardName.Items.Add($"{Card._Name}");
+
+                    if(WolfUI.Form.CB_CardTypes.Items.Contains($"{Card._Type}"))
+                        continue;
+
                     WolfUI.Form.CB_CardTypes.Items.Add($"{Card._Type}");
                 }
             }
