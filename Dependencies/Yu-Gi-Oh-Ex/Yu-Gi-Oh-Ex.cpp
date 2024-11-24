@@ -4,6 +4,7 @@
 Player::Player(__int64   Player)
 {
 	_Player = Player;
+
 }
 
 INT Player::Get_NumberOfCardsInHand()
@@ -64,7 +65,7 @@ INT Player::Get_NumberOfCardsInGraveYard()
 
 SHORT Player::Get_CardInGraveYard(INT Slot)
 {
-	if ((Slot < 0) || (Slot > 255))
+	if ((Slot < 0) || (Slot > 150))
 	{
 		SetLastError(ERROR_INDEX_OUT_OF_BOUNDS);
 		return 0;

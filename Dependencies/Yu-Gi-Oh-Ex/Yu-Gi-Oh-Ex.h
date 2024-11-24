@@ -21,6 +21,7 @@ private:
 	__int64  _Player;
 
 public:
+
 	Player(__int64  Player);
 	
 	INT Get_NumberOfCardsInHand();
