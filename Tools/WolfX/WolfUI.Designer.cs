@@ -78,6 +78,7 @@
             lbl_FileSizePrompt = new Label();
             lbl_NamePrompt = new Label();
             Page_DFYMOOManager = new TabPage();
+            pictureBox1 = new PictureBox();
             groupBox8 = new GroupBox();
             button3 = new Button();
             button4 = new Button();
@@ -109,7 +110,6 @@
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
-            pictureBox1 = new PictureBox();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -123,11 +123,11 @@
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             Page_DFYMOOManager.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox8.SuspendLayout();
             groupBox9.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -136,7 +136,6 @@
             WolfX_TabManager.Controls.Add(Page_ZibManager);
             WolfX_TabManager.Controls.Add(Page_DFYMOOManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
-            WolfX_TabManager.Enabled = false;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
             WolfX_TabManager.SelectedIndex = 0;
@@ -634,6 +633,15 @@
             Page_DFYMOOManager.Text = "DFYMOO Manager";
             Page_DFYMOOManager.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(6, 112);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(639, 496);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
             // groupBox8
             // 
             groupBox8.Controls.Add(button3);
@@ -886,15 +894,6 @@
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(6, 112);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(639, 496);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -928,6 +927,7 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             Page_DFYMOOManager.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
             groupBox9.ResumeLayout(false);
@@ -936,7 +936,6 @@
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
             Status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

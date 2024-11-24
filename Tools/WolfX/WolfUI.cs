@@ -382,11 +382,15 @@ namespace WolfX
                 return;
             }
 
-            
             var Items = Dfymoo.Load(OpenFile.FileName);
+
+            WolfUI.Form.lbl_Dfymoo_name.Text = OpenFile.SafeFileName;
+            WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = Items.Count.ToString();
+
+           
             foreach(var Item in Items)
             {
-                MessageBox.Show(Item.ItemName);
+              
             }
         }
     }

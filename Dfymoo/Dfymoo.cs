@@ -8,11 +8,11 @@ namespace Types
 
         public string ItemName { get; set; }
 
-        public Point ItemPointFrom { get; set; }
-        public Point ItemPointTo { get; set; }
+        public Point ItemStartPoint { get; set; }
+        public Point ItemDimensions { get; set; }
 
-        public Point ItemPositionOnScreenFrom { get; set; }
-        public Point ItemPositionOnScreenTo { get; set; }
+        public Point ItemOrigin { get; set; }
+        public Point ItemOriginDimensions { get; set; }
     }
 
     public static class Dfymoo
@@ -28,17 +28,33 @@ namespace Types
 
             using (var Reader = new StreamReader(Path))
             {
-                while (Reader.EndOfStream == false)
+                var Sections = Reader.ReadToEnd();
+                var Lines = Sections.Split("~", StringSplitOptions.RemoveEmptyEntries);
+                var Item = new Dfymoo_Item();
+                var _Line = String.Empty;
+
+                foreach (var Line in Lines)
                 {
-                    var Item = new Dfymoo_Item();
-                    var Line = Reader.ReadLine();
-                    if (Line.StartsWith("n"))
+                    foreach (var Category in Line.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
                     {
-                        Item.ItemName = Line.Split(' ')[1];
+                        if (Category.StartsWith("n"))
+                            Item.ItemName = Category.Split(' ')[1];
+                        else if (Category.StartsWith("s"))
+                        {
+                            Item.ItemStartPoint = new Point(int.Parse(Category.Split(' ')[1]), int.Parse(Category.Split(' ')[2]));
+                            Item.ItemDimensions = new Point(int.Parse(Category.Split(' ')[3]), int.Parse(Category.Split(' ')[4]));
+                        }
+                        else if (Category.StartsWith("o"))
+                        {
+                            Item.ItemOrigin = new Point(int.Parse(Category.Split(' ')[1]), int.Parse(Category.Split(' ')[2]));
+                            Item.ItemOriginDimensions = new Point(int.Parse(Category.Split(' ')[3]), int.Parse(Category.Split(' ')[4]));
+                        }
                     }
-
-
-                    Items.Add(Item);
+                    if (Item.ItemName != null)
+                    {
+                        Items.Add(Item);
+                        Item = new Dfymoo_Item();
+                    }
                 }
             }
 
