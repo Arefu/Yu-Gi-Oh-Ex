@@ -41,6 +41,7 @@ namespace WolfX
 
             new Thread(Card_Loader.Load).Start();
             new Thread(Archive.Load).Start();
+            new Thread(Dfymoo.Load).Start();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -301,7 +302,7 @@ namespace WolfX
 
         private void extractGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
 
             using var OpenFile = new OpenFileDialog();
             if (!File.Exists("Yami-Yugi.exe"))
@@ -334,7 +335,7 @@ namespace WolfX
 
         private void packGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
             var FolderBrowser = new Microsoft.Win32.OpenFolderDialog();
             using var OpenFile = new OpenFileDialog();
             if (!File.Exists("Yami-Yugi.exe"))
@@ -354,12 +355,22 @@ namespace WolfX
                 MessageBox.Show("Please Select a YGO_2020 Folder", "No YGO_2020 Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-           
+
             var Process = new Process();
             Process.StartInfo.FileName = "Yami-Yugi.exe";
             Process.StartInfo.Arguments = $"\"{FolderBrowser.FolderName}\"";
-            
+
             Process.Start();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv_DfymooItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
