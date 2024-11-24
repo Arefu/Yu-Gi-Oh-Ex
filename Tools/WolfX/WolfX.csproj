@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dfymoo\Dfymoo.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\Dfymoo\Dfymoo.csproj" />
   </ItemGroup>
 
   <ItemGroup>
