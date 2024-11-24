@@ -193,6 +193,7 @@
     <ClInclude Include="..\Dependencies\Dear ImGui\imstb_rectpack.h" />
     <ClInclude Include="..\Dependencies\Dear ImGui\imstb_textedit.h" />
     <ClInclude Include="..\Dependencies\Dear ImGui\imstb_truetype.h" />
+    <ClInclude Include="..\Dependencies\Yu-Gi-Oh-Ex\Cards.h" />
     <ClInclude Include="..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.h" />
   </ItemGroup>
   <ItemGroup>
