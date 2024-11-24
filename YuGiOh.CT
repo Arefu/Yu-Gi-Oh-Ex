@@ -31025,6 +31025,7 @@ Angel of Oblivion?:?Rui
         <CheatEntry>
           <ID>278</ID>
           <Description>"Player 1 Extra Cards"</Description>
+          <Options moManualExpandCollapse="1"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
@@ -31041,6 +31042,414 @@ Angel of Oblivion?:?Rui
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
                   <Address>14349819E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>386</ID>
+              <Description>"Card #2"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981A0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>387</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981A2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>388</ID>
+              <Description>"Card #3"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981A4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>389</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981A6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>390</ID>
+              <Description>"Card #4"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981A8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>391</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981AA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>392</ID>
+              <Description>"Card #5"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981AC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>393</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981AE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>394</ID>
+              <Description>"Card #6"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981B0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>395</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981B2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>396</ID>
+              <Description>"Card #7"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981B4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>397</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981B6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>398</ID>
+              <Description>"Card #8"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981B8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>399</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981BA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>400</ID>
+              <Description>"Card #9"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981BC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>401</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981BE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>402</ID>
+              <Description>"Card #10"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981C0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>403</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981C2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>404</ID>
+              <Description>"Card #11"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981C4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>405</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981C6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>406</ID>
+              <Description>"Card #12"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981C8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>407</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981CA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>408</ID>
+              <Description>"Card #13"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981CC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>409</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981CE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>410</ID>
+              <Description>"Card #14"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981D0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>411</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981D2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>412</ID>
+              <Description>"Card #15"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981D4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>413</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981D6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>414</ID>
+              <Description>"Card #16"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981D8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>415</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981DA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>416</ID>
+              <Description>"Card #17"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981DC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>417</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981DE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>418</ID>
+              <Description>"Card #17"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981E0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>419</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981E2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>420</ID>
+              <Description>"Card #18"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981E4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>421</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981E6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>422</ID>
+              <Description>"Card #19"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981E8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>423</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981EA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>424</ID>
+              <Description>"Card #20"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981EC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>425</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981EE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>426</ID>
+              <Description>"Card #21"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981F0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>427</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981F2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>428</ID>
+              <Description>"Card #22"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981F4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>429</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981F6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>430</ID>
+              <Description>"Card #22"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981F8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>431</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981FA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>432</ID>
+              <Description>"Card #21"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34981FC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>433</ID>
+                  <Description>"Player Hand Card #1 Picture"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34981FE</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
@@ -31130,7 +31539,6 @@ Angel of Oblivion?:?Rui
               <ID>137</ID>
               <Description>"Card #5"</Description>
               <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
-              <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
               <Address>143497DEC</Address>
@@ -33138,7 +33546,7 @@ Angel of Oblivion?:?Rui
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3498482</Address>
+              <Address>YuGiOh.exe+3498474</Address>
               <CheatEntries>
                 <CheatEntry>
                   <ID>331</ID>
@@ -33146,12 +33554,12 @@ Angel of Oblivion?:?Rui
                   <ShowAsHex>1</ShowAsHex>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>YuGiOh.exe+3498484</Address>
+                  <Address>YuGiOh.exe+3498476</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>328</ID>
+              <ID>332</ID>
               <Description>"Card #34"</Description>
               <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
@@ -33160,7 +33568,7 @@ Angel of Oblivion?:?Rui
               <Address>YuGiOh.exe+3498478</Address>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>329</ID>
+                  <ID>333</ID>
                   <Description>"Card #17 Picture"</Description>
                   <ShowAsHex>1</ShowAsHex>
                   <ShowAsSigned>0</ShowAsSigned>
@@ -33170,21 +33578,496 @@ Angel of Oblivion?:?Rui
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>326</ID>
+              <ID>334</ID>
               <Description>"Card #35"</Description>
               <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>YuGiOh.exe+3498474</Address>
+              <Address>YuGiOh.exe+349847C</Address>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>327</ID>
+                  <ID>335</ID>
                   <Description>"Card #17 Picture"</Description>
                   <ShowAsHex>1</ShowAsHex>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>YuGiOh.exe+3498476</Address>
+                  <Address>YuGiOh.exe+349847E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>336</ID>
+              <Description>"Card #36"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+3498480</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>337</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3498482</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>338</ID>
+              <Description>"Card #37"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+3498484</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>339</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3498486</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>340</ID>
+              <Description>"Card #38"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+3498488</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>341</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+349848A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>342</ID>
+              <Description>"Card #39"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+349848C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>343</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+349848E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>344</ID>
+              <Description>"Card #40"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+3498490</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>345</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3498492</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>346</ID>
+              <Description>"Card #41"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+3498494</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>347</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+3498496</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>348</ID>
+              <Description>"Card #42"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+3498498</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>349</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+349849A</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>350</ID>
+              <Description>"Card #43"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+349849C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>351</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+349849E</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>352</ID>
+              <Description>"Card #44"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984A0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>353</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984A2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>354</ID>
+              <Description>"Card #45"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984A4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>355</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984A6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>356</ID>
+              <Description>"Card #46"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984A8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>357</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984AA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>358</ID>
+              <Description>"Card #47"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984AC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>359</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984AE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>360</ID>
+              <Description>"Card #48"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984B0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>361</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984B2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>362</ID>
+              <Description>"Card #49"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984B4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>363</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984B6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>364</ID>
+              <Description>"Card #50"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984B8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>365</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984BA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>366</ID>
+              <Description>"Card #51"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984BC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>367</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984BE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>368</ID>
+              <Description>"Card #52"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984C0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>369</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984C2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>370</ID>
+              <Description>"Card #53"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984C4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>371</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984C6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>372</ID>
+              <Description>"Card #54"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984C8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>373</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984CA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>374</ID>
+              <Description>"Card #55"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984CC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>375</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984CE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>376</ID>
+              <Description>"Card #56"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984D0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>377</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984D2</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>378</ID>
+              <Description>"Card #57"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984D4</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>379</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984D6</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>380</ID>
+              <Description>"Card #58"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984D8</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>381</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984DA</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>382</ID>
+              <Description>"Card #59"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984DC</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>383</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984DE</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>384</ID>
+              <Description>"Card #60"</Description>
+              <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>YuGiOh.exe+34984E0</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>385</ID>
+                  <Description>"Card #17 Picture"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>YuGiOh.exe+34984E2</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>

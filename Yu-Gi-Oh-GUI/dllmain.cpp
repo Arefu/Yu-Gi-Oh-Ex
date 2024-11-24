@@ -80,8 +80,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
 		{
-			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
-			
+			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());	
 			if (ImGui::TreeNodeEx("Cards in Hand"))
 			{
 				for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
@@ -121,20 +120,19 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNodeEx("Monsters"))
-			{
-				for (int i = 0; i < 5; i++)
-				{
-					ImGui::Text("Monster %d: %d", i, g_Player1.Get_MonsterInSlot(i));
-				}
-				ImGui::TreePop();
-			}
-
-		
+			
 		}
 		if (ImGui::CollapsingHeader("Player Two"))
 		{
 			
+		}
+
+		if (ImGui::CollapsingHeader("Deck Management"))
+		{
+			if (ImGui::Button("Export Decks"))
+			{
+				
+			}
 		}
 
 		ImGui::EndGroup();
@@ -194,6 +192,8 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
 	(void)io;
+	io.IniFilename = nullptr;
+
 
 	DXGI_SWAP_CHAIN_DESC sd;
 	pSwapChain->GetDesc(&sd);
@@ -217,9 +217,15 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	return result;
 }
 
+HRESULT __stdcall NoRandom()
+{
+	srand(1);
+	return 0;
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-	LONG res = 0;
+	LONG res = 0;		__int64 Random = 0x140877120;
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
@@ -229,6 +235,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
+		//Detour 140877120
+
+		DetourAttach(reinterpret_cast<PVOID*>(&Random), NoRandom);
 
 		DetourTransactionCommit();
 		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
