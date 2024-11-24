@@ -30,7 +30,10 @@ static WNDPROC oWndProc = nullptr;
 static bool bShowMenu = true;
 static bool bShowDemo = false;
 
+
+
 Player g_Player1 = Player(PLAYER_ONE);
+Player g_Player2 = Player(PLAYER_TWO);
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -72,15 +75,50 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		if (ImGui::Button("Quit Game"))
 			YuGiOhEx::g_bIsQuitReady = true;
 
+	
 
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
 		{
-			ImGui::Text("Address:0x%X", g_Player1.Get_Player());
 			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
+			if (ImGui::TreeNodeEx("Cards in Hand"))
+			{
+				for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
+				{
+					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInHand(i));
+				}
+				ImGui::TreePop();
+			}
+
 			ImGui::Text("Number of Cards in Deck: %d", g_Player1.Get_NumberOfCardsInDeck());
+			if (ImGui::TreeNodeEx("Cards in Deck"))
+			{
+				for (int i = 0; i < g_Player1.Get_NumberOfCardsInDeck(); i++)
+				{
+					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInDeck(i));
+				}
+				ImGui::TreePop();
+			}
+
 			ImGui::Text("Number Of Cards in Grave Yard: %d", g_Player1.Get_NumberOfCardsInGraveYard());
+			if (ImGui::TreeNodeEx("Cards in Grave Yard"))
+			{
+				for (int i = 0; i < g_Player1.Get_NumberOfCardsInGraveYard(); i++)
+				{
+					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInGraveYard(i));
+				}
+				ImGui::TreePop();
+			}
+
 			ImGui::Text("Number Of Cards in Discard Pile: %d", g_Player1.Get_NumberOfDiscardPile());
+			if (ImGui::TreeNodeEx("Cards in Discard Pile"))
+			{
+				for (int i = 0; i < g_Player1.Get_NumberOfDiscardPile(); i++)
+				{
+					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInDiscardPile(i));
+				}
+				ImGui::TreePop();
+			}
 
 			if (ImGui::TreeNodeEx("Monsters"))
 			{
@@ -90,13 +128,31 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 				}
 				ImGui::TreePop();
 			}
+
 		
 		}
 		if (ImGui::CollapsingHeader("Player Two"))
 		{
+			
 		}
+
 		ImGui::EndGroup();
+
+		ImGui::Separator();
+
+		ImGui::BeginGroup();
+
+		if(ImGui::CollapsingHeader("Addresses - Misc"))
+		{
+			ImGui::Text("Player One: 0x%X", PLAYER_ONE);
+
+			ImGui::Text("g_bIsGameTutorial: 0x%X", YuGiOh::Get_IsDuelTutorial());
+			ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
 		
+		}
+
+		ImGui::EndGroup();
+
 		ImGui::End();
 	}
 

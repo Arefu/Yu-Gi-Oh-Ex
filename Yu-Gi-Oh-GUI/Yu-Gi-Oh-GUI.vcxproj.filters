@@ -82,6 +82,9 @@
     <ClInclude Include="..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Dependencies\Yu-Gi-Oh-Ex\Cards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Dependencies\Dear ImGui\LICENSE.txt" />
