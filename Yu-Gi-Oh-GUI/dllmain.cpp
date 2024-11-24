@@ -81,6 +81,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		if (ImGui::CollapsingHeader("Player One"))
 		{
 			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
+			
 			if (ImGui::TreeNodeEx("Cards in Hand"))
 			{
 				for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
