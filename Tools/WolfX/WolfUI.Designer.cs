@@ -77,7 +77,18 @@
             lbl_NumberOfItemsPrompt = new Label();
             lbl_FileSizePrompt = new Label();
             lbl_NamePrompt = new Label();
-            Page_AnimationManager = new TabPage();
+            Page_DFYMOOManager = new TabPage();
+            groupBox8 = new GroupBox();
+            button3 = new Button();
+            checkBox3 = new CheckBox();
+            button4 = new Button();
+            checkBox4 = new CheckBox();
+            groupBox9 = new GroupBox();
+            lbl_Dfymoo_NumOfItems = new Label();
+            lbl_Dfymoo_name = new Label();
+            label10 = new Label();
+            label12 = new Label();
+            lv_DfymooItems = new ListView();
             MenuBar = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             File_Open = new ToolStripMenuItem();
@@ -112,6 +123,9 @@
             groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
+            Page_DFYMOOManager.SuspendLayout();
+            groupBox8.SuspendLayout();
+            groupBox9.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
             SuspendLayout();
@@ -120,7 +134,7 @@
             // 
             WolfX_TabManager.Controls.Add(Page_CardManager);
             WolfX_TabManager.Controls.Add(Page_ZibManager);
-            WolfX_TabManager.Controls.Add(Page_AnimationManager);
+            WolfX_TabManager.Controls.Add(Page_DFYMOOManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Enabled = false;
             WolfX_TabManager.Location = new Point(0, 24);
@@ -607,15 +621,133 @@
             lbl_NamePrompt.TabIndex = 0;
             lbl_NamePrompt.Text = "Name:";
             // 
-            // Page_AnimationManager
+            // Page_DFYMOOManager
             // 
-            Page_AnimationManager.Location = new Point(4, 24);
-            Page_AnimationManager.Name = "Page_AnimationManager";
-            Page_AnimationManager.Padding = new Padding(3);
-            Page_AnimationManager.Size = new Size(651, 629);
-            Page_AnimationManager.TabIndex = 2;
-            Page_AnimationManager.Text = "Animation Manager";
-            Page_AnimationManager.UseVisualStyleBackColor = true;
+            Page_DFYMOOManager.Controls.Add(groupBox8);
+            Page_DFYMOOManager.Controls.Add(groupBox9);
+            Page_DFYMOOManager.Controls.Add(lv_DfymooItems);
+            Page_DFYMOOManager.Location = new Point(4, 24);
+            Page_DFYMOOManager.Name = "Page_DFYMOOManager";
+            Page_DFYMOOManager.Padding = new Padding(3);
+            Page_DFYMOOManager.Size = new Size(651, 629);
+            Page_DFYMOOManager.TabIndex = 2;
+            Page_DFYMOOManager.Text = "DFYMOO Manager";
+            Page_DFYMOOManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(button3);
+            groupBox8.Controls.Add(checkBox3);
+            groupBox8.Controls.Add(button4);
+            groupBox8.Controls.Add(checkBox4);
+            groupBox8.Location = new Point(225, 6);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new Size(200, 100);
+            groupBox8.TabIndex = 4;
+            groupBox8.TabStop = false;
+            groupBox8.Text = "Archive Tools";
+            // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.Location = new Point(119, 69);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 25);
+            button3.TabIndex = 4;
+            button3.Text = "Close";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Checked = true;
+            checkBox3.CheckState = CheckState.Checked;
+            checkBox3.Location = new Point(6, 44);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(111, 19);
+            checkBox3.TabIndex = 3;
+            checkBox3.Text = "Show File Name";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(6, 69);
+            button4.Name = "button4";
+            button4.Size = new Size(107, 25);
+            button4.TabIndex = 2;
+            button4.Text = "Edit Dfymoo";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Checked = true;
+            checkBox4.CheckState = CheckState.Checked;
+            checkBox4.Location = new Point(6, 22);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(139, 19);
+            checkBox4.TabIndex = 1;
+            checkBox4.Text = "Show Picture Preview";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            groupBox9.Controls.Add(lbl_Dfymoo_NumOfItems);
+            groupBox9.Controls.Add(lbl_Dfymoo_name);
+            groupBox9.Controls.Add(label10);
+            groupBox9.Controls.Add(label12);
+            groupBox9.Location = new Point(19, 6);
+            groupBox9.Name = "groupBox9";
+            groupBox9.Size = new Size(200, 100);
+            groupBox9.TabIndex = 3;
+            groupBox9.TabStop = false;
+            groupBox9.Text = "DFYMOO Info";
+            // 
+            // lbl_Dfymoo_NumOfItems
+            // 
+            lbl_Dfymoo_NumOfItems.AutoSize = true;
+            lbl_Dfymoo_NumOfItems.Location = new Point(114, 39);
+            lbl_Dfymoo_NumOfItems.Name = "lbl_Dfymoo_NumOfItems";
+            lbl_Dfymoo_NumOfItems.Size = new Size(0, 15);
+            lbl_Dfymoo_NumOfItems.TabIndex = 5;
+            // 
+            // lbl_Dfymoo_name
+            // 
+            lbl_Dfymoo_name.AutoSize = true;
+            lbl_Dfymoo_name.Location = new Point(54, 19);
+            lbl_Dfymoo_name.Name = "lbl_Dfymoo_name";
+            lbl_Dfymoo_name.Size = new Size(0, 15);
+            lbl_Dfymoo_name.TabIndex = 3;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(6, 39);
+            label10.Name = "label10";
+            label10.Size = new Size(102, 15);
+            label10.TabIndex = 2;
+            label10.Text = "Number Of Items:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(6, 19);
+            label12.Name = "label12";
+            label12.Size = new Size(42, 15);
+            label12.TabIndex = 0;
+            label12.Text = "Name:";
+            // 
+            // lv_DfymooItems
+            // 
+            lv_DfymooItems.Dock = DockStyle.Bottom;
+            lv_DfymooItems.Location = new Point(3, 112);
+            lv_DfymooItems.Name = "lv_DfymooItems";
+            lv_DfymooItems.Size = new Size(645, 514);
+            lv_DfymooItems.TabIndex = 0;
+            lv_DfymooItems.UseCompatibleStateImageBehavior = false;
+            lv_DfymooItems.View = View.List;
+            lv_DfymooItems.SelectedIndexChanged += lv_DfymooItems_SelectedIndexChanged;
             // 
             // MenuBar
             // 
@@ -709,49 +841,49 @@
             Language_english.Checked = true;
             Language_english.CheckState = CheckState.Checked;
             Language_english.Name = "Language_english";
-            Language_english.Size = new Size(180, 22);
+            Language_english.Size = new Size(117, 22);
             Language_english.Text = "English";
             Language_english.Click += Language_english_Click;
             // 
             // Language_french
             // 
             Language_french.Name = "Language_french";
-            Language_french.Size = new Size(180, 22);
+            Language_french.Size = new Size(117, 22);
             Language_french.Text = "Français";
             Language_french.Click += Language_french_Click;
             // 
             // Language_german
             // 
             Language_german.Name = "Language_german";
-            Language_german.Size = new Size(180, 22);
+            Language_german.Size = new Size(117, 22);
             Language_german.Text = "Deutsch";
             Language_german.Click += Language_german_Click;
             // 
             // Language_italian
             // 
             Language_italian.Name = "Language_italian";
-            Language_italian.Size = new Size(180, 22);
+            Language_italian.Size = new Size(117, 22);
             Language_italian.Text = "Italiano";
             Language_italian.Click += Language_italian_Click;
             // 
             // Language_japanese
             // 
             Language_japanese.Name = "Language_japanese";
-            Language_japanese.Size = new Size(180, 22);
+            Language_japanese.Size = new Size(117, 22);
             Language_japanese.Text = "Nihon";
             Language_japanese.Click += Language_japanese_Click;
             // 
             // Language_russian
             // 
             Language_russian.Name = "Language_russian";
-            Language_russian.Size = new Size(180, 22);
+            Language_russian.Size = new Size(117, 22);
             Language_russian.Text = "Russkiy";
             Language_russian.Click += Language_russian_Click;
             // 
             // Language_spanish
             // 
             Language_spanish.Name = "Language_spanish";
-            Language_spanish.Size = new Size(180, 22);
+            Language_spanish.Size = new Size(117, 22);
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
@@ -810,6 +942,11 @@
             groupBox4.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            Page_DFYMOOManager.ResumeLayout(false);
+            groupBox8.ResumeLayout(false);
+            groupBox8.PerformLayout();
+            groupBox9.ResumeLayout(false);
+            groupBox9.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
@@ -873,7 +1010,7 @@
         private ToolStripMenuItem Language_japanese;
         private ToolStripMenuItem Language_russian;
         private ToolStripMenuItem Language_spanish;
-        private TabPage Page_AnimationManager;
+        private TabPage Page_DFYMOOManager;
         public TextBox TB_CardDesc;
         private Button btn_NextCard;
         private Button btn_LastCard;
@@ -893,5 +1030,16 @@
         private TextBox textBox1;
         private ToolStripMenuItem extractGameToolStripMenuItem;
         private ToolStripMenuItem packGameToolStripMenuItem;
+        public ListView lv_DfymooItems;
+        private GroupBox groupBox8;
+        public Button button3;
+        public CheckBox checkBox3;
+        private Button button4;
+        public CheckBox checkBox4;
+        private GroupBox groupBox9;
+        public Label lbl_Dfymoo_NumOfItems;
+        public Label lbl_Dfymoo_name;
+        private Label label10;
+        private Label label12;
     }
 }
