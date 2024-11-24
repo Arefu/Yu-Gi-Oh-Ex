@@ -7,6 +7,8 @@ using WolfX.Handler.Tools;
 using WolfX.Handlers;
 using WolfX.Types;
 
+using Types;
+
 namespace WolfX
 {
     public partial class WolfUI : Form
@@ -41,7 +43,7 @@ namespace WolfX
 
             new Thread(Card_Loader.Load).Start();
             new Thread(Archive.Load).Start();
-            new Thread(Dfymoo.Load).Start();
+
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -364,14 +366,28 @@ namespace WolfX
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void lv_DfymooItems_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+         
         }
 
-        private void lv_DfymooItems_SelectedIndexChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            using var OpenFile = new OpenFileDialog();
+            OpenFile.Title = "Select DFYMOO File";
+            OpenFile.Filter = "DFYMOO File|*.dfymoo";
+            if (OpenFile.ShowDialog() != DialogResult.OK)
+            {
+                MessageBox.Show("Please Select a DFYMOO File", "No DFYMOO File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            
+            var Items = Dfymoo.Load(OpenFile.FileName);
+            foreach(var Item in Items)
+            {
+                MessageBox.Show(Item.ItemName);
+            }
         }
     }
 }

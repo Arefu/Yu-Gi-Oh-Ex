@@ -80,7 +80,6 @@
             Page_DFYMOOManager = new TabPage();
             groupBox8 = new GroupBox();
             button3 = new Button();
-            checkBox3 = new CheckBox();
             button4 = new Button();
             checkBox4 = new CheckBox();
             groupBox9 = new GroupBox();
@@ -88,7 +87,6 @@
             lbl_Dfymoo_name = new Label();
             label10 = new Label();
             label12 = new Label();
-            lv_DfymooItems = new ListView();
             MenuBar = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             File_Open = new ToolStripMenuItem();
@@ -111,6 +109,7 @@
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
+            pictureBox1 = new PictureBox();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -128,6 +127,7 @@
             groupBox9.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -623,9 +623,9 @@
             // 
             // Page_DFYMOOManager
             // 
+            Page_DFYMOOManager.Controls.Add(pictureBox1);
             Page_DFYMOOManager.Controls.Add(groupBox8);
             Page_DFYMOOManager.Controls.Add(groupBox9);
-            Page_DFYMOOManager.Controls.Add(lv_DfymooItems);
             Page_DFYMOOManager.Location = new Point(4, 24);
             Page_DFYMOOManager.Name = "Page_DFYMOOManager";
             Page_DFYMOOManager.Padding = new Padding(3);
@@ -637,7 +637,6 @@
             // groupBox8
             // 
             groupBox8.Controls.Add(button3);
-            groupBox8.Controls.Add(checkBox3);
             groupBox8.Controls.Add(button4);
             groupBox8.Controls.Add(checkBox4);
             groupBox8.Location = new Point(225, 6);
@@ -645,7 +644,7 @@
             groupBox8.Size = new Size(200, 100);
             groupBox8.TabIndex = 4;
             groupBox8.TabStop = false;
-            groupBox8.Text = "Archive Tools";
+            groupBox8.Text = "DFYMOO Tools";
             // 
             // button3
             // 
@@ -654,20 +653,8 @@
             button3.Name = "button3";
             button3.Size = new Size(75, 25);
             button3.TabIndex = 4;
-            button3.Text = "Close";
+            button3.Text = "Save";
             button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Checked = true;
-            checkBox3.CheckState = CheckState.Checked;
-            checkBox3.Location = new Point(6, 44);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(111, 19);
-            checkBox3.TabIndex = 3;
-            checkBox3.Text = "Show File Name";
-            checkBox3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -675,7 +662,7 @@
             button4.Name = "button4";
             button4.Size = new Size(107, 25);
             button4.TabIndex = 2;
-            button4.Text = "Edit Dfymoo";
+            button4.Text = "Open Dfymoo";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -737,17 +724,6 @@
             label12.Size = new Size(42, 15);
             label12.TabIndex = 0;
             label12.Text = "Name:";
-            // 
-            // lv_DfymooItems
-            // 
-            lv_DfymooItems.Dock = DockStyle.Bottom;
-            lv_DfymooItems.Location = new Point(3, 112);
-            lv_DfymooItems.Name = "lv_DfymooItems";
-            lv_DfymooItems.Size = new Size(645, 514);
-            lv_DfymooItems.TabIndex = 0;
-            lv_DfymooItems.UseCompatibleStateImageBehavior = false;
-            lv_DfymooItems.View = View.List;
-            lv_DfymooItems.SelectedIndexChanged += lv_DfymooItems_SelectedIndexChanged;
             // 
             // MenuBar
             // 
@@ -910,6 +886,15 @@
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(6, 112);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(639, 496);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -951,6 +936,7 @@
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
             Status.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1030,10 +1016,8 @@
         private TextBox textBox1;
         private ToolStripMenuItem extractGameToolStripMenuItem;
         private ToolStripMenuItem packGameToolStripMenuItem;
-        public ListView lv_DfymooItems;
         private GroupBox groupBox8;
         public Button button3;
-        public CheckBox checkBox3;
         private Button button4;
         public CheckBox checkBox4;
         private GroupBox groupBox9;
@@ -1041,5 +1025,6 @@
         public Label lbl_Dfymoo_name;
         private Label label10;
         private Label label12;
+        private PictureBox pictureBox1;
     }
 }

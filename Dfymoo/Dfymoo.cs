@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Security.AccessControl;
 
-namespace Dfymoo
+namespace Types
 {
     public class Dfymoo_Item
     {
@@ -17,7 +17,7 @@ namespace Dfymoo
 
     public static class Dfymoo
     {
-        static List<Dfymoo_Item> Load(string Path)
+        public static List<Dfymoo_Item> Load(string Path)
         {
             if (File.Exists(Path) == false)
             {
