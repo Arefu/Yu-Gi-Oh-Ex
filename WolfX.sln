@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "File Type Libraries", "File
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dfymoo", "File Type Libraries\Dfymoo\Dfymoo.csproj", "{64517912-3F87-47D2-8291-5439DA64DA70}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh-SpeedHacks", "Yu-Gi-Oh-SpeedHacks\Yu-Gi-Oh-SpeedHacks.vcxproj", "{4C73D0C2-F571-4A34-9067-406B6F0C21D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|_AMD64 = Debug|_AMD64
@@ -109,6 +111,22 @@ Global
 		{64517912-3F87-47D2-8291-5439DA64DA70}.Release|x64.Build.0 = Release|Any CPU
 		{64517912-3F87-47D2-8291-5439DA64DA70}.Release|x86.ActiveCfg = Release|Any CPU
 		{64517912-3F87-47D2-8291-5439DA64DA70}.Release|x86.Build.0 = Release|Any CPU
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|_AMD64.ActiveCfg = Debug|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|_AMD64.Build.0 = Debug|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|Any CPU.Build.0 = Debug|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|x64.ActiveCfg = Debug|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|x64.Build.0 = Debug|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|x86.ActiveCfg = Debug|Win32
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Debug|x86.Build.0 = Debug|Win32
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|_AMD64.ActiveCfg = Release|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|_AMD64.Build.0 = Release|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|Any CPU.ActiveCfg = Release|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|Any CPU.Build.0 = Release|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|x64.ActiveCfg = Release|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|x64.Build.0 = Release|x64
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|x86.ActiveCfg = Release|Win32
+		{4C73D0C2-F571-4A34-9067-406B6F0C21D8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
