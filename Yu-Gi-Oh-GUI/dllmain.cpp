@@ -1,14 +1,15 @@
 
-#include <imgui_impl_win32.h>
 #include <d3d11.h>
 #include <detours.h>
 #include <dxgi.h>
 #include <imgui.h>
 #include <imgui_impl_dx11.h>
-#include <windows.h>
+#include <imgui_impl_win32.h>
 #include <string>
+#include <windows.h>
 
 #include "Yu-Gi-Oh-Ex.h"
+#include "Plugins.h"
 
 typedef __int64 Address;
 
@@ -30,10 +31,13 @@ static WNDPROC oWndProc = nullptr;
 static bool bShowMenu = true;
 static bool bShowDemo = false;
 
-
+static bool b_IsImGuiInitialized = false;
+static ImGuiContext* _ImGuiContext = nullptr;
 
 Player g_Player1 = Player(PLAYER_ONE);
 Player g_Player2 = Player(PLAYER_TWO);
+
+bool PluginManager::_IsLoaded;;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -63,6 +67,8 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 {
 	ImGui_ImplWin32_NewFrame();
 	ImGui_ImplDX11_NewFrame();
+	b_IsImGuiInitialized = true;
+	
 
 	ImGui::NewFrame();
 
@@ -74,8 +80,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
 		if (ImGui::Button("Quit Game"))
 			YuGiOhEx::g_bIsQuitReady = true;
-
-	
 
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
@@ -119,8 +123,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 				}
 				ImGui::TreePop();
 			}
-
-			
 		}
 		if (ImGui::CollapsingHeader("Player Two"))
 		{
@@ -134,6 +136,8 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 				
 			}
 		}
+
+		
 
 		ImGui::EndGroup();
 
@@ -149,6 +153,18 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
 		
 		}
+
+		if (ImGui::CollapsingHeader("Debug Mode",  ImGuiTreeNodeFlags_DefaultOpen))
+		{
+			if (ImGui::Button("Load Plugins"))
+			{
+				PluginManager::Load();
+				PluginManager::_IsLoaded = true;
+
+			}
+		}
+
+		PluginManager::ProcessGui();
 
 		ImGui::EndGroup();
 
@@ -190,10 +206,9 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	nPresent = oPresent;
 
 	ImGui::CreateContext();
+	_ImGuiContext = ImGui::GetCurrentContext();
 	ImGuiIO& io = ImGui::GetIO();
 	(void)io;
-	io.IniFilename = nullptr;
-
 
 	DXGI_SWAP_CHAIN_DESC sd;
 	pSwapChain->GetDesc(&sd);
@@ -217,6 +232,19 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	return result;
 }
 
+extern "C" __declspec(dllexport) bool __stdcall Is_ImGuiInitialized()
+{
+	return b_IsImGuiInitialized;
+}
+
+extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
+{
+	if (ImGui::GetCurrentContext() == nullptr)
+		return nullptr;
+
+	return ImGui::GetCurrentContext();
+}
+
 HRESULT __stdcall NoRandom()
 {
 	srand(1);
@@ -229,23 +257,25 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
+
 		DetourRestoreAfterWith();
 
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
-		//Detour 140877120
-
+		
 		DetourAttach(reinterpret_cast<PVOID*>(&Random), NoRandom);
 
 		DetourTransactionCommit();
 		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
-
+	
 		break;
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:
 	case DLL_PROCESS_DETACH:
+	
+	
 		break;
 	}
 	return TRUE;
