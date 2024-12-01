@@ -18,8 +18,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\File Type Libraries\Animslist\Animslist.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\Animslist\Animlist.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Dfymoo\Dfymoo.csproj" />
+    <ProjectReference Include="..\..\ZIB\ZIB.csproj" />
   </ItemGroup>
 
   <ItemGroup>

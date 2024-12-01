@@ -11,7 +11,7 @@ namespace WolfX.Types
 
         public List<Dfymoo_Item> DFY_Items { get; set; }
         public Dfymoo_Item DFY_Item { get; set; }
-        private Dfymoo_Item Last_DFY_Item;
+
 
         /// <summary>
         /// Clean up any resources being used.

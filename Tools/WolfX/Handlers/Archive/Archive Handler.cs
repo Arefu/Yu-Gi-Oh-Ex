@@ -45,70 +45,13 @@ namespace WolfX.Handlers
 
             foreach (var Archive in Archives)
             {
-                WolfUI.Form.lv_ArchivePreviewer.Items.Add(new FileInfo(Archive).Name, 0);
+                WolfUI.Form.ARCHIVE_LV_ArchiveItems.Items.Add(new FileInfo(Archive).Name, 0);
             }
         }
         
         internal static void OpenArchive(string Archive)
         {
-            WolfUI.State.HasArchiveOpen = true;
-            WolfUI.Form.btn_CloseArchive.Enabled = true;
-            WolfUI.Form.LBL_GameStatusLabel.Text = @"Loading Archive";
-            WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Orange;
-
-            var Files = new List<YGO_ArchiveFileEntry>();
-            Files = Get_FilesInArchive(Archive);
-
-            WolfUI.Form.lbl_Name.Text = Archive;
-            WolfUI.Form.lbl_Size.Text = Files.Sum(x => x.Size).ToString();
-            WolfUI.Form.lbl_ItemCount.Text = Files.Count.ToString();
-
-            WolfUI.Form.LBL_GameStatusLabel.Text = @"Loading Files";
-
-            WolfUI.Form.lv_ArchivePreviewer.Items.Clear();
-
-            switch (Archive)
-            {
-                case "2020.full.illust_a.jpg.zib":
-                case "2020.full.illust_j.jpg.zib":
-                case "busts.zib":
-                    WolfUI.Form.lv_ArchivePreviewer.SmallImageList = WolfUI.Form.cb_ShowPicturePreview.Checked ? Preview_Generator.Get_ImagePreviewFromArchiveData(Files, Archive) : Preview_Generator.Get_DefaultImageFromDll();
-
-                    for (var File = 0; File < Files.Count; File++)
-                    {
-                        switch (WolfUI.Form.cb_ShowPicturePreview.Checked)
-                        {
-                            case true when WolfUI.Form.cb_ShowFileName.Checked:
-                                WolfUI.Form.lv_ArchivePreviewer.Items.Add(Files[File].Name, File);
-                                break;
-
-                            case true:
-                                WolfUI.Form.lv_ArchivePreviewer.Items.Add("", File);
-                                break;
-
-                            default:
-                                {
-                                    WolfUI.Form.lv_ArchivePreviewer.Items.Add(
-                                        WolfUI.Form.cb_ShowFileName.Checked ? Files[File].Name : "", 0);
-                                    break;
-                                }
-                        }
-                    }
-                    break;
-
-                case "decks.zib":
-                case "packs.zib":
-                    WolfUI.Form.lv_ArchivePreviewer.SmallImageList = Preview_Generator.Get_BriefcaseImageFromDll();
-
-                    foreach (var File in Files)
-                    {
-                        WolfUI.Form.lv_ArchivePreviewer.Items.Add(File.Name, 0);
-                    }
-                    break;
-            }
-            WolfUI.Form.lv_ArchivePreviewer.ResumeLayout();
-            WolfUI.Form.LBL_GameStatusLabel.Text = @"Archive Ready";
-            WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Green;
+        
         }
         
         public static uint GetFileLocation(string Archive, string Name)
@@ -150,20 +93,20 @@ namespace WolfX.Handlers
 
         public static void CloseArchive()
         {
-            WolfUI.Form.lv_ArchivePreviewer.SmallImageList = null;
-            WolfUI.Form.lbl_Name.Text = "";
-            WolfUI.Form.lbl_Size.Text = "";
-            WolfUI.Form.lbl_ItemCount.Text = "";
+            WolfUI.Form.ARCHIVE_LV_ArchiveItems.SmallImageList = null;
+            WolfUI.Form.ARCHIVE_LBL_ArchiveName.Text = "";
+            WolfUI.Form.ARCHIVE_LBL_ArchiveSize.Text = "";
+            WolfUI.Form.ARCHIVE_LBL_ArchiveItems.Text = "";
             WolfUI.Form.LBL_GameStatusLabel.Text = @"Ready";
 
             WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Green;
 
-            WolfUI.Form.btn_CloseArchive.Enabled = false;
+            WolfUI.Form.ARCHIVE_BTN_SaveZIB.Enabled = false;
 
             WolfUI.State.HasArchiveOpen = false;
 
-            WolfUI.Form.lv_ArchivePreviewer.Items.Clear();
-            WolfUI.Form.lv_ArchivePreviewer.SmallImageList = Preview_Generator.Get_ArchiveImageFromDll();
+            WolfUI.Form.ARCHIVE_LV_ArchiveItems.Items.Clear();
+            WolfUI.Form.ARCHIVE_LV_ArchiveItems.SmallImageList = Preview_Generator.Get_ArchiveImageFromDll();
 
             Load();
         }

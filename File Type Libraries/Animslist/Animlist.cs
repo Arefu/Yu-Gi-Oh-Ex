@@ -22,19 +22,28 @@ namespace Types
             var Items = new List<Animlist_Item>();
 
             using (var Reader =  new StreamReader(Path)) {
-                var Line = Reader.ReadLine();
+                while (!Reader.EndOfStream)
+                {
+                    var Line = Reader.ReadLine();
+                    if(String.IsNullOrEmpty(Line))
+                        continue;
 
-                if (Cropped == true)
-                {
-                }
-                else
-                {
-                    var ItemProperties = Line.Split(',');
-                    var Item = new Animlist_Item();
-                    Item.ItemName = ItemProperties[0];
-                    Item.ItemPosition = new Point(int.Parse(ItemProperties[1]), int.Parse(ItemProperties[2]));
-                    Item.ItemSlide = int.Parse(ItemProperties[3]);
-                    Items.Add(Item);
+                    if (Cropped == true)
+                    {
+
+                    }
+                    else
+                    {
+                        var ItemProperties = Line.Split(',');
+                        var Item = new Animlist_Item();
+                        Item.ItemName = ItemProperties[0];
+                        Item.ItemPosition = new Point(int.Parse(ItemProperties[1]), int.Parse(ItemProperties[2])); //TOP, LEFT
+                        if (ItemProperties.Length == 4)
+                            Item.ItemSlide = int.Parse(ItemProperties[3]);
+                        else
+                            Item.ItemSlide = -1; //NO SLIDE INFORMATION
+                        Items.Add(Item);
+                    }
                 }
             }
             return Items;
