@@ -404,11 +404,18 @@ namespace WolfX
 
         private void DFYMOO_ItemList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            if(!e.IsSelected)
-                return;
+            if (!e.IsSelected)
+            {
+                // Update Editor.DFY_Items List with the Updated version of DFY_Item.
+                var index = Editor.DFY_Items.FindIndex(dfy => dfy.ItemName == Editor.DFY_Item.ItemName);
+                if (index != -1)
+                {
+                    Editor.DFY_Items[index] = Editor.DFY_Item;
+                }
+            }
 
             var Item = e.Item;
-            foreach(var DFY in Editor.DFY_Items)
+            foreach (var DFY in Editor.DFY_Items)
             {
                 if (DFY.ItemName == Item.Text)
                 {
@@ -423,9 +430,44 @@ namespace WolfX
             DFY_NUD_W.Value = Editor.DFY_Item.ItemDimensions.X;
             DFY_NUD_H.Value = Editor.DFY_Item.ItemDimensions.Y;
 
-           
-            Editor.UpdateDrawBox();
-            Editor.DFY_Picture.Image = Image.FromFile(Editor._PicturePath.Replace(".dfymoo", ".png"));
+            Editor.DFY_Picture.Refresh();
+        }
+
+        private void DFY_NUD_X_ValueChanged(object sender, EventArgs e)
+        {
+            if (DFY_NUD_X.Value != Editor.DFY_Item.ItemStartPoint.X)
+                Editor.DFY_Item.ItemStartPoint = new Point((int)DFY_NUD_X.Value, Editor.DFY_Item.ItemStartPoint.Y);
+
+            Editor.DFY_Picture.Refresh();
+        }
+
+        private void DFY_NUD_Y_ValueChanged(object sender, EventArgs e)
+        {
+            if (DFY_NUD_Y.Value != Editor.DFY_Item.ItemStartPoint.Y)
+                Editor.DFY_Item.ItemStartPoint = new Point(Editor.DFY_Item.ItemStartPoint.X, (int)DFY_NUD_Y.Value);
+
+            Editor.DFY_Picture.Refresh();
+        }
+
+        private void DFY_NUD_H_ValueChanged(object sender, EventArgs e)
+        {
+            if (DFY_NUD_H.Value != Editor.DFY_Item.ItemDimensions.Y)
+                Editor.DFY_Item.ItemDimensions = new Point(Editor.DFY_Item.ItemDimensions.X, (int)DFY_NUD_H.Value);
+
+            Editor.DFY_Picture.Refresh();
+        }
+
+        private void DFY_NUD_W_ValueChanged(object sender, EventArgs e)
+        {
+            if (DFY_NUD_W.Value != Editor.DFY_Item.ItemDimensions.X)
+                Editor.DFY_Item.ItemDimensions = new Point((int)DFY_NUD_W.Value, Editor.DFY_Item.ItemDimensions.Y);
+
+            Editor.DFY_Picture.Refresh();
+        }
+
+        private void DFY_BTN_Save_Click(object sender, EventArgs e)
+        {
+            Dfymoo.Save(Path.GetFileName(Editor._PicturePath), Editor.DFY_Items, Editor.DFY_Picture.Size);
         }
     }
 }

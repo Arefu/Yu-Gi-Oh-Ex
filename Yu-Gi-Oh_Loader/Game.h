@@ -30,7 +30,7 @@ public:
 	/// <param name="CustomPath">Custom Path to load from</param>
 	/// <param name="Plugins">Enable Plugin Loading</param>
 	/// <returns>TRUE if Process Created</returns>
-	static BOOL Start(LPSTR CustomPath);
+	static BOOL Start(LPWSTR CustomPath);
 
 	/// <summary>
 	/// Looks for plugins in the Plugins folder from the Loader's directory
@@ -41,7 +41,7 @@ public:
 	/// Sets the game's path to the specified path
 	/// </summary>
 	/// <param name="Path">Force the game path</param>
-	static void Set_GamePath(CHAR Path[MAX_PATH]);
+	static void Set_GamePath(LPWSTR Path);
 
 	/// <summary>
 	/// Creates Base Config File For "Yu-Gi-Oh-GUI". Other plugins may use this for their own configuration.
