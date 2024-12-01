@@ -1,5 +1,4 @@
 ﻿using Types;
-using Windows.Graphics.Printing.PrintSupport;
 
 namespace WolfX.Types
 {
@@ -26,19 +25,6 @@ namespace WolfX.Types
             }
             base.Dispose(disposing);
         }
-
-        public void UpdateDrawBox()
-        {
-            ///Draw Square Around Item in DFYMOO_Item Cordinates.
-            Rectangle Rect = new Rectangle(DFY_Item.ItemStartPoint.X, DFY_Item.ItemStartPoint.Y, DFY_Item.ItemDimensions.Y, DFY_Item.ItemDimensions.Y);
-            using (Brush _Brush = new SolidBrush(Color.Black))
-            {
-                using (Graphics _Graphics = DFY_Picture.CreateGraphics())
-                {
-                    _Graphics.DrawRectangle(new Pen(_Brush, 2), Rect);
-                }
-            }
-            }
 
         #region Windows Form Designer generated code
 
@@ -73,6 +59,7 @@ namespace WolfX.Types
             DFY_Picture.SizeMode = PictureBoxSizeMode.AutoSize;
             DFY_Picture.TabIndex = 0;
             DFY_Picture.TabStop = false;
+            DFY_Picture.Paint += DFY_Picture_Paint;
             // 
             // DfymooUI
             // 
@@ -97,5 +84,8 @@ namespace WolfX.Types
         public String _PicturePath;
         private Panel DFY_Picture_Container;
         public PictureBox DFY_Picture;
+        private Rectangle _Rect;
+        private Point _MovingStart;
+        private Boolean _MovingBox;
     }
 }

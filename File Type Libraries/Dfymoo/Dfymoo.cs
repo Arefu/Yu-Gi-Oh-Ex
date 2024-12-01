@@ -37,14 +37,14 @@ namespace Types
                 {
                     foreach (var Category in Line.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
                     {
-                        if (Category.StartsWith("n"))
+                        if (Category.StartsWith("n")) //DFYMOO Item Name
                             Item.ItemName = Category.Split(' ')[1];
-                        else if (Category.StartsWith("s"))
+                        else if (Category.StartsWith("s")) //DFYMOO Item Size
                         {
                             Item.ItemStartPoint = new Point(int.Parse(Category.Split(' ')[1]), int.Parse(Category.Split(' ')[2]));
                             Item.ItemDimensions = new Point(int.Parse(Category.Split(' ')[3]), int.Parse(Category.Split(' ')[4]));
                         }
-                        else if (Category.StartsWith("o"))
+                        else if (Category.StartsWith("o")) //?
                         {
                             Item.ItemOrigin = new Point(int.Parse(Category.Split(' ')[1]), int.Parse(Category.Split(' ')[2]));
                             Item.ItemOriginDimensions = new Point(int.Parse(Category.Split(' ')[3]), int.Parse(Category.Split(' ')[4]));
@@ -61,9 +61,27 @@ namespace Types
             return Items;
         }
 
-        static int Get_NumberOfItemsInDfymoo(string Path)
+        public static void Save(string Path, List<Dfymoo_Item> Items, Size ImageSize)
         {
-            return Load(Path).Count;
+            using (var Writer = new StreamWriter(Path))
+            {
+                Writer.WriteLine("i tk2d 1");
+                Writer.WriteLine($"w {ImageSize.Width}");
+                Writer.WriteLine($"h {ImageSize.Height}");
+                Writer.WriteLine("~");
+
+                foreach (var Item in Items)
+                {
+                    if(Item.ItemName != "")
+                        Writer.WriteLine($"n {Item.ItemName}");
+                    if(Item.ItemStartPoint != Point.Empty && Item.ItemDimensions != Point.Empty)
+                        Writer.WriteLine($"s {Item.ItemStartPoint.X} {Item.ItemStartPoint.Y} {Item.ItemDimensions.X} {Item.ItemDimensions.Y}");
+                    if (Item.ItemOrigin != Point.Empty && Item.ItemOriginDimensions != Point.Empty)
+                        Writer.WriteLine($"o {Item.ItemOrigin.X} {Item.ItemOrigin.Y} {Item.ItemOriginDimensions.X} {Item.ItemOriginDimensions.Y}");
+                    Writer.WriteLine("~");
+                }
+            }
         }
+
     }
 }

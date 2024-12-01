@@ -22,7 +22,9 @@ BOOL Game::Locate()
 	{
 		if (RegQueryValueExA(hKey, "InstallLocation", NULL, NULL, (LPBYTE)lGamePath, &dwSize) == ERROR_SUCCESS)
 		{
-			Set_GamePath(lGamePath);
+			strncpy(Game::gGamePath, lGamePath, MAX_PATH);
+			strncat(Game::gGameLocation, lGamePath, strlen(lGamePath));
+			strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
 		}
 		else
 			return FALSE;
@@ -47,11 +49,9 @@ BOOL Game::Start()
 	return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
 
-BOOL Game::Start(LPSTR CustomPath)
+BOOL Game::Start(LPWSTR CustomPath)
 {
-	if (Game::Check(CustomPath) == FALSE)
-		return FALSE;
-
+	
 	STARTUPINFO info = { sizeof(info) };
 	PROCESS_INFORMATION processInfo;
 
@@ -94,18 +94,21 @@ void Game::LookForPlugins()
 	FindClose(hFind);
 }
 
-void Game::Set_GamePath(CHAR Path[MAX_PATH])
+void Game::Set_GamePath(LPWSTR Path)
 {
-	strncpy(Game::gGamePath, Path, MAX_PATH);
-	strncat(Game::gGameLocation, Path, strlen(Path));
-	strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+    char charPath[MAX_PATH];
+    wcstombs(charPath, Path, MAX_PATH);
 
-	HKEY hKey;
-	if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
-	{
-		RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)Path, strlen(Path));
-		RegCloseKey(hKey);
-	}
+    strncpy(Game::gGamePath, charPath, MAX_PATH);
+    strncat(Game::gGameLocation, charPath, strlen(charPath));
+    strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+
+    HKEY hKey;
+    if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
+    {
+        RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)charPath, strlen(charPath));
+        RegCloseKey(hKey);
+    }
 }
 
 void Game::CreateConfig(LPCSTR ConfigName)

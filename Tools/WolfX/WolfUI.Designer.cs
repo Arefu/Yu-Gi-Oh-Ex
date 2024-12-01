@@ -1,4 +1,5 @@
-﻿using WolfX.Types;
+﻿using System.Security.Cryptography.X509Certificates;
+using WolfX.Types;
 
 namespace WolfX
 {
@@ -84,13 +85,17 @@ namespace WolfX
             lbl_NamePrompt = new Label();
             Page_DFYMOOManager = new TabPage();
             groupBox7 = new GroupBox();
+            label7 = new Label();
+            DFY_NUD_W = new NumericUpDown();
             DFY_NUD_Y = new NumericUpDown();
+            DFY_NUD_H = new NumericUpDown();
             DFY_NUD_X = new NumericUpDown();
             DFY_POS_Y = new Label();
+            label8 = new Label();
             DFY_POS_X = new Label();
             DFYMOO_ItemList = new ListView();
             groupBox8 = new GroupBox();
-            button3 = new Button();
+            DFY_BTN_Save = new Button();
             DFY_BTN_Load = new Button();
             checkBox4 = new CheckBox();
             groupBox9 = new GroupBox();
@@ -120,10 +125,6 @@ namespace WolfX
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
-            DFY_NUD_W = new NumericUpDown();
-            DFY_NUD_H = new NumericUpDown();
-            label7 = new Label();
-            label8 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -138,14 +139,14 @@ namespace WolfX
             groupBox3.SuspendLayout();
             Page_DFYMOOManager.SuspendLayout();
             groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DFY_NUD_W).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_Y).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DFY_NUD_H).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_X).BeginInit();
             groupBox8.SuspendLayout();
             groupBox9.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)DFY_NUD_W).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DFY_NUD_H).BeginInit();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -669,6 +670,25 @@ namespace WolfX
             groupBox7.TabStop = false;
             groupBox7.Text = "DFYMOO Pos and Size";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(96, 51);
+            label7.Name = "label7";
+            label7.Size = new Size(21, 15);
+            label7.TabIndex = 5;
+            label7.Text = "W:";
+            // 
+            // DFY_NUD_W
+            // 
+            DFY_NUD_W.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DFY_NUD_W.Location = new Point(123, 47);
+            DFY_NUD_W.Maximum = new decimal(new int[] { -1, int.MaxValue, 0, 0 });
+            DFY_NUD_W.Name = "DFY_NUD_W";
+            DFY_NUD_W.Size = new Size(64, 22);
+            DFY_NUD_W.TabIndex = 7;
+            DFY_NUD_W.ValueChanged += DFY_NUD_W_ValueChanged;
+            // 
             // DFY_NUD_Y
             // 
             DFY_NUD_Y.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -677,6 +697,17 @@ namespace WolfX
             DFY_NUD_Y.Name = "DFY_NUD_Y";
             DFY_NUD_Y.Size = new Size(64, 22);
             DFY_NUD_Y.TabIndex = 3;
+            DFY_NUD_Y.ValueChanged += DFY_NUD_Y_ValueChanged;
+            // 
+            // DFY_NUD_H
+            // 
+            DFY_NUD_H.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DFY_NUD_H.Location = new Point(123, 19);
+            DFY_NUD_H.Maximum = new decimal(new int[] { -1, int.MaxValue, 0, 0 });
+            DFY_NUD_H.Name = "DFY_NUD_H";
+            DFY_NUD_H.Size = new Size(64, 22);
+            DFY_NUD_H.TabIndex = 6;
+            DFY_NUD_H.ValueChanged += DFY_NUD_H_ValueChanged;
             // 
             // DFY_NUD_X
             // 
@@ -686,6 +717,7 @@ namespace WolfX
             DFY_NUD_X.Name = "DFY_NUD_X";
             DFY_NUD_X.Size = new Size(64, 22);
             DFY_NUD_X.TabIndex = 2;
+            DFY_NUD_X.ValueChanged += DFY_NUD_X_ValueChanged;
             // 
             // DFY_POS_Y
             // 
@@ -695,6 +727,15 @@ namespace WolfX
             DFY_POS_Y.Size = new Size(17, 15);
             DFY_POS_Y.TabIndex = 1;
             DFY_POS_Y.Text = "Y:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(98, 23);
+            label8.Name = "label8";
+            label8.Size = new Size(19, 15);
+            label8.TabIndex = 4;
+            label8.Text = "H:";
             // 
             // DFY_POS_X
             // 
@@ -708,6 +749,7 @@ namespace WolfX
             // DFYMOO_ItemList
             // 
             DFYMOO_ItemList.GridLines = true;
+            DFYMOO_ItemList.HideSelection = true;
             DFYMOO_ItemList.Location = new Point(6, 112);
             DFYMOO_ItemList.MultiSelect = false;
             DFYMOO_ItemList.Name = "DFYMOO_ItemList";
@@ -719,7 +761,7 @@ namespace WolfX
             // 
             // groupBox8
             // 
-            groupBox8.Controls.Add(button3);
+            groupBox8.Controls.Add(DFY_BTN_Save);
             groupBox8.Controls.Add(DFY_BTN_Load);
             groupBox8.Controls.Add(checkBox4);
             groupBox8.Location = new Point(225, 6);
@@ -729,15 +771,15 @@ namespace WolfX
             groupBox8.TabStop = false;
             groupBox8.Text = "DFYMOO Tools";
             // 
-            // button3
+            // DFY_BTN_Save
             // 
-            button3.Enabled = false;
-            button3.Location = new Point(119, 69);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 25);
-            button3.TabIndex = 4;
-            button3.Text = "Save";
-            button3.UseVisualStyleBackColor = true;
+            DFY_BTN_Save.Location = new Point(119, 69);
+            DFY_BTN_Save.Name = "DFY_BTN_Save";
+            DFY_BTN_Save.Size = new Size(75, 25);
+            DFY_BTN_Save.TabIndex = 4;
+            DFY_BTN_Save.Text = "Save";
+            DFY_BTN_Save.UseVisualStyleBackColor = true;
+            DFY_BTN_Save.Click += DFY_BTN_Save_Click;
             // 
             // DFY_BTN_Load
             // 
@@ -969,42 +1011,6 @@ namespace WolfX
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
             // 
-            // DFY_NUD_W
-            // 
-            DFY_NUD_W.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DFY_NUD_W.Location = new Point(123, 47);
-            DFY_NUD_W.Maximum = new decimal(new int[] { -1, int.MaxValue, 0, 0 });
-            DFY_NUD_W.Name = "DFY_NUD_W";
-            DFY_NUD_W.Size = new Size(64, 22);
-            DFY_NUD_W.TabIndex = 7;
-            // 
-            // DFY_NUD_H
-            // 
-            DFY_NUD_H.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DFY_NUD_H.Location = new Point(123, 19);
-            DFY_NUD_H.Maximum = new decimal(new int[] { -1, int.MaxValue, 0, 0 });
-            DFY_NUD_H.Name = "DFY_NUD_H";
-            DFY_NUD_H.Size = new Size(64, 22);
-            DFY_NUD_H.TabIndex = 6;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(96, 51);
-            label7.Name = "label7";
-            label7.Size = new Size(21, 15);
-            label7.TabIndex = 5;
-            label7.Text = "W:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(98, 23);
-            label8.Name = "label8";
-            label8.Size = new Size(19, 15);
-            label8.TabIndex = 4;
-            label8.Text = "H:";
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1040,7 +1046,9 @@ namespace WolfX
             Page_DFYMOOManager.ResumeLayout(false);
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DFY_NUD_W).EndInit();
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_Y).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DFY_NUD_H).EndInit();
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_X).EndInit();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
@@ -1050,8 +1058,6 @@ namespace WolfX
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
             Status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DFY_NUD_W).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DFY_NUD_H).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1132,7 +1138,7 @@ namespace WolfX
         private ToolStripMenuItem extractGameToolStripMenuItem;
         private ToolStripMenuItem packGameToolStripMenuItem;
         private GroupBox groupBox8;
-        public Button button3;
+        public Button DFY_BTN_Save;
         private Button DFY_BTN_Load;
         public CheckBox checkBox4;
         private GroupBox groupBox9;
@@ -1142,12 +1148,12 @@ namespace WolfX
         private Label label12;
         private ListView DFYMOO_ItemList;
         private GroupBox groupBox7;
-        private NumericUpDown DFY_NUD_Y;
-        private NumericUpDown DFY_NUD_X;
+        public NumericUpDown DFY_NUD_Y;
+        public NumericUpDown DFY_NUD_X;
         private Label DFY_POS_Y;
         private Label DFY_POS_X;
-        private NumericUpDown DFY_NUD_W;
-        private NumericUpDown DFY_NUD_H;
+        public NumericUpDown DFY_NUD_W;
+        public NumericUpDown DFY_NUD_H;
         private Label label7;
         private Label label8;
     }
