@@ -1,10 +1,10 @@
-#include <Windows.h>
-#include <detours.h>
-#include <Shlwapi.h>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <Shlwapi.h>
+#include <detours.h>
 #include <string>
 #include <vector>
+#include <Windows.h>
 
 #include "Game.h"
 TCHAR Game::gGamePath[MAX_PATH];
@@ -99,22 +99,26 @@ void Game::Set_GamePath(CHAR Path[MAX_PATH])
 	strncpy(Game::gGamePath, Path, MAX_PATH);
 	strncat(Game::gGameLocation, Path, strlen(Path));
 	strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+
+	HKEY hKey;
+	if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
+	{
+		RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)Path, strlen(Path));
+		RegCloseKey(hKey);
+	}
 }
 
 void Game::CreateConfig(LPCSTR ConfigName)
 {
-	// Create Config File in the same directory as the game
 	CHAR ConfigPath[MAX_PATH];
 	strncpy(ConfigPath, gGamePath, MAX_PATH);
-	//Append slash
 	strncat(ConfigPath, "\\", sizeof("\\"));
-	//Append Config Name
 	strncat(ConfigPath, ConfigName, strlen(ConfigName));
 
 	if (PathFileExistsA(ConfigPath) == FALSE)
 	{
 		std::ofstream ConfigFile(ConfigPath);
-		//Find Current directory
+
 		char CurrentDir[MAX_PATH];
 		GetCurrentDirectoryA(MAX_PATH, CurrentDir);
 		ConfigFile << "[Yu-Gi-Oh-GUI]" << std::endl;

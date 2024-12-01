@@ -368,11 +368,16 @@ namespace WolfX
 
         private void lv_DfymooItems_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-         
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void DFY_BTN_Load_Click(object sender, EventArgs e)
         {
+            WolfUI.Form.DFYMOO_ItemList.Items.Clear();
+
+            if (Editor != null)
+                Editor.Close();
+
             using var OpenFile = new OpenFileDialog();
             OpenFile.Title = "Select DFYMOO File";
             OpenFile.Filter = "DFYMOO File|*.dfymoo";
@@ -382,16 +387,45 @@ namespace WolfX
                 return;
             }
 
-            var Items = Dfymoo.Load(OpenFile.FileName);
+            Editor = new DfymooUI(Path.GetFullPath(OpenFile.FileName));
+            Editor.DFY_Items = Dfymoo.Load(OpenFile.FileName);
+
+            foreach (var Item in Editor.DFY_Items)
+            {
+                this.DFYMOO_ItemList.Items.Add(Item.ItemName);
+            }
 
             WolfUI.Form.lbl_Dfymoo_name.Text = OpenFile.SafeFileName;
-            WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = Items.Count.ToString();
+            WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = Editor.DFY_Items.Count.ToString();
+
+
+            Editor.Show();
+        }
+
+        private void DFYMOO_ItemList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if(!e.IsSelected)
+                return;
+
+            var Item = e.Item;
+            foreach(var DFY in Editor.DFY_Items)
+            {
+                if (DFY.ItemName == Item.Text)
+                {
+                    Editor.DFY_Item = DFY;
+                    break;
+                }
+            }
+
+            DFY_NUD_X.Value = Editor.DFY_Item.ItemStartPoint.X;
+            DFY_NUD_Y.Value = Editor.DFY_Item.ItemStartPoint.Y;
+
+            DFY_NUD_W.Value = Editor.DFY_Item.ItemDimensions.X;
+            DFY_NUD_H.Value = Editor.DFY_Item.ItemDimensions.Y;
 
            
-            foreach(var Item in Items)
-            {
-              
-            }
+            Editor.UpdateDrawBox();
+            Editor.DFY_Picture.Image = Image.FromFile(Editor._PicturePath.Replace(".dfymoo", ".png"));
         }
     }
 }
