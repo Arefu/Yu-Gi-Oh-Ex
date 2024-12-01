@@ -16,12 +16,15 @@
 # Mono auto generated files
 mono_crash.*
 
-# Build results
-[Dd]ebug/
+# Don't publish YGO Files
+YGO_2020*
+*.idb
+*.recipe
+*.tlog
+*.txt
+# Build results - We're going to ship my Binaries
 [Dd]ebugPublic/
-[Rr]elease/
 [Rr]eleases/
-x64/
 x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
@@ -73,6 +76,8 @@ StyleCopReport.xml
 *.iobj
 *.pch
 *.pdb
+*.exp
+*.lib
 *.ipdb
 *.pgc
 *.pgd

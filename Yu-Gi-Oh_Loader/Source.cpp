@@ -8,6 +8,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	PSTR lpCmdLine, int nCmdShow)
 {
 	Game::Locate();
-
+	Game::CreateConfig("Config.ini");
 	return Game::Start();
 }
