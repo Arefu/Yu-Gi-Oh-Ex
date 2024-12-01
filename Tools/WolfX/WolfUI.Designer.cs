@@ -103,6 +103,14 @@ namespace WolfX
             lbl_Dfymoo_name = new Label();
             label10 = new Label();
             label12 = new Label();
+            Page_ANIMLISTManager = new TabPage();
+            ANIMS_LV_ItemsInScene = new ListView();
+            groupBox10 = new GroupBox();
+            ANIMS_BTN_SaveScene = new Button();
+            ANIMS_BTN_OpenScene = new Button();
+            ANIM_GB_Info = new GroupBox();
+            ANIMS_LBL_Count = new Label();
+            ANIMS_LBL_NumOfItems = new Label();
             MenuBar = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             File_Open = new ToolStripMenuItem();
@@ -110,8 +118,8 @@ namespace WolfX
             toolStripSeparator1 = new ToolStripSeparator();
             File_Exit = new ToolStripMenuItem();
             toolsToolStripMenuItem = new ToolStripMenuItem();
-            extractGameToolStripMenuItem = new ToolStripMenuItem();
-            packGameToolStripMenuItem = new ToolStripMenuItem();
+            WOLFUI_TOOLITEM_Extract = new ToolStripMenuItem();
+            WOLFUI_TOOLITEM_Pack = new ToolStripMenuItem();
             Tools_Verify = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             languageToolStripMenuItem = new ToolStripMenuItem();
@@ -145,6 +153,9 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_X).BeginInit();
             groupBox8.SuspendLayout();
             groupBox9.SuspendLayout();
+            Page_ANIMLISTManager.SuspendLayout();
+            groupBox10.SuspendLayout();
+            ANIM_GB_Info.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
             SuspendLayout();
@@ -154,6 +165,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_CardManager);
             WolfX_TabManager.Controls.Add(Page_ZibManager);
             WolfX_TabManager.Controls.Add(Page_DFYMOOManager);
+            WolfX_TabManager.Controls.Add(Page_ANIMLISTManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -849,6 +861,85 @@ namespace WolfX
             label12.TabIndex = 0;
             label12.Text = "Name:";
             // 
+            // Page_ANIMLISTManager
+            // 
+            Page_ANIMLISTManager.Controls.Add(ANIMS_LV_ItemsInScene);
+            Page_ANIMLISTManager.Controls.Add(groupBox10);
+            Page_ANIMLISTManager.Controls.Add(ANIM_GB_Info);
+            Page_ANIMLISTManager.Location = new Point(4, 24);
+            Page_ANIMLISTManager.Name = "Page_ANIMLISTManager";
+            Page_ANIMLISTManager.Size = new Size(651, 629);
+            Page_ANIMLISTManager.TabIndex = 3;
+            Page_ANIMLISTManager.Text = "Animlist Manager";
+            Page_ANIMLISTManager.UseVisualStyleBackColor = true;
+            // 
+            // ANIMS_LV_ItemsInScene
+            // 
+            ANIMS_LV_ItemsInScene.Location = new Point(6, 112);
+            ANIMS_LV_ItemsInScene.Name = "ANIMS_LV_ItemsInScene";
+            ANIMS_LV_ItemsInScene.Size = new Size(639, 496);
+            ANIMS_LV_ItemsInScene.TabIndex = 6;
+            ANIMS_LV_ItemsInScene.UseCompatibleStateImageBehavior = false;
+            // 
+            // groupBox10
+            // 
+            groupBox10.Controls.Add(ANIMS_BTN_SaveScene);
+            groupBox10.Controls.Add(ANIMS_BTN_OpenScene);
+            groupBox10.Location = new Point(225, 6);
+            groupBox10.Name = "groupBox10";
+            groupBox10.Size = new Size(200, 100);
+            groupBox10.TabIndex = 5;
+            groupBox10.TabStop = false;
+            groupBox10.Text = "Animlist Tools";
+            // 
+            // ANIMS_BTN_SaveScene
+            // 
+            ANIMS_BTN_SaveScene.Location = new Point(119, 22);
+            ANIMS_BTN_SaveScene.Name = "ANIMS_BTN_SaveScene";
+            ANIMS_BTN_SaveScene.Size = new Size(75, 25);
+            ANIMS_BTN_SaveScene.TabIndex = 4;
+            ANIMS_BTN_SaveScene.Text = "Save";
+            ANIMS_BTN_SaveScene.UseVisualStyleBackColor = true;
+            // 
+            // ANIMS_BTN_OpenScene
+            // 
+            ANIMS_BTN_OpenScene.Location = new Point(6, 22);
+            ANIMS_BTN_OpenScene.Name = "ANIMS_BTN_OpenScene";
+            ANIMS_BTN_OpenScene.Size = new Size(107, 25);
+            ANIMS_BTN_OpenScene.TabIndex = 2;
+            ANIMS_BTN_OpenScene.Text = "Open Animlist";
+            ANIMS_BTN_OpenScene.UseVisualStyleBackColor = true;
+            ANIMS_BTN_OpenScene.Click += ANIMS_BTN_OpenScene_Click;
+            // 
+            // ANIM_GB_Info
+            // 
+            ANIM_GB_Info.Controls.Add(ANIMS_LBL_Count);
+            ANIM_GB_Info.Controls.Add(ANIMS_LBL_NumOfItems);
+            ANIM_GB_Info.Location = new Point(19, 6);
+            ANIM_GB_Info.Name = "ANIM_GB_Info";
+            ANIM_GB_Info.Size = new Size(200, 100);
+            ANIM_GB_Info.TabIndex = 0;
+            ANIM_GB_Info.TabStop = false;
+            ANIM_GB_Info.Text = "Animlist Information";
+            // 
+            // ANIMS_LBL_Count
+            // 
+            ANIMS_LBL_Count.AutoSize = true;
+            ANIMS_LBL_Count.Location = new Point(98, 19);
+            ANIMS_LBL_Count.Name = "ANIMS_LBL_Count";
+            ANIMS_LBL_Count.Size = new Size(13, 15);
+            ANIMS_LBL_Count.TabIndex = 1;
+            ANIMS_LBL_Count.Text = "0";
+            // 
+            // ANIMS_LBL_NumOfItems
+            // 
+            ANIMS_LBL_NumOfItems.AutoSize = true;
+            ANIMS_LBL_NumOfItems.Location = new Point(6, 19);
+            ANIMS_LBL_NumOfItems.Name = "ANIMS_LBL_NumOfItems";
+            ANIMS_LBL_NumOfItems.Size = new Size(86, 15);
+            ANIMS_LBL_NumOfItems.TabIndex = 0;
+            ANIMS_LBL_NumOfItems.Text = "Items In Scene:";
+            // 
             // MenuBar
             // 
             MenuBar.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem });
@@ -895,26 +986,26 @@ namespace WolfX
             // 
             // toolsToolStripMenuItem
             // 
-            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { extractGameToolStripMenuItem, packGameToolStripMenuItem, Tools_Verify, toolStripSeparator2, languageToolStripMenuItem });
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, Tools_Verify, toolStripSeparator2, languageToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             toolsToolStripMenuItem.Size = new Size(46, 20);
             toolsToolStripMenuItem.Text = "&Tools";
             // 
-            // extractGameToolStripMenuItem
+            // WOLFUI_TOOLITEM_Extract
             // 
-            extractGameToolStripMenuItem.Name = "extractGameToolStripMenuItem";
-            extractGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
-            extractGameToolStripMenuItem.Size = new Size(184, 22);
-            extractGameToolStripMenuItem.Text = "&Extract Game";
-            extractGameToolStripMenuItem.Click += extractGameToolStripMenuItem_Click;
+            WOLFUI_TOOLITEM_Extract.Name = "WOLFUI_TOOLITEM_Extract";
+            WOLFUI_TOOLITEM_Extract.ShortcutKeys = Keys.Control | Keys.E;
+            WOLFUI_TOOLITEM_Extract.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_Extract.Text = "&Extract Game";
+            WOLFUI_TOOLITEM_Extract.Click += WOLFUI_TOOLITEM_Extract_Click;
             // 
-            // packGameToolStripMenuItem
+            // WOLFUI_TOOLITEM_Pack
             // 
-            packGameToolStripMenuItem.Name = "packGameToolStripMenuItem";
-            packGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.P;
-            packGameToolStripMenuItem.Size = new Size(184, 22);
-            packGameToolStripMenuItem.Text = "&Pack Game";
-            packGameToolStripMenuItem.Click += packGameToolStripMenuItem_Click;
+            WOLFUI_TOOLITEM_Pack.Name = "WOLFUI_TOOLITEM_Pack";
+            WOLFUI_TOOLITEM_Pack.ShortcutKeys = Keys.Control | Keys.P;
+            WOLFUI_TOOLITEM_Pack.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_Pack.Text = "&Pack Game";
+            WOLFUI_TOOLITEM_Pack.Click += WOLFUI_TOOLITEM_Pack_Click;
             // 
             // Tools_Verify
             // 
@@ -1053,6 +1144,10 @@ namespace WolfX
             groupBox8.PerformLayout();
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
+            Page_ANIMLISTManager.ResumeLayout(false);
+            groupBox10.ResumeLayout(false);
+            ANIM_GB_Info.ResumeLayout(false);
+            ANIM_GB_Info.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
@@ -1134,8 +1229,8 @@ namespace WolfX
         private GroupBox groupBox6;
         public CheckBox CB_LoadCensoredCards;
         private TextBox textBox1;
-        private ToolStripMenuItem extractGameToolStripMenuItem;
-        private ToolStripMenuItem packGameToolStripMenuItem;
+        private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
+        private ToolStripMenuItem WOLFUI_TOOLITEM_Pack;
         private GroupBox groupBox8;
         public Button DFY_BTN_Save;
         private Button DFY_BTN_Load;
@@ -1155,5 +1250,13 @@ namespace WolfX
         public NumericUpDown DFY_NUD_H;
         private Label label7;
         private Label label8;
+        private TabPage Page_ANIMLISTManager;
+        private ListView ANIMS_LV_ItemsInScene;
+        private GroupBox groupBox10;
+        public Button ANIMS_BTN_SaveScene;
+        private Button ANIMS_BTN_OpenScene;
+        private GroupBox ANIM_GB_Info;
+        private Label ANIMS_LBL_Count;
+        private Label ANIMS_LBL_NumOfItems;
     }
 }
