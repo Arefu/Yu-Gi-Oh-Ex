@@ -749,7 +749,6 @@ namespace WolfX
             // DFYMOO_ItemList
             // 
             DFYMOO_ItemList.GridLines = true;
-            DFYMOO_ItemList.HideSelection = true;
             DFYMOO_ItemList.Location = new Point(6, 112);
             DFYMOO_ItemList.MultiSelect = false;
             DFYMOO_ItemList.Name = "DFYMOO_ItemList";
