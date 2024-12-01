@@ -66,20 +66,16 @@ namespace WolfX
             Context = new ContextMenuStrip(components);
             ReplaceImage = new ToolStripMenuItem();
             Page_ZibManager = new TabPage();
-            textBox1 = new TextBox();
-            groupBox5 = new GroupBox();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
             groupBox4 = new GroupBox();
-            btn_CloseArchive = new Button();
-            cb_ShowFileName = new CheckBox();
-            btn_ExtractAll = new Button();
-            cb_ShowPicturePreview = new CheckBox();
-            lv_ArchivePreviewer = new ListView();
+            ARCHIVE_BTN_OpenZIB = new Button();
+            ARCHIVE_BTN_SaveZIB = new Button();
+            ARCHIVE_CB_ExtractZIB = new Button();
+            ARCHIVE_CB_ShowPreviewImage = new CheckBox();
+            ARCHIVE_LV_ArchiveItems = new ListView();
             groupBox3 = new GroupBox();
-            lbl_ItemCount = new Label();
-            lbl_Size = new Label();
-            lbl_Name = new Label();
+            ARCHIVE_LBL_ArchiveItems = new Label();
+            ARCHIVE_LBL_ArchiveSize = new Label();
+            ARCHIVE_LBL_ArchiveName = new Label();
             lbl_NumberOfItemsPrompt = new Label();
             lbl_FileSizePrompt = new Label();
             lbl_NamePrompt = new Label();
@@ -142,7 +138,6 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)PB_CardPicture).BeginInit();
             Context.SuspendLayout();
             Page_ZibManager.SuspendLayout();
-            groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             Page_DFYMOOManager.SuspendLayout();
@@ -465,10 +460,8 @@ namespace WolfX
             // 
             // Page_ZibManager
             // 
-            Page_ZibManager.Controls.Add(textBox1);
-            Page_ZibManager.Controls.Add(groupBox5);
             Page_ZibManager.Controls.Add(groupBox4);
-            Page_ZibManager.Controls.Add(lv_ArchivePreviewer);
+            Page_ZibManager.Controls.Add(ARCHIVE_LV_ArchiveItems);
             Page_ZibManager.Controls.Add(groupBox3);
             Page_ZibManager.Location = new Point(4, 24);
             Page_ZibManager.Name = "Page_ZibManager";
@@ -478,49 +471,12 @@ namespace WolfX
             Page_ZibManager.Text = "Archive Manager";
             Page_ZibManager.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(24, 398);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(8, 23);
-            textBox1.TabIndex = 3;
-            // 
-            // groupBox5
-            // 
-            groupBox5.Controls.Add(checkBox1);
-            groupBox5.Controls.Add(button1);
-            groupBox5.Location = new Point(420, 6);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(200, 100);
-            groupBox5.TabIndex = 2;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Packing Tools";
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(6, 22);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(158, 19);
-            checkBox1.TabIndex = 1;
-            checkBox1.Text = "Auto Copy When Packed";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(6, 69);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 25);
-            button1.TabIndex = 0;
-            button1.Text = "Pack Content";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(btn_CloseArchive);
-            groupBox4.Controls.Add(cb_ShowFileName);
-            groupBox4.Controls.Add(btn_ExtractAll);
-            groupBox4.Controls.Add(cb_ShowPicturePreview);
+            groupBox4.Controls.Add(ARCHIVE_BTN_OpenZIB);
+            groupBox4.Controls.Add(ARCHIVE_BTN_SaveZIB);
+            groupBox4.Controls.Add(ARCHIVE_CB_ExtractZIB);
+            groupBox4.Controls.Add(ARCHIVE_CB_ShowPreviewImage);
             groupBox4.Location = new Point(214, 6);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(200, 100);
@@ -528,68 +484,63 @@ namespace WolfX
             groupBox4.TabStop = false;
             groupBox4.Text = "Archive Tools";
             // 
-            // btn_CloseArchive
+            // ARCHIVE_BTN_OpenZIB
             // 
-            btn_CloseArchive.Enabled = false;
-            btn_CloseArchive.Location = new Point(119, 69);
-            btn_CloseArchive.Name = "btn_CloseArchive";
-            btn_CloseArchive.Size = new Size(75, 25);
-            btn_CloseArchive.TabIndex = 4;
-            btn_CloseArchive.Text = "Close";
-            btn_CloseArchive.UseVisualStyleBackColor = true;
-            btn_CloseArchive.Click += btn_CloseArchive_Click;
+            ARCHIVE_BTN_OpenZIB.Location = new Point(6, 42);
+            ARCHIVE_BTN_OpenZIB.Name = "ARCHIVE_BTN_OpenZIB";
+            ARCHIVE_BTN_OpenZIB.Size = new Size(75, 25);
+            ARCHIVE_BTN_OpenZIB.TabIndex = 5;
+            ARCHIVE_BTN_OpenZIB.Text = "Open";
+            ARCHIVE_BTN_OpenZIB.UseVisualStyleBackColor = true;
+            ARCHIVE_BTN_OpenZIB.Click += ARCHIVE_BTN_OpenZIB_Click;
             // 
-            // cb_ShowFileName
+            // ARCHIVE_BTN_SaveZIB
             // 
-            cb_ShowFileName.AutoSize = true;
-            cb_ShowFileName.Checked = true;
-            cb_ShowFileName.CheckState = CheckState.Checked;
-            cb_ShowFileName.Location = new Point(6, 44);
-            cb_ShowFileName.Name = "cb_ShowFileName";
-            cb_ShowFileName.Size = new Size(111, 19);
-            cb_ShowFileName.TabIndex = 3;
-            cb_ShowFileName.Text = "Show File Name";
-            cb_ShowFileName.UseVisualStyleBackColor = true;
+            ARCHIVE_BTN_SaveZIB.Location = new Point(6, 69);
+            ARCHIVE_BTN_SaveZIB.Name = "ARCHIVE_BTN_SaveZIB";
+            ARCHIVE_BTN_SaveZIB.Size = new Size(75, 25);
+            ARCHIVE_BTN_SaveZIB.TabIndex = 4;
+            ARCHIVE_BTN_SaveZIB.Text = "Save";
+            ARCHIVE_BTN_SaveZIB.UseVisualStyleBackColor = true;
+            ARCHIVE_BTN_SaveZIB.Click += ARCHIVE_BTN_SaveZIB_Click;
             // 
-            // btn_ExtractAll
+            // ARCHIVE_CB_ExtractZIB
             // 
-            btn_ExtractAll.Location = new Point(6, 69);
-            btn_ExtractAll.Name = "btn_ExtractAll";
-            btn_ExtractAll.Size = new Size(107, 25);
-            btn_ExtractAll.TabIndex = 2;
-            btn_ExtractAll.Text = "Extract Content";
-            btn_ExtractAll.UseVisualStyleBackColor = true;
-            btn_ExtractAll.Click += btn_ExtractAll_Click;
+            ARCHIVE_CB_ExtractZIB.Enabled = false;
+            ARCHIVE_CB_ExtractZIB.Location = new Point(87, 42);
+            ARCHIVE_CB_ExtractZIB.Name = "ARCHIVE_CB_ExtractZIB";
+            ARCHIVE_CB_ExtractZIB.Size = new Size(107, 25);
+            ARCHIVE_CB_ExtractZIB.TabIndex = 2;
+            ARCHIVE_CB_ExtractZIB.Text = "Extract Content";
+            ARCHIVE_CB_ExtractZIB.UseVisualStyleBackColor = true;
+            ARCHIVE_CB_ExtractZIB.Click += ARCHIVE_BTN_ExtractZIB_Click;
             // 
-            // cb_ShowPicturePreview
+            // ARCHIVE_CB_ShowPreviewImage
             // 
-            cb_ShowPicturePreview.AutoSize = true;
-            cb_ShowPicturePreview.Checked = true;
-            cb_ShowPicturePreview.CheckState = CheckState.Checked;
-            cb_ShowPicturePreview.Location = new Point(6, 22);
-            cb_ShowPicturePreview.Name = "cb_ShowPicturePreview";
-            cb_ShowPicturePreview.Size = new Size(139, 19);
-            cb_ShowPicturePreview.TabIndex = 1;
-            cb_ShowPicturePreview.Text = "Show Picture Preview";
-            cb_ShowPicturePreview.UseVisualStyleBackColor = true;
+            ARCHIVE_CB_ShowPreviewImage.AutoSize = true;
+            ARCHIVE_CB_ShowPreviewImage.Location = new Point(6, 17);
+            ARCHIVE_CB_ShowPreviewImage.Name = "ARCHIVE_CB_ShowPreviewImage";
+            ARCHIVE_CB_ShowPreviewImage.Size = new Size(139, 19);
+            ARCHIVE_CB_ShowPreviewImage.TabIndex = 1;
+            ARCHIVE_CB_ShowPreviewImage.Text = "Show Picture Preview";
+            ARCHIVE_CB_ShowPreviewImage.UseVisualStyleBackColor = true;
             // 
-            // lv_ArchivePreviewer
+            // ARCHIVE_LV_ArchiveItems
             // 
-            lv_ArchivePreviewer.Location = new Point(8, 112);
-            lv_ArchivePreviewer.MultiSelect = false;
-            lv_ArchivePreviewer.Name = "lv_ArchivePreviewer";
-            lv_ArchivePreviewer.ShowGroups = false;
-            lv_ArchivePreviewer.Size = new Size(637, 496);
-            lv_ArchivePreviewer.TabIndex = 1;
-            lv_ArchivePreviewer.UseCompatibleStateImageBehavior = false;
-            lv_ArchivePreviewer.View = View.SmallIcon;
-            lv_ArchivePreviewer.MouseDoubleClick += Lv_ArchivePreviewer_MouseDoubleClick;
+            ARCHIVE_LV_ArchiveItems.Location = new Point(8, 112);
+            ARCHIVE_LV_ArchiveItems.MultiSelect = false;
+            ARCHIVE_LV_ArchiveItems.Name = "ARCHIVE_LV_ArchiveItems";
+            ARCHIVE_LV_ArchiveItems.ShowGroups = false;
+            ARCHIVE_LV_ArchiveItems.Size = new Size(637, 496);
+            ARCHIVE_LV_ArchiveItems.TabIndex = 1;
+            ARCHIVE_LV_ArchiveItems.UseCompatibleStateImageBehavior = false;
+            ARCHIVE_LV_ArchiveItems.MouseDoubleClick += ARCHIVE_LV_ArchiveItems_MouseDoubleClick;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(lbl_ItemCount);
-            groupBox3.Controls.Add(lbl_Size);
-            groupBox3.Controls.Add(lbl_Name);
+            groupBox3.Controls.Add(ARCHIVE_LBL_ArchiveItems);
+            groupBox3.Controls.Add(ARCHIVE_LBL_ArchiveSize);
+            groupBox3.Controls.Add(ARCHIVE_LBL_ArchiveName);
             groupBox3.Controls.Add(lbl_NumberOfItemsPrompt);
             groupBox3.Controls.Add(lbl_FileSizePrompt);
             groupBox3.Controls.Add(lbl_NamePrompt);
@@ -600,29 +551,29 @@ namespace WolfX
             groupBox3.TabStop = false;
             groupBox3.Text = "Archive Info";
             // 
-            // lbl_ItemCount
+            // ARCHIVE_LBL_ArchiveItems
             // 
-            lbl_ItemCount.AutoSize = true;
-            lbl_ItemCount.Location = new Point(114, 65);
-            lbl_ItemCount.Name = "lbl_ItemCount";
-            lbl_ItemCount.Size = new Size(0, 15);
-            lbl_ItemCount.TabIndex = 5;
+            ARCHIVE_LBL_ArchiveItems.AutoSize = true;
+            ARCHIVE_LBL_ArchiveItems.Location = new Point(114, 65);
+            ARCHIVE_LBL_ArchiveItems.Name = "ARCHIVE_LBL_ArchiveItems";
+            ARCHIVE_LBL_ArchiveItems.Size = new Size(0, 15);
+            ARCHIVE_LBL_ArchiveItems.TabIndex = 5;
             // 
-            // lbl_Size
+            // ARCHIVE_LBL_ArchiveSize
             // 
-            lbl_Size.AutoSize = true;
-            lbl_Size.Location = new Point(63, 42);
-            lbl_Size.Name = "lbl_Size";
-            lbl_Size.Size = new Size(0, 15);
-            lbl_Size.TabIndex = 4;
+            ARCHIVE_LBL_ArchiveSize.AutoSize = true;
+            ARCHIVE_LBL_ArchiveSize.Location = new Point(63, 42);
+            ARCHIVE_LBL_ArchiveSize.Name = "ARCHIVE_LBL_ArchiveSize";
+            ARCHIVE_LBL_ArchiveSize.Size = new Size(0, 15);
+            ARCHIVE_LBL_ArchiveSize.TabIndex = 4;
             // 
-            // lbl_Name
+            // ARCHIVE_LBL_ArchiveName
             // 
-            lbl_Name.AutoSize = true;
-            lbl_Name.Location = new Point(54, 19);
-            lbl_Name.Name = "lbl_Name";
-            lbl_Name.Size = new Size(0, 15);
-            lbl_Name.TabIndex = 3;
+            ARCHIVE_LBL_ArchiveName.AutoSize = true;
+            ARCHIVE_LBL_ArchiveName.Location = new Point(54, 19);
+            ARCHIVE_LBL_ArchiveName.Name = "ARCHIVE_LBL_ArchiveName";
+            ARCHIVE_LBL_ArchiveName.Size = new Size(0, 15);
+            ARCHIVE_LBL_ArchiveName.TabIndex = 3;
             // 
             // lbl_NumberOfItemsPrompt
             // 
@@ -675,7 +626,7 @@ namespace WolfX
             groupBox7.Controls.Add(DFY_POS_Y);
             groupBox7.Controls.Add(label8);
             groupBox7.Controls.Add(DFY_POS_X);
-            groupBox7.Location = new Point(431, 6);
+            groupBox7.Location = new Point(420, 6);
             groupBox7.Name = "groupBox7";
             groupBox7.Size = new Size(200, 100);
             groupBox7.TabIndex = 5;
@@ -775,7 +726,7 @@ namespace WolfX
             groupBox8.Controls.Add(DFY_BTN_Save);
             groupBox8.Controls.Add(DFY_BTN_Load);
             groupBox8.Controls.Add(checkBox4);
-            groupBox8.Location = new Point(225, 6);
+            groupBox8.Location = new Point(214, 6);
             groupBox8.Name = "groupBox8";
             groupBox8.Size = new Size(200, 100);
             groupBox8.TabIndex = 4;
@@ -820,7 +771,7 @@ namespace WolfX
             groupBox9.Controls.Add(lbl_Dfymoo_name);
             groupBox9.Controls.Add(label10);
             groupBox9.Controls.Add(label12);
-            groupBox9.Location = new Point(19, 6);
+            groupBox9.Location = new Point(8, 6);
             groupBox9.Name = "groupBox9";
             groupBox9.Size = new Size(200, 100);
             groupBox9.TabIndex = 3;
@@ -880,12 +831,13 @@ namespace WolfX
             ANIMS_LV_ItemsInScene.Size = new Size(639, 496);
             ANIMS_LV_ItemsInScene.TabIndex = 6;
             ANIMS_LV_ItemsInScene.UseCompatibleStateImageBehavior = false;
+            ANIMS_LV_ItemsInScene.View = View.List;
             // 
             // groupBox10
             // 
             groupBox10.Controls.Add(ANIMS_BTN_SaveScene);
             groupBox10.Controls.Add(ANIMS_BTN_OpenScene);
-            groupBox10.Location = new Point(225, 6);
+            groupBox10.Location = new Point(214, 6);
             groupBox10.Name = "groupBox10";
             groupBox10.Size = new Size(200, 100);
             groupBox10.TabIndex = 5;
@@ -915,7 +867,7 @@ namespace WolfX
             // 
             ANIM_GB_Info.Controls.Add(ANIMS_LBL_Count);
             ANIM_GB_Info.Controls.Add(ANIMS_LBL_NumOfItems);
-            ANIM_GB_Info.Location = new Point(19, 6);
+            ANIM_GB_Info.Location = new Point(8, 6);
             ANIM_GB_Info.Name = "ANIM_GB_Info";
             ANIM_GB_Info.Size = new Size(200, 100);
             ANIM_GB_Info.TabIndex = 0;
@@ -1126,9 +1078,6 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)PB_CardPicture).EndInit();
             Context.ResumeLayout(false);
             Page_ZibManager.ResumeLayout(false);
-            Page_ZibManager.PerformLayout();
-            groupBox5.ResumeLayout(false);
-            groupBox5.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -1181,8 +1130,8 @@ namespace WolfX
         private Label label4;
         private Label label3;
         private GroupBox groupBox4;
-        private Button btn_ExtractAll;
-        public ListView lv_ArchivePreviewer;
+        private Button ARCHIVE_CB_ExtractZIB;
+        public ListView ARCHIVE_LV_ArchiveItems;
         private GroupBox groupBox3;
         private Label lbl_NumberOfItemsPrompt;
         private Label lbl_FileSizePrompt;
@@ -1193,15 +1142,11 @@ namespace WolfX
         private StatusStrip Status;
         private ToolStripStatusLabel toolStripStatusLabel1;
         public ToolStripStatusLabel LBL_GameStatusLabel;
-        public Button btn_CloseArchive;
-        public CheckBox cb_ShowPicturePreview;
-        public Label lbl_Size;
-        public Label lbl_Name;
-        public Label lbl_ItemCount;
-        public CheckBox cb_ShowFileName;
-        private GroupBox groupBox5;
-        private CheckBox checkBox1;
-        private Button button1;
+        public Button ARCHIVE_BTN_SaveZIB;
+        public CheckBox ARCHIVE_CB_ShowPreviewImage;
+        public Label ARCHIVE_LBL_ArchiveSize;
+        public Label ARCHIVE_LBL_ArchiveName;
+        public Label ARCHIVE_LBL_ArchiveItems;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem languageToolStripMenuItem;
         private ToolStripMenuItem Language_english;
@@ -1228,7 +1173,6 @@ namespace WolfX
         private ToolStripMenuItem ReplaceImage;
         private GroupBox groupBox6;
         public CheckBox CB_LoadCensoredCards;
-        private TextBox textBox1;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Pack;
         private GroupBox groupBox8;
@@ -1258,5 +1202,6 @@ namespace WolfX
         private GroupBox ANIM_GB_Info;
         private Label ANIMS_LBL_Count;
         private Label ANIMS_LBL_NumOfItems;
+        public Button ARCHIVE_BTN_OpenZIB;
     }
 }

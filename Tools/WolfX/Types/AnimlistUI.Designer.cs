@@ -1,4 +1,6 @@
-﻿namespace WolfX.Types
+﻿using Types;
+
+namespace WolfX.Types
 {
     partial class AnimlistUI
     {
@@ -59,5 +61,8 @@
         #endregion
 
         private Panel panel1;
+        public List<Animlist_Item> Anim_Items { get; set; }
+        public Animlist_Item Anim_Item { get; set; }
+        public string SceneLocation { get; set; }
     }
 }

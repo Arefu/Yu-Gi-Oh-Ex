@@ -18,7 +18,7 @@ namespace WolfX
             CheckForIllegalCrossThreadCalls = false;
             Form = this;
             InitializeComponent();
-            this.lv_ArchivePreviewer.SmallImageList = Preview_Generator.Get_ArchiveImageFromDll();
+            this.ARCHIVE_LV_ArchiveItems.SmallImageList = Preview_Generator.Get_ArchiveImageFromDll();
         }
 
         private void File_Open_Click(object sender, EventArgs e)
@@ -53,8 +53,9 @@ namespace WolfX
 
         private void Lv_ArchivePreviewer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            this.lv_ArchivePreviewer.SuspendLayout();
-            new Thread(() => Archive.OpenArchive(lv_ArchivePreviewer.SelectedItems[0].Text)).Start();
+            this.ARCHIVE_LV_ArchiveItems.SuspendLayout();
+            var Img = Image.FromStream(ZIB.Get_SpecificItemFromArchive(ARCHIVE_LV_ArchiveItems.SelectedItems[0].Text));
+
         }
 
         internal void Tools_Verify_Click(object sender, EventArgs e)
@@ -93,28 +94,7 @@ namespace WolfX
 
         private void btn_ExtractAll_Click(object sender, EventArgs e)
         {
-            var Archive = "";
-            if (lv_ArchivePreviewer.SelectedItems.Count != 1 && lbl_Name.Text == "")
-            {
-                MessageBox.Show(@"Please select an archive to extract from.");
-                return;
-            }
-            else if (lbl_Name.Text == "")
-                Archive = lv_ArchivePreviewer.SelectedItems[0].Text;
-            else
-                Archive = lbl_Name.Text;
 
-            var Files = Handlers.Archive.Get_FilesInArchive(Archive);
-            new DirectoryInfo(new FileInfo(Archive).Name).Create();
-
-            using var Reader = new BinaryReader(File.Open($"{State.WorkingDirectory}\\{Archive}",
-                FileMode.Open, FileAccess.Read, FileShare.Read));
-
-            foreach (var File in Files)
-            {
-                Reader.BaseStream.Position = File.Offset;
-                System.IO.File.WriteAllBytes($"{Archive}\\{File.Name}", Reader.ReadBytes((int)File.Size));
-            }
         }
 
 
