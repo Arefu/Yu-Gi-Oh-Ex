@@ -61,6 +61,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		}
 	}
 
+	PluginManager::ProcessInput(hWnd, msg, wParam, lParam);
+
 	return CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
 }
 
@@ -140,7 +142,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			}
 		}
 
-		
 
 		ImGui::EndGroup();
 

@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include <iostream>
 #include <string>
 #include "Plugins.h"
 #include "imgui.h"
@@ -11,11 +12,13 @@ void PluginManager::Load()
 	std::vector<std::string> Plugins = ScanForPlugins();
 	for (auto& Plugin : Plugins)
 	{
+		std::cout << "Loading Plugin: " << Plugin << std::endl;
+
 		auto PluginPath = new CHAR[MAX_PATH];
 		GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginPath, MAX_PATH, ".\\Config.ini");
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto SetImGuiContextForPlugin = GetProcAddress(hModule, "SetContext");
-
+		if (SetImGuiContextForPlugin)
 		reinterpret_cast<void(__stdcall*)(ImGuiContext*)>(SetImGuiContextForPlugin)(ImGui::GetCurrentContext());
 	}
 
@@ -36,7 +39,7 @@ void PluginManager::ProcessGui()
 		
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto DrawImGui = GetProcAddress(hModule, "ProcessWindow");
-
+		if (DrawImGui)
 		reinterpret_cast<void(__stdcall*)()>(DrawImGui)();
 	}
 }
@@ -54,8 +57,26 @@ void PluginManager::ProcessDetours()
 
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto ProcessDetours = GetProcAddress(hModule, "ProcessDetours");
-
+		if (ProcessDetours)
 		reinterpret_cast<void(__stdcall*)()>(ProcessDetours)();
+
+		std::cout << "Processing Detours for: " << Plugin << std::endl;
+	}
+}
+
+void PluginManager::ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+	if (PluginManager::_IsLoaded == false)
+		return;
+	std::vector<std::string> Plugins = PluginManager::ScanForPlugins();
+	for (auto& Plugin : Plugins)
+	{
+		auto PluginPath = new CHAR[MAX_PATH];
+		GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginPath, MAX_PATH, ".\\Config.ini");
+		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
+		auto ProcessInput = GetProcAddress(hModule, "ProcessInput");
+		if (ProcessInput)
+		reinterpret_cast<void(__stdcall*)(HWND, UINT, WPARAM, LPARAM)>(ProcessInput)(hWnd, msg, wParam, lParam);
 	}
 }
 

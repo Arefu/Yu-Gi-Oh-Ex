@@ -110,7 +110,7 @@ extern "C" __declspec(dllexport) void ProcessWindow()
 	else
 		
 		UndoDetour();
-	ImGui::DragInt("Speed Hack Speed", &speed, 1, 1, 10);
+	ImGui::InputInt("Speed Hack Speed", &speed, 1, 1, ImGuiInputTextFlags_AlwaysInsertMode);
 
 	_GTC_OffsetTime = _hGetTickCount();
 	_GTC64_OffsetTime = _hGetTickCount64();
@@ -124,7 +124,30 @@ extern "C" __declspec(dllexport) void ProcessWindow()
 	ImGui::End();
 }
 
-
+extern "C" _declspec(dllexport) void ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+	switch (msg)
+	{
+	case WM_KEYDOWN:
+		switch (wParam)
+		{
+		case VK_SUBTRACT:
+			if (speed > 1)
+			{
+				speed--;
+			
+			}
+			break;
+		case VK_ADD:
+			if (speed < 10)
+			{
+				speed++;
+			
+			}
+			break;
+		}
+	}
+}
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
