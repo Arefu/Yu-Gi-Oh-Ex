@@ -12,4 +12,8 @@
 	  <OutputPath>$(SolutionDir)$(PlatformTarget)\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
 
+	<ItemGroup>
+		<None Include="Animlist.cs" />
+	</ItemGroup>
+
 </Project>
