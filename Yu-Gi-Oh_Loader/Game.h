@@ -43,6 +43,12 @@ public:
 	/// <param name="Path">Force the game path</param>
 	static void Set_GamePath(CHAR Path[MAX_PATH]);
 
+	/// <summary>
+	/// Creates Base Config File For "Yu-Gi-Oh-GUI". Other plugins may use this for their own configuration.
+	/// </summary>
+	/// <param name="ConfigName">File Name</param>
+	static void CreateConfig(LPCSTR ConfigName);
+
 
 	/// <summary>
 	/// The plugins to load, formatted for Detours.

@@ -2,6 +2,7 @@
 #include <detours.h>
 #include <Shlwapi.h>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 
@@ -98,6 +99,28 @@ void Game::Set_GamePath(CHAR Path[MAX_PATH])
 	strncpy(Game::gGamePath, Path, MAX_PATH);
 	strncat(Game::gGameLocation, Path, strlen(Path));
 	strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+}
+
+void Game::CreateConfig(LPCSTR ConfigName)
+{
+	// Create Config File in the same directory as the game
+	CHAR ConfigPath[MAX_PATH];
+	strncpy(ConfigPath, gGamePath, MAX_PATH);
+	//Append slash
+	strncat(ConfigPath, "\\", sizeof("\\"));
+	//Append Config Name
+	strncat(ConfigPath, ConfigName, strlen(ConfigName));
+
+	if (PathFileExistsA(ConfigPath) == FALSE)
+	{
+		std::ofstream ConfigFile(ConfigPath);
+		//Find Current directory
+		char CurrentDir[MAX_PATH];
+		GetCurrentDirectoryA(MAX_PATH, CurrentDir);
+		ConfigFile << "[Yu-Gi-Oh-GUI]" << std::endl;
+		ConfigFile << "PluginsPath=" << CurrentDir << "\\Plugins\\" << std::endl;
+		ConfigFile.close();
+	}
 }
 
 BOOL Game::Check(LPSTR Path)
