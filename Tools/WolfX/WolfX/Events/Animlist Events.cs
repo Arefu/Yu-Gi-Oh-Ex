@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Types;
+﻿using Types;
 using WolfX.Types;
 
 namespace WolfX
@@ -30,7 +24,7 @@ namespace WolfX
                 {
                     ANIMS_LV_ItemsInScene.Items.Add(Item.ItemName);
                 }
-       
+
                 Form.ANIMS_LBL_Count.Text = ANIMS_Editor.Anim_Items.Count.ToString();
 
                 ANIMS_Editor.PrepareScene();

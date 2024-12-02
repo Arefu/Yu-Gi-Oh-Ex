@@ -67,9 +67,9 @@ namespace WolfX
             ReplaceImage = new ToolStripMenuItem();
             Page_ZibManager = new TabPage();
             groupBox4 = new GroupBox();
+            ARCHIVE_BTN_PackZIB = new Button();
             ARCHIVE_BTN_OpenZIB = new Button();
-            ARCHIVE_BTN_SaveZIB = new Button();
-            ARCHIVE_CB_ExtractZIB = new Button();
+            ARCHIVE_BTN_ExtractZIB = new Button();
             ARCHIVE_CB_ShowPreviewImage = new CheckBox();
             ARCHIVE_LV_ArchiveItems = new ListView();
             groupBox3 = new GroupBox();
@@ -93,7 +93,6 @@ namespace WolfX
             groupBox8 = new GroupBox();
             DFY_BTN_Save = new Button();
             DFY_BTN_Load = new Button();
-            checkBox4 = new CheckBox();
             groupBox9 = new GroupBox();
             lbl_Dfymoo_NumOfItems = new Label();
             lbl_Dfymoo_name = new Label();
@@ -107,6 +106,18 @@ namespace WolfX
             ANIM_GB_Info = new GroupBox();
             ANIMS_LBL_Count = new Label();
             ANIMS_LBL_NumOfItems = new Label();
+            Page_BNDManager = new TabPage();
+            label11 = new Label();
+            STRMAN_PB_HowFarThroughTheFile = new ProgressBar();
+            STRMAN_TB_NewStringValue = new TextBox();
+            label9 = new Label();
+            STRMAN_LB_CurrentFileStrings = new ListBox();
+            groupBox5 = new GroupBox();
+            STRMAN_BTN_SaveStrings = new Button();
+            STRMAN_BTN_OpenStrings = new Button();
+            groupBox11 = new GroupBox();
+            STRMAN_LBL_LocalCount = new Label();
+            STRMAN_LBL_Local = new Label();
             MenuBar = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             File_Open = new ToolStripMenuItem();
@@ -151,6 +162,9 @@ namespace WolfX
             Page_ANIMLISTManager.SuspendLayout();
             groupBox10.SuspendLayout();
             ANIM_GB_Info.SuspendLayout();
+            Page_BNDManager.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox11.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
             SuspendLayout();
@@ -161,6 +175,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_ZibManager);
             WolfX_TabManager.Controls.Add(Page_DFYMOOManager);
             WolfX_TabManager.Controls.Add(Page_ANIMLISTManager);
+            WolfX_TabManager.Controls.Add(Page_BNDManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -473,9 +488,9 @@ namespace WolfX
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(ARCHIVE_BTN_PackZIB);
             groupBox4.Controls.Add(ARCHIVE_BTN_OpenZIB);
-            groupBox4.Controls.Add(ARCHIVE_BTN_SaveZIB);
-            groupBox4.Controls.Add(ARCHIVE_CB_ExtractZIB);
+            groupBox4.Controls.Add(ARCHIVE_BTN_ExtractZIB);
             groupBox4.Controls.Add(ARCHIVE_CB_ShowPreviewImage);
             groupBox4.Location = new Point(214, 6);
             groupBox4.Name = "groupBox4";
@@ -483,6 +498,16 @@ namespace WolfX
             groupBox4.TabIndex = 1;
             groupBox4.TabStop = false;
             groupBox4.Text = "Archive Tools";
+            // 
+            // ARCHIVE_BTN_PackZIB
+            // 
+            ARCHIVE_BTN_PackZIB.Enabled = false;
+            ARCHIVE_BTN_PackZIB.Location = new Point(87, 69);
+            ARCHIVE_BTN_PackZIB.Name = "ARCHIVE_BTN_PackZIB";
+            ARCHIVE_BTN_PackZIB.Size = new Size(107, 25);
+            ARCHIVE_BTN_PackZIB.TabIndex = 6;
+            ARCHIVE_BTN_PackZIB.Text = "Pack Content";
+            ARCHIVE_BTN_PackZIB.UseVisualStyleBackColor = true;
             // 
             // ARCHIVE_BTN_OpenZIB
             // 
@@ -494,26 +519,16 @@ namespace WolfX
             ARCHIVE_BTN_OpenZIB.UseVisualStyleBackColor = true;
             ARCHIVE_BTN_OpenZIB.Click += ARCHIVE_BTN_OpenZIB_Click;
             // 
-            // ARCHIVE_BTN_SaveZIB
+            // ARCHIVE_BTN_ExtractZIB
             // 
-            ARCHIVE_BTN_SaveZIB.Location = new Point(6, 69);
-            ARCHIVE_BTN_SaveZIB.Name = "ARCHIVE_BTN_SaveZIB";
-            ARCHIVE_BTN_SaveZIB.Size = new Size(75, 25);
-            ARCHIVE_BTN_SaveZIB.TabIndex = 4;
-            ARCHIVE_BTN_SaveZIB.Text = "Save";
-            ARCHIVE_BTN_SaveZIB.UseVisualStyleBackColor = true;
-            ARCHIVE_BTN_SaveZIB.Click += ARCHIVE_BTN_SaveZIB_Click;
-            // 
-            // ARCHIVE_CB_ExtractZIB
-            // 
-            ARCHIVE_CB_ExtractZIB.Enabled = false;
-            ARCHIVE_CB_ExtractZIB.Location = new Point(87, 42);
-            ARCHIVE_CB_ExtractZIB.Name = "ARCHIVE_CB_ExtractZIB";
-            ARCHIVE_CB_ExtractZIB.Size = new Size(107, 25);
-            ARCHIVE_CB_ExtractZIB.TabIndex = 2;
-            ARCHIVE_CB_ExtractZIB.Text = "Extract Content";
-            ARCHIVE_CB_ExtractZIB.UseVisualStyleBackColor = true;
-            ARCHIVE_CB_ExtractZIB.Click += ARCHIVE_BTN_ExtractZIB_Click;
+            ARCHIVE_BTN_ExtractZIB.Enabled = false;
+            ARCHIVE_BTN_ExtractZIB.Location = new Point(87, 42);
+            ARCHIVE_BTN_ExtractZIB.Name = "ARCHIVE_BTN_ExtractZIB";
+            ARCHIVE_BTN_ExtractZIB.Size = new Size(107, 25);
+            ARCHIVE_BTN_ExtractZIB.TabIndex = 2;
+            ARCHIVE_BTN_ExtractZIB.Text = "Extract Content";
+            ARCHIVE_BTN_ExtractZIB.UseVisualStyleBackColor = true;
+            ARCHIVE_BTN_ExtractZIB.Click += ARCHIVE_BTN_ExtractZIB_Click;
             // 
             // ARCHIVE_CB_ShowPreviewImage
             // 
@@ -725,7 +740,6 @@ namespace WolfX
             // 
             groupBox8.Controls.Add(DFY_BTN_Save);
             groupBox8.Controls.Add(DFY_BTN_Load);
-            groupBox8.Controls.Add(checkBox4);
             groupBox8.Location = new Point(214, 6);
             groupBox8.Name = "groupBox8";
             groupBox8.Size = new Size(200, 100);
@@ -735,7 +749,7 @@ namespace WolfX
             // 
             // DFY_BTN_Save
             // 
-            DFY_BTN_Save.Location = new Point(119, 69);
+            DFY_BTN_Save.Location = new Point(119, 22);
             DFY_BTN_Save.Name = "DFY_BTN_Save";
             DFY_BTN_Save.Size = new Size(75, 25);
             DFY_BTN_Save.TabIndex = 4;
@@ -745,25 +759,13 @@ namespace WolfX
             // 
             // DFY_BTN_Load
             // 
-            DFY_BTN_Load.Location = new Point(6, 69);
+            DFY_BTN_Load.Location = new Point(6, 22);
             DFY_BTN_Load.Name = "DFY_BTN_Load";
             DFY_BTN_Load.Size = new Size(107, 25);
             DFY_BTN_Load.TabIndex = 2;
             DFY_BTN_Load.Text = "Open Dfymoo";
             DFY_BTN_Load.UseVisualStyleBackColor = true;
             DFY_BTN_Load.Click += DFY_BTN_Load_Click;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Checked = true;
-            checkBox4.CheckState = CheckState.Checked;
-            checkBox4.Location = new Point(6, 22);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(139, 19);
-            checkBox4.TabIndex = 1;
-            checkBox4.Text = "Show Picture Preview";
-            checkBox4.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
@@ -892,6 +894,128 @@ namespace WolfX
             ANIMS_LBL_NumOfItems.TabIndex = 0;
             ANIMS_LBL_NumOfItems.Text = "Items In Scene:";
             // 
+            // Page_BNDManager
+            // 
+            Page_BNDManager.Controls.Add(label11);
+            Page_BNDManager.Controls.Add(STRMAN_PB_HowFarThroughTheFile);
+            Page_BNDManager.Controls.Add(STRMAN_TB_NewStringValue);
+            Page_BNDManager.Controls.Add(label9);
+            Page_BNDManager.Controls.Add(STRMAN_LB_CurrentFileStrings);
+            Page_BNDManager.Controls.Add(groupBox5);
+            Page_BNDManager.Controls.Add(groupBox11);
+            Page_BNDManager.Location = new Point(4, 24);
+            Page_BNDManager.Name = "Page_BNDManager";
+            Page_BNDManager.Size = new Size(651, 629);
+            Page_BNDManager.TabIndex = 4;
+            Page_BNDManager.Text = "Strings Manager";
+            Page_BNDManager.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(331, 178);
+            label11.Name = "label11";
+            label11.Size = new Size(124, 15);
+            label11.TabIndex = 12;
+            label11.Text = "Progress Through File:";
+            // 
+            // STRMAN_PB_HowFarThroughTheFile
+            // 
+            STRMAN_PB_HowFarThroughTheFile.Location = new Point(331, 196);
+            STRMAN_PB_HowFarThroughTheFile.Name = "STRMAN_PB_HowFarThroughTheFile";
+            STRMAN_PB_HowFarThroughTheFile.Size = new Size(312, 23);
+            STRMAN_PB_HowFarThroughTheFile.TabIndex = 11;
+            // 
+            // STRMAN_TB_NewStringValue
+            // 
+            STRMAN_TB_NewStringValue.Location = new Point(331, 130);
+            STRMAN_TB_NewStringValue.Multiline = true;
+            STRMAN_TB_NewStringValue.Name = "STRMAN_TB_NewStringValue";
+            STRMAN_TB_NewStringValue.Size = new Size(312, 45);
+            STRMAN_TB_NewStringValue.TabIndex = 10;
+            STRMAN_TB_NewStringValue.Leave += STRMAN_TB_NewStringValue_Leave;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(331, 112);
+            label9.Name = "label9";
+            label9.Size = new Size(64, 15);
+            label9.TabIndex = 9;
+            label9.Text = "Edit String:";
+            // 
+            // STRMAN_LB_CurrentFileStrings
+            // 
+            STRMAN_LB_CurrentFileStrings.FormattingEnabled = true;
+            STRMAN_LB_CurrentFileStrings.HorizontalScrollbar = true;
+            STRMAN_LB_CurrentFileStrings.ItemHeight = 15;
+            STRMAN_LB_CurrentFileStrings.Items.AddRange(new object[] { "Strings_STEAM_.BND" });
+            STRMAN_LB_CurrentFileStrings.Location = new Point(6, 112);
+            STRMAN_LB_CurrentFileStrings.Name = "STRMAN_LB_CurrentFileStrings";
+            STRMAN_LB_CurrentFileStrings.Size = new Size(319, 484);
+            STRMAN_LB_CurrentFileStrings.TabIndex = 8;
+            STRMAN_LB_CurrentFileStrings.SelectedIndexChanged += STRMAN_LB_CurrentFileStrings_SelectedIndexChanged;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(STRMAN_BTN_SaveStrings);
+            groupBox5.Controls.Add(STRMAN_BTN_OpenStrings);
+            groupBox5.Location = new Point(214, 6);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(200, 100);
+            groupBox5.TabIndex = 7;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "String Tools";
+            // 
+            // STRMAN_BTN_SaveStrings
+            // 
+            STRMAN_BTN_SaveStrings.Location = new Point(6, 53);
+            STRMAN_BTN_SaveStrings.Name = "STRMAN_BTN_SaveStrings";
+            STRMAN_BTN_SaveStrings.Size = new Size(107, 25);
+            STRMAN_BTN_SaveStrings.TabIndex = 4;
+            STRMAN_BTN_SaveStrings.Text = "Save Strings";
+            STRMAN_BTN_SaveStrings.UseVisualStyleBackColor = true;
+            STRMAN_BTN_SaveStrings.Click += STRMAN_BTN_SaveStrings_Click;
+            // 
+            // STRMAN_BTN_OpenStrings
+            // 
+            STRMAN_BTN_OpenStrings.Location = new Point(6, 22);
+            STRMAN_BTN_OpenStrings.Name = "STRMAN_BTN_OpenStrings";
+            STRMAN_BTN_OpenStrings.Size = new Size(107, 25);
+            STRMAN_BTN_OpenStrings.TabIndex = 2;
+            STRMAN_BTN_OpenStrings.Text = "Open Strings";
+            STRMAN_BTN_OpenStrings.UseVisualStyleBackColor = true;
+            STRMAN_BTN_OpenStrings.Click += STRMAN_BTN_OpenStrings_Click;
+            // 
+            // groupBox11
+            // 
+            groupBox11.Controls.Add(STRMAN_LBL_LocalCount);
+            groupBox11.Controls.Add(STRMAN_LBL_Local);
+            groupBox11.Location = new Point(8, 6);
+            groupBox11.Name = "groupBox11";
+            groupBox11.Size = new Size(200, 100);
+            groupBox11.TabIndex = 6;
+            groupBox11.TabStop = false;
+            groupBox11.Text = "String Information";
+            // 
+            // STRMAN_LBL_LocalCount
+            // 
+            STRMAN_LBL_LocalCount.AutoSize = true;
+            STRMAN_LBL_LocalCount.Location = new Point(121, 19);
+            STRMAN_LBL_LocalCount.Name = "STRMAN_LBL_LocalCount";
+            STRMAN_LBL_LocalCount.Size = new Size(13, 15);
+            STRMAN_LBL_LocalCount.TabIndex = 1;
+            STRMAN_LBL_LocalCount.Text = "0";
+            // 
+            // STRMAN_LBL_Local
+            // 
+            STRMAN_LBL_Local.AutoSize = true;
+            STRMAN_LBL_Local.Location = new Point(6, 19);
+            STRMAN_LBL_Local.Name = "STRMAN_LBL_Local";
+            STRMAN_LBL_Local.Size = new Size(109, 15);
+            STRMAN_LBL_Local.TabIndex = 0;
+            STRMAN_LBL_Local.Text = "Localization Count:";
+            // 
             // MenuBar
             // 
             MenuBar.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem });
@@ -912,7 +1036,7 @@ namespace WolfX
             // 
             File_Open.Name = "File_Open";
             File_Open.ShortcutKeys = Keys.Control | Keys.O;
-            File_Open.Size = new Size(148, 22);
+            File_Open.Size = new Size(180, 22);
             File_Open.Text = "&Open";
             File_Open.Click += File_Open_Click;
             // 
@@ -920,19 +1044,19 @@ namespace WolfX
             // 
             closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             closeToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.W;
-            closeToolStripMenuItem.Size = new Size(148, 22);
+            closeToolStripMenuItem.Size = new Size(180, 22);
             closeToolStripMenuItem.Text = "&Close";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(145, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // File_Exit
             // 
             File_Exit.Name = "File_Exit";
             File_Exit.ShortcutKeys = Keys.Alt | Keys.F4;
-            File_Exit.Size = new Size(148, 22);
+            File_Exit.Size = new Size(180, 22);
             File_Exit.Text = "E&xit";
             File_Exit.Click += File_Exit_Click;
             // 
@@ -1091,13 +1215,17 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_H).EndInit();
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_X).EndInit();
             groupBox8.ResumeLayout(false);
-            groupBox8.PerformLayout();
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
             Page_ANIMLISTManager.ResumeLayout(false);
             groupBox10.ResumeLayout(false);
             ANIM_GB_Info.ResumeLayout(false);
             ANIM_GB_Info.PerformLayout();
+            Page_BNDManager.ResumeLayout(false);
+            Page_BNDManager.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox11.ResumeLayout(false);
+            groupBox11.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
@@ -1131,7 +1259,7 @@ namespace WolfX
         private Label label4;
         private Label label3;
         private GroupBox groupBox4;
-        private Button ARCHIVE_CB_ExtractZIB;
+        private Button ARCHIVE_BTN_ExtractZIB;
         public ListView ARCHIVE_LV_ArchiveItems;
         private GroupBox groupBox3;
         private Label lbl_NumberOfItemsPrompt;
@@ -1143,7 +1271,6 @@ namespace WolfX
         private StatusStrip Status;
         private ToolStripStatusLabel toolStripStatusLabel1;
         public ToolStripStatusLabel LBL_GameStatusLabel;
-        public Button ARCHIVE_BTN_SaveZIB;
         public CheckBox ARCHIVE_CB_ShowPreviewImage;
         public Label ARCHIVE_LBL_ArchiveSize;
         public Label ARCHIVE_LBL_ArchiveName;
@@ -1179,7 +1306,6 @@ namespace WolfX
         private GroupBox groupBox8;
         public Button DFY_BTN_Save;
         private Button DFY_BTN_Load;
-        public CheckBox checkBox4;
         private GroupBox groupBox9;
         public Label lbl_Dfymoo_NumOfItems;
         public Label lbl_Dfymoo_name;
@@ -1204,5 +1330,18 @@ namespace WolfX
         private Label ANIMS_LBL_NumOfItems;
         public Button ARCHIVE_BTN_OpenZIB;
         public ListView ANIMS_LV_ItemsInScene;
+        private Button ARCHIVE_BTN_PackZIB;
+        private TabPage Page_BNDManager;
+        private ListBox STRMAN_LB_CurrentFileStrings;
+        private GroupBox groupBox5;
+        public Button STRMAN_BTN_SaveStrings;
+        private Button STRMAN_BTN_OpenStrings;
+        private GroupBox groupBox11;
+        private Label STRMAN_LBL_LocalCount;
+        private Label STRMAN_LBL_Local;
+        private TextBox STRMAN_TB_NewStringValue;
+        private Label label9;
+        private ProgressBar STRMAN_PB_HowFarThroughTheFile;
+        private Label label11;
     }
 }

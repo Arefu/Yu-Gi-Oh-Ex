@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 using Types;
 
@@ -25,7 +20,7 @@ namespace WolfX
                 if (OpenDialog.ShowDialog() != DialogResult.OK)
                 {
                     MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 
+
                     return;
                 }
                 var Items = ZIB.Load(OpenDialog.FileName);
@@ -62,11 +57,11 @@ namespace WolfX
                         {
                             ARCHIVE_LV_ArchiveItems.Items.Add(Item.Name);
                         }
-                       
+
                     }
                 }
 
-                ARCHIVE_CB_ExtractZIB.Enabled = true;
+                ARCHIVE_BTN_ExtractZIB.Enabled = true;
                 ARCHIVE_LBL_ArchiveName.Text = new FileInfo(OpenDialog.FileName).Name;
                 ARCHIVE_LBL_ArchiveItems.Text = Items.Count.ToString();
                 ARCHIVE_LBL_ArchiveSize.Text = new FileInfo(OpenDialog.FileName).Length.ToString();
@@ -79,13 +74,13 @@ namespace WolfX
                 SelectFolder.Description = "Select ZIB Folder To Repack";
                 SelectFolder.UseDescriptionForTitle = true;
 
-                if(SelectFolder.ShowDialog() != DialogResult.OK)
+                if (SelectFolder.ShowDialog() != DialogResult.OK)
                 {
                     MessageBox.Show("No Folder Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if(new DirectoryInfo(SelectFolder.SelectedPath).Name.EndsWith(".zib") == false)
+                if (new DirectoryInfo(SelectFolder.SelectedPath).Name.EndsWith(".zib") == false)
                 {
                     MessageBox.Show("Please Select A Extracted ZIB Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -96,8 +91,8 @@ namespace WolfX
 
         private void ARCHIVE_LV_ArchiveItems_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if(ZIB._Loaded == false)
-                return; 
+            if (ZIB._Loaded == false)
+                return;
 
             using (var Reader = new BinaryReader(File.Open(ZIB._Archive, FileMode.Open, FileAccess.Read)))
             {
@@ -113,7 +108,7 @@ namespace WolfX
 
             new DirectoryInfo(new FileInfo(ZIB._Archive).Name).Create();
 
-            foreach(var Item in ZIB._Items)
+            foreach (var Item in ZIB._Items)
             {
                 using (var Reader = new BinaryReader(File.Open(ZIB._Archive, FileMode.Open, FileAccess.Read)))
                 {

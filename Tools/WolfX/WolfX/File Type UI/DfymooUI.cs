@@ -10,7 +10,7 @@
             DFY_Picture.Image = Image.FromFile(PicturePath.Replace(".dfymoo", ".png"));
         }
 
-   
+
         private void DFY_Picture_Paint(object sender, PaintEventArgs e)
         {
             if (DFY_Item == null)

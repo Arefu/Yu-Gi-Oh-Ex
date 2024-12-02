@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Security.AccessControl;
 
 namespace Types
 {
@@ -38,7 +37,10 @@ namespace Types
                     foreach (var Category in Line.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
                     {
                         if (Category.StartsWith("n")) //DFYMOO Item Name
-                            Item.ItemName = Category.Split(' ')[1];
+                        {
+                            var ItemName = Category.Split(' ', 2)[1];
+                            Item.ItemName = ItemName;
+                        }
                         else if (Category.StartsWith("s")) //DFYMOO Item Size
                         {
                             Item.ItemStartPoint = new Point(int.Parse(Category.Split(' ')[1]), int.Parse(Category.Split(' ')[2]));
@@ -72,9 +74,9 @@ namespace Types
 
                 foreach (var Item in Items)
                 {
-                    if(Item.ItemName != "")
+                    if (Item.ItemName != "")
                         Writer.WriteLine($"n {Item.ItemName}");
-                    if(Item.ItemStartPoint != Point.Empty && Item.ItemDimensions != Point.Empty)
+                    if (Item.ItemStartPoint != Point.Empty && Item.ItemDimensions != Point.Empty)
                         Writer.WriteLine($"s {Item.ItemStartPoint.X} {Item.ItemStartPoint.Y} {Item.ItemDimensions.X} {Item.ItemDimensions.Y}");
                     if (Item.ItemOrigin != Point.Empty && Item.ItemOriginDimensions != Point.Empty)
                         Writer.WriteLine($"o {Item.ItemOrigin.X} {Item.ItemOrigin.Y} {Item.ItemOriginDimensions.X} {Item.ItemOriginDimensions.Y}");
