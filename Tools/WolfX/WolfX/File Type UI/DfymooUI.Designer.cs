@@ -53,6 +53,7 @@ namespace WolfX.Types
             // 
             // DFY_Picture
             // 
+            DFY_Picture.BackColor = Color.Transparent;
             DFY_Picture.Location = new Point(12, 12);
             DFY_Picture.Name = "DFY_Picture";
             DFY_Picture.Size = new Size(64, 64);
@@ -68,10 +69,12 @@ namespace WolfX.Types
             AutoScroll = true;
             ClientSize = new Size(1264, 681);
             Controls.Add(DFY_Picture_Container);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "DfymooUI";
+            ShowInTaskbar = false;
             Text = "Dfymoo Image Editor";
             DFY_Picture_Container.ResumeLayout(false);
             DFY_Picture_Container.PerformLayout();
@@ -85,7 +88,5 @@ namespace WolfX.Types
         private Panel DFY_Picture_Container;
         public PictureBox DFY_Picture;
         private Rectangle _Rect;
-        private Point _MovingStart;
-        private Boolean _MovingBox;
     }
 }
