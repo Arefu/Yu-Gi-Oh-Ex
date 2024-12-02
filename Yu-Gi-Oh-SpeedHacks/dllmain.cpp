@@ -149,6 +149,11 @@ extern "C" _declspec(dllexport) void ProcessInput(HWND hWnd, UINT msg, WPARAM wP
 	}
 }
 
+extern "C" _declspec(dllexport) void ProcessConfig()
+{
+	speed = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "Speed", 2, ".\\Config.ini");
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)

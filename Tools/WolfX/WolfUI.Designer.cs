@@ -140,6 +140,7 @@ namespace WolfX
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
+            tabPage1 = new TabPage();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -176,6 +177,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_DFYMOOManager);
             WolfX_TabManager.Controls.Add(Page_ANIMLISTManager);
             WolfX_TabManager.Controls.Add(Page_BNDManager);
+            WolfX_TabManager.Controls.Add(tabPage1);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -1036,7 +1038,7 @@ namespace WolfX
             // 
             File_Open.Name = "File_Open";
             File_Open.ShortcutKeys = Keys.Control | Keys.O;
-            File_Open.Size = new Size(180, 22);
+            File_Open.Size = new Size(148, 22);
             File_Open.Text = "&Open";
             File_Open.Click += File_Open_Click;
             // 
@@ -1044,19 +1046,19 @@ namespace WolfX
             // 
             closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             closeToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.W;
-            closeToolStripMenuItem.Size = new Size(180, 22);
+            closeToolStripMenuItem.Size = new Size(148, 22);
             closeToolStripMenuItem.Text = "&Close";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(145, 6);
             // 
             // File_Exit
             // 
             File_Exit.Name = "File_Exit";
             File_Exit.ShortcutKeys = Keys.Alt | Keys.F4;
-            File_Exit.Size = new Size(180, 22);
+            File_Exit.Size = new Size(148, 22);
             File_Exit.Text = "E&xit";
             File_Exit.Click += File_Exit_Click;
             // 
@@ -1176,6 +1178,16 @@ namespace WolfX
             LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(651, 629);
+            tabPage1.TabIndex = 5;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // WolfUI
             // 
@@ -1343,5 +1355,6 @@ namespace WolfX
         private Label label9;
         private ProgressBar STRMAN_PB_HowFarThroughTheFile;
         private Label label11;
+        private TabPage tabPage1;
     }
 }

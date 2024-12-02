@@ -3,6 +3,9 @@
 #include <string>
 #include "Plugins.h"
 #include "imgui.h"
+#include <thread>
+#include <chrono>
+#include "Yu-Gi-Oh-Ex.h"
 
 void PluginManager::Load()
 {
@@ -23,6 +26,22 @@ void PluginManager::Load()
 	}
 
 	_IsLoaded = true;
+}
+
+void PluginManager::DelayLoad()
+{;
+	std::this_thread::sleep_for(std::chrono::milliseconds(100)); //Wait just a smidge for Windows to do Windows things.
+	while (YuGiOhEx::g_bOnPageFirst == true)
+	{
+		std::this_thread::sleep_for(std::chrono::milliseconds(250));
+	}
+
+	if (!PluginManager::_IsLoaded)
+	{
+		Load();
+		ProcessConfigForPlugin();
+		ProcessDetours();
+	}
 }
 
 void PluginManager::ProcessGui()
@@ -77,6 +96,22 @@ void PluginManager::ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lPar
 		auto ProcessInput = GetProcAddress(hModule, "ProcessInput");
 		if (ProcessInput)
 		reinterpret_cast<void(__stdcall*)(HWND, UINT, WPARAM, LPARAM)>(ProcessInput)(hWnd, msg, wParam, lParam);
+	}
+}
+
+void PluginManager::ProcessConfigForPlugin()
+{
+	if (PluginManager::_IsLoaded == false)
+		return;
+	std::vector<std::string> Plugins = ScanForPlugins();
+	for (auto& Plugin : Plugins)
+	{
+		auto PluginPath = new CHAR[MAX_PATH];
+		GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginPath, MAX_PATH, ".\\Config.ini");
+		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
+		auto ProcessConfig = GetProcAddress(hModule, "ProcessConfig");
+		if (ProcessConfig)
+			reinterpret_cast<void(__stdcall*)()>(ProcessConfig)();
 	}
 }
 
