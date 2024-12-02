@@ -98,6 +98,7 @@ namespace WolfX
             {
                 Reader.BaseStream.Seek(ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Start, SeekOrigin.Begin);
                 var Data = Reader.ReadBytes((int)ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Size);
+                Directory.CreateDirectory(new FileInfo(ZIB._Archive).Name);
                 File.WriteAllBytes($"{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", Data);
             }
         }

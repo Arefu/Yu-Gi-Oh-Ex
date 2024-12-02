@@ -8,9 +8,12 @@
 #include <string>
 #include <windows.h>
 
-#include "Yu-Gi-Oh-Ex.h"
-#include "Plugins.h"
+
 #include <iostream>
+#include <thread>
+
+#include "Plugins.h"
+#include "Yu-Gi-Oh-Ex.h"
 
 typedef __int64 Address;
 
@@ -162,10 +165,14 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		{
 			if (ImGui::Button("Load Plugins"))
 			{
-				PluginManager::Load();
-				PluginManager::_IsLoaded = true;
+				if (PluginManager::_IsLoaded == false) {
+					PluginManager::ProcessConfigForPlugin();
+					PluginManager::Load();
+					
+					PluginManager::_IsLoaded = true;
 
-				PluginManager::ProcessDetours();
+					PluginManager::ProcessDetours();
+				}
 			}
 		}
 
@@ -235,6 +242,11 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	//Setup WndProc
 	oWndProc = reinterpret_cast<WNDPROC>(SetWindowLongPtrA(sd.OutputWindow, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(WndProc)));
 
+	auto LoadPlugins = 0;
+	LoadPlugins = GetPrivateProfileIntA("Yu-Gi-Oh-GUI", "AutoLoadPlugins", 0, ".\\Config.ini");
+
+	if (LoadPlugins == 1)
+		std::thread(PluginManager::DelayLoad).detach();
 
 	return result;
 }
@@ -249,8 +261,7 @@ extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
 
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
-{
-	LONG res = 0;		
+{	
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
@@ -262,10 +273,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
 		DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
 		
-
 		DetourTransactionCommit();
 		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
 	
+		//Should I load My Plugins?
+		
+		
+
 		break;
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:

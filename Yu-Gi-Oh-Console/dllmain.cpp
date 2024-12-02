@@ -40,7 +40,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         SetWindowText(GetConsoleWindow(), L"Yu-Gi-Oh! Console");
 
         std::cout << "[Yu-Gi-Oh-Console]: Ready!" << std::endl;
-        std::cout << "[Yu-Gi-Oh-Console]: ";
+
       //  std::thread(ProcessInput).detach();
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
