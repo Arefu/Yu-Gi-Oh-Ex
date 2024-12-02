@@ -2,12 +2,9 @@ using System.Collections.Specialized;
 using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
-
+using Types;
 using WolfX.Handler.Tools;
 using WolfX.Handlers;
-using WolfX.Types;
-
-using Types;
 
 namespace WolfX
 {
@@ -42,7 +39,6 @@ namespace WolfX
             State.IsLoaded = true;
 
             new Thread(Card_Loader.Load).Start();
-            new Thread(Archive.Load).Start();
 
         }
 
@@ -87,19 +83,6 @@ namespace WolfX
                 MessageBox.Show("No Missing Files Found", "No Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btn_CloseArchive_Click(object sender, EventArgs e)
-        {
-            Archive.CloseArchive();
-        }
-
-        private void btn_ExtractAll_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
 
         private void btn_NextCard_Click(object sender, EventArgs e)
         {
@@ -116,8 +99,8 @@ namespace WolfX
             Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
-            Form.PB_CardPicture.Image =
-                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
+            //   Form.PB_CardPicture.Image =
+            //  Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void btn_LastCard_Click(object sender, EventArgs e)
@@ -135,8 +118,8 @@ namespace WolfX
             Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
-            Form.PB_CardPicture.Image =
-                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
+            //Form.PB_CardPicture.Image =
+            //   Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void CB_CardID_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,8 +134,8 @@ namespace WolfX
             Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
-            Form.PB_CardPicture.Image =
-                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
+            //  Form.PB_CardPicture.Image =
+            //    Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void btn_SaveCard_Click(object sender, EventArgs e)
@@ -187,8 +170,8 @@ namespace WolfX
             Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
-            Form.PB_CardPicture.Image =
-                Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
+            //Form.PB_CardPicture.Image =
+            //    Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
         private void ReplaceImage_Click(object sender, EventArgs e)
@@ -198,7 +181,9 @@ namespace WolfX
 
         private void CB_LoadCensoredCards_CheckedChanged(object sender, EventArgs e)
         {
-            Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
+            // Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
         }
+
+       
     }
 }

@@ -10,21 +10,24 @@ namespace Types
     }
     public static class Animlist
     {
-         
+
+        //TODO: Check cropped differences, impliment Slide logic.
+        //TODO: Save Implementation.
         public static List<Animlist_Item> Load(String Path, bool Cropped = true)
         {
-            if(File.Exists(Path) == false)
+            if (File.Exists(Path) == false)
             {
                 throw new FileNotFoundException("File not found", Path);
             }
 
             var Items = new List<Animlist_Item>();
 
-            using (var Reader =  new StreamReader(Path)) {
+            using (var Reader = new StreamReader(Path))
+            {
                 while (!Reader.EndOfStream)
                 {
                     var Line = Reader.ReadLine();
-                    if(String.IsNullOrEmpty(Line))
+                    if (String.IsNullOrEmpty(Line))
                         continue;
                     if (Line.StartsWith("slide")) continue; //Skip for now.
 

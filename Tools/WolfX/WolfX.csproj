@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\File Type Libraries\Animslist\Animlist.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\BND\BND.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Dfymoo\Dfymoo.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\ZIB\ZIB.csproj" />
   </ItemGroup>
@@ -28,6 +29,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="WolfX\Events\Strings Events.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 

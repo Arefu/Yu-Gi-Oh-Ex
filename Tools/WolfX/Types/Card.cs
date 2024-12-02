@@ -88,7 +88,7 @@ namespace WolfX.Types
             AnyRitual = 42,
             Link = 43,
             AnyFlip = 44
-                
+
             //AnyNormal = 37,
             //AnySynchro = 38,
             //AnyXyz = 39,

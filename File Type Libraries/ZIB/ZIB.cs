@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using System.Drawing;
 
 namespace Types
 {
@@ -32,7 +31,7 @@ namespace Types
         {
             _Items.Clear();
             using var Reader = new BinaryReader(File.Open($"{Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
-           
+
             var DataStart = long.MaxValue;
 
             while (Reader.BaseStream.Position + 64 <= DataStart)
@@ -62,15 +61,15 @@ namespace Types
 
         public static ZIB_Item? Get_SpecificItemFromArchive(string Archive, string Item)
         {
-            if(_Loaded)
+            if (_Loaded)
                 return _Items.FirstOrDefault(_Item => _Item.Name == Item);
             else
-                return new ZIB_Item(0,0,"");
+                return new ZIB_Item(0, 0, "");
         }
 
         public static MemoryStream? Get_SpecificItemFromArchive(string Item)
         {
-            if(_ImageArchive == false)
+            if (_ImageArchive == false)
                 return null;
 
             if (_Loaded)

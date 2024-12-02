@@ -2,7 +2,6 @@
 using System.IO;
 using System.Text;
 using WolfX.Extensions;
-using WolfX.Handler.Tools;
 
 namespace WolfX.Handlers
 {
@@ -95,7 +94,7 @@ namespace WolfX.Handlers
                     WolfUI.Form.CB_CardID.Items.Add($"{Card._Id}");
                     WolfUI.Form.CB_CardName.Items.Add($"{Card._Name}");
 
-                    if(WolfUI.Form.CB_CardTypes.Items.Contains($"{Card._Type}"))
+                    if (WolfUI.Form.CB_CardTypes.Items.Contains($"{Card._Type}"))
                         continue;
 
                     WolfUI.Form.CB_CardTypes.Items.Add($"{Card._Type}");
@@ -111,7 +110,7 @@ namespace WolfX.Handlers
             WolfUI.Form.CB_CardTypes.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Type.ToString();
             WolfUI.Form.CB_CardAttribute.Text = WolfUI.State.Cards[WolfUI.State.CardIndex]._Attribute.ToString();
 
-            WolfUI.Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(WolfUI.State.Cards[WolfUI.State.CardIndex]._Id.ToString(), WolfUI.Form.CB_LoadCensoredCards.Checked);
+            //  WolfUI.Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(WolfUI.State.Cards[WolfUI.State.CardIndex]._Id.ToString(), WolfUI.Form.CB_LoadCensoredCards.Checked);
 
             WolfUI.Form.LBL_GameStatusLabel.Text = @"Ready";
             WolfUI.Form.LBL_GameStatusLabel.ForeColor = Color.Green;

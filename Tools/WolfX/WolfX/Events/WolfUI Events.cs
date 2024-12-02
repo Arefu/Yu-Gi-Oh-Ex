@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
-using System.Threading.Tasks;
 
 using WolfX.Types;
 
@@ -150,4 +145,4 @@ namespace WolfX
             State.Language = Language.Russian;
         }
     }
- }
+}
