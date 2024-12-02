@@ -23,16 +23,18 @@ namespace WolfX
                     return;
                 }
 
-                AnimlistUI Editor = new AnimlistUI();
-                Editor.Anim_Items = Animlist.Load(OpenFile.FileName, false);
-                foreach(var Item in Editor.Anim_Items)
+                ANIMS_Editor = new AnimlistUI(OpenFile.FileName);
+                ANIMS_Editor.Anim_Items = Animlist.Load(OpenFile.FileName, false);
+
+                foreach (var Item in ANIMS_Editor.Anim_Items)
                 {
                     ANIMS_LV_ItemsInScene.Items.Add(Item.ItemName);
                 }
-                Editor.SceneLocation = OpenFile.FileName;
+       
+                Form.ANIMS_LBL_Count.Text = ANIMS_Editor.Anim_Items.Count.ToString();
 
-                Editor.Show();
-                Editor.SetupScene();
+                ANIMS_Editor.PrepareScene();
+                ANIMS_Editor.Show();
             }
         }
     }

@@ -12,8 +12,8 @@ namespace WolfX
         {
             DFYMOO_ItemList.Items.Clear();
 
-            if (Editor != null)
-                Editor.Close();
+            if (DFY_Editor != null)
+                DFY_Editor.Close();
 
             using var OpenFile = new OpenFileDialog();
             OpenFile.Title = "Select DFYMOO File";
@@ -24,81 +24,80 @@ namespace WolfX
                 return;
             }
 
-            Editor = new DfymooUI(Path.GetFullPath(OpenFile.FileName));
-            Editor.DFY_Items = Dfymoo.Load(OpenFile.FileName);
+            DFY_Editor = new DfymooUI(Path.GetFullPath(OpenFile.FileName));
+            DFY_Editor.DFY_Items = Dfymoo.Load(OpenFile.FileName);
 
-            foreach (var Item in Editor.DFY_Items)
+            foreach (var Item in DFY_Editor.DFY_Items)
             {
                 DFYMOO_ItemList.Items.Add(Item.ItemName);
             }
 
             WolfUI.Form.lbl_Dfymoo_name.Text = OpenFile.SafeFileName;
-            WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = Editor.DFY_Items.Count.ToString();
+            WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = DFY_Editor.DFY_Items.Count.ToString();
 
-
-            Editor.Show();
+            DFY_Editor.Show();
         }
         private void DFY_BTN_Save_Click(object sender, EventArgs e)
         {
-            Dfymoo.Save(Path.GetFileName(Editor._PicturePath), Editor.DFY_Items, Editor.DFY_Picture.Size);
+            Dfymoo.Save(Path.GetFileName(DFY_Editor._PicturePath), DFY_Editor.DFY_Items, DFY_Editor.DFY_Picture.Size);
         }
         private void DFYMOO_ItemList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             if (!e.IsSelected)
             {
                 // Update Editor.DFY_Items List with the Updated version of DFY_Item.
-                var index = Editor.DFY_Items.FindIndex(dfy => dfy.ItemName == Editor.DFY_Item.ItemName);
+                var index = DFY_Editor.DFY_Items.FindIndex(dfy => dfy.ItemName == DFY_Editor.DFY_Item.ItemName);
                 if (index != -1)
                 {
-                    Editor.DFY_Items[index] = Editor.DFY_Item;
+                    DFY_Editor.DFY_Items[index] = DFY_Editor.DFY_Item;
                 }
             }
 
             var Item = e.Item;
-            foreach (var DFY in Editor.DFY_Items)
+            foreach (var DFY in DFY_Editor.DFY_Items)
             {
                 if (DFY.ItemName == Item.Text)
                 {
-                    Editor.DFY_Item = DFY;
+                    DFY_Editor.DFY_Item = DFY;
                     break;
                 }
             }
 
-            DFY_NUD_X.Value = Editor.DFY_Item.ItemStartPoint.X;
-            DFY_NUD_Y.Value = Editor.DFY_Item.ItemStartPoint.Y;
+            DFY_NUD_X.Value = DFY_Editor.DFY_Item.ItemStartPoint.X;
+            DFY_NUD_Y.Value = DFY_Editor.DFY_Item.ItemStartPoint.Y;
 
-            DFY_NUD_W.Value = Editor.DFY_Item.ItemDimensions.X;
-            DFY_NUD_H.Value = Editor.DFY_Item.ItemDimensions.Y;
+            DFY_NUD_W.Value = DFY_Editor.DFY_Item.ItemDimensions.X;
+            DFY_NUD_H.Value = DFY_Editor.DFY_Item.ItemDimensions.Y;
 
-            Editor.DFY_Picture.Refresh();
+            DFY_Editor.DFY_Picture.Refresh();
         }
         private void DFY_NUD_X_ValueChanged(object sender, EventArgs e)
         {
-            if (DFY_NUD_X.Value != Editor.DFY_Item.ItemStartPoint.X)
-                Editor.DFY_Item.ItemStartPoint = new Point((int)DFY_NUD_X.Value, Editor.DFY_Item.ItemStartPoint.Y);
+            if (DFY_NUD_X.Value != DFY_Editor.DFY_Item.ItemStartPoint.X)
+                DFY_Editor.DFY_Item.ItemStartPoint = new Point((int)DFY_NUD_X.Value, DFY_Editor.DFY_Item.ItemStartPoint.Y);
 
-            Editor.DFY_Picture.Refresh();
+            DFY_Editor.DFY_Picture.Refresh();
         }
         private void DFY_NUD_Y_ValueChanged(object sender, EventArgs e)
         {
-            if (DFY_NUD_Y.Value != Editor.DFY_Item.ItemStartPoint.Y)
-                Editor.DFY_Item.ItemStartPoint = new Point(Editor.DFY_Item.ItemStartPoint.X, (int)DFY_NUD_Y.Value);
+            if (DFY_NUD_Y.Value != DFY_Editor.DFY_Item.ItemStartPoint.Y)
+                DFY_Editor.DFY_Item.ItemStartPoint = new Point(DFY_Editor.DFY_Item.ItemStartPoint.X, (int)DFY_NUD_Y.Value);
 
-            Editor.DFY_Picture.Refresh();
+            DFY_Editor.DFY_Picture.Refresh();
         }
         private void DFY_NUD_H_ValueChanged(object sender, EventArgs e)
         {
-            if (DFY_NUD_H.Value != Editor.DFY_Item.ItemDimensions.Y)
-                Editor.DFY_Item.ItemDimensions = new Point(Editor.DFY_Item.ItemDimensions.X, (int)DFY_NUD_H.Value);
+            if (DFY_NUD_H.Value != DFY_Editor.DFY_Item.ItemDimensions.Y)
+                DFY_Editor.DFY_Item.ItemDimensions = new Point(DFY_Editor.DFY_Item.ItemDimensions.X, (int)DFY_NUD_H.Value);
 
-            Editor.DFY_Picture.Refresh();
+            DFY_Editor.DFY_Picture.Refresh();
         }
         private void DFY_NUD_W_ValueChanged(object sender, EventArgs e)
         {
-            if (DFY_NUD_W.Value != Editor.DFY_Item.ItemDimensions.X)
-                Editor.DFY_Item.ItemDimensions = new Point((int)DFY_NUD_W.Value, Editor.DFY_Item.ItemDimensions.Y);
+            if (DFY_NUD_W.Value != DFY_Editor.DFY_Item.ItemDimensions.X)
+                DFY_Editor.DFY_Item.ItemDimensions = new Point((int)DFY_NUD_W.Value, DFY_Editor.DFY_Item.ItemDimensions.Y);
 
-            Editor.DFY_Picture.Refresh();
+            DFY_Editor.DFY_Picture.Refresh();
         }
     }
 }

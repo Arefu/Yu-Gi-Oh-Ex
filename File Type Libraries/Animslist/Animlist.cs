@@ -13,7 +13,6 @@ namespace Types
          
         public static List<Animlist_Item> Load(String Path, bool Cropped = true)
         {
-            //StreamReader
             if(File.Exists(Path) == false)
             {
                 throw new FileNotFoundException("File not found", Path);
@@ -27,6 +26,7 @@ namespace Types
                     var Line = Reader.ReadLine();
                     if(String.IsNullOrEmpty(Line))
                         continue;
+                    if (Line.StartsWith("slide")) continue; //Skip for now.
 
                     if (Cropped == true)
                     {

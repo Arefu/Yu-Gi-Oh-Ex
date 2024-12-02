@@ -23,8 +23,8 @@ namespace WolfX
             base.Dispose(disposing);
         }
 
-        public static DfymooUI Editor;
-
+        public static DfymooUI DFY_Editor;
+        public static AnimlistUI ANIMS_Editor;
 
         #region Windows Form Designer generated code
 
@@ -1061,6 +1061,7 @@ namespace WolfX
             Controls.Add(Status);
             Controls.Add(WolfX_TabManager);
             Controls.Add(MenuBar);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = MenuBar;
             MaximizeBox = false;
@@ -1195,7 +1196,6 @@ namespace WolfX
         private Label label7;
         private Label label8;
         private TabPage Page_ANIMLISTManager;
-        private ListView ANIMS_LV_ItemsInScene;
         private GroupBox groupBox10;
         public Button ANIMS_BTN_SaveScene;
         private Button ANIMS_BTN_OpenScene;
@@ -1203,5 +1203,6 @@ namespace WolfX
         private Label ANIMS_LBL_Count;
         private Label ANIMS_LBL_NumOfItems;
         public Button ARCHIVE_BTN_OpenZIB;
+        public ListView ANIMS_LV_ItemsInScene;
     }
 }
