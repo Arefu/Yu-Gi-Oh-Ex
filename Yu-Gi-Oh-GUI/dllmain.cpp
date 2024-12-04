@@ -71,7 +71,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
-	
 
 	ImGui_ImplWin32_NewFrame();
 	ImGui_ImplDX11_NewFrame();

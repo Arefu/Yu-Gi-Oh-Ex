@@ -34,7 +34,6 @@ namespace WolfX
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             btn_SaveCard = new Button();
@@ -63,8 +62,6 @@ namespace WolfX
             label1 = new Label();
             TB_CardDesc = new TextBox();
             PB_CardPicture = new PictureBox();
-            Context = new ContextMenuStrip(components);
-            ReplaceImage = new ToolStripMenuItem();
             Page_ZibManager = new TabPage();
             groupBox4 = new GroupBox();
             ARCHIVE_BTN_PackZIB = new Button();
@@ -113,11 +110,13 @@ namespace WolfX
             label9 = new Label();
             STRMAN_LB_CurrentFileStrings = new ListBox();
             groupBox5 = new GroupBox();
+            CREDITS_CheckB_IsCredit = new CheckBox();
             STRMAN_BTN_SaveStrings = new Button();
             STRMAN_BTN_OpenStrings = new Button();
             groupBox11 = new GroupBox();
             STRMAN_LBL_LocalCount = new Label();
             STRMAN_LBL_Local = new Label();
+            tabPage1 = new TabPage();
             MenuBar = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             File_Open = new ToolStripMenuItem();
@@ -140,7 +139,6 @@ namespace WolfX
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
-            tabPage1 = new TabPage();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -148,7 +146,6 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)Nud_CardLevel).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PB_CardPicture).BeginInit();
-            Context.SuspendLayout();
             Page_ZibManager.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -454,26 +451,11 @@ namespace WolfX
             // 
             // PB_CardPicture
             // 
-            PB_CardPicture.ContextMenuStrip = Context;
             PB_CardPicture.Location = new Point(6, 51);
             PB_CardPicture.Name = "PB_CardPicture";
             PB_CardPicture.Size = new Size(305, 346);
             PB_CardPicture.TabIndex = 0;
             PB_CardPicture.TabStop = false;
-            // 
-            // Context
-            // 
-            Context.Font = new Font("Comic Sans MS", 9F);
-            Context.Items.AddRange(new ToolStripItem[] { ReplaceImage });
-            Context.Name = "Context";
-            Context.Size = new Size(155, 26);
-            // 
-            // ReplaceImage
-            // 
-            ReplaceImage.Name = "ReplaceImage";
-            ReplaceImage.Size = new Size(154, 22);
-            ReplaceImage.Text = "Replace Image";
-            ReplaceImage.Click += ReplaceImage_Click;
             // 
             // Page_ZibManager
             // 
@@ -960,6 +942,7 @@ namespace WolfX
             // 
             // groupBox5
             // 
+            groupBox5.Controls.Add(CREDITS_CheckB_IsCredit);
             groupBox5.Controls.Add(STRMAN_BTN_SaveStrings);
             groupBox5.Controls.Add(STRMAN_BTN_OpenStrings);
             groupBox5.Location = new Point(214, 6);
@@ -969,13 +952,23 @@ namespace WolfX
             groupBox5.TabStop = false;
             groupBox5.Text = "String Tools";
             // 
+            // CREDITS_CheckB_IsCredit
+            // 
+            CREDITS_CheckB_IsCredit.AutoSize = true;
+            CREDITS_CheckB_IsCredit.Location = new Point(84, 26);
+            CREDITS_CheckB_IsCredit.Name = "CREDITS_CheckB_IsCredit";
+            CREDITS_CheckB_IsCredit.Size = new Size(84, 19);
+            CREDITS_CheckB_IsCredit.TabIndex = 5;
+            CREDITS_CheckB_IsCredit.Text = "Credits File";
+            CREDITS_CheckB_IsCredit.UseVisualStyleBackColor = true;
+            // 
             // STRMAN_BTN_SaveStrings
             // 
             STRMAN_BTN_SaveStrings.Location = new Point(6, 53);
             STRMAN_BTN_SaveStrings.Name = "STRMAN_BTN_SaveStrings";
-            STRMAN_BTN_SaveStrings.Size = new Size(107, 25);
+            STRMAN_BTN_SaveStrings.Size = new Size(72, 25);
             STRMAN_BTN_SaveStrings.TabIndex = 4;
-            STRMAN_BTN_SaveStrings.Text = "Save Strings";
+            STRMAN_BTN_SaveStrings.Text = "Save ";
             STRMAN_BTN_SaveStrings.UseVisualStyleBackColor = true;
             STRMAN_BTN_SaveStrings.Click += STRMAN_BTN_SaveStrings_Click;
             // 
@@ -983,9 +976,9 @@ namespace WolfX
             // 
             STRMAN_BTN_OpenStrings.Location = new Point(6, 22);
             STRMAN_BTN_OpenStrings.Name = "STRMAN_BTN_OpenStrings";
-            STRMAN_BTN_OpenStrings.Size = new Size(107, 25);
+            STRMAN_BTN_OpenStrings.Size = new Size(72, 25);
             STRMAN_BTN_OpenStrings.TabIndex = 2;
-            STRMAN_BTN_OpenStrings.Text = "Open Strings";
+            STRMAN_BTN_OpenStrings.Text = "Open ";
             STRMAN_BTN_OpenStrings.UseVisualStyleBackColor = true;
             STRMAN_BTN_OpenStrings.Click += STRMAN_BTN_OpenStrings_Click;
             // 
@@ -1017,6 +1010,16 @@ namespace WolfX
             STRMAN_LBL_Local.Size = new Size(109, 15);
             STRMAN_LBL_Local.TabIndex = 0;
             STRMAN_LBL_Local.Text = "Localization Count:";
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(651, 629);
+            tabPage1.TabIndex = 5;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // MenuBar
             // 
@@ -1179,16 +1182,6 @@ namespace WolfX
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
             // 
-            // tabPage1
-            // 
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(651, 629);
-            tabPage1.TabIndex = 5;
-            tabPage1.Text = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1213,7 +1206,6 @@ namespace WolfX
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PB_CardPicture).EndInit();
-            Context.ResumeLayout(false);
             Page_ZibManager.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
@@ -1236,6 +1228,7 @@ namespace WolfX
             Page_BNDManager.ResumeLayout(false);
             Page_BNDManager.PerformLayout();
             groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
             groupBox11.ResumeLayout(false);
             groupBox11.PerformLayout();
             MenuBar.ResumeLayout(false);
@@ -1309,8 +1302,6 @@ namespace WolfX
         public ComboBox CB_CardTypes;
         public ComboBox CB_CardName;
         private Button btn_SaveCard;
-        private ContextMenuStrip Context;
-        private ToolStripMenuItem ReplaceImage;
         private GroupBox groupBox6;
         public CheckBox CB_LoadCensoredCards;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
@@ -1356,5 +1347,6 @@ namespace WolfX
         private ProgressBar STRMAN_PB_HowFarThroughTheFile;
         private Label label11;
         private TabPage tabPage1;
+        private CheckBox CREDITS_CheckB_IsCredit;
     }
 }
