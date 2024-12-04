@@ -184,6 +184,5 @@ namespace WolfX
             // Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
         }
 
-       
     }
 }

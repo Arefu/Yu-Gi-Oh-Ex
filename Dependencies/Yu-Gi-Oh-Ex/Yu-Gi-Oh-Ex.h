@@ -15,7 +15,7 @@ namespace YuGiOhEx
 	static bool& g_bIsQuitReady = *(bool*)0x14332A391;
 	static bool& g_bOnPageFirst = *(bool*)0x140C91C48;
 
-	static __int64 DeductMoneyFromStoreTransaction = 0x1407F93E0;
+	static unsigned _int64 DeductMoneyFromStoreTransaction = 0x1407F93E0;
 	static __int64 UnkFuncForLoading = 0x14076D840; //Rename this at some point
 }
 

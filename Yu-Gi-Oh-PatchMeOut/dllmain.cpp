@@ -9,43 +9,47 @@ typedef __int64 (*OriginalPDEFunctionType)(__int64 a1, const char* a2);
 OriginalPDEFunctionType OriginalPDE = nullptr;
 __int64 PDLimits = 0x0;
 
-unsigned __int64 __fastcall Patch_DeductMoneyFromStoreTransaction(__int64 a1, unsigned __int64 a2)
+static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
 {
-    return 0;
-}
-__int64 CallOriginalPDE(__int64 a1, const char *a2) {
-    if (OriginalPDE) {
-        return OriginalPDE(a1, a2);
+    std::string File(a2);
+
+    if (File == "bin/pd_limits.bin")
+    {
+		std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched PDLimits." << std::endl;
+        a2 = "bin/CARD_Prop.bin"; //Setthing this to empty does not let the game continue.
     }
-    return 0; 
+    //Call Original function
+    auto result = reinterpret_cast<HRESULT(__stdcall*)(__int64, const char*)>(PDLimits)(a1, a2);
+
+    return a1;
 }
-__int64 __fastcall Patch_GetPDLimits(__int64 a1, const char* a2)
+
+ void __fastcall Patch_DeductMoneyFromStoreTransaction(__int64 a1, const char *a2)
 {
-    std::cout << a2;
-    return CallOriginalPDE(a1, a2);
+    return; //NO OPERATION
 }
+
 
 BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-    __int64 PDE = YuGiOhEx::UnkFuncForLoading;
-
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
 		std::cout << "[Yu-Gi-Oh-PatchMeOut] DLL_PROCESS_ATTACH - Ready to BREAK THINGS!" << std::endl;
-        OriginalPDE = reinterpret_cast<OriginalPDEFunctionType>(PDE);
+        OriginalPDE = reinterpret_cast<OriginalPDEFunctionType>(YuGiOhEx::UnkFuncForLoading);
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
 		std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Store." << std::endl;
+		std::cout << "[Yu-Gi-Oh-PatchMeOut] Store Address: " << std::hex << std::uppercase << "0x" << YuGiOhEx::DeductMoneyFromStoreTransaction << std::endl;
 		DetourAttach(&(PVOID&)YuGiOhEx::DeductMoneyFromStoreTransaction, Patch_DeductMoneyFromStoreTransaction);
 
        
 		std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched PDLimits." << std::endl;
-		DetourAttach(&(PVOID&)PDE, Patch_GetPDLimits);
-		PDLimits = PDE;
+        DetourAttach(&(PVOID&)YuGiOhEx::UnkFuncForLoading, Patch_UkLoading);
 
         DetourTransactionCommit();
+		PDLimits = YuGiOhEx::UnkFuncForLoading;
         break;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
