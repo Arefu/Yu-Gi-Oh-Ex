@@ -14,10 +14,8 @@ static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
     std::string File(a2);
 
     if (File == "bin/pd_limits.bin")
-    {
-		std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched PDLimits." << std::endl;
         a2 = "bin/CARD_Prop.bin"; //Setthing this to empty does not let the game continue.
-    }
+
     //Call Original function
     auto result = reinterpret_cast<HRESULT(__stdcall*)(__int64, const char*)>(PDLimits)(a1, a2);
 

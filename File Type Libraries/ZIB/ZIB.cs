@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Drawing;
+using System.Text;
 
 namespace Types
 {
@@ -64,7 +65,10 @@ namespace Types
             if (_Loaded)
                 return _Items.FirstOrDefault(_Item => _Item.Name == Item);
             else
-                return new ZIB_Item(0, 0, "");
+            {
+                Load(Archive);
+                return _Items.FirstOrDefault(_Item => _Item.Name == Item);
+            }
         }
 
         public static MemoryStream? Get_SpecificItemFromArchive(string Item)
@@ -83,7 +87,10 @@ namespace Types
                 return null;
         }
 
-
+        public static MemoryStream Get_CardImageFromDefaultArchiveByYDCID(string Item)
+        {
+            return Get_SpecificItemFromArchive($"{Item}.jpg");
+        }
 
         public static void Save()
         {
