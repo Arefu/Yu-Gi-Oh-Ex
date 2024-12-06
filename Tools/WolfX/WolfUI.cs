@@ -91,12 +91,12 @@ namespace WolfX
 
             State.CardIndex++;
 
-            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.CARDS_CB_CardName.Text = State.Cards[State.CardIndex]._Name;
             Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.CARDS_CB_CardID.SelectedIndex = State.CardIndex;
             Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
             Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            // Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             //   Form.PB_CardPicture.Image =
@@ -110,12 +110,12 @@ namespace WolfX
 
             State.CardIndex--;
 
-            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.CARDS_CB_CardName.Text = State.Cards[State.CardIndex]._Name;
             Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.CARDS_CB_CardID.SelectedIndex = State.CardIndex;
             Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
             Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            //   Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             //Form.PB_CardPicture.Image =
@@ -124,14 +124,14 @@ namespace WolfX
 
         private void CB_CardID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            State.CardIndex = Form.CB_CardID.SelectedIndex;
+            State.CardIndex = Form.CARDS_CB_CardID.SelectedIndex;
 
-            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            Form.CARDS_CB_CardName.Text = State.Cards[State.CardIndex]._Name;
             Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.CARDS_CB_CardID.SelectedIndex = State.CardIndex;
             Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
             Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            //     Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             //  Form.PB_CardPicture.Image =
@@ -140,9 +140,9 @@ namespace WolfX
 
         private void btn_SaveCard_Click(object sender, EventArgs e)
         {
-            var thing = State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]));
+            var thing = State.Cards.First(x => x._Id == int.Parse(Form.CARDS_CB_CardID.Text.Split('-')[0]));
             var Message =
-                $"{State.Cards.First(x => x._Id == int.Parse(Form.CB_CardID.Text.Split('-')[0]))._Bit1}";
+                $"{State.Cards.First(x => x._Id == int.Parse(Form.CARDS_CB_CardID.Text.Split('-')[0]))._Bit1}";
             Debug.WriteLine(Message);
 
             var Bit1 = thing._Bit1;
@@ -161,13 +161,13 @@ namespace WolfX
         private void CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            State.CardIndex = CB_CardName.SelectedIndex;
-            Form.CB_CardName.Text = State.Cards[State.CardIndex]._Name;
+            State.CardIndex = CARDS_CB_CardName.SelectedIndex;
+            Form.CARDS_CB_CardName.Text = State.Cards[State.CardIndex]._Name;
             Form.TB_CardDesc.Text = State.Cards[State.CardIndex]._Description;
-            Form.CB_CardID.SelectedIndex = State.CardIndex;
+            Form.CARDS_CB_CardID.SelectedIndex = State.CardIndex;
             Form.TB_CardAtk.Text = State.Cards[State.CardIndex]._Atk.ToString();
             Form.TB_CardDef.Text = State.Cards[State.CardIndex]._Def.ToString();
-            Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
+            //   Form.CB_CardAttribute.SelectedIndex = (int)State.Cards[State.CardIndex]._Attribute;
             Form.Nud_CardLevel.Text = State.Cards[State.CardIndex]._Level.ToString();
             Form.CB_CardTypes.Text = State.Cards[State.CardIndex]._Type.ToString();
             //Form.PB_CardPicture.Image =
@@ -184,6 +184,6 @@ namespace WolfX
             // Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
         }
 
-    
+     
     }
 }

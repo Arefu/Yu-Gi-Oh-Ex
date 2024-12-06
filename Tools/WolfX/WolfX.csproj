@@ -18,8 +18,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="WolfX\Events\Cards Events.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\File Type Libraries\Animslist\Animlist.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\BND\BND.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\Cards\Cards.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CRED\CRED.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Dfymoo\Dfymoo.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\YDC\YDC.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\ZIB\ZIB.csproj" />
@@ -30,6 +36,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="WolfX\Events\Cards Events.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="WolfX\Events\YDC Events.cs">
       <SubType>Form</SubType>
