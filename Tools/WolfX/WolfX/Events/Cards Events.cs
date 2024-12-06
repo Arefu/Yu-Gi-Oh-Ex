@@ -36,6 +36,8 @@ namespace WolfX
 
                 CARDS_CB_CardName.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
                 CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
+
+				MessageBox.Show(CARDS_Cards.Get_CardPropFromID(5538).ToString());
             }
 		}
 	}
