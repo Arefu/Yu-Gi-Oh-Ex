@@ -46,9 +46,11 @@ namespace Types
 
         public byte PEND_Scale1;
         public byte PEND_Scale2;
-        
+
         public CARDS_INFO.CARD_Attribute Attribute;
         public CARDS_INFO.CARD_Type Type;
+
+        public BitVector32 PROP;
     }
 
     public static class CARDS_Cards
@@ -63,7 +65,7 @@ namespace Types
         public static BinaryReader? DescReader;
         public static BinaryReader? PropReader;
 
-        public static bool Ready = false; 
+        public static bool Ready = false;
 
         public static List<CARD_Card> Cards = new();
 
@@ -163,6 +165,12 @@ namespace Types
                 return 0;
             return Cards.Find(x => x.ID == ID).PEND_Scale2;
         }
+        public static short Get_CardPropFromID(short ID)
+        {
+            if (Cards.Count == 0)
+                return 0;
+            return (short)Cards.Find(x => x.ID == ID).PROP.Data;
+        }
 
         public static void LoadCardInfo()
         {
@@ -201,7 +209,7 @@ namespace Types
                 var Second = new BitVector32((int)PropReader.ReadUInt32());
 
                 CARD_Card Card = new();
-               
+
                 var CardId = BitVector32.CreateSection(16383);
                 var CardAtk = BitVector32.CreateSection(511, CardId);
                 var QuadCardDef = BitVector32.CreateSection(511, CardAtk);
@@ -225,6 +233,8 @@ namespace Types
                 Card.Type = (CARDS_INFO.CARD_Type)Second[Kind];
                 Card.PEND_Scale1 = (byte)Second[LeftScale];
                 Card.PEND_Scale2 = (byte)Second[RightScale];
+
+                Card.PROP = First;
 
                 Cards.Add(Card);
             } while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);

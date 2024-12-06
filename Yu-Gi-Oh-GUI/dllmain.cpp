@@ -72,24 +72,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
-	DXGI_SWAP_CHAIN_DESC sd;
-	pSwapChain->GetDesc(&sd);
-
-
 	ImGui_ImplWin32_NewFrame();
 	ImGui_ImplDX11_NewFrame();
 	ImGui::NewFrame();
 	
-	std::cout << "ImGui Display Size: " << ImGui::GetIO().DisplaySize.x << "x" << ImGui::GetIO().DisplaySize.y << std::endl;
-	std::cout << "SwapChain Size:: " << sd.BufferDesc.Width << "x" << sd.BufferDesc.Height << std::endl;
-
-	///Adjust swapchain to match ImGui
-	auto hr = pSwapChain->ResizeBuffers(2, ImGui::GetIO().DisplaySize.x, ImGui::GetIO().DisplaySize.y, DXGI_FORMAT_R8G8B8A8_UNORM, 0);
-	//Convert hr to message
-	if (FAILED(hr))
-	{
-		std::cout << "Failed to resize buffers: " << hr << std::endl;
-	}
 
 	if (bShowMenu)
 	{
