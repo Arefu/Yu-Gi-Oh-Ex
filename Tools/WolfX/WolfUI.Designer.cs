@@ -36,9 +36,9 @@ namespace WolfX
         {
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
-            btn_SaveCard = new Button();
             groupBox6 = new GroupBox();
-            CB_LoadCensoredCards = new CheckBox();
+            CARDS_BTN_OpenCards = new Button();
+            CARDS_BTN_SaveCard = new Button();
             btn_NextCard = new Button();
             btn_LastCard = new Button();
             groupBox2 = new GroupBox();
@@ -47,7 +47,7 @@ namespace WolfX
             CB_CardAttribute = new ComboBox();
             CB_CardTypes = new ComboBox();
             CB_CardImageID = new ComboBox();
-            CB_CardID = new ComboBox();
+            CARDS_CB_CardID = new ComboBox();
             CB_CardLevel = new Label();
             CB_CardLimitedStatus = new Label();
             label6 = new Label();
@@ -55,7 +55,7 @@ namespace WolfX
             label4 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            CB_CardName = new ComboBox();
+            CARDS_CB_CardName = new ComboBox();
             TB_CardDef = new TextBox();
             TB_CardAtk = new TextBox();
             label2 = new Label();
@@ -127,6 +127,7 @@ namespace WolfX
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             groupBox12 = new GroupBox();
+            YDC_CHKBOX_UseCardID = new CheckBox();
             YDC_BTN_OpenSaveFile = new Button();
             YDC_CHKBOX_LoadPictures = new CheckBox();
             YDC_BTN_SaveDeck = new Button();
@@ -214,7 +215,6 @@ namespace WolfX
             // 
             // Page_CardManager
             // 
-            Page_CardManager.Controls.Add(btn_SaveCard);
             Page_CardManager.Controls.Add(groupBox6);
             Page_CardManager.Controls.Add(btn_NextCard);
             Page_CardManager.Controls.Add(btn_LastCard);
@@ -228,19 +228,10 @@ namespace WolfX
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
             // 
-            // btn_SaveCard
-            // 
-            btn_SaveCard.Location = new Point(447, 335);
-            btn_SaveCard.Name = "btn_SaveCard";
-            btn_SaveCard.Size = new Size(107, 25);
-            btn_SaveCard.TabIndex = 6;
-            btn_SaveCard.Text = "Save Card";
-            btn_SaveCard.UseVisualStyleBackColor = true;
-            btn_SaveCard.Click += btn_SaveCard_Click;
-            // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(CB_LoadCensoredCards);
+            groupBox6.Controls.Add(CARDS_BTN_OpenCards);
+            groupBox6.Controls.Add(CARDS_BTN_SaveCard);
             groupBox6.Location = new Point(334, 409);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
@@ -248,16 +239,24 @@ namespace WolfX
             groupBox6.TabStop = false;
             groupBox6.Text = "Options";
             // 
-            // CB_LoadCensoredCards
+            // CARDS_BTN_OpenCards
             // 
-            CB_LoadCensoredCards.AutoSize = true;
-            CB_LoadCensoredCards.Location = new Point(6, 22);
-            CB_LoadCensoredCards.Name = "CB_LoadCensoredCards";
-            CB_LoadCensoredCards.Size = new Size(138, 19);
-            CB_LoadCensoredCards.TabIndex = 0;
-            CB_LoadCensoredCards.Text = "Load Censored Cards";
-            CB_LoadCensoredCards.UseVisualStyleBackColor = true;
-            CB_LoadCensoredCards.CheckedChanged += CB_LoadCensoredCards_CheckedChanged;
+            CARDS_BTN_OpenCards.Location = new Point(6, 22);
+            CARDS_BTN_OpenCards.Name = "CARDS_BTN_OpenCards";
+            CARDS_BTN_OpenCards.Size = new Size(107, 25);
+            CARDS_BTN_OpenCards.TabIndex = 1;
+            CARDS_BTN_OpenCards.Text = "Open Cards";
+            CARDS_BTN_OpenCards.UseVisualStyleBackColor = true;
+            CARDS_BTN_OpenCards.Click += CARDS_BTN_OpenCards_Click;
+            // 
+            // CARDS_BTN_SaveCard
+            // 
+            CARDS_BTN_SaveCard.Location = new Point(6, 52);
+            CARDS_BTN_SaveCard.Name = "CARDS_BTN_SaveCard";
+            CARDS_BTN_SaveCard.Size = new Size(107, 25);
+            CARDS_BTN_SaveCard.TabIndex = 0;
+            CARDS_BTN_SaveCard.Text = "Save Card";
+            CARDS_BTN_SaveCard.UseVisualStyleBackColor = true;
             // 
             // btn_NextCard
             // 
@@ -286,7 +285,7 @@ namespace WolfX
             groupBox2.Controls.Add(CB_CardAttribute);
             groupBox2.Controls.Add(CB_CardTypes);
             groupBox2.Controls.Add(CB_CardImageID);
-            groupBox2.Controls.Add(CB_CardID);
+            groupBox2.Controls.Add(CARDS_CB_CardID);
             groupBox2.Controls.Add(CB_CardLevel);
             groupBox2.Controls.Add(CB_CardLimitedStatus);
             groupBox2.Controls.Add(label6);
@@ -340,15 +339,14 @@ namespace WolfX
             CB_CardImageID.Size = new Size(297, 23);
             CB_CardImageID.TabIndex = 8;
             // 
-            // CB_CardID
+            // CARDS_CB_CardID
             // 
-            CB_CardID.AutoCompleteMode = AutoCompleteMode.Suggest;
-            CB_CardID.FormattingEnabled = true;
-            CB_CardID.Location = new Point(6, 42);
-            CB_CardID.Name = "CB_CardID";
-            CB_CardID.Size = new Size(297, 23);
-            CB_CardID.TabIndex = 7;
-            CB_CardID.SelectedIndexChanged += CB_CardID_SelectedIndexChanged;
+            CARDS_CB_CardID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardID.FormattingEnabled = true;
+            CARDS_CB_CardID.Location = new Point(6, 42);
+            CARDS_CB_CardID.Name = "CARDS_CB_CardID";
+            CARDS_CB_CardID.Size = new Size(297, 23);
+            CARDS_CB_CardID.TabIndex = 7;
             // 
             // CB_CardLevel
             // 
@@ -412,7 +410,7 @@ namespace WolfX
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(CB_CardName);
+            groupBox1.Controls.Add(CARDS_CB_CardName);
             groupBox1.Controls.Add(TB_CardDef);
             groupBox1.Controls.Add(TB_CardAtk);
             groupBox1.Controls.Add(label2);
@@ -426,15 +424,14 @@ namespace WolfX
             groupBox1.TabStop = false;
             groupBox1.Text = "Card Preview";
             // 
-            // CB_CardName
+            // CARDS_CB_CardName
             // 
-            CB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CB_CardName.FormattingEnabled = true;
-            CB_CardName.Location = new Point(6, 19);
-            CB_CardName.Name = "CB_CardName";
-            CB_CardName.Size = new Size(305, 23);
-            CB_CardName.TabIndex = 7;
-            CB_CardName.SelectedIndexChanged += CB_CardName_SelectedIndexChanged;
+            CARDS_CB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardName.FormattingEnabled = true;
+            CARDS_CB_CardName.Location = new Point(6, 19);
+            CARDS_CB_CardName.Name = "CARDS_CB_CardName";
+            CARDS_CB_CardName.Size = new Size(305, 23);
+            CARDS_CB_CardName.TabIndex = 7;
             // 
             // TB_CardDef
             // 
@@ -1149,6 +1146,7 @@ namespace WolfX
             // 
             // groupBox12
             // 
+            groupBox12.Controls.Add(YDC_CHKBOX_UseCardID);
             groupBox12.Controls.Add(YDC_BTN_OpenSaveFile);
             groupBox12.Controls.Add(YDC_CHKBOX_LoadPictures);
             groupBox12.Controls.Add(YDC_BTN_SaveDeck);
@@ -1160,9 +1158,22 @@ namespace WolfX
             groupBox12.TabStop = false;
             groupBox12.Text = "Deck Tools";
             // 
+            // YDC_CHKBOX_UseCardID
+            // 
+            YDC_CHKBOX_UseCardID.AutoSize = true;
+            YDC_CHKBOX_UseCardID.Checked = true;
+            YDC_CHKBOX_UseCardID.CheckState = CheckState.Checked;
+            YDC_CHKBOX_UseCardID.Location = new Point(84, 72);
+            YDC_CHKBOX_UseCardID.Name = "YDC_CHKBOX_UseCardID";
+            YDC_CHKBOX_UseCardID.Size = new Size(92, 19);
+            YDC_CHKBOX_UseCardID.TabIndex = 7;
+            YDC_CHKBOX_UseCardID.Text = "Use Card IDs";
+            YDC_CHKBOX_UseCardID.UseVisualStyleBackColor = true;
+            YDC_CHKBOX_UseCardID.CheckedChanged += YDC_CHKBOX_UseCardID_CheckedChanged;
+            // 
             // YDC_BTN_OpenSaveFile
             // 
-            YDC_BTN_OpenSaveFile.Location = new Point(84, 55);
+            YDC_BTN_OpenSaveFile.Location = new Point(84, 22);
             YDC_BTN_OpenSaveFile.Name = "YDC_BTN_OpenSaveFile";
             YDC_BTN_OpenSaveFile.Size = new Size(107, 25);
             YDC_BTN_OpenSaveFile.TabIndex = 6;
@@ -1172,7 +1183,7 @@ namespace WolfX
             // YDC_CHKBOX_LoadPictures
             // 
             YDC_CHKBOX_LoadPictures.AutoSize = true;
-            YDC_CHKBOX_LoadPictures.Location = new Point(84, 26);
+            YDC_CHKBOX_LoadPictures.Location = new Point(84, 53);
             YDC_CHKBOX_LoadPictures.Name = "YDC_CHKBOX_LoadPictures";
             YDC_CHKBOX_LoadPictures.Size = new Size(97, 19);
             YDC_CHKBOX_LoadPictures.TabIndex = 5;
@@ -1466,7 +1477,6 @@ namespace WolfX
             WolfX_TabManager.ResumeLayout(false);
             Page_CardManager.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Nud_CardLevel).EndInit();
@@ -1569,16 +1579,14 @@ namespace WolfX
         private Button btn_NextCard;
         private Button btn_LastCard;
         public PictureBox PB_CardPicture;
-        public ComboBox CB_CardID;
+        public ComboBox CARDS_CB_CardID;
         public TextBox TB_CardDef;
         public TextBox TB_CardAtk;
         public ComboBox CB_CardAttribute;
         public NumericUpDown Nud_CardLevel;
         public ComboBox CB_CardTypes;
-        public ComboBox CB_CardName;
-        private Button btn_SaveCard;
+        public ComboBox CARDS_CB_CardName;
         private GroupBox groupBox6;
-        public CheckBox CB_LoadCensoredCards;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Pack;
         private GroupBox groupBox8;
@@ -1647,5 +1655,8 @@ namespace WolfX
         private ListView YDC_LV_MainDeckCards;
         private Label label13;
         private TextBox YDC_TB_DeckName;
+        private Button CARDS_BTN_SaveCard;
+        private Button CARDS_BTN_OpenCards;
+        private CheckBox YDC_CHKBOX_UseCardID;
     }
 }

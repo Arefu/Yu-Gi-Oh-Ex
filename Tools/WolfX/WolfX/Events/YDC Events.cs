@@ -33,9 +33,20 @@ namespace WolfX
                 if (YDC_CHKBOX_LoadPictures.Checked)
                     Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID(Card.ToString())));
 
-                YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString());
+                if(YDC_CHKBOX_UseCardID.Checked)
+                    YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString(), Card.ToString());
+                else
+                    YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID(Card), Card.ToString());
             }
 
+        }
+        private void YDC_CHKBOX_UseCardID_CheckedChanged(object sender, EventArgs e)
+        {
+            if(YDC_CHKBOX_UseCardID.Checked == false)
+            {
+                CARDS_BTN_OpenCards_Click(0, e);
+                YDC_BTN_OpenDeck_Click(0, e);
+            }
         }
 
         private void YDC_CHKBOX_LoadPictures_CheckedChanged(object sender, EventArgs e)
@@ -60,6 +71,7 @@ namespace WolfX
                 YDC_LV_MainDeckCards.View = View.List;
             }
 
+            YDC_BTN_OpenDeck_Click(0, e);
         }
     }
 }
