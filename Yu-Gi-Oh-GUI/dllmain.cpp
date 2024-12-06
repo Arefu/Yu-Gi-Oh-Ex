@@ -62,6 +62,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		case VK_F8:
 			bShowDemo = !bShowDemo;
 		}
+
 	}
 
 	PluginManager::ProcessInput(hWnd, msg, wParam, lParam);
@@ -71,13 +72,24 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
+	DXGI_SWAP_CHAIN_DESC sd;
+	pSwapChain->GetDesc(&sd);
+
 
 	ImGui_ImplWin32_NewFrame();
 	ImGui_ImplDX11_NewFrame();
-	b_IsImGuiInitialized = true;
-	
-
 	ImGui::NewFrame();
+	
+	std::cout << "ImGui Display Size: " << ImGui::GetIO().DisplaySize.x << "x" << ImGui::GetIO().DisplaySize.y << std::endl;
+	std::cout << "SwapChain Size:: " << sd.BufferDesc.Width << "x" << sd.BufferDesc.Height << std::endl;
+
+	///Adjust swapchain to match ImGui
+	auto hr = pSwapChain->ResizeBuffers(2, ImGui::GetIO().DisplaySize.x, ImGui::GetIO().DisplaySize.y, DXGI_FORMAT_R8G8B8A8_UNORM, 0);
+	//Convert hr to message
+	if (FAILED(hr))
+	{
+		std::cout << "Failed to resize buffers: " << hr << std::endl;
+	}
 
 	if (bShowMenu)
 	{
@@ -144,7 +156,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			}
 		}
 
-
 		ImGui::EndGroup();
 
 		ImGui::Separator();
@@ -165,11 +176,10 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			if (ImGui::Button("Load Plugins"))
 			{
 				if (PluginManager::_IsLoaded == false) {
-					PluginManager::ProcessConfigForPlugin();
+
 					PluginManager::Load();
 					
-					PluginManager::_IsLoaded = true;
-
+					PluginManager::ProcessConfigForPlugin();
 					PluginManager::ProcessDetours();
 				}
 			}
@@ -193,11 +203,11 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
 	ImGui::Render();
 
-	pContext->OMSetRenderTargets(1, &pMainRenderTargetView, NULL);
 	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
 
 	return reinterpret_cast<HRESULT(__stdcall*)(IDXGISwapChain*, UINT, UINT)>(nPresent)(pSwapChain, SyncInterval, Flags);
 }
+
 
 HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, HMODULE Software, UINT Flags, const D3D_FEATURE_LEVEL* pFeatureLevels, UINT FeatureLevels, UINT SDKVersion, const DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext)
 {
@@ -229,7 +239,6 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	ImGui_ImplWin32_Init(sd.OutputWindow);
 	ImGui_ImplDX11_Init(pDevice, pContext);
 
-	ImGui::GetIO().ImeWindowHandle = sd.OutputWindow;
 
 	ID3D11Texture2D* pBackBuffer = nullptr;
 
@@ -258,12 +267,12 @@ extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
 	return ImGui::GetCurrentContext();
 }
 
-
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {	
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
+		SetProcessDPIAware();
 
 		DetourRestoreAfterWith();
 
@@ -274,11 +283,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		
 		DetourTransactionCommit();
 		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
-	
-		//Should I load My Plugins?
-		
-		
-
 		break;
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:

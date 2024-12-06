@@ -116,7 +116,30 @@ namespace WolfX
             groupBox11 = new GroupBox();
             STRMAN_LBL_LocalCount = new Label();
             STRMAN_LBL_Local = new Label();
+            Page_YDCManager = new TabPage();
+            groupBox14 = new GroupBox();
+            YDC_BTN_ReplaceCard = new Button();
+            YDC_BTN_RemoveCard = new Button();
+            YDC_BTN_AddCard = new Button();
+            tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            YDC_LV_MainDeckCards = new ListView();
+            tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
+            groupBox12 = new GroupBox();
+            YDC_BTN_OpenSaveFile = new Button();
+            YDC_CHKBOX_LoadPictures = new CheckBox();
+            YDC_BTN_SaveDeck = new Button();
+            YDC_BTN_OpenDeck = new Button();
+            groupBox13 = new GroupBox();
+            YDC_TB_DeckName = new TextBox();
+            label13 = new Label();
+            YDC_LBL_NumOfCardsInExtra = new Label();
+            label18 = new Label();
+            YDC_LBL_NumOfCardsInSide = new Label();
+            label16 = new Label();
+            YDC_LBL_NumOfCardInMain = new Label();
+            label14 = new Label();
             MenuBar = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             File_Open = new ToolStripMenuItem();
@@ -139,6 +162,7 @@ namespace WolfX
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -163,6 +187,12 @@ namespace WolfX
             Page_BNDManager.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox11.SuspendLayout();
+            Page_YDCManager.SuspendLayout();
+            groupBox14.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            groupBox12.SuspendLayout();
+            groupBox13.SuspendLayout();
             MenuBar.SuspendLayout();
             Status.SuspendLayout();
             SuspendLayout();
@@ -174,7 +204,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_DFYMOOManager);
             WolfX_TabManager.Controls.Add(Page_ANIMLISTManager);
             WolfX_TabManager.Controls.Add(Page_BNDManager);
-            WolfX_TabManager.Controls.Add(tabPage1);
+            WolfX_TabManager.Controls.Add(Page_YDCManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -1011,15 +1041,252 @@ namespace WolfX
             STRMAN_LBL_Local.TabIndex = 0;
             STRMAN_LBL_Local.Text = "Localization Count:";
             // 
+            // Page_YDCManager
+            // 
+            Page_YDCManager.Controls.Add(groupBox14);
+            Page_YDCManager.Controls.Add(tabControl1);
+            Page_YDCManager.Controls.Add(groupBox12);
+            Page_YDCManager.Controls.Add(groupBox13);
+            Page_YDCManager.Location = new Point(4, 24);
+            Page_YDCManager.Name = "Page_YDCManager";
+            Page_YDCManager.Padding = new Padding(3);
+            Page_YDCManager.Size = new Size(651, 629);
+            Page_YDCManager.TabIndex = 5;
+            Page_YDCManager.Text = "YDC Manager";
+            Page_YDCManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox14
+            // 
+            groupBox14.Controls.Add(YDC_BTN_ReplaceCard);
+            groupBox14.Controls.Add(YDC_BTN_RemoveCard);
+            groupBox14.Controls.Add(YDC_BTN_AddCard);
+            groupBox14.Location = new Point(420, 3);
+            groupBox14.Name = "groupBox14";
+            groupBox14.Size = new Size(200, 100);
+            groupBox14.TabIndex = 11;
+            groupBox14.TabStop = false;
+            groupBox14.Text = "Deck Editing Tools";
+            // 
+            // YDC_BTN_ReplaceCard
+            // 
+            YDC_BTN_ReplaceCard.Enabled = false;
+            YDC_BTN_ReplaceCard.Location = new Point(84, 53);
+            YDC_BTN_ReplaceCard.Name = "YDC_BTN_ReplaceCard";
+            YDC_BTN_ReplaceCard.Size = new Size(72, 25);
+            YDC_BTN_ReplaceCard.TabIndex = 5;
+            YDC_BTN_ReplaceCard.Text = "Replace";
+            YDC_BTN_ReplaceCard.UseVisualStyleBackColor = true;
+            // 
+            // YDC_BTN_RemoveCard
+            // 
+            YDC_BTN_RemoveCard.Enabled = false;
+            YDC_BTN_RemoveCard.Location = new Point(6, 53);
+            YDC_BTN_RemoveCard.Name = "YDC_BTN_RemoveCard";
+            YDC_BTN_RemoveCard.Size = new Size(72, 25);
+            YDC_BTN_RemoveCard.TabIndex = 4;
+            YDC_BTN_RemoveCard.Text = "Remove";
+            YDC_BTN_RemoveCard.UseVisualStyleBackColor = true;
+            // 
+            // YDC_BTN_AddCard
+            // 
+            YDC_BTN_AddCard.Location = new Point(6, 22);
+            YDC_BTN_AddCard.Name = "YDC_BTN_AddCard";
+            YDC_BTN_AddCard.Size = new Size(72, 25);
+            YDC_BTN_AddCard.TabIndex = 2;
+            YDC_BTN_AddCard.Text = "Add";
+            YDC_BTN_AddCard.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Location = new Point(8, 112);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(635, 496);
+            tabControl1.TabIndex = 10;
+            // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(YDC_LV_MainDeckCards);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(651, 629);
-            tabPage1.TabIndex = 5;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Size = new Size(627, 468);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Main Deck";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // YDC_LV_MainDeckCards
+            // 
+            YDC_LV_MainDeckCards.Dock = DockStyle.Fill;
+            YDC_LV_MainDeckCards.Location = new Point(3, 3);
+            YDC_LV_MainDeckCards.Name = "YDC_LV_MainDeckCards";
+            YDC_LV_MainDeckCards.Size = new Size(621, 462);
+            YDC_LV_MainDeckCards.TabIndex = 0;
+            YDC_LV_MainDeckCards.UseCompatibleStateImageBehavior = false;
+            YDC_LV_MainDeckCards.View = View.List;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(627, 468);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Side Deck";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(627, 468);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Extra Deck";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            groupBox12.Controls.Add(YDC_BTN_OpenSaveFile);
+            groupBox12.Controls.Add(YDC_CHKBOX_LoadPictures);
+            groupBox12.Controls.Add(YDC_BTN_SaveDeck);
+            groupBox12.Controls.Add(YDC_BTN_OpenDeck);
+            groupBox12.Location = new Point(214, 6);
+            groupBox12.Name = "groupBox12";
+            groupBox12.Size = new Size(200, 100);
+            groupBox12.TabIndex = 9;
+            groupBox12.TabStop = false;
+            groupBox12.Text = "Deck Tools";
+            // 
+            // YDC_BTN_OpenSaveFile
+            // 
+            YDC_BTN_OpenSaveFile.Location = new Point(84, 55);
+            YDC_BTN_OpenSaveFile.Name = "YDC_BTN_OpenSaveFile";
+            YDC_BTN_OpenSaveFile.Size = new Size(107, 25);
+            YDC_BTN_OpenSaveFile.TabIndex = 6;
+            YDC_BTN_OpenSaveFile.Text = "Extract Save";
+            YDC_BTN_OpenSaveFile.UseVisualStyleBackColor = true;
+            // 
+            // YDC_CHKBOX_LoadPictures
+            // 
+            YDC_CHKBOX_LoadPictures.AutoSize = true;
+            YDC_CHKBOX_LoadPictures.Location = new Point(84, 26);
+            YDC_CHKBOX_LoadPictures.Name = "YDC_CHKBOX_LoadPictures";
+            YDC_CHKBOX_LoadPictures.Size = new Size(97, 19);
+            YDC_CHKBOX_LoadPictures.TabIndex = 5;
+            YDC_CHKBOX_LoadPictures.Text = "Load Pictures";
+            YDC_CHKBOX_LoadPictures.UseVisualStyleBackColor = true;
+            YDC_CHKBOX_LoadPictures.CheckedChanged += YDC_CHKBOX_LoadPictures_CheckedChanged;
+            // 
+            // YDC_BTN_SaveDeck
+            // 
+            YDC_BTN_SaveDeck.Enabled = false;
+            YDC_BTN_SaveDeck.Location = new Point(6, 53);
+            YDC_BTN_SaveDeck.Name = "YDC_BTN_SaveDeck";
+            YDC_BTN_SaveDeck.Size = new Size(72, 25);
+            YDC_BTN_SaveDeck.TabIndex = 4;
+            YDC_BTN_SaveDeck.Text = "Save ";
+            YDC_BTN_SaveDeck.UseVisualStyleBackColor = true;
+            // 
+            // YDC_BTN_OpenDeck
+            // 
+            YDC_BTN_OpenDeck.Location = new Point(6, 22);
+            YDC_BTN_OpenDeck.Name = "YDC_BTN_OpenDeck";
+            YDC_BTN_OpenDeck.Size = new Size(72, 25);
+            YDC_BTN_OpenDeck.TabIndex = 2;
+            YDC_BTN_OpenDeck.Text = "Open ";
+            YDC_BTN_OpenDeck.UseVisualStyleBackColor = true;
+            YDC_BTN_OpenDeck.Click += YDC_BTN_OpenDeck_Click;
+            // 
+            // groupBox13
+            // 
+            groupBox13.Controls.Add(YDC_TB_DeckName);
+            groupBox13.Controls.Add(label13);
+            groupBox13.Controls.Add(YDC_LBL_NumOfCardsInExtra);
+            groupBox13.Controls.Add(label18);
+            groupBox13.Controls.Add(YDC_LBL_NumOfCardsInSide);
+            groupBox13.Controls.Add(label16);
+            groupBox13.Controls.Add(YDC_LBL_NumOfCardInMain);
+            groupBox13.Controls.Add(label14);
+            groupBox13.Location = new Point(8, 6);
+            groupBox13.Name = "groupBox13";
+            groupBox13.Size = new Size(200, 100);
+            groupBox13.TabIndex = 8;
+            groupBox13.TabStop = false;
+            groupBox13.Text = "Deck Information";
+            // 
+            // YDC_TB_DeckName
+            // 
+            YDC_TB_DeckName.Font = new Font("Segoe UI", 8F);
+            YDC_TB_DeckName.Location = new Point(84, 14);
+            YDC_TB_DeckName.Name = "YDC_TB_DeckName";
+            YDC_TB_DeckName.Size = new Size(110, 22);
+            YDC_TB_DeckName.TabIndex = 7;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(7, 19);
+            label13.Name = "label13";
+            label13.Size = new Size(71, 15);
+            label13.TabIndex = 6;
+            label13.Text = "Deck Name:";
+            // 
+            // YDC_LBL_NumOfCardsInExtra
+            // 
+            YDC_LBL_NumOfCardsInExtra.AutoSize = true;
+            YDC_LBL_NumOfCardsInExtra.Location = new Point(78, 82);
+            YDC_LBL_NumOfCardsInExtra.Name = "YDC_LBL_NumOfCardsInExtra";
+            YDC_LBL_NumOfCardsInExtra.Size = new Size(13, 15);
+            YDC_LBL_NumOfCardsInExtra.TabIndex = 5;
+            YDC_LBL_NumOfCardsInExtra.Text = "0";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(7, 82);
+            label18.Name = "label18";
+            label18.Size = new Size(65, 15);
+            label18.TabIndex = 4;
+            label18.Text = "Extra Deck:";
+            // 
+            // YDC_LBL_NumOfCardsInSide
+            // 
+            YDC_LBL_NumOfCardsInSide.AutoSize = true;
+            YDC_LBL_NumOfCardsInSide.Location = new Point(79, 61);
+            YDC_LBL_NumOfCardsInSide.Name = "YDC_LBL_NumOfCardsInSide";
+            YDC_LBL_NumOfCardsInSide.Size = new Size(13, 15);
+            YDC_LBL_NumOfCardsInSide.TabIndex = 3;
+            YDC_LBL_NumOfCardsInSide.Text = "0";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(7, 61);
+            label16.Name = "label16";
+            label16.Size = new Size(61, 15);
+            label16.TabIndex = 2;
+            label16.Text = "Side Deck:";
+            // 
+            // YDC_LBL_NumOfCardInMain
+            // 
+            YDC_LBL_NumOfCardInMain.AutoSize = true;
+            YDC_LBL_NumOfCardInMain.Location = new Point(79, 40);
+            YDC_LBL_NumOfCardInMain.Name = "YDC_LBL_NumOfCardInMain";
+            YDC_LBL_NumOfCardInMain.Size = new Size(13, 15);
+            YDC_LBL_NumOfCardInMain.TabIndex = 1;
+            YDC_LBL_NumOfCardInMain.Text = "0";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(7, 40);
+            label14.Name = "label14";
+            label14.Size = new Size(66, 15);
+            label14.TabIndex = 0;
+            label14.Text = "Main Deck:";
             // 
             // MenuBar
             // 
@@ -1231,6 +1498,14 @@ namespace WolfX
             groupBox5.PerformLayout();
             groupBox11.ResumeLayout(false);
             groupBox11.PerformLayout();
+            Page_YDCManager.ResumeLayout(false);
+            groupBox14.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            groupBox12.ResumeLayout(false);
+            groupBox12.PerformLayout();
+            groupBox13.ResumeLayout(false);
+            groupBox13.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             Status.ResumeLayout(false);
@@ -1346,7 +1621,31 @@ namespace WolfX
         private Label label9;
         private ProgressBar STRMAN_PB_HowFarThroughTheFile;
         private Label label11;
-        private TabPage tabPage1;
+        private TabPage Page_YDCManager;
         private CheckBox CREDITS_CheckB_IsCredit;
+        private GroupBox groupBox12;
+        private CheckBox YDC_CHKBOX_LoadPictures;
+        public Button YDC_BTN_SaveDeck;
+        private Button YDC_BTN_OpenDeck;
+        private GroupBox groupBox13;
+        private Label YDC_LBL_NumOfCardInMain;
+        private Label label14;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Button YDC_BTN_OpenSaveFile;
+        private TabPage tabPage3;
+        private GroupBox groupBox14;
+        public Button YDC_BTN_ReplaceCard;
+        public Button YDC_BTN_RemoveCard;
+        private Button YDC_BTN_AddCard;
+        private Label YDC_LBL_NumOfCardsInExtra;
+        private Label label18;
+        private Label YDC_LBL_NumOfCardsInSide;
+        private Label label16;
+        private ListView YDC_LV_MainDeckCards;
+        private Label label13;
+        private TextBox YDC_TB_DeckName;
     }
 }
