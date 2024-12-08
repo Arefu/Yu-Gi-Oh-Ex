@@ -174,16 +174,6 @@ namespace WolfX
             //    Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), Form.CB_LoadCensoredCards.Checked);
         }
 
-        private void ReplaceImage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CB_LoadCensoredCards_CheckedChanged(object sender, EventArgs e)
-        {
-            // Form.PB_CardPicture.Image = Preview_Generator.Get_CardImageFromArchive(State.Cards[State.CardIndex]._Id.ToString(), CB_LoadCensoredCards.Checked);
-        }
-
-     
+   
     }
 }

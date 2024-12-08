@@ -1,5 +1,6 @@
 ﻿using Types;
 using WolfX.Types;
+using WolfX.WolfX.File_Type_UI;
 
 namespace WolfX
 {
@@ -39,6 +40,7 @@ namespace WolfX
                     YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID(Card), Card.ToString());
             }
 
+            YDC_BTN_AddCard.Enabled = true;
         }
         private void YDC_CHKBOX_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
@@ -73,5 +75,33 @@ namespace WolfX
 
             YDC_BTN_OpenDeck_Click(0, e);
         }
+
+        private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
+        {
+            Card_Changer C = new Card_Changer();
+            C.LoadCards(CARDS_INFO.CARD_Language.English);
+
+            using var OpenZib = new OpenFileDialog();
+            OpenZib.Title = "Open ZIB Archive";
+            OpenZib.Filter = "ZIB Archive (*.zib)|*.zib";
+            if (OpenZib.ShowDialog() != DialogResult.OK)
+            {
+                MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            ZIB.Load(OpenZib.FileName);
+
+
+            if (C.ShowDialog() == DialogResult.OK)
+            {
+                var Card = CARDS_Cards.Cards.Where(Card => Card.Name == C.Card.Name).First();
+                if (Card != null)
+                {
+                    YDC_LV_MainDeckCards.LargeImageList.Images.Add(Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID(Card.ID.ToString())));
+                    YDC_LV_MainDeckCards.Items.Add(Card.Name, Card.ID.ToString());
+                }
+            }
+        }
+     
     }
 }
