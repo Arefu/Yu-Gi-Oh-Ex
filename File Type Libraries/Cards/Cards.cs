@@ -244,7 +244,24 @@ namespace Types
 
         public static void SaveCardInfo()
         {
+            if(Ready != true)
+                return;
 
+            //Setup the Binary Writers
+            using var NameWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Name_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+            using var DescWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Desc_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+            using var IndxWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Indx_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+
+            //Write the Name and Desc Files
+            foreach (var Card in Cards)
+            {
+                var NameOffset = NameWriter.BaseStream.Position;
+                var DescOffset = DescWriter.BaseStream.Position;
+                NameWriter.Write(Encoding.Unicode.GetBytes(Card.Name + '\0'));
+                DescWriter.Write(Encoding.Unicode.GetBytes(Card.Desc + '\0'));
+                IndxWriter.Write((uint)NameOffset);
+                IndxWriter.Write((uint)DescOffset);
+            }
         }
 
         public static void SaveCardProps()
@@ -334,6 +351,16 @@ namespace Types
             reader.BaseStream.Position = Start + encoding.GetByteCount(Res + '\0');
 
             return Res;
+        }
+
+        public static void WriteNullTerminatedString(this BinaryWriter writer, Encoding encoding)
+        {
+            var Builder = new StringBuilder();
+            var Writer = new StreamWriter(writer.BaseStream, encoding);
+
+            var Start = writer.BaseStream.Position;
+
+
         }
     }
 }

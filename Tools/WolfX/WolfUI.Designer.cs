@@ -257,6 +257,7 @@ namespace WolfX
             CARDS_BTN_SaveCard.TabIndex = 0;
             CARDS_BTN_SaveCard.Text = "Save Card";
             CARDS_BTN_SaveCard.UseVisualStyleBackColor = true;
+            CARDS_BTN_SaveCard.Click += CARDS_BTN_SaveCard_Click;
             // 
             // btn_NextCard
             // 
@@ -1086,12 +1087,14 @@ namespace WolfX
             // 
             // YDC_BTN_AddCard
             // 
+            YDC_BTN_AddCard.Enabled = false;
             YDC_BTN_AddCard.Location = new Point(6, 22);
             YDC_BTN_AddCard.Name = "YDC_BTN_AddCard";
             YDC_BTN_AddCard.Size = new Size(72, 25);
             YDC_BTN_AddCard.TabIndex = 2;
             YDC_BTN_AddCard.Text = "Add";
             YDC_BTN_AddCard.UseVisualStyleBackColor = true;
+            YDC_BTN_AddCard.Click += YDC_BTN_AddCard_Click;
             // 
             // tabControl1
             // 

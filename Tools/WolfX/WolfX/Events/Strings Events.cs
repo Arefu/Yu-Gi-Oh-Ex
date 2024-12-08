@@ -10,6 +10,28 @@ namespace WolfX
         {
             using (var FileDialog = new OpenFileDialog())
             {
+                if (CREDITS_CheckB_IsCredit.Checked)
+            {
+                    FileDialog.Title = "Open Credits *.DAT File";
+                    FileDialog.Filter = "Credits File|credits.dat|All DAT Files (*.DAT)|*.DAT";
+                    if(FileDialog.ShowDialog() != DialogResult.OK)
+                    {
+                        MessageBox.Show("Please Select a Credits *.DAT File", "No Credits File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    var Credits = CRED.Load(FileDialog.FileName);
+
+                    STRMAN_LB_CurrentFileStrings.Items.Clear();
+                    STRMAN_LBL_LocalCount.Text = Credits.Count.ToString();
+
+                    foreach(var String in Credits)
+                    {
+                        STRMAN_LB_CurrentFileStrings.Items.Add(String);
+                    }
+                    return;
+            }
+
+            
                 FileDialog.Title = "Open Strings *.BND File";
                 FileDialog.Filter = $"{State.Language} String File|Strings_STEAM_{State.Language.ToString()[0]}.BND|All BND Files (*.BND)|*.BND";
 
