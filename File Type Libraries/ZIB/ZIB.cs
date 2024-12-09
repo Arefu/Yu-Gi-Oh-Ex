@@ -80,6 +80,9 @@ namespace Types
             {
                 using var Reader = new BinaryReader(File.Open($"{_Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
                 var _Item = _Items.Where(_Item => _Item.Name == Item).FirstOrDefault();
+                if(_Item == null)
+                    return null;
+
                 Reader.BaseStream.Position = _Item.Start;
                 return new MemoryStream(Reader.ReadBytes((int)_Item.Size));
             }

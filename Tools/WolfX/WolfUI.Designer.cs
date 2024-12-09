@@ -39,13 +39,11 @@ namespace WolfX
             groupBox6 = new GroupBox();
             CARDS_BTN_OpenCards = new Button();
             CARDS_BTN_SaveCard = new Button();
-            btn_NextCard = new Button();
-            btn_LastCard = new Button();
             groupBox2 = new GroupBox();
-            Nud_CardLevel = new NumericUpDown();
-            comboBox6 = new ComboBox();
-            CB_CardAttribute = new ComboBox();
-            CB_CardTypes = new ComboBox();
+            CARDS_Nud_CardLevel = new NumericUpDown();
+            CARDS_CB_Limited = new ComboBox();
+            CARDS_CB_CardAttribute = new ComboBox();
+            CARDS_CB_CardTypes = new ComboBox();
             CB_CardImageID = new ComboBox();
             CARDS_CB_CardID = new ComboBox();
             CB_CardLevel = new Label();
@@ -60,8 +58,8 @@ namespace WolfX
             TB_CardAtk = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            TB_CardDesc = new TextBox();
-            PB_CardPicture = new PictureBox();
+            CARDS_TB_CardDesc = new TextBox();
+            CARDS_PB_CardPicture = new PictureBox();
             Page_ZibManager = new TabPage();
             groupBox4 = new GroupBox();
             ARCHIVE_BTN_PackZIB = new Button();
@@ -118,6 +116,7 @@ namespace WolfX
             STRMAN_LBL_Local = new Label();
             Page_YDCManager = new TabPage();
             groupBox14 = new GroupBox();
+            YDC_CB_UseSimpleEditor = new CheckBox();
             YDC_BTN_ReplaceCard = new Button();
             YDC_BTN_RemoveCard = new Button();
             YDC_BTN_AddCard = new Button();
@@ -142,11 +141,6 @@ namespace WolfX
             YDC_LBL_NumOfCardInMain = new Label();
             label14 = new Label();
             MenuBar = new MenuStrip();
-            fileToolStripMenuItem = new ToolStripMenuItem();
-            File_Open = new ToolStripMenuItem();
-            closeToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator1 = new ToolStripSeparator();
-            File_Exit = new ToolStripMenuItem();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_Extract = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_Pack = new ToolStripMenuItem();
@@ -168,9 +162,9 @@ namespace WolfX
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Nud_CardLevel).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PB_CardPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CARDS_PB_CardPicture).BeginInit();
             Page_ZibManager.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -216,8 +210,6 @@ namespace WolfX
             // Page_CardManager
             // 
             Page_CardManager.Controls.Add(groupBox6);
-            Page_CardManager.Controls.Add(btn_NextCard);
-            Page_CardManager.Controls.Add(btn_LastCard);
             Page_CardManager.Controls.Add(groupBox2);
             Page_CardManager.Controls.Add(groupBox1);
             Page_CardManager.Location = new Point(4, 24);
@@ -259,32 +251,12 @@ namespace WolfX
             CARDS_BTN_SaveCard.UseVisualStyleBackColor = true;
             CARDS_BTN_SaveCard.Click += CARDS_BTN_SaveCard_Click;
             // 
-            // btn_NextCard
-            // 
-            btn_NextCard.Location = new Point(334, 366);
-            btn_NextCard.Name = "btn_NextCard";
-            btn_NextCard.Size = new Size(107, 25);
-            btn_NextCard.TabIndex = 4;
-            btn_NextCard.Text = "Next Card";
-            btn_NextCard.UseVisualStyleBackColor = true;
-            btn_NextCard.Click += btn_NextCard_Click;
-            // 
-            // btn_LastCard
-            // 
-            btn_LastCard.Location = new Point(334, 335);
-            btn_LastCard.Name = "btn_LastCard";
-            btn_LastCard.Size = new Size(107, 25);
-            btn_LastCard.TabIndex = 3;
-            btn_LastCard.Text = "Previous Card";
-            btn_LastCard.UseVisualStyleBackColor = true;
-            btn_LastCard.Click += btn_LastCard_Click;
-            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(Nud_CardLevel);
-            groupBox2.Controls.Add(comboBox6);
-            groupBox2.Controls.Add(CB_CardAttribute);
-            groupBox2.Controls.Add(CB_CardTypes);
+            groupBox2.Controls.Add(CARDS_Nud_CardLevel);
+            groupBox2.Controls.Add(CARDS_CB_Limited);
+            groupBox2.Controls.Add(CARDS_CB_CardAttribute);
+            groupBox2.Controls.Add(CARDS_CB_CardTypes);
             groupBox2.Controls.Add(CB_CardImageID);
             groupBox2.Controls.Add(CARDS_CB_CardID);
             groupBox2.Controls.Add(CB_CardLevel);
@@ -300,37 +272,37 @@ namespace WolfX
             groupBox2.TabStop = false;
             groupBox2.Text = "Card Information";
             // 
-            // Nud_CardLevel
+            // CARDS_Nud_CardLevel
             // 
-            Nud_CardLevel.Location = new Point(6, 238);
-            Nud_CardLevel.Name = "Nud_CardLevel";
-            Nud_CardLevel.Size = new Size(297, 23);
-            Nud_CardLevel.TabIndex = 15;
+            CARDS_Nud_CardLevel.Location = new Point(6, 238);
+            CARDS_Nud_CardLevel.Name = "CARDS_Nud_CardLevel";
+            CARDS_Nud_CardLevel.Size = new Size(297, 23);
+            CARDS_Nud_CardLevel.TabIndex = 15;
             // 
-            // comboBox6
+            // CARDS_CB_Limited
             // 
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(6, 287);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(297, 23);
-            comboBox6.TabIndex = 12;
+            CARDS_CB_Limited.FormattingEnabled = true;
+            CARDS_CB_Limited.Location = new Point(6, 287);
+            CARDS_CB_Limited.Name = "CARDS_CB_Limited";
+            CARDS_CB_Limited.Size = new Size(297, 23);
+            CARDS_CB_Limited.TabIndex = 12;
             // 
-            // CB_CardAttribute
+            // CARDS_CB_CardAttribute
             // 
-            CB_CardAttribute.FormattingEnabled = true;
-            CB_CardAttribute.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
-            CB_CardAttribute.Location = new Point(6, 189);
-            CB_CardAttribute.Name = "CB_CardAttribute";
-            CB_CardAttribute.Size = new Size(297, 23);
-            CB_CardAttribute.TabIndex = 10;
+            CARDS_CB_CardAttribute.FormattingEnabled = true;
+            CARDS_CB_CardAttribute.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
+            CARDS_CB_CardAttribute.Location = new Point(6, 189);
+            CARDS_CB_CardAttribute.Name = "CARDS_CB_CardAttribute";
+            CARDS_CB_CardAttribute.Size = new Size(297, 23);
+            CARDS_CB_CardAttribute.TabIndex = 10;
             // 
-            // CB_CardTypes
+            // CARDS_CB_CardTypes
             // 
-            CB_CardTypes.FormattingEnabled = true;
-            CB_CardTypes.Location = new Point(6, 140);
-            CB_CardTypes.Name = "CB_CardTypes";
-            CB_CardTypes.Size = new Size(297, 23);
-            CB_CardTypes.TabIndex = 9;
+            CARDS_CB_CardTypes.FormattingEnabled = true;
+            CARDS_CB_CardTypes.Location = new Point(6, 140);
+            CARDS_CB_CardTypes.Name = "CARDS_CB_CardTypes";
+            CARDS_CB_CardTypes.Size = new Size(297, 23);
+            CARDS_CB_CardTypes.TabIndex = 9;
             // 
             // CB_CardImageID
             // 
@@ -348,6 +320,7 @@ namespace WolfX
             CARDS_CB_CardID.Name = "CARDS_CB_CardID";
             CARDS_CB_CardID.Size = new Size(297, 23);
             CARDS_CB_CardID.TabIndex = 7;
+            CARDS_CB_CardID.SelectedIndexChanged += CARDS_CB_CardID_SelectedIndexChanged;
             // 
             // CB_CardLevel
             // 
@@ -375,9 +348,9 @@ namespace WolfX
             label6.Font = new Font("Segoe UI", 11F);
             label6.Location = new Point(6, 68);
             label6.Name = "label6";
-            label6.Size = new Size(105, 20);
+            label6.Size = new Size(83, 20);
             label6.TabIndex = 3;
-            label6.Text = "Card Image ID";
+            label6.Text = "Card Genre";
             // 
             // label5
             // 
@@ -416,8 +389,8 @@ namespace WolfX
             groupBox1.Controls.Add(TB_CardAtk);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(TB_CardDesc);
-            groupBox1.Controls.Add(PB_CardPicture);
+            groupBox1.Controls.Add(CARDS_TB_CardDesc);
+            groupBox1.Controls.Add(CARDS_PB_CardPicture);
             groupBox1.Location = new Point(8, 6);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(320, 595);
@@ -433,6 +406,7 @@ namespace WolfX
             CARDS_CB_CardName.Name = "CARDS_CB_CardName";
             CARDS_CB_CardName.Size = new Size(305, 23);
             CARDS_CB_CardName.TabIndex = 7;
+            CARDS_CB_CardName.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
             // 
             // TB_CardDef
             // 
@@ -468,22 +442,22 @@ namespace WolfX
             label1.TabIndex = 3;
             label1.Text = "ATK:";
             // 
-            // TB_CardDesc
+            // CARDS_TB_CardDesc
             // 
-            TB_CardDesc.Location = new Point(6, 403);
-            TB_CardDesc.Multiline = true;
-            TB_CardDesc.Name = "TB_CardDesc";
-            TB_CardDesc.ScrollBars = ScrollBars.Vertical;
-            TB_CardDesc.Size = new Size(305, 154);
-            TB_CardDesc.TabIndex = 2;
+            CARDS_TB_CardDesc.Location = new Point(6, 403);
+            CARDS_TB_CardDesc.Multiline = true;
+            CARDS_TB_CardDesc.Name = "CARDS_TB_CardDesc";
+            CARDS_TB_CardDesc.ScrollBars = ScrollBars.Vertical;
+            CARDS_TB_CardDesc.Size = new Size(305, 154);
+            CARDS_TB_CardDesc.TabIndex = 2;
             // 
-            // PB_CardPicture
+            // CARDS_PB_CardPicture
             // 
-            PB_CardPicture.Location = new Point(6, 51);
-            PB_CardPicture.Name = "PB_CardPicture";
-            PB_CardPicture.Size = new Size(305, 346);
-            PB_CardPicture.TabIndex = 0;
-            PB_CardPicture.TabStop = false;
+            CARDS_PB_CardPicture.Location = new Point(6, 51);
+            CARDS_PB_CardPicture.Name = "CARDS_PB_CardPicture";
+            CARDS_PB_CardPicture.Size = new Size(305, 346);
+            CARDS_PB_CardPicture.TabIndex = 0;
+            CARDS_PB_CardPicture.TabStop = false;
             // 
             // Page_ZibManager
             // 
@@ -1055,6 +1029,7 @@ namespace WolfX
             // 
             // groupBox14
             // 
+            groupBox14.Controls.Add(YDC_CB_UseSimpleEditor);
             groupBox14.Controls.Add(YDC_BTN_ReplaceCard);
             groupBox14.Controls.Add(YDC_BTN_RemoveCard);
             groupBox14.Controls.Add(YDC_BTN_AddCard);
@@ -1064,6 +1039,16 @@ namespace WolfX
             groupBox14.TabIndex = 11;
             groupBox14.TabStop = false;
             groupBox14.Text = "Deck Editing Tools";
+            // 
+            // YDC_CB_UseSimpleEditor
+            // 
+            YDC_CB_UseSimpleEditor.AutoSize = true;
+            YDC_CB_UseSimpleEditor.Location = new Point(84, 25);
+            YDC_CB_UseSimpleEditor.Name = "YDC_CB_UseSimpleEditor";
+            YDC_CB_UseSimpleEditor.Size = new Size(110, 19);
+            YDC_CB_UseSimpleEditor.TabIndex = 6;
+            YDC_CB_UseSimpleEditor.Text = "Simple Add Box";
+            YDC_CB_UseSimpleEditor.UseVisualStyleBackColor = true;
             // 
             // YDC_BTN_ReplaceCard
             // 
@@ -1304,47 +1289,12 @@ namespace WolfX
             // 
             // MenuBar
             // 
-            MenuBar.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem });
+            MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
             MenuBar.Location = new Point(0, 0);
             MenuBar.Name = "MenuBar";
             MenuBar.Size = new Size(659, 24);
             MenuBar.TabIndex = 1;
             MenuBar.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { File_Open, closeToolStripMenuItem, toolStripSeparator1, File_Exit });
-            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
-            fileToolStripMenuItem.Text = "&File";
-            // 
-            // File_Open
-            // 
-            File_Open.Name = "File_Open";
-            File_Open.ShortcutKeys = Keys.Control | Keys.O;
-            File_Open.Size = new Size(148, 22);
-            File_Open.Text = "&Open";
-            File_Open.Click += File_Open_Click;
-            // 
-            // closeToolStripMenuItem
-            // 
-            closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            closeToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.W;
-            closeToolStripMenuItem.Size = new Size(148, 22);
-            closeToolStripMenuItem.Text = "&Close";
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(145, 6);
-            // 
-            // File_Exit
-            // 
-            File_Exit.Name = "File_Exit";
-            File_Exit.ShortcutKeys = Keys.Alt | Keys.F4;
-            File_Exit.Size = new Size(148, 22);
-            File_Exit.Text = "E&xit";
-            File_Exit.Click += File_Exit_Click;
             // 
             // toolsToolStripMenuItem
             // 
@@ -1482,10 +1432,10 @@ namespace WolfX
             groupBox6.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Nud_CardLevel).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)PB_CardPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CARDS_PB_CardPicture).EndInit();
             Page_ZibManager.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
@@ -1513,6 +1463,7 @@ namespace WolfX
             groupBox11.PerformLayout();
             Page_YDCManager.ResumeLayout(false);
             groupBox14.ResumeLayout(false);
+            groupBox14.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             groupBox12.ResumeLayout(false);
@@ -1534,20 +1485,14 @@ namespace WolfX
         private TabPage Page_CardManager;
         private TabPage Page_ZibManager;
         private MenuStrip MenuBar;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem File_Open;
-        private ToolStripMenuItem closeToolStripMenuItem;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem File_Exit;
         private GroupBox groupBox1;
         private Label label2;
         private Label label1;
         private GroupBox groupBox2;
-        private ComboBox comboBox6;
+        private ComboBox CARDS_CB_Limited;
         private ComboBox CB_CardImageID;
         private Label CB_CardLevel;
         private Label CB_CardLimitedStatus;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -1578,16 +1523,14 @@ namespace WolfX
         private ToolStripMenuItem Language_russian;
         private ToolStripMenuItem Language_spanish;
         private TabPage Page_DFYMOOManager;
-        public TextBox TB_CardDesc;
-        private Button btn_NextCard;
-        private Button btn_LastCard;
-        public PictureBox PB_CardPicture;
+        public TextBox CARDS_TB_CardDesc;
+        public PictureBox CARDS_PB_CardPicture;
         public ComboBox CARDS_CB_CardID;
         public TextBox TB_CardDef;
         public TextBox TB_CardAtk;
-        public ComboBox CB_CardAttribute;
-        public NumericUpDown Nud_CardLevel;
-        public ComboBox CB_CardTypes;
+        public ComboBox CARDS_CB_CardAttribute;
+        public NumericUpDown CARDS_Nud_CardLevel;
+        public ComboBox CARDS_CB_CardTypes;
         public ComboBox CARDS_CB_CardName;
         private GroupBox groupBox6;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
@@ -1661,5 +1604,7 @@ namespace WolfX
         private Button CARDS_BTN_SaveCard;
         private Button CARDS_BTN_OpenCards;
         private CheckBox YDC_CHKBOX_UseCardID;
+        private Label label6;
+        private CheckBox YDC_CB_UseSimpleEditor;
     }
 }

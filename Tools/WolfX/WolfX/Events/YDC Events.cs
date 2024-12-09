@@ -46,9 +46,35 @@ namespace WolfX
         {
             if(YDC_CHKBOX_UseCardID.Checked == false)
             {
-                CARDS_BTN_OpenCards_Click(0, e);
-                YDC_BTN_OpenDeck_Click(0, e);
-            }
+                using (var OpenFile = new OpenFileDialog())
+                {
+                    OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
+                    OpenFile.Title = "Open Cards Indx File";
+                    OpenFile.Multiselect = false;
+                    OpenFile.InitialDirectory = State.WorkingDirectory;
+                    var Res = OpenFile.ShowDialog();
+                    if (Res != DialogResult.OK)
+                    {
+                        MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
+                    {
+                        MessageBox.Show("Please Select a Cards Indx File", "Incorrect File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    if (CARDS_Cards.Setup_CardBinder(OpenFile.FileName) == false)
+                    {
+                        MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    CARDS_Cards.LoadCardInfo();
+                    CARDS_Cards.LoadCardProps();
+
+                }
+                }
         }
 
         private void YDC_CHKBOX_LoadPictures_CheckedChanged(object sender, EventArgs e)
@@ -73,7 +99,6 @@ namespace WolfX
                 YDC_LV_MainDeckCards.View = View.List;
             }
 
-            YDC_BTN_OpenDeck_Click(0, e);
         }
 
         private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
@@ -99,6 +124,7 @@ namespace WolfX
                 {
                     YDC_LV_MainDeckCards.LargeImageList.Images.Add(Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID(Card.ID.ToString())));
                     YDC_LV_MainDeckCards.Items.Add(Card.Name, Card.ID.ToString());
+                    YDC_LV_MainDeckCards.Refresh();
                 }
             }
         }
