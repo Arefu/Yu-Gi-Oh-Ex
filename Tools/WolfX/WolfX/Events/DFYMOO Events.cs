@@ -32,8 +32,8 @@ namespace WolfX
                 DFYMOO_ItemList.Items.Add(Item.ItemName);
             }
 
-            WolfUI.Form.lbl_Dfymoo_name.Text = OpenFile.SafeFileName;
-            WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = DFY_Editor.DFY_Items.Count.ToString();
+        //    WolfUI.Form.lbl_Dfymoo_name.Text = OpenFile.SafeFileName;
+      //      WolfUI.Form.lbl_Dfymoo_NumOfItems.Text = DFY_Editor.DFY_Items.Count.ToString();
 
             DFY_Editor.Show();
         }
