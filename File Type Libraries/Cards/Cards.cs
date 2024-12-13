@@ -110,6 +110,126 @@ namespace Types
 
             return true;
         }
+        public static bool Close_CardBinder()
+        {
+            if (Ready != true)
+                return false;
+
+            IndxReader?.Close();
+            NameReader?.Close();
+            DescReader?.Close();
+            PropReader?.Close();
+
+            Ready = false;
+
+            return true;
+        }
+
+
+        public static void LoadCardInfo()
+        {
+            if (Ready != true)
+                return;
+            if (Ready == true)
+                Refresh();
+
+            uint Offset = 0x0;
+            string Data = "";
+
+            while (NameReader.BaseStream.Position != NameReader.BaseStream.Length)
+            {
+                Offset = (uint)NameReader.BaseStream.Position;
+                Data = NameReader.ReadNullTerminatedString(Encoding.Unicode);
+
+                Names.Add(Offset, Data);
+            }
+
+            while (DescReader.BaseStream.Position != DescReader.BaseStream.Length)
+            {
+                Offset = (uint)DescReader.BaseStream.Position;
+                Data = DescReader.ReadNullTerminatedString(Encoding.Unicode);
+
+                Descs.Add(Offset, Data);
+            }
+        }
+
+        public static void LoadCardProps()
+        {
+            do
+            {
+                var NameOffset = IndxReader.ReadUInt32();
+                var DescOffset = IndxReader.ReadUInt32();
+
+                var First = new BitVector32((int)PropReader.ReadUInt32());
+                var Second = new BitVector32((int)PropReader.ReadUInt32());
+
+                CARD_Card Card = new();
+
+                var CardId = BitVector32.CreateSection(16383);
+                var CardAtk = BitVector32.CreateSection(511, CardId);
+                var QuadCardDef = BitVector32.CreateSection(511, CardAtk);
+
+                var SecondQuadUnk = BitVector32.CreateSection(1);
+                var Kind = BitVector32.CreateSection(63, SecondQuadUnk);
+                var Attribute = BitVector32.CreateSection(15, Kind);
+                var MonsterLevel = BitVector32.CreateSection(15, Attribute);
+                var Ico = BitVector32.CreateSection(7, MonsterLevel);
+                var Type = BitVector32.CreateSection(31, Ico);
+                var LeftScale = BitVector32.CreateSection(15, Type);
+                var RightScale = BitVector32.CreateSection(15, LeftScale);
+
+                Card.ID = (short)First[CardId];
+                Card.Name = Names[NameOffset];
+                Card.Desc = Descs[DescOffset];
+                Card.Attack = (First[CardAtk] * 10);
+                Card.Defense = (First[QuadCardDef] * 10);
+
+                if(Card.Attack == 5110)
+                    Card.Attack = -1;
+                if (Card.Defense == 5110)
+                    Card.Defense = -1;
+
+                Card.Level = (byte)Second[MonsterLevel];
+                Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
+                Card.Type = (CARDS_INFO.CARD_Type)Second[Kind];
+                Card.PEND_Scale1 = (byte)Second[LeftScale];
+                Card.PEND_Scale2 = (byte)Second[RightScale];
+
+                Card.PROP = First;
+
+                Cards.Add(Card);
+            } while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
+
+        }
+
+        public static void SaveCardInfo()
+        {
+            if(Ready != true)
+                return;
+
+            //Setup the Binary Writers
+            using var NameWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Name_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+            using var DescWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Desc_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+            using var IndxWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Indx_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+
+            //Write the Name and Desc Files
+            foreach (var Card in Cards)
+            {
+                var NameOffset = NameWriter.BaseStream.Position;
+                var DescOffset = DescWriter.BaseStream.Position;
+                NameWriter.Write(Encoding.Unicode.GetBytes(Card.Name + '\0'));
+                DescWriter.Write(Encoding.Unicode.GetBytes(Card.Desc + '\0'));
+                IndxWriter.Write((uint)NameOffset);
+                IndxWriter.Write((uint)DescOffset);
+            }
+        }
+
+        public static void SaveCardProps()
+        {
+
+        }
+
+        #region Card Getters
         public static string Get_CardNameFromID(short ID)
         {
             if (Cards.Count == 0)
@@ -171,104 +291,9 @@ namespace Types
                 return 0;
             return (short)Cards.Find(x => x.ID == ID).PROP.Data;
         }
+        #endregion
 
-        public static void LoadCardInfo()
-        {
-            if (Ready != true)
-                return;
-            if (Ready == true)
-                Refresh();
-
-            uint Offset = 0x0;
-            string Data = "";
-
-            while (NameReader.BaseStream.Position != NameReader.BaseStream.Length)
-            {
-                Offset = (uint)NameReader.BaseStream.Position;
-                Data = NameReader.ReadNullTerminatedString(Encoding.Unicode);
-
-                Names.Add(Offset, Data);
-            }
-
-            while (DescReader.BaseStream.Position != DescReader.BaseStream.Length)
-            {
-                Offset = (uint)DescReader.BaseStream.Position;
-                Data = DescReader.ReadNullTerminatedString(Encoding.Unicode);
-
-                Descs.Add(Offset, Data);
-            }
-        }
-        public static void LoadCardProps()
-        {
-            do
-            {
-                var NameOffset = IndxReader.ReadUInt32();
-                var DescOffset = IndxReader.ReadUInt32();
-
-                var First = new BitVector32((int)PropReader.ReadUInt32());
-                var Second = new BitVector32((int)PropReader.ReadUInt32());
-
-                CARD_Card Card = new();
-
-                var CardId = BitVector32.CreateSection(16383);
-                var CardAtk = BitVector32.CreateSection(511, CardId);
-                var QuadCardDef = BitVector32.CreateSection(511, CardAtk);
-
-                var SecondQuadUnk = BitVector32.CreateSection(1);
-                var Kind = BitVector32.CreateSection(63, SecondQuadUnk);
-                var Attribute = BitVector32.CreateSection(15, Kind);
-                var MonsterLevel = BitVector32.CreateSection(15, Attribute);
-                var Ico = BitVector32.CreateSection(7, MonsterLevel);
-                var Type = BitVector32.CreateSection(31, Ico);
-                var LeftScale = BitVector32.CreateSection(15, Type);
-                var RightScale = BitVector32.CreateSection(15, LeftScale);
-
-                Card.ID = (short)First[CardId];
-                Card.Name = Names[NameOffset];
-                Card.Desc = Descs[DescOffset];
-                Card.Attack = (First[CardAtk] * 10);
-                Card.Defense = (First[QuadCardDef] * 10);
-                Card.Level = (byte)Second[MonsterLevel];
-                Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
-                Card.Type = (CARDS_INFO.CARD_Type)Second[Kind];
-                Card.PEND_Scale1 = (byte)Second[LeftScale];
-                Card.PEND_Scale2 = (byte)Second[RightScale];
-
-                Card.PROP = First;
-
-                Cards.Add(Card);
-            } while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
-
-        }
-
-
-        public static void SaveCardInfo()
-        {
-            if(Ready != true)
-                return;
-
-            //Setup the Binary Writers
-            using var NameWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Name_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            using var DescWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Desc_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            using var IndxWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Indx_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-
-            //Write the Name and Desc Files
-            foreach (var Card in Cards)
-            {
-                var NameOffset = NameWriter.BaseStream.Position;
-                var DescOffset = DescWriter.BaseStream.Position;
-                NameWriter.Write(Encoding.Unicode.GetBytes(Card.Name + '\0'));
-                DescWriter.Write(Encoding.Unicode.GetBytes(Card.Desc + '\0'));
-                IndxWriter.Write((uint)NameOffset);
-                IndxWriter.Write((uint)DescOffset);
-            }
-        }
-
-        public static void SaveCardProps()
-        {
-
-        }
-
+        #region Card Setters
         public static void Set_CardNameFromID(short ID, string Name)
         {
             if (Cards.Count == 0)
@@ -323,6 +348,8 @@ namespace Types
                 return;
             Cards.Find(x => x.ID == ID).PEND_Scale2 = Scale;
         }
+        #endregion
+
 
     }
 
