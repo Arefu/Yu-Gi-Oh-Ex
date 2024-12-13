@@ -144,6 +144,7 @@ namespace WolfX
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_Extract = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_Pack = new ToolStripMenuItem();
+            WOLFUI_TOOLITEM_SetPath = new ToolStripMenuItem();
             Tools_Verify = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             languageToolStripMenuItem = new ToolStripMenuItem();
@@ -154,10 +155,12 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            loadExtractedGameToolStripMenuItem = new ToolStripMenuItem();
             Status = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             LBL_GameStatusLabel = new ToolStripStatusLabel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            CARDS_BTN_CloseBinder = new Button();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -222,6 +225,7 @@ namespace WolfX
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
             groupBox6.Location = new Point(334, 409);
@@ -1289,7 +1293,7 @@ namespace WolfX
             // 
             // MenuBar
             // 
-            MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
+            MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem, loadExtractedGameToolStripMenuItem });
             MenuBar.Location = new Point(0, 0);
             MenuBar.Name = "MenuBar";
             MenuBar.Size = new Size(659, 24);
@@ -1298,7 +1302,7 @@ namespace WolfX
             // 
             // toolsToolStripMenuItem
             // 
-            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, Tools_Verify, toolStripSeparator2, languageToolStripMenuItem });
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, WOLFUI_TOOLITEM_SetPath, Tools_Verify, toolStripSeparator2, languageToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             toolsToolStripMenuItem.Size = new Size(46, 20);
             toolsToolStripMenuItem.Text = "&Tools";
@@ -1318,6 +1322,13 @@ namespace WolfX
             WOLFUI_TOOLITEM_Pack.Size = new Size(184, 22);
             WOLFUI_TOOLITEM_Pack.Text = "&Pack Game";
             WOLFUI_TOOLITEM_Pack.Click += WOLFUI_TOOLITEM_Pack_Click;
+            // 
+            // WOLFUI_TOOLITEM_SetPath
+            // 
+            WOLFUI_TOOLITEM_SetPath.Name = "WOLFUI_TOOLITEM_SetPath";
+            WOLFUI_TOOLITEM_SetPath.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_SetPath.Text = "Set Game Path";
+            WOLFUI_TOOLITEM_SetPath.Click += WOLFUI_TOOLITEM_Path_Click;
             // 
             // Tools_Verify
             // 
@@ -1390,6 +1401,13 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // loadExtractedGameToolStripMenuItem
+            // 
+            loadExtractedGameToolStripMenuItem.Name = "loadExtractedGameToolStripMenuItem";
+            loadExtractedGameToolStripMenuItem.Size = new Size(79, 20);
+            loadExtractedGameToolStripMenuItem.Text = "&Load Game";
+            loadExtractedGameToolStripMenuItem.ToolTipText = "Simplistic Loader for Extracted Game";
+            // 
             // Status
             // 
             Status.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, LBL_GameStatusLabel });
@@ -1412,6 +1430,16 @@ namespace WolfX
             LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
             LBL_GameStatusLabel.Size = new Size(69, 17);
             LBL_GameStatusLabel.Text = "Not Loaded";
+            // 
+            // CARDS_BTN_CloseBinder
+            // 
+            CARDS_BTN_CloseBinder.Location = new Point(222, 24);
+            CARDS_BTN_CloseBinder.Name = "CARDS_BTN_CloseBinder";
+            CARDS_BTN_CloseBinder.Size = new Size(75, 23);
+            CARDS_BTN_CloseBinder.TabIndex = 2;
+            CARDS_BTN_CloseBinder.Text = "Close";
+            CARDS_BTN_CloseBinder.UseVisualStyleBackColor = true;
+            CARDS_BTN_CloseBinder.Click += CARDS_BTN_CloseBinder_Click;
             // 
             // WolfUI
             // 
@@ -1606,5 +1634,8 @@ namespace WolfX
         private CheckBox YDC_CHKBOX_UseCardID;
         private Label label6;
         private CheckBox YDC_CB_UseSimpleEditor;
+        private ToolStripMenuItem WOLFUI_TOOLITEM_SetPath;
+        private ToolStripMenuItem loadExtractedGameToolStripMenuItem;
+        private Button CARDS_BTN_CloseBinder;
     }
 }

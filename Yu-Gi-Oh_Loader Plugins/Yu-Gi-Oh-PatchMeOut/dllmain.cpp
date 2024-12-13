@@ -7,6 +7,7 @@
 
 typedef __int64 (*OriginalPDEFunctionType)(__int64 a1, const char* a2);
 typedef void (*SetLanguage)(__int64 a1);
+typedef void (*Test)();
 OriginalPDEFunctionType OriginalPDE = nullptr;
 SetLanguage OriginalSetLanaguage = nullptr;
 
@@ -48,10 +49,12 @@ static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
 	 return; 
  }
 
+
  void ProcessConfig();
 
 BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
+    long long Test = 0x140767AF0;
     ProcessConfig();
 
     switch (ul_reason_for_call)
@@ -82,6 +85,7 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpRese
 			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched UseJP." << std::endl;
 			DetourAttach(&(PVOID&)YuGiOhEx::UseJPLogo, Patch_UseJP);
         }
+
 
         DetourTransactionCommit();
 		PDLimits = YuGiOhEx::UnkFuncForLoading;

@@ -13,7 +13,7 @@ namespace WolfX
         public WolfUI()
         {
             CheckForIllegalCrossThreadCalls = false;
-      
+
             InitializeComponent();
         }
 
@@ -46,5 +46,6 @@ namespace WolfX
                 MessageBox.Show("No Missing Files Found", "No Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+      
     }
 }
