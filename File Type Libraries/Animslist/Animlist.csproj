@@ -9,7 +9,7 @@
 	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 
 	  <PlatformTarget>x64</PlatformTarget>
-	  <OutputPath>$(SolutionDir)$(PlatformTarget)\$(Configuration)\Libraries\</OutputPath>
+	  <OutputPath>$(SolutionDir)Binaries\$(PlatformTarget)\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
 
 </Project>
