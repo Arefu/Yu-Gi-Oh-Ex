@@ -37,17 +37,16 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox6 = new GroupBox();
+            CARDS_BTN_CloseBinder = new Button();
             CARDS_BTN_OpenCards = new Button();
             CARDS_BTN_SaveCard = new Button();
             groupBox2 = new GroupBox();
             CARDS_Nud_CardLevel = new NumericUpDown();
-            CARDS_CB_Limited = new ComboBox();
             CARDS_CB_CardAttribute = new ComboBox();
             CARDS_CB_CardTypes = new ComboBox();
             CB_CardImageID = new ComboBox();
             CARDS_CB_CardID = new ComboBox();
             CB_CardLevel = new Label();
-            CB_CardLimitedStatus = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -155,12 +154,6 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            loadExtractedGameToolStripMenuItem = new ToolStripMenuItem();
-            Status = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            LBL_GameStatusLabel = new ToolStripStatusLabel();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            CARDS_BTN_CloseBinder = new Button();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -192,7 +185,6 @@ namespace WolfX
             groupBox12.SuspendLayout();
             groupBox13.SuspendLayout();
             MenuBar.SuspendLayout();
-            Status.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -207,7 +199,7 @@ namespace WolfX
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
             WolfX_TabManager.SelectedIndex = 0;
-            WolfX_TabManager.Size = new Size(659, 657);
+            WolfX_TabManager.Size = new Size(659, 647);
             WolfX_TabManager.TabIndex = 0;
             // 
             // Page_CardManager
@@ -218,7 +210,7 @@ namespace WolfX
             Page_CardManager.Location = new Point(4, 24);
             Page_CardManager.Name = "Page_CardManager";
             Page_CardManager.Padding = new Padding(3);
-            Page_CardManager.Size = new Size(651, 629);
+            Page_CardManager.Size = new Size(651, 619);
             Page_CardManager.TabIndex = 0;
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
@@ -228,12 +220,22 @@ namespace WolfX
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
-            groupBox6.Location = new Point(334, 409);
+            groupBox6.Location = new Point(334, 249);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
             groupBox6.TabIndex = 5;
             groupBox6.TabStop = false;
             groupBox6.Text = "Options";
+            // 
+            // CARDS_BTN_CloseBinder
+            // 
+            CARDS_BTN_CloseBinder.Location = new Point(222, 24);
+            CARDS_BTN_CloseBinder.Name = "CARDS_BTN_CloseBinder";
+            CARDS_BTN_CloseBinder.Size = new Size(75, 23);
+            CARDS_BTN_CloseBinder.TabIndex = 2;
+            CARDS_BTN_CloseBinder.Text = "Close";
+            CARDS_BTN_CloseBinder.UseVisualStyleBackColor = true;
+            CARDS_BTN_CloseBinder.Click += CARDS_BTN_CloseBinder_Click;
             // 
             // CARDS_BTN_OpenCards
             // 
@@ -258,38 +260,28 @@ namespace WolfX
             // groupBox2
             // 
             groupBox2.Controls.Add(CARDS_Nud_CardLevel);
-            groupBox2.Controls.Add(CARDS_CB_Limited);
             groupBox2.Controls.Add(CARDS_CB_CardAttribute);
             groupBox2.Controls.Add(CARDS_CB_CardTypes);
             groupBox2.Controls.Add(CB_CardImageID);
             groupBox2.Controls.Add(CARDS_CB_CardID);
             groupBox2.Controls.Add(CB_CardLevel);
-            groupBox2.Controls.Add(CB_CardLimitedStatus);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(label3);
             groupBox2.Location = new Point(334, 6);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(320, 323);
+            groupBox2.Size = new Size(320, 226);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Card Information";
             // 
             // CARDS_Nud_CardLevel
             // 
-            CARDS_Nud_CardLevel.Location = new Point(6, 238);
+            CARDS_Nud_CardLevel.Location = new Point(175, 42);
             CARDS_Nud_CardLevel.Name = "CARDS_Nud_CardLevel";
-            CARDS_Nud_CardLevel.Size = new Size(297, 23);
+            CARDS_Nud_CardLevel.Size = new Size(128, 23);
             CARDS_Nud_CardLevel.TabIndex = 15;
-            // 
-            // CARDS_CB_Limited
-            // 
-            CARDS_CB_Limited.FormattingEnabled = true;
-            CARDS_CB_Limited.Location = new Point(6, 287);
-            CARDS_CB_Limited.Name = "CARDS_CB_Limited";
-            CARDS_CB_Limited.Size = new Size(297, 23);
-            CARDS_CB_Limited.TabIndex = 12;
             // 
             // CARDS_CB_CardAttribute
             // 
@@ -322,7 +314,7 @@ namespace WolfX
             CARDS_CB_CardID.FormattingEnabled = true;
             CARDS_CB_CardID.Location = new Point(6, 42);
             CARDS_CB_CardID.Name = "CARDS_CB_CardID";
-            CARDS_CB_CardID.Size = new Size(297, 23);
+            CARDS_CB_CardID.Size = new Size(128, 23);
             CARDS_CB_CardID.TabIndex = 7;
             CARDS_CB_CardID.SelectedIndexChanged += CARDS_CB_CardID_SelectedIndexChanged;
             // 
@@ -330,21 +322,11 @@ namespace WolfX
             // 
             CB_CardLevel.AutoSize = true;
             CB_CardLevel.Font = new Font("Segoe UI", 11F);
-            CB_CardLevel.Location = new Point(6, 215);
+            CB_CardLevel.Location = new Point(175, 18);
             CB_CardLevel.Name = "CB_CardLevel";
             CB_CardLevel.Size = new Size(78, 20);
             CB_CardLevel.TabIndex = 5;
             CB_CardLevel.Text = "Card Level";
-            // 
-            // CB_CardLimitedStatus
-            // 
-            CB_CardLimitedStatus.AutoSize = true;
-            CB_CardLimitedStatus.Font = new Font("Segoe UI", 11F);
-            CB_CardLimitedStatus.Location = new Point(6, 264);
-            CB_CardLimitedStatus.Name = "CB_CardLimitedStatus";
-            CB_CardLimitedStatus.Size = new Size(138, 20);
-            CB_CardLimitedStatus.TabIndex = 4;
-            CB_CardLimitedStatus.Text = "Card Limited Status";
             // 
             // label6
             // 
@@ -380,7 +362,7 @@ namespace WolfX
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(6, 19);
+            label3.Location = new Point(6, 18);
             label3.Name = "label3";
             label3.Size = new Size(59, 20);
             label3.TabIndex = 0;
@@ -405,6 +387,7 @@ namespace WolfX
             // CARDS_CB_CardName
             // 
             CARDS_CB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardName.AutoCompleteSource = AutoCompleteSource.ListItems;
             CARDS_CB_CardName.FormattingEnabled = true;
             CARDS_CB_CardName.Location = new Point(6, 19);
             CARDS_CB_CardName.Name = "CARDS_CB_CardName";
@@ -471,7 +454,7 @@ namespace WolfX
             Page_ZibManager.Location = new Point(4, 24);
             Page_ZibManager.Name = "Page_ZibManager";
             Page_ZibManager.Padding = new Padding(3);
-            Page_ZibManager.Size = new Size(651, 629);
+            Page_ZibManager.Size = new Size(651, 619);
             Page_ZibManager.TabIndex = 1;
             Page_ZibManager.Text = "Archive Manager";
             Page_ZibManager.UseVisualStyleBackColor = true;
@@ -616,7 +599,7 @@ namespace WolfX
             Page_DFYMOOManager.Location = new Point(4, 24);
             Page_DFYMOOManager.Name = "Page_DFYMOOManager";
             Page_DFYMOOManager.Padding = new Padding(3);
-            Page_DFYMOOManager.Size = new Size(651, 629);
+            Page_DFYMOOManager.Size = new Size(651, 619);
             Page_DFYMOOManager.TabIndex = 2;
             Page_DFYMOOManager.Text = "DFYMOO Manager";
             Page_DFYMOOManager.UseVisualStyleBackColor = true;
@@ -811,7 +794,7 @@ namespace WolfX
             Page_ANIMLISTManager.Controls.Add(ANIM_GB_Info);
             Page_ANIMLISTManager.Location = new Point(4, 24);
             Page_ANIMLISTManager.Name = "Page_ANIMLISTManager";
-            Page_ANIMLISTManager.Size = new Size(651, 629);
+            Page_ANIMLISTManager.Size = new Size(651, 619);
             Page_ANIMLISTManager.TabIndex = 3;
             Page_ANIMLISTManager.Text = "Animlist Manager";
             Page_ANIMLISTManager.UseVisualStyleBackColor = true;
@@ -895,7 +878,7 @@ namespace WolfX
             Page_BNDManager.Controls.Add(groupBox11);
             Page_BNDManager.Location = new Point(4, 24);
             Page_BNDManager.Name = "Page_BNDManager";
-            Page_BNDManager.Size = new Size(651, 629);
+            Page_BNDManager.Size = new Size(651, 619);
             Page_BNDManager.TabIndex = 4;
             Page_BNDManager.Text = "Strings Manager";
             Page_BNDManager.UseVisualStyleBackColor = true;
@@ -1026,7 +1009,7 @@ namespace WolfX
             Page_YDCManager.Location = new Point(4, 24);
             Page_YDCManager.Name = "Page_YDCManager";
             Page_YDCManager.Padding = new Padding(3);
-            Page_YDCManager.Size = new Size(651, 629);
+            Page_YDCManager.Size = new Size(651, 619);
             Page_YDCManager.TabIndex = 5;
             Page_YDCManager.Text = "YDC Manager";
             Page_YDCManager.UseVisualStyleBackColor = true;
@@ -1293,7 +1276,7 @@ namespace WolfX
             // 
             // MenuBar
             // 
-            MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem, loadExtractedGameToolStripMenuItem });
+            MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
             MenuBar.Location = new Point(0, 0);
             MenuBar.Name = "MenuBar";
             MenuBar.Size = new Size(659, 24);
@@ -1401,52 +1384,11 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // loadExtractedGameToolStripMenuItem
-            // 
-            loadExtractedGameToolStripMenuItem.Name = "loadExtractedGameToolStripMenuItem";
-            loadExtractedGameToolStripMenuItem.Size = new Size(79, 20);
-            loadExtractedGameToolStripMenuItem.Text = "&Load Game";
-            loadExtractedGameToolStripMenuItem.ToolTipText = "Simplistic Loader for Extracted Game";
-            // 
-            // Status
-            // 
-            Status.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, LBL_GameStatusLabel });
-            Status.Location = new Point(0, 659);
-            Status.Name = "Status";
-            Status.Size = new Size(659, 22);
-            Status.SizingGrip = false;
-            Status.TabIndex = 2;
-            Status.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(44, 17);
-            toolStripStatusLabel1.Text = "Game: ";
-            // 
-            // LBL_GameStatusLabel
-            // 
-            LBL_GameStatusLabel.ForeColor = Color.Red;
-            LBL_GameStatusLabel.Name = "LBL_GameStatusLabel";
-            LBL_GameStatusLabel.Size = new Size(69, 17);
-            LBL_GameStatusLabel.Text = "Not Loaded";
-            // 
-            // CARDS_BTN_CloseBinder
-            // 
-            CARDS_BTN_CloseBinder.Location = new Point(222, 24);
-            CARDS_BTN_CloseBinder.Name = "CARDS_BTN_CloseBinder";
-            CARDS_BTN_CloseBinder.Size = new Size(75, 23);
-            CARDS_BTN_CloseBinder.TabIndex = 2;
-            CARDS_BTN_CloseBinder.Text = "Close";
-            CARDS_BTN_CloseBinder.UseVisualStyleBackColor = true;
-            CARDS_BTN_CloseBinder.Click += CARDS_BTN_CloseBinder_Click;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(659, 681);
-            Controls.Add(Status);
+            ClientSize = new Size(659, 671);
             Controls.Add(WolfX_TabManager);
             Controls.Add(MenuBar);
             DoubleBuffered = true;
@@ -1500,8 +1442,6 @@ namespace WolfX
             groupBox13.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
-            Status.ResumeLayout(false);
-            Status.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1517,10 +1457,8 @@ namespace WolfX
         private Label label2;
         private Label label1;
         private GroupBox groupBox2;
-        private ComboBox CARDS_CB_Limited;
         private ComboBox CB_CardImageID;
         private Label CB_CardLevel;
-        private Label CB_CardLimitedStatus;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -1534,9 +1472,6 @@ namespace WolfX
         public static WolfUI Form;
         private ToolStripMenuItem toolsToolStripMenuItem;
         private ToolStripMenuItem Tools_Verify;
-        private StatusStrip Status;
-        private ToolStripStatusLabel toolStripStatusLabel1;
-        public ToolStripStatusLabel LBL_GameStatusLabel;
         public CheckBox ARCHIVE_CB_ShowPreviewImage;
         public Label ARCHIVE_LBL_ArchiveSize;
         public Label ARCHIVE_LBL_ArchiveName;
@@ -1612,7 +1547,6 @@ namespace WolfX
         private GroupBox groupBox13;
         private Label YDC_LBL_NumOfCardInMain;
         private Label label14;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
@@ -1635,7 +1569,6 @@ namespace WolfX
         private Label label6;
         private CheckBox YDC_CB_UseSimpleEditor;
         private ToolStripMenuItem WOLFUI_TOOLITEM_SetPath;
-        private ToolStripMenuItem loadExtractedGameToolStripMenuItem;
         private Button CARDS_BTN_CloseBinder;
     }
 }

@@ -18,10 +18,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="WolfX\Events\Cards Events.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\File Type Libraries\Animslist\Animlist.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\BND\BND.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Cards\Cards.csproj" />
@@ -40,10 +36,10 @@
     <Compile Update="WolfX\Events\Cards Events.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WolfX\Events\YDC Events.cs">
+    <Compile Update="WolfX\Events\Strings Events.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WolfX\Events\Strings Events.cs">
+    <Compile Update="WolfX\Events\YDC Events.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
