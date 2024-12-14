@@ -112,9 +112,7 @@ namespace Types
         }
         public static bool Close_CardBinder()
         {
-            if (Ready != true)
-                return false;
-
+          
             IndxReader?.Close();
             NameReader?.Close();
             DescReader?.Close();
