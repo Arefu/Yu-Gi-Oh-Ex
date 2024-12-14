@@ -1,10 +1,19 @@
-# Yu-Gi-Oh-Ex
+![YuGiOh Legacy of the Duelist Link Evolution](https://cdn.ygorganization.com/2020/02/Yugioh-Legacy-of-the-Duelist-Link-Evolution-Siliconera-2-800x400-1.jpg)
 
-Rudimentary Yu-Gi-Oh LOTD LE mod tools
-Much like my https://github.com/Arefu/Wolf project, but this one will only work with Link Evolutions.
+# Wolf 2 - Electric Boogaloo
+Designed and tested with the latest build of [Yu-Gi-Oh Legacy of the Duelist Link Evolution](https://store.steampowered.com/app/1150640/YuGiOh_Legacy_of_the_Duelist__Link_Evolution/) on Steam. These tools have **not** been tested for the Nintendo Switch [version](https://www.nintendo.com/us/store/products/yu-gi-oh-legacy-of-the-duelist-link-evolution-switch/). They likely never will be since all of my effort is purely into the Window's Executable for the game. You might be lucky to transfer the knowledge across but don't expect everything to work, especially not the various plugins used by `Yu-Gi-Oh_Launcher`.
 
-I haven't worked on it in awhile thanks to no motivation, I've got a lot of stuff documented internally in the CT table thanks to other resources, and made an Dear ImGui window hook for it, I do want to try make an unoffical mp client/server so we don't need to be on Steam, but I never seem to get gud.
 
-Hit me up if you want to help, or just ... do?
 
-I'd suggest checking out the wiki, I've got some information there, the cheat Table documents a fair amount of the 'duel table' as you're dueling the wiki is more dealing wioth re'ing the exe and working out how deep mod support could go if given the brain power, pretty stubborn and always seem to return to this, so who klnows.
+
+## Getting Started
+
+You should always be using the latest commit that I have, issues are very frequent and there is no real version control of checks to ensure everything is still working. You will need .NET8 and .NET9 and VC++2012 to Latest installed.
+
+
+* WolfX - Is my attempt at a edit hub where you can interact with the game's properitary file foramts and edit them.
+* Yami-Yugi - This is just a simnple command line program to parse and extract YGO_DATA.dat.
+
+There is also Yu-Gi-Oh_Launcher which is a pathway to injecting my own code into the game, there are currently a few patches that I have, as well as a speedhack for the game to help make it feel a bit quicker to play.
+
+I would suggest checking the Project's [Wiki Page](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki), as almost all of what I know about the game is provided there which some of the information will be useful in either using these tools, or creating your own.
