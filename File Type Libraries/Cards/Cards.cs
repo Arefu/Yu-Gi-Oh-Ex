@@ -209,16 +209,26 @@ namespace Types
             using var NameWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Name_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
             using var DescWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Desc_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
             using var IndxWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Indx_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+            NameWriter.BaseStream.Position = 0x4;
+            DescWriter.BaseStream.Position = 0x4;
 
+            bool FirstPass = true;
             //Write the Name and Desc Files
             foreach (var Card in Cards)
             {
-                var NameOffset = NameWriter.BaseStream.Position;
-                var DescOffset = DescWriter.BaseStream.Position;
-                NameWriter.Write(Encoding.Unicode.GetBytes(Card.Name + '\0'));
-                DescWriter.Write(Encoding.Unicode.GetBytes(Card.Desc + '\0'));
-                IndxWriter.Write((uint)NameOffset);
-                IndxWriter.Write((uint)DescOffset);
+                NameWriter.Write(Encoding.Unicode.GetBytes(Card.Name ));
+                DescWriter.Write(Encoding.Unicode.GetBytes(Card.Desc ));
+                IndxWriter.Write(NameWriter.BaseStream.Position);
+                IndxWriter.Write(DescWriter.BaseStream.Position);
+
+                NameWriter.Write('\0');
+
+                if(FirstPass)
+                {
+                    NameWriter.BaseStream.Position += 0x4;
+                    DescWriter.BaseStream.Position += 0x4;
+                    FirstPass = false;
+                }
             }
         }
 
@@ -364,7 +374,11 @@ namespace Types
             while ((X = Reader.Read()) != -1)
             {
                 var C = (char)X;
-                if (C == '\0')
+                //if (C == '\0')
+                //{
+                //    break;
+                //}
+                if(Reader.BaseStream.Position == Reader.BaseStream.Length)
                 {
                     break;
                 }
