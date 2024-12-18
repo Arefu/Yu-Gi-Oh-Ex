@@ -76,7 +76,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 	ImGui_ImplDX11_NewFrame();
 	ImGui::NewFrame();
 	
-
+	
 	if (bShowMenu)
 	{
 		ImGui::Begin("Yu-Gi-Oh!", &bShowMenu);

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\YGO">
+      <UniqueIdentifier>{80fea4ac-4ca2-45d8-83b4-2be2be182ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\YGO\DuelSetup">
+      <UniqueIdentifier>{596e506a-1c42-42d9-b5ae-9ae4819ee4f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\YGO">
+      <UniqueIdentifier>{0dfbf287-3116-4aed-8fb9-003f251a530c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\YGO\DuelSetup">
+      <UniqueIdentifier>{f196caad-31de-4389-8a46-e5bb699c0976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\YGO\DuelUtility">
+      <UniqueIdentifier>{0bb68b2e-f03a-4a0f-b2ae-e5a3efe01f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\YGO\DuelUtility">
+      <UniqueIdentifier>{dfc62bdd-3113-45ba-8876-f5f15ed4bb7c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YGO_DuelSetup.cpp">
+      <Filter>Source Files\YGO\DuelSetup</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YGO_DuelUtility.cpp">
+      <Filter>Source Files\YGO\DuelUtility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Yu-Gi-Oh.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="YGO_DuelSetup.h">
+      <Filter>Header Files\YGO\DuelSetup</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YGO_DuelUtility.h">
+      <Filter>Header Files\YGO\DuelUtility</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
