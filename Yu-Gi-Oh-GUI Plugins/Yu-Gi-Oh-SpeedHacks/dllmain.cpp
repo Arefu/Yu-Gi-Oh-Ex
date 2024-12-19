@@ -29,7 +29,7 @@ bool speed_Enabled = true;
 bool no_anims = true;
 bool detours_Enabled = false;
 bool anim_detours_Enabled = false;
-long long Addr = 0x1407C1450;
+long long AnimationHNDLE = 0x1407C1450;
 
 DWORD WINAPI _hGetTickCount()
 {
@@ -49,6 +49,16 @@ BOOL WINAPI _hQueryPerformanceCounter(LARGE_INTEGER* lpPerformanceCount)
 	return TRUE;
 }
 
+__int64 __fastcall _hProcessAnimations(int a1, int a2, unsigned int a3, int a4)
+{
+	if (a1 == 5)
+		return 0;
+
+	auto result = ((int(__fastcall*)(int, int, unsigned int, int))AnimationHNDLE)(a1, a2, a3, a4);
+	return result;
+}
+
+
 void Undo_SpeedDetour()
 {
 	if (detours_Enabled == false)
@@ -59,18 +69,10 @@ void Undo_SpeedDetour()
 	DetourDetach(&(PVOID&)_GTC, _hGetTickCount);
 	DetourDetach(&(PVOID&)_GTC64, _hGetTickCount64);
 	DetourDetach(&(PVOID&)_QPC, _hQueryPerformanceCounter);
+	DetourDetach(&(PVOID&)AnimationHNDLE, _hProcessAnimations);
 	DetourTransactionCommit();
 
 	detours_Enabled = false;
-}
-
-__int64 __fastcall _hProcessAnimations(int a1, int a2, unsigned int a3, int a4)
-{
-	if (a1 == 5)
-		return 0;
-
-	auto result =  ((int(__fastcall*)(int, int, unsigned int, int))Addr)(a1, a2, a3, a4);
-	return result;
 }
 
 void Setup_SpeedDetour()
@@ -85,7 +87,7 @@ void Setup_SpeedDetour()
 	DetourAttach(&(PVOID&)_QPC, _hQueryPerformanceCounter);
 
 	if (no_anims)
-		DetourAttach(&(PVOID&)Addr, _hProcessAnimations);
+		DetourAttach(&(PVOID&)AnimationHNDLE, _hProcessAnimations);
 
 	DetourTransactionCommit();
 
