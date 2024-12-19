@@ -374,10 +374,10 @@ namespace Types
             while ((X = Reader.Read()) != -1)
             {
                 var C = (char)X;
-                //if (C == '\0')
-                //{
-                //    break;
-                //}
+                if (C == '\0')
+               {
+                    break;
+                }
                 if(Reader.BaseStream.Position == Reader.BaseStream.Length)
                 {
                     break;

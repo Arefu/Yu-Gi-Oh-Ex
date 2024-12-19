@@ -1,6 +1,8 @@
 #include <Windows.h>
 #include <detours.h>
 #include <iostream>
+#include <fstream>
+#include <string>
 
 #include "Yu-Gi-Oh.h"
 
@@ -9,6 +11,36 @@
 
 
 void Setup_CardDrawCountTable();
+
+std::map<short, short> DRAW_Table::Table = std::map<short, short>();
+
+bool ChangeMemoryProtection(void* address, size_t size, DWORD& oldProtect) {
+    return VirtualProtect(address, size, PAGE_READWRITE, &oldProtect) != 0;
+}
+
+bool RestoreMemoryProtection(void* address, size_t size, DWORD oldProtect) {
+    return VirtualProtect(address, size, oldProtect, &oldProtect) != 0;
+}
+template <typename T>
+bool UpdateMemoryValue(uintptr_t address, const T& newValue) {
+    // Cast address to the proper type
+    T* target = reinterpret_cast<T*>(address);
+
+    // Save the original protection to restore later
+    DWORD oldProtect;
+
+    // Change protection to read/write
+    if (!ChangeMemoryProtection(target, sizeof(T), oldProtect)) {
+        return false;  // Failed to change protection
+    }
+
+    // Update the value at the target address
+    *target = newValue;
+
+    // Restore the original protection
+    return RestoreMemoryProtection(target, sizeof(T), oldProtect);
+}
+
 
 __int64 __fastcall e_DealDamageToLP(unsigned __int16* ID)
 {
@@ -43,9 +75,20 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpRese
 
 void Setup_CardDrawCountTable()
 {
-	std::cout << "[Yu-Gi-Oh-Effects]: Setting Up Card Draw Count Table" << std::endl;
+    std::cout << "[Yu-Gi-Oh-Effects]: Setting Up Card Draw Count Table" << std::endl;
     for (long long Start = DRAW_Table::Base; Start < DRAW_Table::End; Start += 0x4)
-	{
-		std::cout << "[Yu-Gi-Oh-Effects]: CardID: " << *reinterpret_cast<short*>(Start) << " Count: " << *reinterpret_cast<short*>(Start + 0x2 ) << std::endl;
-	}
+    {
+        if (Start == NULL)
+            continue;
+      
+        auto Card = std::to_string(*reinterpret_cast<short*>(Start));
+        
+        short Value = GetPrivateProfileIntA("Yu-Gi-Oh-Effects", (std::string("DRAW_") + Card).c_str(), *reinterpret_cast<short*>(Start + 0x2), ".\\Config.ini");
+        if (Value != *reinterpret_cast<short*>(Start + 0x2))
+        {
+			std::cout << "[Yu-Gi-Oh-Effects]: Card: " << Card << " Requested New Value: " << Value << " !{Draw Table Change}!" << std::endl;
+            UpdateMemoryValue<int>((Start + 0x2), Value);      
+        }
+		DRAW_Table::Table.emplace(*reinterpret_cast<short*>(Start), *reinterpret_cast<short*>(Start + 0x2));
+    }
 }
