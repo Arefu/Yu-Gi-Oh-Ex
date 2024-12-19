@@ -26,7 +26,10 @@ LARGE_INTEGER _QPC_OffsetTime;
 
 int speed = 2;
 bool speed_Enabled = true;
+bool no_anims = true;
 bool detours_Enabled = false;
+bool anim_detours_Enabled = false;
+long long Addr = 0x1407C1450;
 
 DWORD WINAPI _hGetTickCount()
 {
@@ -46,7 +49,7 @@ BOOL WINAPI _hQueryPerformanceCounter(LARGE_INTEGER* lpPerformanceCount)
 	return TRUE;
 }
 
-void UndoDetour()
+void Undo_SpeedDetour()
 {
 	if (detours_Enabled == false)
 		return;
@@ -61,7 +64,16 @@ void UndoDetour()
 	detours_Enabled = false;
 }
 
-void SetupDetour()
+__int64 __fastcall _hProcessAnimations(int a1, int a2, unsigned int a3, int a4)
+{
+	if (a1 == 5)
+		return 0;
+
+	auto result =  ((int(__fastcall*)(int, int, unsigned int, int))Addr)(a1, a2, a3, a4);
+	return result;
+}
+
+void Setup_SpeedDetour()
 {
 	if (detours_Enabled == true)
 		return;
@@ -71,10 +83,16 @@ void SetupDetour()
 	DetourAttach(&(PVOID&)_GTC, _hGetTickCount);
 	DetourAttach(&(PVOID&)_GTC64, _hGetTickCount64);
 	DetourAttach(&(PVOID&)_QPC, _hQueryPerformanceCounter);
+
+	if (no_anims)
+		DetourAttach(&(PVOID&)Addr, _hProcessAnimations);
+
 	DetourTransactionCommit();
 
 	detours_Enabled = true;
 }
+
+
 
 extern "C" __declspec(dllexport) void SetContext(ImGuiContext* Context)
 {
@@ -98,20 +116,24 @@ extern "C" __declspec(dllexport) void ProcessDetours()
 
 	_QPC_OffsetTime.QuadPart = _QPC_BaseTime.QuadPart;
 
-	SetupDetour();
+	Setup_SpeedDetour();
 }
 
 extern "C" __declspec(dllexport) void ProcessWindow()
 {
 	ImGui::Begin("Yu-Gi-Oh! Speed Hacks");
-	ImGui::Checkbox("Enabled", &speed_Enabled);
+	ImGui::Checkbox("SpeedHack Enabled", &speed_Enabled);
 	if (speed_Enabled)
-		SetupDetour();
-	else
-		
-		UndoDetour();
-	ImGui::InputInt("Speed Hack Speed", &speed, 1, 1, ImGuiInputTextFlags_AlwaysInsertMode);
+		Setup_SpeedDetour();
+	else	
+		Undo_SpeedDetour();
+	
+	ImGui::SameLine();
+	ImGui::Checkbox("No Animations", &no_anims);
 
+
+	ImGui::InputInt("Speed Hack Speed", &speed, 1, 1, ImGuiInputTextFlags_AlwaysInsertMode);
+	
 	_GTC_OffsetTime = _hGetTickCount();
 	_GTC64_OffsetTime = _hGetTickCount64();
 

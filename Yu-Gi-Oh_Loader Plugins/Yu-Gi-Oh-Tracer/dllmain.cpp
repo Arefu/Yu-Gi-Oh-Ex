@@ -30,10 +30,17 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpRese
     return TRUE;
 }
 
+void Temp(unsigned __int16* a1)
+{
+	std::cout << "Temp Function Called" << std::endl;
+	std::cout << "Card: " << *(int*)a1 << std::endl;
+}
+
 void AddTrace()
 {
     Tracer::Traces.push_back({ "YGO::DuelSetup::Get_IsRoundBasedDuel", (void*)0x1407F1E80, (void*)YGO::DuelSetup::_D_Get_IsRoundBasedDuel });
 	Tracer::Traces.push_back({ "YGO::DuelUtility::Get_TutorialDuelIndex", (void*)0x140769180, (void*)YGO::DuelUtility::_D_Get_TutorialDuelIndex });
+	Tracer::Traces.push_back({ "sub_14015EA90", (void*)0x14015EA90, (void*)Temp });
 }
 
 void SetupTrace()
