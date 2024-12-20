@@ -15,7 +15,7 @@ namespace YuGiOhEx
 	static bool& g_bIsQuitReady = *(bool*)0x14332A391;
 	static bool& g_bOnPageFirst = *(bool*)0x140C91C48;
 	static bool& g_bUseJpLogo = *(bool*)0x14332A348;
-
+	static HWND& g_hWnd = *(HWND*)0x140D31E60;
 	static unsigned _int64 DeductMoneyFromStoreTransaction = 0x1407F93E0;
 	static __int64 UnkFuncForLoading = 0x14076D840; //Rename this at some point
 	static __int64 AutoPauseOnLostFocus = 0x14083C9F0;

@@ -162,7 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh.h" />
-    <ClInclude Include="DRAW_Table.h" />
+    <ClInclude Include="DRAWCARDSCOUNT_Table.h" />
+    <ClInclude Include="REMOVESPELLCOUNTER_Table.h" />
+    <ClInclude Include="NEGATEMONSTERSUMMON_Table.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

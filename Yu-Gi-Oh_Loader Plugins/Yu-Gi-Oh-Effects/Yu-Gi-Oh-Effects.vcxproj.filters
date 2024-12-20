@@ -28,7 +28,13 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DRAW_Table.h">
+    <ClInclude Include="DRAWCARDSCOUNT_Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="REMOVESPELLCOUNTER_Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NEGATEMONSTERSUMMON_Table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
