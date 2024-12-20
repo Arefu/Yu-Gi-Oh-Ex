@@ -62,7 +62,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		case VK_F8:
 			bShowDemo = !bShowDemo;
 		}
-
 	}
 
 	PluginManager::ProcessInput(hWnd, msg, wParam, lParam);
@@ -75,7 +74,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 	ImGui_ImplWin32_NewFrame();
 	ImGui_ImplDX11_NewFrame();
 	ImGui::NewFrame();
-	
 	
 	if (bShowMenu)
 	{
@@ -171,7 +169,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			}
 		}
 
-
 		ImGui::EndGroup();
 
 		ImGui::End();
@@ -218,6 +215,7 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	_ImGuiContext = ImGui::GetCurrentContext();
 	ImGuiIO& io = ImGui::GetIO();
 	(void)io;
+	io.DisplaySize = ImVec2(1920, 1080);
 
 	DXGI_SWAP_CHAIN_DESC sd;
 	pSwapChain->GetDesc(&sd);
