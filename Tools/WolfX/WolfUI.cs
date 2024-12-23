@@ -12,13 +12,10 @@ namespace WolfX
     {
         public WolfUI()
         {
-            CheckForIllegalCrossThreadCalls = false;
+           // CheckForIllegalCrossThreadCalls = false;
 
             InitializeComponent();
         }
-
-
-
 
         private void Tools_OnLoadGame_Click(object sender, EventArgs e)
         {
