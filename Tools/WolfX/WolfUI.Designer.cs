@@ -476,13 +476,13 @@ namespace WolfX
             // 
             // ARCHIVE_BTN_PackZIB
             // 
-            ARCHIVE_BTN_PackZIB.Enabled = false;
             ARCHIVE_BTN_PackZIB.Location = new Point(87, 69);
             ARCHIVE_BTN_PackZIB.Name = "ARCHIVE_BTN_PackZIB";
             ARCHIVE_BTN_PackZIB.Size = new Size(107, 25);
             ARCHIVE_BTN_PackZIB.TabIndex = 6;
             ARCHIVE_BTN_PackZIB.Text = "Pack Content";
             ARCHIVE_BTN_PackZIB.UseVisualStyleBackColor = true;
+            ARCHIVE_BTN_PackZIB.Click += this.ARCHIVE_BTN_SaveZIB_Click;
             // 
             // ARCHIVE_BTN_OpenZIB
             // 

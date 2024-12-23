@@ -17,6 +17,10 @@ namespace WolfX
             {
                 OpenDialog.Title = "Open ZIB Archive";
                 OpenDialog.Filter = "ZIB Archive (*.zib)|*.zib";
+                if (State.Path != null)
+                {
+                    OpenDialog.InitialDirectory = State.Path;
+                }
                 if (OpenDialog.ShowDialog() != DialogResult.OK)
                 {
                     MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -26,7 +30,7 @@ namespace WolfX
                 var Items = ZIB.Load(OpenDialog.FileName);
                 var Images = new ImageList();
                 Images.ImageSize = new Size(32, 32);
-                if (ARCHIVE_CB_ShowPreviewImage.Checked)
+                if (ARCHIVE_CB_ShowPreviewImage.Checked && ZIB._ImageArchive == true)
                 {
                     ARCHIVE_LV_ArchiveItems.View = View.LargeIcon;
                     ARCHIVE_LV_ArchiveItems.LargeImageList = Images;
@@ -34,39 +38,31 @@ namespace WolfX
                 else
                 {
                     ARCHIVE_LV_ArchiveItems.View = View.List;
+                    ARCHIVE_CB_ShowPreviewImage.Checked = false;
                     ARCHIVE_LV_ArchiveItems.LargeImageList = null;
                 }
+              
 
-                using (var Reader = new BinaryReader(File.Open(OpenDialog.FileName, FileMode.Open, FileAccess.Read)))
+                foreach (var Item in Items)
                 {
-                    foreach (var Item in Items)
+                    if (ARCHIVE_CB_ShowPreviewImage.Checked)
                     {
-                        Reader.BaseStream.Seek(Item.Start, SeekOrigin.Begin);
-                        var Data = Reader.ReadBytes((int)Item.Size);
-                        if (ZIB._ImageArchive == false)
-                        {
-                            ARCHIVE_LV_ArchiveItems.View = View.List;
-                            ARCHIVE_CB_ShowPreviewImage.Checked = false;
-                        }
-                        if (ARCHIVE_CB_ShowPreviewImage.Checked)
-                        {
-                            ARCHIVE_LV_ArchiveItems.Items.Add(Item.Name, Item.Name);
-                            Images.Images.Add(Item.Name, Image.FromStream(new MemoryStream(Data)));
-                        }
-                        else
-                        {
-                            ARCHIVE_LV_ArchiveItems.Items.Add(Item.Name);
-                        }
-
+                        ARCHIVE_LV_ArchiveItems.Items.Add(Item.Name, Item.Name);
+                        Images.Images.Add(Item.Name, ZIB.Shrink_ImageFromArchive(ZIB.Get_SpecificItemFromArchive(Item.Name)));
+                    }
+                    else
+                    {
+                        ARCHIVE_LV_ArchiveItems.Items.Add(Item.Name);
                     }
                 }
 
                 ARCHIVE_BTN_ExtractZIB.Enabled = true;
                 ARCHIVE_LBL_ArchiveName.Text = new FileInfo(OpenDialog.FileName).Name;
                 ARCHIVE_LBL_ArchiveItems.Text = Items.Count.ToString();
-                ARCHIVE_LBL_ArchiveSize.Text = new FileInfo(OpenDialog.FileName).Length.ToString();
+                ARCHIVE_LBL_ArchiveSize.Text = Utility.FormatSize(new FileInfo(OpenDialog.FileName).Length);
             }
         }
+
         private void ARCHIVE_BTN_SaveZIB_Click(object sender, EventArgs e)
         {
             using (var SelectFolder = new FolderBrowserDialog())
@@ -82,10 +78,11 @@ namespace WolfX
 
                 if (new DirectoryInfo(SelectFolder.SelectedPath).Name.EndsWith(".zib") == false)
                 {
-                    MessageBox.Show("Please Select A Extracted ZIB Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Select A Valid Extracted .ZIB Folder", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
+                ZIB.Save(SelectFolder.SelectedPath);
             }
         }
 
@@ -94,13 +91,9 @@ namespace WolfX
             if (ZIB._Loaded == false)
                 return;
 
-            using (var Reader = new BinaryReader(File.Open(ZIB._Archive, FileMode.Open, FileAccess.Read)))
-            {
-                Reader.BaseStream.Seek(ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Start, SeekOrigin.Begin);
-                var Data = Reader.ReadBytes((int)ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Size);
-                Directory.CreateDirectory(new FileInfo(ZIB._Archive).Name);
-                File.WriteAllBytes($"{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", Data);
-            }
+            new DirectoryInfo(new FileInfo(ZIB._Archive).Name).Create();
+
+            File.WriteAllBytes($"{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", ZIB.Get_SpecificItemFromArchive(ARCHIVE_LV_ArchiveItems.SelectedItems[0].Text).ToArray());
         }
         private void ARCHIVE_BTN_ExtractZIB_Click(object sender, EventArgs e)
         {
@@ -109,17 +102,14 @@ namespace WolfX
 
             new DirectoryInfo(new FileInfo(ZIB._Archive).Name).Create();
 
+
             foreach (var Item in ZIB._Items)
             {
-                using (var Reader = new BinaryReader(File.Open(ZIB._Archive, FileMode.Open, FileAccess.Read)))
-                {
-                    Reader.BaseStream.Seek(Item.Start, SeekOrigin.Begin);
-                    var Data = Reader.ReadBytes((int)Item.Size);
-                    File.WriteAllBytes($"{new FileInfo(ZIB._Archive).Name}/{Item.Name}", Data);
-                }
+                File.WriteAllBytes($"{new FileInfo(ZIB._Archive).Name}/{Item.Name}", ZIB.Get_SpecificItemFromArchive(Item.Name).ToArray());
+               
             }
         }
 
-        
+
     }
 }
