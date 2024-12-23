@@ -12,7 +12,7 @@ namespace WolfX
             OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
             OpenFile.Title = "Open Cards Indx File";
             OpenFile.Multiselect = false;
-            OpenFile.InitialDirectory = State.WorkingDirectory;
+            OpenFile.InitialDirectory = State.Path;
             var Res = OpenFile.ShowDialog();
             if (Res != DialogResult.OK)
             {

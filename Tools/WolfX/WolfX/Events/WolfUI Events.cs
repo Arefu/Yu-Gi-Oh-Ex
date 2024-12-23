@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Security.Principal;
+using System.Text.RegularExpressions;
 using WolfX.Types;
 
 namespace WolfX
@@ -65,6 +66,67 @@ namespace WolfX
             Process.StartInfo.Arguments = $"\"{FolderBrowser.FolderName}\"";
 
             Process.Start();
+        }
+        private void WOLFUI_TOOLITEM_SetPath_Click(object sender, EventArgs e)
+        {
+            //Check for Administrator rights
+            if (!new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator))
+            {
+                MessageBox.Show("Please Run WolfX as Administrator", "Administrator Rights Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var FolderBrowser = new Microsoft.Win32.OpenFolderDialog();
+            FolderBrowser.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020 Folder";
+            if (FolderBrowser.ShowDialog() != true)
+            {
+                MessageBox.Show("Please Select a YGO_2020 Folder", "No YGO_2020 Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", true);
+
+            if (RegistryKey == null)
+            {
+                Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640");
+                RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", true);
+            }
+
+            if (RegistryKey.GetValue("InstallLocation") == null)
+                RegistryKey.SetValue("InstallLocation", FolderBrowser.FolderName);
+
+            RegistryKey.Close();
+        }
+        internal void WOLFUI_TOOLITEM_VerifyFiles_Click(object sender, EventArgs e)
+        {
+            var Missing = false;
+            using var OpenFile = new OpenFileDialog();
+            OpenFile.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020.toc File";
+            OpenFile.Filter = "YGO_2020.toc|YGO_2020.toc";
+            if (OpenFile.ShowDialog() != DialogResult.OK) return;
+            if (State.Path == string.Empty || State.Path == null)
+                State.Path = $"{Directory.GetCurrentDirectory()}\\YGO_2020\\";
+
+
+            foreach (var Line in File.ReadLines(OpenFile.FileName))
+            {
+                if (Line == "UT") continue;
+
+                var CLine = Line.TrimStart(' ');
+                CLine = Regex.Replace(CLine, @"  +", " ", RegexOptions.Compiled);
+                var Information = CLine.Split(' ', 3);
+
+                if (File.Exists($"{State.Path}/{Information[2]}") == false)
+                {
+                    Missing = true;
+                    File.AppendAllLines("Missing.txt", new[] { Information[2] });
+                }
+            }
+
+            if (Missing)
+                MessageBox.Show("Missing Files Found, Please Check Missing.txt and Re-Run Yami-Yugi.exe", "Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("No Missing Files Found", "No Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Handling Language Events
@@ -144,36 +206,6 @@ namespace WolfX
 
             Language_russian.Checked = true;
             State.Language = Language.Russian;
-        }
-        private void WOLFUI_TOOLITEM_Path_Click(object sender, EventArgs e)
-        {
-            //Check for Administrator rights
-            if (!new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator))
-            {
-                MessageBox.Show("Please Run WolfX as Administrator", "Administrator Rights Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            var FolderBrowser = new Microsoft.Win32.OpenFolderDialog();
-            FolderBrowser.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020 Folder";
-            if (FolderBrowser.ShowDialog() != true)
-            {
-                MessageBox.Show("Please Select a YGO_2020 Folder", "No YGO_2020 Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", true);
-
-            if (RegistryKey == null)
-            {
-                Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640");
-                RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", true);
-            }
-
-            if (RegistryKey.GetValue("InstallLocation") == null)
-                RegistryKey.SetValue("InstallLocation", FolderBrowser.FolderName);
-
-            RegistryKey.Close();
         }
     }
 }
