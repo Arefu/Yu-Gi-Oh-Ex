@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Text;
+using Windows.Graphics.Imaging;
 
 namespace Types
 {
@@ -26,12 +27,12 @@ namespace Types
 
         private static readonly int FILE_INDEX_SIZE = 0x40;
         private static readonly int READ_SIZE = 0x4;
-
+        private static BinaryReader Reader;
 
         public static List<ZIB_Item> Load(string Archive)
         {
             _Items.Clear();
-            using var Reader = new BinaryReader(File.Open($"{Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            Reader = new BinaryReader(File.Open($"{Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
 
             var DataStart = long.MaxValue;
 
@@ -52,33 +53,16 @@ namespace Types
                 _Items.Add(new ZIB_Item(FileStart, FileSize, FileName));
             }
 
-            Reader.Close();
-
             _Loaded = true;
             _Archive = Archive;
 
             return _Items;
         }
-
-        public static ZIB_Item? Get_SpecificItemFromArchive(string Archive, string Item)
-        {
-            if (_Loaded)
-                return _Items.FirstOrDefault(_Item => _Item.Name == Item);
-            else
-            {
-                Load(Archive);
-                return _Items.FirstOrDefault(_Item => _Item.Name == Item);
-            }
-        }
-
+        
         public static MemoryStream? Get_SpecificItemFromArchive(string Item)
         {
-            if (_ImageArchive == false)
-                return null;
-
             if (_Loaded)
             {
-                using var Reader = new BinaryReader(File.Open($"{_Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
                 var _Item = _Items.Where(_Item => _Item.Name == Item).FirstOrDefault();
                 if(_Item == null)
                     return null;
@@ -90,14 +74,28 @@ namespace Types
                 return null;
         }
 
+        public static Image Shrink_ImageFromArchive(MemoryStream Item)
+        {
+            Bitmap bmp = new Bitmap(64, 64);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.DrawImage(Image.FromStream(Item), new Rectangle(0, 0, bmp.Width, bmp.Height));
+            }
+            return bmp;
+        }
+
+
         public static MemoryStream Get_CardImageFromDefaultArchiveByYDCID(string Item)
         {
             return Get_SpecificItemFromArchive($"{Item}.jpg");
-
         }
 
-        public static void Save()
+        public static void Save(string Path)
         {
+            foreach(var Item in Directory.GetFiles(Path))
+            {
+               
+            }
         }
     }
 }
