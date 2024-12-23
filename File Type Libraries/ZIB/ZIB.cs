@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Text;
 using Windows.Graphics.Imaging;
 
@@ -28,6 +29,7 @@ namespace Types
         private static readonly int FILE_INDEX_SIZE = 0x40;
         private static readonly int READ_SIZE = 0x4;
         private static BinaryReader Reader;
+        private static BinaryWriter Writer;
 
         public static List<ZIB_Item> Load(string Archive)
         {
@@ -90,12 +92,58 @@ namespace Types
             return Get_SpecificItemFromArchive($"{Item}.jpg");
         }
 
+
+        private static uint SwapBytes(uint Number)
+        {
+            Number = (Number >> 16) | (Number << 16);
+            return ((Number & 0xFF00FF00) >> 8) | ((Number & 0x00FF00FF) << 8);
+        }
         public static void Save(string Path)
         {
-            foreach(var Item in Directory.GetFiles(Path))
+            var Packed_File = new FileInfo(Path.Replace("!", string.Empty));
+
+            Writer = new BinaryWriter(File.Open($"{Packed_File}", FileMode.Create, FileAccess.Write, FileShare.ReadWrite));
+            Dictionary<string, long> FileOffsets = new Dictionary<string, long>();
+
+            var CurrentOffset = (uint)(Directory.GetFiles(Path).Length) * 64 + 16;
+            var Files = Directory.GetFiles(Path);
+            Array.Sort(Files, StringComparer.OrdinalIgnoreCase);
+            bool firstFile = true;
+            foreach (var Item in Files)
             {
+                var CurrentFileSize = new FileInfo($"{Item}").Length;
+                if (firstFile)
+                    CurrentOffset++;
+
+                Writer.Write(SwapBytes(CurrentOffset));
                
+                if (firstFile)
+                    CurrentOffset--;
+
+                Writer.Write(SwapBytes((uint)new FileInfo($"{Item}").Length));
+
+                Writer.Write(Encoding.ASCII.GetBytes(new FileInfo(Item).Name));
+   
+                Writer.Write(new byte[(56 - new FileInfo(Item).Name.Length)]);
+
+                CurrentOffset += Convert.ToUInt32(16 * ((CurrentFileSize + 15) / 16));
+
+                firstFile = false;
             }
+
+            Writer.Write(new byte[16]);
+
+            foreach (var Item in Files)
+            {
+                var FileData = File.ReadAllBytes($"{Item}");
+                var FileDataPadding = 16 * ((FileData.Length + 15) / 16);
+                Writer.Write(FileData);
+                Writer.Write(new byte[FileDataPadding - FileData.Length]);
+            
+                   
+            }
+
+            Writer.Close();
         }
     }
 }
