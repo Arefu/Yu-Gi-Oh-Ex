@@ -6,8 +6,7 @@ namespace WolfX
     {
         internal static class State
         {
-            internal static string? WorkingDirectory { get; set; }
-
+            internal static string? Path { get; set; }
             public static Language Language { get; set; } = Language.English;
 
         }

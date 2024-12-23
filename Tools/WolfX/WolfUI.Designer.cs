@@ -141,11 +141,13 @@ namespace WolfX
             label14 = new Label();
             MenuBar = new MenuStrip();
             toolsToolStripMenuItem = new ToolStripMenuItem();
+            loadGameToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
             WOLFUI_TOOLITEM_Extract = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_Pack = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_SetPath = new ToolStripMenuItem();
             Tools_Verify = new ToolStripMenuItem();
-            toolStripSeparator2 = new ToolStripSeparator();
+            toolStripSeparator1 = new ToolStripSeparator();
             languageToolStripMenuItem = new ToolStripMenuItem();
             Language_english = new ToolStripMenuItem();
             Language_french = new ToolStripMenuItem();
@@ -1285,10 +1287,23 @@ namespace WolfX
             // 
             // toolsToolStripMenuItem
             // 
-            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, WOLFUI_TOOLITEM_SetPath, Tools_Verify, toolStripSeparator2, languageToolStripMenuItem });
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadGameToolStripMenuItem, toolStripSeparator2, WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, WOLFUI_TOOLITEM_SetPath, Tools_Verify, toolStripSeparator1, languageToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             toolsToolStripMenuItem.Size = new Size(46, 20);
             toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // loadGameToolStripMenuItem
+            // 
+            loadGameToolStripMenuItem.Name = "loadGameToolStripMenuItem";
+            loadGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.L;
+            loadGameToolStripMenuItem.Size = new Size(184, 22);
+            loadGameToolStripMenuItem.Text = "&Load Game";
+            loadGameToolStripMenuItem.Click += Tools_OnLoadGame_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(181, 6);
             // 
             // WOLFUI_TOOLITEM_Extract
             // 
@@ -1311,20 +1326,19 @@ namespace WolfX
             WOLFUI_TOOLITEM_SetPath.Name = "WOLFUI_TOOLITEM_SetPath";
             WOLFUI_TOOLITEM_SetPath.Size = new Size(184, 22);
             WOLFUI_TOOLITEM_SetPath.Text = "Set Game Path";
-            WOLFUI_TOOLITEM_SetPath.Click += WOLFUI_TOOLITEM_Path_Click;
+            WOLFUI_TOOLITEM_SetPath.Click += WOLFUI_TOOLITEM_SetPath_Click;
             // 
             // Tools_Verify
             // 
-            Tools_Verify.Enabled = false;
             Tools_Verify.Name = "Tools_Verify";
             Tools_Verify.Size = new Size(184, 22);
             Tools_Verify.Text = "&Verify Extracted Files";
-            Tools_Verify.Click += Tools_Verify_Click;
+            Tools_Verify.Click += WOLFUI_TOOLITEM_VerifyFiles_Click;
             // 
-            // toolStripSeparator2
+            // toolStripSeparator1
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(181, 6);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(181, 6);
             // 
             // languageToolStripMenuItem
             // 
@@ -1570,5 +1584,7 @@ namespace WolfX
         private CheckBox YDC_CB_UseSimpleEditor;
         private ToolStripMenuItem WOLFUI_TOOLITEM_SetPath;
         private Button CARDS_BTN_CloseBinder;
+        private ToolStripMenuItem loadGameToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }
