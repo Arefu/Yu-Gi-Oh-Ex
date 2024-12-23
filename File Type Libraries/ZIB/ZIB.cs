@@ -58,6 +58,8 @@ namespace Types
             _Loaded = true;
             _Archive = Archive;
 
+            Reader.Close();
+
             return _Items;
         }
         
@@ -69,8 +71,13 @@ namespace Types
                 if(_Item == null)
                     return null;
 
+                Reader = new BinaryReader(File.Open($"{_Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
                 Reader.BaseStream.Position = _Item.Start;
-                return new MemoryStream(Reader.ReadBytes((int)_Item.Size));
+                var Value = new MemoryStream(Reader.ReadBytes((int)_Item.Size));
+
+                Reader.Close();
+
+                return Value;
             }
             else
                 return null;
