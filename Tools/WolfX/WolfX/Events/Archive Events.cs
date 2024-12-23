@@ -91,9 +91,9 @@ namespace WolfX
             if (ZIB._Loaded == false)
                 return;
 
-            new DirectoryInfo(new FileInfo(ZIB._Archive).Name).Create();
+            new DirectoryInfo($"!{new FileInfo(ZIB._Archive).Name}").Create();
 
-            File.WriteAllBytes($"{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", ZIB.Get_SpecificItemFromArchive(ARCHIVE_LV_ArchiveItems.SelectedItems[0].Text).ToArray());
+            File.WriteAllBytes($"!{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", ZIB.Get_SpecificItemFromArchive(ARCHIVE_LV_ArchiveItems.SelectedItems[0].Text).ToArray());
         }
 
         private void ARCHIVE_BTN_ExtractZIB_Click(object sender, EventArgs e)
