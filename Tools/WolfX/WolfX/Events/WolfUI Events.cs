@@ -198,6 +198,9 @@ namespace WolfX
         }
         private void Language_russian_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("The game doesn't seemingly support Russian, do you wan't to continue?", "Russian Not Supported", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
             foreach (var Item in languageToolStripMenuItem.DropDownItems)
             {
                 var Language = (ToolStripMenuItem)Item;

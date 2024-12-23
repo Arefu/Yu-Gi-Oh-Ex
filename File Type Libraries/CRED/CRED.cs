@@ -4,20 +4,17 @@
     {
         public static List<string> Load(string Path)
         {
-            using StreamReader reader = new StreamReader(Path);
+            var Credits = new List<String>();
+            using StreamReader reader = new StreamReader(Path, System.Text.Encoding.Unicode);
             while(!reader.EndOfStream)
             {
-                var Line = reader.ReadLine();
-                if (Line.Contains("CRED"))
-                {
-                    var Split = Line.Split(' ');
-                    return new List<string> { Split[1], Split[2] };
-                }
+                Credits.Add(reader.ReadLine());
+                
             }
-            return new List<string>(); 
+            return Credits;
         }
 
-        public static void Save()
+        public static void Save(List<string> Credits)
         {
 
         }

@@ -18,6 +18,7 @@ namespace WolfX
             using var OpenFile = new OpenFileDialog();
             OpenFile.Title = "Select DFYMOO File";
             OpenFile.Filter = "DFYMOO File|*.dfymoo";
+
             if (OpenFile.ShowDialog() != DialogResult.OK)
             {
                 MessageBox.Show("Please Select a DFYMOO File", "No DFYMOO File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -39,6 +40,11 @@ namespace WolfX
         }
         private void DFY_BTN_Save_Click(object sender, EventArgs e)
         {
+            if (DFY_Editor == null)
+            {
+                MessageBox.Show("Please Load a DFYMOO File First", "No DFYMOO File Loaded", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             Dfymoo.Save(Path.GetFileName(DFY_Editor._PicturePath), DFY_Editor.DFY_Items, DFY_Editor.DFY_Picture.Size);
         }
         private void DFYMOO_ItemList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -73,27 +79,40 @@ namespace WolfX
         }
         private void DFY_NUD_X_ValueChanged(object sender, EventArgs e)
         {
+            if(DFY_Editor == null)
+                return;
+
             if (DFY_NUD_X.Value != DFY_Editor.DFY_Item.ItemStartPoint.X)
                 DFY_Editor.DFY_Item.ItemStartPoint = new Point((int)DFY_NUD_X.Value, DFY_Editor.DFY_Item.ItemStartPoint.Y);
 
             DFY_Editor.DFY_Picture.Refresh();
         }
+
         private void DFY_NUD_Y_ValueChanged(object sender, EventArgs e)
         {
+            if (DFY_Editor == null)
+                return;
+
             if (DFY_NUD_Y.Value != DFY_Editor.DFY_Item.ItemStartPoint.Y)
                 DFY_Editor.DFY_Item.ItemStartPoint = new Point(DFY_Editor.DFY_Item.ItemStartPoint.X, (int)DFY_NUD_Y.Value);
 
             DFY_Editor.DFY_Picture.Refresh();
         }
+
         private void DFY_NUD_H_ValueChanged(object sender, EventArgs e)
         {
+            if (DFY_Editor == null)
+                return;
             if (DFY_NUD_H.Value != DFY_Editor.DFY_Item.ItemDimensions.Y)
                 DFY_Editor.DFY_Item.ItemDimensions = new Point(DFY_Editor.DFY_Item.ItemDimensions.X, (int)DFY_NUD_H.Value);
 
             DFY_Editor.DFY_Picture.Refresh();
         }
+
         private void DFY_NUD_W_ValueChanged(object sender, EventArgs e)
         {
+            if (DFY_Editor == null)
+                return;
             if (DFY_NUD_W.Value != DFY_Editor.DFY_Item.ItemDimensions.X)
                 DFY_Editor.DFY_Item.ItemDimensions = new Point((int)DFY_NUD_W.Value, DFY_Editor.DFY_Item.ItemDimensions.Y);
 

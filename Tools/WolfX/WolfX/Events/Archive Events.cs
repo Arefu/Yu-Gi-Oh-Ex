@@ -108,7 +108,5 @@ namespace WolfX
                 File.WriteAllBytes($"!{new FileInfo(ZIB._Archive).Name}/{Item.Name}", ZIB.Get_SpecificItemFromArchive(Item.Name).ToArray());
             }
         }
-
-
     }
 }

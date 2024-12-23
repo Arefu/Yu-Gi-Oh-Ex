@@ -72,15 +72,19 @@ namespace Types
                 Writer.WriteLine($"h {ImageSize.Height}");
                 Writer.WriteLine("~");
 
-                foreach (var Item in Items)
+                for (int i = 0; i < Items.Count; i++)
                 {
+                    Dfymoo_Item? Item = Items[i];
                     if (Item.ItemName != "")
                         Writer.WriteLine($"n {Item.ItemName}");
                     if (Item.ItemStartPoint != Point.Empty && Item.ItemDimensions != Point.Empty)
                         Writer.WriteLine($"s {Item.ItemStartPoint.X} {Item.ItemStartPoint.Y} {Item.ItemDimensions.X} {Item.ItemDimensions.Y}");
-                    if (Item.ItemOrigin != Point.Empty && Item.ItemOriginDimensions != Point.Empty)
+                    if (Item.ItemOriginDimensions != Point.Empty)
                         Writer.WriteLine($"o {Item.ItemOrigin.X} {Item.ItemOrigin.Y} {Item.ItemOriginDimensions.X} {Item.ItemOriginDimensions.Y}");
-                    Writer.WriteLine("~");
+                    if (i != Items.Count - 1)
+                        Writer.WriteLine("~");
+                    else
+                        Writer.Write("~");
                 }
             }
         }
