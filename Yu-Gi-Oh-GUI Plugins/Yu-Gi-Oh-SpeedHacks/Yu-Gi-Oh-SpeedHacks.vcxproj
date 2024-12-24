@@ -77,10 +77,10 @@
     <OutDir>$(SolutionDir)$(PlatformTarget)\$(Configuration)\Plugins\YGO-Ex\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Binaries\$(PlatformTarget)\$(Configuration)\Plugins\YGO-Ex\</OutDir>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\Plugins\YGO-Ex\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Binaries\$(PlatformTarget)\$(Configuration)\Plugins\YGO-Ex\</OutDir>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\Plugins\YGO-Ex\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -23,7 +23,8 @@ YGO_2020*
 *.tlog
 *.txt
 *.bnd
-*.json
+*.deps.json
+*.runtimeconfig.json
 # Build results - We're going to ship my Binaries
 [Dd]ebugPublic/
 [Rr]eleases/

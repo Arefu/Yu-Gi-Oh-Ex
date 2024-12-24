@@ -1,0 +1,28 @@
+{
+  "Title": "Pot of Greed - King Shit!",
+  "Description": "Adjusts Pot of Greed, I'm also acting as example Description",
+
+  "Change_Requests": [
+    {
+      "XYZSummonRequirements": [
+        {
+          "Change": {
+            "ID": "4844",
+            "Value": 5
+          }
+        },
+        {
+          "Add": {
+            "Param1": "Value3"
+          }
+        },
+        {
+          "Delete": {
+            "Param1": "Value3",
+            "{}": ""
+          }
+        }
+      ]
+    }
+  ]
+}
