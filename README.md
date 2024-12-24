@@ -11,8 +11,8 @@ Designed and tested with the latest build of [Yu-Gi-Oh Legacy of the Duelist Lin
 You should always be using the latest commit that I have, issues are very frequent and there is no real version control of checks to ensure everything is still working. You will need .NET8 and .NET9 and VC++2012 to Latest installed.
 
 
-* WolfX - Is my attempt at a edit hub where you can interact with the game's properitary file foramts and edit them.
-* Yami-Yugi - This is just a simnple command line program to parse and extract YGO_DATA.dat.
+* WolfX - Is my attempt at an edit hub where you can interact with the game's proprietary file formats and edit them.
+* Yami-Yugi - This is just a simple command line program to parse and extract YGO_DATA.dat.
 
 There is also Yu-Gi-Oh_Launcher which is a pathway to injecting my own code into the game, there are currently a few patches that I have, as well as a speedhack for the game to help make it feel a bit quicker to play.
 
