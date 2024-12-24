@@ -482,7 +482,7 @@ namespace WolfX
             ARCHIVE_BTN_PackZIB.TabIndex = 6;
             ARCHIVE_BTN_PackZIB.Text = "Pack Content";
             ARCHIVE_BTN_PackZIB.UseVisualStyleBackColor = true;
-            ARCHIVE_BTN_PackZIB.Click += this.ARCHIVE_BTN_SaveZIB_Click;
+            ARCHIVE_BTN_PackZIB.Click += ARCHIVE_BTN_SaveZIB_Click;
             // 
             // ARCHIVE_BTN_OpenZIB
             // 
@@ -1058,6 +1058,7 @@ namespace WolfX
             YDC_BTN_RemoveCard.TabIndex = 4;
             YDC_BTN_RemoveCard.Text = "Remove";
             YDC_BTN_RemoveCard.UseVisualStyleBackColor = true;
+            YDC_BTN_RemoveCard.Click += YDC_BTN_RemoveCard_Click;
             // 
             // YDC_BTN_AddCard
             // 

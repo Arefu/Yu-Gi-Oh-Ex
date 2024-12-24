@@ -18,26 +18,30 @@ namespace WolfX.WolfX.File_Type_UI
             InitializeComponent();
         }
 
-        public void LoadCards(CARDS_INFO.CARD_Language Language)
+        public void LoadCards(CARDS_INFO.CARD_Language Language, string Path)
         {
-            using (var OpenFile = new OpenFileDialog())
+            if (Path == null || Path.Length == 0)
             {
-                OpenFile.Filter = $"{Language} Card Indx File|CarD_Indx_{Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
-                OpenFile.Title = "Open Cards Indx File";
-
-                var Res = OpenFile.ShowDialog();
-                if (Res != DialogResult.OK)
+                using (var OpenFile = new OpenFileDialog())
                 {
-                    MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if (OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
-                {
-                    MessageBox.Show("Please Select a Cards Indx File", "Incorrect File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    OpenFile.Filter = $"{Language} Card Indx File|CarD_Indx_{Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
+                    OpenFile.Title = "Open Cards Indx File";
 
-                if (CARDS_Cards.Setup_CardBinder(OpenFile.FileName) == false)
+                    var Res = OpenFile.ShowDialog();
+                    if (Res != DialogResult.OK)
+                    {
+                        MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
+                    {
+                        MessageBox.Show("Please Select a Cards Indx File", "Incorrect File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                }
+            }
+                if (CARDS_Cards.Setup_CardBinder($"{Path}\\bin\\CARD_Indx_{Language.ToString()[0]}.bin") == false)
                 {
                     MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -48,7 +52,7 @@ namespace WolfX.WolfX.File_Type_UI
 
                 CARDREP_CB_NewCardSelector.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
             }
-        }
+        
 
         private void CARDREP_CB_NewCardSelector_SelectedIndexChanged(object sender, EventArgs e)
         {

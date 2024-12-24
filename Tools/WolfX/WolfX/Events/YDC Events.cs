@@ -1,4 +1,5 @@
 ﻿using Types;
+using Windows.Devices.Scanners;
 using WolfX.Types;
 using WolfX.WolfX.File_Type_UI;
 
@@ -32,9 +33,9 @@ namespace WolfX
             foreach (var Card in Cards)
             {
                 if (YDC_CHKBOX_LoadPictures.Checked)
-                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID(Card.ToString())));
+                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
 
-                if(YDC_CHKBOX_UseCardID.Checked)
+                if (YDC_CHKBOX_UseCardID.Checked)
                     YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString(), Card.ToString());
                 else
                     YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID(Card), Card.ToString());
@@ -42,44 +43,86 @@ namespace WolfX
 
             YDC_BTN_AddCard.Enabled = true;
         }
+
         private void YDC_CHKBOX_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
-            if(YDC_CHKBOX_UseCardID.Checked == false)
+            if (YDC_CHKBOX_UseCardID.Checked == false)
             {
-                using (var OpenFile = new OpenFileDialog())
+                if (State.Path != null)
                 {
-                    OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
-                    OpenFile.Title = "Open Cards Indx File";
-                    OpenFile.Multiselect = false;
-                    OpenFile.InitialDirectory = State.Path;
-                    var Res = OpenFile.ShowDialog();
-                    if (Res != DialogResult.OK)
-                    {
-                        MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    if (OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
-                    {
-                        MessageBox.Show("Please Select a Cards Indx File", "Incorrect File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    if (CARDS_Cards.Setup_CardBinder(OpenFile.FileName) == false)
-                    {
-                        MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
+                    CARDS_Cards.Setup_CardBinder($"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language);
                     CARDS_Cards.LoadCardInfo();
                     CARDS_Cards.LoadCardProps();
+                }
+                else
+                {
+                    using (var OpenFile = new OpenFileDialog())
+                    {
+                        OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
+                        OpenFile.Title = "Open Cards Indx File";
+                        OpenFile.Multiselect = false;
+                        OpenFile.InitialDirectory = State.Path;
+                        var Res = OpenFile.ShowDialog();
+                        if (Res != DialogResult.OK || OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
+                        {
+                            MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                       
+                        if (CARDS_Cards.Setup_CardBinder(OpenFile.FileName, (CARDS_INFO.CARD_Language)State.Language) == false)
+                        {
+                            MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
 
+                        CARDS_Cards.LoadCardInfo();
+                        CARDS_Cards.LoadCardProps();
+
+                    }
                 }
-                }
+            }
         }
 
         private void YDC_CHKBOX_LoadPictures_CheckedChanged(object sender, EventArgs e)
         {
             if (YDC_CHKBOX_LoadPictures.Checked)
+            {
+                if (State.Path != null)
+                {
+                    CARDS_Cards.Setup_CardBinder($"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language);
+                    CARDS_Cards.LoadCardInfo();
+                    CARDS_Cards.LoadCardProps();
+                    ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
+                    YDC_LV_MainDeckCards.View = View.LargeIcon;
+                }
+                else
+                {
+                    using (var OpenDialog = new OpenFileDialog())
+                    {
+                        OpenDialog.Title = "Open ZIB Archive";
+                        OpenDialog.Filter = "ZIB Archive (*.zib)|*.zib";
+                        if (OpenDialog.ShowDialog() != DialogResult.OK)
+                        {
+                            MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            return;
+                        }
+                        ZIB.Load(OpenDialog.FileName);
+                    }
+                }
+            }
+            else
+            {
+                YDC_LV_MainDeckCards.View = View.List;
+            }
+        }
+
+        private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
+        {
+            Card_Changer C = new Card_Changer();
+            
+
+            if (State.Path == null)
             {
                 using (var OpenDialog = new OpenFileDialog())
                 {
@@ -88,7 +131,6 @@ namespace WolfX
                     if (OpenDialog.ShowDialog() != DialogResult.OK)
                     {
                         MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         return;
                     }
                     ZIB.Load(OpenDialog.FileName);
@@ -96,38 +138,52 @@ namespace WolfX
             }
             else
             {
-                YDC_LV_MainDeckCards.View = View.List;
+                ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
+                C.LoadCards((CARDS_INFO.CARD_Language)State.Language, State.Path);
             }
-
-        }
-
-        private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
-        {
-            Card_Changer C = new Card_Changer();
-            C.LoadCards(CARDS_INFO.CARD_Language.English);
-
-            using var OpenZib = new OpenFileDialog();
-            OpenZib.Title = "Open ZIB Archive";
-            OpenZib.Filter = "ZIB Archive (*.zib)|*.zib";
-            if (OpenZib.ShowDialog() != DialogResult.OK)
-            {
-                MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            ZIB.Load(OpenZib.FileName);
-
 
             if (C.ShowDialog() == DialogResult.OK)
             {
                 var Card = CARDS_Cards.Cards.Where(Card => Card.Name == C.Card.Name).First();
                 if (Card != null)
                 {
-                    YDC_LV_MainDeckCards.LargeImageList.Images.Add(Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID(Card.ID.ToString())));
-                    YDC_LV_MainDeckCards.Items.Add(Card.Name, Card.ID.ToString());
+                    if (YDC_CHKBOX_LoadPictures.Checked)
+                    {
+                        YDC_LV_MainDeckCards.LargeImageList?.Images.Add(Image.FromStream(ZIB.Get_SpecificItemFromArchive(Card.ID.ToString())));
+                    }
+                    if (YDC_CHKBOX_UseCardID.Checked)
+                    {
+                        YDC_LV_MainDeckCards.Items.Add(Card.ID.ToString(), Card.ID.ToString(), Card.ID.ToString());
+                    }
+                    else
+                    {
+                        YDC_LV_MainDeckCards.Items.Add(Card.Name, Card.ID.ToString());
+                    }
+
                     YDC_LV_MainDeckCards.Refresh();
                 }
             }
+
+                //if (C.ShowDialog() == DialogResult.OK)
+                //{
+                //    var Card = CARDS_Cards.Cards.Where(Card => Card.Name == C.Card.Name).First();
+                //    if (Card != null)
+                //    {
+                //        YDC_LV_MainDeckCards.LargeImageList.Images.Add(Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID($"{Card.ID}.jpg")));
+                //        YDC_LV_MainDeckCards.Items.Add(Card.Name, Card.ID.ToString());
+                //        YDC_LV_MainDeckCards.Refresh();
+                //    }
+                //}
+            }
+
+        private void YDC_BTN_RemoveCard_Click(object sender, EventArgs e)
+        {
+            if (YDC_LV_MainDeckCards.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("No Card Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            YDC_LV_MainDeckCards.Items.Remove(YDC_LV_MainDeckCards.SelectedItems[0]);
         }
-     
     }
 }

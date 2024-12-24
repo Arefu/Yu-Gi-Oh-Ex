@@ -129,7 +129,7 @@ namespace Types
 
                 Writer.Write(SwapBytes((uint)new FileInfo($"{Item}").Length));
 
-                Writer.Write(Encoding.ASCII.GetBytes(new FileInfo(Item).Name));
+                Writer.Write(Encoding.ASCII.GetBytes(new FileInfo(Item).Name.ToLower()));
    
                 Writer.Write(new byte[(56 - new FileInfo(Item).Name.Length)]);
 
