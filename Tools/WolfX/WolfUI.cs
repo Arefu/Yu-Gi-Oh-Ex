@@ -12,7 +12,7 @@ namespace WolfX
     {
         public WolfUI()
         {
-           // CheckForIllegalCrossThreadCalls = false;
+            // CheckForIllegalCrossThreadCalls = false;
 
             InitializeComponent();
         }
@@ -32,5 +32,7 @@ namespace WolfX
             else
                 State.Path = OpenFolder.SelectedPath;
         }
+
+      
     }
 }
