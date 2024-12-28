@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7e8aa9b0-3cb6-44c0-b424-6caba0ba4ec7}</ProjectGuid>
-    <RootNamespace>YuGiOhEffects</RootNamespace>
+    <ProjectGuid>{384cb7b4-4a62-4e38-a635-fef9f2ef12b2}</ProjectGuid>
+    <RootNamespace>YuGiOhBetterCardShop</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,16 +71,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Binaries\$(Configuration)\Plugins\</OutDir>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\Plugins\YGO-Ex\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Binaries\$(Configuration)\Plugins\</OutDir>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\Plugins\YGO-Ex\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;YUGIOHEFFECTS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;YUGIOHBETTERCARDSHOP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -97,7 +97,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;YUGIOHEFFECTS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;YUGIOHBETTERCARDSHOP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -114,20 +114,18 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;YUGIOHEFFECTS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;YUGIOHBETTERCARDSHOP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\nlohmann;$(SolutionDir)Dependencies\Dear ImGui;$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;$(SolutionDir)Dependencies\conmanip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Dear ImGui;$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\nlohmann;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>detours.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>Yu-Gi-Oh.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -136,12 +134,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;YUGIOHEFFECTS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;YUGIOHBETTERCARDSHOP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\nlohmann;$(SolutionDir)Dependencies\Dear ImGui;$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;$(SolutionDir)Dependencies\conmanip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Dear ImGui;$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,31 +147,28 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\nlohmann;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>detours.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>Yu-Gi-Oh.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CardID_WithNumberOfCardsToDraw.cpp" />
-    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_tables.cpp" />
+    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="Manifest.cpp" />
-    <ClCompile Include="Memory.cpp" />
-    <ClCompile Include="FS_Utility.cpp" />
-    <ClCompile Include="XYZSummonRequirements.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Yu-Gi-Oh.def" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh.h" />
-    <ClInclude Include="CardID_WithNumberOfCardsToDraw.h" />
-    <ClInclude Include="Config.h" />
-    <ClInclude Include="Manifest.h" />
-    <ClInclude Include="Memory.h" />
-    <ClInclude Include="FS_Utility.h" />
-    <ClInclude Include="XYZSummonRequirements.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imconfig.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui_internal.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_rectpack.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_textedit.h" />
+    <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_truetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,10 +8,13 @@
 #include "Memory.h"
 #include "Config.h"
 
-#include "XYZSummonRequirements.h"
 
-std::map<Requirements, long> XYZSummonRequirements::Table = std::map<Requirements, long>();
+#include "XYZSummonRequirements.h" //Changes XYZ Summon Requirements
+#include "CardID_WithNumberOfCardsToDraw.h" //Changes How Many Card Each "Draw" Card Draws
 
+
+std::map<XYZSummonRequirements::Requirements, uintptr_t> XYZSummonRequirements::Table = std::map<XYZSummonRequirements::Requirements, uintptr_t>();
+std::map<CardID_WithNumberOfCardsToDraw::Requirements, uintptr_t> CardID_WithNumberOfCardsToDraw::Table = std::map<CardID_WithNumberOfCardsToDraw::Requirements, uintptr_t>();
 
 __int64 __fastcall e_DealDamageToLP(unsigned __int16* ID)
 {
@@ -35,15 +38,11 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpRese
         
 		std::cout << "[Yu-Gi-Oh-Effects]: Loading From: " << Path << std::endl;
 
-        //Setup_CardDrawCountTable();
-        //Setup_RemoveSpellTokenTable();
-        //Setup_NegateMonsterSummonList();
-
         //Parse IN-GAME Content to setup stuff first.
         XYZSummonRequirements::Setup();
+		CardID_WithNumberOfCardsToDraw::Setup();
 
-
-
+		CardID_WithNumberOfCardsToDraw::ProcessChanges(Path);
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
 		DetourAttach((PVOID*)&YGO::CardEffects::_DealDamageToLP, e_DealDamageToLP);
