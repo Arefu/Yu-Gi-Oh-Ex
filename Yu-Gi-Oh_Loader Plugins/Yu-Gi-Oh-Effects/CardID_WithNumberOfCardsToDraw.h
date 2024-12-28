@@ -1,19 +1,17 @@
 #pragma once
 #include <map>
+#include <string>
 
 
-
-static class XYZSummonRequirements {
+static class CardID_WithNumberOfCardsToDraw {
 public:
 	struct Requirements {
 		short _Card;
-		short _Requirement;
 		short _Count;
 	};
 
-
-	static const uintptr_t Base = 0x140ACF2E0;
-	static const long Length = 220;
+	static const uintptr_t Base = 0x140B15110;
+	static const long Length = 470;
 
 	static std::map<Requirements, uintptr_t> Table;
 
@@ -31,5 +29,10 @@ public:
 	/// <returns>The Previous Value</returns>
 	static short ChangeCardAtIndex(short Index, short NewCard);
 
-	static bool ProcessChanges();
+	/// <summary>
+	/// Checks "Path" for Folders with Manifest.json Files, and Processes requested change relevant to the CardID_WithNumberOfCardsToDraw Table.
+	/// </summary>
+	/// <param name="Path">The Root Folder for "Effects", Typically should be in .\Plugins\Effects\.</param>
+	/// <returns></returns>
+	static bool ProcessChanges(std::string Path);
 };

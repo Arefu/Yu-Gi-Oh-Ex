@@ -1,28 +1,10 @@
 {
-  "Title": "Pot of Greed - King Shit!",
-  "Description": "Adjusts Pot of Greed, I'm also acting as example Description",
-
+  "Title": "Pot of Greedier!",
+  "Description": "Adjusts Pot of Greed to Draw 5 Cards",
+  "Used By": "",
   "Change_Requests": [
     {
-      "XYZSummonRequirements": [
-        {
-          "Change": {
-            "ID": "4844",
-            "Value": 5
-          }
-        },
-        {
-          "Add": {
-            "Param1": "Value3"
-          }
-        },
-        {
-          "Delete": {
-            "Param1": "Value3",
-            "{}": ""
-          }
-        }
-      ]
+      "4844": "5"
     }
   ]
 }

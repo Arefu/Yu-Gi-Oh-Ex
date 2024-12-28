@@ -34,14 +34,23 @@
     <Filter Include="Header Files\Dependencies">
       <UniqueIdentifier>{9f04ee5b-5d88-48dc-a006-59322041187d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Dependencies\JSON">
-      <UniqueIdentifier>{64036a98-36e5-4557-91fe-dbfd1d6c1a8d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Config">
       <UniqueIdentifier>{890b8fd7-98bd-4c28-ba31-b53bda547ecf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Config">
       <UniqueIdentifier>{4fbd6d13-4795-4957-ab75-ba08bc24c92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{fc36e8e2-8151-47e6-be5f-c355ddbe3c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{b70d5158-a444-429f-8485-1b90d762c2ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Manifest">
+      <UniqueIdentifier>{2cddab64-7829-49af-b273-4988438bc663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Manifest">
+      <UniqueIdentifier>{4613f7fe-bd42-4e18-a202-787f1cfa158e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +66,15 @@
     <ClCompile Include="Config.cpp">
       <Filter>Source Files\Config</Filter>
     </ClCompile>
+    <ClCompile Include="CardID_WithNumberOfCardsToDraw.cpp">
+      <Filter>Source Files\YGO\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="FS_Utility.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Manifest.cpp">
+      <Filter>Source Files\Manifest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def">
@@ -67,29 +85,23 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DRAWCARDSCOUNT_Table.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="REMOVESPELLCOUNTER_Table.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NEGATEMONSTERSUMMON_Table.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="XYZSummonRequirements.h">
       <Filter>Header Files\YGO\Effects</Filter>
     </ClInclude>
     <ClInclude Include="Memory.h">
       <Filter>Header Files\Memory</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Dependencies\nlohmann\json.hpp">
-      <Filter>Header Files\Dependencies\JSON</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Dependencies\nlohmann\json_fwd.hpp">
-      <Filter>Header Files\Dependencies\JSON</Filter>
-    </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Header Files\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="CardID_WithNumberOfCardsToDraw.h">
+      <Filter>Header Files\YGO\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="FS_Utility.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Manifest.h">
+      <Filter>Header Files\Manifest</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
