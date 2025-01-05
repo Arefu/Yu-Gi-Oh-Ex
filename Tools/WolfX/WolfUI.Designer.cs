@@ -156,6 +156,9 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            WOLFUI_TOOLITEM_OpenConfigEditor = new ToolStripMenuItem();
+            toolStripSeparator4 = new ToolStripSeparator();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -1288,7 +1291,7 @@ namespace WolfX
             // 
             // toolsToolStripMenuItem
             // 
-            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadGameToolStripMenuItem, toolStripSeparator2, WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, WOLFUI_TOOLITEM_SetPath, Tools_Verify, toolStripSeparator1, languageToolStripMenuItem });
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { WOLFUI_TOOLITEM_OpenConfigEditor, toolStripSeparator1, loadGameToolStripMenuItem, toolStripSeparator2, WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, toolStripSeparator3, WOLFUI_TOOLITEM_SetPath, Tools_Verify, toolStripSeparator4, languageToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             toolsToolStripMenuItem.Size = new Size(46, 20);
             toolsToolStripMenuItem.Text = "&Tools";
@@ -1398,6 +1401,23 @@ namespace WolfX
             Language_spanish.Size = new Size(117, 22);
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(181, 6);
+            // 
+            // WOLFUI_TOOLITEM_OpenConfigEditor
+            // 
+            WOLFUI_TOOLITEM_OpenConfigEditor.Name = "WOLFUI_TOOLITEM_OpenConfigEditor";
+            WOLFUI_TOOLITEM_OpenConfigEditor.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_OpenConfigEditor.Text = "Config Editor";
+            WOLFUI_TOOLITEM_OpenConfigEditor.Click += WOLFUI_TOOLITEM_OpenConfigEditor_Click;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(181, 6);
             // 
             // WolfUI
             // 
@@ -1587,5 +1607,8 @@ namespace WolfX
         private Button CARDS_BTN_CloseBinder;
         private ToolStripMenuItem loadGameToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem WOLFUI_TOOLITEM_OpenConfigEditor;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripSeparator toolStripSeparator4;
     }
 }

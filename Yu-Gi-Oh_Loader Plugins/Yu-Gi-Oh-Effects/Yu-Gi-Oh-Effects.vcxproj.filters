@@ -13,67 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\YGO">
-      <UniqueIdentifier>{e4019157-f156-4798-ae97-4dbe73966fbe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\YGO\Effects">
-      <UniqueIdentifier>{c68d3a1f-0a16-413f-97c3-618e066a6475}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\YGO">
-      <UniqueIdentifier>{10b46da1-f3d3-485e-92c9-a2288bb006a7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\YGO\Effects">
-      <UniqueIdentifier>{e79a74a8-cfd0-4baa-a5e9-cb16e5d68fac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Memory">
-      <UniqueIdentifier>{8338b53e-7e46-4ce5-b6b7-c533cbd9295b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Memory">
-      <UniqueIdentifier>{8b2a5e34-accf-48ab-9c1a-061ecb04385b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Dependencies">
-      <UniqueIdentifier>{9f04ee5b-5d88-48dc-a006-59322041187d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Config">
       <UniqueIdentifier>{890b8fd7-98bd-4c28-ba31-b53bda547ecf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Config">
       <UniqueIdentifier>{4fbd6d13-4795-4957-ab75-ba08bc24c92d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Utility">
-      <UniqueIdentifier>{fc36e8e2-8151-47e6-be5f-c355ddbe3c89}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Utility">
-      <UniqueIdentifier>{b70d5158-a444-429f-8485-1b90d762c2ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Manifest">
-      <UniqueIdentifier>{2cddab64-7829-49af-b273-4988438bc663}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Manifest">
-      <UniqueIdentifier>{4613f7fe-bd42-4e18-a202-787f1cfa158e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="XYZSummonRequirements.cpp">
-      <Filter>Source Files\YGO\Effects</Filter>
-    </ClCompile>
-    <ClCompile Include="Memory.cpp">
-      <Filter>Source Files\Memory</Filter>
-    </ClCompile>
     <ClCompile Include="Config.cpp">
       <Filter>Source Files\Config</Filter>
     </ClCompile>
-    <ClCompile Include="CardID_WithNumberOfCardsToDraw.cpp">
-      <Filter>Source Files\YGO\Effects</Filter>
-    </ClCompile>
-    <ClCompile Include="FS_Utility.cpp">
-      <Filter>Source Files\Utility</Filter>
-    </ClCompile>
-    <ClCompile Include="Manifest.cpp">
-      <Filter>Source Files\Manifest</Filter>
+    <ClCompile Include="Effects.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,23 +40,11 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="XYZSummonRequirements.h">
-      <Filter>Header Files\YGO\Effects</Filter>
-    </ClInclude>
-    <ClInclude Include="Memory.h">
-      <Filter>Header Files\Memory</Filter>
-    </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Header Files\Config</Filter>
     </ClInclude>
-    <ClInclude Include="CardID_WithNumberOfCardsToDraw.h">
-      <Filter>Header Files\YGO\Effects</Filter>
-    </ClInclude>
-    <ClInclude Include="FS_Utility.h">
-      <Filter>Header Files\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Manifest.h">
-      <Filter>Header Files\Manifest</Filter>
+    <ClInclude Include="Effects.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

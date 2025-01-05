@@ -33,6 +33,11 @@ namespace WolfX
                 State.Path = OpenFolder.SelectedPath;
         }
 
-      
+        private void WOLFUI_TOOLITEM_OpenConfigEditor_Click(object sender, EventArgs e)
+        {
+
+            var Config = new WolfX.File_Type_UI.Config();
+            Config.ShowDialog();
+        }
     }
 }

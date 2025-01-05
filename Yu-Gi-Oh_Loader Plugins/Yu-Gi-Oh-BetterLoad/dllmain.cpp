@@ -4,7 +4,6 @@
 
 #include <detours.h>
 
-//
 long long Address = 0x14080D3D0;
 
 auto _Archive = new CHAR[MAX_PATH];
@@ -16,7 +15,6 @@ __int64 __fastcall _hLoadArchive(__int64* Struct, const char* Archive)
 
 BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:

@@ -7,6 +7,7 @@
 #include <Windows.h>
 
 #include "Game.h"
+
 TCHAR Game::gGamePath[MAX_PATH];
 TCHAR Game::gGameLocation[MAX_PATH];
 
@@ -130,7 +131,7 @@ void Game::CreateConfig(LPCSTR ConfigName)
 	}
 }
 
-BOOL Game::Check(LPSTR Path)
+BOOL Game::Check(LPSTR Path) 
 {
 	return PathFileExistsA(Path);
 }
