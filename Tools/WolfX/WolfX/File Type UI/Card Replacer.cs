@@ -24,7 +24,7 @@ namespace WolfX.WolfX.File_Type_UI
             {
                 using (var OpenFile = new OpenFileDialog())
                 {
-                    OpenFile.Filter = $"{Language} Card Indx File|CarD_Indx_{Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
+                    OpenFile.Filter = $"{Language} Card Indx File|Card_Indx_{Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
                     OpenFile.Title = "Open Cards Indx File";
 
                     var Res = OpenFile.ShowDialog();
@@ -75,8 +75,8 @@ namespace WolfX.WolfX.File_Type_UI
         private void CARDREP_BTN_UpdateCard_Click(object sender, EventArgs e)
         {
             Card = CARDS_Cards.Cards.Where(Card => Card.Name == CARDREP_CB_NewCardSelector.Text).First();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }
