@@ -52,8 +52,13 @@ static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
 
  void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1, float a2)
  {
-	 return; //NO OPERATION
- }
+     if(PlayerOneStart==true)
+		 *(BYTE*)0x140C8D384 = 0;
+     else
+		 *(BYTE*)0x140C8D384 = 1;
+
+     return; 
+}
 
  void ProcessConfig();
 
