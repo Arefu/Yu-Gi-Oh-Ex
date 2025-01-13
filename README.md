@@ -17,3 +17,22 @@ You should always be using the latest commit that I have, issues are very freque
 There is also Yu-Gi-Oh_Launcher which is a pathway to injecting my own code into the game, there are currently a few patches that I have, as well as a speedhack for the game to help make it feel a bit quicker to play.
 
 I would suggest checking the Project's [Wiki Page](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki), as almost all of what I know about the game is provided there which some of the information will be useful in either using these tools, or creating your own.
+
+## Features 
+
+Hey you, I see you looking at this page wondering what on Earth you're doing being dragged here by no doubt some random guy on a Discord saying "Hey bro, trust me it's good". Well I am sure it is.
+This project has a few nifty features, to save time, and brain power remembering them all, here are some importat ones worth noting
+
+1. **WolfX** - This is the main tool that I have been working on, it is a GUI that allows you to interact with the game's proprietary file formats, and edit them. It is still in development, but it is the most feature rich tool that I have created so far.
+2. **Yami-Yugi** - This is a simple command line program that can parse and extract the YGO_DATA.dat file that the game uses. It is a very simple tool, but it is very useful for extracting the game's data.
+3. **Yu-Gi-Oh_Launcher** - This is a tool that I have created to inject my own code into the game.It has a few patches that I have created, such as a speedhack for the game to help make it feel a bit quicker to play.
+
+
+## How To Install and Use WolfX (And what is a Yu-Gi-Oh-Ex?)
+
+1. Download the latest release from the GitHub page.
+2. You will need to extract the files to a folder on your computer, I'd suggest the same place the game is installed.
+3. Launch "Yu-Gi-Oh_Loader.exe" to start the game with my patches, and to see if it works. If not check out the [Wiki](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki) for what you can do.
+
+Yu-Gi-Oh-Ex is just a little play on Microsoft's convention of putting "Ex" at the end of their functions when wanting to extend their implementation.
+I'd be more inclined to call it WolfX however when just talking about the suite of tools that I have created.
