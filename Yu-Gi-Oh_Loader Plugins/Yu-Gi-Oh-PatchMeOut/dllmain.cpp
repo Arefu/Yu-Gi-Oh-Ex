@@ -4,7 +4,6 @@
 #include <string>
 #include "Yu-Gi-Oh-Ex.h"
 
-
 typedef __int64 (*OriginalPDEFunctionType)(__int64 a1, const char* a2);
 typedef void (*SetLanguage)(__int64 a1);
 typedef void (*Test)();
@@ -18,6 +17,8 @@ BOOL Store = 1;
 BOOL PATCHPDLimits = 1;
 BOOL AutoPause = 1;
 BOOL UseJP = 1;
+BOOL NoJanken = 1;
+BOOL PlayerOneStart = 1;
 
 static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
 {
@@ -49,6 +50,10 @@ static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
 	 return; 
  }
 
+ void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1, float a2)
+ {
+	 return; //NO OPERATION
+ }
 
  void ProcessConfig();
 
@@ -85,7 +90,15 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpRese
 			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched UseJP." << std::endl;
 			DetourAttach(&(PVOID&)YuGiOhEx::UseJPLogo, Patch_UseJP);
         }
+        if (NoJanken == true)
+        {
+            if (PlayerOneStart == true)
+                std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Janken. P1 (You) Starts." << std::endl;
+            else
+				std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Janken. P2 (AI/MP P2) Starts." << std::endl;
 
+			DetourAttach(&(PVOID&)YuGiOhEx::JankenAndPlayerSelection, Patch_DoJankenAndPlayerSelection);
+        }
 
         DetourTransactionCommit();
 		PDLimits = YuGiOhEx::UnkFuncForLoading;
@@ -106,4 +119,7 @@ void ProcessConfig()
     PATCHPDLimits = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"NoBan", 1, L".\\Config.ini");
 	AutoPause = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"AutoPause", 1, L".\\Config.ini");
 	UseJP = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"UseJP", 0, L".\\Config.ini");
+
+	NoJanken = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"NoJanken", 1, L".\\Config.ini");
+	PlayerOneStart = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"PlayerOneStart", 1, L".\\Config.ini");
 }
