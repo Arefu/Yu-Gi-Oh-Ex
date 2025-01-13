@@ -18,113 +18,103 @@ BOOL PATCHPDLimits = 1;
 BOOL AutoPause = 1;
 BOOL UseJP = 1;
 BOOL NoJanken = 1;
-BOOL PlayerOneStart = 1;
 
 static __int64 __fastcall Patch_UkLoading(__int64 a1, const char* a2)
 {
-    std::string File(a2);
+	std::string File(a2);
 
-    if (File == "bin/pd_limits.bin")
-        a2 = "bin/CARD_Prop.bin"; //Setthing this to empty does not let the game continue.
+	if (File == "bin/pd_limits.bin")
+		a2 = "bin/CARD_Prop.bin"; //Setthing this to empty does not let the game continue.
 
-    //Call Original function
-    auto result = reinterpret_cast<HRESULT(__stdcall*)(__int64, const char*)>(PDLimits)(a1, a2);
+	//Call Original function
+	auto result = reinterpret_cast<HRESULT(__stdcall*)(__int64, const char*)>(PDLimits)(a1, a2);
 
-    return a1;
+	return a1;
 }
 
- void __fastcall Patch_DeductMoneyFromStoreTransaction(__int64 a1, const char *a2)
+void __fastcall Patch_DeductMoneyFromStoreTransaction(__int64 a1, const char* a2)
 {
-    return; //NO OPERATION
+	return; //NO OPERATION
 }
 
- void __fastcall Patch_NoPause()
- {
-	 return; //NO OPERATION
- }
-
- void __fastcall Patch_UseJP(__int64 a1)
- {
-
-	 YuGiOhEx::g_bUseJpLogo = 255;
-	 return; 
- }
-
- void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1, float a2)
- {
-     if(PlayerOneStart==true)
-		 *(BYTE*)0x140C8D384 = 0;
-     else
-		 *(BYTE*)0x140C8D384 = 1;
-
-     return; 
-}
-
- void ProcessConfig();
-
-BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
+void __fastcall Patch_NoPause()
 {
-    long long Test = 0x140767AF0;
-    ProcessConfig();
+	return; //NO OPERATION
+}
 
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
-        std::cout << "[Yu-Gi-Oh-PatchMeOut] DLL_PROCESS_ATTACH - Ready to BREAK THINGS!" << std::endl;
-        OriginalPDE = reinterpret_cast<OriginalPDEFunctionType>(YuGiOhEx::UnkFuncForLoading);
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+void __fastcall Patch_UseJP(__int64 a1)
+{
 
-        if (Store == true)
-        {
-            std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Store." << std::endl;
-            DetourAttach(&(PVOID&)YuGiOhEx::DeductMoneyFromStoreTransaction, Patch_DeductMoneyFromStoreTransaction);
-        }
-        if (PATCHPDLimits == true)
-        {
-            std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched PDLimits." << std::endl;
-            DetourAttach(&(PVOID&)YuGiOhEx::UnkFuncForLoading, Patch_UkLoading);
-        }
-        if (AutoPause == true)
-        {
-            std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched AutoPause." << std::endl;
-            DetourAttach(&(PVOID&)YuGiOhEx::AutoPauseOnLostFocus, Patch_NoPause);
-        }
-        if (UseJP == true)
-        {
+	YuGiOhEx::g_bUseJpLogo = 255;
+	return;
+}
+
+void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1, float a2)
+{
+
+	return;
+}
+
+void ProcessConfig();
+
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
+{
+	long long Test = 0x140767AF0;
+	ProcessConfig();
+
+	switch (ul_reason_for_call)
+	{
+	case DLL_PROCESS_ATTACH:
+		std::cout << "[Yu-Gi-Oh-PatchMeOut] DLL_PROCESS_ATTACH - Ready to BREAK THINGS!" << std::endl;
+		OriginalPDE = reinterpret_cast<OriginalPDEFunctionType>(YuGiOhEx::UnkFuncForLoading);
+		DetourTransactionBegin();
+		DetourUpdateThread(GetCurrentThread());
+
+		if (Store == true)
+		{
+			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Store." << std::endl;
+			DetourAttach(&(PVOID&)YuGiOhEx::DeductMoneyFromStoreTransaction, Patch_DeductMoneyFromStoreTransaction);
+		}
+		if (PATCHPDLimits == true)
+		{
+			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched PDLimits." << std::endl;
+			DetourAttach(&(PVOID&)YuGiOhEx::UnkFuncForLoading, Patch_UkLoading);
+		}
+		if (AutoPause == true)
+		{
+			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched AutoPause." << std::endl;
+			DetourAttach(&(PVOID&)YuGiOhEx::AutoPauseOnLostFocus, Patch_NoPause);
+		}
+		if (UseJP == true)
+		{
 			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched UseJP." << std::endl;
 			DetourAttach(&(PVOID&)YuGiOhEx::UseJPLogo, Patch_UseJP);
-        }
-        if (NoJanken == true)
-        {
-            if (PlayerOneStart == true)
-                std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Janken. P1 (You) Starts." << std::endl;
-            else
-				std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Janken. P2 (AI/MP P2) Starts." << std::endl;
-
+		}
+		if (NoJanken == true)
+		{
+			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Janken" << std::endl;
 			DetourAttach(&(PVOID&)YuGiOhEx::JankenAndPlayerSelection, Patch_DoJankenAndPlayerSelection);
-        }
+		}
 
-        DetourTransactionCommit();
+		DetourTransactionCommit();
 		PDLimits = YuGiOhEx::UnkFuncForLoading;
-        SetLang = YuGiOhEx::UseJPLogo;
+		SetLang = YuGiOhEx::UseJPLogo;
 
-        break;
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH:
-        break;
-    }
-    return TRUE;
+		break;
+	case DLL_THREAD_ATTACH:
+	case DLL_THREAD_DETACH:
+	case DLL_PROCESS_DETACH:
+		break;
+	}
+	return TRUE;
 }
 
 void ProcessConfig()
 {
 	Store = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"FreeStore", 1, L".\\Config.ini");
-    PATCHPDLimits = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"NoBan", 1, L".\\Config.ini");
+	PATCHPDLimits = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"NoBan", 1, L".\\Config.ini");
 	AutoPause = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"AutoPause", 1, L".\\Config.ini");
 	UseJP = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"UseJP", 0, L".\\Config.ini");
 
 	NoJanken = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"NoJanken", 1, L".\\Config.ini");
-	PlayerOneStart = GetPrivateProfileIntW(L"Yu-Gi-Oh-PatchMeOut", L"PlayerOneStart", 1, L".\\Config.ini");
 }

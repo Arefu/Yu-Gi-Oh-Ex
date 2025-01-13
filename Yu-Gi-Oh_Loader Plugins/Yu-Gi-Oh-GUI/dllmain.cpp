@@ -42,6 +42,8 @@ Player g_Player2 = Player(PLAYER_TWO);
 
 bool PluginManager::_IsLoaded;;
 
+static bool DoIStart = false;
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
@@ -90,6 +92,8 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
 		{
+			
+
 			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());	
 			if (ImGui::TreeNodeEx("Cards in Hand"))
 			{
@@ -156,6 +160,21 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			ImGui::Text("g_bIsGameTutorial: 0x%X", YuGiOh::Get_IsDuelTutorial());
 			ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
 		
+		}
+
+		if (ImGui::CollapsingHeader("Runtime Options", ImGuiTreeNodeFlags_DefaultOpen))
+		{
+			if (ImGui::Checkbox("Player 1 Starts", &DoIStart))
+			{
+				if (DoIStart)
+				{
+					*(bool*)0x140C8D384 = 0;
+				}
+				else
+				{
+					*(bool*)0x140C8D384 = 1;
+				}
+			}
 		}
 
 		if (ImGui::CollapsingHeader("Debug Mode",  ImGuiTreeNodeFlags_DefaultOpen))
