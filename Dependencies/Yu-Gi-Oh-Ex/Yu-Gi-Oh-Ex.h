@@ -20,6 +20,8 @@ namespace YuGiOhEx
 	static __int64 UnkFuncForLoading = 0x14076D840; //Rename this at some point
 	static __int64 AutoPauseOnLostFocus = 0x14083C9F0;
 	static __int64 UseJPLogo = 0x1408734C0;
+
+	static __int64 JankenAndPlayerSelection = 0x1407AFD80;
 }
 
 
