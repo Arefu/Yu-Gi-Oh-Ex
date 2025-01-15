@@ -49,10 +49,10 @@ void __fastcall Patch_UseJP(__int64 a1)
 	return;
 }
 
-void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1, float a2)
+__int64 __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1)
 {
-
-	return;
+	//Currently bugged, it not reward player with finishing the duel.
+	return 0; //NO OPERATION
 }
 
 void ProcessConfig();
@@ -93,7 +93,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		if (NoJanken == true)
 		{
 			std::cout << "[Yu-Gi-Oh-PatchMeOut] Patched Janken" << std::endl;
-			DetourAttach(&(PVOID&)YuGiOhEx::JankenAndPlayerSelection, Patch_DoJankenAndPlayerSelection);
+		//	DetourAttach(&(PVOID&)YuGiOhEx::JankenAndPlayerSelection, Patch_DoJankenAndPlayerSelection);
 		}
 
 		DetourTransactionCommit();

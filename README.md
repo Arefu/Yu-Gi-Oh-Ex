@@ -36,3 +36,7 @@ This project has a few nifty features, to save time, and brain power remembering
 
 Yu-Gi-Oh-Ex is just a little play on Microsoft's convention of putting "Ex" at the end of their functions when wanting to extend their implementation.
 I'd be more inclined to call it WolfX however when just talking about the suite of tools that I have created.
+
+If you have a Nintendo Switch, I'm sorry, you're currently out of luck for the majority of things.
+If I ever bother to pick up my Swithc more I'll see if anything is possible, but currently you're limited to DAT/TOC modifications.
+Even if I can get the core suite of tools compiled for Switch, I am not aware of anyway to inject my own code into a running process for switch like Detours does, so you're out of luck there.
