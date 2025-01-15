@@ -36,7 +36,6 @@ void AddTrace()
 {
     Tracer::Traces.push_back({ "YGO::DuelSetup::MP_Get_IsRoundBasedDuel", (void*)0x1407F1E80, (void*)YGO::DuelSetup::_D_MP_Get_IsRoundBasedDuel });
 	Tracer::Traces.push_back({ "YGO::DuelUtility::Get_TutorialDuelIndex", (void*)0x140769180, (void*)YGO::DuelUtility::_D_Get_TutorialDuelIndex });
-    Tracer::Traces.push_back({ "YGO::DuelSetup::Do_JankenMiniGame", (void*)0x1407AFD80, (void*)YGO::DuelSetup::_D_DoJankenMiniGame });
 }
 
 void SetupTrace()

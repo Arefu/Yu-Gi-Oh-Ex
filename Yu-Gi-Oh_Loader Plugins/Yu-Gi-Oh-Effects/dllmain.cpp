@@ -12,11 +12,13 @@
 
 BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
+    ;
     std::string Path = "C:\\";
 
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
+        return 1;
         Path = Config::Get_WorkingDirectory(); //We Don't Want Content To Be Loaded From The Wrong Directory, This Will Be Where *ALL* Stuff Goes.
         if(Path == "")
 		{
