@@ -145,16 +145,17 @@ namespace WolfX
             PDL_LV_ForbiddenCards = new ListView();
             PDL_LimitedCards = new TabPage();
             PDL_LV_LimitedCards = new ListView();
+            PDL_SemiLimitedCards = new TabPage();
+            PDL_LV_SemiLimitedCards = new ListView();
             groupBox15 = new GroupBox();
             checkBox1 = new CheckBox();
             button1 = new Button();
-            button2 = new Button();
+            PDL_BTN_RemoveCardFromList = new Button();
             button3 = new Button();
             groupBox16 = new GroupBox();
             PDL_CB_UseCardID = new CheckBox();
-            button4 = new Button();
             PDL_CB_LoadImages = new CheckBox();
-            button5 = new Button();
+            PDL_BTN_SavePDL = new Button();
             PDL_BTN_OpenPDL = new Button();
             groupBox17 = new GroupBox();
             PDL_LBL_NumOfLimited = new Label();
@@ -182,6 +183,8 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            PDL_LBL_NumOfSemiLimited = new Label();
+            label17 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -216,6 +219,7 @@ namespace WolfX
             tabControl2.SuspendLayout();
             PDL_ForbiddenCards.SuspendLayout();
             PDL_LimitedCards.SuspendLayout();
+            PDL_SemiLimitedCards.SuspendLayout();
             groupBox15.SuspendLayout();
             groupBox16.SuspendLayout();
             groupBox17.SuspendLayout();
@@ -1328,6 +1332,7 @@ namespace WolfX
             // 
             tabControl2.Controls.Add(PDL_ForbiddenCards);
             tabControl2.Controls.Add(PDL_LimitedCards);
+            tabControl2.Controls.Add(PDL_SemiLimitedCards);
             tabControl2.Location = new Point(8, 112);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
@@ -1354,6 +1359,7 @@ namespace WolfX
             PDL_LV_ForbiddenCards.TabIndex = 0;
             PDL_LV_ForbiddenCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_ForbiddenCards.View = View.List;
+            PDL_LV_ForbiddenCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
             // 
             // PDL_LimitedCards
             // 
@@ -1375,12 +1381,33 @@ namespace WolfX
             PDL_LV_LimitedCards.TabIndex = 1;
             PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_LimitedCards.View = View.List;
+            PDL_LV_LimitedCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
+            // 
+            // PDL_SemiLimitedCards
+            // 
+            PDL_SemiLimitedCards.Controls.Add(PDL_LV_SemiLimitedCards);
+            PDL_SemiLimitedCards.Location = new Point(4, 24);
+            PDL_SemiLimitedCards.Name = "PDL_SemiLimitedCards";
+            PDL_SemiLimitedCards.Size = new Size(627, 468);
+            PDL_SemiLimitedCards.TabIndex = 2;
+            PDL_SemiLimitedCards.Text = "Semi-Limited";
+            PDL_SemiLimitedCards.UseVisualStyleBackColor = true;
+            // 
+            // PDL_LV_SemiLimitedCards
+            // 
+            PDL_LV_SemiLimitedCards.Dock = DockStyle.Fill;
+            PDL_LV_SemiLimitedCards.Location = new Point(0, 0);
+            PDL_LV_SemiLimitedCards.Name = "PDL_LV_SemiLimitedCards";
+            PDL_LV_SemiLimitedCards.Size = new Size(627, 468);
+            PDL_LV_SemiLimitedCards.TabIndex = 1;
+            PDL_LV_SemiLimitedCards.UseCompatibleStateImageBehavior = false;
+            PDL_LV_SemiLimitedCards.View = View.List;
             // 
             // groupBox15
             // 
             groupBox15.Controls.Add(checkBox1);
             groupBox15.Controls.Add(button1);
-            groupBox15.Controls.Add(button2);
+            groupBox15.Controls.Add(PDL_BTN_RemoveCardFromList);
             groupBox15.Controls.Add(button3);
             groupBox15.Location = new Point(420, 3);
             groupBox15.Name = "groupBox15";
@@ -1409,15 +1436,16 @@ namespace WolfX
             button1.Text = "Replace";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // PDL_BTN_RemoveCardFromList
             // 
-            button2.Enabled = false;
-            button2.Location = new Point(6, 53);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 25);
-            button2.TabIndex = 4;
-            button2.Text = "Remove";
-            button2.UseVisualStyleBackColor = true;
+            PDL_BTN_RemoveCardFromList.Enabled = false;
+            PDL_BTN_RemoveCardFromList.Location = new Point(6, 53);
+            PDL_BTN_RemoveCardFromList.Name = "PDL_BTN_RemoveCardFromList";
+            PDL_BTN_RemoveCardFromList.Size = new Size(72, 25);
+            PDL_BTN_RemoveCardFromList.TabIndex = 4;
+            PDL_BTN_RemoveCardFromList.Text = "Remove";
+            PDL_BTN_RemoveCardFromList.UseVisualStyleBackColor = true;
+            PDL_BTN_RemoveCardFromList.Click += PDL_BTN_RemoveCardFromList_Click;
             // 
             // button3
             // 
@@ -1432,9 +1460,8 @@ namespace WolfX
             // groupBox16
             // 
             groupBox16.Controls.Add(PDL_CB_UseCardID);
-            groupBox16.Controls.Add(button4);
             groupBox16.Controls.Add(PDL_CB_LoadImages);
-            groupBox16.Controls.Add(button5);
+            groupBox16.Controls.Add(PDL_BTN_SavePDL);
             groupBox16.Controls.Add(PDL_BTN_OpenPDL);
             groupBox16.Location = new Point(214, 6);
             groupBox16.Name = "groupBox16";
@@ -1448,42 +1475,35 @@ namespace WolfX
             PDL_CB_UseCardID.AutoSize = true;
             PDL_CB_UseCardID.Checked = true;
             PDL_CB_UseCardID.CheckState = CheckState.Checked;
-            PDL_CB_UseCardID.Location = new Point(84, 72);
+            PDL_CB_UseCardID.Location = new Point(84, 53);
             PDL_CB_UseCardID.Name = "PDL_CB_UseCardID";
             PDL_CB_UseCardID.Size = new Size(92, 19);
             PDL_CB_UseCardID.TabIndex = 7;
             PDL_CB_UseCardID.Text = "Use Card IDs";
             PDL_CB_UseCardID.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(84, 22);
-            button4.Name = "button4";
-            button4.Size = new Size(107, 25);
-            button4.TabIndex = 6;
-            button4.Text = "Extract Save";
-            button4.UseVisualStyleBackColor = true;
+            PDL_CB_UseCardID.CheckedChanged += PDL_CB_UseCardID_CheckedChanged;
             // 
             // PDL_CB_LoadImages
             // 
             PDL_CB_LoadImages.AutoSize = true;
-            PDL_CB_LoadImages.Location = new Point(84, 53);
+            PDL_CB_LoadImages.Location = new Point(84, 23);
             PDL_CB_LoadImages.Name = "PDL_CB_LoadImages";
             PDL_CB_LoadImages.Size = new Size(97, 19);
             PDL_CB_LoadImages.TabIndex = 5;
             PDL_CB_LoadImages.Text = "Load Pictures";
             PDL_CB_LoadImages.UseVisualStyleBackColor = true;
-            PDL_CB_LoadImages.CheckedChanged += this.PDL_CB_LoadImages_CheckedChanged;
+            PDL_CB_LoadImages.CheckedChanged += PDL_CB_LoadImages_CheckedChanged;
             // 
-            // button5
+            // PDL_BTN_SavePDL
             // 
-            button5.Enabled = false;
-            button5.Location = new Point(6, 53);
-            button5.Name = "button5";
-            button5.Size = new Size(72, 25);
-            button5.TabIndex = 4;
-            button5.Text = "Save ";
-            button5.UseVisualStyleBackColor = true;
+            PDL_BTN_SavePDL.Enabled = false;
+            PDL_BTN_SavePDL.Location = new Point(6, 53);
+            PDL_BTN_SavePDL.Name = "PDL_BTN_SavePDL";
+            PDL_BTN_SavePDL.Size = new Size(72, 25);
+            PDL_BTN_SavePDL.TabIndex = 4;
+            PDL_BTN_SavePDL.Text = "Save ";
+            PDL_BTN_SavePDL.UseVisualStyleBackColor = true;
+            PDL_BTN_SavePDL.Click += PDL_BTN_SavePDL_Click;
             // 
             // PDL_BTN_OpenPDL
             // 
@@ -1497,6 +1517,8 @@ namespace WolfX
             // 
             // groupBox17
             // 
+            groupBox17.Controls.Add(PDL_LBL_NumOfSemiLimited);
+            groupBox17.Controls.Add(label17);
             groupBox17.Controls.Add(PDL_LBL_NumOfLimited);
             groupBox17.Controls.Add(label19);
             groupBox17.Controls.Add(PDL_LBL_NumOfForbidden);
@@ -1692,6 +1714,24 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // PDL_LBL_NumOfSemiLimited
+            // 
+            PDL_LBL_NumOfSemiLimited.AutoSize = true;
+            PDL_LBL_NumOfSemiLimited.Location = new Point(92, 81);
+            PDL_LBL_NumOfSemiLimited.Name = "PDL_LBL_NumOfSemiLimited";
+            PDL_LBL_NumOfSemiLimited.Size = new Size(13, 15);
+            PDL_LBL_NumOfSemiLimited.TabIndex = 7;
+            PDL_LBL_NumOfSemiLimited.Text = "0";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(7, 81);
+            label17.Name = "label17";
+            label17.Size = new Size(79, 15);
+            label17.TabIndex = 6;
+            label17.Text = "Semi Limited:";
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1752,6 +1792,7 @@ namespace WolfX
             tabControl2.ResumeLayout(false);
             PDL_ForbiddenCards.ResumeLayout(false);
             PDL_LimitedCards.ResumeLayout(false);
+            PDL_SemiLimitedCards.ResumeLayout(false);
             groupBox15.ResumeLayout(false);
             groupBox15.PerformLayout();
             groupBox16.ResumeLayout(false);
@@ -1897,13 +1938,12 @@ namespace WolfX
         private GroupBox groupBox15;
         private CheckBox checkBox1;
         public Button button1;
-        public Button button2;
+        public Button PDL_BTN_RemoveCardFromList;
         private Button button3;
         private GroupBox groupBox16;
         private CheckBox PDL_CB_UseCardID;
-        private Button button4;
         private CheckBox PDL_CB_LoadImages;
-        public Button button5;
+        public Button PDL_BTN_SavePDL;
         private Button PDL_BTN_OpenPDL;
         private GroupBox groupBox17;
         private Label PDL_LBL_NumOfLimited;
@@ -1916,5 +1956,9 @@ namespace WolfX
         private ListView PDL_LV_ForbiddenCards;
         private TabPage PDL_LimitedCards;
         private ListView PDL_LV_LimitedCards;
+        private TabPage PDL_SemiLimitedCards;
+        private ListView PDL_LV_SemiLimitedCards;
+        private Label PDL_LBL_NumOfSemiLimited;
+        private Label label17;
     }
 }

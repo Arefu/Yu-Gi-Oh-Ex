@@ -33,6 +33,9 @@ namespace Types
 
         public static List<ZIB_Item> Load(string Archive)
         {
+            if(Archive == String.Empty)
+                return null;
+
             _Items.Clear();
             Reader = new BinaryReader(File.Open($"{Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
 

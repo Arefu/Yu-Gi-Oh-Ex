@@ -81,7 +81,6 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>false</EnableCOMDATFolding>
-      <OptimizeReferences>false</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\nlohmann;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>detours.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
