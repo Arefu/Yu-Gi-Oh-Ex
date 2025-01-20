@@ -9,6 +9,17 @@ namespace WolfX
     {
         private void PDL_BTN_OpenPDL_Click(object sender, EventArgs e)
         {
+            var Images = new ImageList();
+            if (PDL_CB_LoadImages.Checked)
+            {
+                Images.ImageSize = new Size(64, 64);
+                PDL_LV_ForbiddenCards.View = View.LargeIcon;
+                PDL_LV_ForbiddenCards.LargeImageList = Images;
+
+                PDL_LV_LimitedCards.View = View.LargeIcon;
+                PDL_LV_LimitedCards.LargeImageList = Images;
+            }
+
             var Limits = "-1";
             if (State.Path == null || State.Path == "")
             {
@@ -32,19 +43,61 @@ namespace WolfX
             PDLimits.PDLimits.Load(Limits);
 
             var Forbidden = PDLimits.PDLimits.GetForbidden();
-            foreach(var i in Forbidden)
+            foreach (var i in Forbidden)
             {
-                PDL_LV_ForbiddenCards.Items.Add(i.ToString());
+                if (PDL_CB_LoadImages.Checked)
+                    Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+
+                PDL_LV_ForbiddenCards.Items.Add(i.ToString(), i.ToString());
             }
 
             var Limited = PDLimits.PDLimits.GetLimited();
-            foreach(var i in Limited)
+            foreach (var i in Limited)
             {
-                PDL_LV_LimitedCards.Items.Add(i.ToString());
+                if (PDL_CB_LoadImages.Checked)
+                    Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+
+                PDL_LV_LimitedCards.Items.Add(i.ToString(), i.ToString());
             }
 
             PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
             PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
+        }
+
+        private void PDL_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PDL_CB_LoadImages.Checked)
+            {
+                if (State.Path != null)
+                {
+                    ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
+                    PDL_LV_ForbiddenCards.View = View.LargeIcon;
+                    PDL_LV_LimitedCards.View = View.LargeIcon;
+                }
+                else
+                {
+                    using (var OpenDialog = new OpenFileDialog())
+                    {
+                        OpenDialog.Title = "Open ZIB Archive";
+                        OpenDialog.Filter = "ZIB Archive (*.zib)|*.zib";
+                        if (OpenDialog.ShowDialog() != DialogResult.OK)
+                        {
+                            MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            return;
+                        }
+                        ZIB.Load(OpenDialog.FileName);
+                        PDL_LV_ForbiddenCards.View = View.LargeIcon;
+                        PDL_LV_LimitedCards.View = View.LargeIcon;
+                    }
+
+                }
+            }
+            else
+            {
+                PDL_LV_ForbiddenCards.View = View.List;
+                PDL_LV_LimitedCards.View = View.List;
+            }
         }
 
     }

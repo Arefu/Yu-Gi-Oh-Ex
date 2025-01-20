@@ -144,15 +144,16 @@ namespace WolfX
             PDL_ForbiddenCards = new TabPage();
             PDL_LV_ForbiddenCards = new ListView();
             PDL_LimitedCards = new TabPage();
+            PDL_LV_LimitedCards = new ListView();
             groupBox15 = new GroupBox();
             checkBox1 = new CheckBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             groupBox16 = new GroupBox();
-            checkBox2 = new CheckBox();
+            PDL_CB_UseCardID = new CheckBox();
             button4 = new Button();
-            checkBox3 = new CheckBox();
+            PDL_CB_LoadImages = new CheckBox();
             button5 = new Button();
             PDL_BTN_OpenPDL = new Button();
             groupBox17 = new GroupBox();
@@ -181,7 +182,6 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            PDL_LV_LimitedCards = new ListView();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -1366,6 +1366,16 @@ namespace WolfX
             PDL_LimitedCards.Text = "Limited";
             PDL_LimitedCards.UseVisualStyleBackColor = true;
             // 
+            // PDL_LV_LimitedCards
+            // 
+            PDL_LV_LimitedCards.Dock = DockStyle.Fill;
+            PDL_LV_LimitedCards.Location = new Point(3, 3);
+            PDL_LV_LimitedCards.Name = "PDL_LV_LimitedCards";
+            PDL_LV_LimitedCards.Size = new Size(621, 462);
+            PDL_LV_LimitedCards.TabIndex = 1;
+            PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
+            PDL_LV_LimitedCards.View = View.List;
+            // 
             // groupBox15
             // 
             groupBox15.Controls.Add(checkBox1);
@@ -1421,9 +1431,9 @@ namespace WolfX
             // 
             // groupBox16
             // 
-            groupBox16.Controls.Add(checkBox2);
+            groupBox16.Controls.Add(PDL_CB_UseCardID);
             groupBox16.Controls.Add(button4);
-            groupBox16.Controls.Add(checkBox3);
+            groupBox16.Controls.Add(PDL_CB_LoadImages);
             groupBox16.Controls.Add(button5);
             groupBox16.Controls.Add(PDL_BTN_OpenPDL);
             groupBox16.Location = new Point(214, 6);
@@ -1433,17 +1443,17 @@ namespace WolfX
             groupBox16.TabStop = false;
             groupBox16.Text = "Limiter File Handler";
             // 
-            // checkBox2
+            // PDL_CB_UseCardID
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Checked = true;
-            checkBox2.CheckState = CheckState.Checked;
-            checkBox2.Location = new Point(84, 72);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(92, 19);
-            checkBox2.TabIndex = 7;
-            checkBox2.Text = "Use Card IDs";
-            checkBox2.UseVisualStyleBackColor = true;
+            PDL_CB_UseCardID.AutoSize = true;
+            PDL_CB_UseCardID.Checked = true;
+            PDL_CB_UseCardID.CheckState = CheckState.Checked;
+            PDL_CB_UseCardID.Location = new Point(84, 72);
+            PDL_CB_UseCardID.Name = "PDL_CB_UseCardID";
+            PDL_CB_UseCardID.Size = new Size(92, 19);
+            PDL_CB_UseCardID.TabIndex = 7;
+            PDL_CB_UseCardID.Text = "Use Card IDs";
+            PDL_CB_UseCardID.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -1454,15 +1464,16 @@ namespace WolfX
             button4.Text = "Extract Save";
             button4.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // PDL_CB_LoadImages
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(84, 53);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(97, 19);
-            checkBox3.TabIndex = 5;
-            checkBox3.Text = "Load Pictures";
-            checkBox3.UseVisualStyleBackColor = true;
+            PDL_CB_LoadImages.AutoSize = true;
+            PDL_CB_LoadImages.Location = new Point(84, 53);
+            PDL_CB_LoadImages.Name = "PDL_CB_LoadImages";
+            PDL_CB_LoadImages.Size = new Size(97, 19);
+            PDL_CB_LoadImages.TabIndex = 5;
+            PDL_CB_LoadImages.Text = "Load Pictures";
+            PDL_CB_LoadImages.UseVisualStyleBackColor = true;
+            PDL_CB_LoadImages.CheckedChanged += this.PDL_CB_LoadImages_CheckedChanged;
             // 
             // button5
             // 
@@ -1681,16 +1692,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // PDL_LV_LimitedCards
-            // 
-            PDL_LV_LimitedCards.Dock = DockStyle.Fill;
-            PDL_LV_LimitedCards.Location = new Point(3, 3);
-            PDL_LV_LimitedCards.Name = "PDL_LV_LimitedCards";
-            PDL_LV_LimitedCards.Size = new Size(621, 462);
-            PDL_LV_LimitedCards.TabIndex = 1;
-            PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
-            PDL_LV_LimitedCards.View = View.List;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1899,9 +1900,9 @@ namespace WolfX
         public Button button2;
         private Button button3;
         private GroupBox groupBox16;
-        private CheckBox checkBox2;
+        private CheckBox PDL_CB_UseCardID;
         private Button button4;
-        private CheckBox checkBox3;
+        private CheckBox PDL_CB_LoadImages;
         public Button button5;
         private Button PDL_BTN_OpenPDL;
         private GroupBox groupBox17;
