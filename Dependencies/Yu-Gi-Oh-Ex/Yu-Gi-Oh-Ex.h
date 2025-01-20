@@ -38,7 +38,6 @@ public:
 	SHORT Get_CardInHand(INT Slot);
 	vector<SHORT> Get_CardsInHand();
 
-
 	INT Get_NumberOfCardsInDeck();
 	SHORT Get_CardInDeck(INT Slot);
 	vector<SHORT> Get_CardsInDeck();

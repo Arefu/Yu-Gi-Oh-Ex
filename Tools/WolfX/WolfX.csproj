@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
       <UseWPF>true</UseWPF>
@@ -23,6 +23,7 @@
     <ProjectReference Include="..\..\File Type Libraries\Cards\Cards.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\CRED\CRED.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Dfymoo\Dfymoo.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\PDLimits\PDLimits.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\YDC\YDC.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\ZIB\ZIB.csproj" />
   </ItemGroup>
@@ -37,6 +38,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="WolfX\Events\Strings Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WolfX\Events\PDLimits Events.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="WolfX\Events\YDC Events.cs">

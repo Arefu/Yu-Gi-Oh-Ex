@@ -46,11 +46,6 @@ errno_t __cdecl hooked_fopen_s(FILE** file, const char* filename, const char* mo
 	return original_fopen_s(file, filename, mode);
 }
 
-size_t __cdecl hooked_fread(void* buffer, size_t size, size_t count, FILE* stream)
-{	
-	original_fread(buffer, size, count, stream);
-	return 0;
-}
 
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
@@ -72,8 +67,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourAttach(&(PVOID&)original_fopen, hooked_fopen);
 		DetourAttach(&(PVOID&)original_fopen_s, hooked_fopen_s);
 		
-		//DetourAttach(&(PVOID&)original_fread, hooked_fread);
-
 		if (GetPrivateProfileIntA("Yu-Gi-Oh-BetterLoad", "AllowMultiInstance", 0, ".\\Config.ini") == 1)
 			DetourAttach(&(PVOID&)pCreateMutex, HookCreateMutex);
 		

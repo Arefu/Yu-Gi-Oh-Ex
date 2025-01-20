@@ -110,6 +110,7 @@ namespace Types
 
             return true;
         }
+
         public static bool Close_CardBinder()
         {
           

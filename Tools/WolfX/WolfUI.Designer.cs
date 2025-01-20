@@ -139,6 +139,28 @@ namespace WolfX
             label16 = new Label();
             YDC_LBL_NumOfCardInMain = new Label();
             label14 = new Label();
+            Page_PDLimitsManager = new TabPage();
+            tabControl2 = new TabControl();
+            PDL_ForbiddenCards = new TabPage();
+            PDL_LV_ForbiddenCards = new ListView();
+            PDL_LimitedCards = new TabPage();
+            groupBox15 = new GroupBox();
+            checkBox1 = new CheckBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            groupBox16 = new GroupBox();
+            checkBox2 = new CheckBox();
+            button4 = new Button();
+            checkBox3 = new CheckBox();
+            button5 = new Button();
+            PDL_BTN_OpenPDL = new Button();
+            groupBox17 = new GroupBox();
+            PDL_LBL_NumOfLimited = new Label();
+            label19 = new Label();
+            PDL_LBL_NumOfForbidden = new Label();
+            label21 = new Label();
+            label23 = new Label();
             MenuBar = new MenuStrip();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_OpenConfigEditor = new ToolStripMenuItem();
@@ -159,6 +181,7 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            PDL_LV_LimitedCards = new ListView();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -189,6 +212,13 @@ namespace WolfX
             tabPage1.SuspendLayout();
             groupBox12.SuspendLayout();
             groupBox13.SuspendLayout();
+            Page_PDLimitsManager.SuspendLayout();
+            tabControl2.SuspendLayout();
+            PDL_ForbiddenCards.SuspendLayout();
+            PDL_LimitedCards.SuspendLayout();
+            groupBox15.SuspendLayout();
+            groupBox16.SuspendLayout();
+            groupBox17.SuspendLayout();
             MenuBar.SuspendLayout();
             SuspendLayout();
             // 
@@ -200,6 +230,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_ANIMLISTManager);
             WolfX_TabManager.Controls.Add(Page_BNDManager);
             WolfX_TabManager.Controls.Add(Page_YDCManager);
+            WolfX_TabManager.Controls.Add(Page_PDLimitsManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -893,7 +924,7 @@ namespace WolfX
             label11.AutoSize = true;
             label11.Location = new Point(331, 178);
             label11.Name = "label11";
-            label11.Size = new Size(124, 15);
+            label11.Size = new Size(125, 15);
             label11.TabIndex = 12;
             label11.Text = "Progress Through File:";
             // 
@@ -926,7 +957,6 @@ namespace WolfX
             // 
             STRMAN_LB_CurrentFileStrings.FormattingEnabled = true;
             STRMAN_LB_CurrentFileStrings.HorizontalScrollbar = true;
-            STRMAN_LB_CurrentFileStrings.ItemHeight = 15;
             STRMAN_LB_CurrentFileStrings.Items.AddRange(new object[] { "Strings_STEAM_.BND" });
             STRMAN_LB_CurrentFileStrings.Location = new Point(6, 112);
             STRMAN_LB_CurrentFileStrings.Name = "STRMAN_LB_CurrentFileStrings";
@@ -1037,7 +1067,7 @@ namespace WolfX
             YDC_CB_UseSimpleEditor.AutoSize = true;
             YDC_CB_UseSimpleEditor.Location = new Point(84, 25);
             YDC_CB_UseSimpleEditor.Name = "YDC_CB_UseSimpleEditor";
-            YDC_CB_UseSimpleEditor.Size = new Size(110, 19);
+            YDC_CB_UseSimpleEditor.Size = new Size(109, 19);
             YDC_CB_UseSimpleEditor.TabIndex = 6;
             YDC_CB_UseSimpleEditor.Text = "Simple Add Box";
             YDC_CB_UseSimpleEditor.UseVisualStyleBackColor = true;
@@ -1240,7 +1270,7 @@ namespace WolfX
             label18.AutoSize = true;
             label18.Location = new Point(7, 82);
             label18.Name = "label18";
-            label18.Size = new Size(65, 15);
+            label18.Size = new Size(64, 15);
             label18.TabIndex = 4;
             label18.Text = "Extra Deck:";
             // 
@@ -1280,6 +1310,238 @@ namespace WolfX
             label14.TabIndex = 0;
             label14.Text = "Main Deck:";
             // 
+            // Page_PDLimitsManager
+            // 
+            Page_PDLimitsManager.Controls.Add(tabControl2);
+            Page_PDLimitsManager.Controls.Add(groupBox15);
+            Page_PDLimitsManager.Controls.Add(groupBox16);
+            Page_PDLimitsManager.Controls.Add(groupBox17);
+            Page_PDLimitsManager.Location = new Point(4, 24);
+            Page_PDLimitsManager.Name = "Page_PDLimitsManager";
+            Page_PDLimitsManager.Padding = new Padding(3);
+            Page_PDLimitsManager.Size = new Size(651, 619);
+            Page_PDLimitsManager.TabIndex = 6;
+            Page_PDLimitsManager.Text = "Status Editor";
+            Page_PDLimitsManager.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            tabControl2.Controls.Add(PDL_ForbiddenCards);
+            tabControl2.Controls.Add(PDL_LimitedCards);
+            tabControl2.Location = new Point(8, 112);
+            tabControl2.Name = "tabControl2";
+            tabControl2.SelectedIndex = 0;
+            tabControl2.Size = new Size(635, 496);
+            tabControl2.TabIndex = 15;
+            // 
+            // PDL_ForbiddenCards
+            // 
+            PDL_ForbiddenCards.Controls.Add(PDL_LV_ForbiddenCards);
+            PDL_ForbiddenCards.Location = new Point(4, 24);
+            PDL_ForbiddenCards.Name = "PDL_ForbiddenCards";
+            PDL_ForbiddenCards.Padding = new Padding(3);
+            PDL_ForbiddenCards.Size = new Size(627, 468);
+            PDL_ForbiddenCards.TabIndex = 0;
+            PDL_ForbiddenCards.Text = "Forbidden";
+            PDL_ForbiddenCards.UseVisualStyleBackColor = true;
+            // 
+            // PDL_LV_ForbiddenCards
+            // 
+            PDL_LV_ForbiddenCards.Dock = DockStyle.Fill;
+            PDL_LV_ForbiddenCards.Location = new Point(3, 3);
+            PDL_LV_ForbiddenCards.Name = "PDL_LV_ForbiddenCards";
+            PDL_LV_ForbiddenCards.Size = new Size(621, 462);
+            PDL_LV_ForbiddenCards.TabIndex = 0;
+            PDL_LV_ForbiddenCards.UseCompatibleStateImageBehavior = false;
+            PDL_LV_ForbiddenCards.View = View.List;
+            // 
+            // PDL_LimitedCards
+            // 
+            PDL_LimitedCards.Controls.Add(PDL_LV_LimitedCards);
+            PDL_LimitedCards.Location = new Point(4, 24);
+            PDL_LimitedCards.Name = "PDL_LimitedCards";
+            PDL_LimitedCards.Padding = new Padding(3);
+            PDL_LimitedCards.Size = new Size(627, 468);
+            PDL_LimitedCards.TabIndex = 1;
+            PDL_LimitedCards.Text = "Limited";
+            PDL_LimitedCards.UseVisualStyleBackColor = true;
+            // 
+            // groupBox15
+            // 
+            groupBox15.Controls.Add(checkBox1);
+            groupBox15.Controls.Add(button1);
+            groupBox15.Controls.Add(button2);
+            groupBox15.Controls.Add(button3);
+            groupBox15.Location = new Point(420, 3);
+            groupBox15.Name = "groupBox15";
+            groupBox15.Size = new Size(200, 100);
+            groupBox15.TabIndex = 14;
+            groupBox15.TabStop = false;
+            groupBox15.Text = "Limiter Tools";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(84, 25);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(109, 19);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Simple Add Box";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Enabled = false;
+            button1.Location = new Point(84, 53);
+            button1.Name = "button1";
+            button1.Size = new Size(72, 25);
+            button1.TabIndex = 5;
+            button1.Text = "Replace";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.Location = new Point(6, 53);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 25);
+            button2.TabIndex = 4;
+            button2.Text = "Remove";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.Location = new Point(6, 22);
+            button3.Name = "button3";
+            button3.Size = new Size(72, 25);
+            button3.TabIndex = 2;
+            button3.Text = "Add";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            groupBox16.Controls.Add(checkBox2);
+            groupBox16.Controls.Add(button4);
+            groupBox16.Controls.Add(checkBox3);
+            groupBox16.Controls.Add(button5);
+            groupBox16.Controls.Add(PDL_BTN_OpenPDL);
+            groupBox16.Location = new Point(214, 6);
+            groupBox16.Name = "groupBox16";
+            groupBox16.Size = new Size(200, 100);
+            groupBox16.TabIndex = 13;
+            groupBox16.TabStop = false;
+            groupBox16.Text = "Limiter File Handler";
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Checked = true;
+            checkBox2.CheckState = CheckState.Checked;
+            checkBox2.Location = new Point(84, 72);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(92, 19);
+            checkBox2.TabIndex = 7;
+            checkBox2.Text = "Use Card IDs";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(84, 22);
+            button4.Name = "button4";
+            button4.Size = new Size(107, 25);
+            button4.TabIndex = 6;
+            button4.Text = "Extract Save";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(84, 53);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(97, 19);
+            checkBox3.TabIndex = 5;
+            checkBox3.Text = "Load Pictures";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Enabled = false;
+            button5.Location = new Point(6, 53);
+            button5.Name = "button5";
+            button5.Size = new Size(72, 25);
+            button5.TabIndex = 4;
+            button5.Text = "Save ";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // PDL_BTN_OpenPDL
+            // 
+            PDL_BTN_OpenPDL.Location = new Point(6, 22);
+            PDL_BTN_OpenPDL.Name = "PDL_BTN_OpenPDL";
+            PDL_BTN_OpenPDL.Size = new Size(72, 25);
+            PDL_BTN_OpenPDL.TabIndex = 2;
+            PDL_BTN_OpenPDL.Text = "Open ";
+            PDL_BTN_OpenPDL.UseVisualStyleBackColor = true;
+            PDL_BTN_OpenPDL.Click += PDL_BTN_OpenPDL_Click;
+            // 
+            // groupBox17
+            // 
+            groupBox17.Controls.Add(PDL_LBL_NumOfLimited);
+            groupBox17.Controls.Add(label19);
+            groupBox17.Controls.Add(PDL_LBL_NumOfForbidden);
+            groupBox17.Controls.Add(label21);
+            groupBox17.Controls.Add(label23);
+            groupBox17.Location = new Point(8, 6);
+            groupBox17.Name = "groupBox17";
+            groupBox17.Size = new Size(200, 100);
+            groupBox17.TabIndex = 12;
+            groupBox17.TabStop = false;
+            groupBox17.Text = "Limited/Forbidden Information";
+            // 
+            // PDL_LBL_NumOfLimited
+            // 
+            PDL_LBL_NumOfLimited.AutoSize = true;
+            PDL_LBL_NumOfLimited.Location = new Point(74, 50);
+            PDL_LBL_NumOfLimited.Name = "PDL_LBL_NumOfLimited";
+            PDL_LBL_NumOfLimited.Size = new Size(13, 15);
+            PDL_LBL_NumOfLimited.TabIndex = 5;
+            PDL_LBL_NumOfLimited.Text = "0";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(7, 50);
+            label19.Name = "label19";
+            label19.Size = new Size(50, 15);
+            label19.TabIndex = 4;
+            label19.Text = "Limited:";
+            // 
+            // PDL_LBL_NumOfForbidden
+            // 
+            PDL_LBL_NumOfForbidden.AutoSize = true;
+            PDL_LBL_NumOfForbidden.Location = new Point(74, 19);
+            PDL_LBL_NumOfForbidden.Name = "PDL_LBL_NumOfForbidden";
+            PDL_LBL_NumOfForbidden.Size = new Size(13, 15);
+            PDL_LBL_NumOfForbidden.TabIndex = 3;
+            PDL_LBL_NumOfForbidden.Text = "0";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(7, 19);
+            label21.Name = "label21";
+            label21.Size = new Size(64, 15);
+            label21.TabIndex = 2;
+            label21.Text = "Forbidden:";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(7, 40);
+            label23.Name = "label23";
+            label23.Size = new Size(0, 15);
+            label23.TabIndex = 0;
+            // 
             // MenuBar
             // 
             MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
@@ -1293,39 +1555,39 @@ namespace WolfX
             // 
             toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { WOLFUI_TOOLITEM_OpenConfigEditor, toolStripSeparator1, loadGameToolStripMenuItem, toolStripSeparator2, WOLFUI_TOOLITEM_Extract, WOLFUI_TOOLITEM_Pack, toolStripSeparator3, WOLFUI_TOOLITEM_SetPath, Tools_Verify, toolStripSeparator4, languageToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            toolsToolStripMenuItem.Size = new Size(46, 20);
+            toolsToolStripMenuItem.Size = new Size(47, 20);
             toolsToolStripMenuItem.Text = "&Tools";
             // 
             // WOLFUI_TOOLITEM_OpenConfigEditor
             // 
             WOLFUI_TOOLITEM_OpenConfigEditor.Name = "WOLFUI_TOOLITEM_OpenConfigEditor";
-            WOLFUI_TOOLITEM_OpenConfigEditor.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_OpenConfigEditor.Size = new Size(183, 22);
             WOLFUI_TOOLITEM_OpenConfigEditor.Text = "Config Editor";
             WOLFUI_TOOLITEM_OpenConfigEditor.Click += WOLFUI_TOOLITEM_OpenConfigEditor_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(181, 6);
+            toolStripSeparator1.Size = new Size(180, 6);
             // 
             // loadGameToolStripMenuItem
             // 
             loadGameToolStripMenuItem.Name = "loadGameToolStripMenuItem";
             loadGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.L;
-            loadGameToolStripMenuItem.Size = new Size(184, 22);
+            loadGameToolStripMenuItem.Size = new Size(183, 22);
             loadGameToolStripMenuItem.Text = "&Load Game";
             loadGameToolStripMenuItem.Click += WOLFUI_TOOLITEM_LoadGame_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(181, 6);
+            toolStripSeparator2.Size = new Size(180, 6);
             // 
             // WOLFUI_TOOLITEM_Extract
             // 
             WOLFUI_TOOLITEM_Extract.Name = "WOLFUI_TOOLITEM_Extract";
             WOLFUI_TOOLITEM_Extract.ShortcutKeys = Keys.Control | Keys.E;
-            WOLFUI_TOOLITEM_Extract.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_Extract.Size = new Size(183, 22);
             WOLFUI_TOOLITEM_Extract.Text = "&Extract Game";
             WOLFUI_TOOLITEM_Extract.Click += WOLFUI_TOOLITEM_Extract_Click;
             // 
@@ -1333,39 +1595,39 @@ namespace WolfX
             // 
             WOLFUI_TOOLITEM_Pack.Name = "WOLFUI_TOOLITEM_Pack";
             WOLFUI_TOOLITEM_Pack.ShortcutKeys = Keys.Control | Keys.P;
-            WOLFUI_TOOLITEM_Pack.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_Pack.Size = new Size(183, 22);
             WOLFUI_TOOLITEM_Pack.Text = "&Pack Game";
             WOLFUI_TOOLITEM_Pack.Click += WOLFUI_TOOLITEM_Pack_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(181, 6);
+            toolStripSeparator3.Size = new Size(180, 6);
             // 
             // WOLFUI_TOOLITEM_SetPath
             // 
             WOLFUI_TOOLITEM_SetPath.Name = "WOLFUI_TOOLITEM_SetPath";
-            WOLFUI_TOOLITEM_SetPath.Size = new Size(184, 22);
+            WOLFUI_TOOLITEM_SetPath.Size = new Size(183, 22);
             WOLFUI_TOOLITEM_SetPath.Text = "Set Game Path";
             WOLFUI_TOOLITEM_SetPath.Click += WOLFUI_TOOLITEM_SetPath_Click;
             // 
             // Tools_Verify
             // 
             Tools_Verify.Name = "Tools_Verify";
-            Tools_Verify.Size = new Size(184, 22);
+            Tools_Verify.Size = new Size(183, 22);
             Tools_Verify.Text = "&Verify Extracted Files";
             Tools_Verify.Click += WOLFUI_TOOLITEM_VerifyFiles_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(181, 6);
+            toolStripSeparator4.Size = new Size(180, 6);
             // 
             // languageToolStripMenuItem
             // 
             languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Language_english, Language_french, Language_german, Language_italian, Language_japanese, Language_russian, Language_spanish });
             languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            languageToolStripMenuItem.Size = new Size(184, 22);
+            languageToolStripMenuItem.Size = new Size(183, 22);
             languageToolStripMenuItem.Text = "Language";
             // 
             // Language_english
@@ -1418,6 +1680,16 @@ namespace WolfX
             Language_spanish.Size = new Size(117, 22);
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
+            // 
+            // PDL_LV_LimitedCards
+            // 
+            PDL_LV_LimitedCards.Dock = DockStyle.Fill;
+            PDL_LV_LimitedCards.Location = new Point(3, 3);
+            PDL_LV_LimitedCards.Name = "PDL_LV_LimitedCards";
+            PDL_LV_LimitedCards.Size = new Size(621, 462);
+            PDL_LV_LimitedCards.TabIndex = 1;
+            PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
+            PDL_LV_LimitedCards.View = View.List;
             // 
             // WolfUI
             // 
@@ -1475,6 +1747,16 @@ namespace WolfX
             groupBox12.PerformLayout();
             groupBox13.ResumeLayout(false);
             groupBox13.PerformLayout();
+            Page_PDLimitsManager.ResumeLayout(false);
+            tabControl2.ResumeLayout(false);
+            PDL_ForbiddenCards.ResumeLayout(false);
+            PDL_LimitedCards.ResumeLayout(false);
+            groupBox15.ResumeLayout(false);
+            groupBox15.PerformLayout();
+            groupBox16.ResumeLayout(false);
+            groupBox16.PerformLayout();
+            groupBox17.ResumeLayout(false);
+            groupBox17.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             ResumeLayout(false);
@@ -1610,5 +1892,28 @@ namespace WolfX
         private ToolStripMenuItem WOLFUI_TOOLITEM_OpenConfigEditor;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripSeparator toolStripSeparator4;
+        private TabPage Page_PDLimitsManager;
+        private GroupBox groupBox15;
+        private CheckBox checkBox1;
+        public Button button1;
+        public Button button2;
+        private Button button3;
+        private GroupBox groupBox16;
+        private CheckBox checkBox2;
+        private Button button4;
+        private CheckBox checkBox3;
+        public Button button5;
+        private Button PDL_BTN_OpenPDL;
+        private GroupBox groupBox17;
+        private Label PDL_LBL_NumOfLimited;
+        private Label label19;
+        private Label PDL_LBL_NumOfForbidden;
+        private Label label21;
+        private Label label23;
+        private TabControl tabControl2;
+        private TabPage PDL_ForbiddenCards;
+        private ListView PDL_LV_ForbiddenCards;
+        private TabPage PDL_LimitedCards;
+        private ListView PDL_LV_LimitedCards;
     }
 }

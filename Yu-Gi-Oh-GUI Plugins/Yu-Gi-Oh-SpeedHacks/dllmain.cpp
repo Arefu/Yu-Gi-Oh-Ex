@@ -26,8 +26,11 @@ LARGE_INTEGER _QPC_OffsetTime;
 int speed = 2;
 bool speed_Enabled = true;
 bool no_anims = true;
+bool no_movies = true;
+
 bool detours_Enabled = false;
 long long AnimationHNDLE = 0x1407C1450;
+long long MovieHNDLE = 0x0140875DA0;
 
 DWORD WINAPI _hGetTickCount()
 {
@@ -54,6 +57,14 @@ __int64 __fastcall _hProcessAnimations(int a1, int a2, unsigned int a3, int a4)
 
 	auto result = ((int(__fastcall*)(int, int, unsigned int, int))AnimationHNDLE)(a1, a2, a3, a4);
 	return result;
+}
+
+void __fastcall sub_1407A3140(__int64 a1, const char* Movie)
+{
+	std::cout << a1 << std::endl;
+	std::cout << Movie << std::endl;
+
+	((void(__fastcall*)(__int64, const char*))MovieHNDLE)(a1, Movie);
 }
 
 void Undo_SpeedDetour()
@@ -86,7 +97,8 @@ void Setup_SpeedDetour()
 	DetourAttach(&(PVOID&)_QPC, _hQueryPerformanceCounter);
 	if (no_anims)
 		DetourAttach(&(PVOID&)AnimationHNDLE, _hProcessAnimations);
-
+	//if(no_movies)
+//		DetourAttach(&(PVOID&)MovieHNDLE, sub_1407A3140);
 	DetourTransactionCommit();
 
 	detours_Enabled = true;
@@ -173,9 +185,11 @@ extern "C" _declspec(dllexport) void ProcessConfig()
 {
 	speed = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "Speed", 2, ".\\Config.ini");
 	no_anims = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "NoAnimations", 1, ".\\Config.ini");
+	no_movies = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "NoMovies", 1, ".\\Config.ini");
 
 	std::cout << "[Yu-Gi-Oh-SpeedHacks] Speed: " << speed << std::endl;
 	std::cout << "[Yu-Gi-Oh-SpeedHacks] No Animations: " << (bool)no_anims << std::endl;
+	std::cout << "[Yu-Gi-Oh-SpeedHacks] No Movies: " << (bool)no_movies << std::endl;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
