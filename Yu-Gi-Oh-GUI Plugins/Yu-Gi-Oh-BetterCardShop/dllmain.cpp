@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <imgui_impl_dx11.h>
+#include <string>
 #include <imgui_impl_win32.h>
 #include <imgui.h>
 
@@ -7,6 +8,7 @@
 
 int BetterShop_Cost = 0;
 int Card = 0;
+
 
 extern "C" __declspec(dllexport) void SetContext(ImGuiContext* Context)
 {

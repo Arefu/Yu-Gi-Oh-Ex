@@ -1,37 +1,86 @@
-#include <Windows.h>
-#include <thread>
 #include <iostream>
+#include <queue>
 #include <string>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
+#include <atomic>
 #include <vector>
 
-#include "Yu-Gi-Oh-Ex.h"
+#include "conmanip.h"
+using namespace conmanip;
+console_out_context ctxout;
+console_out conout(ctxout);
 
-void ProcessInput()
+#define MODULE_NAME "Yu-Gi-Oh-Console"
+
+extern "C" __declspec(dllexport)
+void WriteLog(std::string Message, std::string Module, int LogLevel)
 {
-  
-    do
-    {
-		std::string Input;
-		std::getline(std::cin, Input);
-		if (Input == "quit")
-		{
-			YuGiOhEx::g_bIsQuitReady = true;
-		}
-		else
-		{
-			std::cout << "[Yu-Gi-Oh-Console]: Invalid Command!" << std::endl;
-		}
-		std::cout << "[Yu-Gi-Oh-Console]: ";
+	if (Module == "")
+        std::cout << settextcolor(console_text_colors::light_yellow) 
+        << "[" << MODULE_NAME << "]: " 
+        << settextcolor(console_text_colors::white) 
+        << "Doesn't Have An Owner Module! Please Set One!\n";
 
-    } while (!YuGiOhEx::g_bIsQuitReady);
+    switch (LogLevel)
+    {
+    case 0: //Informational.
+		std::cout << "[" << settextcolor(console_text_colors::light_blue) << Module  << settextcolor(console_text_colors::white) << "]: " << Message <<  "\r\n";
+        break;
+	case 1: //Warning.
+		std::cout << "[" << settextcolor(console_text_colors::light_yellow) << Module << settextcolor(console_text_colors::white) << "]: " << Message <<  "\r\n";
+		break;
+	case 2: //Error.
+		std::cout << "[" << settextcolor(console_text_colors::light_red) << Module << settextcolor(console_text_colors::white) << "]: " << Message <<  "\r\n";
+		break;
+	case 69: //Debug.
+		std::cout << "[";
+		for (int i = 0; i < Module.length(); i++)
+		{
+			switch (i % 7)
+			{
+			case 0:
+				std::cout << settextcolor(console_text_colors::red) << Module[i];
+				break;
+			case 1:
+				std::cout << settextcolor(console_text_colors::yellow) << Module[i];
+				break;
+			case 2:
+				std::cout << settextcolor(console_text_colors::green) << Module[i];
+				break;
+			case 3:
+				std::cout << settextcolor(console_text_colors::cyan) << Module[i];
+				break;
+			case 4:
+				std::cout << settextcolor(console_text_colors::blue) << Module[i];
+				break;
+			case 5:
+				std::cout << settextcolor(console_text_colors::magenta) << Module[i];
+				break;
+			case 6:
+				std::cout << settextcolor(console_text_colors::white) << Module[i];
+				break;
+			}
+		}
+		std::cout << settextcolor(console_text_colors::white) << "]: " << Message << "\r\n";
+		break;
+	default:
+		std::cout << "[" << settextcolor(console_text_colors::green) << Module << settextcolor(console_text_colors::white) << "]: " << Message << "\r\n";
+		break;
+    }
+    ctxout.restore(console_cleanup_options::restore_attibutes);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
+
+
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
         AllocConsole();
+
         FILE* consoleOut;
         freopen_s(&consoleOut, "CONOUT$", "w", stdout);
         freopen_s(&consoleOut, "CONOUT$", "w", stderr);
@@ -39,7 +88,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
         SetWindowText(GetConsoleWindow(), L"Yu-Gi-Oh! Console");
 
-        std::cout << "[Yu-Gi-Oh-Console]: Ready!" << std::endl;
+		WriteLog("Ready!", MODULE_NAME, 0);
 
       //  std::thread(ProcessInput).detach();
     case DLL_THREAD_ATTACH:

@@ -9,6 +9,18 @@
 #include "YGO_DuelSetup.h"
 #include "YGO_DuelUtility.h"
 
+#define MODULE_NAME "Yu-Gi-Oh-Tracer"
+void _WriteLog(std::string Message, std::string Module, int LogLevel) {}
+void (*WriteLog)(std::string Message, std::string Module, int LogLevel) = _WriteLog;
+void SetupLogger()
+{
+    WriteLog = (void (*)(std::string, std::string, int))GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-Console.dll"), "WriteLog");
+    if (WriteLog == nullptr)
+    {
+        WriteLog = _WriteLog;
+    }
+}
+
 std::vector<Trace> Tracer::Traces;
 
 void AddTrace();
@@ -46,11 +58,9 @@ void SetupTrace()
     DetourUpdateThread(GetCurrentThread());
     for (auto& _Trace : Tracer::Traces)
     {
-        std::cout << "[Yu-Gi-Oh-Tracer]: Tracing Execution Of: " << _Trace._Name << std::endl;
+        WriteLog("Tracing Execution Of : " + _Trace._Name, MODULE_NAME, 1);
         DetourAttach((PVOID*)&_Trace._Address, _Trace._Detour);
     }
 
 	DetourTransactionCommit();
-
-
 }

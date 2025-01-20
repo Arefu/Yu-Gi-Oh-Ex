@@ -1,3 +1,5 @@
+#include <string>
+
 #include "Yu-Gi-Oh-Ex.h"
 
 
@@ -30,7 +32,6 @@ vector<SHORT> Player::Get_CardsInHand()
 	}
 	return Cards;
 }
-
 
 INT Player::Get_NumberOfCardsInDeck()
 {

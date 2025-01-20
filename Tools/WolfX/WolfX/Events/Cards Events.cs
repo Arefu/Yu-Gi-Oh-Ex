@@ -49,6 +49,7 @@ namespace WolfX
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
+
         }
         private void CARDS_CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
         {
