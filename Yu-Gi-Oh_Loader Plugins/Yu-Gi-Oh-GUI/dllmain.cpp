@@ -67,6 +67,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		case VK_F8:
 			bShowDemo = !bShowDemo;
 		}
+
+	case WM_CLOSE:
+		YuGiOhEx::g_bIsQuitReady = true;
+		std::cout << "[Yu-Gi-Oh-GUI] Quitting Game" << std::endl;
+		break;
 	}
 
 	PluginManager::ProcessInput(hWnd, msg, wParam, lParam);

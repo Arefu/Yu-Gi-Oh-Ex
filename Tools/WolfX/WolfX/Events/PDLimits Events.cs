@@ -9,6 +9,9 @@ namespace WolfX
     {
         private void PDL_BTN_OpenPDL_Click(object sender, EventArgs e)
         {
+            PDL_LV_ForbiddenCards.Items.Clear();
+            PDL_LV_LimitedCards.Items.Clear();
+            PDL_LV_SemiLimitedCards.Items.Clear();
             var Images = new ImageList();
             if (PDL_CB_LoadImages.Checked)
             {
@@ -18,23 +21,15 @@ namespace WolfX
 
                 PDL_LV_LimitedCards.View = View.LargeIcon;
                 PDL_LV_LimitedCards.LargeImageList = Images;
+
+                PDL_LV_SemiLimitedCards.View = View.LargeIcon;
+                PDL_LV_SemiLimitedCards.LargeImageList = Images;
             }
 
             var Limits = "-1";
             if (State.Path == null || State.Path == "")
             {
-                var OFD = new OpenFileDialog();
-                OFD.Title = "Select PDLimits.bin";
-                OFD.Filter = "pd_limits.bin|pd_limits.bin";
-                if (OFD.ShowDialog() == DialogResult.OK)
-                {
-                    Limits = OFD.FileName;
-                }
-                else
-                {
-                    MessageBox.Show("Please Select the PDLimits.bin", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                Limits = Utility.Get_UserSelectedPDLimitsFile();
             }
 
             if (Limits == "-1")
@@ -42,26 +37,48 @@ namespace WolfX
 
             PDLimits.PDLimits.Load(Limits);
 
-            var Forbidden = PDLimits.PDLimits.GetForbidden();
-            foreach (var i in Forbidden)
+            foreach (short i in PDLimits.PDLimits.GetForbidden())
             {
                 if (PDL_CB_LoadImages.Checked)
                     Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
-                PDL_LV_ForbiddenCards.Items.Add(i.ToString(), i.ToString());
+                if (!PDL_CB_UseCardID.Checked)
+                    PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
+                else
+                    PDL_LV_ForbiddenCards.Items.Add(i.ToString(), i.ToString());
             }
 
-            var Limited = PDLimits.PDLimits.GetLimited();
-            foreach (var i in Limited)
+            foreach (short i in PDLimits.PDLimits.GetLimited())
             {
                 if (PDL_CB_LoadImages.Checked)
                     Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
-                PDL_LV_LimitedCards.Items.Add(i.ToString(), i.ToString());
+                if (!PDL_CB_UseCardID.Checked)
+                    PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
+                else
+                    PDL_LV_LimitedCards.Items.Add(i.ToString(), i.ToString());
+            }
+
+            foreach (short i in PDLimits.PDLimits.GetSemiLimited())
+            {
+                if (PDL_CB_LoadImages.Checked)
+                    Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+
+                if (!PDL_CB_UseCardID.Checked)
+                    PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
+                else
+                    PDL_LV_SemiLimitedCards.Items.Add(i.ToString(), i.ToString());
             }
 
             PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
             PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
+            PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
+
+            PDL_BTN_SavePDL.Enabled = true;
+        }
+        private void PDL_BTN_SavePDL_Click(object sender, EventArgs e)
+        {
+            PDLimits.PDLimits.Save();
         }
 
         private void PDL_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
@@ -76,21 +93,9 @@ namespace WolfX
                 }
                 else
                 {
-                    using (var OpenDialog = new OpenFileDialog())
-                    {
-                        OpenDialog.Title = "Open ZIB Archive";
-                        OpenDialog.Filter = "ZIB Archive (*.zib)|*.zib";
-                        if (OpenDialog.ShowDialog() != DialogResult.OK)
-                        {
-                            MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                            return;
-                        }
-                        ZIB.Load(OpenDialog.FileName);
-                        PDL_LV_ForbiddenCards.View = View.LargeIcon;
-                        PDL_LV_LimitedCards.View = View.LargeIcon;
-                    }
-
+                    ZIB.Load(Utility.Get_UserSelectedZIBFile());
+                    PDL_LV_ForbiddenCards.View = View.LargeIcon;
+                    PDL_LV_LimitedCards.View = View.LargeIcon;
                 }
             }
             else
@@ -99,6 +104,58 @@ namespace WolfX
                 PDL_LV_LimitedCards.View = View.List;
             }
         }
+        private void PDL_CB_UseCardID_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PDL_CB_UseCardID.Checked == false)
+            {
+                if (State.Path != null)
+                {
+                    CARDS_Cards.Setup_CardBinder($"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language);
+                    CARDS_Cards.LoadCardInfo();
+                    CARDS_Cards.LoadCardProps();
+                }
+                else
+                {
+                    if (CARDS_Cards.Setup_CardBinder(Utility.Get_UserSelectedIndxFile(), (CARDS_INFO.CARD_Language)State.Language) == false)
+                    {
+                        MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
+                    CARDS_Cards.LoadCardInfo();
+                    CARDS_Cards.LoadCardProps();
+                }
+            }
+        }
+        private void PDL_LV_ItemSelectionChanged(object sender, EventArgs e)
+        {
+            if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0 || PDL_LV_LimitedCards.SelectedItems.Count > 0)
+                PDL_BTN_RemoveCardFromList.Enabled = true;
+            else
+                PDL_BTN_RemoveCardFromList.Enabled = false;
+        }
+
+        private void PDL_BTN_RemoveCardFromList_Click(object sender, EventArgs e)
+        {
+            if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem i in PDL_LV_ForbiddenCards.SelectedItems)
+                {
+                    PDLimits.PDLimits.Remove_CardFromForbidden(Convert.ToUInt16(i.ImageKey));
+                    PDL_LV_ForbiddenCards.Items.Remove(i);
+                    PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
+                }
+            }
+            else if (PDL_LV_LimitedCards.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem i in PDL_LV_LimitedCards.SelectedItems)
+                {
+                    PDLimits.PDLimits.Remove_CardFromLimited(Convert.ToUInt16(i.ImageKey));
+                    PDL_LV_LimitedCards.Items.Remove(i);
+                    PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
+                }
+            }
+        } 
     }
+
 }

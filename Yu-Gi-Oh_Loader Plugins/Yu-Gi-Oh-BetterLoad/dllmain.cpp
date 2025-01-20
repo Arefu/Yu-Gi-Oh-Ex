@@ -46,14 +46,13 @@ errno_t __cdecl hooked_fopen_s(FILE** file, const char* filename, const char* mo
 	return original_fopen_s(file, filename, mode);
 }
 
-
-
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	HMODULE stdio = GetModuleHandleA("api-ms-win-crt-stdio-l1-1-0.dll.dll");
 	original_fopen = (fopen_t)GetProcAddress(stdio, "fopen");
 	original_fopen_s = (fopen_s_t)GetProcAddress(stdio, "fopen_s");
 	original_fread = (fread_t)GetProcAddress(stdio, "fread");
+
 
 	switch (ul_reason_for_call)
 	{
@@ -66,7 +65,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourAttach(&(PVOID&)LoadArchive, _hLoadArchive);
 		DetourAttach(&(PVOID&)original_fopen, hooked_fopen);
 		DetourAttach(&(PVOID&)original_fopen_s, hooked_fopen_s);
-		
+
 		if (GetPrivateProfileIntA("Yu-Gi-Oh-BetterLoad", "AllowMultiInstance", 0, ".\\Config.ini") == 1)
 			DetourAttach(&(PVOID&)pCreateMutex, HookCreateMutex);
 		
