@@ -36,6 +36,11 @@ namespace WolfX
         {
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
+            groupBox18 = new GroupBox();
+            CARDS_TB_SecondProp = new TextBox();
+            label20 = new Label();
+            CARDS_TB_FirstProp = new TextBox();
+            label15 = new Label();
             groupBox6 = new GroupBox();
             CARDS_BTN_CloseBinder = new Button();
             CARDS_BTN_OpenCards = new Button();
@@ -158,6 +163,8 @@ namespace WolfX
             PDL_BTN_SavePDL = new Button();
             PDL_BTN_OpenPDL = new Button();
             groupBox17 = new GroupBox();
+            PDL_LBL_NumOfSemiLimited = new Label();
+            label17 = new Label();
             PDL_LBL_NumOfLimited = new Label();
             label19 = new Label();
             PDL_LBL_NumOfForbidden = new Label();
@@ -183,10 +190,9 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            PDL_LBL_NumOfSemiLimited = new Label();
-            label17 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
+            groupBox18.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).BeginInit();
@@ -244,6 +250,7 @@ namespace WolfX
             // 
             // Page_CardManager
             // 
+            Page_CardManager.Controls.Add(groupBox18);
             Page_CardManager.Controls.Add(groupBox6);
             Page_CardManager.Controls.Add(groupBox2);
             Page_CardManager.Controls.Add(groupBox1);
@@ -254,6 +261,53 @@ namespace WolfX
             Page_CardManager.TabIndex = 0;
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox18
+            // 
+            groupBox18.Controls.Add(CARDS_TB_SecondProp);
+            groupBox18.Controls.Add(label20);
+            groupBox18.Controls.Add(CARDS_TB_FirstProp);
+            groupBox18.Controls.Add(label15);
+            groupBox18.Location = new Point(334, 409);
+            groupBox18.Name = "groupBox18";
+            groupBox18.Size = new Size(303, 202);
+            groupBox18.TabIndex = 6;
+            groupBox18.TabStop = false;
+            groupBox18.Text = "Test Bed";
+            // 
+            // CARDS_TB_SecondProp
+            // 
+            CARDS_TB_SecondProp.Location = new Point(6, 98);
+            CARDS_TB_SecondProp.Name = "CARDS_TB_SecondProp";
+            CARDS_TB_SecondProp.ReadOnly = true;
+            CARDS_TB_SecondProp.Size = new Size(242, 23);
+            CARDS_TB_SecondProp.TabIndex = 3;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(6, 80);
+            label20.Name = "label20";
+            label20.Size = new Size(72, 15);
+            label20.TabIndex = 2;
+            label20.Text = "FIRST PROP:";
+            // 
+            // CARDS_TB_FirstProp
+            // 
+            CARDS_TB_FirstProp.Location = new Point(6, 43);
+            CARDS_TB_FirstProp.Name = "CARDS_TB_FirstProp";
+            CARDS_TB_FirstProp.ReadOnly = true;
+            CARDS_TB_FirstProp.Size = new Size(242, 23);
+            CARDS_TB_FirstProp.TabIndex = 1;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(6, 25);
+            label15.Name = "label15";
+            label15.Size = new Size(72, 15);
+            label15.TabIndex = 0;
+            label15.Text = "FIRST PROP:";
             // 
             // groupBox6
             // 
@@ -1331,8 +1385,8 @@ namespace WolfX
             // tabControl2
             // 
             tabControl2.Controls.Add(PDL_ForbiddenCards);
-            tabControl2.Controls.Add(PDL_LimitedCards);
             tabControl2.Controls.Add(PDL_SemiLimitedCards);
+            tabControl2.Controls.Add(PDL_LimitedCards);
             tabControl2.Location = new Point(8, 112);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
@@ -1359,7 +1413,7 @@ namespace WolfX
             PDL_LV_ForbiddenCards.TabIndex = 0;
             PDL_LV_ForbiddenCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_ForbiddenCards.View = View.List;
-            PDL_LV_ForbiddenCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
+            PDL_LV_ForbiddenCards.SelectedIndexChanged += this.PDL_LV_ItemSelectionChanged;
             // 
             // PDL_LimitedCards
             // 
@@ -1381,7 +1435,7 @@ namespace WolfX
             PDL_LV_LimitedCards.TabIndex = 1;
             PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_LimitedCards.View = View.List;
-            PDL_LV_LimitedCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
+            PDL_LV_LimitedCards.SelectedIndexChanged += this.PDL_LV_ItemSelectionChanged;
             // 
             // PDL_SemiLimitedCards
             // 
@@ -1530,6 +1584,24 @@ namespace WolfX
             groupBox17.TabIndex = 12;
             groupBox17.TabStop = false;
             groupBox17.Text = "Limited/Forbidden Information";
+            // 
+            // PDL_LBL_NumOfSemiLimited
+            // 
+            PDL_LBL_NumOfSemiLimited.AutoSize = true;
+            PDL_LBL_NumOfSemiLimited.Location = new Point(92, 81);
+            PDL_LBL_NumOfSemiLimited.Name = "PDL_LBL_NumOfSemiLimited";
+            PDL_LBL_NumOfSemiLimited.Size = new Size(13, 15);
+            PDL_LBL_NumOfSemiLimited.TabIndex = 7;
+            PDL_LBL_NumOfSemiLimited.Text = "0";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(7, 81);
+            label17.Name = "label17";
+            label17.Size = new Size(79, 15);
+            label17.TabIndex = 6;
+            label17.Text = "Semi Limited:";
             // 
             // PDL_LBL_NumOfLimited
             // 
@@ -1714,24 +1786,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // PDL_LBL_NumOfSemiLimited
-            // 
-            PDL_LBL_NumOfSemiLimited.AutoSize = true;
-            PDL_LBL_NumOfSemiLimited.Location = new Point(92, 81);
-            PDL_LBL_NumOfSemiLimited.Name = "PDL_LBL_NumOfSemiLimited";
-            PDL_LBL_NumOfSemiLimited.Size = new Size(13, 15);
-            PDL_LBL_NumOfSemiLimited.TabIndex = 7;
-            PDL_LBL_NumOfSemiLimited.Text = "0";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(7, 81);
-            label17.Name = "label17";
-            label17.Size = new Size(79, 15);
-            label17.TabIndex = 6;
-            label17.Text = "Semi Limited:";
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1747,6 +1801,8 @@ namespace WolfX
             Text = "WolfX";
             WolfX_TabManager.ResumeLayout(false);
             Page_CardManager.ResumeLayout(false);
+            groupBox18.ResumeLayout(false);
+            groupBox18.PerformLayout();
             groupBox6.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
@@ -1960,5 +2016,10 @@ namespace WolfX
         private ListView PDL_LV_SemiLimitedCards;
         private Label PDL_LBL_NumOfSemiLimited;
         private Label label17;
+        private GroupBox groupBox18;
+        private TextBox CARDS_TB_FirstProp;
+        private Label label15;
+        private TextBox CARDS_TB_SecondProp;
+        private Label label20;
     }
 }

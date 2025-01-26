@@ -71,7 +71,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 	case WM_CLOSE:
 		YuGiOhEx::g_bIsQuitReady = true;
-		std::cout << "[Yu-Gi-Oh-GUI] Quitting Game" << std::endl;
 		break;
 	}
 

@@ -8,39 +8,17 @@ namespace WolfX
     {
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
-            using var OpenFile = new OpenFileDialog();
-            OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
-            OpenFile.Title = "Open Cards Indx File";
-            OpenFile.Multiselect = false;
-            OpenFile.InitialDirectory = State.Path;
-            var Res = OpenFile.ShowDialog();
-            if (Res != DialogResult.OK)
-            {
-                MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
-            {
-                MessageBox.Show("Please Select a Cards Indx File", "Incorrect File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (CARDS_Cards.Setup_CardBinder(OpenFile.FileName) == false)
+            var File = Utility.Get_UserSelectedIndxFile();
+            if (CARDS_Cards.Setup_CardBinder(File) == false)
             {
                 MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            OpenFile.Filter = "ZIB Archive|*.zib";
-            OpenFile.Title = "Open Cards Image Archive";
-            Res = OpenFile.ShowDialog();
-            if (Res != DialogResult.OK)
-            {
-                MessageBox.Show("Please Select a Cards Image Archive", "No Cards Image Archive Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            File = Utility.Get_UserSelectedZIBFile();
 
-            ZIB.Load(OpenFile.FileName);
+
+            ZIB.Load(File);
 
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
@@ -65,7 +43,10 @@ namespace WolfX
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
 
-            if(SelectedCard.Attack == -1 && SelectedCard.Defense == -1)
+            CARDS_TB_FirstProp.Text = SelectedCard.First.ToString();
+            CARDS_TB_SecondProp.Text = SelectedCard.Second.ToString();
+
+            if (SelectedCard.Attack == -1 && SelectedCard.Defense == -1)
             {
                 TB_CardAtk.Text = "?";
                 TB_CardDef.Text = "?";
@@ -96,6 +77,8 @@ namespace WolfX
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
 
+            CARDS_TB_FirstProp.Text = SelectedCard.First.ToString();
+            CARDS_TB_SecondProp.Text = SelectedCard.Second.ToString();
             if (SelectedCard.Attack == -1 && SelectedCard.Defense == -1)
             {
                 TB_CardAtk.Text = "?";
