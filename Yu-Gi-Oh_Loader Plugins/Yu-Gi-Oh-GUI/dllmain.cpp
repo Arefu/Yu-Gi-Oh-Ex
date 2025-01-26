@@ -59,14 +59,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		{
 		case VK_F1:
 			bShowMenu = !bShowMenu;
-			if(bShowMenu)
+			if (bShowMenu)
 				std::cout << "[Yu-Gi-Oh-GUI] Menu Opened" << std::endl;
 			else
 				std::cout << "[Yu-Gi-Oh-GUI] Menu Closed" << std::endl;
 			break;
 		case VK_F8:
 			bShowDemo = !bShowDemo;
-		}
+			break;
+		}break;
 
 	case WM_CLOSE:
 		YuGiOhEx::g_bIsQuitReady = true;
