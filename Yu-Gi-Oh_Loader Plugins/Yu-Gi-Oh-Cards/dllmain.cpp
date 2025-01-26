@@ -1,11 +1,17 @@
 #include <Windows.h>
 #include <string>
 
+#include "Targets.h"
+#include <iostream>
+
 #include "detours.h"
+
+#include "Memory.h"
+#include "Cards.h"
 
 //Yu-Gi-Oh-Console Requirements.
 #define MODULE_NAME "Yu-Gi-Oh-MoreCards"
-void _WriteLog(std::string Message, std::string Module, int LogLevel){}
+void _WriteLog(std::string Message, std::string Module, int LogLevel) {}
 void (*WriteLog)(std::string Message, std::string Module, int LogLevel) = _WriteLog;
 void SetupLogger()
 {
@@ -16,31 +22,48 @@ void SetupLogger()
 	}
 }
 
-//Functions We're Hooking.
-//uintptr_t _14076D0F0 = 0x14076D0F0;
-uintptr_t _1407CA820 = 0x1407CA820;
-uintptr_t _14076D070 = 0x14076D070;
-uintptr_t _14076D480 = 0x14076D5B0;
-uintptr_t _14081A080 = 0x14081A080;
+uint16_t Cards::INTERNAL_IDs[11072];
+uint16_t Cards::CARD_IDs[11072];
 
-//Function Definitions For Hooked Functions.
 
-BOOL __fastcall Get_IsCardIDValid(__int16 a1)
+void* __cdecl MemoryCopy(void* dest_str, const void* Src, size_t Size)
 {
-	bool result = ((bool(__fastcall*)(__int16))_1407CA820)(a1);
+	
+	if (reinterpret_cast<uintptr_t>(dest_str) == 0x140D55480)
+	{
+		dest_str = reinterpret_cast<void*>(&Cards::INTERNAL_IDs);
+		
+		for (int i = 3900; i < 14969; i++)
+		{
+			auto ID = Cards::Get_InternalID(i);
+			Cards::CARD_IDs[ID] = i;
+		}
+	}
+
+	auto result = reinterpret_cast<void* (__cdecl*)(void*, const void*, size_t)>(MemCopy)(dest_str, Src, Size);
 	return result;
 }
-LPCTSTR* __fastcall Get_CardDescFromID(__int16 a1)
+
+void SetupJumpCalls()
 {
-	LPCTSTR* result = ((LPCTSTR * (__fastcall*)(__int16))_14076D070)(a1);
-	return result;
+	//Internal IDs.
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D11E), 0x140D55480, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D09E), 0x140D55480, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D44B), 0x140D55480, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D4B5), 0x140D55480, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D5D8), 0x140D55480, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D668), 0x140D55480, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D6B8), 0x140D55480, true);
+	WriteLog("Jump Calls Setup.", MODULE_NAME, 0);
 }
 
-
-__int64 __fastcall sub_14076D5B0(__int16 a1)
+void SetInternalIDTombstone()
 {
-	auto result = ((__int64(__fastcall*)(unsigned __int16))_14076D480)(a1);
-	return result;
+	DWORD oldProtect;
+	VirtualProtect(reinterpret_cast<void*>(0x140D55480), 64, PAGE_EXECUTE_READWRITE, &oldProtect);
+
+	Memory::EmplaceMOV(reinterpret_cast<void*>(0x140D55480), reinterpret_cast<uintptr_t>(&Cards::INTERNAL_IDs), false);
+	Memory::EmplaceRET(reinterpret_cast<void*>(0x140D55480 + 10), false);
 }
 
 
@@ -50,23 +73,24 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 	{
 	case DLL_PROCESS_ATTACH:
 		SetupLogger();
+		SetupJumpCalls();
+		SetInternalIDTombstone();
 
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
+		DetourAttach(&(PVOID&)MemCopy, MemoryCopy);
 
-		DetourAttach(&(PVOID&)_1407CA820, Get_IsCardIDValid);
-		DetourAttach(&(PVOID&)_14076D070, Get_CardDescFromID);
+		DetourAttach(&(PVOID&)_Get_InternalID, Cards::Get_InternalID);
+		DetourAttach(&(PVOID&)_GetCardID, Cards::Get_CardID);
+
 
 		DetourTransactionCommit();
-	
+
 		WriteLog("It's Time To Du-Du-Du-Duel!.", MODULE_NAME, 0);
-		SetupLogger();
+
 		break;
-	case DLL_THREAD_ATTACH:
-	case DLL_THREAD_DETACH:
-	case DLL_PROCESS_DETACH:
-		break;
+
 	}
 	return TRUE;
 }
