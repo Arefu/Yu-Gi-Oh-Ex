@@ -4,6 +4,8 @@
 #include <fstream>
 #include <detours.h>
 
+#include "Logger.h"
+
 uintptr_t LoadArchive = 0x14080D3D0;
 uintptr_t te = 0x140766F70;
 
@@ -12,7 +14,7 @@ bool AllowMultiInstance = false;
 auto _Archive = new CHAR[MAX_PATH];
 __int64 __fastcall _hLoadArchive(__int64* Struct, const char* Archive)
 {
-	std::cout << "[Yu-Gi-Oh-BetterLoad]: Loading Archive: " << _Archive << std::endl;
+	Logger::WriteLog("Loading Archive: " + std::string(Archive), MODULE_NAME, 0);
 
 	return ((int(__fastcall*)(__int64*, const char*))LoadArchive)(Struct, _Archive);
 }
@@ -34,15 +36,14 @@ fread_t original_fread = nullptr;
 
 FILE* __cdecl hooked_fopen(const char* filename, const char* mode)
 {
-	std::cout << "[Yu-Gi-Oh-BetterLoad] Requested file (fopen): " << filename << std::endl;
+	Logger::WriteLog("Requested file (fopen): " + std::string(filename), MODULE_NAME, 0);
 	
 	return original_fopen(filename, mode);
 }
 
 errno_t __cdecl hooked_fopen_s(FILE** file, const char* filename, const char* mode)
 {
-	std::cout << "[Yu-Gi-Oh-BetterLoad] Requested file (fopen_s): " << filename << std::endl;
-
+Logger::WriteLog("Requested file (fopen_s): " + std::string(filename), MODULE_NAME, 0);
 	return original_fopen_s(file, filename, mode);
 }
 

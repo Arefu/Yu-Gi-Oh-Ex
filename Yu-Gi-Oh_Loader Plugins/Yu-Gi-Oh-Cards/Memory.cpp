@@ -1,9 +1,12 @@
 #include "Memory.h"
-#include <Windows.h>
 #include <cstdint>
+#include <iomanip>
 #include <iostream>
 #include <string>
-#include <iomanip>
+#include <Windows.h>
+
+#include "Cards.h"
+#include "Targets.h"
 
 bool Memory::PatchBytes(void* address, const uint8_t* values, size_t size, bool Protected) {
 	DWORD oldProtect;
@@ -39,8 +42,69 @@ bool Memory::EmplaceCALL(void* targetAddress, uintptr_t callAddress, bool Protec
     return PatchBytes(targetAddress, callOpCode, sizeof(callOpCode), Protected);
 }
 
-bool Memory::EmplaceMOV(void* targetAddress, uintptr_t value, bool Protected) {
-    uint8_t movOpCode[10] = { 0x48, 0xB9 };
+bool Memory::EmplaceMOV(void* targetAddress, uintptr_t value, X64Register reg, bool Protected) {
+    uint8_t movOpCode[10] = { 0 };
+
+    if (static_cast<int>(reg) >= static_cast<int>(X64Register::R8)) {
+        movOpCode[0] = 0x49;  
+    }
+    else {
+        movOpCode[0] = 0x48;  
+    }
+
+    switch (reg) {
+    case X64Register::RAX:
+        movOpCode[1] = 0xB8;
+        break;
+    case X64Register::RCX:
+        movOpCode[1] = 0xB9; 
+        break;
+    case X64Register::RDX:
+        movOpCode[1] = 0xBA;
+        break;
+    case X64Register::RBX:
+        movOpCode[1] = 0xBB; 
+        break;
+    case X64Register::RSP:
+        movOpCode[1] = 0xBC;
+        break;
+    case X64Register::RBP:
+        movOpCode[1] = 0xBD; 
+        break;
+    case X64Register::RSI:
+        movOpCode[1] = 0xBE; 
+        break;
+    case X64Register::RDI:
+        movOpCode[1] = 0xBF;
+        break;
+    case X64Register::R8:
+        movOpCode[1] = 0xB8;
+        break;
+    case X64Register::R9:
+        movOpCode[1] = 0xB9;
+        break;
+    case X64Register::R10:
+        movOpCode[1] = 0xBA;
+        break;
+    case X64Register::R11:
+        movOpCode[1] = 0xBB; 
+        break;
+    case X64Register::R12:
+        movOpCode[1] = 0xBC;
+        break;
+    case X64Register::R13:
+        movOpCode[1] = 0xBD; 
+        break;
+    case X64Register::R14:
+        movOpCode[1] = 0xBE; 
+        break;
+    case X64Register::R15:
+        movOpCode[1] = 0xBF; 
+        break;
+    default:
+        return false;
+    }
+
     *reinterpret_cast<uint64_t*>(&movOpCode[2]) = value;
 
     return PatchBytes(targetAddress, movOpCode, sizeof(movOpCode), Protected);
@@ -49,4 +113,23 @@ bool Memory::EmplaceMOV(void* targetAddress, uintptr_t value, bool Protected) {
 bool Memory::EmplaceRET(void* targetAddress, bool Protected) {
     uint8_t retOpCode = 0xC3; 
     return PatchBytes(targetAddress, &retOpCode, sizeof(retOpCode),  Protected);
+}
+
+
+void* __cdecl Memory::_H_MEMCPY(void* dest_str, const void* Src, size_t Size)
+{
+
+    if (reinterpret_cast<uintptr_t>(dest_str) == 0x140D55480)
+    {
+        dest_str = reinterpret_cast<void*>(&Cards::INTERNAL_IDs);
+
+        for (int i = 3900; i < 14969; i++)
+        {
+            auto ID = Cards::Get_InternalID(i);
+            Cards::CARD_IDs[ID] = i;
+        }
+    }
+
+    auto result = reinterpret_cast<void* (__cdecl*)(void*, const void*, size_t)>(ORIGINAL_MEMCPY)(dest_str, Src, Size);
+    return result;
 }

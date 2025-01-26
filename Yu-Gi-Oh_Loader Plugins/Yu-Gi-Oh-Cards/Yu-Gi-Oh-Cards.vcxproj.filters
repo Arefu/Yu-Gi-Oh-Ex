@@ -19,16 +19,31 @@
     <Filter Include="Header Files\Cards">
       <UniqueIdentifier>{8c1431da-e3a1-4c60-a21a-4fcdce0c0710}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Patchers">
+      <UniqueIdentifier>{69b3fb57-92f5-4a28-84e3-2c0289284257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Patchers">
+      <UniqueIdentifier>{1ff85139-733f-4948-9109-070fd62a609b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Memory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Cards.cpp">
       <Filter>Source Files\Cards</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Source Files\Patchers</Filter>
+    </ClCompile>
+    <ClCompile Include="Patcher.cpp">
+      <Filter>Source Files\Patchers</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Targets.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,14 +52,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Memory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Targets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cards.h">
       <Filter>Header Files\Cards</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Header Files\Patchers</Filter>
+    </ClInclude>
+    <ClInclude Include="Patcher.h">
+      <Filter>Header Files\Patchers</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -50,10 +50,12 @@ namespace Types
         public CARDS_INFO.CARD_Attribute Attribute;
         public CARDS_INFO.CARD_Type Type;
 
-        public BitVector32 PROP;
+        public BitVector32 First;
+        public BitVector32 Second;
+
     }
 
-    public static class CARDS_Cards
+        public static class CARDS_Cards
     {
         public static string? CARD_Indx_File;
         public static string? CARD_Name_File;
@@ -166,7 +168,7 @@ namespace Types
 
                 var CardId = BitVector32.CreateSection(16383);
                 var CardAtk = BitVector32.CreateSection(511, CardId);
-                var QuadCardDef = BitVector32.CreateSection(511, CardAtk);
+                var CardDef = BitVector32.CreateSection(511, CardAtk);
 
                 var SecondQuadUnk = BitVector32.CreateSection(1);
                 var Kind = BitVector32.CreateSection(63, SecondQuadUnk);
@@ -181,7 +183,7 @@ namespace Types
                 Card.Name = Names[NameOffset];
                 Card.Desc = Descs[DescOffset];
                 Card.Attack = (First[CardAtk] * 10);
-                Card.Defense = (First[QuadCardDef] * 10);
+                Card.Defense = (First[CardDef] * 10);
 
                 if(Card.Attack == 5110)
                     Card.Attack = -1;
@@ -194,7 +196,8 @@ namespace Types
                 Card.PEND_Scale1 = (byte)Second[LeftScale];
                 Card.PEND_Scale2 = (byte)Second[RightScale];
 
-                Card.PROP = First;
+                Card.First = First;
+                Card.Second = Second;
 
                 Cards.Add(Card);
             } while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
@@ -298,7 +301,7 @@ namespace Types
         {
             if (Cards.Count == 0)
                 return 0;
-            return (short)Cards.Find(x => x.ID == ID).PROP.Data;
+            return (short)Cards.Find(x => x.ID == ID).First.Data;
         }
         #endregion
 
