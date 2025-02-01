@@ -17,6 +17,7 @@ namespace WolfX.WolfX.File_Type_UI
         public Card_Changer()
         { 
             InitializeComponent();
+            this.Text = "Card Replacer (Full)";
         }
 
         
