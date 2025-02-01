@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            label1 = new Label();
-            CARDREP_LBL_CurrentCardDesc = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            CARDREP_TB_CurrentCardName = new TextBox();
-            pictureBox1 = new PictureBox();
             groupBox2 = new GroupBox();
             label2 = new Label();
             CARDREP_BTN_UpdateCard = new Button();
@@ -43,76 +36,9 @@
             CARDREP_LBL_NewCardDesc = new Label();
             CARDREP_CB_NewCardSelector = new ComboBox();
             CARDREP_PB_NewCardImage = new PictureBox();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CARDREP_PB_NewCardImage).BeginInit();
             SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(CARDREP_LBL_CurrentCardDesc);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(CARDREP_TB_CurrentCardName);
-            groupBox1.Controls.Add(pictureBox1);
-            groupBox1.Dock = DockStyle.Left;
-            groupBox1.Location = new Point(0, 0);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(310, 441);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Current Card";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(93, 410);
-            label1.Name = "label1";
-            label1.Size = new Size(12, 15);
-            label1.TabIndex = 5;
-            label1.Text = "/";
-            // 
-            // CARDREP_LBL_CurrentCardDesc
-            // 
-            CARDREP_LBL_CurrentCardDesc.AutoSize = true;
-            CARDREP_LBL_CurrentCardDesc.Location = new Point(12, 182);
-            CARDREP_LBL_CurrentCardDesc.Name = "CARDREP_LBL_CurrentCardDesc";
-            CARDREP_LBL_CurrentCardDesc.Size = new Size(38, 15);
-            CARDREP_LBL_CurrentCardDesc.TabIndex = 4;
-            CARDREP_LBL_CurrentCardDesc.Text = "label1";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(111, 406);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(75, 23);
-            textBox3.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(12, 406);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(75, 23);
-            textBox2.TabIndex = 2;
-            // 
-            // CARDREP_TB_CurrentCardName
-            // 
-            CARDREP_TB_CurrentCardName.Location = new Point(12, 22);
-            CARDREP_TB_CurrentCardName.Name = "CARDREP_TB_CurrentCardName";
-            CARDREP_TB_CurrentCardName.Size = new Size(292, 23);
-            CARDREP_TB_CurrentCardName.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(12, 51);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(292, 128);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -123,8 +49,7 @@
             groupBox2.Controls.Add(CARDREP_LBL_NewCardDesc);
             groupBox2.Controls.Add(CARDREP_CB_NewCardSelector);
             groupBox2.Controls.Add(CARDREP_PB_NewCardImage);
-            groupBox2.Dock = DockStyle.Right;
-            groupBox2.Location = new Point(314, 0);
+            groupBox2.Location = new Point(-1, 0);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(310, 441);
             groupBox2.TabIndex = 1;
@@ -199,18 +124,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(624, 441);
+            ClientSize = new Size(304, 441);
             Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Card_Changer";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Deck Editor - Card Replacer";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CARDREP_PB_NewCardImage).EndInit();
@@ -218,21 +139,13 @@
         }
 
         #endregion
-
-        private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private Label CARDREP_LBL_CurrentCardDesc;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox CARDREP_TB_CurrentCardName;
-        private PictureBox pictureBox1;
         private Label CARDREP_LBL_NewCardDesc;
         private ComboBox CARDREP_CB_NewCardSelector;
         private PictureBox CARDREP_PB_NewCardImage;
         private Button CARDREP_BTN_UpdateCard;
         private TextBox CARDREP_TB_DEF;
         private TextBox CARDREP_TB_ATK;
-        private Label label1;
         private Label label2;
     }
 }
