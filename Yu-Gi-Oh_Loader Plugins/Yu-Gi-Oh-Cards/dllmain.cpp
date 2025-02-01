@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include <iostream>
 
 #include "detours.h"
 #include "Cards.h"
@@ -9,7 +10,7 @@
 
 uint16_t Cards::INTERNAL_IDs[];
 uint16_t Cards::CARD_IDs[];
-Cards::MEMORY_CARD_PROP Cards::_MemoryCardProps[];
+Cards::MEMORY_CARD_PROP Cards::CARD_PROPS[];
 
 
 
@@ -39,28 +40,8 @@ void SetupTombstones()
 	Logger::WriteLog("Tombstone Set.", MODULE_NAME, 0);
 }
 
-uintptr_t _Get_CardProp = 0x1407CAB30;
-Cards::MEMORY_CARD_PROP* __fastcall Get_CardProp(unsigned int a1)
-{
-	Cards::MEMORY_CARD_PROP* result;
-	if (a1 > 10166)
-	{
-		result = nullptr;
-	}
-	else
-	{
-		result = &Cards::_MemoryCardProps[a1];
-	}
 
-	return result;
-}
-
-__int64 __fastcall Free_CardLoadingResources(__int64 a1)
-{
-	memcpy(&Cards::_MemoryCardProps, reinterpret_cast<void*>(0x1427D0C30), 10166 * sizeof(Cards::MEMORY_CARD_PROP));
-	
-	return reinterpret_cast<__int64(__fastcall*)(__int64)>(_Free_CardLoadingResources)(a1);
-}
+uintptr_t _Get_CardProps = 0x1407CAB30;
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
@@ -71,17 +52,18 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		SetupJumpCalls();
 		SetupTombstones();
 
-
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(&(PVOID&)ORIGINAL_MEMCPY, Memory::_H_MEMCPY);
 
+		DetourAttach(&(PVOID&)_Get_CardProps, Cards::Get_CardProps);
 		DetourAttach(&(PVOID&)_Get_InternalID, Cards::Get_InternalID);
 		DetourAttach(&(PVOID&)_Get_CardID, Cards::Get_CardID);
-		DetourAttach(&(PVOID&)_Get_CardProp, Get_CardProp);
-		DetourAttach(&(PVOID&)_Free_CardLoadingResources, Free_CardLoadingResources);
 
+		std::cout << "Card ID: " << &Cards::CARD_IDs << std::endl;
+		std::cout << "Internal ID: " << &Cards::INTERNAL_IDs << std::endl;
+		std::cout << "Card Props: " << &Cards::CARD_PROPS << std::endl;
 		DetourTransactionCommit();
 
 		Logger::WriteLog("It's Time To Du-Du-Du-Duel!.", MODULE_NAME, 0);

@@ -34,9 +34,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="WolfX\Events\Cards Events.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="WolfX\Events\Cards Events.cs" />
     <Compile Update="WolfX\Events\Strings Events.cs">
       <SubType>Form</SubType>
     </Compile>

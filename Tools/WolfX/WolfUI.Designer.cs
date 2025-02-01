@@ -37,10 +37,8 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox18 = new GroupBox();
-            CARDS_TB_SecondProp = new TextBox();
-            label20 = new Label();
-            CARDS_TB_FirstProp = new TextBox();
-            label15 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             groupBox6 = new GroupBox();
             CARDS_BTN_CloseBinder = new Button();
             CARDS_BTN_OpenCards = new Button();
@@ -148,10 +146,10 @@ namespace WolfX
             tabControl2 = new TabControl();
             PDL_ForbiddenCards = new TabPage();
             PDL_LV_ForbiddenCards = new ListView();
-            PDL_LimitedCards = new TabPage();
-            PDL_LV_LimitedCards = new ListView();
             PDL_SemiLimitedCards = new TabPage();
             PDL_LV_SemiLimitedCards = new ListView();
+            PDL_LimitedCards = new TabPage();
+            PDL_LV_LimitedCards = new ListView();
             groupBox15 = new GroupBox();
             checkBox1 = new CheckBox();
             button1 = new Button();
@@ -224,8 +222,8 @@ namespace WolfX
             Page_PDLimitsManager.SuspendLayout();
             tabControl2.SuspendLayout();
             PDL_ForbiddenCards.SuspendLayout();
-            PDL_LimitedCards.SuspendLayout();
             PDL_SemiLimitedCards.SuspendLayout();
+            PDL_LimitedCards.SuspendLayout();
             groupBox15.SuspendLayout();
             groupBox16.SuspendLayout();
             groupBox17.SuspendLayout();
@@ -264,10 +262,8 @@ namespace WolfX
             // 
             // groupBox18
             // 
-            groupBox18.Controls.Add(CARDS_TB_SecondProp);
-            groupBox18.Controls.Add(label20);
-            groupBox18.Controls.Add(CARDS_TB_FirstProp);
-            groupBox18.Controls.Add(label15);
+            groupBox18.Controls.Add(textBox2);
+            groupBox18.Controls.Add(textBox1);
             groupBox18.Location = new Point(334, 409);
             groupBox18.Name = "groupBox18";
             groupBox18.Size = new Size(303, 202);
@@ -275,39 +271,19 @@ namespace WolfX
             groupBox18.TabStop = false;
             groupBox18.Text = "Test Bed";
             // 
-            // CARDS_TB_SecondProp
+            // textBox2
             // 
-            CARDS_TB_SecondProp.Location = new Point(6, 98);
-            CARDS_TB_SecondProp.Name = "CARDS_TB_SecondProp";
-            CARDS_TB_SecondProp.ReadOnly = true;
-            CARDS_TB_SecondProp.Size = new Size(242, 23);
-            CARDS_TB_SecondProp.TabIndex = 3;
+            textBox2.Location = new Point(32, 68);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(265, 23);
+            textBox2.TabIndex = 1;
             // 
-            // label20
+            // textBox1
             // 
-            label20.AutoSize = true;
-            label20.Location = new Point(6, 80);
-            label20.Name = "label20";
-            label20.Size = new Size(72, 15);
-            label20.TabIndex = 2;
-            label20.Text = "FIRST PROP:";
-            // 
-            // CARDS_TB_FirstProp
-            // 
-            CARDS_TB_FirstProp.Location = new Point(6, 43);
-            CARDS_TB_FirstProp.Name = "CARDS_TB_FirstProp";
-            CARDS_TB_FirstProp.ReadOnly = true;
-            CARDS_TB_FirstProp.Size = new Size(242, 23);
-            CARDS_TB_FirstProp.TabIndex = 1;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(6, 25);
-            label15.Name = "label15";
-            label15.Size = new Size(72, 15);
-            label15.TabIndex = 0;
-            label15.Text = "FIRST PROP:";
+            textBox1.Location = new Point(32, 29);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(265, 23);
+            textBox1.TabIndex = 0;
             // 
             // groupBox6
             // 
@@ -1139,6 +1115,7 @@ namespace WolfX
             YDC_BTN_ReplaceCard.TabIndex = 5;
             YDC_BTN_ReplaceCard.Text = "Replace";
             YDC_BTN_ReplaceCard.UseVisualStyleBackColor = true;
+            YDC_BTN_ReplaceCard.Click += YDC_BTN_ReplaceCard_Click;
             // 
             // YDC_BTN_RemoveCard
             // 
@@ -1413,7 +1390,27 @@ namespace WolfX
             PDL_LV_ForbiddenCards.TabIndex = 0;
             PDL_LV_ForbiddenCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_ForbiddenCards.View = View.List;
-            PDL_LV_ForbiddenCards.SelectedIndexChanged += this.PDL_LV_ItemSelectionChanged;
+            PDL_LV_ForbiddenCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
+            // 
+            // PDL_SemiLimitedCards
+            // 
+            PDL_SemiLimitedCards.Controls.Add(PDL_LV_SemiLimitedCards);
+            PDL_SemiLimitedCards.Location = new Point(4, 24);
+            PDL_SemiLimitedCards.Name = "PDL_SemiLimitedCards";
+            PDL_SemiLimitedCards.Size = new Size(627, 468);
+            PDL_SemiLimitedCards.TabIndex = 2;
+            PDL_SemiLimitedCards.Text = "Semi-Limited";
+            PDL_SemiLimitedCards.UseVisualStyleBackColor = true;
+            // 
+            // PDL_LV_SemiLimitedCards
+            // 
+            PDL_LV_SemiLimitedCards.Dock = DockStyle.Fill;
+            PDL_LV_SemiLimitedCards.Location = new Point(0, 0);
+            PDL_LV_SemiLimitedCards.Name = "PDL_LV_SemiLimitedCards";
+            PDL_LV_SemiLimitedCards.Size = new Size(627, 468);
+            PDL_LV_SemiLimitedCards.TabIndex = 1;
+            PDL_LV_SemiLimitedCards.UseCompatibleStateImageBehavior = false;
+            PDL_LV_SemiLimitedCards.View = View.List;
             // 
             // PDL_LimitedCards
             // 
@@ -1435,27 +1432,7 @@ namespace WolfX
             PDL_LV_LimitedCards.TabIndex = 1;
             PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_LimitedCards.View = View.List;
-            PDL_LV_LimitedCards.SelectedIndexChanged += this.PDL_LV_ItemSelectionChanged;
-            // 
-            // PDL_SemiLimitedCards
-            // 
-            PDL_SemiLimitedCards.Controls.Add(PDL_LV_SemiLimitedCards);
-            PDL_SemiLimitedCards.Location = new Point(4, 24);
-            PDL_SemiLimitedCards.Name = "PDL_SemiLimitedCards";
-            PDL_SemiLimitedCards.Size = new Size(627, 468);
-            PDL_SemiLimitedCards.TabIndex = 2;
-            PDL_SemiLimitedCards.Text = "Semi-Limited";
-            PDL_SemiLimitedCards.UseVisualStyleBackColor = true;
-            // 
-            // PDL_LV_SemiLimitedCards
-            // 
-            PDL_LV_SemiLimitedCards.Dock = DockStyle.Fill;
-            PDL_LV_SemiLimitedCards.Location = new Point(0, 0);
-            PDL_LV_SemiLimitedCards.Name = "PDL_LV_SemiLimitedCards";
-            PDL_LV_SemiLimitedCards.Size = new Size(627, 468);
-            PDL_LV_SemiLimitedCards.TabIndex = 1;
-            PDL_LV_SemiLimitedCards.UseCompatibleStateImageBehavior = false;
-            PDL_LV_SemiLimitedCards.View = View.List;
+            PDL_LV_LimitedCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
             // 
             // groupBox15
             // 
@@ -1847,8 +1824,8 @@ namespace WolfX
             Page_PDLimitsManager.ResumeLayout(false);
             tabControl2.ResumeLayout(false);
             PDL_ForbiddenCards.ResumeLayout(false);
-            PDL_LimitedCards.ResumeLayout(false);
             PDL_SemiLimitedCards.ResumeLayout(false);
+            PDL_LimitedCards.ResumeLayout(false);
             groupBox15.ResumeLayout(false);
             groupBox15.PerformLayout();
             groupBox16.ResumeLayout(false);
@@ -2017,9 +1994,7 @@ namespace WolfX
         private Label PDL_LBL_NumOfSemiLimited;
         private Label label17;
         private GroupBox groupBox18;
-        private TextBox CARDS_TB_FirstProp;
-        private Label label15;
-        private TextBox CARDS_TB_SecondProp;
-        private Label label20;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }

@@ -44,6 +44,10 @@ namespace Types
         public int Level;
         public int ID;
 
+        public int Ico;
+        public int Kind;
+        public int SecondUnk;
+
         public byte PEND_Scale1;
         public byte PEND_Scale2;
 
@@ -66,6 +70,11 @@ namespace Types
         public static BinaryReader? NameReader;
         public static BinaryReader? DescReader;
         public static BinaryReader? PropReader;
+
+        public static BinaryWriter? IndxWriter;
+        public static BinaryWriter? NameWriter;
+        public static BinaryWriter? DescWriter;
+        public static BinaryWriter? PropWriter;
 
         public static bool Ready = false;
 
@@ -179,6 +188,8 @@ namespace Types
                 var LeftScale = BitVector32.CreateSection(15, Type);
                 var RightScale = BitVector32.CreateSection(15, LeftScale);
 
+                Card.SecondUnk = Second[SecondQuadUnk];
+
                 Card.ID = (short)First[CardId];
                 Card.Name = Names[NameOffset];
                 Card.Desc = Descs[DescOffset];
@@ -190,8 +201,11 @@ namespace Types
                 if (Card.Defense == 5110)
                     Card.Defense = -1;
 
-                Card.Level = (byte)Second[MonsterLevel];
+            
+                Card.Kind = Second[Kind];
                 Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
+                Card.Level = (byte)Second[MonsterLevel];
+                Card.Ico = Second[Ico];
                 Card.Type = (CARDS_INFO.CARD_Type)Second[Kind];
                 Card.PEND_Scale1 = (byte)Second[LeftScale];
                 Card.PEND_Scale2 = (byte)Second[RightScale];
@@ -217,28 +231,92 @@ namespace Types
             DescWriter.BaseStream.Position = 0x4;
 
             bool FirstPass = true;
-            //Write the Name and Desc Files
+
+            PropWriter = new BinaryWriter(File.Open("CARD_Prop.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
             foreach (var Card in Cards)
             {
-                NameWriter.Write(Encoding.Unicode.GetBytes(Card.Name ));
-                DescWriter.Write(Encoding.Unicode.GetBytes(Card.Desc ));
-                IndxWriter.Write(NameWriter.BaseStream.Position);
-                IndxWriter.Write(DescWriter.BaseStream.Position);
+                BitVector32 bit1 = new BitVector32(Card.First);
+                BitVector32.Section bit1_mrk = BitVector32.CreateSection(16383);// offset 0, mask 16383 (0x3FFF)
+                BitVector32.Section bit1_attack = BitVector32.CreateSection(511, bit1_mrk);// offset 14, mask 511 (0x1FF)
+                BitVector32.Section bit1_defence = BitVector32.CreateSection(511, bit1_attack);// offset 23, mask 511 (0x1FF)
+                                                                                               // All bits used
 
-                NameWriter.Write('\0');
+                BitVector32 bit2 = new BitVector32(Card.Second);
+                BitVector32.Section bit2_exist = BitVector32.CreateSection(1);// offset 0, mask 1 (0x1)
+                BitVector32.Section bit2_kind = BitVector32.CreateSection(63, bit2_exist);// offset 1, mask 63 (0x3F)
+                BitVector32.Section bit2_attr = BitVector32.CreateSection(15, bit2_kind);// offset 7, mask 15 (0xF)
+                BitVector32.Section bit2_level = BitVector32.CreateSection(15, bit2_attr);// offset 11, mask 15 (0xF)
+                BitVector32.Section bit2_icon = BitVector32.CreateSection(7, bit2_level);// offset 15, mask 7 (0x7)
+                BitVector32.Section bit2_type = BitVector32.CreateSection(31, bit2_icon);// offset 18, mask 31 (0x1F)
+                BitVector32.Section bit2_scaleL = BitVector32.CreateSection(15, bit2_type);// offset 23, mask 15 (0xF)
+                BitVector32.Section bit2_scaleR = BitVector32.CreateSection(15, bit2_scaleL);// offset 27, mask 15 (0xF)
 
-                if(FirstPass)
-                {
-                    NameWriter.BaseStream.Position += 0x4;
-                    DescWriter.BaseStream.Position += 0x4;
-                    FirstPass = false;
-                }
+                BitVector32.Section bit2_unused = BitVector32.CreateSection(1, bit2_scaleR);// offset 31, mask 1
+
+                bit1[bit1_mrk] = Card.ID;
+                bit1[bit1_attack] = Card.Attack / 10;
+                bit1[bit1_defence] = Card.Defense / 10;
+
+                bit2[bit2_exist] = Card.SecondUnk;
+                bit2[bit2_kind] = Card.Kind;
+                bit2[bit2_attr] = (int)Card.Attribute;
+                bit2[bit2_level] = Card.Level;
+                bit2[bit2_icon] = Card.Ico;
+                bit2[bit2_type] = (int)Card.Type;
+                bit2[bit2_scaleL] = Card.PEND_Scale1;
+                bit2[bit2_scaleR] = Card.PEND_Scale2;
+                bit2[bit2_unused] = 0;
+
+                PropWriter.Write((uint)bit1.Data);
+                PropWriter.Write((uint)bit2.Data);
             }
         }
 
         public static void SaveCardProps()
         {
+            if (Ready != true)
+                return;
 
+            using var PropWriter = new BinaryWriter(File.Open("CARD_Prop.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
+            PropWriter.BaseStream.Position = 0x0;
+
+            foreach (var Card in Cards)
+            {
+                var First = new BitVector32();
+                var Second = new BitVector32();
+
+                var CardId = BitVector32.CreateSection(16383);
+                var CardAtk = BitVector32.CreateSection(511, CardId);
+                var CardDef = BitVector32.CreateSection(511, CardAtk);
+
+                var SecondQuadUnk = BitVector32.CreateSection(1);
+                var Kind = BitVector32.CreateSection(63, SecondQuadUnk);
+                var Attribute = BitVector32.CreateSection(15, Kind);
+                var MonsterLevel = BitVector32.CreateSection(15, Attribute);
+                var Ico = BitVector32.CreateSection(7, MonsterLevel);
+                var Type = BitVector32.CreateSection(31, Ico);
+                var LeftScale = BitVector32.CreateSection(15, Type);
+                var RightScale = BitVector32.CreateSection(15, LeftScale);
+                var bit2_unused = BitVector32.CreateSection(1, RightScale);
+                // Populate First
+                First[CardId] = Card.ID;
+                First[CardAtk] = Card.Attack / 10;
+                First[CardDef] = Card.Defense / 10;
+
+                // Populate Second
+                Second[SecondQuadUnk] = Card.SecondUnk;
+                Second[Kind] = (int)Card.Type;
+                Second[Attribute] = (int)Card.Attribute;
+                Second[MonsterLevel] = Card.Level;
+                Second[Ico] = Card.Ico;
+                Second[Type] = (int)Card.Type;
+                Second[LeftScale] = Card.PEND_Scale1;
+                Second[RightScale] = Card.PEND_Scale2;
+                Second[bit2_unused] = 0;
+                // Write to file
+                PropWriter.Write((uint)First.Data);
+                PropWriter.Write((uint)Second.Data);
+            }
         }
 
         #region Card Getters

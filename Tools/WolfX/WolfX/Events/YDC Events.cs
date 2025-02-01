@@ -7,6 +7,8 @@ namespace WolfX
 {
     public partial class WolfUI
     {
+        Card_Changer C = new Card_Changer();
+
         private void YDC_BTN_OpenDeck_Click(object sender, EventArgs e)
         {
             var Images = new ImageList();
@@ -121,9 +123,6 @@ namespace WolfX
 
         private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
         {
-            Card_Changer C = new Card_Changer();
-
-
             if (State.Path == null && YDC_CHKBOX_LoadPictures.Checked == true)
             {
                 using (var OpenDialog = new OpenFileDialog())
@@ -140,7 +139,8 @@ namespace WolfX
             }
             else
             {
-                C.LoadCards((CARDS_INFO.CARD_Language)State.Language, State.Path);
+                if(C.HasLoaded == false)
+                    C.LoadCards((CARDS_INFO.CARD_Language)State.Language, State.Path);
             }
 
             if (C.ShowDialog() == DialogResult.OK)
@@ -161,6 +161,23 @@ namespace WolfX
                 }
             }
         }
+        private void YDC_BTN_ReplaceCard_Click(object sender, EventArgs e)
+        {
+            if(YDC_LV_MainDeckCards.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("No Card Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (YDC_CB_UseSimpleEditor.Checked)
+            { }
+
+            if (State.Path != null && State.Path != String.Empty)
+            {
+                C.LoadCards((CARDS_INFO.CARD_Language)State.Language, State.Path);
+            }
+            C.ShowDialog();
+        }
 
         private void YDC_BTN_RemoveCard_Click(object sender, EventArgs e)
         {
@@ -170,6 +187,8 @@ namespace WolfX
                 return;
             }
             YDC_LV_MainDeckCards.Items.Remove(YDC_LV_MainDeckCards.SelectedItems[0]);
+
+            YDC_LBL_NumOfCardInMain.Text = YDC_LV_MainDeckCards.Items.Count.ToString();
         }
     }
 }

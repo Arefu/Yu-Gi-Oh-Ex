@@ -22,10 +22,14 @@ public:
 		int Field_13;
 	};
 
-	static uint16_t INTERNAL_IDs[11072];
-	static uint16_t CARD_IDs[10168];
-	static MEMORY_CARD_PROP _MemoryCardProps[0xFFFFF];
+	static uint16_t INTERNAL_IDs[0xFFFFF];
+	static uint16_t CARD_IDs[0xFFFFF];
+	static MEMORY_CARD_PROP CARD_PROPS[0xFFFFF];
 
 	static __int64 __fastcall Get_InternalID(__int16 a1);
 	static __int64 __fastcall Get_CardID(__int16 a1);
+
+	static MEMORY_CARD_PROP* __fastcall Get_CardProps(unsigned int a1);
+
+private:
 };

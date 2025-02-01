@@ -13,13 +13,16 @@ namespace WolfX.WolfX.File_Type_UI
 {
     public partial class Card_Changer : Form
     {
+       public bool HasLoaded = false;
         public Card_Changer()
-        {
+        { 
             InitializeComponent();
         }
 
+        
         public void LoadCards(CARDS_INFO.CARD_Language Language, string Path)
         {
+            HasLoaded = true;
             if (Path == null || Path.Length == 0)
             {
                 using (var OpenFile = new OpenFileDialog())
@@ -62,7 +65,7 @@ namespace WolfX.WolfX.File_Type_UI
             var ID = CARDS_Cards.Cards.Where(Card => Card.Name == CARDREP_CB_NewCardSelector.Text).First();
             if (ID != null && ID.ID != 0)
             {
-                CARDREP_PB_NewCardImage.Image = Image.FromStream(ZIB.Get_CardImageFromDefaultArchiveByYDCID(ID.ID.ToString()));
+                
             }
 
             CARDREP_TB_ATK.Text = ID.Attack.ToString();

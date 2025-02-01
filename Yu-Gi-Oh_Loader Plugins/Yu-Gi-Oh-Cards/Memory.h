@@ -5,6 +5,8 @@
 static class Memory
 {
 public:
+
+
     enum class X64Register : uint8_t {
         RAX = 0x00, 
         RCX = 0x01, 
@@ -30,7 +32,7 @@ public:
 	static bool EmplaceCALL(void* targetAddress, uintptr_t callAddress, bool Protected);
     static bool EmplaceMOV(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
     static bool EmplaceRET(void* targetAddress, bool Protected);
-
+	static bool EmplaceCMP(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
     static void* _H_MEMCPY(void* dest_str, const void* Src, size_t Size);
     
 private:
