@@ -168,6 +168,7 @@ namespace WolfX
             PDL_LBL_NumOfForbidden = new Label();
             label21 = new Label();
             label23 = new Label();
+            Page_CardShopManager = new TabPage();
             MenuBar = new MenuStrip();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_OpenConfigEditor = new ToolStripMenuItem();
@@ -188,6 +189,15 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            groupBox19 = new GroupBox();
+            label15 = new Label();
+            label20 = new Label();
+            label27 = new Label();
+            label22 = new Label();
+            label24 = new Label();
+            groupBox20 = new GroupBox();
+            button2 = new Button();
+            PACKDEF_BTN_OpenPackDEF = new Button();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -227,7 +237,10 @@ namespace WolfX
             groupBox15.SuspendLayout();
             groupBox16.SuspendLayout();
             groupBox17.SuspendLayout();
+            Page_CardShopManager.SuspendLayout();
             MenuBar.SuspendLayout();
+            groupBox19.SuspendLayout();
+            groupBox20.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -239,6 +252,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_BNDManager);
             WolfX_TabManager.Controls.Add(Page_YDCManager);
             WolfX_TabManager.Controls.Add(Page_PDLimitsManager);
+            WolfX_TabManager.Controls.Add(Page_CardShopManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -1624,6 +1638,18 @@ namespace WolfX
             label23.Size = new Size(0, 15);
             label23.TabIndex = 0;
             // 
+            // Page_CardShopManager
+            // 
+            Page_CardShopManager.Controls.Add(groupBox20);
+            Page_CardShopManager.Controls.Add(groupBox19);
+            Page_CardShopManager.Location = new Point(4, 24);
+            Page_CardShopManager.Name = "Page_CardShopManager";
+            Page_CardShopManager.Padding = new Padding(3);
+            Page_CardShopManager.Size = new Size(651, 619);
+            Page_CardShopManager.TabIndex = 7;
+            Page_CardShopManager.Text = "Card Shop Manager";
+            Page_CardShopManager.UseVisualStyleBackColor = true;
+            // 
             // MenuBar
             // 
             MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
@@ -1763,6 +1789,95 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // groupBox19
+            // 
+            groupBox19.Controls.Add(label24);
+            groupBox19.Controls.Add(label22);
+            groupBox19.Controls.Add(label15);
+            groupBox19.Controls.Add(label20);
+            groupBox19.Controls.Add(label27);
+            groupBox19.Location = new Point(8, 6);
+            groupBox19.Name = "groupBox19";
+            groupBox19.Size = new Size(200, 100);
+            groupBox19.TabIndex = 13;
+            groupBox19.TabStop = false;
+            groupBox19.Text = "Series Information";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(133, 19);
+            label15.Name = "label15";
+            label15.Size = new Size(13, 15);
+            label15.TabIndex = 7;
+            label15.Text = "0";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(6, 19);
+            label20.Name = "label20";
+            label20.Size = new Size(121, 15);
+            label20.TabIndex = 6;
+            label20.Text = "Number of Chapters: ";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(7, 40);
+            label27.Name = "label27";
+            label27.Size = new Size(0, 15);
+            label27.TabIndex = 0;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(7, 40);
+            label22.Name = "label22";
+            label22.Size = new Size(103, 15);
+            label22.TabIndex = 8;
+            label22.Text = "Number of Stores:";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(133, 40);
+            label24.Name = "label24";
+            label24.Size = new Size(13, 15);
+            label24.TabIndex = 9;
+            label24.Text = "0";
+            // 
+            // groupBox20
+            // 
+            groupBox20.Controls.Add(button2);
+            groupBox20.Controls.Add(PACKDEF_BTN_OpenPackDEF);
+            groupBox20.Location = new Point(214, 6);
+            groupBox20.Name = "groupBox20";
+            groupBox20.Size = new Size(200, 100);
+            groupBox20.TabIndex = 14;
+            groupBox20.TabStop = false;
+            groupBox20.Text = "Pack Def File Handler";
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.Location = new Point(122, 22);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 25);
+            button2.TabIndex = 4;
+            button2.Text = "Save ";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // PACKDEF_BTN_OpenPackDEF
+            // 
+            PACKDEF_BTN_OpenPackDEF.Location = new Point(6, 22);
+            PACKDEF_BTN_OpenPackDEF.Name = "PACKDEF_BTN_OpenPackDEF";
+            PACKDEF_BTN_OpenPackDEF.Size = new Size(72, 25);
+            PACKDEF_BTN_OpenPackDEF.TabIndex = 2;
+            PACKDEF_BTN_OpenPackDEF.Text = "Open ";
+            PACKDEF_BTN_OpenPackDEF.UseVisualStyleBackColor = true;
+            PACKDEF_BTN_OpenPackDEF.Click += PACKDEF_BTN_OpenPackDEF_Click;
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1832,8 +1947,12 @@ namespace WolfX
             groupBox16.PerformLayout();
             groupBox17.ResumeLayout(false);
             groupBox17.PerformLayout();
+            Page_CardShopManager.ResumeLayout(false);
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
+            groupBox19.ResumeLayout(false);
+            groupBox19.PerformLayout();
+            groupBox20.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1996,5 +2115,17 @@ namespace WolfX
         private GroupBox groupBox18;
         private TextBox textBox2;
         private TextBox textBox1;
+        private TabPage Page_CardShopManager;
+        private GroupBox groupBox20;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        public Button button2;
+        private Button PACKDEF_BTN_OpenPackDEF;
+        private GroupBox groupBox19;
+        private Label label24;
+        private Label label22;
+        private Label label15;
+        private Label label20;
+        private Label label27;
     }
 }

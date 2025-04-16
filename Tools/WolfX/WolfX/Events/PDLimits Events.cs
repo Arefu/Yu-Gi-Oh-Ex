@@ -29,7 +29,7 @@ namespace WolfX
             var Limits = "-1";
             if (State.Path == null || State.Path == "")
             {
-                Limits = Utility.Get_UserSelectedPDLimitsFile();
+                Limits = Utility.Get_UserSelectedFile("Select PDLimits.bin", "pd_limits.bin|pd_limits.bin");
             }
 
             if (Limits == "-1")
@@ -93,7 +93,7 @@ namespace WolfX
                 }
                 else
                 {
-                    ZIB.Load(Utility.Get_UserSelectedZIBFile());
+                    ZIB.Load(Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib"));
                     PDL_LV_ForbiddenCards.View = View.LargeIcon;
                     PDL_LV_LimitedCards.View = View.LargeIcon;
                 }
@@ -116,7 +116,7 @@ namespace WolfX
                 }
                 else
                 {
-                    if (CARDS_Cards.Setup_CardBinder(Utility.Get_UserSelectedIndxFile(), (CARDS_INFO.CARD_Language)State.Language) == false)
+                    if (CARDS_Cards.Setup_CardBinder(Utility.Get_UserSelectedFile($"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin", "Open Cards Indx File"), (CARDS_INFO.CARD_Language)State.Language) == false)
                     {
                         MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
