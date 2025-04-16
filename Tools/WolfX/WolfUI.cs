@@ -24,6 +24,6 @@ namespace WolfX
             Config.ShowDialog();
         }
 
-   
+       
     }
 }

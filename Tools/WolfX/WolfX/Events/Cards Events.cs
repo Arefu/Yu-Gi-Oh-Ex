@@ -10,7 +10,7 @@ namespace WolfX
         {
             var File = String.Empty;
             if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedIndxFile();
+                File = Utility.Get_UserSelectedFile($"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin", "Open Cards Indx File");
             else
                 File = $"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin";
 
@@ -21,7 +21,7 @@ namespace WolfX
             }
 
             if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedZIBFile();
+                File = Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib");
             else
                 File = $"{State.Path}\\2020.full.illust_j.jpg.zib";
 

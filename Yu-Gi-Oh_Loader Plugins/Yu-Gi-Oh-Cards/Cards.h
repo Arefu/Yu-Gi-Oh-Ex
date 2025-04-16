@@ -2,6 +2,7 @@
 
 #include <Windows.h>
 #include <cstdint>
+#include <vector>
 
 class Cards
 {
@@ -21,15 +22,18 @@ public:
 		int Field_12;
 		int Field_13;
 	};
+	
+	 std::vector<uint16_t> _CARD_IDs;
+	 std::vector<uint16_t> _INTERNAL_IDs;
+	 std::vector<MEMORY_CARD_PROP> _CARD_PROPS;
 
-	static uint16_t INTERNAL_IDs[0xFFFFF];
-	static uint16_t CARD_IDs[0xFFFFF];
-	static MEMORY_CARD_PROP CARD_PROPS[0xFFFFF];
 
+	static MEMORY_CARD_PROP* __fastcall Get_CardProps(unsigned int a1);
 	static __int64 __fastcall Get_InternalID(__int16 a1);
 	static __int64 __fastcall Get_CardID(__int16 a1);
 
-	static MEMORY_CARD_PROP* __fastcall Get_CardProps(unsigned int a1);
+	static __int64 Setup_CardPropTable();
+
 
 private:
 };

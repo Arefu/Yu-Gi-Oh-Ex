@@ -158,12 +158,12 @@ void* __cdecl Memory::_H_MEMCPY(void* dest_str, const void* Src, size_t Size)
 
 	if (reinterpret_cast<uintptr_t>(dest_str) == 0x140D55480)
 	{
-		dest_str = reinterpret_cast<void*>(&Cards::INTERNAL_IDs);
+		dest_str = reinterpret_cast<void*>(&Cards::_INTERNAL_IDs);
 
 		for (int i = 3900; i < 14969; i++)
 		{
 			auto ID = Cards::Get_InternalID(i);
-			Cards::CARD_IDs[ID] = i;
+			Cards::_CARD_IDs[ID] = i;
 		}
 	}
 

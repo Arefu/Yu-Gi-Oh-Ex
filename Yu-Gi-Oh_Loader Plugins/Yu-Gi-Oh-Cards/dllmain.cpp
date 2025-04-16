@@ -1,18 +1,12 @@
 #include <Windows.h>
 #include <iostream>
+#include <format>
 
 #include "detours.h"
 #include "Cards.h"
 #include "Logger.h"
 #include "Memory.h"
 #include "Targets.h"
-
-
-uint16_t Cards::INTERNAL_IDs[];
-uint16_t Cards::CARD_IDs[];
-Cards::MEMORY_CARD_PROP Cards::CARD_PROPS[];
-
-
 
 void SetupJumpCalls()
 {
@@ -35,35 +29,44 @@ void SetupTombstones()
 
 	Memory::EmplaceMOV(reinterpret_cast<void*>(0x140D55480), reinterpret_cast<uintptr_t>(&Cards::INTERNAL_IDs), Memory::X64Register::RCX, false);
 	Memory::EmplaceRET(reinterpret_cast<void*>(0x140D55480 + 10), false);
-
 	
 	Logger::WriteLog("Tombstone Set.", MODULE_NAME, 0);
 }
 
+void SetupLimitBreaks()
+{
+	Memory::PatchBytes(reinterpret_cast<void*>(0x14076D6C5), reinterpret_cast<const uint8_t*>("\xFF\xFF"), 2, true);
 
-uintptr_t _Get_CardProps = 0x1407CAB30;
+	Logger::WriteLog("Limit Breaks Set.", MODULE_NAME, 0);
+}
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
+		DetourRestoreAfterWith();
+
 		Logger::SetupLogger();
 		SetupJumpCalls();
 		SetupTombstones();
+	//	SetupLimitBreaks();
 
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(&(PVOID&)ORIGINAL_MEMCPY, Memory::_H_MEMCPY);
 
-		DetourAttach(&(PVOID&)_Get_CardProps, Cards::Get_CardProps);
+	//	DetourAttach(&(PVOID&)_Setup_CardPropTable, Cards::Setup_CardPropTable);
+
 		DetourAttach(&(PVOID&)_Get_InternalID, Cards::Get_InternalID);
+	//	DetourAttach(&(PVOID&)_Get_CardProps, Cards::Get_CardProps);
 		DetourAttach(&(PVOID&)_Get_CardID, Cards::Get_CardID);
 
-		std::cout << "Card ID: " << &Cards::CARD_IDs << std::endl;
-		std::cout << "Internal ID: " << &Cards::INTERNAL_IDs << std::endl;
-		std::cout << "Card Props: " << &Cards::CARD_PROPS << std::endl;
+		//Logger::WriteLog("Loading Card IDs From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::CARD_IDs)), MODULE_NAME, 0);
+		//Logger::WriteLog("Loading Internal IDs From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::INTERNAL_IDs)), MODULE_NAME, 0);
+		//Logger::WriteLog("Loading Card Properties From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::CARD_PROPS)), MODULE_NAME, 0);
+
 		DetourTransactionCommit();
 
 		Logger::WriteLog("It's Time To Du-Du-Du-Duel!.", MODULE_NAME, 0);

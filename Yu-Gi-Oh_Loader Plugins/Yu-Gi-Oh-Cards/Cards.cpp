@@ -1,36 +1,44 @@
 #include <Windows.h>
 #include <iostream>
+#include <vector>
+#include <cstring>
 
+#include "Targets.h"
 #include "Cards.h"
+
+std::vector<Cards::MEMORY_CARD_PROP> Cards::_CARD_PROPS;
+bool PropCopied = false;
 
 __int64 __fastcall Cards::Get_InternalID(__int16 a1)
 {
 	a1 = a1 - 3900;
-	if(a1 == 0xFFAF)
-		std::cout << "special case" << std::endl;
-	return Cards::INTERNAL_IDs[a1];
+	return Cards::_INTERNAL_IDs.at(a1);
 }
 
 __int64 __fastcall Cards::Get_CardID(__int16 a1)
 {
 	a1 = a1 - 3900;
-	if (a1 == 0xFFAF)
-		std::cout << "special case" << std::endl;
-	return Cards::CARD_IDs[a1];
+	return Cards::_CARD_IDs.at(a1);
 }
 
-
-bool PropCopied = false;
 Cards::MEMORY_CARD_PROP* __fastcall Cards::Get_CardProps(unsigned int a1)
 {
 	if (PropCopied == false)
 	{
-		std::cout << "Copying Props" << std::endl;
-		memcpy(&Cards::CARD_PROPS, reinterpret_cast<void*>(0x1427D0C30), 487920);
+		// Copy 487920 bytes from 0x1427D0C30 to _CARD_PROPS.
+		void* source = reinterpret_cast<void*>(0x1427D0C30);
+		_CARD_PROPS.resize(487920 / sizeof(MEMORY_CARD_PROP));
+		std::memcpy(_CARD_PROPS.data(), source, 487920);
+
 		PropCopied = true;
-		std::cout << &Cards::CARD_PROPS << std::endl;
 	}
 
+	return &Cards::_CARD_PROPS.at(a1);
+}
 
-	return &Cards::CARD_PROPS[a1];
+__int64 Cards::Setup_CardPropTable()
+{
+	// Call Original Function
+	__int64 result = reinterpret_cast<__int64(__fastcall*)()>(_Setup_CardPropTable)();
+	return result;
 }
