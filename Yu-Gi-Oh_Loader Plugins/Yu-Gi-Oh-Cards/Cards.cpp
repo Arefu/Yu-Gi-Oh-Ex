@@ -6,19 +6,18 @@
 #include "Targets.h"
 #include "Cards.h"
 
-std::vector<Cards::MEMORY_CARD_PROP> Cards::_CARD_PROPS;
 bool PropCopied = false;
 
 __int64 __fastcall Cards::Get_InternalID(__int16 a1)
 {
 	a1 = a1 - 3900;
-	return Cards::_INTERNAL_IDs.at(a1);
+	return Cards::_INTERNAL_IDs[a1];
 }
 
 __int64 __fastcall Cards::Get_CardID(__int16 a1)
 {
 	a1 = a1 - 3900;
-	return Cards::_CARD_IDs.at(a1);
+	return Cards::_CARD_IDs[a1];
 }
 
 Cards::MEMORY_CARD_PROP* __fastcall Cards::Get_CardProps(unsigned int a1)

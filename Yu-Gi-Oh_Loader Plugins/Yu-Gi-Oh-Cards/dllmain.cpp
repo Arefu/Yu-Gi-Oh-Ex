@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <iostream>
+#include <vector>
 #include <format>
 
 #include "detours.h"
@@ -7,6 +8,10 @@
 #include "Logger.h"
 #include "Memory.h"
 #include "Targets.h"
+
+uint16_t Cards::_INTERNAL_IDs[11072];
+uint16_t Cards::_CARD_IDs[10168];
+std::vector<Cards::MEMORY_CARD_PROP> Cards::_CARD_PROPS;
 
 void SetupJumpCalls()
 {
@@ -18,17 +23,12 @@ void SetupJumpCalls()
 	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D5D8), 0x140D55480, true);
 	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D668), 0x140D55480, true);
 	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D6B8), 0x140D55480, true);
-
+	
 	Logger::WriteLog("Jump Calls Setup.", MODULE_NAME, 0);
 }
 
 void SetupTombstones()
 {
-	DWORD oldProtect;
-	VirtualProtect(reinterpret_cast<void*>(0x140D55480), 64, PAGE_EXECUTE_READWRITE, &oldProtect);
-
-	Memory::EmplaceMOV(reinterpret_cast<void*>(0x140D55480), reinterpret_cast<uintptr_t>(&Cards::INTERNAL_IDs), Memory::X64Register::RCX, false);
-	Memory::EmplaceRET(reinterpret_cast<void*>(0x140D55480 + 10), false);
 	
 	Logger::WriteLog("Tombstone Set.", MODULE_NAME, 0);
 }
@@ -49,7 +49,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
 		Logger::SetupLogger();
 		SetupJumpCalls();
-		SetupTombstones();
+		//SetupTombstones();
+
 	//	SetupLimitBreaks();
 
 		DetourTransactionBegin();
@@ -59,9 +60,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
 	//	DetourAttach(&(PVOID&)_Setup_CardPropTable, Cards::Setup_CardPropTable);
 
-		DetourAttach(&(PVOID&)_Get_InternalID, Cards::Get_InternalID);
+		//DetourAttach(&(PVOID&)_Get_InternalID, Cards::Get_InternalID);
 	//	DetourAttach(&(PVOID&)_Get_CardProps, Cards::Get_CardProps);
-		DetourAttach(&(PVOID&)_Get_CardID, Cards::Get_CardID);
+		//DetourAttach(&(PVOID&)_Get_CardID, Cards::Get_CardID);
 
 		//Logger::WriteLog("Loading Card IDs From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::CARD_IDs)), MODULE_NAME, 0);
 		//Logger::WriteLog("Loading Internal IDs From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::INTERNAL_IDs)), MODULE_NAME, 0);
