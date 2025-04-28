@@ -14,11 +14,14 @@ bool Memory::PatchBytes(void* address, const uint8_t* values, size_t size, bool 
 	if (Protected) {
 		if (VirtualProtect(address, size, PAGE_EXECUTE_READWRITE, &oldProtect)) {
 			memcpy(address, values, size);
+			std::cout << "Patched Bytes: " <<std::endl;
 			return true;
 		}
 	}
 	else {
 		memcpy(address, values, size);
+
+		std::cout << "Patched Bytes: " << std::endl;
 		return true;
 	}
 	std::cout << "Failed to patch bytes" << std::endl;
@@ -155,9 +158,9 @@ bool Memory::EmplaceCMP(void* targetAddress, uintptr_t value, X64Register reg, b
 
 void* __cdecl Memory::_H_MEMCPY(void* dest_str, const void* Src, size_t Size)
 {
-
 	if (reinterpret_cast<uintptr_t>(dest_str) == 0x140D55480)
 	{
+		std::cout << "Memory::_H_MEMCPY" << std::endl;
 		dest_str = reinterpret_cast<void*>(&Cards::_INTERNAL_IDs);
 
 		for (int i = 3900; i < 14969; i++)
@@ -165,6 +168,9 @@ void* __cdecl Memory::_H_MEMCPY(void* dest_str, const void* Src, size_t Size)
 			auto ID = Cards::Get_InternalID(i);
 			Cards::_CARD_IDs[ID] = i;
 		}
+		Memory::EmplaceMOV(reinterpret_cast<void*>(0x140D55480), reinterpret_cast<uintptr_t>(&Cards::_INTERNAL_IDs), Memory::X64Register::RCX, true);
+		Memory::EmplaceRET(reinterpret_cast<void*>(0x140D55480 + 10), true);
+		
 	}
 
 	auto result = reinterpret_cast<void* (__cdecl*)(void*, const void*, size_t)>(ORIGINAL_MEMCPY)(dest_str, Src, Size);
