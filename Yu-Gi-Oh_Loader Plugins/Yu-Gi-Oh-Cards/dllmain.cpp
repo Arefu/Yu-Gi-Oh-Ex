@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <iostream>
+#include <string>
 #include <vector>
 #include <format>
 
@@ -9,37 +10,92 @@
 #include "Memory.h"
 #include "Targets.h"
 
-uint16_t Cards::_INTERNAL_IDs[11072];
-uint16_t Cards::_CARD_IDs[10168];
-std::vector<Cards::MEMORY_CARD_PROP> Cards::_CARD_PROPS;
-
-void SetupJumpCalls()
+void SetupInternalIDJumpCalls()
 {
 	//Internal IDs.
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D11E), 0x140D55480, true);
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D09E), 0x140D55480, true);
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D44B), 0x140D55480, true);
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D4B5), 0x140D55480, true);
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D5D8), 0x140D55480, true);
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D668), 0x140D55480, true);
-	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D6B8), 0x140D55480, true);
-	
-	Logger::WriteLog("Jump Calls Setup.", MODULE_NAME, 0);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D11E), INTERNAL_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D09E), INTERNAL_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D44B), INTERNAL_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D4B5), INTERNAL_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D5D8), INTERNAL_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D668), INTERNAL_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D6B8), INTERNAL_CARD_ID_LOCATION, true);
 }
-
-void SetupTombstones()
+void SetupRedirectionForInternalIDs()
 {
-	
-	Logger::WriteLog("Tombstone Set.", MODULE_NAME, 0);
+	Memory::EmplaceMOV(reinterpret_cast<void*>(INTERNAL_CARD_ID_LOCATION), reinterpret_cast<uintptr_t>(Cards::InternalIDs.data()), Memory::X64Register::RCX, true);
+	Memory::EmplaceRET(reinterpret_cast<void*>(INTERNAL_CARD_ID_LOCATION + 10), true);
 }
 
-void SetupLimitBreaks()
+void SetupCardIDJumpCalls()
 {
-	Memory::PatchBytes(reinterpret_cast<void*>(0x14076D6C5), reinterpret_cast<const uint8_t*>("\xFF\xFF"), 2, true);
-
-	Logger::WriteLog("Limit Breaks Set.", MODULE_NAME, 0);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076C0A9), KONAMI_CARD_ID_LOCATION, true);
+	Memory::EmplaceCALL(reinterpret_cast<void*>(0x14076D7FA), KONAMI_CARD_ID_LOCATION, true);
+}
+void SetupRedirectionForCardIDs()
+{
+	Memory::EmplaceMOV(reinterpret_cast<void*>(KONAMI_CARD_ID_LOCATION), reinterpret_cast<uintptr_t>(Cards::CardIDs.data()), Memory::X64Register::RDI, true);
+	Memory::EmplaceRET(reinterpret_cast<void*>(KONAMI_CARD_ID_LOCATION + 10), true);
 }
 
+void SetupLimitRemover()
+{
+	Memory::EmplaceNOP(reinterpret_cast<void*>(0x140753BB1), true, 5);
+	Memory::EmplaceNOP(reinterpret_cast<void*>(0x140753BB6), true, 2);
+	Sleep(6000);
+}
+
+void SetupDetours()
+{
+	DetourTransactionBegin();
+	DetourUpdateThread(GetCurrentThread());
+	DetourAttach(&(PVOID&)Cards::orig_getInternalCardID, Cards::Get_InternalID);
+	DetourAttach(&(PVOID&)Cards::orig_getKonamiCardID, Cards::Get_KonamiID);
+
+
+	DetourTransactionCommit();
+
+}
+
+
+
+//Make a Detour for char __fastcall sub_14076BFC0(const void **a1, Language Lang)
+typedef char(__fastcall* sub_14076BFC0)(const void** a1, int Lang);
+uintptr_t orig_sub_14076BFC0 = 0x14076BFC0;
+char __fastcall _sub_14076BFC0(const void** a1, int Lang)
+{
+	//Call the original function
+	((sub_14076BFC0)orig_sub_14076BFC0)(a1, Lang);
+
+	memcpy(Cards::CardIDs.data(), reinterpret_cast<void*>(KONAMI_CARD_ID_LOCATION), 10168 * sizeof(unsigned __int16));
+    Logger::WriteLog(std::format("Setup {} Card IDs, At: {}", Cards::CardIDs.size(), reinterpret_cast<void*>(Cards::CardIDs.data())), MODULE_NAME, 0);
+    memcpy(Cards::InternalIDs.data(), reinterpret_cast<void*>(INTERNAL_CARD_ID_LOCATION), 11072 * sizeof(unsigned __int16));
+    Logger::WriteLog(std::format("Setup {} Internal IDs, At: {}", Cards::InternalIDs.size(), reinterpret_cast<void*>(Cards::InternalIDs.data())), MODULE_NAME, 0);
+    Logger::WriteLog("Wiping Original Memory Locations for Internal and KonamiCard IDs.", MODULE_NAME, 0);
+	memset(reinterpret_cast<void*>(KONAMI_CARD_ID_LOCATION), 0, 10168);
+	memset(reinterpret_cast<void*>(INTERNAL_CARD_ID_LOCATION), 0, 11072);
+
+	Cards::CardIDs.push_back(14969);
+	Cards::InternalIDs.push_back(10166);
+
+	Logger::WriteLog("Writing Jump Calls For Internal IDs Graveyard", MODULE_NAME, 0);
+	SetupInternalIDJumpCalls();
+	Logger::WriteLog("Seting Redirection For Internal IDs", MODULE_NAME, 0);
+	SetupRedirectionForInternalIDs();
+
+	Logger::WriteLog("Writing Jump Calls For Card IDs Graveyard", MODULE_NAME, 0);
+	SetupCardIDJumpCalls();
+	Logger::WriteLog("Setup Card IDs Jump Calls", MODULE_NAME, 0);
+	SetupRedirectionForCardIDs();
+
+	SetupLimitRemover();
+
+	SetupDetours();
+
+	Cards::isHooked = true;
+
+	return 0;
+}
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)
@@ -48,25 +104,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourRestoreAfterWith();
 
 		Logger::SetupLogger();
-		SetupJumpCalls();
-		//SetupTombstones();
-
-	//	SetupLimitBreaks();
-
+		
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
-		DetourAttach(&(PVOID&)ORIGINAL_MEMCPY, Memory::_H_MEMCPY);
-
-	//	DetourAttach(&(PVOID&)_Setup_CardPropTable, Cards::Setup_CardPropTable);
-
-		//DetourAttach(&(PVOID&)_Get_InternalID, Cards::Get_InternalID);
-	//	DetourAttach(&(PVOID&)_Get_CardProps, Cards::Get_CardProps);
-		//DetourAttach(&(PVOID&)_Get_CardID, Cards::Get_CardID);
-
-		//Logger::WriteLog("Loading Card IDs From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::CARD_IDs)), MODULE_NAME, 0);
-		//Logger::WriteLog("Loading Internal IDs From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::INTERNAL_IDs)), MODULE_NAME, 0);
-		//Logger::WriteLog("Loading Card Properties From: 0x" + std::format("{:X}", reinterpret_cast<uintptr_t>(&Cards::CARD_PROPS)), MODULE_NAME, 0);
+		DetourAttach(&(PVOID&)orig_sub_14076BFC0, _sub_14076BFC0);
 
 		DetourTransactionCommit();
 
