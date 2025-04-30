@@ -1,43 +1,54 @@
-#include <Windows.h>
+#include <cstring>
 #include <iostream>
 #include <vector>
-#include <cstring>
+#include <Windows.h>
 
-#include "Targets.h"
 #include "Cards.h"
+#include "Targets.h"
+#pragma once
 
-bool PropCopied = false;
+#include <cstdint>
+
+unsigned long long Cards::orig_getInternalCardID = 0x14076E000;
+unsigned long long Cards::orig_getKonamiCardID = 0x14076D7F0;
+
+std::vector<unsigned __int16> Cards::CardIDs(10168);
+std::vector<unsigned __int16> Cards::InternalIDs(11072);
+
+bool Cards::isHooked = false;
+bool Cards::hasRan = false;
 
 __int64 __fastcall Cards::Get_InternalID(__int16 a1)
 {
-	a1 = a1 - 3900;
-	return Cards::_INTERNAL_IDs[a1];
-}
-
-__int64 __fastcall Cards::Get_CardID(__int16 a1)
-{
-	a1 = a1 - 3900;
-	return Cards::_CARD_IDs[a1];
-}
-
-Cards::MEMORY_CARD_PROP* __fastcall Cards::Get_CardProps(unsigned int a1)
-{
-	if (PropCopied == false)
+	//run orignal function
+	if (isHooked == false)
 	{
-		// Copy 487920 bytes from 0x1427D0C30 to _CARD_PROPS.
-		void* source = reinterpret_cast<void*>(0x1427D0C30);
-		_CARD_PROPS.resize(487920 / sizeof(MEMORY_CARD_PROP));
-		std::memcpy(_CARD_PROPS.data(), source, 487920);
+		typedef __int64(__fastcall* GetCardIDByInternalCardIDFunc)(unsigned int);
 
-		PropCopied = true;
+		// Cast the original function address to the function pointer type
+		GetCardIDByInternalCardIDFunc originalFunction = reinterpret_cast<GetCardIDByInternalCardIDFunc>(orig_getInternalCardID);
+
+		// Call the original function
+		__int64 originalResult = originalFunction(static_cast<unsigned int>(a1));
+		return originalResult;
 	}
 
-	return &Cards::_CARD_PROPS.at(a1);
+	auto result = Cards::InternalIDs.at(a1- 3900);
+	return result;
 }
 
-__int64 Cards::Setup_CardPropTable()
+__int64 __fastcall Cards::Get_KonamiID(__int16 a1)
 {
-	// Call Original Function
-	__int64 result = reinterpret_cast<__int64(__fastcall*)()>(_Setup_CardPropTable)();
+
+	if (isHooked == false)
+	{
+		typedef __int64(__fastcall* GetInternalIDByKonamiIDFunc)(unsigned int);
+		GetInternalIDByKonamiIDFunc orginalFunction = reinterpret_cast<GetInternalIDByKonamiIDFunc>(orig_getKonamiCardID);
+
+		__int64 origianlResult = orginalFunction(static_cast<unsigned int>(a1));
+		return origianlResult;
+	}
+
+	auto result = Cards::CardIDs.at(a1);
 	return result;
 }
