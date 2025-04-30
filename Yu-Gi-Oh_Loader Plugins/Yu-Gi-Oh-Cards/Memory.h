@@ -31,10 +31,10 @@ public:
 	static bool EmplaceJMP(void* targetAddress, uintptr_t jumpAddress, bool Protected);
 	static bool EmplaceCALL(void* targetAddress, uintptr_t callAddress, bool Protected);
     static bool EmplaceMOV(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
-    static bool EmplaceRET(void* targetAddress, bool Protected);
 	static bool EmplaceCMP(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
-    static void* _H_MEMCPY(void* dest_str, const void* Src, size_t Size);
-    
+
+    static bool EmplaceRET(void* targetAddress, bool Protected);
+    static bool EmplaceNOP(void* targetAddress, bool Protected, int fillLength);
 private:
 
 };
