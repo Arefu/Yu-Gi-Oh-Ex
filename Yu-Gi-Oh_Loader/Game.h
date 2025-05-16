@@ -1,4 +1,6 @@
 #pragma once
+
+#include <string>
 #include <vector>
 
 static class Game
@@ -49,11 +51,18 @@ public:
 	/// <param name="ConfigName">File Name</param>
 	static void CreateConfig(LPCSTR ConfigName);
 
+	/// <summary>
+	/// Used to Ensure DLLs are injected in a specific order, E.G. Loading Yu-Gi-Oh-Console before others to ensure the Library is ready for logging.
+	/// </summary>
+	static void CheckForLoadOrder();
+
 
 	/// <summary>
 	/// The plugins to load, formatted for Detours.
 	/// </summary>
 	static std::vector<LPCSTR> gPlugins;
+
+	static std::vector<std::string> gModsToLoad;
 
 private:
 	static TCHAR gGamePath[MAX_PATH];

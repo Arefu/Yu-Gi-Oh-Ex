@@ -4,6 +4,7 @@
 #include <detours.h>
 #include <string>
 #include <vector>
+#include <sstream>
 #include <Windows.h>
 
 #include "Game.h"
@@ -12,6 +13,7 @@ TCHAR Game::gGamePath[MAX_PATH];
 TCHAR Game::gGameLocation[MAX_PATH];
 
 std::vector<std::string> Game::gDlls;
+std::vector <std::string> Game::gModsToLoad;
 std::vector<LPCSTR> Game::gPlugins;
 
 BOOL Game::Locate()
@@ -44,8 +46,6 @@ BOOL Game::Start()
 
 	STARTUPINFO info = { sizeof(info) };
 	PROCESS_INFORMATION processInfo;
-
-	Game::LookForPlugins();
 
 	return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
@@ -86,7 +86,6 @@ void Game::LookForPlugins()
 		gDlls.push_back(bleh);
 		gPlugins.push_back(gDlls.back().c_str());
 
-		OutputDebugStringA(gDlls[i].c_str());
 		i++;
 	} while (FindNextFileA(hFind, &FindFileData) != 0);
 
@@ -112,6 +111,8 @@ void Game::Set_GamePath(LPWSTR Path)
     }
 }
 
+
+
 void Game::CreateConfig(LPCSTR ConfigName)
 {
 	CHAR ConfigPath[MAX_PATH];
@@ -128,6 +129,36 @@ void Game::CreateConfig(LPCSTR ConfigName)
 		ConfigFile << "[Yu-Gi-Oh-GUI]" << std::endl;
 		ConfigFile << "PluginsPath=" << CurrentDir << "\\Plugins\\" << std::endl;
 		ConfigFile.close();
+	}
+}
+
+
+void Game::CheckForLoadOrder()
+{
+	char configPath[MAX_PATH] = { 0 };
+	strncpy(configPath, Game::gGamePath, MAX_PATH - 1);
+
+	size_t len = strlen(configPath);
+	if (len > 0 && configPath[len - 1] != '\\' && configPath[len - 1] != '/') {
+		strncat(configPath, "\\", MAX_PATH - len - 1);
+	}
+	strncat(configPath, "Config.ini", MAX_PATH - strlen(configPath) - 1);
+
+	char buffer[1024] = { 0 };
+	DWORD charsRead = GetPrivateProfileStringA("Yu-Gi-Oh-Loader", "LoadOrder", "", buffer, 1024, configPath
+	);
+
+	if (charsRead == 0) {
+		return;
+	}
+
+	std::string loadOrder(buffer);
+
+	std::stringstream stream(loadOrder);
+	std::string token;
+
+	while (std::getline(stream, token, ' ')) {
+		Game::gModsToLoad.push_back(token);
 	}
 }
 
