@@ -6,13 +6,12 @@
 
 #define KONAMI_CARD_ID_LOCATION 0x140D50510
 #define INTERNAL_CARD_ID_LOCATION 0x140D55480
-
-#include <vector> // Ensure this include is present for std::vector
+#define IN_MEMORY_CARD_PROP_LOCATION 0x1427D0C30
 
 class Cards
 {
 public:
-    struct MEMORY_CARD_PROP
+    struct IN_MEMORY_CARD_PROP
     {
         int CARD_ID;
         int ATK;
@@ -33,12 +32,12 @@ public:
 
     static std::vector<unsigned __int16> CardIDs;
     static std::vector<unsigned __int16> InternalIDs;
+    static std::vector<IN_MEMORY_CARD_PROP> MEMCardProps;
 
+    static Cards::IN_MEMORY_CARD_PROP* __fastcall Get_CardPropsByCardID(__int16 a1);
     static __int64 __fastcall Get_InternalID(__int16 a1);
     static __int64 __fastcall Get_KonamiID(__int16 a1);
-
-    static bool isHooked;
-    static bool hasRan;
+    __int64 __fastcall Get_ImageForCard(void* a1, __int16 a2);
 
 private:
 };

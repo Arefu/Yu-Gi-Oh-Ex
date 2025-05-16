@@ -42,7 +42,6 @@ void SetupLimitRemover()
 {
 	Memory::EmplaceNOP(reinterpret_cast<void*>(0x140753BB1), true, 5);
 	Memory::EmplaceNOP(reinterpret_cast<void*>(0x140753BB6), true, 2);
-	Sleep(6000);
 }
 
 void SetupDetours()
@@ -57,9 +56,6 @@ void SetupDetours()
 
 }
 
-
-
-//Make a Detour for char __fastcall sub_14076BFC0(const void **a1, Language Lang)
 typedef char(__fastcall* sub_14076BFC0)(const void** a1, int Lang);
 uintptr_t orig_sub_14076BFC0 = 0x14076BFC0;
 char __fastcall _sub_14076BFC0(const void** a1, int Lang)
@@ -71,12 +67,15 @@ char __fastcall _sub_14076BFC0(const void** a1, int Lang)
     Logger::WriteLog(std::format("Setup {} Card IDs, At: {}", Cards::CardIDs.size(), reinterpret_cast<void*>(Cards::CardIDs.data())), MODULE_NAME, 0);
     memcpy(Cards::InternalIDs.data(), reinterpret_cast<void*>(INTERNAL_CARD_ID_LOCATION), 11072 * sizeof(unsigned __int16));
     Logger::WriteLog(std::format("Setup {} Internal IDs, At: {}", Cards::InternalIDs.size(), reinterpret_cast<void*>(Cards::InternalIDs.data())), MODULE_NAME, 0);
+	memcpy(Cards::MEMCardProps.data(), reinterpret_cast<void*>(IN_MEMORY_CARD_PROP_LOCATION), 10166 * sizeof(Cards::IN_MEMORY_CARD_PROP));
+	Logger::WriteLog(std::format("Setup {} CardProps, At: {}", Cards::MEMCardProps.size(), reinterpret_cast<void*>(Cards::MEMCardProps.data())), MODULE_NAME, 0);
+
     Logger::WriteLog("Wiping Original Memory Locations for Internal and KonamiCard IDs.", MODULE_NAME, 0);
 	memset(reinterpret_cast<void*>(KONAMI_CARD_ID_LOCATION), 0, 10168);
 	memset(reinterpret_cast<void*>(INTERNAL_CARD_ID_LOCATION), 0, 11072);
 
-	Cards::CardIDs.push_back(14969);
-	Cards::InternalIDs.push_back(10166);
+	Logger::WriteLog("Clearing Memory CardPROPS", MODULE_NAME, 0);
+	memset(reinterpret_cast<void*>(IN_MEMORY_CARD_PROP_LOCATION), 0, 10166);
 
 	Logger::WriteLog("Writing Jump Calls For Internal IDs Graveyard", MODULE_NAME, 0);
 	SetupInternalIDJumpCalls();
@@ -92,10 +91,21 @@ char __fastcall _sub_14076BFC0(const void** a1, int Lang)
 
 	SetupDetours();
 
-	Cards::isHooked = true;
 
 	return 0;
 }
+
+//__int64 __fastcall sub_140753BA0(void *a1, Cards KonamiID)
+typedef __int64(__fastcall* sub_140753BA0)(void* a1, __int16 KonamiCardID);
+uintptr_t orig_sub_140753BA0 = 0x140753BA0;
+__int64 __fastcall Get_ImageForCard(void*a1, __int16 a2)
+{
+	auto result= ((sub_140753BA0)orig_sub_140753BA0)(a1, a2);
+	Logger::WriteLog(std::format("Card {} Returned: {}", a2, result),MODULE_NAME, 0);
+
+	return result;
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)
@@ -109,7 +119,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(&(PVOID&)orig_sub_14076BFC0, _sub_14076BFC0);
-
+		DetourAttach(&(PVOID&)orig_sub_140753BA0, Get_ImageForCard);
 		DetourTransactionCommit();
 
 		Logger::WriteLog("It's Time To Du-Du-Du-Duel!.", MODULE_NAME, 0);
