@@ -4,8 +4,7 @@
 #include <Windows.h>
 
 #include "Cards.h"
-#include "Targets.h"
-#pragma once
+#include "Logger.h"
 
 #include <cstdint>
 
@@ -14,25 +13,10 @@ unsigned long long Cards::orig_getKonamiCardID = 0x14076D7F0;
 
 std::vector<unsigned __int16> Cards::CardIDs(10168);
 std::vector<unsigned __int16> Cards::InternalIDs(11072);
-
-bool Cards::isHooked = false;
-bool Cards::hasRan = false;
+std::vector<Cards::IN_MEMORY_CARD_PROP> Cards::MEMCardProps(10166);
 
 __int64 __fastcall Cards::Get_InternalID(__int16 a1)
 {
-	//run orignal function
-	if (isHooked == false)
-	{
-		typedef __int64(__fastcall* GetCardIDByInternalCardIDFunc)(unsigned int);
-
-		// Cast the original function address to the function pointer type
-		GetCardIDByInternalCardIDFunc originalFunction = reinterpret_cast<GetCardIDByInternalCardIDFunc>(orig_getInternalCardID);
-
-		// Call the original function
-		__int64 originalResult = originalFunction(static_cast<unsigned int>(a1));
-		return originalResult;
-	}
-
 	auto result = Cards::InternalIDs.at(a1- 3900);
 	return result;
 }
@@ -40,15 +24,17 @@ __int64 __fastcall Cards::Get_InternalID(__int16 a1)
 __int64 __fastcall Cards::Get_KonamiID(__int16 a1)
 {
 
-	if (isHooked == false)
-	{
-		typedef __int64(__fastcall* GetInternalIDByKonamiIDFunc)(unsigned int);
-		GetInternalIDByKonamiIDFunc orginalFunction = reinterpret_cast<GetInternalIDByKonamiIDFunc>(orig_getKonamiCardID);
+	return  0;
+}
 
-		__int64 origianlResult = orginalFunction(static_cast<unsigned int>(a1));
-		return origianlResult;
-	}
+__int64 __fastcall Cards::Get_ImageForCard(void* a1, __int16 a2)
+{
+	return 0;
+}
 
-	auto result = Cards::CardIDs.at(a1);
+Cards::IN_MEMORY_CARD_PROP* __fastcall Cards::Get_CardPropsByCardID(__int16 a1)
+{
+	auto result = &Cards::MEMCardProps.at(a1);
+
 	return result;
 }
