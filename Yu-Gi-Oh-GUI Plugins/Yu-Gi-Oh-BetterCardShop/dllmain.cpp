@@ -31,7 +31,31 @@ extern "C" __declspec(dllexport) void ProcessWindow()
 		Card = 0;
 
 	ImGui::Button("Buy Card");
-	ImGui::End();
+
+	ImGui::End(); typedef WORD* (__fastcall* SubFuncType)(const void** a1, BYTE* a2, WORD* a3);
+    SubFuncType sub_14077C310 = (SubFuncType)0x14077C310;
+
+    // Example ImGui button
+    if (ImGui::Button("Call sub_14077C310"))
+    {
+        // a3: WORD initialized to 0x4007
+        static WORD resultCode = 0x4007;
+
+        // a1: assume we need some valid object or structure, simplified as a dummy pointer here
+        static const void* dummyObject = nullptr; // Replace with valid object as required
+        const void** a1 = &dummyObject;
+
+        // a2: dummy _BYTE buffer (size depends on expected structure)
+        static BYTE dummyBytes[16] = {}; // Adjust size as needed
+        BYTE* a2 = dummyBytes;
+
+        WORD* result = sub_14077C310(a1, a2, &resultCode);
+
+        // Optionally display result
+        char buffer[64];
+        snprintf(buffer, sizeof(buffer), "Result: 0x%04X", result ? *result : 0xFFFF);
+        ImGui::Text("%s", buffer);
+    }
 }
 
 extern "C" _declspec(dllexport) void ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
