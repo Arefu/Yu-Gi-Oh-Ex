@@ -49,6 +49,8 @@ Logger::WriteLog("Requested file (fopen_s): " + std::string(filename), MODULE_NA
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
+	Logger::SetupLogger();
+
 	HMODULE stdio = GetModuleHandleA("api-ms-win-crt-stdio-l1-1-0.dll.dll");
 	original_fopen = (fopen_t)GetProcAddress(stdio, "fopen");
 	original_fopen_s = (fopen_s_t)GetProcAddress(stdio, "fopen_s");
