@@ -2,6 +2,7 @@
 #include <detours.h>
 #include <iostream>
 #include <string>
+#include <format>
 #include "Yu-Gi-Oh-Ex.h"
 #include "Logger.h"
 
@@ -58,8 +59,10 @@ void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1)
 
 void Patch_SetLPToCustomValue()
 {
-	YuGiOhEx::g_iStartLifePoints = SetLP;
-	
+	using SetLPFunc = void(*)();
+	((SetLPFunc)YuGiOhEx::SetLP)();
+
+	*(int*)0x140C8D370 = SetLP;
 }
 
 void ProcessConfig();
@@ -104,7 +107,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		}
 		if (SetLP != 8000)
 		{
-			Logger::WriteLog("Changed LP To ", MODULE_NAME, 0);;
+			Logger::WriteLog(std::format("Changed LP To {}", SetLP), MODULE_NAME, 0);
 			DetourAttach(&(PVOID&)YuGiOhEx::SetLP, Patch_SetLPToCustomValue);
 		}
 
