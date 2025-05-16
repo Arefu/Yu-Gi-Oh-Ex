@@ -16,12 +16,16 @@ namespace YuGiOhEx
 	static bool& g_bOnPageFirst = *(bool*)0x140C91C48;
 	static bool& g_bUseJpLogo = *(bool*)0x14332A348;
 	static HWND& g_hWnd = *(HWND*)0x140D31E60;
+	static INT g_iStartLifePoints = *(INT*)0x140C8D370;
+
 	static unsigned _int64 DeductMoneyFromStoreTransaction = 0x1407F93E0;
 	static __int64 UnkFuncForLoading = 0x14076D840; //Rename this at some point
 	static __int64 AutoPauseOnLostFocus = 0x14083C9F0;
 	static __int64 UseJPLogo = 0x1408734C0;
 
 	static __int64 JankenAndPlayerSelection = 0x1407AFD80;
+
+	static __int64 SetLP = 0x1407696E0;
 }
 
 
