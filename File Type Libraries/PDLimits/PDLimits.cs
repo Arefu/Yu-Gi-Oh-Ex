@@ -111,11 +111,20 @@ namespace PDLimits
             {
                 _Writer.Write((ushort)_Limited[i]);
             }
+            //Write each value in _SemiLimited as a 2 byte value
+            for (int i = 0; i < _SemiLimitedCount; i++)
+            {
+                _Writer.Write((ushort)_SemiLimited[i]);
+            }
             _Writer.Close();
         }
 
 
-
+        public static void Add_CardToSemiLimited(ushort CardID)
+        {
+            _SemiLimited.Add(CardID);
+            _ForbiddenCount++;
+        }
 
         public static void Add_CardToForbidden(ushort CardID)
         {

@@ -30,9 +30,10 @@ namespace WolfX
             if (State.Path == null || State.Path == "")
             {
                 Limits = Utility.Get_UserSelectedFile("Select PDLimits.bin", "pd_limits.bin|pd_limits.bin");
+                if (Limits == "-1")
+                    return;
             }
-
-            if (Limits == "-1")
+            else
                 Limits = State.Path + "\\bin\\pd_limits.bin";
 
             PDLimits.PDLimits.Load(Limits);
@@ -119,7 +120,7 @@ namespace WolfX
                 }
                 else
                 {
-                    if (CARDS_Cards.Setup_CardBinder(Utility.Get_UserSelectedFile($"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin", "Open Cards Indx File"), (CARDS_INFO.CARD_Language)State.Language) == false)
+                    if (CARDS_Cards.Setup_CardBinder(Utility.Get_UserSelectedFile("Open Cards Indx File", $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin"), (CARDS_INFO.CARD_Language)State.Language) == false)
                     {
                         MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -158,16 +159,16 @@ namespace WolfX
                     PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
                 }
             }
-            if (PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
+            else if (PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
             {
-                foreach (ListViewItem i in PDL_LV_SemiLimitedCards.SelectedItems)
+                foreach(ListViewItem i in PDL_LV_SemiLimitedCards.SelectedItems)
                 {
                     PDLimits.PDLimits.Remove_CardFromSemiLimited(Convert.ToUInt16(i.ImageKey));
                     PDL_LV_SemiLimitedCards.Items.Remove(i);
                     PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
                 }
             }
-        }
+        } 
     }
 
 }
