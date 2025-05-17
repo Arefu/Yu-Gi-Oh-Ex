@@ -90,18 +90,21 @@ namespace WolfX
                     ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
                     PDL_LV_ForbiddenCards.View = View.LargeIcon;
                     PDL_LV_LimitedCards.View = View.LargeIcon;
+                    PDL_LV_SemiLimitedCards.View = View.LargeIcon;
                 }
                 else
                 {
                     ZIB.Load(Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib"));
                     PDL_LV_ForbiddenCards.View = View.LargeIcon;
                     PDL_LV_LimitedCards.View = View.LargeIcon;
+                    PDL_LV_SemiLimitedCards.View = View.LargeIcon;
                 }
             }
             else
             {
                 PDL_LV_ForbiddenCards.View = View.List;
                 PDL_LV_LimitedCards.View = View.List;
+                PDL_LV_SemiLimitedCards.View = View.List;
             }
         }
         private void PDL_CB_UseCardID_CheckedChanged(object sender, EventArgs e)
@@ -129,7 +132,7 @@ namespace WolfX
         }
         private void PDL_LV_ItemSelectionChanged(object sender, EventArgs e)
         {
-            if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0 || PDL_LV_LimitedCards.SelectedItems.Count > 0)
+            if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0 || PDL_LV_LimitedCards.SelectedItems.Count > 0 || PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
                 PDL_BTN_RemoveCardFromList.Enabled = true;
             else
                 PDL_BTN_RemoveCardFromList.Enabled = false;
@@ -146,7 +149,7 @@ namespace WolfX
                     PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
                 }
             }
-            else if (PDL_LV_LimitedCards.SelectedItems.Count > 0)
+            if (PDL_LV_LimitedCards.SelectedItems.Count > 0)
             {
                 foreach (ListViewItem i in PDL_LV_LimitedCards.SelectedItems)
                 {
@@ -155,7 +158,16 @@ namespace WolfX
                     PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
                 }
             }
-        } 
+            if (PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem i in PDL_LV_SemiLimitedCards.SelectedItems)
+                {
+                    PDLimits.PDLimits.Remove_CardFromSemiLimited(Convert.ToUInt16(i.ImageKey));
+                    PDL_LV_SemiLimitedCards.Items.Remove(i);
+                    PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
+                }
+            }
+        }
     }
 
 }

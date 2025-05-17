@@ -10,23 +10,24 @@ namespace WolfX
         private void PACKDEF_BTN_OpenPackDEF_Click(object sender, EventArgs e)
         {
             var File = "";
-
-            if (String.IsNullOrEmpty(State.Path))
+            if (State.Path == null || State.Path == "")
+            {
                 File = Utility.Get_UserSelectedFile("Open Packdefdata File", "packdefdata_#.bin (*.bin)|*.bin");
+            }
+
+            if (File == "")
+                File = $"{State.Path}\\main\\packdefdata_{State.Language.ToString()[0]}.bin";
 
             var Packs = PACKDEFDATA.Load(File);
             foreach (var Pack in Packs)
             {
                 Debug.WriteLine("------------");
-                Debug.WriteLine($"UNK_01: {Pack.UNK_01}");
                 Debug.WriteLine($"Index: {Pack.Index}");
-                Debug.WriteLine($"UNK_02: {Pack.UNK_02}");
+                Debug.WriteLine($"Series: {Pack.Series}");
                 Debug.WriteLine($"Cost: {Pack.Cost}");
-                Debug.WriteLine($"UNK_03: {Pack.UNK_03}");
-                Debug.WriteLine($"Pack_Name_Start: {Pack.Pack_Name_Start}");
-                Debug.WriteLine($"UNK_04: {Pack.UNK_04}");
-                Debug.WriteLine($"Name_Start: {Pack.Name_Start}");
-                Debug.WriteLine($"UNK_05: {Pack.UNK_05}wb");
+                Debug.WriteLine($"Type: {Pack.Type}");
+                Debug.WriteLine($"Code_Name: {Pack.Code_Name}");
+                Debug.WriteLine($"Name: {Pack.Name}");
             }
         }
     }
