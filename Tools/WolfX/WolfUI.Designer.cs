@@ -1425,6 +1425,7 @@ namespace WolfX
             PDL_LV_SemiLimitedCards.TabIndex = 1;
             PDL_LV_SemiLimitedCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_SemiLimitedCards.View = View.List;
+            PDL_LV_SemiLimitedCards.SelectedIndexChanged += PDL_LV_ItemSelectionChanged;
             // 
             // PDL_LimitedCards
             // 
