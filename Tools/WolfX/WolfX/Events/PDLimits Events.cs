@@ -37,38 +37,46 @@ namespace WolfX
                 Limits = State.Path + "\\bin\\pd_limits.bin";
 
             PDLimits.PDLimits.Load(Limits);
-
-            foreach (short i in PDLimits.PDLimits.GetForbidden())
+            if (PDLimits.PDLimits.GetForbiddenCount() > 0)
             {
-                if (PDL_CB_LoadImages.Checked)
-                    Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+                foreach (short i in PDLimits.PDLimits.GetForbidden())
+                {
+                    if (PDL_CB_LoadImages.Checked)
+                        Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
-                if (!PDL_CB_UseCardID.Checked)
-                    PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
-                else
-                    PDL_LV_ForbiddenCards.Items.Add(i.ToString(), i.ToString());
+                    if (!PDL_CB_UseCardID.Checked)
+                        PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
+                    else
+                        PDL_LV_ForbiddenCards.Items.Add(i.ToString(), i.ToString());
+                }
             }
 
-            foreach (short i in PDLimits.PDLimits.GetLimited())
+            if (PDLimits.PDLimits.GetLimitedCount() > 0)
             {
-                if (PDL_CB_LoadImages.Checked)
-                    Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+                foreach (short i in PDLimits.PDLimits.GetLimited())
+                {
+                    if (PDL_CB_LoadImages.Checked)
+                        Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
-                if (!PDL_CB_UseCardID.Checked)
-                    PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
-                else
-                    PDL_LV_LimitedCards.Items.Add(i.ToString(), i.ToString());
+                    if (!PDL_CB_UseCardID.Checked)
+                        PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
+                    else
+                        PDL_LV_LimitedCards.Items.Add(i.ToString(), i.ToString());
+                }
             }
 
-            foreach (short i in PDLimits.PDLimits.GetSemiLimited())
+            if (PDLimits.PDLimits.GetSemiLimitedCount() > 0)
             {
-                if (PDL_CB_LoadImages.Checked)
-                    Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+                foreach (short i in PDLimits.PDLimits.GetSemiLimited())
+                {
+                    if (PDL_CB_LoadImages.Checked)
+                        Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
-                if (!PDL_CB_UseCardID.Checked)
-                    PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
-                else
-                    PDL_LV_SemiLimitedCards.Items.Add(i.ToString(), i.ToString());
+                    if (!PDL_CB_UseCardID.Checked)
+                        PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
+                    else
+                        PDL_LV_SemiLimitedCards.Items.Add(i.ToString(), i.ToString());
+                }
             }
 
             PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
