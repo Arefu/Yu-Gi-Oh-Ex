@@ -89,7 +89,6 @@ namespace WolfX
         {
             PDLimits.PDLimits.Save();
         }
-
         private void PDL_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
         {
             if (PDL_CB_LoadImages.Checked)
@@ -146,7 +145,6 @@ namespace WolfX
             else
                 PDL_BTN_RemoveCardFromList.Enabled = false;
         }
-
         private void PDL_BTN_RemoveCardFromList_Click(object sender, EventArgs e)
         {
             if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0)
@@ -177,6 +175,7 @@ namespace WolfX
                 }
             }
         } 
+
     }
 
 }

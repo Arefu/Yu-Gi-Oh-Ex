@@ -30,11 +30,12 @@
         {
             YDC_BTN_AddCard = new Button();
             textBox1 = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // YDC_BTN_AddCard
             // 
-            YDC_BTN_AddCard.Location = new Point(171, 10);
+            YDC_BTN_AddCard.Location = new Point(171, 47);
             YDC_BTN_AddCard.Name = "YDC_BTN_AddCard";
             YDC_BTN_AddCard.Size = new Size(75, 23);
             YDC_BTN_AddCard.TabIndex = 0;
@@ -43,16 +44,25 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 12);
+            textBox1.Location = new Point(12, 47);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(153, 23);
             textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(234, 35);
+            label1.TabIndex = 2;
+            label1.Text = "You're able to seperate cards with a comma (\",\")to specify multiple ";
             // 
             // Card_Replacer__Simple_
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(258, 45);
+            ClientSize = new Size(258, 79);
+            Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(YDC_BTN_AddCard);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -68,5 +78,6 @@
 
         private Button YDC_BTN_AddCard;
         private TextBox textBox1;
+        private Label label1;
     }
 }
