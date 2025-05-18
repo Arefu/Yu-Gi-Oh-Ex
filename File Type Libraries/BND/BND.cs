@@ -58,7 +58,7 @@ namespace Types
 
                 Reader.BaseStream.Position = Start;
 
-                var String = Encoding.BigEndianUnicode.GetString(Reader.ReadBytes(Length));
+                var String = Encoding.BigEndianUnicode.GetString(Reader.ReadBytes(Length)).TrimEnd('\0');
 
                 Strings.Add(new BNDString(Start, Length, String));
 
@@ -82,13 +82,12 @@ namespace Types
                 Writer.Write(NumberOfItemsInHex);
                 foreach(var String in BNDStrings)
                 {
-                    
                     Writer.Write(SwapBytes(CurrentSize));
-                    CurrentSize = (uint)(CurrentSize + GetEncodedSizeOfString(Encoding.BigEndianUnicode.GetBytes(String.String)));
+                    CurrentSize = (uint)(CurrentSize + GetEncodedSizeOfString(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0")));
                 }
-               foreach(var String in BNDStrings)
+                foreach(var String in BNDStrings)
                 {
-                    Writer.Write(Encoding.BigEndianUnicode.GetBytes(String.String));
+                    Writer.Write(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0"));
                 }
                 
             }
