@@ -31,6 +31,8 @@ extern "C" __declspec(dllexport) void ProcessWindow()
 		Card = 0;
 
 	ImGui::Button("Buy Card");
+
+	ImGui::End();
 }
 
 extern "C" _declspec(dllexport) void ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
