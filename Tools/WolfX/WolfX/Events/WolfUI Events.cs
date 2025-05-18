@@ -54,12 +54,18 @@ namespace WolfX
                 }
             }
 
-            FolderBrowser.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020 Folder";
-            if (FolderBrowser.ShowDialog() != true)
+            if (State.Path == null || State.Path == "")
             {
-                MessageBox.Show("Please Select a YGO_2020 Folder", "No YGO_2020 Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                FolderBrowser.Title = "Select Yu-Gi-Oh! Legacy of the Duelist Link Evolution YGO_2020 Folder";
+                if (FolderBrowser.ShowDialog() != true)
+                {
+                    MessageBox.Show("Please Select a YGO_2020 Folder", "No YGO_2020 Folder Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
+
+            if (FolderBrowser.FolderName == "")
+                FolderBrowser.FolderName = State.Path;
 
             var Process = new Process();
             Process.StartInfo.FileName = "Yami-Yugi.exe";
