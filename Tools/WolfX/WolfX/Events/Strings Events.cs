@@ -1,4 +1,5 @@
-﻿using Types;
+﻿using System.Xml.Linq;
+using Types;
 
 namespace WolfX
 {
@@ -12,13 +13,20 @@ namespace WolfX
             {
                 if (CREDITS_CheckB_IsCredit.Checked)
                 {
-                    FileDialog.Title = "Open Credits *.DAT File";
-                    FileDialog.Filter = "Credits File|credits.dat|All DAT Files (*.DAT)|*.DAT";
-                    if (FileDialog.ShowDialog() != DialogResult.OK)
+                    if (State.Path == null || State.Path == "")
                     {
-                        MessageBox.Show("Please Select a Credits *.DAT File", "No Credits File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
+                        FileDialog.Title = "Open Credits *.DAT File";
+                        FileDialog.Filter = "Credits File|credits.dat|All DAT Files (*.DAT)|*.DAT";
+                        if (FileDialog.ShowDialog() != DialogResult.OK)
+                        {
+                            MessageBox.Show("Please Select a Credits *.DAT File", "No Credits File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
                     }
+
+                    if (FileDialog.FileName == "")
+                        FileDialog.FileName = $"{State.Path}\\main\\ui\\credits\\credits.dat";
+
                     Credits = CRED.Load(FileDialog.FileName);
 
                     STRMAN_LB_CurrentFileStrings.Items.Clear();
@@ -33,15 +41,20 @@ namespace WolfX
                     return;
                 }
 
-
-                FileDialog.Title = "Open Strings *.BND File";
-                FileDialog.Filter = $"{State.Language} String File|Strings_STEAM_{State.Language.ToString()[0]}.BND|All BND Files (*.BND)|*.BND";
-
-                if (FileDialog.ShowDialog() != DialogResult.OK)
+                if (State.Path == null || State.Path == "")
                 {
-                    MessageBox.Show("Please Select a Strings *.BND File", "No Strings File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    FileDialog.Title = "Open Strings *.BND File";
+                    FileDialog.Filter = $"{State.Language} String File|Strings_STEAM_{State.Language.ToString()[0]}.BND|All BND Files (*.BND)|*.BND";
+
+                    if (FileDialog.ShowDialog() != DialogResult.OK)
+                    {
+                        MessageBox.Show("Please Select a Strings *.BND File", "No Strings File Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
+
+                if (FileDialog.FileName == "")
+                    FileDialog.FileName = $"{State.Path}\\strings\\Strings_STEAM_{State.Language.ToString()[0]}.BND";
 
                 STRMAN_LB_CurrentFileStrings.Items.Clear();
 
@@ -95,6 +108,40 @@ namespace WolfX
                 BNDStrings[STRMAN_LB_CurrentFileStrings.SelectedIndex].String = STRMAN_TB_NewStringValue.Text;
 
             return;
+        }
+
+        private void STRMAN_BTN_Search_Click(object sender, EventArgs e)
+        {
+            if (BNDStrings == null || BNDStrings.Count == 0)
+            {
+                return;
+            }
+
+            if (STRMAN_TB_Search.Text == null || STRMAN_TB_Search.Text == "")
+            {
+                STRMAN_LB_CurrentFileStrings.Items.Clear();
+                foreach (var String in BNDStrings)
+                {
+                    STRMAN_LB_CurrentFileStrings.Items.Add(String.String);
+                }
+                return;
+            }
+
+            STRMAN_LB_CurrentFileStrings.Items.Clear();
+
+            var searchResults = BNDStrings
+            .Where(String => {
+                if (STRMAN_CheckB_CaseSensitive.Checked)
+                    return String.String.Contains(STRMAN_TB_Search.Text);
+                else
+                    return String.String.Contains(STRMAN_TB_Search.Text, StringComparison.OrdinalIgnoreCase);
+            })
+            .ToList();
+
+            foreach (var String in searchResults)
+            {
+                STRMAN_LB_CurrentFileStrings.Items.Add(String.String);
+            }
         }
     }
 }

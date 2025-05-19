@@ -109,6 +109,9 @@ namespace WolfX
             STRMAN_TB_NewStringValue = new TextBox();
             label9 = new Label();
             STRMAN_LB_CurrentFileStrings = new ListBox();
+            STRMAN_TB_Search = new TextBox();
+            STRMAN_BTN_Search = new Button();
+            STRMAN_CheckB_CaseSensitive = new CheckBox();
             groupBox5 = new GroupBox();
             CREDITS_CheckB_IsCredit = new CheckBox();
             STRMAN_BTN_SaveStrings = new Button();
@@ -958,6 +961,9 @@ namespace WolfX
             Page_BNDManager.Controls.Add(STRMAN_TB_NewStringValue);
             Page_BNDManager.Controls.Add(label9);
             Page_BNDManager.Controls.Add(STRMAN_LB_CurrentFileStrings);
+            Page_BNDManager.Controls.Add(STRMAN_TB_Search);
+            Page_BNDManager.Controls.Add(STRMAN_BTN_Search);
+            Page_BNDManager.Controls.Add(STRMAN_CheckB_CaseSensitive);
             Page_BNDManager.Controls.Add(groupBox5);
             Page_BNDManager.Controls.Add(groupBox11);
             Page_BNDManager.Location = new Point(4, 24);
@@ -966,6 +972,33 @@ namespace WolfX
             Page_BNDManager.TabIndex = 4;
             Page_BNDManager.Text = "Strings Manager";
             Page_BNDManager.UseVisualStyleBackColor = true;
+            // 
+            // STRMAN_CheckB_CaseSensitive
+            // 
+            STRMAN_CheckB_CaseSensitive.AutoSize = true;
+            STRMAN_CheckB_CaseSensitive.Location = new Point(84, 144);
+            STRMAN_CheckB_CaseSensitive.Name = "STRMAN_CheckB_CaseSensitive";
+            STRMAN_CheckB_CaseSensitive.Size = new Size(84, 19);
+            STRMAN_CheckB_CaseSensitive.TabIndex = 15;
+            STRMAN_CheckB_CaseSensitive.Text = "Case Sensitive";
+            STRMAN_CheckB_CaseSensitive.UseVisualStyleBackColor = true;
+            // 
+            // STRMAN_BTN_Search
+            // 
+            STRMAN_BTN_Search.Location = new Point(6, 140);
+            STRMAN_BTN_Search.Name = "STRMAN_BTN_Search";
+            STRMAN_BTN_Search.Size = new Size(72, 25);
+            STRMAN_BTN_Search.TabIndex = 14;
+            STRMAN_BTN_Search.Text = "Search";
+            STRMAN_BTN_Search.UseVisualStyleBackColor = true;
+            STRMAN_BTN_Search.Click += STRMAN_BTN_Search_Click;
+            // 
+            // STRMAN_TB_Search
+            // 
+            STRMAN_TB_Search.Location = new Point(6, 112);
+            STRMAN_TB_Search.Name = "STRMAN_TB_Search";
+            STRMAN_TB_Search.Size = new Size(319, 22);
+            STRMAN_TB_Search.TabIndex = 13;
             // 
             // label11
             // 
@@ -1007,9 +1040,9 @@ namespace WolfX
             STRMAN_LB_CurrentFileStrings.HorizontalScrollbar = true;
             STRMAN_LB_CurrentFileStrings.ItemHeight = 15;
             STRMAN_LB_CurrentFileStrings.Items.AddRange(new object[] { "Strings_STEAM_.BND" });
-            STRMAN_LB_CurrentFileStrings.Location = new Point(6, 112);
+            STRMAN_LB_CurrentFileStrings.Location = new Point(6, 171);
             STRMAN_LB_CurrentFileStrings.Name = "STRMAN_LB_CurrentFileStrings";
-            STRMAN_LB_CurrentFileStrings.Size = new Size(319, 484);
+            STRMAN_LB_CurrentFileStrings.Size = new Size(319, 445);
             STRMAN_LB_CurrentFileStrings.TabIndex = 8;
             STRMAN_LB_CurrentFileStrings.SelectedIndexChanged += STRMAN_LB_CurrentFileStrings_SelectedIndexChanged;
             // 
@@ -2044,6 +2077,9 @@ namespace WolfX
         private Button ARCHIVE_BTN_PackZIB;
         private TabPage Page_BNDManager;
         private ListBox STRMAN_LB_CurrentFileStrings;
+        private TextBox STRMAN_TB_Search;
+        public Button STRMAN_BTN_Search;
+        private CheckBox STRMAN_CheckB_CaseSensitive;
         private GroupBox groupBox5;
         public Button STRMAN_BTN_SaveStrings;
         private Button STRMAN_BTN_OpenStrings;
