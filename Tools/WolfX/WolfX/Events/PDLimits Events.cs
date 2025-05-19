@@ -1,18 +1,22 @@
-﻿using Types;
+﻿using PDLimits;
+using Types;
 using Windows.Devices.Scanners;
 using WolfX.Types;
 using WolfX.WolfX.File_Type_UI;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace WolfX
 {
     public partial class WolfUI
     {
+        ImageList Images = new ImageList();
+
         private void PDL_BTN_OpenPDL_Click(object sender, EventArgs e)
         {
             PDL_LV_ForbiddenCards.Items.Clear();
             PDL_LV_LimitedCards.Items.Clear();
             PDL_LV_SemiLimitedCards.Items.Clear();
-            var Images = new ImageList();
+
             if (PDL_CB_LoadImages.Checked)
             {
                 Images.ImageSize = new Size(64, 64);
@@ -84,6 +88,7 @@ namespace WolfX
             PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
 
             PDL_BTN_SavePDL.Enabled = true;
+            PDL_BTN_AddCardToList.Enabled = true;
         }
         private void PDL_BTN_SavePDL_Click(object sender, EventArgs e)
         {
@@ -174,8 +179,74 @@ namespace WolfX
                     PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
                 }
             }
-        } 
+        }
+        private void PDL_BTN_AddCardToList_Click(object sender, EventArgs e)
+        {
+            if (PDL_CB_IsUsingSimpleAddBox.Checked)
+            {
+                var SimpleAdder = new SimpleCardAdd();
+                var Result = SimpleAdder.ShowDialog();
 
+                if (Result == DialogResult.OK)
+                {
+                    switch (tabControl2.SelectedTab.Text)
+                    {
+                        case "Forbidden":
+                            foreach(var Card in SimpleAdder.CardIDs)
+                            {
+                                if (PDL_CB_LoadImages.Checked)
+                                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+
+                                if (!PDL_CB_UseCardID.Checked)
+                                    PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
+                                else
+                                    PDL_LV_ForbiddenCards.Items.Add(Card.ToString(), Card.ToString());
+
+                                PDLimits.PDLimits.Add_CardToForbidden((ushort)Card);
+                            }
+
+                            PDL_LBL_NumOfForbidden.Text = SimpleAdder.CardIDs.Count.ToString();
+                            break;
+                        case "Semi-Limited":
+                            foreach (var Card in SimpleAdder.CardIDs)
+                            {
+                                if (PDL_CB_LoadImages.Checked)
+                                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+
+                                if (!PDL_CB_UseCardID.Checked)
+                                    PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
+                                else
+                                    PDL_LV_SemiLimitedCards.Items.Add(Card.ToString(), Card.ToString());
+
+                                PDLimits.PDLimits.Add_CardToSemiLimited((ushort)Card);
+                            }
+
+                            PDL_LBL_NumOfSemiLimited.Text = SimpleAdder.CardIDs.Count.ToString();
+                            break;
+                        case "Limited":
+                            foreach (var Card in SimpleAdder.CardIDs)
+                            {
+                                if (PDL_CB_LoadImages.Checked)
+                                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+
+                                if (!PDL_CB_UseCardID.Checked)
+                                    PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
+                                else
+                                    PDL_LV_LimitedCards.Items.Add(Card.ToString(), Card.ToString());
+
+                                PDLimits.PDLimits.Add_CardToLimited((ushort)Card);
+                            }
+
+                            PDL_LBL_NumOfLimited.Text = SimpleAdder.CardIDs.Count.ToString();
+                            break;
+                    }
+                }
+            }
+            else
+            {
+
+            }
+        }
     }
 
 }
