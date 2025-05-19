@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace PDLimits
@@ -6,9 +7,9 @@ namespace PDLimits
     public static class PDLimits
     {
         private static BinaryReader _Reader;
-        private static List<ushort> _Forbidden;
-        private static List<ushort> _Limited;
-        private static List<ushort> _SemiLimited;
+        private static List<ushort> _Forbidden = [];
+        private static List<ushort> _Limited = [];
+        private static List<ushort> _SemiLimited = [];
 
         private static int _ForbiddenCount;
         private static int _LimitedCount;
@@ -110,6 +111,7 @@ namespace PDLimits
             File.Delete("pd_limits.bin");
             var _Writer = new BinaryWriter(File.Open("pd_limits.bin", FileMode.CreateNew, FileAccess.Write, FileShare.Read));
             _Writer.Write((ushort)_ForbiddenCount);
+
             //Write each value in _Forbidden as a 2 byte value
             for (int i = 0; i < _ForbiddenCount; i++)
             {
@@ -134,7 +136,7 @@ namespace PDLimits
         public static void Add_CardToSemiLimited(ushort CardID)
         {
             _SemiLimited.Add(CardID);
-            _ForbiddenCount++;
+            _SemiLimitedCount++;
         }
 
         public static void Add_CardToForbidden(ushort CardID)
