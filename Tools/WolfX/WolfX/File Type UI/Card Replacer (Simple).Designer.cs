@@ -1,6 +1,6 @@
 ﻿namespace WolfX.WolfX.File_Type_UI
 {
-    partial class Card_Replacer__Simple_
+    partial class SimpleCardAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            YDC_BTN_AddCard = new Button();
-            textBox1 = new TextBox();
+            YDCSimple_BTN_AddCard = new Button();
+            TB_YDCSimple_CardIDs = new TextBox();
             label1 = new Label();
             SuspendLayout();
             // 
-            // YDC_BTN_AddCard
+            // YDCSimple_BTN_AddCard
             // 
-            YDC_BTN_AddCard.Location = new Point(171, 47);
-            YDC_BTN_AddCard.Name = "YDC_BTN_AddCard";
-            YDC_BTN_AddCard.Size = new Size(75, 23);
-            YDC_BTN_AddCard.TabIndex = 0;
-            YDC_BTN_AddCard.Text = "Add Card";
-            YDC_BTN_AddCard.UseVisualStyleBackColor = true;
+            YDCSimple_BTN_AddCard.Location = new Point(171, 47);
+            YDCSimple_BTN_AddCard.Name = "YDCSimple_BTN_AddCard";
+            YDCSimple_BTN_AddCard.Size = new Size(75, 23);
+            YDCSimple_BTN_AddCard.TabIndex = 0;
+            YDCSimple_BTN_AddCard.Text = "Add Card";
+            YDCSimple_BTN_AddCard.UseVisualStyleBackColor = true;
+            YDCSimple_BTN_AddCard.Click += YDCSimple_BTN_AddCard_Click;
             // 
-            // textBox1
+            // TB_YDCSimple_CardIDs
             // 
-            textBox1.Location = new Point(12, 47);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(153, 23);
-            textBox1.TabIndex = 1;
+            TB_YDCSimple_CardIDs.Location = new Point(12, 47);
+            TB_YDCSimple_CardIDs.MaxLength = 65535;
+            TB_YDCSimple_CardIDs.Multiline = true;
+            TB_YDCSimple_CardIDs.Name = "TB_YDCSimple_CardIDs";
+            TB_YDCSimple_CardIDs.ScrollBars = ScrollBars.Vertical;
+            TB_YDCSimple_CardIDs.Size = new Size(153, 74);
+            TB_YDCSimple_CardIDs.TabIndex = 1;
             // 
             // label1
             // 
@@ -57,18 +61,19 @@
             label1.TabIndex = 2;
             label1.Text = "You're able to seperate cards with a comma (\",\")to specify multiple ";
             // 
-            // Card_Replacer__Simple_
+            // SimpleCardAdd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(258, 79);
+            ClientSize = new Size(321, 133);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(YDC_BTN_AddCard);
+            Controls.Add(TB_YDCSimple_CardIDs);
+            Controls.Add(YDCSimple_BTN_AddCard);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Card_Replacer__Simple_";
+            Name = "SimpleCardAdd";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Card Replacer (Simple)";
             ResumeLayout(false);
             PerformLayout();
@@ -76,8 +81,8 @@
 
         #endregion
 
-        private Button YDC_BTN_AddCard;
-        private TextBox textBox1;
+        private Button YDCSimple_BTN_AddCard;
+        private TextBox TB_YDCSimple_CardIDs;
         private Label label1;
     }
 }

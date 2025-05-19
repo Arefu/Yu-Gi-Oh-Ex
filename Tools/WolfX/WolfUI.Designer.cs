@@ -151,10 +151,10 @@ namespace WolfX
             PDL_LimitedCards = new TabPage();
             PDL_LV_LimitedCards = new ListView();
             groupBox15 = new GroupBox();
-            checkBox1 = new CheckBox();
+            PDL_CB_IsUsingSimpleAddBox = new CheckBox();
             button1 = new Button();
             PDL_BTN_RemoveCardFromList = new Button();
-            button3 = new Button();
+            PDL_BTN_AddCardToList = new Button();
             groupBox16 = new GroupBox();
             PDL_CB_UseCardID = new CheckBox();
             PDL_CB_LoadImages = new CheckBox();
@@ -169,6 +169,15 @@ namespace WolfX
             label21 = new Label();
             label23 = new Label();
             Page_CardShopManager = new TabPage();
+            groupBox20 = new GroupBox();
+            button2 = new Button();
+            PACKDEF_BTN_OpenPackDEF = new Button();
+            groupBox19 = new GroupBox();
+            label24 = new Label();
+            label22 = new Label();
+            label15 = new Label();
+            label20 = new Label();
+            label27 = new Label();
             MenuBar = new MenuStrip();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_OpenConfigEditor = new ToolStripMenuItem();
@@ -189,15 +198,6 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            groupBox19 = new GroupBox();
-            label15 = new Label();
-            label20 = new Label();
-            label27 = new Label();
-            label22 = new Label();
-            label24 = new Label();
-            groupBox20 = new GroupBox();
-            button2 = new Button();
-            PACKDEF_BTN_OpenPackDEF = new Button();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -238,9 +238,9 @@ namespace WolfX
             groupBox16.SuspendLayout();
             groupBox17.SuspendLayout();
             Page_CardShopManager.SuspendLayout();
-            MenuBar.SuspendLayout();
-            groupBox19.SuspendLayout();
             groupBox20.SuspendLayout();
+            groupBox19.SuspendLayout();
+            MenuBar.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -1005,6 +1005,7 @@ namespace WolfX
             // 
             STRMAN_LB_CurrentFileStrings.FormattingEnabled = true;
             STRMAN_LB_CurrentFileStrings.HorizontalScrollbar = true;
+            STRMAN_LB_CurrentFileStrings.ItemHeight = 15;
             STRMAN_LB_CurrentFileStrings.Items.AddRange(new object[] { "Strings_STEAM_.BND" });
             STRMAN_LB_CurrentFileStrings.Location = new Point(6, 112);
             STRMAN_LB_CurrentFileStrings.Name = "STRMAN_LB_CurrentFileStrings";
@@ -1451,10 +1452,10 @@ namespace WolfX
             // 
             // groupBox15
             // 
-            groupBox15.Controls.Add(checkBox1);
+            groupBox15.Controls.Add(PDL_CB_IsUsingSimpleAddBox);
             groupBox15.Controls.Add(button1);
             groupBox15.Controls.Add(PDL_BTN_RemoveCardFromList);
-            groupBox15.Controls.Add(button3);
+            groupBox15.Controls.Add(PDL_BTN_AddCardToList);
             groupBox15.Location = new Point(420, 3);
             groupBox15.Name = "groupBox15";
             groupBox15.Size = new Size(200, 100);
@@ -1462,15 +1463,17 @@ namespace WolfX
             groupBox15.TabStop = false;
             groupBox15.Text = "Limiter Tools";
             // 
-            // checkBox1
+            // PDL_CB_IsUsingSimpleAddBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(84, 25);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(109, 19);
-            checkBox1.TabIndex = 6;
-            checkBox1.Text = "Simple Add Box";
-            checkBox1.UseVisualStyleBackColor = true;
+            PDL_CB_IsUsingSimpleAddBox.AutoSize = true;
+            PDL_CB_IsUsingSimpleAddBox.Checked = true;
+            PDL_CB_IsUsingSimpleAddBox.CheckState = CheckState.Checked;
+            PDL_CB_IsUsingSimpleAddBox.Location = new Point(84, 25);
+            PDL_CB_IsUsingSimpleAddBox.Name = "PDL_CB_IsUsingSimpleAddBox";
+            PDL_CB_IsUsingSimpleAddBox.Size = new Size(109, 19);
+            PDL_CB_IsUsingSimpleAddBox.TabIndex = 6;
+            PDL_CB_IsUsingSimpleAddBox.Text = "Simple Add Box";
+            PDL_CB_IsUsingSimpleAddBox.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -1493,15 +1496,16 @@ namespace WolfX
             PDL_BTN_RemoveCardFromList.UseVisualStyleBackColor = true;
             PDL_BTN_RemoveCardFromList.Click += PDL_BTN_RemoveCardFromList_Click;
             // 
-            // button3
+            // PDL_BTN_AddCardToList
             // 
-            button3.Enabled = false;
-            button3.Location = new Point(6, 22);
-            button3.Name = "button3";
-            button3.Size = new Size(72, 25);
-            button3.TabIndex = 2;
-            button3.Text = "Add";
-            button3.UseVisualStyleBackColor = true;
+            PDL_BTN_AddCardToList.Enabled = false;
+            PDL_BTN_AddCardToList.Location = new Point(6, 22);
+            PDL_BTN_AddCardToList.Name = "PDL_BTN_AddCardToList";
+            PDL_BTN_AddCardToList.Size = new Size(72, 25);
+            PDL_BTN_AddCardToList.TabIndex = 2;
+            PDL_BTN_AddCardToList.Text = "Add";
+            PDL_BTN_AddCardToList.UseVisualStyleBackColor = true;
+            PDL_BTN_AddCardToList.Click += PDL_BTN_AddCardToList_Click;
             // 
             // groupBox16
             // 
@@ -1651,6 +1655,95 @@ namespace WolfX
             Page_CardShopManager.Text = "Card Shop Manager";
             Page_CardShopManager.UseVisualStyleBackColor = true;
             // 
+            // groupBox20
+            // 
+            groupBox20.Controls.Add(button2);
+            groupBox20.Controls.Add(PACKDEF_BTN_OpenPackDEF);
+            groupBox20.Location = new Point(214, 6);
+            groupBox20.Name = "groupBox20";
+            groupBox20.Size = new Size(200, 100);
+            groupBox20.TabIndex = 14;
+            groupBox20.TabStop = false;
+            groupBox20.Text = "Pack Def File Handler";
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.Location = new Point(122, 22);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 25);
+            button2.TabIndex = 4;
+            button2.Text = "Save ";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // PACKDEF_BTN_OpenPackDEF
+            // 
+            PACKDEF_BTN_OpenPackDEF.Location = new Point(6, 22);
+            PACKDEF_BTN_OpenPackDEF.Name = "PACKDEF_BTN_OpenPackDEF";
+            PACKDEF_BTN_OpenPackDEF.Size = new Size(72, 25);
+            PACKDEF_BTN_OpenPackDEF.TabIndex = 2;
+            PACKDEF_BTN_OpenPackDEF.Text = "Open ";
+            PACKDEF_BTN_OpenPackDEF.UseVisualStyleBackColor = true;
+            PACKDEF_BTN_OpenPackDEF.Click += PACKDEF_BTN_OpenPackDEF_Click;
+            // 
+            // groupBox19
+            // 
+            groupBox19.Controls.Add(label24);
+            groupBox19.Controls.Add(label22);
+            groupBox19.Controls.Add(label15);
+            groupBox19.Controls.Add(label20);
+            groupBox19.Controls.Add(label27);
+            groupBox19.Location = new Point(8, 6);
+            groupBox19.Name = "groupBox19";
+            groupBox19.Size = new Size(200, 100);
+            groupBox19.TabIndex = 13;
+            groupBox19.TabStop = false;
+            groupBox19.Text = "Series Information";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(133, 40);
+            label24.Name = "label24";
+            label24.Size = new Size(13, 15);
+            label24.TabIndex = 9;
+            label24.Text = "0";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(7, 40);
+            label22.Name = "label22";
+            label22.Size = new Size(103, 15);
+            label22.TabIndex = 8;
+            label22.Text = "Number of Stores:";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(133, 19);
+            label15.Name = "label15";
+            label15.Size = new Size(13, 15);
+            label15.TabIndex = 7;
+            label15.Text = "0";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(6, 19);
+            label20.Name = "label20";
+            label20.Size = new Size(121, 15);
+            label20.TabIndex = 6;
+            label20.Text = "Number of Chapters: ";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(7, 40);
+            label27.Name = "label27";
+            label27.Size = new Size(0, 15);
+            label27.TabIndex = 0;
+            // 
             // MenuBar
             // 
             MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
@@ -1790,95 +1883,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // groupBox19
-            // 
-            groupBox19.Controls.Add(label24);
-            groupBox19.Controls.Add(label22);
-            groupBox19.Controls.Add(label15);
-            groupBox19.Controls.Add(label20);
-            groupBox19.Controls.Add(label27);
-            groupBox19.Location = new Point(8, 6);
-            groupBox19.Name = "groupBox19";
-            groupBox19.Size = new Size(200, 100);
-            groupBox19.TabIndex = 13;
-            groupBox19.TabStop = false;
-            groupBox19.Text = "Series Information";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(133, 19);
-            label15.Name = "label15";
-            label15.Size = new Size(13, 15);
-            label15.TabIndex = 7;
-            label15.Text = "0";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new Point(6, 19);
-            label20.Name = "label20";
-            label20.Size = new Size(121, 15);
-            label20.TabIndex = 6;
-            label20.Text = "Number of Chapters: ";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Location = new Point(7, 40);
-            label27.Name = "label27";
-            label27.Size = new Size(0, 15);
-            label27.TabIndex = 0;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Location = new Point(7, 40);
-            label22.Name = "label22";
-            label22.Size = new Size(103, 15);
-            label22.TabIndex = 8;
-            label22.Text = "Number of Stores:";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new Point(133, 40);
-            label24.Name = "label24";
-            label24.Size = new Size(13, 15);
-            label24.TabIndex = 9;
-            label24.Text = "0";
-            // 
-            // groupBox20
-            // 
-            groupBox20.Controls.Add(button2);
-            groupBox20.Controls.Add(PACKDEF_BTN_OpenPackDEF);
-            groupBox20.Location = new Point(214, 6);
-            groupBox20.Name = "groupBox20";
-            groupBox20.Size = new Size(200, 100);
-            groupBox20.TabIndex = 14;
-            groupBox20.TabStop = false;
-            groupBox20.Text = "Pack Def File Handler";
-            // 
-            // button2
-            // 
-            button2.Enabled = false;
-            button2.Location = new Point(122, 22);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 25);
-            button2.TabIndex = 4;
-            button2.Text = "Save ";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // PACKDEF_BTN_OpenPackDEF
-            // 
-            PACKDEF_BTN_OpenPackDEF.Location = new Point(6, 22);
-            PACKDEF_BTN_OpenPackDEF.Name = "PACKDEF_BTN_OpenPackDEF";
-            PACKDEF_BTN_OpenPackDEF.Size = new Size(72, 25);
-            PACKDEF_BTN_OpenPackDEF.TabIndex = 2;
-            PACKDEF_BTN_OpenPackDEF.Text = "Open ";
-            PACKDEF_BTN_OpenPackDEF.UseVisualStyleBackColor = true;
-            PACKDEF_BTN_OpenPackDEF.Click += PACKDEF_BTN_OpenPackDEF_Click;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1949,11 +1953,11 @@ namespace WolfX
             groupBox17.ResumeLayout(false);
             groupBox17.PerformLayout();
             Page_CardShopManager.ResumeLayout(false);
-            MenuBar.ResumeLayout(false);
-            MenuBar.PerformLayout();
+            groupBox20.ResumeLayout(false);
             groupBox19.ResumeLayout(false);
             groupBox19.PerformLayout();
-            groupBox20.ResumeLayout(false);
+            MenuBar.ResumeLayout(false);
+            MenuBar.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2089,10 +2093,10 @@ namespace WolfX
         private ToolStripSeparator toolStripSeparator4;
         private TabPage Page_PDLimitsManager;
         private GroupBox groupBox15;
-        private CheckBox checkBox1;
+        private CheckBox PDL_CB_IsUsingSimpleAddBox;
         public Button button1;
         public Button PDL_BTN_RemoveCardFromList;
-        private Button button3;
+        private Button PDL_BTN_AddCardToList;
         private GroupBox groupBox16;
         private CheckBox PDL_CB_UseCardID;
         private CheckBox PDL_CB_LoadImages;
