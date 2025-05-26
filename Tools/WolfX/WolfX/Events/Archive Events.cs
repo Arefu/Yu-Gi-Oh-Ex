@@ -48,7 +48,7 @@ namespace WolfX
                     if (ARCHIVE_CB_ShowPreviewImage.Checked)
                     {
                         ARCHIVE_LV_ArchiveItems.Items.Add(Item.Name, Item.Name);
-                        Images.Images.Add(Item.Name, ZIB.Shrink_ImageFromArchive(ZIB.Get_SpecificItemFromArchive(Item.Name)));
+                        Images.Images.Add(Item.Name, Image.FromStream(ZIB.Get_SpecificItemFromArchive(Item.Name)));
                     }
                     else
                     {
