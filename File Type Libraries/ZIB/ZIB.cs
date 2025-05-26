@@ -86,16 +86,6 @@ namespace Types
                 return null;
         }
 
-        public static Image Shrink_ImageFromArchive(MemoryStream Item)
-        {
-            Bitmap bmp = new Bitmap(64, 64);
-            using (Graphics g = Graphics.FromImage(bmp))
-            {
-                g.DrawImage(Image.FromStream(Item), new Rectangle(0, 0, bmp.Width, bmp.Height));
-            }
-            return bmp;
-        }
-
 
         public static MemoryStream Get_CardImageFromDefaultArchiveByYDCID(string Item)
         {
