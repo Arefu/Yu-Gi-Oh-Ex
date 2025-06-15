@@ -90,14 +90,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourAttach(&(PVOID&)LoadArchive, _hLoadArchive);
 		DetourAttach(&(PVOID&)original_fopen, hooked_fopen);
 		DetourAttach(&(PVOID&)original_fopen_s, hooked_fopen_s);
-		std::cout << "FREAD: " << original_fread << std::endl;
-		DetourAttach(&(PVOID&)original_fread, hooked_fread);
 		
 		if (GetPrivateProfileIntA("Yu-Gi-Oh-BetterLoad", "AllowMultiInstance", 0, ".\\Config.ini") == 1)
 			DetourAttach(&(PVOID&)pCreateMutex, HookCreateMutex);
 		
 		DetourTransactionCommit();
-		std::cout << "FREAD: " << original_fread << std::endl;
 
 		break;
 	}
