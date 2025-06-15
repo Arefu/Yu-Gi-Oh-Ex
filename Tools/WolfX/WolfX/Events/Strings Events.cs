@@ -92,7 +92,7 @@ namespace WolfX
             if (CREDITS_CheckB_IsCredit.Checked)
                 STRMAN_TB_NewStringValue.Text = Credits[STRMAN_LB_CurrentFileStrings.SelectedIndex];
             else
-                STRMAN_TB_NewStringValue.Text = BNDStrings[STRMAN_LB_CurrentFileStrings.SelectedIndex].String;
+                STRMAN_TB_NewStringValue.Text = BNDStrings.First(Item => Item.String == STRMAN_LB_CurrentFileStrings.SelectedItem.ToString()).String;
 
             return;
         }
@@ -113,34 +113,37 @@ namespace WolfX
         private void STRMAN_BTN_Search_Click(object sender, EventArgs e)
         {
             if (BNDStrings == null || BNDStrings.Count == 0)
-            {
                 return;
-            }
-
-            if (STRMAN_TB_Search.Text == null || STRMAN_TB_Search.Text == "")
-            {
-                STRMAN_LB_CurrentFileStrings.Items.Clear();
-                foreach (var String in BNDStrings)
-                {
-                    STRMAN_LB_CurrentFileStrings.Items.Add(String.String);
-                }
-                return;
-            }
 
             STRMAN_LB_CurrentFileStrings.Items.Clear();
 
-            var searchResults = BNDStrings
-            .Where(String => {
-                if (STRMAN_CheckB_CaseSensitive.Checked)
-                    return String.String.Contains(STRMAN_TB_Search.Text);
-                else
-                    return String.String.Contains(STRMAN_TB_Search.Text, StringComparison.OrdinalIgnoreCase);
-            })
-            .ToList();
+            string searchText = STRMAN_TB_Search.Text;
+            bool caseSensitive = STRMAN_CheckB_CaseSensitive.Checked;
 
-            foreach (var String in searchResults)
+            foreach (var str in BNDStrings)
             {
-                STRMAN_LB_CurrentFileStrings.Items.Add(String.String);
+                string s = str.String;
+
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    STRMAN_LB_CurrentFileStrings.Items.Add(s);
+                }
+                else
+                {
+                    if (s == null)
+                        continue;
+
+                    if (caseSensitive)
+                    {
+                        if (s.Contains(searchText))
+                            STRMAN_LB_CurrentFileStrings.Items.Add(s);
+                    }
+                    else
+                    {
+                        if (s.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
+                            STRMAN_LB_CurrentFileStrings.Items.Add(s);
+                    }
+                }
             }
         }
     }
