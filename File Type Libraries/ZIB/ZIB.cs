@@ -5,19 +5,13 @@ using Windows.Graphics.Imaging;
 
 namespace Types
 {
-    public class ZIB_Item
+    public class ZIB_Item(long Start, long Size, string Name)
     {
-        public long Start;
-        public long Size;
-        public string Name;
-
-        public ZIB_Item(long Start, long Size, string Name)
-        {
-            this.Start = Start;
-            this.Size = Size;
-            this.Name = Name;
-        }
+        public long Start = Start;
+        public long Size = Size;
+        public string Name = Name;
     }
+
     public static class ZIB
     {
 
