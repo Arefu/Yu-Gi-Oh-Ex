@@ -260,7 +260,7 @@ namespace WolfX
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
             WolfX_TabManager.SelectedIndex = 0;
-            WolfX_TabManager.Size = new Size(659, 647);
+            WolfX_TabManager.Size = new Size(1264, 657);
             WolfX_TabManager.TabIndex = 0;
             // 
             // Page_CardManager
@@ -272,7 +272,7 @@ namespace WolfX
             Page_CardManager.Location = new Point(4, 24);
             Page_CardManager.Name = "Page_CardManager";
             Page_CardManager.Padding = new Padding(3);
-            Page_CardManager.Size = new Size(651, 619);
+            Page_CardManager.Size = new Size(1256, 629);
             Page_CardManager.TabIndex = 0;
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@ namespace WolfX
             // 
             groupBox18.Controls.Add(textBox2);
             groupBox18.Controls.Add(textBox1);
-            groupBox18.Location = new Point(334, 409);
+            groupBox18.Location = new Point(334, 238);
             groupBox18.Name = "groupBox18";
             groupBox18.Size = new Size(303, 202);
             groupBox18.TabIndex = 6;
@@ -307,7 +307,7 @@ namespace WolfX
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
-            groupBox6.Location = new Point(334, 249);
+            groupBox6.Location = new Point(660, 15);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
             groupBox6.TabIndex = 5;
@@ -541,7 +541,7 @@ namespace WolfX
             Page_ZibManager.Location = new Point(4, 24);
             Page_ZibManager.Name = "Page_ZibManager";
             Page_ZibManager.Padding = new Padding(3);
-            Page_ZibManager.Size = new Size(651, 619);
+            Page_ZibManager.Size = new Size(1256, 629);
             Page_ZibManager.TabIndex = 1;
             Page_ZibManager.Text = "Archive Manager";
             Page_ZibManager.UseVisualStyleBackColor = true;
@@ -602,11 +602,11 @@ namespace WolfX
             // 
             // ARCHIVE_LV_ArchiveItems
             // 
-            ARCHIVE_LV_ArchiveItems.Location = new Point(8, 112);
+            ARCHIVE_LV_ArchiveItems.Location = new Point(8, 134);
             ARCHIVE_LV_ArchiveItems.MultiSelect = false;
             ARCHIVE_LV_ArchiveItems.Name = "ARCHIVE_LV_ArchiveItems";
             ARCHIVE_LV_ArchiveItems.ShowGroups = false;
-            ARCHIVE_LV_ArchiveItems.Size = new Size(637, 496);
+            ARCHIVE_LV_ArchiveItems.Size = new Size(1240, 474);
             ARCHIVE_LV_ArchiveItems.TabIndex = 1;
             ARCHIVE_LV_ArchiveItems.UseCompatibleStateImageBehavior = false;
             ARCHIVE_LV_ArchiveItems.MouseDoubleClick += ARCHIVE_LV_ArchiveItems_MouseDoubleClick;
@@ -686,7 +686,7 @@ namespace WolfX
             Page_DFYMOOManager.Location = new Point(4, 24);
             Page_DFYMOOManager.Name = "Page_DFYMOOManager";
             Page_DFYMOOManager.Padding = new Padding(3);
-            Page_DFYMOOManager.Size = new Size(651, 619);
+            Page_DFYMOOManager.Size = new Size(1256, 629);
             Page_DFYMOOManager.TabIndex = 2;
             Page_DFYMOOManager.Text = "DFYMOO Manager";
             Page_DFYMOOManager.UseVisualStyleBackColor = true;
@@ -790,7 +790,7 @@ namespace WolfX
             DFYMOO_ItemList.Location = new Point(6, 112);
             DFYMOO_ItemList.MultiSelect = false;
             DFYMOO_ItemList.Name = "DFYMOO_ItemList";
-            DFYMOO_ItemList.Size = new Size(639, 496);
+            DFYMOO_ItemList.Size = new Size(1242, 496);
             DFYMOO_ItemList.TabIndex = 5;
             DFYMOO_ItemList.UseCompatibleStateImageBehavior = false;
             DFYMOO_ItemList.View = View.List;
@@ -881,7 +881,7 @@ namespace WolfX
             Page_ANIMLISTManager.Controls.Add(ANIM_GB_Info);
             Page_ANIMLISTManager.Location = new Point(4, 24);
             Page_ANIMLISTManager.Name = "Page_ANIMLISTManager";
-            Page_ANIMLISTManager.Size = new Size(651, 619);
+            Page_ANIMLISTManager.Size = new Size(1256, 629);
             Page_ANIMLISTManager.TabIndex = 3;
             Page_ANIMLISTManager.Text = "Animlist Manager";
             Page_ANIMLISTManager.UseVisualStyleBackColor = true;
@@ -890,7 +890,7 @@ namespace WolfX
             // 
             ANIMS_LV_ItemsInScene.Location = new Point(6, 112);
             ANIMS_LV_ItemsInScene.Name = "ANIMS_LV_ItemsInScene";
-            ANIMS_LV_ItemsInScene.Size = new Size(639, 496);
+            ANIMS_LV_ItemsInScene.Size = new Size(1242, 496);
             ANIMS_LV_ItemsInScene.TabIndex = 6;
             ANIMS_LV_ItemsInScene.UseCompatibleStateImageBehavior = false;
             ANIMS_LV_ItemsInScene.View = View.List;
@@ -968,42 +968,15 @@ namespace WolfX
             Page_BNDManager.Controls.Add(groupBox11);
             Page_BNDManager.Location = new Point(4, 24);
             Page_BNDManager.Name = "Page_BNDManager";
-            Page_BNDManager.Size = new Size(651, 619);
+            Page_BNDManager.Size = new Size(1256, 629);
             Page_BNDManager.TabIndex = 4;
             Page_BNDManager.Text = "Strings Manager";
             Page_BNDManager.UseVisualStyleBackColor = true;
             // 
-            // STRMAN_CheckB_CaseSensitive
-            // 
-            STRMAN_CheckB_CaseSensitive.AutoSize = true;
-            STRMAN_CheckB_CaseSensitive.Location = new Point(84, 144);
-            STRMAN_CheckB_CaseSensitive.Name = "STRMAN_CheckB_CaseSensitive";
-            STRMAN_CheckB_CaseSensitive.Size = new Size(84, 19);
-            STRMAN_CheckB_CaseSensitive.TabIndex = 15;
-            STRMAN_CheckB_CaseSensitive.Text = "Case Sensitive";
-            STRMAN_CheckB_CaseSensitive.UseVisualStyleBackColor = true;
-            // 
-            // STRMAN_BTN_Search
-            // 
-            STRMAN_BTN_Search.Location = new Point(6, 140);
-            STRMAN_BTN_Search.Name = "STRMAN_BTN_Search";
-            STRMAN_BTN_Search.Size = new Size(72, 25);
-            STRMAN_BTN_Search.TabIndex = 14;
-            STRMAN_BTN_Search.Text = "Search";
-            STRMAN_BTN_Search.UseVisualStyleBackColor = true;
-            STRMAN_BTN_Search.Click += STRMAN_BTN_Search_Click;
-            // 
-            // STRMAN_TB_Search
-            // 
-            STRMAN_TB_Search.Location = new Point(6, 112);
-            STRMAN_TB_Search.Name = "STRMAN_TB_Search";
-            STRMAN_TB_Search.Size = new Size(319, 22);
-            STRMAN_TB_Search.TabIndex = 13;
-            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(331, 178);
+            label11.Location = new Point(420, 72);
             label11.Name = "label11";
             label11.Size = new Size(125, 15);
             label11.TabIndex = 12;
@@ -1011,14 +984,14 @@ namespace WolfX
             // 
             // STRMAN_PB_HowFarThroughTheFile
             // 
-            STRMAN_PB_HowFarThroughTheFile.Location = new Point(331, 196);
+            STRMAN_PB_HowFarThroughTheFile.Location = new Point(420, 90);
             STRMAN_PB_HowFarThroughTheFile.Name = "STRMAN_PB_HowFarThroughTheFile";
             STRMAN_PB_HowFarThroughTheFile.Size = new Size(312, 23);
             STRMAN_PB_HowFarThroughTheFile.TabIndex = 11;
             // 
             // STRMAN_TB_NewStringValue
             // 
-            STRMAN_TB_NewStringValue.Location = new Point(331, 130);
+            STRMAN_TB_NewStringValue.Location = new Point(420, 24);
             STRMAN_TB_NewStringValue.Multiline = true;
             STRMAN_TB_NewStringValue.Name = "STRMAN_TB_NewStringValue";
             STRMAN_TB_NewStringValue.Size = new Size(312, 45);
@@ -1028,7 +1001,7 @@ namespace WolfX
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(331, 112);
+            label9.Location = new Point(420, 6);
             label9.Name = "label9";
             label9.Size = new Size(64, 15);
             label9.TabIndex = 9;
@@ -1042,9 +1015,36 @@ namespace WolfX
             STRMAN_LB_CurrentFileStrings.Items.AddRange(new object[] { "Strings_STEAM_.BND" });
             STRMAN_LB_CurrentFileStrings.Location = new Point(6, 171);
             STRMAN_LB_CurrentFileStrings.Name = "STRMAN_LB_CurrentFileStrings";
-            STRMAN_LB_CurrentFileStrings.Size = new Size(319, 445);
+            STRMAN_LB_CurrentFileStrings.Size = new Size(1242, 439);
             STRMAN_LB_CurrentFileStrings.TabIndex = 8;
             STRMAN_LB_CurrentFileStrings.SelectedIndexChanged += STRMAN_LB_CurrentFileStrings_SelectedIndexChanged;
+            // 
+            // STRMAN_TB_Search
+            // 
+            STRMAN_TB_Search.Location = new Point(6, 112);
+            STRMAN_TB_Search.Name = "STRMAN_TB_Search";
+            STRMAN_TB_Search.Size = new Size(319, 23);
+            STRMAN_TB_Search.TabIndex = 13;
+            // 
+            // STRMAN_BTN_Search
+            // 
+            STRMAN_BTN_Search.Location = new Point(6, 140);
+            STRMAN_BTN_Search.Name = "STRMAN_BTN_Search";
+            STRMAN_BTN_Search.Size = new Size(72, 25);
+            STRMAN_BTN_Search.TabIndex = 14;
+            STRMAN_BTN_Search.Text = "Search";
+            STRMAN_BTN_Search.UseVisualStyleBackColor = true;
+            STRMAN_BTN_Search.Click += STRMAN_BTN_Search_Click;
+            // 
+            // STRMAN_CheckB_CaseSensitive
+            // 
+            STRMAN_CheckB_CaseSensitive.AutoSize = true;
+            STRMAN_CheckB_CaseSensitive.Location = new Point(84, 144);
+            STRMAN_CheckB_CaseSensitive.Name = "STRMAN_CheckB_CaseSensitive";
+            STRMAN_CheckB_CaseSensitive.Size = new Size(100, 19);
+            STRMAN_CheckB_CaseSensitive.TabIndex = 15;
+            STRMAN_CheckB_CaseSensitive.Text = "Case Sensitive";
+            STRMAN_CheckB_CaseSensitive.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -1126,7 +1126,7 @@ namespace WolfX
             Page_YDCManager.Location = new Point(4, 24);
             Page_YDCManager.Name = "Page_YDCManager";
             Page_YDCManager.Padding = new Padding(3);
-            Page_YDCManager.Size = new Size(651, 619);
+            Page_YDCManager.Size = new Size(1256, 629);
             Page_YDCManager.TabIndex = 5;
             Page_YDCManager.Text = "YDC Manager";
             Page_YDCManager.UseVisualStyleBackColor = true;
@@ -1402,7 +1402,7 @@ namespace WolfX
             Page_PDLimitsManager.Location = new Point(4, 24);
             Page_PDLimitsManager.Name = "Page_PDLimitsManager";
             Page_PDLimitsManager.Padding = new Padding(3);
-            Page_PDLimitsManager.Size = new Size(651, 619);
+            Page_PDLimitsManager.Size = new Size(1256, 629);
             Page_PDLimitsManager.TabIndex = 6;
             Page_PDLimitsManager.Text = "Status Editor";
             Page_PDLimitsManager.UseVisualStyleBackColor = true;
@@ -1415,7 +1415,7 @@ namespace WolfX
             tabControl2.Location = new Point(8, 112);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(635, 496);
+            tabControl2.Size = new Size(1240, 496);
             tabControl2.TabIndex = 15;
             // 
             // PDL_ForbiddenCards
@@ -1424,7 +1424,7 @@ namespace WolfX
             PDL_ForbiddenCards.Location = new Point(4, 24);
             PDL_ForbiddenCards.Name = "PDL_ForbiddenCards";
             PDL_ForbiddenCards.Padding = new Padding(3);
-            PDL_ForbiddenCards.Size = new Size(627, 468);
+            PDL_ForbiddenCards.Size = new Size(1232, 468);
             PDL_ForbiddenCards.TabIndex = 0;
             PDL_ForbiddenCards.Text = "Forbidden";
             PDL_ForbiddenCards.UseVisualStyleBackColor = true;
@@ -1434,7 +1434,7 @@ namespace WolfX
             PDL_LV_ForbiddenCards.Dock = DockStyle.Fill;
             PDL_LV_ForbiddenCards.Location = new Point(3, 3);
             PDL_LV_ForbiddenCards.Name = "PDL_LV_ForbiddenCards";
-            PDL_LV_ForbiddenCards.Size = new Size(621, 462);
+            PDL_LV_ForbiddenCards.Size = new Size(1226, 462);
             PDL_LV_ForbiddenCards.TabIndex = 0;
             PDL_LV_ForbiddenCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_ForbiddenCards.View = View.List;
@@ -1683,7 +1683,7 @@ namespace WolfX
             Page_CardShopManager.Location = new Point(4, 24);
             Page_CardShopManager.Name = "Page_CardShopManager";
             Page_CardShopManager.Padding = new Padding(3);
-            Page_CardShopManager.Size = new Size(651, 619);
+            Page_CardShopManager.Size = new Size(1256, 629);
             Page_CardShopManager.TabIndex = 7;
             Page_CardShopManager.Text = "Card Shop Manager";
             Page_CardShopManager.UseVisualStyleBackColor = true;
@@ -1782,7 +1782,7 @@ namespace WolfX
             MenuBar.Items.AddRange(new ToolStripItem[] { toolsToolStripMenuItem });
             MenuBar.Location = new Point(0, 0);
             MenuBar.Name = "MenuBar";
-            MenuBar.Size = new Size(659, 24);
+            MenuBar.Size = new Size(1264, 24);
             MenuBar.TabIndex = 1;
             MenuBar.Text = "menuStrip1";
             // 
@@ -1920,11 +1920,10 @@ namespace WolfX
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(659, 671);
+            ClientSize = new Size(1264, 681);
             Controls.Add(WolfX_TabManager);
             Controls.Add(MenuBar);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = MenuBar;
             MaximizeBox = false;
             Name = "WolfUI";
