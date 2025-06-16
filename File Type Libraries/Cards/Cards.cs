@@ -19,8 +19,8 @@ namespace Types
 
         public enum CARD_Type
         {
-            Default = 0, Effect = 1, Fusion = 2, FusionEffect = 3, Ritual = 4, RitualEffect = 5, ToonEffect = 6, SpiritEffect = 7, UnionEffect = 8, GeminiEffect = 9, Token = 10,
-            God = 11, Dummy = 12, Spell = 13, Trap = 14, Tuner = 15, TunerEffect = 16, Synchro = 17, SynchroEffect = 18, SynchroTunerEffect = 19, DarkTunerEffect = 20, DarkSynchroEffect = 21,
+            Default = 0, Effect = 1, Fusion = 2, Normal = 3, Ritual = 4, RitualEffect = 5, ToonEffect = 6, SpiritEffect = 7, UnionEffect = 8, GeminiEffect = 9, Token = 10,
+            God = 11, Dummy = 12, Spell = 13, Trap = 14, FusionEffect = 15, TunerEffect = 16, Synchro = 17, SynchroEffect = 18, SynchroTunerEffect = 19, DarkTunerEffect = 20, DarkSynchroEffect = 21,
             Xyz = 22, XyzEffect = 23, FlipEffect = 24, Pendulum = 25, PendulumEffect = 26, EffectSp = 27, ToonEffectSp = 28, SpiritEffectSp = 29, TunerEffectSp = 30, DarkTunerEffectSp = 31,
             FlipTunerEffect = 32, PendulumTunerEffect = 33, XyzPendulumEffect = 34, PendulumFlipEffect = 35, SynchoPendulumEffect = 36, UnionTunerEffect = 37, RitualSpiritEffect = 38,
             Underscores = 39, AnyTuner = 40, AnyFusion = 41, AnyRitual = 42, Link = 43, AnyFlip = 44
@@ -29,6 +29,40 @@ namespace Types
             //AnySynchro = 38,
             //AnyXyz = 39,
             //AnyPendulum = 43,
+        }
+
+        public enum CARD_Kind
+        {
+            Default = -1,
+            Normal = 0,
+            Effect = 1,
+            Fusion = 2,
+            Fusion_Effect = 3,
+            Ritual = 4,
+            Ritual_Effect = 5,
+            Toon = 6,
+            Spirit = 7,
+            Union = 8,
+            Gemini = 9,
+            Token = 10,
+            //11?
+            //12?
+            Spell = 13,
+            Trap = 14,
+            Tuner = 15,
+            Tuner_Effect = 16,
+            Synchro = 17,
+            Synchro_Effect = 18,
+            Synchro_Tuner_Effect = 19,
+            //20?
+            //21?
+            Xyz = 23,
+            Flip_Effect = 24,
+            Pendulum = 25,
+            Pendulum_Effect = 26,
+            SpecialSummoned_Effect = 27,
+            Toon_Effect = 28,
+            Spirit_Effect = 29,
         }
     }
 
@@ -45,12 +79,12 @@ namespace Types
         public int ID;
 
         public int Ico;
-        public int Kind;
         public int SecondUnk;
 
         public byte PEND_Scale1;
         public byte PEND_Scale2;
 
+        public CARDS_INFO.CARD_Kind Kind;
         public CARDS_INFO.CARD_Attribute Attribute;
         public CARDS_INFO.CARD_Type Type;
 
@@ -202,11 +236,11 @@ namespace Types
                     Card.Defense = -1;
 
             
-                Card.Kind = Second[Kind];
+                Card.Kind = (CARDS_INFO.CARD_Kind)Second[Kind];
                 Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
                 Card.Level = (byte)Second[MonsterLevel];
                 Card.Ico = Second[Ico];
-                Card.Type = (CARDS_INFO.CARD_Type)Second[Kind];
+                Card.Type = (CARDS_INFO.CARD_Type)Second[Type];
                 Card.PEND_Scale1 = (byte)Second[LeftScale];
                 Card.PEND_Scale2 = (byte)Second[RightScale];
 
@@ -215,72 +249,48 @@ namespace Types
 
                 Cards.Add(Card);
             } while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
-
         }
 
         public static void SaveCardInfo()
         {
-            if(Ready != true)
+            if (!Ready)
                 return;
 
-            //Setup the Binary Writers
-            using var NameWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Name_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            using var DescWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Desc_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            using var IndxWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Indx_File).Name, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            NameWriter.BaseStream.Position = 0x4;
-            DescWriter.BaseStream.Position = 0x4;
+            using var NameWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Name_File).Name, FileMode.Create, FileAccess.Write, FileShare.Write));
+            using var DescWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Desc_File).Name, FileMode.Create, FileAccess.Write, FileShare.Write));
+            using var IndxWriter = new BinaryWriter(File.Open(new FileInfo(CARD_Indx_File).Name, FileMode.Create, FileAccess.Write, FileShare.Write));
 
-            bool FirstPass = true;
+            // Reserve 4 bytes at start, just like loader assumes
+            NameWriter.Seek(0x4, SeekOrigin.Begin);
+            DescWriter.Seek(0x4, SeekOrigin.Begin);
 
-            PropWriter = new BinaryWriter(File.Open("CARD_Prop.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            foreach (var Card in Cards)
+            foreach (var card in Cards)
             {
-                BitVector32 bit1 = new BitVector32(Card.First);
-                BitVector32.Section bit1_mrk = BitVector32.CreateSection(16383);// offset 0, mask 16383 (0x3FFF)
-                BitVector32.Section bit1_attack = BitVector32.CreateSection(511, bit1_mrk);// offset 14, mask 511 (0x1FF)
-                BitVector32.Section bit1_defence = BitVector32.CreateSection(511, bit1_attack);// offset 23, mask 511 (0x1FF)
-                                                                                               // All bits used
+                uint nameOffset = (uint)NameWriter.BaseStream.Position;
+                WriteNullTerminatedUnicode(NameWriter, card.Name);
 
-                BitVector32 bit2 = new BitVector32(Card.Second);
-                BitVector32.Section bit2_exist = BitVector32.CreateSection(1);// offset 0, mask 1 (0x1)
-                BitVector32.Section bit2_kind = BitVector32.CreateSection(63, bit2_exist);// offset 1, mask 63 (0x3F)
-                BitVector32.Section bit2_attr = BitVector32.CreateSection(15, bit2_kind);// offset 7, mask 15 (0xF)
-                BitVector32.Section bit2_level = BitVector32.CreateSection(15, bit2_attr);// offset 11, mask 15 (0xF)
-                BitVector32.Section bit2_icon = BitVector32.CreateSection(7, bit2_level);// offset 15, mask 7 (0x7)
-                BitVector32.Section bit2_type = BitVector32.CreateSection(31, bit2_icon);// offset 18, mask 31 (0x1F)
-                BitVector32.Section bit2_scaleL = BitVector32.CreateSection(15, bit2_type);// offset 23, mask 15 (0xF)
-                BitVector32.Section bit2_scaleR = BitVector32.CreateSection(15, bit2_scaleL);// offset 27, mask 15 (0xF)
+                uint descOffset = (uint)DescWriter.BaseStream.Position;
+                WriteNullTerminatedUnicode(DescWriter, card.Desc);
 
-                BitVector32.Section bit2_unused = BitVector32.CreateSection(1, bit2_scaleR);// offset 31, mask 1
-
-                bit1[bit1_mrk] = Card.ID;
-                bit1[bit1_attack] = Card.Attack / 10;
-                bit1[bit1_defence] = Card.Defense / 10;
-
-                bit2[bit2_exist] = Card.SecondUnk;
-                bit2[bit2_kind] = Card.Kind;
-                bit2[bit2_attr] = (int)Card.Attribute;
-                bit2[bit2_level] = Card.Level;
-                bit2[bit2_icon] = Card.Ico;
-                bit2[bit2_type] = (int)Card.Type;
-                bit2[bit2_scaleL] = Card.PEND_Scale1;
-                bit2[bit2_scaleR] = Card.PEND_Scale2;
-                bit2[bit2_unused] = 0;
-
-                PropWriter.Write((uint)bit1.Data);
-                PropWriter.Write((uint)bit2.Data);
+                IndxWriter.Write(nameOffset);
+                IndxWriter.Write(descOffset);
             }
         }
 
+        private static void WriteNullTerminatedUnicode(BinaryWriter writer, string value)
+        {
+            var encoded = Encoding.Unicode.GetBytes(value);
+            writer.Write(encoded);
+            writer.Write((ushort)0); // Null terminator
+        }
         public static void SaveCardProps()
         {
-            if (Ready != true)
+            if (!Ready)
                 return;
 
-            using var PropWriter = new BinaryWriter(File.Open("CARD_Prop.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
-            PropWriter.BaseStream.Position = 0x0;
+            using var PropWriter = new BinaryWriter(File.Open("CARD_Prop.bin", FileMode.Create, FileAccess.Write, FileShare.Write));
 
-            foreach (var Card in Cards)
+            foreach (var card in Cards)
             {
                 var First = new BitVector32();
                 var Second = new BitVector32();
@@ -298,22 +308,21 @@ namespace Types
                 var LeftScale = BitVector32.CreateSection(15, Type);
                 var RightScale = BitVector32.CreateSection(15, LeftScale);
                 var bit2_unused = BitVector32.CreateSection(1, RightScale);
-                // Populate First
-                First[CardId] = Card.ID;
-                First[CardAtk] = Card.Attack / 10;
-                First[CardDef] = Card.Defense / 10;
 
-                // Populate Second
-                Second[SecondQuadUnk] = Card.SecondUnk;
-                Second[Kind] = (int)Card.Type;
-                Second[Attribute] = (int)Card.Attribute;
-                Second[MonsterLevel] = Card.Level;
-                Second[Ico] = Card.Ico;
-                Second[Type] = (int)Card.Type;
-                Second[LeftScale] = Card.PEND_Scale1;
-                Second[RightScale] = Card.PEND_Scale2;
+                First[CardId] = card.ID;
+                First[CardAtk] = card.Attack / 10;
+                First[CardDef] = card.Defense / 10;
+
+                Second[SecondQuadUnk] = card.SecondUnk;
+                Second[Kind] = (int)card.Kind;
+                Second[Attribute] = (int)card.Attribute;
+                Second[MonsterLevel] = card.Level;
+                Second[Ico] = card.Ico;
+                Second[Type] = (int)card.Type;
+                Second[LeftScale] = card.PEND_Scale1;
+                Second[RightScale] = card.PEND_Scale2;
                 Second[bit2_unused] = 0;
-                // Write to file
+
                 PropWriter.Write((uint)First.Data);
                 PropWriter.Write((uint)Second.Data);
             }
