@@ -10,7 +10,7 @@ namespace WolfX
         {
             var File = String.Empty;
             if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedFile($"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin", "Open Cards Indx File");
+                File = Utility.Get_UserSelectedFile("Open Cards Indx File", $"{State.Language} Card Indx File|CARD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin");
             else
                 File = $"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin";
 
