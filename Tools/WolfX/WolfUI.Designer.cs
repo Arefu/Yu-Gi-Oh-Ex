@@ -1445,7 +1445,7 @@ namespace WolfX
             PDL_SemiLimitedCards.Controls.Add(PDL_LV_SemiLimitedCards);
             PDL_SemiLimitedCards.Location = new Point(4, 24);
             PDL_SemiLimitedCards.Name = "PDL_SemiLimitedCards";
-            PDL_SemiLimitedCards.Size = new Size(627, 468);
+            PDL_SemiLimitedCards.Size = new Size(1232, 468);
             PDL_SemiLimitedCards.TabIndex = 2;
             PDL_SemiLimitedCards.Text = "Semi-Limited";
             PDL_SemiLimitedCards.UseVisualStyleBackColor = true;
@@ -1455,7 +1455,7 @@ namespace WolfX
             PDL_LV_SemiLimitedCards.Dock = DockStyle.Fill;
             PDL_LV_SemiLimitedCards.Location = new Point(0, 0);
             PDL_LV_SemiLimitedCards.Name = "PDL_LV_SemiLimitedCards";
-            PDL_LV_SemiLimitedCards.Size = new Size(627, 468);
+            PDL_LV_SemiLimitedCards.Size = new Size(1232, 468);
             PDL_LV_SemiLimitedCards.TabIndex = 1;
             PDL_LV_SemiLimitedCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_SemiLimitedCards.View = View.List;
@@ -1467,7 +1467,7 @@ namespace WolfX
             PDL_LimitedCards.Location = new Point(4, 24);
             PDL_LimitedCards.Name = "PDL_LimitedCards";
             PDL_LimitedCards.Padding = new Padding(3);
-            PDL_LimitedCards.Size = new Size(627, 468);
+            PDL_LimitedCards.Size = new Size(1232, 468);
             PDL_LimitedCards.TabIndex = 1;
             PDL_LimitedCards.Text = "Limited";
             PDL_LimitedCards.UseVisualStyleBackColor = true;
@@ -1477,7 +1477,7 @@ namespace WolfX
             PDL_LV_LimitedCards.Dock = DockStyle.Fill;
             PDL_LV_LimitedCards.Location = new Point(3, 3);
             PDL_LV_LimitedCards.Name = "PDL_LV_LimitedCards";
-            PDL_LV_LimitedCards.Size = new Size(621, 462);
+            PDL_LV_LimitedCards.Size = new Size(1226, 462);
             PDL_LV_LimitedCards.TabIndex = 1;
             PDL_LV_LimitedCards.UseCompatibleStateImageBehavior = false;
             PDL_LV_LimitedCards.View = View.List;
