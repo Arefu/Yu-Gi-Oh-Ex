@@ -1,4 +1,5 @@
 ﻿using Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace WolfX
 {
@@ -33,9 +34,20 @@ namespace WolfX
 
             CARDS_CB_CardName.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
-            CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
+            CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
         }
+
+        private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
+        {
+
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Name = CARDS_CB_CardName.Text;
+            }
+        }
+
         private void CARDS_CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_CardName.SelectedIndex == -1)
@@ -85,9 +97,9 @@ namespace WolfX
 
             CARDS_CB_CardName.SelectedIndexChanged -= CARDS_CB_CardName_SelectedIndexChanged;
 
-            var SelectedCard = CARDS_Cards.Cards.Where(Card => Card.ID == int.Parse(CARDS_CB_CardID.Text)).First();
+            var SelectedCard = CARDS_Cards.Cards.Where(Card => Card.ID == int.Parse(CARDS_CB_CardID.Text)).FirstOrDefault();
             CARDS_CB_CardName.Text = SelectedCard.Name;
-            CARDS_CB_CardTypes.Text = SelectedCard.Type.ToString();
+            CARDS_CB_CardTypes.Text = SelectedCard.Kind.ToString();
             CARDS_CB_CardAttribute.Text = SelectedCard.Attribute.ToString();
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
@@ -130,22 +142,22 @@ namespace WolfX
 
         private void CARDS_UpdateInternalListWithProperties()
         {
-            var previousCard = CARDS_Cards.Cards.FirstOrDefault(card => card.Name == CARDS_CB_CardName.Items[PREVIOUS_INDEX].ToString());
+            var previousCard = CARDS_Cards.Cards.FirstOrDefault(card => card.Name == CARDS_CB_CardName?.Items?[PREVIOUS_INDEX].ToString());
             if (previousCard != null)
             {
                 previousCard.ID = int.Parse(CARDS_CB_CardID.Items[PREVIOUS_INDEX].ToString());
-                previousCard.Type = (CARDS_INFO.CARD_Type)Enum.Parse(typeof(CARDS_INFO.CARD_Type), CARDS_CB_CardTypes.Text);
+                previousCard.Kind = (CARDS_INFO.CARD_Kind)Enum.Parse(typeof(CARDS_INFO.CARD_Kind), CARDS_CB_CardTypes.Text);
                 previousCard.Attribute = (CARDS_INFO.CARD_Attribute)Enum.Parse(typeof(CARDS_INFO.CARD_Attribute), CARDS_CB_CardAttribute.Text);
                 previousCard.Level = int.Parse(CARDS_Nud_CardLevel.Text);
                 previousCard.Desc = CARDS_TB_CardDesc.Text;
                 previousCard.Attack = TB_CardAtk.Text == "?" ? -1 : int.Parse(TB_CardAtk.Text);
                 previousCard.Defense = TB_CardDef.Text == "?" ? -1 : int.Parse(TB_CardDef.Text);
-            }
 
-            var index = CARDS_Cards.Cards.FindIndex(card => card.ID == previousCard.ID);
-            if (index != -1)
-            {
-                CARDS_Cards.Cards[index] = previousCard;
+                var index = CARDS_Cards.Cards.FindIndex(card => card.ID == previousCard.ID);
+                if (index != -1)
+                {
+                    CARDS_Cards.Cards[index] = previousCard;
+                }
             }
         }
 
