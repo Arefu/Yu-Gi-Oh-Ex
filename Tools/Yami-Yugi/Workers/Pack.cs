@@ -36,7 +36,7 @@ namespace Yami_Yugi.Workers
             {
                 var CurrentFileName = FilesToPack?.First(File => File.Contains(Item));
 
-                Console.Out.WriteLine($"Packing File: {CurrentFileName}.");
+                Console.Out.WriteLine($"Packing File: {Path.GetFileName(CurrentFileName)}.");
                 var CurrentFileNameLength = CurrentFileName?.Split(new[] { "YGO_2020" }, StringSplitOptions.None)
                     .Last().TrimStart('\\').Length.ToString("x");
                 var CurrentFileSize = new FileInfo($"{CurrentFileName}").Length.ToString("x");
