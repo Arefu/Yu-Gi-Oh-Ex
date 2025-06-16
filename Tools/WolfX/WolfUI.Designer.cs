@@ -481,6 +481,7 @@ namespace WolfX
             CARDS_CB_CardName.Size = new Size(305, 23);
             CARDS_CB_CardName.TabIndex = 7;
             CARDS_CB_CardName.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
+            CARDS_CB_CardName.TextChanged += CARDS_CB_CardName_TextChanged;
             // 
             // TB_CardDef
             // 
