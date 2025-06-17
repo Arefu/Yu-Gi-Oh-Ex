@@ -54,8 +54,8 @@ namespace WolfX
             label3 = new Label();
             groupBox1 = new GroupBox();
             CARDS_CB_CardName = new ComboBox();
-            TB_CardDef = new TextBox();
-            TB_CardAtk = new TextBox();
+            CARDS_TB_CardDef = new TextBox();
+            CARDS_TB_CardAtk = new TextBox();
             label2 = new Label();
             label1 = new Label();
             CARDS_TB_CardDesc = new TextBox();
@@ -439,8 +439,8 @@ namespace WolfX
             // groupBox1
             // 
             groupBox1.Controls.Add(CARDS_CB_CardName);
-            groupBox1.Controls.Add(TB_CardDef);
-            groupBox1.Controls.Add(TB_CardAtk);
+            groupBox1.Controls.Add(CARDS_TB_CardDef);
+            groupBox1.Controls.Add(CARDS_TB_CardAtk);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(CARDS_TB_CardDesc);
@@ -464,19 +464,21 @@ namespace WolfX
             CARDS_CB_CardName.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
             CARDS_CB_CardName.TextChanged += CARDS_CB_CardName_TextChanged;
             // 
-            // TB_CardDef
+            // CARDS_TB_CardDef
             // 
-            TB_CardDef.Location = new Point(254, 561);
-            TB_CardDef.Name = "TB_CardDef";
-            TB_CardDef.Size = new Size(57, 23);
-            TB_CardDef.TabIndex = 6;
+            CARDS_TB_CardDef.Location = new Point(254, 561);
+            CARDS_TB_CardDef.Name = "CARDS_TB_CardDef";
+            CARDS_TB_CardDef.Size = new Size(57, 23);
+            CARDS_TB_CardDef.TabIndex = 6;
+            CARDS_TB_CardDef.TextChanged += TB_CardDef_TextChanged;
             // 
-            // TB_CardAtk
+            // CARDS_TB_CardAtk
             // 
-            TB_CardAtk.Location = new Point(50, 563);
-            TB_CardAtk.Name = "TB_CardAtk";
-            TB_CardAtk.Size = new Size(57, 23);
-            TB_CardAtk.TabIndex = 5;
+            CARDS_TB_CardAtk.Location = new Point(50, 563);
+            CARDS_TB_CardAtk.Name = "CARDS_TB_CardAtk";
+            CARDS_TB_CardAtk.Size = new Size(57, 23);
+            CARDS_TB_CardAtk.TabIndex = 5;
+            CARDS_TB_CardAtk.TextChanged += TB_CardAtk_TextChanged;
             // 
             // label2
             // 
@@ -506,6 +508,7 @@ namespace WolfX
             CARDS_TB_CardDesc.ScrollBars = ScrollBars.Vertical;
             CARDS_TB_CardDesc.Size = new Size(305, 154);
             CARDS_TB_CardDesc.TabIndex = 2;
+            CARDS_TB_CardDesc.TextChanged += CARDS_TB_CardDesc_TextChanged;
             // 
             // CARDS_PB_CardPicture
             // 
@@ -2018,8 +2021,8 @@ namespace WolfX
         public TextBox CARDS_TB_CardDesc;
         public PictureBox CARDS_PB_CardPicture;
         public ComboBox CARDS_CB_CardID;
-        public TextBox TB_CardDef;
-        public TextBox TB_CardAtk;
+        public TextBox CARDS_TB_CardDef;
+        public TextBox CARDS_TB_CardAtk;
         public ComboBox CARDS_CB_CardAttribute;
         public NumericUpDown CARDS_Nud_CardLevel;
         public ComboBox CARDS_CB_CardTypes;
