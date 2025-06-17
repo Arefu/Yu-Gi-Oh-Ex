@@ -1,9 +1,5 @@
-﻿using PDLimits;
-using Types;
-using Windows.Devices.Scanners;
-using WolfX.Types;
+﻿using Types;
 using WolfX.WolfX.File_Type_UI;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace WolfX
 {
@@ -172,7 +168,7 @@ namespace WolfX
             }
             else if (PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
             {
-                foreach(ListViewItem i in PDL_LV_SemiLimitedCards.SelectedItems)
+                foreach (ListViewItem i in PDL_LV_SemiLimitedCards.SelectedItems)
                 {
                     PDLimits.PDLimits.Remove_CardFromSemiLimited(Convert.ToUInt16(i.ImageKey));
                     PDL_LV_SemiLimitedCards.Items.Remove(i);
@@ -192,7 +188,7 @@ namespace WolfX
                     switch (tabControl2.SelectedTab.Text)
                     {
                         case "Forbidden":
-                            foreach(var Card in SimpleAdder.CardIDs)
+                            foreach (var Card in SimpleAdder.CardIDs)
                             {
                                 if (PDL_CB_LoadImages.Checked)
                                     Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));

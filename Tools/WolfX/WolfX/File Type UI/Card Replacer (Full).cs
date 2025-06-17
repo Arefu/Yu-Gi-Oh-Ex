@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 using Types;
 
 namespace WolfX.WolfX.File_Type_UI
 {
     public partial class Card_Changer : Form
     {
-       public bool HasLoaded = false;
+        public bool HasLoaded = false;
         public Card_Changer()
-        { 
+        {
             InitializeComponent();
             this.Text = "Card Replacer (Full)";
         }
 
-        
+
         public void LoadCards(CARDS_INFO.CARD_Language Language, string Path)
         {
             HasLoaded = true;
@@ -45,18 +37,18 @@ namespace WolfX.WolfX.File_Type_UI
 
                 }
             }
-                if (CARDS_Cards.Setup_CardBinder($"{Path}\\bin\\CARD_Indx_{Language.ToString()[0]}.bin") == false)
-                {
-                    MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                CARDS_Cards.LoadCardInfo();
-                CARDS_Cards.LoadCardProps();
-
-                CARDREP_CB_NewCardSelector.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
+            if (CARDS_Cards.Setup_CardBinder($"{Path}\\bin\\CARD_Indx_{Language.ToString()[0]}.bin") == false)
+            {
+                MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-        
+
+            CARDS_Cards.LoadCardInfo();
+            CARDS_Cards.LoadCardProps();
+
+            CARDREP_CB_NewCardSelector.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
+        }
+
 
         private void CARDREP_CB_NewCardSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -66,7 +58,7 @@ namespace WolfX.WolfX.File_Type_UI
             var ID = CARDS_Cards.Cards.Where(Card => Card.Name == CARDREP_CB_NewCardSelector.Text).First();
             if (ID != null && ID.ID != 0)
             {
-                
+
             }
 
             CARDREP_TB_ATK.Text = ID.Attack.ToString();

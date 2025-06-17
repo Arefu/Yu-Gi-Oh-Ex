@@ -1,6 +1,4 @@
 ﻿using Types;
-using Windows.Devices.Scanners;
-using WolfX.Types;
 using WolfX.WolfX.File_Type_UI;
 
 namespace WolfX
