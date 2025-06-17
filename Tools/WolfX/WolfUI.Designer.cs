@@ -47,10 +47,8 @@ namespace WolfX
             CARDS_Nud_CardLevel = new NumericUpDown();
             CARDS_CB_CardAttribute = new ComboBox();
             CARDS_CB_CardTypes = new ComboBox();
-            CB_CardImageID = new ComboBox();
             CARDS_CB_CardID = new ComboBox();
             CB_CardLevel = new Label();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -349,16 +347,14 @@ namespace WolfX
             groupBox2.Controls.Add(CARDS_Nud_CardLevel);
             groupBox2.Controls.Add(CARDS_CB_CardAttribute);
             groupBox2.Controls.Add(CARDS_CB_CardTypes);
-            groupBox2.Controls.Add(CB_CardImageID);
             groupBox2.Controls.Add(CARDS_CB_CardID);
             groupBox2.Controls.Add(CB_CardLevel);
-            groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(label3);
             groupBox2.Location = new Point(334, 6);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(320, 226);
+            groupBox2.Size = new Size(320, 163);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Card Information";
@@ -369,31 +365,26 @@ namespace WolfX
             CARDS_Nud_CardLevel.Name = "CARDS_Nud_CardLevel";
             CARDS_Nud_CardLevel.Size = new Size(128, 23);
             CARDS_Nud_CardLevel.TabIndex = 15;
+            CARDS_Nud_CardLevel.ValueChanged += CARDS_Nud_CardLevel_ValueChanged;
             // 
             // CARDS_CB_CardAttribute
             // 
             CARDS_CB_CardAttribute.FormattingEnabled = true;
             CARDS_CB_CardAttribute.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
-            CARDS_CB_CardAttribute.Location = new Point(6, 189);
+            CARDS_CB_CardAttribute.Location = new Point(175, 91);
             CARDS_CB_CardAttribute.Name = "CARDS_CB_CardAttribute";
-            CARDS_CB_CardAttribute.Size = new Size(297, 23);
+            CARDS_CB_CardAttribute.Size = new Size(128, 23);
             CARDS_CB_CardAttribute.TabIndex = 10;
+            CARDS_CB_CardAttribute.SelectedIndexChanged += CARDS_CB_CardAttribute_SelectedIndexChanged;
             // 
             // CARDS_CB_CardTypes
             // 
             CARDS_CB_CardTypes.FormattingEnabled = true;
-            CARDS_CB_CardTypes.Location = new Point(6, 140);
+            CARDS_CB_CardTypes.Location = new Point(6, 91);
             CARDS_CB_CardTypes.Name = "CARDS_CB_CardTypes";
-            CARDS_CB_CardTypes.Size = new Size(297, 23);
+            CARDS_CB_CardTypes.Size = new Size(128, 23);
             CARDS_CB_CardTypes.TabIndex = 9;
-            // 
-            // CB_CardImageID
-            // 
-            CB_CardImageID.FormattingEnabled = true;
-            CB_CardImageID.Location = new Point(6, 91);
-            CB_CardImageID.Name = "CB_CardImageID";
-            CB_CardImageID.Size = new Size(297, 23);
-            CB_CardImageID.TabIndex = 8;
+            CARDS_CB_CardTypes.SelectedIndexChanged += CARDS_CB_CardTypes_SelectedIndexChanged;
             // 
             // CARDS_CB_CardID
             // 
@@ -415,31 +406,21 @@ namespace WolfX
             CB_CardLevel.TabIndex = 5;
             CB_CardLevel.Text = "Card Level";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11F);
-            label6.Location = new Point(6, 68);
-            label6.Name = "label6";
-            label6.Size = new Size(83, 20);
-            label6.TabIndex = 3;
-            label6.Text = "Card Genre";
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(6, 117);
+            label5.Location = new Point(6, 68);
             label5.Name = "label5";
-            label5.Size = new Size(75, 20);
+            label5.Size = new Size(74, 20);
             label5.TabIndex = 2;
-            label5.Text = "Card Type";
+            label5.Text = "Card Kind";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(6, 166);
+            label4.Location = new Point(175, 68);
             label4.Name = "label4";
             label4.Size = new Size(103, 20);
             label4.TabIndex = 1;
@@ -2006,7 +1987,6 @@ namespace WolfX
         private Label label2;
         private Label label1;
         private GroupBox groupBox2;
-        private ComboBox CB_CardImageID;
         private Label CB_CardLevel;
         private Label label5;
         private Label label4;
@@ -2118,7 +2098,6 @@ namespace WolfX
         private Button CARDS_BTN_SaveCard;
         private Button CARDS_BTN_OpenCards;
         private CheckBox YDC_CHKBOX_UseCardID;
-        private Label label6;
         private CheckBox YDC_CB_UseSimpleEditor;
         private ToolStripMenuItem WOLFUI_TOOLITEM_SetPath;
         private Button CARDS_BTN_CloseBinder;
