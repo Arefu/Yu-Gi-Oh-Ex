@@ -13,13 +13,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Restore NuGet packages
-        run: nuget restore Yu-Gi-Oh-EX.sln
+        run: nuget restore WolfX.sln
 
       - name: Set up MSBuild
         uses: microsoft/setup-msbuild@v2
 
       - name: Build solution
-        run: msbuild Yu-Gi-Oh-EX.sln /p:Configuration=Release
+        run: msbuild WolfX.sln /p:Configuration=Release
 
       - name: Zip Binaries folder
         run: Compress-Archive -Path Binaries\* -DestinationPath YuGiOhEX.zip
