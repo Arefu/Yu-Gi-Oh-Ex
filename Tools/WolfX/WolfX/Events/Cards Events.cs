@@ -62,6 +62,30 @@ namespace WolfX
                 card?.Kind = (CARDS_INFO.CARD_Kind)Enum.Parse(typeof(CARDS_INFO.CARD_Kind), CARDS_CB_CardTypes.Text);
             }
         }
+        private void CARDS_TB_CardDesc_TextChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Desc = CARDS_TB_CardDesc.Text;
+            }
+        }
+        private void TB_CardAtk_TextChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Attack = Convert.ToInt32(CARDS_TB_CardAtk.Text);
+            }
+        }
+        private void TB_CardDef_TextChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Defense = Convert.ToInt32(CARDS_TB_CardDef.Text);
+            }
+        }
         private void CARDS_CB_CardAttribute_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedItem is int cardId)
@@ -71,7 +95,7 @@ namespace WolfX
                 foreach(var carder in CARDS_Cards.Cards)
                 {
                     if (carder.ID == 4844)
-                        card.Type = CARDS_INFO.CARD_Type.Spell;
+                        card.Type = CARDS_INFO.CARD_Type.TunerEffect;
                 }
             }
         }
@@ -127,13 +151,13 @@ namespace WolfX
 
             if (SelectedCard.Attack == -1 && SelectedCard.Defense == -1)
             {
-                TB_CardAtk.Text = "?";
-                TB_CardDef.Text = "?";
+                CARDS_TB_CardAtk.Text = "?";
+                CARDS_TB_CardDef.Text = "?";
             }
             else
             {
-                TB_CardAtk.Text = SelectedCard.Attack.ToString();
-                TB_CardDef.Text = SelectedCard.Defense.ToString();
+                CARDS_TB_CardAtk.Text = SelectedCard.Attack.ToString();
+                CARDS_TB_CardDef.Text = SelectedCard.Defense.ToString();
             }
 
             var Obj = ZIB.Get_CardImageFromDefaultArchiveByYDCID(SelectedCard.ID.ToString());
@@ -175,8 +199,8 @@ namespace WolfX
                 previousCard.Attribute = (CARDS_INFO.CARD_Attribute)Enum.Parse(typeof(CARDS_INFO.CARD_Attribute), CARDS_CB_CardAttribute.Text);
                 previousCard.Level = int.Parse(CARDS_Nud_CardLevel.Text);
                 previousCard.Desc = CARDS_TB_CardDesc.Text;
-                previousCard.Attack = TB_CardAtk.Text == "?" ? -1 : int.Parse(TB_CardAtk.Text);
-                previousCard.Defense = TB_CardDef.Text == "?" ? -1 : int.Parse(TB_CardDef.Text);
+                previousCard.Attack = CARDS_TB_CardAtk.Text == "?" ? -1 : int.Parse(CARDS_TB_CardAtk.Text);
+                previousCard.Defense = CARDS_TB_CardDef.Text == "?" ? -1 : int.Parse(CARDS_TB_CardDef.Text);
 
                 var index = CARDS_Cards.Cards.FindIndex(card => card.ID == previousCard.ID);
                 if (index != -1)
