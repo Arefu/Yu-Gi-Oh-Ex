@@ -1,32 +1,46 @@
-name: Build and Zip Release
+name: Build and Release
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
-  build:
+  build-and-release:
     runs-on: windows-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Restore NuGet packages
+        run: nuget restore Yu-Gi-Oh-EX.sln
+
       - name: Set up MSBuild
         uses: microsoft/setup-msbuild@v2
-        
-      - name: Restore NuGet packages
-        run: nuget restore WolfX.sln
-        
-      - name: Build Solution
-        run: msbuild WolfX.sln /p:Configuration=Release
 
-      - name: Zip Binaries Folder
+      - name: Build solution
+        run: msbuild Yu-Gi-Oh-EX.sln /p:Configuration=Release
+
+      - name: Zip Binaries folder
         run: Compress-Archive -Path Binaries\* -DestinationPath YuGiOhEX.zip
-        
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
         with:
-            name: Yu-Gi-Oh-Ex-RC
-            path: YuGiOhEX.zip
-        
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: YuGiOhEX.zip
+          asset_name: YuGiOhEX.zip
+          asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
