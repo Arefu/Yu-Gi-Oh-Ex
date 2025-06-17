@@ -36,9 +36,6 @@ namespace WolfX
         {
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
-            groupBox18 = new GroupBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             groupBox6 = new GroupBox();
             CARDS_BTN_CloseBinder = new Button();
             CARDS_BTN_OpenCards = new Button();
@@ -53,7 +50,7 @@ namespace WolfX
             label4 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            CARDS_CB_CardName = new ComboBox();
+            CARDS_TB_CardName = new TextBox();
             CARDS_TB_CardDef = new TextBox();
             CARDS_TB_CardAtk = new TextBox();
             label2 = new Label();
@@ -199,9 +196,9 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            CARDS_CB_LoadCards = new CheckBox();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
-            groupBox18.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).BeginInit();
@@ -263,7 +260,6 @@ namespace WolfX
             // 
             // Page_CardManager
             // 
-            Page_CardManager.Controls.Add(groupBox18);
             Page_CardManager.Controls.Add(groupBox6);
             Page_CardManager.Controls.Add(groupBox2);
             Page_CardManager.Controls.Add(groupBox1);
@@ -275,37 +271,13 @@ namespace WolfX
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
             // 
-            // groupBox18
-            // 
-            groupBox18.Controls.Add(textBox2);
-            groupBox18.Controls.Add(textBox1);
-            groupBox18.Location = new Point(334, 238);
-            groupBox18.Name = "groupBox18";
-            groupBox18.Size = new Size(303, 202);
-            groupBox18.TabIndex = 6;
-            groupBox18.TabStop = false;
-            groupBox18.Text = "Test Bed";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(32, 68);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(265, 23);
-            textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(32, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(265, 23);
-            textBox1.TabIndex = 0;
-            // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(CARDS_CB_LoadCards);
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
-            groupBox6.Location = new Point(660, 15);
+            groupBox6.Location = new Point(334, 175);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
             groupBox6.TabIndex = 5;
@@ -314,11 +286,11 @@ namespace WolfX
             // 
             // CARDS_BTN_CloseBinder
             // 
-            CARDS_BTN_CloseBinder.Location = new Point(222, 24);
+            CARDS_BTN_CloseBinder.Location = new Point(6, 123);
             CARDS_BTN_CloseBinder.Name = "CARDS_BTN_CloseBinder";
-            CARDS_BTN_CloseBinder.Size = new Size(75, 23);
+            CARDS_BTN_CloseBinder.Size = new Size(107, 25);
             CARDS_BTN_CloseBinder.TabIndex = 2;
-            CARDS_BTN_CloseBinder.Text = "Close";
+            CARDS_BTN_CloseBinder.Text = "Close Cards";
             CARDS_BTN_CloseBinder.UseVisualStyleBackColor = true;
             CARDS_BTN_CloseBinder.Click += CARDS_BTN_CloseBinder_Click;
             // 
@@ -438,7 +410,7 @@ namespace WolfX
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(CARDS_CB_CardName);
+            groupBox1.Controls.Add(CARDS_TB_CardName);
             groupBox1.Controls.Add(CARDS_TB_CardDef);
             groupBox1.Controls.Add(CARDS_TB_CardAtk);
             groupBox1.Controls.Add(label2);
@@ -452,17 +424,14 @@ namespace WolfX
             groupBox1.TabStop = false;
             groupBox1.Text = "Card Preview";
             // 
-            // CARDS_CB_CardName
+            // CARDS_TB_CardName
             // 
-            CARDS_CB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CARDS_CB_CardName.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CARDS_CB_CardName.FormattingEnabled = true;
-            CARDS_CB_CardName.Location = new Point(6, 19);
-            CARDS_CB_CardName.Name = "CARDS_CB_CardName";
-            CARDS_CB_CardName.Size = new Size(305, 23);
-            CARDS_CB_CardName.TabIndex = 7;
-            CARDS_CB_CardName.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
-            CARDS_CB_CardName.TextChanged += CARDS_CB_CardName_TextChanged;
+            CARDS_TB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_TB_CardName.Location = new Point(6, 19);
+            CARDS_TB_CardName.Name = "CARDS_TB_CardName";
+            CARDS_TB_CardName.Size = new Size(305, 23);
+            CARDS_TB_CardName.TabIndex = 7;
+            CARDS_TB_CardName.TextChanged += CARDS_CB_CardName_TextChanged;
             // 
             // CARDS_TB_CardDef
             // 
@@ -1901,6 +1870,18 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // CARDS_CB_LoadCards
+            // 
+            CARDS_CB_LoadCards.AutoSize = true;
+            CARDS_CB_LoadCards.Checked = true;
+            CARDS_CB_LoadCards.CheckState = CheckState.Checked;
+            CARDS_CB_LoadCards.Location = new Point(204, 22);
+            CARDS_CB_LoadCards.Name = "CARDS_CB_LoadCards";
+            CARDS_CB_LoadCards.Size = new Size(93, 19);
+            CARDS_CB_LoadCards.TabIndex = 3;
+            CARDS_CB_LoadCards.Text = "Load Images";
+            CARDS_CB_LoadCards.UseVisualStyleBackColor = true;
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1915,9 +1896,8 @@ namespace WolfX
             Text = "WolfX";
             WolfX_TabManager.ResumeLayout(false);
             Page_CardManager.ResumeLayout(false);
-            groupBox18.ResumeLayout(false);
-            groupBox18.PerformLayout();
             groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).EndInit();
@@ -2026,7 +2006,7 @@ namespace WolfX
         public ComboBox CARDS_CB_CardAttribute;
         public NumericUpDown CARDS_Nud_CardLevel;
         public ComboBox CARDS_CB_CardTypes;
-        public ComboBox CARDS_CB_CardName;
+        public TextBox CARDS_TB_CardName;
         private GroupBox groupBox6;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Pack;
@@ -2135,9 +2115,6 @@ namespace WolfX
         private ListView PDL_LV_SemiLimitedCards;
         private Label PDL_LBL_NumOfSemiLimited;
         private Label label17;
-        private GroupBox groupBox18;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private TabPage Page_CardShopManager;
         private GroupBox groupBox20;
         private CheckBox checkBox2;
@@ -2150,5 +2127,6 @@ namespace WolfX
         private Label label15;
         private Label label20;
         private Label label27;
+        private CheckBox CARDS_CB_LoadCards;
     }
 }
