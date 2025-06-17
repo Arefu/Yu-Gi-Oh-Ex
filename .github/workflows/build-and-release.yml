@@ -12,7 +12,10 @@ jobs:
 
       - name: Set up MSBuild
         uses: microsoft/setup-msbuild@v2
-
+        
+      - name: Restore NuGet packages
+        run: nuget restore WolfX.sln
+        
       - name: Build Solution
         run: msbuild WolfX.sln /p:Configuration=Release
 
