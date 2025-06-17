@@ -40,11 +40,39 @@ namespace WolfX
 
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
         {
-
             if (CARDS_CB_CardID.SelectedItem is int cardId)
             {
                 var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
                 card?.Name = CARDS_CB_CardName.Text;
+            }
+        }
+        private void CARDS_Nud_CardLevel_ValueChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Level = Convert.ToInt32(CARDS_Nud_CardLevel.Value);
+            }
+        }
+        private void CARDS_CB_CardTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Kind = (CARDS_INFO.CARD_Kind)Enum.Parse(typeof(CARDS_INFO.CARD_Kind), CARDS_CB_CardTypes.Text);
+            }
+        }
+        private void CARDS_CB_CardAttribute_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Attribute = (CARDS_INFO.CARD_Attribute)Enum.Parse(typeof(CARDS_INFO.CARD_Attribute), CARDS_CB_CardAttribute.Text);
+                foreach(var carder in CARDS_Cards.Cards)
+                {
+                    if (carder.ID == 4844)
+                        card.Type = CARDS_INFO.CARD_Type.Spell;
+                }
             }
         }
 
@@ -67,17 +95,6 @@ namespace WolfX
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
 
-            if (SelectedCard.Attack == -1 && SelectedCard.Defense == -1)
-            {
-                TB_CardAtk.Text = "?";
-                TB_CardDef.Text = "?";
-            }
-            else
-            {
-                TB_CardAtk.Text = SelectedCard.Attack.ToString();
-                TB_CardDef.Text = SelectedCard.Defense.ToString();
-            }
-
             var Obj = ZIB.Get_CardImageFromDefaultArchiveByYDCID(SelectedCard.ID.ToString());
             if (Obj != null)
                 CARDS_PB_CardPicture.Image = Image.FromStream(Obj);
@@ -85,7 +102,8 @@ namespace WolfX
             CARDS_CB_CardID.SelectedIndexChanged += CARDS_CB_CardID_SelectedIndexChanged;
             PREVIOUS_INDEX = CARDS_CB_CardID.SelectedIndex;
         }
-        private void CARDS_CB_CardID_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void CARDS_CB_CardID_SelectedIndexChanged(object? sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedIndex == -1)
                 return;
@@ -126,10 +144,19 @@ namespace WolfX
             PREVIOUS_INDEX = CARDS_CB_CardID.SelectedIndex;
         }
 
+  
 
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)
         {
             CARDS_Cards.Close_CardBinder();
+
+            CARDS_CB_CardAttribute.Items.Clear();
+            CARDS_CB_CardID.Items.Clear();
+            CARDS_CB_CardName.Items.Clear();
+            CARDS_TB_CardDesc.Clear();
+            CARDS_CB_CardTypes.Items.Clear();
+            CARDS_Nud_CardLevel.ResetText();
+            CARDS_PB_CardPicture.Image = null;
         }
 
         private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
@@ -137,8 +164,6 @@ namespace WolfX
             CARDS_Cards.SaveCardProps();
             CARDS_Cards.SaveCardInfo();
         }
-
-
 
         private void CARDS_UpdateInternalListWithProperties()
         {
