@@ -41,7 +41,7 @@ namespace WolfX
                     ARCHIVE_CB_ShowPreviewImage.Checked = false;
                     ARCHIVE_LV_ArchiveItems.LargeImageList = null;
                 }
-              
+
 
                 foreach (var Item in Items)
                 {

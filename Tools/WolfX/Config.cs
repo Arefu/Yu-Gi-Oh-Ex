@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using System.Text;
+﻿using System.Text;
 
 namespace WolfX.WolfX.File_Type_UI
 {
@@ -10,7 +9,7 @@ namespace WolfX.WolfX.File_Type_UI
         {
             InitializeComponent();
         }
-       
+
         private void Config_Load(object sender, EventArgs e)
         {
             using OpenFileDialog OpenFile = new OpenFileDialog();
@@ -34,7 +33,7 @@ namespace WolfX.WolfX.File_Type_UI
             DisableJanken_CB.Checked = NoJanken == 1;
 
             string pluginPath;
-        
+
             StringBuilder sb = new StringBuilder(255);
             StringBuilder archive = new StringBuilder(255);
             PInvoke.GetPrivateProfileString("Yu-Gi-Oh-GUI", "PluginsPath", "", sb, 255, _Path);
@@ -46,7 +45,7 @@ namespace WolfX.WolfX.File_Type_UI
 
             PInvoke.GetPrivateProfileString("Yu-Gi-Oh-BetterLoad", "Archive", "", archive, 255, _Path);
             Archive_TextBox.Text = archive.ToString();
-           
+
             AllowMultiInstance = PInvoke.GetPrivateProfileInt("Yu-Gi-Oh-BetterLoad", "AllowMultiInstance", 0, _Path);
             AllowMultiInstance_CB.Checked = AllowMultiInstance == 1;
         }

@@ -80,16 +80,16 @@ namespace Types
             {
                 var NumberOfItemsInHex = BitConverter.GetBytes(SwapBytes((uint)BNDStrings.Count));
                 Writer.Write(NumberOfItemsInHex);
-                foreach(var String in BNDStrings)
+                foreach (var String in BNDStrings)
                 {
                     Writer.Write(SwapBytes(CurrentSize));
                     CurrentSize = (uint)(CurrentSize + GetEncodedSizeOfString(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0")));
                 }
-                foreach(var String in BNDStrings)
+                foreach (var String in BNDStrings)
                 {
                     Writer.Write(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0"));
                 }
-                
+
             }
         }
 
