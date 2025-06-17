@@ -31,8 +31,8 @@ void Redirect_TwoOrMorePolymerization()
 
     Memory::EmplaceCALL(reinterpret_cast<void*>(0x140006449), TWO_OR_MORE_POLYMERIZATION, false);
 
-    uint8_t* Location = Memory::EmplaceLEARelativeRsi(reinterpret_cast<void*>(TWO_OR_MORE_POLYMERIZATION), reinterpret_cast<uintptr_t>(_PolymerizationTwoOrMore.data()), Memory::X64Register::RDX, true);
-    Memory::EmplaceRET(reinterpret_cast<void*>(Location), true); Logger::WriteLog("Location = 0x" +std::format("{:016X}", reinterpret_cast<uintptr_t>(Location)),MODULE_NAME, 0);
+    //uint8_t* Location = Memory::EmplaceLEARelativeRsi(reinterpret_cast<void*>(TWO_OR_MORE_POLYMERIZATION), reinterpret_cast<uintptr_t>(_PolymerizationTwoOrMore.data()), Memory::X64Register::RDX, true);
+   // Memory::EmplaceRET(reinterpret_cast<void*>(Location), true); Logger::WriteLog("Location = 0x" +std::format("{:016X}", reinterpret_cast<uintptr_t>(Location)),MODULE_NAME, 0);
     //Memory::EmplaceCALL(reinterpret_cast<void*>(0x140006449), TwoOrMorePolymerization, false);
     //Memory::EmplaceMOV(reinterpret_cast<void*>(0x140006622), reinterpret_cast<uintptr_t>(_PolymerizationTwoOrMore.data()), Memory::X64Register::R11, true);
 
