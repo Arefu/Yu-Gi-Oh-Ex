@@ -21,11 +21,12 @@ jobs:
 
       - name: Zip Binaries Folder
         run: Compress-Archive -Path Binaries\* -DestinationPath YuGiOhEX.zip
-
-      - name: Upload to GitHub Release
-        if: github.ref == 'refs/heads/main'  # Only upload on main branch pushes
-        uses: softprops/action-gh-release@v1
+        
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
         with:
-          files: YuGiOhEX.zip
+            name: Yu-Gi-Oh-Ex-RC
+            path: YuGiOhEX.zip
+        
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
