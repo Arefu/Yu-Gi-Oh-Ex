@@ -275,6 +275,10 @@ namespace Types
                 IndxWriter.Write(nameOffset);
                 IndxWriter.Write(descOffset);
             }
+
+            NameWriter.Close();
+            DescWriter.Close();
+            IndxWriter.Close();
         }
 
         private static void WriteNullTerminatedUnicode(BinaryWriter writer, string value)
@@ -326,6 +330,8 @@ namespace Types
                 PropWriter.Write((uint)First.Data);
                 PropWriter.Write((uint)Second.Data);
             }
+
+            PropWriter.Close();
         }
 
         #region Card Getters
