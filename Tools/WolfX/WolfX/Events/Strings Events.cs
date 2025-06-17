@@ -1,5 +1,4 @@
-﻿using System.Xml.Linq;
-using Types;
+﻿using Types;
 
 namespace WolfX
 {

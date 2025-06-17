@@ -1,6 +1,4 @@
-﻿using Windows.Graphics.Printing.Workflow;
-
-namespace Types
+﻿namespace Types
 {
     public static class CRED
     {
@@ -8,10 +6,10 @@ namespace Types
         {
             var Credits = new List<String>();
             using StreamReader Reader = new StreamReader(Path, System.Text.Encoding.Unicode);
-            while(!Reader.EndOfStream)
+            while (!Reader.EndOfStream)
             {
                 Credits.Add(Reader.ReadLine());
-                
+
             }
             return Credits;
         }

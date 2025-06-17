@@ -1,6 +1,4 @@
-﻿using WolfX.Types;
-
-namespace WolfX
+﻿namespace WolfX
 {
     internal enum Language
     {
@@ -14,8 +12,8 @@ namespace WolfX
     }
 
     internal static class State
-        {
-            internal static string? Path { get; set; }
-            public static Language Language { get; set; } = Language.English;
-        }
+    {
+        internal static string? Path { get; set; }
+        public static Language Language { get; set; } = Language.English;
+    }
 }

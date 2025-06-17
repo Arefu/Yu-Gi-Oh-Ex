@@ -1,6 +1,4 @@
 ﻿using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Types
@@ -93,7 +91,7 @@ namespace Types
 
     }
 
-        public static class CARDS_Cards
+    public static class CARDS_Cards
     {
         public static string? CARD_Indx_File;
         public static string? CARD_Name_File;
@@ -158,7 +156,7 @@ namespace Types
 
         public static bool Close_CardBinder()
         {
-          
+
             IndxReader?.Close();
             NameReader?.Close();
             DescReader?.Close();
@@ -230,12 +228,12 @@ namespace Types
                 Card.Attack = (First[CardAtk] * 10);
                 Card.Defense = (First[CardDef] * 10);
 
-                if(Card.Attack == 5110)
+                if (Card.Attack == 5110)
                     Card.Attack = -1;
                 if (Card.Defense == 5110)
                     Card.Defense = -1;
 
-            
+
                 Card.Kind = (CARDS_INFO.CARD_Kind)Second[Kind];
                 Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
                 Card.Level = (byte)Second[MonsterLevel];
@@ -472,10 +470,10 @@ namespace Types
             {
                 var C = (char)X;
                 if (C == '\0')
-               {
+                {
                     break;
                 }
-                if(Reader.BaseStream.Position == Reader.BaseStream.Length)
+                if (Reader.BaseStream.Position == Reader.BaseStream.Length)
                 {
                     break;
                 }

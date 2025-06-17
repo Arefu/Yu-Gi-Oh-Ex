@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Drawing;
-using System.Text;
-using Windows.Graphics.Imaging;
+﻿using System.Text;
 
 namespace Types
 {
@@ -27,7 +24,7 @@ namespace Types
 
         public static List<ZIB_Item> Load(string Archive)
         {
-            if(Archive == String.Empty)
+            if (Archive == String.Empty)
                 return null;
 
             _Items.Clear();
@@ -59,13 +56,13 @@ namespace Types
 
             return _Items;
         }
-        
+
         public static MemoryStream? Get_SpecificItemFromArchive(string Item)
         {
             if (_Loaded)
             {
                 var _Item = _Items.Where(_Item => _Item.Name == Item).FirstOrDefault();
-                if(_Item == null)
+                if (_Item == null)
                     return null;
 
                 Reader = new BinaryReader(File.Open($"{_Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
@@ -110,14 +107,14 @@ namespace Types
                     CurrentOffset++;
 
                 Writer.Write(SwapBytes(CurrentOffset));
-               
+
                 if (firstFile)
                     CurrentOffset--;
 
                 Writer.Write(SwapBytes((uint)new FileInfo($"{Item}").Length));
 
                 Writer.Write(Encoding.ASCII.GetBytes(new FileInfo(Item).Name.ToLower()));
-   
+
                 Writer.Write(new byte[(56 - new FileInfo(Item).Name.Length)]);
 
                 CurrentOffset += Convert.ToUInt32(16 * ((CurrentFileSize + 15) / 16));
@@ -133,8 +130,8 @@ namespace Types
                 var FileDataPadding = 16 * ((FileData.Length + 15) / 16);
                 Writer.Write(FileData);
                 Writer.Write(new byte[FileDataPadding - FileData.Length]);
-            
-                   
+
+
             }
 
             Writer.Close();

@@ -79,7 +79,7 @@ namespace WolfX
         }
         private void DFY_NUD_X_ValueChanged(object sender, EventArgs e)
         {
-            if(DFY_Editor == null)
+            if (DFY_Editor == null)
                 return;
 
             if (DFY_NUD_X.Value != DFY_Editor.DFY_Item.ItemStartPoint.X)

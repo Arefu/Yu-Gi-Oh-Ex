@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-
-namespace PDLimits
+﻿namespace PDLimits
 {
     public static class PDLimits
     {
