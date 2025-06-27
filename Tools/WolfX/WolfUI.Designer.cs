@@ -36,7 +36,14 @@ namespace WolfX
         {
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
+            groupBox18 = new GroupBox();
+            CARDS_CB_SimilarID = new ComboBox();
+            CARDS_RB_SimilarOnEffect = new RadioButton();
+            CARDS_RB_AlwaysSimilar = new RadioButton();
+            label25 = new Label();
+            label6 = new Label();
             groupBox6 = new GroupBox();
+            CARDS_CB_LoadCards = new CheckBox();
             CARDS_BTN_CloseBinder = new Button();
             CARDS_BTN_OpenCards = new Button();
             CARDS_BTN_SaveCard = new Button();
@@ -196,9 +203,9 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            CARDS_CB_LoadCards = new CheckBox();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
+            groupBox18.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).BeginInit();
@@ -260,6 +267,7 @@ namespace WolfX
             // 
             // Page_CardManager
             // 
+            Page_CardManager.Controls.Add(groupBox18);
             Page_CardManager.Controls.Add(groupBox6);
             Page_CardManager.Controls.Add(groupBox2);
             Page_CardManager.Controls.Add(groupBox1);
@@ -271,18 +279,93 @@ namespace WolfX
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
             // 
+            // groupBox18
+            // 
+            groupBox18.Controls.Add(CARDS_CB_SimilarID);
+            groupBox18.Controls.Add(CARDS_RB_SimilarOnEffect);
+            groupBox18.Controls.Add(CARDS_RB_AlwaysSimilar);
+            groupBox18.Controls.Add(label25);
+            groupBox18.Controls.Add(label6);
+            groupBox18.Location = new Point(334, 175);
+            groupBox18.Name = "groupBox18";
+            groupBox18.Size = new Size(320, 163);
+            groupBox18.TabIndex = 6;
+            groupBox18.TabStop = false;
+            groupBox18.Text = "Card Properties";
+            // 
+            // CARDS_CB_SimilarID
+            // 
+            CARDS_CB_SimilarID.FormattingEnabled = true;
+            CARDS_CB_SimilarID.Location = new Point(6, 37);
+            CARDS_CB_SimilarID.Name = "CARDS_CB_SimilarID";
+            CARDS_CB_SimilarID.Size = new Size(121, 23);
+            CARDS_CB_SimilarID.TabIndex = 7;
+            CARDS_CB_SimilarID.SelectedIndexChanged += CARDS_CB_SimilarID_SelectedIndexChanged;
+            // 
+            // CARDS_RB_SimilarOnEffect
+            // 
+            CARDS_RB_SimilarOnEffect.AutoSize = true;
+            CARDS_RB_SimilarOnEffect.Location = new Point(6, 106);
+            CARDS_RB_SimilarOnEffect.Name = "CARDS_RB_SimilarOnEffect";
+            CARDS_RB_SimilarOnEffect.Size = new Size(71, 19);
+            CARDS_RB_SimilarOnEffect.TabIndex = 6;
+            CARDS_RB_SimilarOnEffect.TabStop = true;
+            CARDS_RB_SimilarOnEffect.Text = "By Effect";
+            CARDS_RB_SimilarOnEffect.UseVisualStyleBackColor = true;
+            // 
+            // CARDS_RB_AlwaysSimilar
+            // 
+            CARDS_RB_AlwaysSimilar.AutoSize = true;
+            CARDS_RB_AlwaysSimilar.Location = new Point(6, 81);
+            CARDS_RB_AlwaysSimilar.Name = "CARDS_RB_AlwaysSimilar";
+            CARDS_RB_AlwaysSimilar.Size = new Size(62, 19);
+            CARDS_RB_AlwaysSimilar.TabIndex = 5;
+            CARDS_RB_AlwaysSimilar.TabStop = true;
+            CARDS_RB_AlwaysSimilar.Text = "Always";
+            CARDS_RB_AlwaysSimilar.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(6, 63);
+            label25.Name = "label25";
+            label25.Size = new Size(102, 15);
+            label25.TabIndex = 2;
+            label25.Text = "Similar Condition:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(6, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(74, 15);
+            label6.TabIndex = 0;
+            label6.Text = "Similar Card:";
+            // 
             // groupBox6
             // 
             groupBox6.Controls.Add(CARDS_CB_LoadCards);
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
-            groupBox6.Location = new Point(334, 175);
+            groupBox6.Location = new Point(334, 344);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
             groupBox6.TabIndex = 5;
             groupBox6.TabStop = false;
             groupBox6.Text = "Options";
+            // 
+            // CARDS_CB_LoadCards
+            // 
+            CARDS_CB_LoadCards.AutoSize = true;
+            CARDS_CB_LoadCards.Checked = true;
+            CARDS_CB_LoadCards.CheckState = CheckState.Checked;
+            CARDS_CB_LoadCards.Location = new Point(204, 22);
+            CARDS_CB_LoadCards.Name = "CARDS_CB_LoadCards";
+            CARDS_CB_LoadCards.Size = new Size(93, 19);
+            CARDS_CB_LoadCards.TabIndex = 3;
+            CARDS_CB_LoadCards.Text = "Load Images";
+            CARDS_CB_LoadCards.UseVisualStyleBackColor = true;
             // 
             // CARDS_BTN_CloseBinder
             // 
@@ -1870,18 +1953,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // CARDS_CB_LoadCards
-            // 
-            CARDS_CB_LoadCards.AutoSize = true;
-            CARDS_CB_LoadCards.Checked = true;
-            CARDS_CB_LoadCards.CheckState = CheckState.Checked;
-            CARDS_CB_LoadCards.Location = new Point(204, 22);
-            CARDS_CB_LoadCards.Name = "CARDS_CB_LoadCards";
-            CARDS_CB_LoadCards.Size = new Size(93, 19);
-            CARDS_CB_LoadCards.TabIndex = 3;
-            CARDS_CB_LoadCards.Text = "Load Images";
-            CARDS_CB_LoadCards.UseVisualStyleBackColor = true;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1896,6 +1967,8 @@ namespace WolfX
             Text = "WolfX";
             WolfX_TabManager.ResumeLayout(false);
             Page_CardManager.ResumeLayout(false);
+            groupBox18.ResumeLayout(false);
+            groupBox18.PerformLayout();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -2128,5 +2201,11 @@ namespace WolfX
         private Label label20;
         private Label label27;
         private CheckBox CARDS_CB_LoadCards;
+        private GroupBox groupBox18;
+        private Label label25;
+        private Label label6;
+        private RadioButton CARDS_RB_SimilarOnEffect;
+        private RadioButton CARDS_RB_AlwaysSimilar;
+        private ComboBox CARDS_CB_SimilarID;
     }
 }
