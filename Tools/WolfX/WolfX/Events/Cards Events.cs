@@ -1,10 +1,13 @@
-﻿using Types;
+﻿using CARD_Same;
+using Types;
+
 
 namespace WolfX
 {
     public partial class WolfUI
     {
         private int PREVIOUS_INDEX = -1;
+        private List<object> _allCardItems;
 
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
@@ -35,10 +38,18 @@ namespace WolfX
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
 
+            if (State.Path == null || State.Path == string.Empty)
+                File = Utility.Get_UserSelectedFile("Open CARD_Same.bin", "BIN File (*.bin)|*.bin");
+            else
+                File = $"{State.Path}\\bin\\CARD_Same.bin";
+
+            Card_Same.Load(File);
+
           //  CARDS_CB_CardName.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
+            CARDS_CB_SimilarID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
         }
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
         {
@@ -143,6 +154,25 @@ namespace WolfX
                     CARDS_PB_CardPicture.Image = Image.FromStream(Obj);
             }
             PREVIOUS_INDEX = CARDS_CB_CardID.SelectedIndex;
+
+            CARDS_CB_SimilarID.Text = Card_Same._SimilarCards.FirstOrDefault(Card => Card.PrimaryCard == Convert.ToInt16(CARDS_CB_CardID.Text))?.TargetCard.ToString() ?? "Not Applicable";
+            var Condition = Card_Same._SimilarCards.FirstOrDefault(Card => Card.PrimaryCard == Convert.ToInt16(CARDS_CB_CardID.Text))?.SimilarityType.ToString();
+
+            if (Condition == "ALWAYS")
+            {
+                CARDS_RB_AlwaysSimilar.Checked = true;
+                CARDS_RB_SimilarOnEffect.Checked = false;
+            }
+            else if (Condition == "EFFECT")
+              {
+                CARDS_RB_AlwaysSimilar.Checked = false;
+                CARDS_RB_SimilarOnEffect.Checked = true;
+            }
+            else
+               {
+                CARDS_RB_AlwaysSimilar.Checked = false;
+                CARDS_RB_SimilarOnEffect.Checked = false;
+            }
         }
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)
         {
@@ -192,5 +222,25 @@ namespace WolfX
                 }
             }
         }
+        private void CARDS_CB_SimilarID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_SimilarID.Text == "0" || CARDS_CB_SimilarID.Text == "0")
+                return;
+            if (CARDS_CB_CardID.Text == CARDS_CB_SimilarID.Text)
+            {
+                MessageBox.Show("You can not related a card to it self!","Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CARDS_CB_SimilarID.SelectedIndex = -1;
+                return;
+            }
+        }
+
+        private void CARDS_LBL_SimilarID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!short.TryParse(CARDS_CB_SimilarID.Text, out short card))
+                return;
+
+            CARDS_CB_CardID.SelectedItem = CARDS_CB_CardID.Items.Cast<object>().FirstOrDefault(item => Convert.ToInt32(item) == card);
+        }
+
     }
 }
