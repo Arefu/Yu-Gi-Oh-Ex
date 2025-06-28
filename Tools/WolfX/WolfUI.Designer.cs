@@ -37,7 +37,7 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox18 = new GroupBox();
-            CARDS_CB_SimilarID = new ComboBox();
+            CARDS_CB_SimilarCardName = new ComboBox();
             CARDS_RB_SimilarOnEffect = new RadioButton();
             CARDS_RB_AlwaysSimilar = new RadioButton();
             label25 = new Label();
@@ -281,7 +281,7 @@ namespace WolfX
             // 
             // groupBox18
             // 
-            groupBox18.Controls.Add(CARDS_CB_SimilarID);
+            groupBox18.Controls.Add(CARDS_CB_SimilarCardName);
             groupBox18.Controls.Add(CARDS_RB_SimilarOnEffect);
             groupBox18.Controls.Add(CARDS_RB_AlwaysSimilar);
             groupBox18.Controls.Add(label25);
@@ -293,14 +293,15 @@ namespace WolfX
             groupBox18.TabStop = false;
             groupBox18.Text = "Card Properties";
             // 
-            // CARDS_CB_SimilarID
+            // CARDS_CB_SimilarCardName
             // 
-            CARDS_CB_SimilarID.FormattingEnabled = true;
-            CARDS_CB_SimilarID.Location = new Point(6, 37);
-            CARDS_CB_SimilarID.Name = "CARDS_CB_SimilarID";
-            CARDS_CB_SimilarID.Size = new Size(121, 23);
-            CARDS_CB_SimilarID.TabIndex = 7;
-            CARDS_CB_SimilarID.SelectedIndexChanged += CARDS_CB_SimilarID_SelectedIndexChanged;
+            CARDS_CB_SimilarCardName.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_SimilarCardName.FormattingEnabled = true;
+            CARDS_CB_SimilarCardName.Location = new Point(6, 37);
+            CARDS_CB_SimilarCardName.Name = "CARDS_CB_SimilarCardName";
+            CARDS_CB_SimilarCardName.Size = new Size(186, 23);
+            CARDS_CB_SimilarCardName.TabIndex = 7;
+            CARDS_CB_SimilarCardName.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
             // 
             // CARDS_RB_SimilarOnEffect
             // 
@@ -2207,5 +2208,6 @@ namespace WolfX
         private RadioButton CARDS_RB_SimilarOnEffect;
         private RadioButton CARDS_RB_AlwaysSimilar;
         private ComboBox CARDS_CB_SimilarID;
+        private ComboBox CARDS_CB_SimilarCardName;
     }
 }

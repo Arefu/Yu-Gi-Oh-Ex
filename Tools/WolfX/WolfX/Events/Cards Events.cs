@@ -34,7 +34,7 @@ namespace WolfX
 
 
                 ZIB.Load(File);
-            } 
+            }
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
 
@@ -44,12 +44,16 @@ namespace WolfX
                 File = $"{State.Path}\\bin\\CARD_Same.bin";
 
             Card_Same.Load(File);
-
-          //  CARDS_CB_CardName.DataSource = CARDS_Cards.Cards.Select(Select => Select.Name).ToList();
+            CARDS_CB_SimilarCardName.DisplayMember = "Key";
+            CARDS_CB_SimilarCardName.ValueMember = "Value";
+            CARDS_CB_SimilarCardName.DataSource = CARDS_Cards.Cards
+      .Select(card => new KeyValuePair<string, int>($"{card.Name} ({card.ID})", card.ID))
+      .ToList();
+            CARDS_CB_SimilarCardName.AutoCompleteSource = AutoCompleteSource.ListItems;
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
-            CARDS_CB_SimilarID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
+
         }
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
         {
@@ -155,7 +159,7 @@ namespace WolfX
             }
             PREVIOUS_INDEX = CARDS_CB_CardID.SelectedIndex;
 
-            CARDS_CB_SimilarID.Text = Card_Same._SimilarCards.FirstOrDefault(Card => Card.PrimaryCard == Convert.ToInt16(CARDS_CB_CardID.Text))?.TargetCard.ToString() ?? "Not Applicable";
+            //Set CARD_Same Information
             var Condition = Card_Same._SimilarCards.FirstOrDefault(Card => Card.PrimaryCard == Convert.ToInt16(CARDS_CB_CardID.Text))?.SimilarityType.ToString();
 
             if (Condition == "ALWAYS")
@@ -164,24 +168,54 @@ namespace WolfX
                 CARDS_RB_SimilarOnEffect.Checked = false;
             }
             else if (Condition == "EFFECT")
-              {
+            {
                 CARDS_RB_AlwaysSimilar.Checked = false;
                 CARDS_RB_SimilarOnEffect.Checked = true;
             }
             else
-               {
+            {
                 CARDS_RB_AlwaysSimilar.Checked = false;
                 CARDS_RB_SimilarOnEffect.Checked = false;
             }
+
+            if (CARDS_CB_CardID.SelectedItem is int selectedCardID)
+            {
+                var targetEntry = Card_Same._SimilarCards
+                    .FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+
+                if (targetEntry != null)
+                {
+                    int targetID = targetEntry.TargetCard;
+
+                    var list = (List<KeyValuePair<string, int>>)CARDS_CB_SimilarCardName.DataSource;
+                    var match = list.FirstOrDefault(kvp => kvp.Value == targetID);
+
+                    if (!match.Equals(default(KeyValuePair<string, int>)))
+                        CARDS_CB_SimilarCardName.SelectedItem = match;
+                    else if (list.Count > 0)
+                        CARDS_CB_SimilarCardName.SelectedIndex = 0;
+                    else
+                        CARDS_CB_SimilarCardName.SelectedIndex = -1;
+                }
+                else
+                {
+                    CARDS_CB_SimilarCardName.SelectedIndex = -1;
+                }
+            }
+            else
+            {
+                CARDS_CB_SimilarCardName.SelectedIndex = -1;
+            }
+
         }
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)
         {
             CARDS_Cards.Close_CardBinder();
 
-            CARDS_CB_CardAttribute.DataSource  = null;
+            CARDS_CB_CardAttribute.DataSource = null;
             CARDS_CB_CardID.DataSource = null;
             CARDS_TB_CardDesc.Clear();
-            CARDS_CB_CardTypes.DataSource  = null;
+            CARDS_CB_CardTypes.DataSource = null;
             CARDS_Nud_CardLevel.ResetText();
             CARDS_PB_CardPicture.Image = null;
         }
@@ -197,8 +231,8 @@ namespace WolfX
             {
                 previousCard.ID = int.Parse(CARDS_CB_CardID.Items[PREVIOUS_INDEX].ToString());
 
-                if(string.IsNullOrEmpty(CARDS_CB_CardTypes.Text) == false)
-                previousCard.Kind = (CARDS_INFO.CARD_Kind)Enum.Parse(typeof(CARDS_INFO.CARD_Kind), CARDS_CB_CardTypes.Text);
+                if (string.IsNullOrEmpty(CARDS_CB_CardTypes.Text) == false)
+                    previousCard.Kind = (CARDS_INFO.CARD_Kind)Enum.Parse(typeof(CARDS_INFO.CARD_Kind), CARDS_CB_CardTypes.Text);
 
                 if (string.IsNullOrEmpty(CARDS_CB_CardAttribute.Text) == false)
                     previousCard.Attribute = (CARDS_INFO.CARD_Attribute)Enum.Parse(typeof(CARDS_INFO.CARD_Attribute), CARDS_CB_CardAttribute.Text);
@@ -222,25 +256,11 @@ namespace WolfX
                 }
             }
         }
-        private void CARDS_CB_SimilarID_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void CARDS_CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CARDS_CB_SimilarID.Text == "0" || CARDS_CB_SimilarID.Text == "0")
-                return;
-            if (CARDS_CB_CardID.Text == CARDS_CB_SimilarID.Text)
-            {
-                MessageBox.Show("You can not related a card to it self!","Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CARDS_CB_SimilarID.SelectedIndex = -1;
-                return;
-            }
+
+
         }
-
-        private void CARDS_LBL_SimilarID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            if (!short.TryParse(CARDS_CB_SimilarID.Text, out short card))
-                return;
-
-            CARDS_CB_CardID.SelectedItem = CARDS_CB_CardID.Items.Cast<object>().FirstOrDefault(item => Convert.ToInt32(item) == card);
-        }
-
     }
 }
