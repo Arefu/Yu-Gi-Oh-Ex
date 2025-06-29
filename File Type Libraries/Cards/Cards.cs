@@ -197,6 +197,20 @@ namespace Types
 
         public static void LoadCardProps()
         {
+            // Predefine BitVector32 Sections once outside the loop
+            var CardId = BitVector32.CreateSection(16383);
+            var CardAtk = BitVector32.CreateSection(511, CardId);
+            var CardDef = BitVector32.CreateSection(511, CardAtk);
+
+            var SecondQuadUnk = BitVector32.CreateSection(1);
+            var Kind = BitVector32.CreateSection(63, SecondQuadUnk);
+            var Attribute = BitVector32.CreateSection(15, Kind);
+            var MonsterLevel = BitVector32.CreateSection(15, Attribute);
+            var Ico = BitVector32.CreateSection(7, MonsterLevel);
+            var Type = BitVector32.CreateSection(31, Ico);
+            var LeftScale = BitVector32.CreateSection(15, Type);
+            var RightScale = BitVector32.CreateSection(15, LeftScale);
+
             do
             {
                 var NameOffset = IndxReader.ReadUInt32();
@@ -207,32 +221,14 @@ namespace Types
 
                 CARD_Card Card = new();
 
-                var CardId = BitVector32.CreateSection(16383);
-                var CardAtk = BitVector32.CreateSection(511, CardId);
-                var CardDef = BitVector32.CreateSection(511, CardAtk);
-
-                var SecondQuadUnk = BitVector32.CreateSection(1);
-                var Kind = BitVector32.CreateSection(63, SecondQuadUnk);
-                var Attribute = BitVector32.CreateSection(15, Kind);
-                var MonsterLevel = BitVector32.CreateSection(15, Attribute);
-                var Ico = BitVector32.CreateSection(7, MonsterLevel);
-                var Type = BitVector32.CreateSection(31, Ico);
-                var LeftScale = BitVector32.CreateSection(15, Type);
-                var RightScale = BitVector32.CreateSection(15, LeftScale);
-
                 Card.SecondUnk = Second[SecondQuadUnk];
 
                 Card.ID = (short)First[CardId];
                 Card.Name = Names[NameOffset];
                 Card.Desc = Descs[DescOffset];
-                Card.Attack = (First[CardAtk] * 10);
-                Card.Defense = (First[CardDef] * 10);
 
-                if (Card.Attack == 5110)
-                    Card.Attack = -1;
-                if (Card.Defense == 5110)
-                    Card.Defense = -1;
-
+                Card.Attack = (First[CardAtk] == 511) ? -1 : First[CardAtk] * 10;
+                Card.Defense = (First[CardDef] == 511) ? -1 : First[CardDef] * 10;
 
                 Card.Kind = (CARDS_INFO.CARD_Kind)Second[Kind];
                 Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
@@ -246,7 +242,9 @@ namespace Types
                 Card.Second = Second;
 
                 Cards.Add(Card);
-            } while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
+            }
+            while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
+
         }
 
         public static void SaveCardInfo()
