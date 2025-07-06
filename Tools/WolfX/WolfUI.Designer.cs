@@ -37,7 +37,9 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox18 = new GroupBox();
+            CARDS_CB_Genre = new ComboBox();
             CARDS_CB_SimilarCardName = new ComboBox();
+            label26 = new Label();
             CARDS_RB_SimilarOnEffect = new RadioButton();
             CARDS_RB_AlwaysSimilar = new RadioButton();
             label25 = new Label();
@@ -281,7 +283,9 @@ namespace WolfX
             // 
             // groupBox18
             // 
+            groupBox18.Controls.Add(CARDS_CB_Genre);
             groupBox18.Controls.Add(CARDS_CB_SimilarCardName);
+            groupBox18.Controls.Add(label26);
             groupBox18.Controls.Add(CARDS_RB_SimilarOnEffect);
             groupBox18.Controls.Add(CARDS_RB_AlwaysSimilar);
             groupBox18.Controls.Add(label25);
@@ -293,6 +297,14 @@ namespace WolfX
             groupBox18.TabStop = false;
             groupBox18.Text = "Card Properties";
             // 
+            // CARDS_CB_Genre
+            // 
+            CARDS_CB_Genre.FormattingEnabled = true;
+            CARDS_CB_Genre.Location = new Point(198, 37);
+            CARDS_CB_Genre.Name = "CARDS_CB_Genre";
+            CARDS_CB_Genre.Size = new Size(116, 23);
+            CARDS_CB_Genre.TabIndex = 17;
+            // 
             // CARDS_CB_SimilarCardName
             // 
             CARDS_CB_SimilarCardName.AutoCompleteMode = AutoCompleteMode.Suggest;
@@ -301,7 +313,17 @@ namespace WolfX
             CARDS_CB_SimilarCardName.Name = "CARDS_CB_SimilarCardName";
             CARDS_CB_SimilarCardName.Size = new Size(186, 23);
             CARDS_CB_SimilarCardName.TabIndex = 7;
-            CARDS_CB_SimilarCardName.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
+            CARDS_CB_SimilarCardName.SelectedIndexChanged += CARDS_CB_SimilarCardName_SelectedIndexChanged;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI", 11F);
+            label26.Location = new Point(198, 14);
+            label26.Name = "label26";
+            label26.Size = new Size(83, 20);
+            label26.TabIndex = 16;
+            label26.Text = "Card Genre";
             // 
             // CARDS_RB_SimilarOnEffect
             // 
@@ -313,6 +335,7 @@ namespace WolfX
             CARDS_RB_SimilarOnEffect.TabStop = true;
             CARDS_RB_SimilarOnEffect.Text = "By Effect";
             CARDS_RB_SimilarOnEffect.UseVisualStyleBackColor = true;
+            CARDS_RB_SimilarOnEffect.CheckedChanged += CARDS_RB_SimilarOnEffect_CheckedChanged;
             // 
             // CARDS_RB_AlwaysSimilar
             // 
@@ -324,6 +347,7 @@ namespace WolfX
             CARDS_RB_AlwaysSimilar.TabStop = true;
             CARDS_RB_AlwaysSimilar.Text = "Always";
             CARDS_RB_AlwaysSimilar.UseVisualStyleBackColor = true;
+            CARDS_RB_AlwaysSimilar.CheckedChanged += CARDS_RB_AlwaysSimilar_CheckedChanged;
             // 
             // label25
             // 
@@ -413,7 +437,7 @@ namespace WolfX
             groupBox2.Size = new Size(320, 163);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Card Information";
+            groupBox2.Text = "*";
             // 
             // CARDS_Nud_CardLevel
             // 
@@ -1962,6 +1986,7 @@ namespace WolfX
             Controls.Add(WolfX_TabManager);
             Controls.Add(MenuBar);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = MenuBar;
             MaximizeBox = false;
             Name = "WolfUI";
@@ -2209,5 +2234,7 @@ namespace WolfX
         private RadioButton CARDS_RB_AlwaysSimilar;
         private ComboBox CARDS_CB_SimilarID;
         private ComboBox CARDS_CB_SimilarCardName;
+        public ComboBox CARDS_CB_Genre;
+        private Label label26;
     }
 }
