@@ -21,7 +21,9 @@
     <ProjectReference Include="..\..\CARD_Same.bin\CARD_Same.bin.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Animslist\Animlist.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\BND\BND.csproj" />
-    <ProjectReference Include="..\..\File Type Libraries\Cards\Cards.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CARD_Named.bin\CARD_Named.bin.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CARD_Pass\CARD_Pass.bin.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CARD_Props\CARD_Props.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\CARD_Same.bin\CARD_Same.bin.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\CRED\CRED.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\Dfymoo\Dfymoo.csproj" />
