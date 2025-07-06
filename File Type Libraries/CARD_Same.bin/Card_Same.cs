@@ -2,7 +2,7 @@
 {
     public enum TYPE
     {
-        ALWAYS =0,
+        ALWAYS = 0,
         EFFECT = 256
     }
     public class Similar_Card(short primaryCard, short targetCard, TYPE similarityType)
@@ -25,14 +25,14 @@
 
     public static class Card_Same
     {
-        public static List<Similar_Card> _SimilarCards = new List<Similar_Card>();
+        public static List<Similar_Card> _SimilarCards = [];
 
         public static List<Similar_Card> Load(string Path)
         {
             var SimilarCards = new List<Similar_Card>();
             using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
 
-            while(Reader.BaseStream.Position < Reader.BaseStream.Length)
+            while (Reader.BaseStream.Position < Reader.BaseStream.Length)
             {
                 SimilarCards.Add(new Similar_Card(Reader.ReadInt16(), Reader.ReadInt16(), (TYPE)Reader.ReadInt16()));
             }
@@ -41,7 +41,17 @@
             return SimilarCards;
         }
 
+        public static void Save()
+        {
+            using var writer = new BinaryWriter(File.Create("CARD_Same.bin"));
 
+            foreach (var card in _SimilarCards)
+            {
+                writer.Write(card.PrimaryCard);
+                writer.Write(card.TargetCard);
+                writer.Write((short)card.SimilarityType);
+            }
+        }
 
     }
 }
