@@ -1,4 +1,5 @@
-﻿using CARD_Same;
+﻿using CARD_Named;
+using CARD_Same;
 using Types;
 
 
@@ -42,6 +43,20 @@ namespace WolfX
 
             Card_Same.Load(File);
 
+            if (State.Path == null || State.Path == string.Empty)
+                File = Utility.Get_UserSelectedFile("Open CARD_Named.bin", "BIN File (*.bin)|*.bin");
+            else
+                File = $"{State.Path}\\bin\\CARD_Named.bin";
+
+            CARD_Named.CARD_Named.Load(File);
+
+            if (State.Path == null || State.Path == string.Empty)
+                File = Utility.Get_UserSelectedFile("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin");
+            else
+                File = $"{State.Path}\\bin\\CARD_Pass.bin";
+
+            CARD_Pass.CARD_Pass.Load(File);
+
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
             CARDS_CB_SimilarCardName.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name} ({card.ID})", card.ID)).ToList();
@@ -49,7 +64,7 @@ namespace WolfX
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
-            CARDS_CB_Genre.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
+            CARDS_CB_Archetype.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
         }
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
         {
@@ -135,7 +150,7 @@ namespace WolfX
             CARDS_CB_CardAttribute.Text = SelectedCard.Attribute.ToString();
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
-            CARDS_CB_Genre.Text = SelectedCard.Type.ToString();
+            CARDS_CB_Archetype.Text = SelectedCard.Type.ToString();
 
             CARDS_TB_CardAtk.Text = SelectedCard.Attack.ToString();
             CARDS_TB_CardDef.Text = SelectedCard.Defense.ToString();
@@ -196,6 +211,8 @@ namespace WolfX
             {
                 CARDS_CB_SimilarCardName.SelectedIndex = -1;
             }
+
+            CARDS_TB_CardPassword.Text = CARD_Pass.CARD_Pass._Passwords.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
 
         }
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)
@@ -281,6 +298,15 @@ namespace WolfX
 
                 if (CARDS_RB_AlwaysSimilar.Checked)
                     target.SimilarityType = TYPE.EFFECT;
+            }
+        }
+
+        private void CARDS_TB_CardPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (CARDS_TB_CardPassword.Text is String Password)
+            {
+                var target = CARD_Pass.CARD_Pass._Passwords.FirstOrDefault(card => card.ToString()== Password);
+                target = Convert.ToInt32(CARDS_TB_CardPassword.Text);
             }
         }
     }

@@ -37,7 +37,9 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox18 = new GroupBox();
-            CARDS_CB_Genre = new ComboBox();
+            label28 = new Label();
+            CARDS_TB_CardPassword = new TextBox();
+            CARDS_CB_Archetype = new ComboBox();
             CARDS_CB_SimilarCardName = new ComboBox();
             label26 = new Label();
             CARDS_RB_SimilarOnEffect = new RadioButton();
@@ -283,7 +285,9 @@ namespace WolfX
             // 
             // groupBox18
             // 
-            groupBox18.Controls.Add(CARDS_CB_Genre);
+            groupBox18.Controls.Add(label28);
+            groupBox18.Controls.Add(CARDS_TB_CardPassword);
+            groupBox18.Controls.Add(CARDS_CB_Archetype);
             groupBox18.Controls.Add(CARDS_CB_SimilarCardName);
             groupBox18.Controls.Add(label26);
             groupBox18.Controls.Add(CARDS_RB_SimilarOnEffect);
@@ -292,18 +296,36 @@ namespace WolfX
             groupBox18.Controls.Add(label6);
             groupBox18.Location = new Point(334, 175);
             groupBox18.Name = "groupBox18";
-            groupBox18.Size = new Size(320, 163);
+            groupBox18.Size = new Size(320, 266);
             groupBox18.TabIndex = 6;
             groupBox18.TabStop = false;
             groupBox18.Text = "Card Properties";
             // 
-            // CARDS_CB_Genre
+            // label28
             // 
-            CARDS_CB_Genre.FormattingEnabled = true;
-            CARDS_CB_Genre.Location = new Point(198, 37);
-            CARDS_CB_Genre.Name = "CARDS_CB_Genre";
-            CARDS_CB_Genre.Size = new Size(116, 23);
-            CARDS_CB_Genre.TabIndex = 17;
+            label28.AutoSize = true;
+            label28.Font = new Font("Segoe UI", 11F);
+            label28.Location = new Point(6, 128);
+            label28.Name = "label28";
+            label28.Size = new Size(105, 20);
+            label28.TabIndex = 19;
+            label28.Text = "Card Password";
+            // 
+            // CARDS_TB_CardPassword
+            // 
+            CARDS_TB_CardPassword.Location = new Point(6, 151);
+            CARDS_TB_CardPassword.Name = "CARDS_TB_CardPassword";
+            CARDS_TB_CardPassword.Size = new Size(141, 23);
+            CARDS_TB_CardPassword.TabIndex = 18;
+            CARDS_TB_CardPassword.TextChanged += CARDS_TB_CardPassword_TextChanged;
+            // 
+            // CARDS_CB_Archetype
+            // 
+            CARDS_CB_Archetype.FormattingEnabled = true;
+            CARDS_CB_Archetype.Location = new Point(198, 37);
+            CARDS_CB_Archetype.Name = "CARDS_CB_Archetype";
+            CARDS_CB_Archetype.Size = new Size(116, 23);
+            CARDS_CB_Archetype.TabIndex = 17;
             // 
             // CARDS_CB_SimilarCardName
             // 
@@ -321,9 +343,9 @@ namespace WolfX
             label26.Font = new Font("Segoe UI", 11F);
             label26.Location = new Point(198, 14);
             label26.Name = "label26";
-            label26.Size = new Size(83, 20);
+            label26.Size = new Size(111, 20);
             label26.TabIndex = 16;
-            label26.Text = "Card Genre";
+            label26.Text = "Card Archetype";
             // 
             // CARDS_RB_SimilarOnEffect
             // 
@@ -373,7 +395,7 @@ namespace WolfX
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
-            groupBox6.Location = new Point(334, 344);
+            groupBox6.Location = new Point(334, 447);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
             groupBox6.TabIndex = 5;
@@ -2234,7 +2256,9 @@ namespace WolfX
         private RadioButton CARDS_RB_AlwaysSimilar;
         private ComboBox CARDS_CB_SimilarID;
         private ComboBox CARDS_CB_SimilarCardName;
-        public ComboBox CARDS_CB_Genre;
+        public ComboBox CARDS_CB_Archetype;
         private Label label26;
+        private Label label28;
+        private TextBox CARDS_TB_CardPassword;
     }
 }
