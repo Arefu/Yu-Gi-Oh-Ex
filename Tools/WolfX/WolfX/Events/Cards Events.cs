@@ -7,7 +7,6 @@ namespace WolfX
     public partial class WolfUI
     {
         private int PREVIOUS_INDEX = -1;
-        private List<object> _allCardItems;
 
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
@@ -25,16 +24,14 @@ namespace WolfX
 
             if (CARDS_CB_LoadCards.Checked == true)
             {
-
-
                 if (State.Path == null || State.Path == string.Empty)
                     File = Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib");
                 else
                     File = $"{State.Path}\\2020.full.illust_j.jpg.zib";
 
-
                 ZIB.Load(File);
             }
+
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
 
@@ -44,16 +41,15 @@ namespace WolfX
                 File = $"{State.Path}\\bin\\CARD_Same.bin";
 
             Card_Same.Load(File);
+
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
-            CARDS_CB_SimilarCardName.DataSource = CARDS_Cards.Cards
-      .Select(card => new KeyValuePair<string, int>($"{card.Name} ({card.ID})", card.ID))
-      .ToList();
+            CARDS_CB_SimilarCardName.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name} ({card.ID})", card.ID)).ToList();
             CARDS_CB_SimilarCardName.AutoCompleteSource = AutoCompleteSource.ListItems;
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
-
+            CARDS_CB_Genre.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
         }
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
         {
@@ -139,17 +135,11 @@ namespace WolfX
             CARDS_CB_CardAttribute.Text = SelectedCard.Attribute.ToString();
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
+            CARDS_CB_Genre.Text = SelectedCard.Type.ToString();
 
-            if (SelectedCard.Attack == -1 && SelectedCard.Defense == -1)
-            {
-                CARDS_TB_CardAtk.Text = "?";
-                CARDS_TB_CardDef.Text = "?";
-            }
-            else
-            {
-                CARDS_TB_CardAtk.Text = SelectedCard.Attack.ToString();
-                CARDS_TB_CardDef.Text = SelectedCard.Defense.ToString();
-            }
+            CARDS_TB_CardAtk.Text = SelectedCard.Attack.ToString();
+            CARDS_TB_CardDef.Text = SelectedCard.Defense.ToString();
+
 
             if (CARDS_CB_LoadCards.Checked == true)
             {
@@ -223,6 +213,8 @@ namespace WolfX
         {
             CARDS_Cards.SaveCardProps();
             CARDS_Cards.SaveCardInfo();
+
+            Card_Same.Save();
         }
         private void CARDS_UpdateInternalListWithProperties()
         {
@@ -257,10 +249,39 @@ namespace WolfX
             }
         }
 
-        private void CARDS_CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
+        private void CARDS_CB_SimilarCardName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP &&
+                CARDS_CB_CardID.SelectedItem is int selectedCardID)
+            {
+                var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+                if (target != null)
+                    target.TargetCard = Convert.ToInt16(selectedKVP.Value);
+            }
+        }
 
+        private void CARDS_RB_SimilarOnEffect_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
+            {
+                var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+                if (target == null) return;
 
+                if (CARDS_RB_SimilarOnEffect.Checked)
+                    target.SimilarityType = TYPE.EFFECT;
+            }
+        }
+
+        private void CARDS_RB_AlwaysSimilar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
+            {
+                var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+                if (target == null) return;
+
+                if (CARDS_RB_AlwaysSimilar.Checked)
+                    target.SimilarityType = TYPE.EFFECT;
+            }
         }
     }
 }
