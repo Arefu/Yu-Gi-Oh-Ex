@@ -19,9 +19,14 @@
             return Passwords;
         }
 
-        public static void Save(List<int> Passwords)
+        public static void Save()
         {
+            using var Writer = new BinaryWriter(File.Create("CARD_Pass.bin"));
 
+            foreach(var Password in _Passwords)
+            {
+                Writer.Write(Password);
+            }
         }
     }
 }
