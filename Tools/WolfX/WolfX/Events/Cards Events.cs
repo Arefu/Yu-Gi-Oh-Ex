@@ -1,4 +1,6 @@
 ﻿using CARD_Named;
+using CARD_Kana;
+using CARD_Pass;
 using CARD_Same;
 using Types;
 
@@ -9,53 +11,46 @@ namespace WolfX
     {
         private int PREVIOUS_INDEX = -1;
 
+        private string Get_FilePath(string title, string filter, string defaultFile)
+        {
+            return string.IsNullOrEmpty(State.Path)
+                ? Utility.Get_UserSelectedFile(title, filter)
+                : defaultFile;
+        }
+
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
-            var File = String.Empty;
-            if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedFile("Open Cards Indx File", $"{State.Language} Card Indx File|CARD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin");
-            else
-                File = $"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin";
+            var langChar = State.Language.ToString()[0];
+            var file = Get_FilePath(
+                "Open Cards Indx File",
+                $"{State.Language} Card Indx File|CARD_Indx_{langChar}.bin|All Indx Files (*.bin)|*.bin",
+                $"{State.Path}\\bin\\CARD_Indx_{langChar}.bin"
+            );
 
-            if (CARDS_Cards.Setup_CardBinder(File) == false)
+            if (!CARDS_Cards.Setup_CardBinder(file))
             {
                 MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (CARDS_CB_LoadCards.Checked == true)
+            if (CARDS_CB_LoadCards.Checked)
             {
-                if (State.Path == null || State.Path == string.Empty)
-                    File = Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib");
-                else
-                    File = $"{State.Path}\\2020.full.illust_j.jpg.zib";
+                file = Get_FilePath(
+                    "Open ZIB Archive",
+                    "ZIB Archive (*.zib)|*.zib",
+                    $"{State.Path}\\2020.full.illust_j.jpg.zib"
+                );
 
-                ZIB.Load(File);
+                ZIB.Load(file);
             }
 
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
 
-            if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedFile("Open CARD_Same.bin", "BIN File (*.bin)|*.bin");
-            else
-                File = $"{State.Path}\\bin\\CARD_Same.bin";
-
-            Card_Same.Load(File);
-
-            if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedFile("Open CARD_Named.bin", "BIN File (*.bin)|*.bin");
-            else
-                File = $"{State.Path}\\bin\\CARD_Named.bin";
-
-            CARD_Named.CARD_Named.Load(File);
-
-            if (State.Path == null || State.Path == string.Empty)
-                File = Utility.Get_UserSelectedFile("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin");
-            else
-                File = $"{State.Path}\\bin\\CARD_Pass.bin";
-
-            CARD_Pass.CARD_Pass.Load(File);
+            Card_Same.Load(Get_FilePath("Open CARD_Same.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Same.bin"));
+            CARD_Named.CARD_Named.Load(Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
+            CARD_Pass.CARD_Pass.Load(Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
+            CARD_Kana.CARD_Kana.Load(Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_E.bin"), (char)State.Language);
 
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
@@ -64,7 +59,16 @@ namespace WolfX
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
-            CARDS_CB_Archetype.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
+        }
+        private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
+        {
+            CARDS_Cards.SaveCardProps();
+            CARDS_Cards.SaveCardInfo();
+
+            Card_Same.Save();
+
+            CARD_Pass.CARD_Pass.Save();
+
         }
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
         {
@@ -150,7 +154,6 @@ namespace WolfX
             CARDS_CB_CardAttribute.Text = SelectedCard.Attribute.ToString();
             CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = SelectedCard.Desc;
-            CARDS_CB_Archetype.Text = SelectedCard.Type.ToString();
 
             CARDS_TB_CardAtk.Text = SelectedCard.Attack.ToString();
             CARDS_TB_CardDef.Text = SelectedCard.Defense.ToString();
@@ -213,7 +216,7 @@ namespace WolfX
             }
 
             CARDS_TB_CardPassword.Text = CARD_Pass.CARD_Pass._Passwords.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
-
+            CARDS_TB_Kana.Text = CARD_Kana.CARD_Kana._Kana.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
         }
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)
         {
@@ -225,13 +228,12 @@ namespace WolfX
             CARDS_CB_CardTypes.DataSource = null;
             CARDS_Nud_CardLevel.ResetText();
             CARDS_PB_CardPicture.Image = null;
-        }
-        private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
-        {
-            CARDS_Cards.SaveCardProps();
-            CARDS_Cards.SaveCardInfo();
 
-            Card_Same.Save();
+            CARDS_TB_CardName.Clear();
+            CARDS_TB_Kana.Clear();
+            CARDS_RB_AlwaysSimilar.Checked = false;
+            CARDS_RB_SimilarOnEffect.Checked = false;
+            CARDS_TB_CardPassword.Clear();
         }
         private void CARDS_UpdateInternalListWithProperties()
         {
@@ -265,7 +267,6 @@ namespace WolfX
                 }
             }
         }
-
         private void CARDS_CB_SimilarCardName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP &&
@@ -276,7 +277,6 @@ namespace WolfX
                     target.TargetCard = Convert.ToInt16(selectedKVP.Value);
             }
         }
-
         private void CARDS_RB_SimilarOnEffect_CheckedChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
@@ -288,7 +288,6 @@ namespace WolfX
                     target.SimilarityType = TYPE.EFFECT;
             }
         }
-
         private void CARDS_RB_AlwaysSimilar_CheckedChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
@@ -300,13 +299,28 @@ namespace WolfX
                     target.SimilarityType = TYPE.EFFECT;
             }
         }
-
         private void CARDS_TB_CardPassword_TextChanged(object sender, EventArgs e)
         {
-            if (CARDS_TB_CardPassword.Text is String Password)
+            if (int.TryParse(CARDS_TB_CardPassword.Text, out int newPassword))
             {
-                var target = CARD_Pass.CARD_Pass._Passwords.FirstOrDefault(card => card.ToString()== Password);
-                target = Convert.ToInt32(CARDS_TB_CardPassword.Text);
+                int index = CARDS_CB_CardID.SelectedIndex;
+
+                if (index >= 0 && index < CARD_Pass.CARD_Pass._Passwords.Count)
+                {
+                    CARD_Pass.CARD_Pass._Passwords[index] = newPassword;
+                }
+            }
+        }
+
+        private void CARDS_TB_Kana_TextChanged(object sender, EventArgs e)
+        {
+            if (CARDS_TB_Kana.Text is string Kana)
+            {
+                int index = CARDS_CB_CardID.SelectedIndex;
+                if (index >= 0 && index < CARD_Pass.CARD_Pass._Passwords.Count)
+                {
+                    CARD_Kana.CARD_Kana._Kana[index] = Kana;
+                }
             }
         }
     }
