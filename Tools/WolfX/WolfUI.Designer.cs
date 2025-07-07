@@ -37,11 +37,11 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox18 = new GroupBox();
+            label29 = new Label();
+            CARDS_TB_Kana = new TextBox();
             label28 = new Label();
             CARDS_TB_CardPassword = new TextBox();
-            CARDS_CB_Archetype = new ComboBox();
             CARDS_CB_SimilarCardName = new ComboBox();
-            label26 = new Label();
             CARDS_RB_SimilarOnEffect = new RadioButton();
             CARDS_RB_AlwaysSimilar = new RadioButton();
             label25 = new Label();
@@ -285,11 +285,11 @@ namespace WolfX
             // 
             // groupBox18
             // 
+            groupBox18.Controls.Add(label29);
+            groupBox18.Controls.Add(CARDS_TB_Kana);
             groupBox18.Controls.Add(label28);
             groupBox18.Controls.Add(CARDS_TB_CardPassword);
-            groupBox18.Controls.Add(CARDS_CB_Archetype);
             groupBox18.Controls.Add(CARDS_CB_SimilarCardName);
-            groupBox18.Controls.Add(label26);
             groupBox18.Controls.Add(CARDS_RB_SimilarOnEffect);
             groupBox18.Controls.Add(CARDS_RB_AlwaysSimilar);
             groupBox18.Controls.Add(label25);
@@ -300,6 +300,25 @@ namespace WolfX
             groupBox18.TabIndex = 6;
             groupBox18.TabStop = false;
             groupBox18.Text = "Card Properties";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 11F);
+            label29.Location = new Point(204, 14);
+            label29.Name = "label29";
+            label29.Size = new Size(77, 20);
+            label29.TabIndex = 21;
+            label29.Text = "Card Kana";
+            // 
+            // CARDS_TB_Kana
+            // 
+            CARDS_TB_Kana.Location = new Point(204, 37);
+            CARDS_TB_Kana.MaxLength = 3;
+            CARDS_TB_Kana.Name = "CARDS_TB_Kana";
+            CARDS_TB_Kana.Size = new Size(77, 23);
+            CARDS_TB_Kana.TabIndex = 20;
+            CARDS_TB_Kana.TextChanged += CARDS_TB_Kana_TextChanged;
             // 
             // label28
             // 
@@ -319,14 +338,6 @@ namespace WolfX
             CARDS_TB_CardPassword.TabIndex = 18;
             CARDS_TB_CardPassword.TextChanged += CARDS_TB_CardPassword_TextChanged;
             // 
-            // CARDS_CB_Archetype
-            // 
-            CARDS_CB_Archetype.FormattingEnabled = true;
-            CARDS_CB_Archetype.Location = new Point(198, 37);
-            CARDS_CB_Archetype.Name = "CARDS_CB_Archetype";
-            CARDS_CB_Archetype.Size = new Size(116, 23);
-            CARDS_CB_Archetype.TabIndex = 17;
-            // 
             // CARDS_CB_SimilarCardName
             // 
             CARDS_CB_SimilarCardName.AutoCompleteMode = AutoCompleteMode.Suggest;
@@ -336,16 +347,6 @@ namespace WolfX
             CARDS_CB_SimilarCardName.Size = new Size(186, 23);
             CARDS_CB_SimilarCardName.TabIndex = 7;
             CARDS_CB_SimilarCardName.SelectedIndexChanged += CARDS_CB_SimilarCardName_SelectedIndexChanged;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Segoe UI", 11F);
-            label26.Location = new Point(198, 14);
-            label26.Name = "label26";
-            label26.Size = new Size(111, 20);
-            label26.TabIndex = 16;
-            label26.Text = "Card Archetype";
             // 
             // CARDS_RB_SimilarOnEffect
             // 
@@ -2256,9 +2257,9 @@ namespace WolfX
         private RadioButton CARDS_RB_AlwaysSimilar;
         private ComboBox CARDS_CB_SimilarID;
         private ComboBox CARDS_CB_SimilarCardName;
-        public ComboBox CARDS_CB_Archetype;
-        private Label label26;
         private Label label28;
         private TextBox CARDS_TB_CardPassword;
+        private Label label29;
+        private TextBox CARDS_TB_Kana;
     }
 }
