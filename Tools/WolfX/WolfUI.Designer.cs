@@ -37,6 +37,8 @@ namespace WolfX
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
             groupBox18 = new GroupBox();
+            label26 = new Label();
+            CARDS_TB_CardNumber = new TextBox();
             label29 = new Label();
             CARDS_TB_Kana = new TextBox();
             label28 = new Label();
@@ -285,6 +287,8 @@ namespace WolfX
             // 
             // groupBox18
             // 
+            groupBox18.Controls.Add(label26);
+            groupBox18.Controls.Add(CARDS_TB_CardNumber);
             groupBox18.Controls.Add(label29);
             groupBox18.Controls.Add(CARDS_TB_Kana);
             groupBox18.Controls.Add(label28);
@@ -300,6 +304,24 @@ namespace WolfX
             groupBox18.TabIndex = 6;
             groupBox18.TabStop = false;
             groupBox18.Text = "Card Properties";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI", 11F);
+            label26.Location = new Point(205, 63);
+            label26.Name = "label26";
+            label26.Size = new Size(98, 20);
+            label26.TabIndex = 23;
+            label26.Text = "Card Number";
+            // 
+            // CARDS_TB_CardNumber
+            // 
+            CARDS_TB_CardNumber.Location = new Point(205, 86);
+            CARDS_TB_CardNumber.MaxLength = 3;
+            CARDS_TB_CardNumber.Name = "CARDS_TB_CardNumber";
+            CARDS_TB_CardNumber.Size = new Size(77, 23);
+            CARDS_TB_CardNumber.TabIndex = 22;
             // 
             // label29
             // 
@@ -1627,6 +1649,7 @@ namespace WolfX
             // 
             // groupBox16
             // 
+            groupBox16.Controls.Add(PDL_CB_ManualOpenWhenPathSet);
             groupBox16.Controls.Add(PDL_CB_UseCardID);
             groupBox16.Controls.Add(PDL_CB_LoadImages);
             groupBox16.Controls.Add(PDL_BTN_SavePDL);
@@ -2001,6 +2024,17 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // PDL_CB_ManualOpenWhenPathSet
+            // 
+            PDL_CB_ManualOpenWhenPathSet.AutoSize = true;
+            PDL_CB_ManualOpenWhenPathSet.Enabled = false;
+            PDL_CB_ManualOpenWhenPathSet.Location = new Point(84, 75);
+            PDL_CB_ManualOpenWhenPathSet.Name = "PDL_CB_ManualOpenWhenPathSet";
+            PDL_CB_ManualOpenWhenPathSet.Size = new Size(100, 19);
+            PDL_CB_ManualOpenWhenPathSet.TabIndex = 8;
+            PDL_CB_ManualOpenWhenPathSet.Text = "Manual Select";
+            PDL_CB_ManualOpenWhenPathSet.UseVisualStyleBackColor = true;
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2261,5 +2295,8 @@ namespace WolfX
         private TextBox CARDS_TB_CardPassword;
         private Label label29;
         private TextBox CARDS_TB_Kana;
+        private Label label26;
+        private TextBox CARDS_TB_CardNumber;
+        private CheckBox PDL_CB_ManualOpenWhenPathSet;
     }
 }
