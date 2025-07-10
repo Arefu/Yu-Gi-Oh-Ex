@@ -1,5 +1,6 @@
 ﻿using CARD_Named;
 using CARD_Kana;
+using CARD_PackID;
 using CARD_Pass;
 using CARD_Same;
 using Types;
@@ -51,6 +52,7 @@ namespace WolfX
             CARD_Named.CARD_Named.Load(Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
             CARD_Pass.CARD_Pass.Load(Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
             CARD_Kana.CARD_Kana.Load(Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_E.bin"), (char)State.Language);
+            CARD_PackID.CARD_PackID.Load(Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
 
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
@@ -134,76 +136,59 @@ namespace WolfX
                 }
             }
         }
+
         private void CARDS_CB_CardID_SelectedIndexChanged(object? sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedIndex == -1)
                 return;
 
             if (PREVIOUS_INDEX != -1)
-            {
                 CARDS_UpdateInternalListWithProperties();
-            }
 
-
-            var SelectedCard = CARDS_Cards.Cards.Where(Card => Card.ID == int.Parse(CARDS_CB_CardID.Text)).FirstOrDefault();
-            if (SelectedCard == null)
+            if (!int.TryParse(CARDS_CB_CardID.Text, out int selectedCardID))
                 return;
 
-            CARDS_TB_CardName.Text = SelectedCard.Name;
-            CARDS_CB_CardTypes.Text = SelectedCard.Kind.ToString();
-            CARDS_CB_CardAttribute.Text = SelectedCard.Attribute.ToString();
-            CARDS_Nud_CardLevel.Text = SelectedCard.Level.ToString();
-            CARDS_TB_CardDesc.Text = SelectedCard.Desc;
+            var selectedCard = CARDS_Cards.Cards.FirstOrDefault(card => card.ID == selectedCardID);
+            if (selectedCard == null)
+                return;
 
-            CARDS_TB_CardAtk.Text = SelectedCard.Attack.ToString();
-            CARDS_TB_CardDef.Text = SelectedCard.Defense.ToString();
+            // Update card display fields
+            CARDS_TB_CardName.Text = selectedCard.Name;
+            CARDS_CB_CardTypes.Text = selectedCard.Kind.ToString();
+            CARDS_CB_CardAttribute.Text = selectedCard.Attribute.ToString();
+            CARDS_Nud_CardLevel.Text = selectedCard.Level.ToString();
+            CARDS_TB_CardDesc.Text = selectedCard.Desc;
+            CARDS_TB_CardAtk.Text = selectedCard.Attack.ToString();
+            CARDS_TB_CardDef.Text = selectedCard.Defense.ToString();
 
-
-            if (CARDS_CB_LoadCards.Checked == true)
+            // Load card image
+            if (CARDS_CB_LoadCards.Checked)
             {
-                var Obj = ZIB.Get_CardImageFromDefaultArchiveByYDCID(SelectedCard.ID.ToString());
-                if (Obj != null)
-                    CARDS_PB_CardPicture.Image = Image.FromStream(Obj);
-            }
-            PREVIOUS_INDEX = CARDS_CB_CardID.SelectedIndex;
-
-            //Set CARD_Same Information
-            var Condition = Card_Same._SimilarCards.FirstOrDefault(Card => Card.PrimaryCard == Convert.ToInt16(CARDS_CB_CardID.Text))?.SimilarityType.ToString();
-
-            if (Condition == "ALWAYS")
-            {
-                CARDS_RB_AlwaysSimilar.Checked = true;
-                CARDS_RB_SimilarOnEffect.Checked = false;
-            }
-            else if (Condition == "EFFECT")
-            {
-                CARDS_RB_AlwaysSimilar.Checked = false;
-                CARDS_RB_SimilarOnEffect.Checked = true;
-            }
-            else
-            {
-                CARDS_RB_AlwaysSimilar.Checked = false;
-                CARDS_RB_SimilarOnEffect.Checked = false;
+                var imageStream = ZIB.Get_CardImageFromDefaultArchiveByYDCID(selectedCard.ID.ToString());
+                if (imageStream != null)
+                    CARDS_PB_CardPicture.Image = Image.FromStream(imageStream);
             }
 
-            if (CARDS_CB_CardID.SelectedItem is int selectedCardID)
-            {
-                var targetEntry = Card_Same._SimilarCards
-                    .FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+            // Update similarity type radio buttons
+            var similarityCondition = Card_Same._SimilarCards
+                .FirstOrDefault(card => card.PrimaryCard == selectedCardID)?
+                .SimilarityType.ToString();
 
-                if (targetEntry != null)
+            CARDS_RB_AlwaysSimilar.Checked = similarityCondition == "ALWAYS";
+            CARDS_RB_SimilarOnEffect.Checked = similarityCondition == "EFFECT";
+
+            // Update similar card selection
+            var similarCardEntry = Card_Same._SimilarCards
+                .FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+
+            if (CARDS_CB_SimilarCardName.DataSource is List<KeyValuePair<string, int>> similarCardList)
+            {
+                if (similarCardEntry != null)
                 {
-                    int targetID = targetEntry.TargetCard;
-
-                    var list = (List<KeyValuePair<string, int>>)CARDS_CB_SimilarCardName.DataSource;
-                    var match = list.FirstOrDefault(kvp => kvp.Value == targetID);
-
-                    if (!match.Equals(default(KeyValuePair<string, int>)))
-                        CARDS_CB_SimilarCardName.SelectedItem = match;
-                    else if (list.Count > 0)
-                        CARDS_CB_SimilarCardName.SelectedIndex = 0;
-                    else
-                        CARDS_CB_SimilarCardName.SelectedIndex = -1;
+                    var selectedKvp = similarCardList.FirstOrDefault(kvp => kvp.Value == similarCardEntry.TargetCard);
+                    CARDS_CB_SimilarCardName.SelectedItem = !selectedKvp.Equals(default)
+                        ? selectedKvp
+                        : similarCardList.Count > 0 ? similarCardList[0] : null;
                 }
                 else
                 {
@@ -215,9 +200,15 @@ namespace WolfX
                 CARDS_CB_SimilarCardName.SelectedIndex = -1;
             }
 
-            CARDS_TB_CardPassword.Text = CARD_Pass.CARD_Pass._Passwords.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
-            CARDS_TB_Kana.Text = CARD_Kana.CARD_Kana._Kana.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
+            // Update additional fields
+            int index = CARDS_CB_CardID.SelectedIndex;
+            CARDS_TB_CardPassword.Text = CARD_Pass.CARD_Pass._Passwords.ElementAt(index).ToString();
+            CARDS_TB_Kana.Text = CARD_Kana.CARD_Kana._Kana.ElementAt(index).ToString();
+            CARDS_TB_CardNumber.Text = CARD_PackID.CARD_PackID._CardNumbers.ElementAt(index).ToString();
+
+            PREVIOUS_INDEX = index;
         }
+
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)
         {
             CARDS_Cards.Close_CardBinder();
