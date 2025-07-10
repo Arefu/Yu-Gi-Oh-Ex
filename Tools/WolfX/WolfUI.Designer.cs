@@ -2024,17 +2024,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // PDL_CB_ManualOpenWhenPathSet
-            // 
-            PDL_CB_ManualOpenWhenPathSet.AutoSize = true;
-            PDL_CB_ManualOpenWhenPathSet.Enabled = false;
-            PDL_CB_ManualOpenWhenPathSet.Location = new Point(84, 75);
-            PDL_CB_ManualOpenWhenPathSet.Name = "PDL_CB_ManualOpenWhenPathSet";
-            PDL_CB_ManualOpenWhenPathSet.Size = new Size(100, 19);
-            PDL_CB_ManualOpenWhenPathSet.TabIndex = 8;
-            PDL_CB_ManualOpenWhenPathSet.Text = "Manual Select";
-            PDL_CB_ManualOpenWhenPathSet.UseVisualStyleBackColor = true;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
