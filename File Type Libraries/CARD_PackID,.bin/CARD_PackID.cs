@@ -1,0 +1,22 @@
+﻿using System.Text;
+
+namespace CARD_PackID
+{
+    public static class CARD_PackID
+    {
+        public static List<string> _CardNumbers = [];
+
+        public static void Load(string Path)
+        {
+            using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
+
+            while (Reader.BaseStream.Position < Reader.BaseStream.Length)
+            {
+                var Bytes = Reader.ReadBytes(16);
+  
+
+                _CardNumbers.Add(Encoding.ASCII.GetString(Bytes));
+            }
+        }
+    }
+}
