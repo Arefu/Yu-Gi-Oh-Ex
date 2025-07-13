@@ -28,7 +28,7 @@ namespace WolfX
                 $"{State.Path}\\bin\\CARD_Indx_{langChar}.bin"
             );
 
-            if (!CARDS_Cards.Setup_CardBinder(file))
+            if (!CARDS_Cards.Setup_CardBinder(file, (CARDS_INFO.CARD_Language)State.Language))
             {
                 MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -51,7 +51,7 @@ namespace WolfX
             Card_Same.Load(Get_FilePath("Open CARD_Same.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Same.bin"));
             CARD_Named.CARD_Named.Load(Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
             CARD_Pass.CARD_Pass.Load(Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
-            CARD_Kana.CARD_Kana.Load(Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_E.bin"), (char)State.Language);
+            CARD_Kana.CARD_Kana.Load(Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin"), State.Language.ToString());
             CARD_PackID.CARD_PackID.Load(Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
 
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
