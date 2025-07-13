@@ -126,7 +126,7 @@ namespace Types
         }
 
 
-        public static bool Setup_CardBinder(string Indx_File, CARDS_INFO.CARD_Language Language = CARDS_INFO.CARD_Language.English)
+        public static bool Setup_CardBinder(string Indx_File, CARDS_INFO.CARD_Language Language)
         {
             if (File.Exists(Indx_File) != true)
                 return false;

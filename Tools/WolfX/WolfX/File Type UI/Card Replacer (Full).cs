@@ -37,7 +37,7 @@ namespace WolfX.WolfX.File_Type_UI
 
                 }
             }
-            if (CARDS_Cards.Setup_CardBinder($"{Path}\\bin\\CARD_Indx_{Language.ToString()[0]}.bin") == false)
+            if (CARDS_Cards.Setup_CardBinder($"{Path}\\bin\\CARD_Indx_{Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language) == false)
             {
                 MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

@@ -1,11 +1,17 @@
-﻿namespace CARD_Kana
+﻿using System.Text;
+
+namespace CARD_Kana
 {
     public static class CARD_Kana
     {
         public static List<string> _Kana = [];
 
-        public static void Load(string Path, char Language)
+        public static void Load(string Path, string Language)
         {
+            bool useJp = false;
+            if (Language[0] == 'J')
+                useJp = true;
+
             var Kana = new List<string>();
 
             if (File.Exists(Path.Replace("CARD_Kana1", "CARD_Kana2")) == false && File.Exists(Path.Replace("CARD_Kana1", "CARD_Kana3")) == false)
@@ -15,8 +21,8 @@
 
 
             using var Kana1Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
-            using var Kana2Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_{Language}", $"CARD_Kana2_{Language}"), FileMode.Open, FileAccess.Read));
-            using var Kana3Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_{Language}", $"CARD_Kana3_{Language}"), FileMode.Open, FileAccess.Read));
+            using var Kana2Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_", $"CARD_Kana2_"), FileMode.Open, FileAccess.Read));
+            using var Kana3Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_", $"CARD_Kana3_"), FileMode.Open, FileAccess.Read));
 
             while (Kana1Reader.BaseStream.Position != Kana1Reader.BaseStream.Length)
             {
@@ -32,7 +38,6 @@
                 string Kana1 = new string(rawKana1).TrimEnd('\0');
                 string Kana2 = new string(rawKana2).TrimEnd('\0');
                 string Kana3 = new string(rawKana3).TrimEnd('\0');
-
                 Kana.Add($"{Kana1}{Kana2}{Kana3}");
             }
 
