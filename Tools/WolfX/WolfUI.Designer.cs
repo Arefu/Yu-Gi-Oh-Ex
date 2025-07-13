@@ -182,11 +182,11 @@ namespace WolfX
             Page_CardShopManager = new TabPage();
             groupBox20 = new GroupBox();
             button2 = new Button();
-            PACKDEF_BTN_OpenPackDEF = new Button();
+            PACKDATA_BTN_OpenPackDEF = new Button();
             groupBox19 = new GroupBox();
-            label24 = new Label();
+            PACKDATA_LBL_NumberOfRare = new Label();
             label22 = new Label();
-            label15 = new Label();
+            PACKDATA_LBL_NumberOfCommon = new Label();
             label20 = new Label();
             label27 = new Label();
             MenuBar = new MenuStrip();
@@ -209,6 +209,11 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            tabControl3 = new TabControl();
+            tabPage4 = new TabPage();
+            PACKDATA_LV_CommonCards = new ListView();
+            tabPage5 = new TabPage();
+            PACKDATA_LV_RareCards = new ListView();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -252,6 +257,9 @@ namespace WolfX
             groupBox20.SuspendLayout();
             groupBox19.SuspendLayout();
             MenuBar.SuspendLayout();
+            tabControl3.SuspendLayout();
+            tabPage4.SuspendLayout();
+            tabPage5.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -1649,7 +1657,6 @@ namespace WolfX
             // 
             // groupBox16
             // 
-            groupBox16.Controls.Add(PDL_CB_ManualOpenWhenPathSet);
             groupBox16.Controls.Add(PDL_CB_UseCardID);
             groupBox16.Controls.Add(PDL_CB_LoadImages);
             groupBox16.Controls.Add(PDL_BTN_SavePDL);
@@ -1786,6 +1793,7 @@ namespace WolfX
             // 
             // Page_CardShopManager
             // 
+            Page_CardShopManager.Controls.Add(tabControl3);
             Page_CardShopManager.Controls.Add(groupBox20);
             Page_CardShopManager.Controls.Add(groupBox19);
             Page_CardShopManager.Location = new Point(4, 24);
@@ -1799,7 +1807,7 @@ namespace WolfX
             // groupBox20
             // 
             groupBox20.Controls.Add(button2);
-            groupBox20.Controls.Add(PACKDEF_BTN_OpenPackDEF);
+            groupBox20.Controls.Add(PACKDATA_BTN_OpenPackDEF);
             groupBox20.Location = new Point(214, 6);
             groupBox20.Name = "groupBox20";
             groupBox20.Size = new Size(200, 100);
@@ -1817,21 +1825,21 @@ namespace WolfX
             button2.Text = "Save ";
             button2.UseVisualStyleBackColor = true;
             // 
-            // PACKDEF_BTN_OpenPackDEF
+            // PACKDATA_BTN_OpenPackDEF
             // 
-            PACKDEF_BTN_OpenPackDEF.Location = new Point(6, 22);
-            PACKDEF_BTN_OpenPackDEF.Name = "PACKDEF_BTN_OpenPackDEF";
-            PACKDEF_BTN_OpenPackDEF.Size = new Size(72, 25);
-            PACKDEF_BTN_OpenPackDEF.TabIndex = 2;
-            PACKDEF_BTN_OpenPackDEF.Text = "Open ";
-            PACKDEF_BTN_OpenPackDEF.UseVisualStyleBackColor = true;
-            PACKDEF_BTN_OpenPackDEF.Click += PACKDEF_BTN_OpenPackDEF_Click;
+            PACKDATA_BTN_OpenPackDEF.Location = new Point(6, 22);
+            PACKDATA_BTN_OpenPackDEF.Name = "PACKDATA_BTN_OpenPackDEF";
+            PACKDATA_BTN_OpenPackDEF.Size = new Size(72, 25);
+            PACKDATA_BTN_OpenPackDEF.TabIndex = 2;
+            PACKDATA_BTN_OpenPackDEF.Text = "Open ";
+            PACKDATA_BTN_OpenPackDEF.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_OpenPackDEF.Click += PACKDEF_BTN_OpenPackDEF_Click;
             // 
             // groupBox19
             // 
-            groupBox19.Controls.Add(label24);
+            groupBox19.Controls.Add(PACKDATA_LBL_NumberOfRare);
             groupBox19.Controls.Add(label22);
-            groupBox19.Controls.Add(label15);
+            groupBox19.Controls.Add(PACKDATA_LBL_NumberOfCommon);
             groupBox19.Controls.Add(label20);
             groupBox19.Controls.Add(label27);
             groupBox19.Location = new Point(8, 6);
@@ -1841,41 +1849,41 @@ namespace WolfX
             groupBox19.TabStop = false;
             groupBox19.Text = "Series Information";
             // 
-            // label24
+            // PACKDATA_LBL_NumberOfRare
             // 
-            label24.AutoSize = true;
-            label24.Location = new Point(133, 40);
-            label24.Name = "label24";
-            label24.Size = new Size(13, 15);
-            label24.TabIndex = 9;
-            label24.Text = "0";
+            PACKDATA_LBL_NumberOfRare.AutoSize = true;
+            PACKDATA_LBL_NumberOfRare.Location = new Point(143, 40);
+            PACKDATA_LBL_NumberOfRare.Name = "PACKDATA_LBL_NumberOfRare";
+            PACKDATA_LBL_NumberOfRare.Size = new Size(13, 15);
+            PACKDATA_LBL_NumberOfRare.TabIndex = 9;
+            PACKDATA_LBL_NumberOfRare.Text = "0";
             // 
             // label22
             // 
             label22.AutoSize = true;
             label22.Location = new Point(7, 40);
             label22.Name = "label22";
-            label22.Size = new Size(103, 15);
+            label22.Size = new Size(130, 15);
             label22.TabIndex = 8;
-            label22.Text = "Number of Stores:";
+            label22.Text = "Number of Rare Cards: ";
             // 
-            // label15
+            // PACKDATA_LBL_NumberOfCommon
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(133, 19);
-            label15.Name = "label15";
-            label15.Size = new Size(13, 15);
-            label15.TabIndex = 7;
-            label15.Text = "0";
+            PACKDATA_LBL_NumberOfCommon.AutoSize = true;
+            PACKDATA_LBL_NumberOfCommon.Location = new Point(167, 19);
+            PACKDATA_LBL_NumberOfCommon.Name = "PACKDATA_LBL_NumberOfCommon";
+            PACKDATA_LBL_NumberOfCommon.Size = new Size(13, 15);
+            PACKDATA_LBL_NumberOfCommon.TabIndex = 7;
+            PACKDATA_LBL_NumberOfCommon.Text = "0";
             // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Location = new Point(6, 19);
             label20.Name = "label20";
-            label20.Size = new Size(121, 15);
+            label20.Size = new Size(158, 15);
             label20.TabIndex = 6;
-            label20.Text = "Number of Chapters: ";
+            label20.Text = "Number of Common Cards: ";
             // 
             // label27
             // 
@@ -2024,6 +2032,57 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // tabControl3
+            // 
+            tabControl3.Controls.Add(tabPage4);
+            tabControl3.Controls.Add(tabPage5);
+            tabControl3.Location = new Point(8, 112);
+            tabControl3.Name = "tabControl3";
+            tabControl3.SelectedIndex = 0;
+            tabControl3.Size = new Size(1240, 496);
+            tabControl3.TabIndex = 16;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(PACKDATA_LV_CommonCards);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(1232, 468);
+            tabPage4.TabIndex = 0;
+            tabPage4.Text = "Common";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // PACKDATA_LV_CommonCards
+            // 
+            PACKDATA_LV_CommonCards.Dock = DockStyle.Fill;
+            PACKDATA_LV_CommonCards.Location = new Point(3, 3);
+            PACKDATA_LV_CommonCards.Name = "PACKDATA_LV_CommonCards";
+            PACKDATA_LV_CommonCards.Size = new Size(1226, 462);
+            PACKDATA_LV_CommonCards.TabIndex = 0;
+            PACKDATA_LV_CommonCards.UseCompatibleStateImageBehavior = false;
+            PACKDATA_LV_CommonCards.View = View.List;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(PACKDATA_LV_RareCards);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(1232, 468);
+            tabPage5.TabIndex = 2;
+            tabPage5.Text = "Rare";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // PACKDATA_LV_RareCards
+            // 
+            PACKDATA_LV_RareCards.Dock = DockStyle.Fill;
+            PACKDATA_LV_RareCards.Location = new Point(0, 0);
+            PACKDATA_LV_RareCards.Name = "PACKDATA_LV_RareCards";
+            PACKDATA_LV_RareCards.Size = new Size(1232, 468);
+            PACKDATA_LV_RareCards.TabIndex = 1;
+            PACKDATA_LV_RareCards.UseCompatibleStateImageBehavior = false;
+            PACKDATA_LV_RareCards.View = View.List;
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2100,6 +2159,9 @@ namespace WolfX
             groupBox19.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
+            tabControl3.ResumeLayout(false);
+            tabPage4.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2265,11 +2327,11 @@ namespace WolfX
         private CheckBox checkBox2;
         private CheckBox checkBox3;
         public Button button2;
-        private Button PACKDEF_BTN_OpenPackDEF;
+        private Button PACKDATA_BTN_OpenPackDEF;
         private GroupBox groupBox19;
-        private Label label24;
+        private Label PACKDATA_LBL_NumberOfRare;
         private Label label22;
-        private Label label15;
+        private Label PACKDATA_LBL_NumberOfCommon;
         private Label label20;
         private Label label27;
         private CheckBox CARDS_CB_LoadCards;
@@ -2287,5 +2349,10 @@ namespace WolfX
         private Label label26;
         private TextBox CARDS_TB_CardNumber;
         private CheckBox PDL_CB_ManualOpenWhenPathSet;
+        private TabControl tabControl3;
+        private TabPage tabPage4;
+        private ListView PACKDATA_LV_CommonCards;
+        private TabPage tabPage5;
+        private ListView PACKDATA_LV_RareCards;
     }
 }

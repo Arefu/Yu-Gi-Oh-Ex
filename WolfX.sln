@@ -69,7 +69,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Yu-Gi-Oh-MoreCards", "Yu-Gi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDLimits", "File Type Libraries\PDLimits\PDLimits.csproj", "{AC097FD4-BE2E-4DF1-BD05-35A3A8F87AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packdefdata", "File Type Libraries\Packdefdata\Packdefdata.csproj", "{0C4FD14A-D035-483B-8AC6-6098D9C953A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackData", "File Type Libraries\Packdefdata\PackData.csproj", "{0C4FD14A-D035-483B-8AC6-6098D9C953A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CARD_Same.bin", "File Type Libraries\CARD_Same.bin\CARD_Same.bin.csproj", "{8DE2801B-BE40-963B-114B-4AFC35B22FC9}"
 EndProject
