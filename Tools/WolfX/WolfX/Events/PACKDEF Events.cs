@@ -1,5 +1,5 @@
-﻿using Packdefdata;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using PACKDATA;
 
 namespace WolfX
 {
@@ -7,25 +7,20 @@ namespace WolfX
     {
         private void PACKDEF_BTN_OpenPackDEF_Click(object sender, EventArgs e)
         {
-            var File = "";
-            if (State.Path == null || State.Path == "")
-            {
-                File = Utility.Get_UserSelectedFile("Open Packdefdata File", "packdefdata_#.bin (*.bin)|*.bin");
+            var File  = Utility.Get_UserSelectedFile("Open Packdata File", "packdata_#_#.bin (*.bin)|*.bin");
+
+            PACKDATA.PACKDATA.Load(File);
+
+            PACKDATA_LBL_NumberOfRare.Text = PACKDATA.PACKDATA._NumberOfRareCards.ToString();
+            PACKDATA_LBL_NumberOfCommon.Text = PACKDATA.PACKDATA._NumberOfCommonCards.ToString();
+
+            foreach(var Item in PACKDATA.PACKDATA._CommonCards)
+                {
+                PACKDATA_LV_CommonCards.Items.Add(Item.ToString());
             }
-
-            if (File == "")
-                File = $"{State.Path}\\main\\packdefdata_{State.Language.ToString()[0]}.bin";
-
-            var Packs = PACKDEFDATA.Load(File);
-            foreach (var Pack in Packs)
+            foreach(var Item in PACKDATA.PACKDATA._RareCards)
             {
-                Debug.WriteLine("------------");
-                Debug.WriteLine($"Index: {Pack.Index}");
-                Debug.WriteLine($"Series: {Pack.Series}");
-                Debug.WriteLine($"Cost: {Pack.Cost}");
-                Debug.WriteLine($"Type: {Pack.Type}");
-                Debug.WriteLine($"Code_Name: {Pack.Code_Name}");
-                Debug.WriteLine($"Name: {Pack.Name}");
+                PACKDATA_LV_RareCards.Items.Add(Item.ToString());
             }
         }
     }
