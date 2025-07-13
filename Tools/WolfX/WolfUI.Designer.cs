@@ -180,7 +180,19 @@ namespace WolfX
             label21 = new Label();
             label23 = new Label();
             Page_CardShopManager = new TabPage();
+            groupBox21 = new GroupBox();
+            checkBox1 = new CheckBox();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            tabControl3 = new TabControl();
+            tabPage4 = new TabPage();
+            PACKDATA_LV_CommonCards = new ListView();
+            tabPage5 = new TabPage();
+            PACKDATA_LV_RareCards = new ListView();
             groupBox20 = new GroupBox();
+            PACKDATA_CB_UseCardID = new CheckBox();
+            PACKDATA_CB_LoadImages = new CheckBox();
             button2 = new Button();
             PACKDATA_BTN_OpenPackDEF = new Button();
             groupBox19 = new GroupBox();
@@ -209,11 +221,6 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            tabControl3 = new TabControl();
-            tabPage4 = new TabPage();
-            PACKDATA_LV_CommonCards = new ListView();
-            tabPage5 = new TabPage();
-            PACKDATA_LV_RareCards = new ListView();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -254,12 +261,13 @@ namespace WolfX
             groupBox16.SuspendLayout();
             groupBox17.SuspendLayout();
             Page_CardShopManager.SuspendLayout();
-            groupBox20.SuspendLayout();
-            groupBox19.SuspendLayout();
-            MenuBar.SuspendLayout();
+            groupBox21.SuspendLayout();
             tabControl3.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage5.SuspendLayout();
+            groupBox20.SuspendLayout();
+            groupBox19.SuspendLayout();
+            MenuBar.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -1793,6 +1801,7 @@ namespace WolfX
             // 
             // Page_CardShopManager
             // 
+            Page_CardShopManager.Controls.Add(groupBox21);
             Page_CardShopManager.Controls.Add(tabControl3);
             Page_CardShopManager.Controls.Add(groupBox20);
             Page_CardShopManager.Controls.Add(groupBox19);
@@ -1804,8 +1813,116 @@ namespace WolfX
             Page_CardShopManager.Text = "Card Shop Manager";
             Page_CardShopManager.UseVisualStyleBackColor = true;
             // 
+            // groupBox21
+            // 
+            groupBox21.Controls.Add(checkBox1);
+            groupBox21.Controls.Add(button3);
+            groupBox21.Controls.Add(button4);
+            groupBox21.Controls.Add(button5);
+            groupBox21.Location = new Point(420, 6);
+            groupBox21.Name = "groupBox21";
+            groupBox21.Size = new Size(200, 100);
+            groupBox21.TabIndex = 17;
+            groupBox21.TabStop = false;
+            groupBox21.Text = "PackData Tools";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Checked = true;
+            checkBox1.CheckState = CheckState.Checked;
+            checkBox1.Location = new Point(84, 25);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(109, 19);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Simple Add Box";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.Location = new Point(84, 53);
+            button3.Name = "button3";
+            button3.Size = new Size(72, 25);
+            button3.TabIndex = 5;
+            button3.Text = "Replace";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Enabled = false;
+            button4.Location = new Point(6, 53);
+            button4.Name = "button4";
+            button4.Size = new Size(72, 25);
+            button4.TabIndex = 4;
+            button4.Text = "Remove";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Enabled = false;
+            button5.Location = new Point(6, 22);
+            button5.Name = "button5";
+            button5.Size = new Size(72, 25);
+            button5.TabIndex = 2;
+            button5.Text = "Add";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // tabControl3
+            // 
+            tabControl3.Controls.Add(tabPage4);
+            tabControl3.Controls.Add(tabPage5);
+            tabControl3.Location = new Point(8, 112);
+            tabControl3.Name = "tabControl3";
+            tabControl3.SelectedIndex = 0;
+            tabControl3.Size = new Size(1240, 496);
+            tabControl3.TabIndex = 16;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(PACKDATA_LV_CommonCards);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(1232, 468);
+            tabPage4.TabIndex = 0;
+            tabPage4.Text = "Common";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // PACKDATA_LV_CommonCards
+            // 
+            PACKDATA_LV_CommonCards.Dock = DockStyle.Fill;
+            PACKDATA_LV_CommonCards.Location = new Point(3, 3);
+            PACKDATA_LV_CommonCards.Name = "PACKDATA_LV_CommonCards";
+            PACKDATA_LV_CommonCards.Size = new Size(1226, 462);
+            PACKDATA_LV_CommonCards.TabIndex = 0;
+            PACKDATA_LV_CommonCards.UseCompatibleStateImageBehavior = false;
+            PACKDATA_LV_CommonCards.View = View.List;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(PACKDATA_LV_RareCards);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(1232, 468);
+            tabPage5.TabIndex = 2;
+            tabPage5.Text = "Rare";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // PACKDATA_LV_RareCards
+            // 
+            PACKDATA_LV_RareCards.Dock = DockStyle.Fill;
+            PACKDATA_LV_RareCards.Location = new Point(0, 0);
+            PACKDATA_LV_RareCards.Name = "PACKDATA_LV_RareCards";
+            PACKDATA_LV_RareCards.Size = new Size(1232, 468);
+            PACKDATA_LV_RareCards.TabIndex = 1;
+            PACKDATA_LV_RareCards.UseCompatibleStateImageBehavior = false;
+            PACKDATA_LV_RareCards.View = View.List;
+            // 
             // groupBox20
             // 
+            groupBox20.Controls.Add(PACKDATA_CB_UseCardID);
+            groupBox20.Controls.Add(PACKDATA_CB_LoadImages);
             groupBox20.Controls.Add(button2);
             groupBox20.Controls.Add(PACKDATA_BTN_OpenPackDEF);
             groupBox20.Location = new Point(214, 6);
@@ -1815,10 +1932,34 @@ namespace WolfX
             groupBox20.TabStop = false;
             groupBox20.Text = "Pack Def File Handler";
             // 
+            // PACKDATA_CB_UseCardID
+            // 
+            PACKDATA_CB_UseCardID.AutoSize = true;
+            PACKDATA_CB_UseCardID.Checked = true;
+            PACKDATA_CB_UseCardID.CheckState = CheckState.Checked;
+            PACKDATA_CB_UseCardID.Location = new Point(84, 56);
+            PACKDATA_CB_UseCardID.Name = "PACKDATA_CB_UseCardID";
+            PACKDATA_CB_UseCardID.Size = new Size(92, 19);
+            PACKDATA_CB_UseCardID.TabIndex = 9;
+            PACKDATA_CB_UseCardID.Text = "Use Card IDs";
+            PACKDATA_CB_UseCardID.UseVisualStyleBackColor = true;
+            PACKDATA_CB_UseCardID.CheckedChanged += PACKDATA_CB_UseCardID_CheckedChanged;
+            // 
+            // PACKDATA_CB_LoadImages
+            // 
+            PACKDATA_CB_LoadImages.AutoSize = true;
+            PACKDATA_CB_LoadImages.Location = new Point(84, 26);
+            PACKDATA_CB_LoadImages.Name = "PACKDATA_CB_LoadImages";
+            PACKDATA_CB_LoadImages.Size = new Size(97, 19);
+            PACKDATA_CB_LoadImages.TabIndex = 8;
+            PACKDATA_CB_LoadImages.Text = "Load Pictures";
+            PACKDATA_CB_LoadImages.UseVisualStyleBackColor = true;
+            PACKDATA_CB_LoadImages.CheckedChanged += PACKDATA_CB_LoadImages_CheckedChanged;
+            // 
             // button2
             // 
             button2.Enabled = false;
-            button2.Location = new Point(122, 22);
+            button2.Location = new Point(6, 53);
             button2.Name = "button2";
             button2.Size = new Size(72, 25);
             button2.TabIndex = 4;
@@ -2032,57 +2173,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // tabControl3
-            // 
-            tabControl3.Controls.Add(tabPage4);
-            tabControl3.Controls.Add(tabPage5);
-            tabControl3.Location = new Point(8, 112);
-            tabControl3.Name = "tabControl3";
-            tabControl3.SelectedIndex = 0;
-            tabControl3.Size = new Size(1240, 496);
-            tabControl3.TabIndex = 16;
-            // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(PACKDATA_LV_CommonCards);
-            tabPage4.Location = new Point(4, 24);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(1232, 468);
-            tabPage4.TabIndex = 0;
-            tabPage4.Text = "Common";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // PACKDATA_LV_CommonCards
-            // 
-            PACKDATA_LV_CommonCards.Dock = DockStyle.Fill;
-            PACKDATA_LV_CommonCards.Location = new Point(3, 3);
-            PACKDATA_LV_CommonCards.Name = "PACKDATA_LV_CommonCards";
-            PACKDATA_LV_CommonCards.Size = new Size(1226, 462);
-            PACKDATA_LV_CommonCards.TabIndex = 0;
-            PACKDATA_LV_CommonCards.UseCompatibleStateImageBehavior = false;
-            PACKDATA_LV_CommonCards.View = View.List;
-            // 
-            // tabPage5
-            // 
-            tabPage5.Controls.Add(PACKDATA_LV_RareCards);
-            tabPage5.Location = new Point(4, 24);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(1232, 468);
-            tabPage5.TabIndex = 2;
-            tabPage5.Text = "Rare";
-            tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // PACKDATA_LV_RareCards
-            // 
-            PACKDATA_LV_RareCards.Dock = DockStyle.Fill;
-            PACKDATA_LV_RareCards.Location = new Point(0, 0);
-            PACKDATA_LV_RareCards.Name = "PACKDATA_LV_RareCards";
-            PACKDATA_LV_RareCards.Size = new Size(1232, 468);
-            PACKDATA_LV_RareCards.TabIndex = 1;
-            PACKDATA_LV_RareCards.UseCompatibleStateImageBehavior = false;
-            PACKDATA_LV_RareCards.View = View.List;
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2154,14 +2244,17 @@ namespace WolfX
             groupBox17.ResumeLayout(false);
             groupBox17.PerformLayout();
             Page_CardShopManager.ResumeLayout(false);
+            groupBox21.ResumeLayout(false);
+            groupBox21.PerformLayout();
+            tabControl3.ResumeLayout(false);
+            tabPage4.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
             groupBox20.ResumeLayout(false);
+            groupBox20.PerformLayout();
             groupBox19.ResumeLayout(false);
             groupBox19.PerformLayout();
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
-            tabControl3.ResumeLayout(false);
-            tabPage4.ResumeLayout(false);
-            tabPage5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2354,5 +2447,12 @@ namespace WolfX
         private ListView PACKDATA_LV_CommonCards;
         private TabPage tabPage5;
         private ListView PACKDATA_LV_RareCards;
+        private CheckBox PACKDATA_CB_UseCardID;
+        private CheckBox PACKDATA_CB_LoadImages;
+        private GroupBox groupBox21;
+        private CheckBox checkBox1;
+        public Button button3;
+        public Button button4;
+        private Button button5;
     }
 }
