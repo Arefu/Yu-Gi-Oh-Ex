@@ -57,20 +57,9 @@ size_t __cdecl hooked_fread(void* ptr, size_t size, size_t count, FILE* stream)
 	return original_fread(ptr, size, count, stream);
 }
 
-LONG WINAPI CrashHandler(EXCEPTION_POINTERS* ExceptionInfo) {
-
-	std::ofstream log("crash_log.txt");
-	log << "Crash Address: 0x" << std::hex << (uintptr_t)ExceptionInfo->ExceptionRecord->ExceptionAddress << "\n";
-	log << "Exception Code: 0x" << std::hex << ExceptionInfo->ExceptionRecord->ExceptionCode << "\n";
-	log.close();
-	Sleep(2000000000000);
-	return EXCEPTION_EXECUTE_HANDLER;
-}
-
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	Logger::SetupLogger();
-	SetUnhandledExceptionFilter(CrashHandler);
 
 
 
