@@ -137,7 +137,9 @@ namespace WolfX
             tabPage1 = new TabPage();
             YDC_LV_MainDeckCards = new ListView();
             tabPage2 = new TabPage();
+            YDC_LV_SideDeckCards = new ListView();
             tabPage3 = new TabPage();
+            YDC_LV_ExtraDeckCards = new ListView();
             groupBox12 = new GroupBox();
             YDC_CHKBOX_UseCardID = new CheckBox();
             YDC_BTN_OpenSaveFile = new Button();
@@ -181,11 +183,11 @@ namespace WolfX
             label23 = new Label();
             Page_CardShopManager = new TabPage();
             groupBox21 = new GroupBox();
-            checkBox1 = new CheckBox();
+            CardShop_CB_UseSimpleAdd = new CheckBox();
             button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            tabControl3 = new TabControl();
+            PACKDATA_BTN_RemoveCard = new Button();
+            PACKDATA_BTN_AddCards = new Button();
+            PACKDATA_TC_ListOfCardsSoldAtShop = new TabControl();
             tabPage4 = new TabPage();
             PACKDATA_LV_CommonCards = new ListView();
             tabPage5 = new TabPage();
@@ -193,7 +195,7 @@ namespace WolfX
             groupBox20 = new GroupBox();
             PACKDATA_CB_UseCardID = new CheckBox();
             PACKDATA_CB_LoadImages = new CheckBox();
-            button2 = new Button();
+            PACKDATA_BTN_SavePackDEF = new Button();
             PACKDATA_BTN_OpenPackDEF = new Button();
             groupBox19 = new GroupBox();
             PACKDATA_LBL_NumberOfRare = new Label();
@@ -201,6 +203,10 @@ namespace WolfX
             PACKDATA_LBL_NumberOfCommon = new Label();
             label20 = new Label();
             label27 = new Label();
+            Page_SaveGameManager = new TabPage();
+            groupBox22 = new GroupBox();
+            button6 = new Button();
+            SaveGame_BTN_OpenSave = new Button();
             MenuBar = new MenuStrip();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_OpenConfigEditor = new ToolStripMenuItem();
@@ -250,6 +256,8 @@ namespace WolfX
             groupBox14.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             groupBox12.SuspendLayout();
             groupBox13.SuspendLayout();
             Page_PDLimitsManager.SuspendLayout();
@@ -262,11 +270,13 @@ namespace WolfX
             groupBox17.SuspendLayout();
             Page_CardShopManager.SuspendLayout();
             groupBox21.SuspendLayout();
-            tabControl3.SuspendLayout();
+            PACKDATA_TC_ListOfCardsSoldAtShop.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage5.SuspendLayout();
             groupBox20.SuspendLayout();
             groupBox19.SuspendLayout();
+            Page_SaveGameManager.SuspendLayout();
+            groupBox22.SuspendLayout();
             MenuBar.SuspendLayout();
             SuspendLayout();
             // 
@@ -280,6 +290,7 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_YDCManager);
             WolfX_TabManager.Controls.Add(Page_PDLimitsManager);
             WolfX_TabManager.Controls.Add(Page_CardShopManager);
+            WolfX_TabManager.Controls.Add(Page_SaveGameManager);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -1270,6 +1281,8 @@ namespace WolfX
             // YDC_CB_UseSimpleEditor
             // 
             YDC_CB_UseSimpleEditor.AutoSize = true;
+            YDC_CB_UseSimpleEditor.Checked = true;
+            YDC_CB_UseSimpleEditor.CheckState = CheckState.Checked;
             YDC_CB_UseSimpleEditor.Location = new Point(84, 25);
             YDC_CB_UseSimpleEditor.Name = "YDC_CB_UseSimpleEditor";
             YDC_CB_UseSimpleEditor.Size = new Size(109, 19);
@@ -1344,6 +1357,7 @@ namespace WolfX
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(YDC_LV_SideDeckCards);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -1352,14 +1366,35 @@ namespace WolfX
             tabPage2.Text = "Side Deck";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // YDC_LV_SideDeckCards
+            // 
+            YDC_LV_SideDeckCards.Dock = DockStyle.Fill;
+            YDC_LV_SideDeckCards.Location = new Point(3, 3);
+            YDC_LV_SideDeckCards.Name = "YDC_LV_SideDeckCards";
+            YDC_LV_SideDeckCards.Size = new Size(621, 462);
+            YDC_LV_SideDeckCards.TabIndex = 1;
+            YDC_LV_SideDeckCards.UseCompatibleStateImageBehavior = false;
+            YDC_LV_SideDeckCards.View = View.List;
+            // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(YDC_LV_ExtraDeckCards);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(627, 468);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Extra Deck";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // YDC_LV_ExtraDeckCards
+            // 
+            YDC_LV_ExtraDeckCards.Dock = DockStyle.Fill;
+            YDC_LV_ExtraDeckCards.Location = new Point(0, 0);
+            YDC_LV_ExtraDeckCards.Name = "YDC_LV_ExtraDeckCards";
+            YDC_LV_ExtraDeckCards.Size = new Size(627, 468);
+            YDC_LV_ExtraDeckCards.TabIndex = 2;
+            YDC_LV_ExtraDeckCards.UseCompatibleStateImageBehavior = false;
+            YDC_LV_ExtraDeckCards.View = View.List;
             // 
             // groupBox12
             // 
@@ -1612,7 +1647,7 @@ namespace WolfX
             groupBox15.Controls.Add(button1);
             groupBox15.Controls.Add(PDL_BTN_RemoveCardFromList);
             groupBox15.Controls.Add(PDL_BTN_AddCardToList);
-            groupBox15.Location = new Point(420, 3);
+            groupBox15.Location = new Point(420, 6);
             groupBox15.Name = "groupBox15";
             groupBox15.Size = new Size(200, 100);
             groupBox15.TabIndex = 14;
@@ -1802,7 +1837,7 @@ namespace WolfX
             // Page_CardShopManager
             // 
             Page_CardShopManager.Controls.Add(groupBox21);
-            Page_CardShopManager.Controls.Add(tabControl3);
+            Page_CardShopManager.Controls.Add(PACKDATA_TC_ListOfCardsSoldAtShop);
             Page_CardShopManager.Controls.Add(groupBox20);
             Page_CardShopManager.Controls.Add(groupBox19);
             Page_CardShopManager.Location = new Point(4, 24);
@@ -1815,10 +1850,10 @@ namespace WolfX
             // 
             // groupBox21
             // 
-            groupBox21.Controls.Add(checkBox1);
+            groupBox21.Controls.Add(CardShop_CB_UseSimpleAdd);
             groupBox21.Controls.Add(button3);
-            groupBox21.Controls.Add(button4);
-            groupBox21.Controls.Add(button5);
+            groupBox21.Controls.Add(PACKDATA_BTN_RemoveCard);
+            groupBox21.Controls.Add(PACKDATA_BTN_AddCards);
             groupBox21.Location = new Point(420, 6);
             groupBox21.Name = "groupBox21";
             groupBox21.Size = new Size(200, 100);
@@ -1826,17 +1861,17 @@ namespace WolfX
             groupBox21.TabStop = false;
             groupBox21.Text = "PackData Tools";
             // 
-            // checkBox1
+            // CardShop_CB_UseSimpleAdd
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Checked = true;
-            checkBox1.CheckState = CheckState.Checked;
-            checkBox1.Location = new Point(84, 25);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(109, 19);
-            checkBox1.TabIndex = 6;
-            checkBox1.Text = "Simple Add Box";
-            checkBox1.UseVisualStyleBackColor = true;
+            CardShop_CB_UseSimpleAdd.AutoSize = true;
+            CardShop_CB_UseSimpleAdd.Checked = true;
+            CardShop_CB_UseSimpleAdd.CheckState = CheckState.Checked;
+            CardShop_CB_UseSimpleAdd.Location = new Point(84, 25);
+            CardShop_CB_UseSimpleAdd.Name = "CardShop_CB_UseSimpleAdd";
+            CardShop_CB_UseSimpleAdd.Size = new Size(109, 19);
+            CardShop_CB_UseSimpleAdd.TabIndex = 6;
+            CardShop_CB_UseSimpleAdd.Text = "Simple Add Box";
+            CardShop_CB_UseSimpleAdd.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -1848,35 +1883,35 @@ namespace WolfX
             button3.Text = "Replace";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // PACKDATA_BTN_RemoveCard
             // 
-            button4.Enabled = false;
-            button4.Location = new Point(6, 53);
-            button4.Name = "button4";
-            button4.Size = new Size(72, 25);
-            button4.TabIndex = 4;
-            button4.Text = "Remove";
-            button4.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_RemoveCard.Location = new Point(6, 53);
+            PACKDATA_BTN_RemoveCard.Name = "PACKDATA_BTN_RemoveCard";
+            PACKDATA_BTN_RemoveCard.Size = new Size(72, 25);
+            PACKDATA_BTN_RemoveCard.TabIndex = 4;
+            PACKDATA_BTN_RemoveCard.Text = "Remove";
+            PACKDATA_BTN_RemoveCard.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_RemoveCard.Click += PACKDATA_BTN_RemoveCard_Click;
             // 
-            // button5
+            // PACKDATA_BTN_AddCards
             // 
-            button5.Enabled = false;
-            button5.Location = new Point(6, 22);
-            button5.Name = "button5";
-            button5.Size = new Size(72, 25);
-            button5.TabIndex = 2;
-            button5.Text = "Add";
-            button5.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_AddCards.Location = new Point(6, 22);
+            PACKDATA_BTN_AddCards.Name = "PACKDATA_BTN_AddCards";
+            PACKDATA_BTN_AddCards.Size = new Size(72, 25);
+            PACKDATA_BTN_AddCards.TabIndex = 2;
+            PACKDATA_BTN_AddCards.Text = "Add";
+            PACKDATA_BTN_AddCards.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_AddCards.Click += PACKDATA_BTN_AddCards_Click;
             // 
-            // tabControl3
+            // PACKDATA_TC_ListOfCardsSoldAtShop
             // 
-            tabControl3.Controls.Add(tabPage4);
-            tabControl3.Controls.Add(tabPage5);
-            tabControl3.Location = new Point(8, 112);
-            tabControl3.Name = "tabControl3";
-            tabControl3.SelectedIndex = 0;
-            tabControl3.Size = new Size(1240, 496);
-            tabControl3.TabIndex = 16;
+            PACKDATA_TC_ListOfCardsSoldAtShop.Controls.Add(tabPage4);
+            PACKDATA_TC_ListOfCardsSoldAtShop.Controls.Add(tabPage5);
+            PACKDATA_TC_ListOfCardsSoldAtShop.Location = new Point(8, 112);
+            PACKDATA_TC_ListOfCardsSoldAtShop.Name = "PACKDATA_TC_ListOfCardsSoldAtShop";
+            PACKDATA_TC_ListOfCardsSoldAtShop.SelectedIndex = 0;
+            PACKDATA_TC_ListOfCardsSoldAtShop.Size = new Size(1240, 496);
+            PACKDATA_TC_ListOfCardsSoldAtShop.TabIndex = 16;
             // 
             // tabPage4
             // 
@@ -1923,21 +1958,21 @@ namespace WolfX
             // 
             groupBox20.Controls.Add(PACKDATA_CB_UseCardID);
             groupBox20.Controls.Add(PACKDATA_CB_LoadImages);
-            groupBox20.Controls.Add(button2);
+            groupBox20.Controls.Add(PACKDATA_BTN_SavePackDEF);
             groupBox20.Controls.Add(PACKDATA_BTN_OpenPackDEF);
             groupBox20.Location = new Point(214, 6);
             groupBox20.Name = "groupBox20";
             groupBox20.Size = new Size(200, 100);
             groupBox20.TabIndex = 14;
             groupBox20.TabStop = false;
-            groupBox20.Text = "Pack Def File Handler";
+            groupBox20.Text = "Pack Data Handler";
             // 
             // PACKDATA_CB_UseCardID
             // 
             PACKDATA_CB_UseCardID.AutoSize = true;
             PACKDATA_CB_UseCardID.Checked = true;
             PACKDATA_CB_UseCardID.CheckState = CheckState.Checked;
-            PACKDATA_CB_UseCardID.Location = new Point(84, 56);
+            PACKDATA_CB_UseCardID.Location = new Point(84, 53);
             PACKDATA_CB_UseCardID.Name = "PACKDATA_CB_UseCardID";
             PACKDATA_CB_UseCardID.Size = new Size(92, 19);
             PACKDATA_CB_UseCardID.TabIndex = 9;
@@ -1948,7 +1983,7 @@ namespace WolfX
             // PACKDATA_CB_LoadImages
             // 
             PACKDATA_CB_LoadImages.AutoSize = true;
-            PACKDATA_CB_LoadImages.Location = new Point(84, 26);
+            PACKDATA_CB_LoadImages.Location = new Point(84, 22);
             PACKDATA_CB_LoadImages.Name = "PACKDATA_CB_LoadImages";
             PACKDATA_CB_LoadImages.Size = new Size(97, 19);
             PACKDATA_CB_LoadImages.TabIndex = 8;
@@ -1956,15 +1991,15 @@ namespace WolfX
             PACKDATA_CB_LoadImages.UseVisualStyleBackColor = true;
             PACKDATA_CB_LoadImages.CheckedChanged += PACKDATA_CB_LoadImages_CheckedChanged;
             // 
-            // button2
+            // PACKDATA_BTN_SavePackDEF
             // 
-            button2.Enabled = false;
-            button2.Location = new Point(6, 53);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 25);
-            button2.TabIndex = 4;
-            button2.Text = "Save ";
-            button2.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_SavePackDEF.Location = new Point(6, 53);
+            PACKDATA_BTN_SavePackDEF.Name = "PACKDATA_BTN_SavePackDEF";
+            PACKDATA_BTN_SavePackDEF.Size = new Size(72, 25);
+            PACKDATA_BTN_SavePackDEF.TabIndex = 4;
+            PACKDATA_BTN_SavePackDEF.Text = "Save ";
+            PACKDATA_BTN_SavePackDEF.UseVisualStyleBackColor = true;
+            PACKDATA_BTN_SavePackDEF.Click += PACKDATA_BTN_SavePackDEF_Click;
             // 
             // PACKDATA_BTN_OpenPackDEF
             // 
@@ -2033,6 +2068,47 @@ namespace WolfX
             label27.Name = "label27";
             label27.Size = new Size(0, 15);
             label27.TabIndex = 0;
+            // 
+            // Page_SaveGameManager
+            // 
+            Page_SaveGameManager.Controls.Add(groupBox22);
+            Page_SaveGameManager.Location = new Point(4, 24);
+            Page_SaveGameManager.Name = "Page_SaveGameManager";
+            Page_SaveGameManager.Size = new Size(1256, 629);
+            Page_SaveGameManager.TabIndex = 8;
+            Page_SaveGameManager.Text = "Save Game Editor";
+            Page_SaveGameManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox22
+            // 
+            groupBox22.Controls.Add(button6);
+            groupBox22.Controls.Add(SaveGame_BTN_OpenSave);
+            groupBox22.Location = new Point(8, 3);
+            groupBox22.Name = "groupBox22";
+            groupBox22.Size = new Size(200, 100);
+            groupBox22.TabIndex = 15;
+            groupBox22.TabStop = false;
+            groupBox22.Text = "Save Handler";
+            // 
+            // button6
+            // 
+            button6.Enabled = false;
+            button6.Location = new Point(6, 53);
+            button6.Name = "button6";
+            button6.Size = new Size(72, 25);
+            button6.TabIndex = 4;
+            button6.Text = "Save ";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // SaveGame_BTN_OpenSave
+            // 
+            SaveGame_BTN_OpenSave.Location = new Point(6, 22);
+            SaveGame_BTN_OpenSave.Name = "SaveGame_BTN_OpenSave";
+            SaveGame_BTN_OpenSave.Size = new Size(72, 25);
+            SaveGame_BTN_OpenSave.TabIndex = 2;
+            SaveGame_BTN_OpenSave.Text = "Open ";
+            SaveGame_BTN_OpenSave.UseVisualStyleBackColor = true;
+            SaveGame_BTN_OpenSave.Click += SaveGame_BTN_OpenSave_Click;
             // 
             // MenuBar
             // 
@@ -2228,6 +2304,8 @@ namespace WolfX
             groupBox14.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
             groupBox12.ResumeLayout(false);
             groupBox12.PerformLayout();
             groupBox13.ResumeLayout(false);
@@ -2246,13 +2324,15 @@ namespace WolfX
             Page_CardShopManager.ResumeLayout(false);
             groupBox21.ResumeLayout(false);
             groupBox21.PerformLayout();
-            tabControl3.ResumeLayout(false);
+            PACKDATA_TC_ListOfCardsSoldAtShop.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
             tabPage5.ResumeLayout(false);
             groupBox20.ResumeLayout(false);
             groupBox20.PerformLayout();
             groupBox19.ResumeLayout(false);
             groupBox19.PerformLayout();
+            Page_SaveGameManager.ResumeLayout(false);
+            groupBox22.ResumeLayout(false);
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             ResumeLayout(false);
@@ -2419,7 +2499,7 @@ namespace WolfX
         private GroupBox groupBox20;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
-        public Button button2;
+        public Button PACKDATA_BTN_SavePackDEF;
         private Button PACKDATA_BTN_OpenPackDEF;
         private GroupBox groupBox19;
         private Label PACKDATA_LBL_NumberOfRare;
@@ -2442,7 +2522,7 @@ namespace WolfX
         private Label label26;
         private TextBox CARDS_TB_CardNumber;
         private CheckBox PDL_CB_ManualOpenWhenPathSet;
-        private TabControl tabControl3;
+        private TabControl PACKDATA_TC_ListOfCardsSoldAtShop;
         private TabPage tabPage4;
         private ListView PACKDATA_LV_CommonCards;
         private TabPage tabPage5;
@@ -2450,9 +2530,15 @@ namespace WolfX
         private CheckBox PACKDATA_CB_UseCardID;
         private CheckBox PACKDATA_CB_LoadImages;
         private GroupBox groupBox21;
-        private CheckBox checkBox1;
+        private CheckBox CardShop_CB_UseSimpleAdd;
         public Button button3;
-        public Button button4;
-        private Button button5;
+        public Button PACKDATA_BTN_RemoveCard;
+        private Button PACKDATA_BTN_AddCards;
+        private ListView YDC_LV_SideDeckCards;
+        private ListView YDC_LV_ExtraDeckCards;
+        private TabPage Page_SaveGameManager;
+        private GroupBox groupBox22;
+        public Button button6;
+        private Button SaveGame_BTN_OpenSave;
     }
 }
