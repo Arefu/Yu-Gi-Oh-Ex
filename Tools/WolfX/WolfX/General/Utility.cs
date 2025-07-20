@@ -28,6 +28,14 @@ namespace WolfX
             return string.Format("{0:n1}{1}", number, suffixes[counter]);
         }
 
+        internal static string Get_FilePath(string title, string filter, string defaultFile)
+        {
+            return string.IsNullOrEmpty(State.Path)
+                ? Utility.Get_UserSelectedFile(title, filter)
+                : defaultFile;
+        }
+
+
         internal static string Get_UserSelectedFile(string Title, string Filter)
         {
             using (var OpenFile = new OpenFileDialog())
