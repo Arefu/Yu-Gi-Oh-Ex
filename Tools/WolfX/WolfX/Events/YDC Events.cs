@@ -5,8 +5,6 @@ namespace WolfX
 {
     public partial class WolfUI
     {
-        Card_Changer C = new Card_Changer();
-
         private void YDC_BTN_OpenDeck_Click(object sender, EventArgs e)
         {
             var Images = new ImageList();
@@ -121,44 +119,13 @@ namespace WolfX
 
         private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
         {
-            if (State.Path == null && YDC_CHKBOX_LoadPictures.Checked == true)
+            if (YDC_CB_UseSimpleEditor.Checked)
             {
-                using (var OpenDialog = new OpenFileDialog())
-                {
-                    OpenDialog.Title = "Open ZIB Archive";
-                    OpenDialog.Filter = "ZIB Archive (*.zib)|*.zib";
-                    if (OpenDialog.ShowDialog() != DialogResult.OK)
-                    {
-                        MessageBox.Show("No ZIB Archive Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    ZIB.Load(OpenDialog.FileName);
-                }
-            }
-            else
-            {
-                if (C.HasLoaded == false)
-                    C.LoadCards((CARDS_INFO.CARD_Language)State.Language, State.Path);
-            }
-
-            if (C.ShowDialog() == DialogResult.OK)
-            {
-                var Card = CARDS_Cards.Cards.Where(Card => Card.Name == C.Card.Name).First();
-                if (Card != null)
-                {
-                    if (YDC_CHKBOX_UseCardID.Checked)
-                    {
-                        YDC_LV_MainDeckCards.Items.Add(Card.ID.ToString(), Card.ID.ToString(), Card.ID.ToString());
-                    }
-                    else
-                    {
-                        YDC_LV_MainDeckCards.Items.Add(Card.Name, Card.ID.ToString());
-                    }
-
-                    YDC_LV_MainDeckCards.Refresh();
-                }
+                var SimpleAdder = new SimpleCardAdd();
+                var Result = SimpleAdder.ShowDialog();
             }
         }
+
         private void YDC_BTN_ReplaceCard_Click(object sender, EventArgs e)
         {
             if (YDC_LV_MainDeckCards.SelectedItems.Count == 0)
@@ -168,26 +135,11 @@ namespace WolfX
             }
 
             if (YDC_CB_UseSimpleEditor.Checked)
-            { }
-
-            if (State.Path != null && State.Path != String.Empty)
             {
-                C.LoadCards((CARDS_INFO.CARD_Language)State.Language, State.Path);
+                var SimpleAdder = new SimpleCardAdd();
+                var Result = SimpleAdder.ShowDialog();
             }
-            if (C.ShowDialog() == DialogResult.OK)
-            {
-                var Card = CARDS_Cards.Cards.Where(Card => Card.Name == C.Card.Name).First();
-                if (Card != null)
-                {
-                    if (YDC_CHKBOX_UseCardID.Checked)
-                        YDC_LV_MainDeckCards.Items[YDC_LV_MainDeckCards.SelectedItems[0].Index].Text = Card.ID.ToString();
-                    else
-                        YDC_LV_MainDeckCards.Items[YDC_LV_MainDeckCards.SelectedItems[0].Index].Text = Card.Name;
 
-
-                    YDC_LV_MainDeckCards.Refresh();
-                }
-            }
         }
 
         private void YDC_BTN_RemoveCard_Click(object sender, EventArgs e)
