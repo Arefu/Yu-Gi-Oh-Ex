@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Net.WebSockets;
 
 namespace CARD_Named
 {
@@ -15,17 +16,9 @@ namespace CARD_Named
             Archfiend = 0x1
         }
 
-        public static Dictionary<int, List<short>> Load(string Path)
+        public static Dictionary<int, List<short>> Load(string path)
         {
-            var Archetype = new Dictionary<int, List<short>>();
-            using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
-
-            var NUMBER_OF_ARCHETYPES = Reader.ReadUInt16();
-            var NUMBER_OF_CARDS_WITH_ARCHETYPES = (int)Reader.ReadUInt16();
-
-            
-
-            return Archetype;
+            return [];
         }
 
         public static void Save()
