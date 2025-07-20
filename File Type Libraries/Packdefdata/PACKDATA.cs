@@ -9,18 +9,22 @@ namespace PACKDATA
         public static List<short> _CommonCards = [];
         public static List<short> _RareCards = [];
 
-        public static int _NumberOfCommonCards;
-        public static int _NumberOfRareCards;
+        public static short _NumberOfCommonCards;
+        public static short _NumberOfRareCards;
+
+        private static string FileName;
 
         public static void Load(string Path)
         {
+            FileName = new FileInfo(Path).Name;
+
             using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
 
             if (new FileInfo(Path).Name.StartsWith("packdata") == false)
                 return;
 
-            _NumberOfCommonCards = Reader.ReadUInt16();
-            _NumberOfRareCards = Reader.ReadUInt16();
+            _NumberOfCommonCards = Reader.ReadInt16();
+            _NumberOfRareCards = Reader.ReadInt16();
 
             while (Reader.BaseStream.Position < Reader.BaseStream.Length)
             {
@@ -32,10 +36,20 @@ namespace PACKDATA
 
                 for (int i = 0; i < _NumberOfRareCards; i++)
                     _RareCards.Add(Reader.ReadInt16());
-
-                break; // prevent infinite loop if only one set of entries exists
             }
+        }
 
+        public static void Save()
+        {
+            using BinaryWriter Writer = new BinaryWriter(File.Open(FileName, FileMode.Create));
+
+            Writer.Write(_NumberOfCommonCards);
+            Writer.Write(_NumberOfRareCards);
+
+            foreach (var Card in _CommonCards)
+                Writer.Write(Card);
+            foreach (var Card in _RareCards)
+                Writer.Write(Card);
         }
     }
 }
