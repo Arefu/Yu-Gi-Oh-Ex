@@ -12,17 +12,11 @@ namespace WolfX
     {
         private int PREVIOUS_INDEX = -1;
 
-        private string Get_FilePath(string title, string filter, string defaultFile)
-        {
-            return string.IsNullOrEmpty(State.Path)
-                ? Utility.Get_UserSelectedFile(title, filter)
-                : defaultFile;
-        }
 
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
             var langChar = State.Language.ToString()[0];
-            var file = Get_FilePath(
+            var file = Utility.Get_FilePath(
                 "Open Cards Indx File",
                 $"{State.Language} Card Indx File|CARD_Indx_{langChar}.bin|All Indx Files (*.bin)|*.bin",
                 $"{State.Path}\\bin\\CARD_Indx_{langChar}.bin"
@@ -36,7 +30,7 @@ namespace WolfX
 
             if (CARDS_CB_LoadCards.Checked)
             {
-                file = Get_FilePath(
+                file = Utility.Get_FilePath(
                     "Open ZIB Archive",
                     "ZIB Archive (*.zib)|*.zib",
                     $"{State.Path}\\2020.full.illust_j.jpg.zib"
@@ -48,11 +42,11 @@ namespace WolfX
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
 
-            Card_Same.Load(Get_FilePath("Open CARD_Same.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Same.bin"));
-            CARD_Named.CARD_Named.Load(Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
-            CARD_Pass.CARD_Pass.Load(Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
-            CARD_Kana.CARD_Kana.Load(Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin"), State.Language.ToString());
-            CARD_PackID.CARD_PackID.Load(Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
+            Card_Same.Load(Utility.Get_FilePath("Open CARD_Same.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Same.bin"));
+            CARD_Named.CARD_Named.Load(Utility.Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
+            CARD_Pass.CARD_Pass.Load(Utility.Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
+            CARD_Kana.CARD_Kana.Load(Utility.Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin"), State.Language.ToString());
+            CARD_PackID.CARD_PackID.Load(Utility.Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
 
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
@@ -225,6 +219,8 @@ namespace WolfX
             CARDS_RB_AlwaysSimilar.Checked = false;
             CARDS_RB_SimilarOnEffect.Checked = false;
             CARDS_TB_CardPassword.Clear();
+
+            CARDS_TB_CardNumber.Clear();
         }
         private void CARDS_UpdateInternalListWithProperties()
         {
