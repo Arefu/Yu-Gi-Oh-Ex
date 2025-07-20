@@ -6,6 +6,9 @@
 
         public static List<int> Load(string Path)
         {
+            if (Path == "-1")
+                return _Passwords;
+
             var Passwords = new List<int>();
 
             using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
