@@ -1,6 +1,7 @@
 ﻿using PACKDATA;
 using System.Diagnostics;
 using Types;
+using WolfX.WolfX.File_Type_UI;
 
 namespace WolfX
 {
@@ -49,11 +50,71 @@ namespace WolfX
 
             PACKDATA_LBL_NumberOfCommon.Text = PACKDATA.PACKDATA._CommonCards.Count.ToString();
             PACKDATA_LBL_NumberOfRare.Text = PACKDATA.PACKDATA._RareCards.Count.ToString();
-
-            //PACKDATA_BTN_Save.Enabled = true;
-            //PACKDATA_BTN_AddCardToList.Enabled = true;
         }
 
+        private void PACKDATA_BTN_RemoveCard_Click(object sender, EventArgs e)
+        {
+            if (PACKDATA_LV_CommonCards.SelectedItems.Count == 0 && PACKDATA_LV_RareCards.SelectedItems.Count == 0)
+                return;
+
+            foreach (ListViewItem Item in PACKDATA_LV_CommonCards.SelectedItems)
+                PACKDATA_LV_CommonCards.Items.Remove(Item);
+
+            foreach (ListViewItem Item in PACKDATA_LV_RareCards.SelectedItems)
+                PACKDATA_LV_RareCards.Items.Remove(Item);
+
+            PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_CommonCards.Items.Count;
+            PACKDATA.PACKDATA._NumberOfRareCards = (short)PACKDATA_LV_RareCards.Items.Count;
+        }
+        private void PACKDATA_BTN_AddCards_Click(object sender, EventArgs e)
+        {
+            if (CardShop_CB_UseSimpleAdd.Checked)
+            {
+                var SimpleAdder = new SimpleCardAdd();
+                var Result = SimpleAdder.ShowDialog();
+
+                if (Result == DialogResult.OK)
+                {
+                    foreach (var Card in SimpleAdder.CardIDs)
+                    {
+                        if (PACKDATA_TC_ListOfCardsSoldAtShop.SelectedTab.Text == "Common")
+                        {
+                            PACKDATA.PACKDATA._CommonCards.Add((short)Card);
+                            PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_CommonCards.Items.Count;
+
+                            bool exists = PACKDATA_LV_CommonCards.Items.Cast<ListViewItem>().Any(item => item.Text == Card.ToString());
+                            if (!exists)
+                                PACKDATA_LV_CommonCards.Items.Add(Card.ToString(), Card.ToString());
+
+                            var sortedItems = PACKDATA_LV_CommonCards.Items.Cast<ListViewItem>().OrderBy(item => int.Parse(item.Text)).ToList();
+
+                            PACKDATA_LV_CommonCards.Items.Clear();
+                            PACKDATA_LV_CommonCards.Items.AddRange(sortedItems.ToArray());
+                        }
+                        else
+                        {
+                            PACKDATA.PACKDATA._RareCards.Add((short)Card);
+                            PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_RareCards.Items.Count;
+
+                            bool exists = PACKDATA_LV_RareCards.Items.Cast<ListViewItem>().Any(item => item.Text == Card.ToString());
+                            if (!exists)
+                                PACKDATA_LV_RareCards.Items.Add(Card.ToString(), Card.ToString());
+
+                            var sortedItems = PACKDATA_LV_CommonCards.Items.Cast<ListViewItem>().OrderBy(item => int.Parse(item.Text)).ToList();
+
+                            PACKDATA_LV_RareCards.Items.Clear();
+                            PACKDATA_LV_RareCards.Items.AddRange(sortedItems.ToArray());
+                        }
+                    }
+
+
+                }
+            }
+        }
+        private void PACKDATA_BTN_SavePackDEF_Click(object sender, EventArgs e)
+        {
+            PACKDATA.PACKDATA.Save();
+        }
         private void PACKDATA_CB_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
             if (PACKDATA_CB_UseCardID.Checked == false)
@@ -77,24 +138,18 @@ namespace WolfX
                 }
             }
         }
-
         private void PACKDATA_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
         {
 
             if (PACKDATA_CB_LoadImages.Checked)
             {
                 if (State.Path != null)
-                {
                     ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
-                    PACKDATA_LV_CommonCards.View = View.LargeIcon;
-                    PACKDATA_LV_RareCards.View = View.LargeIcon;
-                }
                 else
-                {
                     ZIB.Load(Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib"));
-                    PACKDATA_LV_CommonCards.View = View.LargeIcon;
-                    PACKDATA_LV_RareCards.View = View.LargeIcon;
-                }
+                    
+                PACKDATA_LV_CommonCards.View = View.LargeIcon;
+                PACKDATA_LV_RareCards.View = View.LargeIcon;
             }
             else
             {
