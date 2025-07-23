@@ -17,8 +17,13 @@ namespace WolfX
 
             if (Directory.Exists("YGO_2020"))
                 State.Path = new DirectoryInfo("YGO_2020").FullName;
-            else if (OpenFolder.ShowDialog() != DialogResult.OK || OpenFolder.SelectedPath.EndsWith("YGO_2020") == false)
+
+
+            if (OpenFolder.ShowDialog() != DialogResult.OK || OpenFolder.SelectedPath.EndsWith("YGO_2020") == false)
+            {
                 MessageBox.Show("Please Select the YGO_2020 Folder", "Invalid Folder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             else
                 State.Path = OpenFolder.SelectedPath;
 
@@ -30,5 +35,7 @@ namespace WolfX
             var Config = new WolfX.File_Type_UI.Config();
             Config.ShowDialog();
         }
+
+       
     }
 }
