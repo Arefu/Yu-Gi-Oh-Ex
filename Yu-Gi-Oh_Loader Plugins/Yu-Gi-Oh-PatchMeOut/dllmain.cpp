@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <detours.h>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <format>
 #include "Yu-Gi-Oh-Ex.h"
@@ -50,6 +51,17 @@ void __fastcall Patch_UseJP(__int64 a1)
 	YuGiOhEx::g_bUseJpLogo = 255;
 	return;
 }
+LONG WINAPI CrashHandler(EXCEPTION_POINTERS* ExceptionInfo) {
+	std::ofstream log("crash_log.txt");
+	log << "Crash Address: 0x" << std::hex << (uintptr_t)ExceptionInfo->ExceptionRecord->ExceptionAddress << "\n";
+	log << "Exception Code: 0x" << std::hex << ExceptionInfo->ExceptionRecord->ExceptionCode << "\n";
+
+	log.close();
+
+
+	return EXCEPTION_EXECUTE_HANDLER;
+}
+
 
 void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1)
 {
@@ -71,7 +83,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 {
 	Logger::SetupLogger();
 	ProcessConfig();
-
+	SetUnhandledExceptionFilter(CrashHandler);
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
