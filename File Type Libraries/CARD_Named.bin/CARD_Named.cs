@@ -1,9 +1,6 @@
-﻿using System.Diagnostics;
-using System.Net.WebSockets;
-
-namespace CARD_Named
+﻿namespace CARD_Named
 {
-    public static class CARD_Named
+    public static class Card_Named
     {
         public static int NUMBER_OF_ARCHETYPES;
         public static int NUMBER_OF_CARDS_WITH_ARCHETYPES;

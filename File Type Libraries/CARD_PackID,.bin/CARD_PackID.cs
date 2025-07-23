@@ -2,7 +2,7 @@
 
 namespace CARD_PackID
 {
-    public static class CARD_PackID
+    public static class Card_PackID
     {
         public static List<string> _CardNumbers = [];
 

@@ -1,6 +1,6 @@
 ﻿namespace CARD_Pass
 {
-    public static class CARD_Pass
+    public static class Card_Pass
     {
         public static List<int> _Passwords = [];
 

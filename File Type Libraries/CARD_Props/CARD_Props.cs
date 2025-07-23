@@ -1,4 +1,5 @@
 ﻿using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Text;
 
 namespace Types
@@ -68,13 +69,13 @@ namespace Types
     {
         public int _Index;
 
-        public string Name;
+        public string Name { get; set; }
         public string Desc;
 
         public int Attack;
         public int Defense;
         public int Level;
-        public int ID;
+        public int ID { get; set; }
 
         public int Ico;
         public int SecondUnk;
@@ -213,37 +214,45 @@ namespace Types
 
             do
             {
-                var NameOffset = IndxReader.ReadUInt32();
-                var DescOffset = IndxReader.ReadUInt32();
+                try
+                {
+                    var NameOffset = IndxReader.ReadUInt32();
+                    var DescOffset = IndxReader.ReadUInt32();
 
-                var First = new BitVector32((int)PropReader.ReadUInt32());
-                var Second = new BitVector32((int)PropReader.ReadUInt32());
+                    var First = new BitVector32((int)PropReader.ReadUInt32());
+                    var Second = new BitVector32((int)PropReader.ReadUInt32());
 
-                CARD_Card Card = new();
+                    CARD_Card Card = new();
 
-                Card.SecondUnk = Second[SecondQuadUnk];
+                    Card.SecondUnk = Second[SecondQuadUnk];
 
-                Card.ID = (short)First[CardId];
-                Card.Name = Names[NameOffset];
-                Card.Desc = Descs[DescOffset];
+                    Card.ID = (short)First[CardId];
+                    Card.Name = Names[NameOffset];
+                    Card.Desc = Descs[DescOffset];
 
-                Card.Attack = (First[CardAtk] == 511) ? -1 : First[CardAtk] * 10;
-                Card.Defense = (First[CardDef] == 511) ? -1 : First[CardDef] * 10;
+                    Card.Attack = (First[CardAtk] == 511) ? -1 : First[CardAtk] * 10;
+                    Card.Defense = (First[CardDef] == 511) ? -1 : First[CardDef] * 10;
 
-                Card.Kind = (CARDS_INFO.CARD_Kind)Second[Kind];
-                Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
-                Card.Level = (byte)Second[MonsterLevel];
-                Card.Ico = Second[Ico];
-                Card.Type = (CARDS_INFO.CARD_Type)Second[Type];
-                Card.PEND_Scale1 = (byte)Second[LeftScale];
-                Card.PEND_Scale2 = (byte)Second[RightScale];
+                    Card.Kind = (CARDS_INFO.CARD_Kind)Second[Kind];
+                    Card.Attribute = (CARDS_INFO.CARD_Attribute)Second[Attribute];
+                    Card.Level = (byte)Second[MonsterLevel];
+                    Card.Ico = Second[Ico];
+                    Card.Type = (CARDS_INFO.CARD_Type)Second[Type];
+                    Card.PEND_Scale1 = (byte)Second[LeftScale];
+                    Card.PEND_Scale2 = (byte)Second[RightScale];
 
-                Card.First = First;
-                Card.Second = Second;
+                    Card.First = First;
+                    Card.Second = Second;
 
-                Cards.Add(Card);
+                    Cards.Add(Card);
+                }
+                catch
+                {
+                    Debug.WriteLine("Bad card");
+                    break;
+                }
             }
-            while (PropReader.BaseStream.Position != PropReader.BaseStream.Length);
+            while (PropReader.BaseStream.Position <= PropReader.BaseStream.Length);
 
         }
 

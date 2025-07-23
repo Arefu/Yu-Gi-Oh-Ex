@@ -1,8 +1,6 @@
-﻿using System.Text;
-
-namespace CARD_Kana
+﻿namespace CARD_Kana
 {
-    public static class CARD_Kana
+    public static class Card_Kana
     {
         public static List<string> _Kana = [];
 
