@@ -1,3 +1,4 @@
+using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using WolfX.WolfX.File_Type_UI;
 
@@ -19,15 +20,24 @@ namespace WolfX
                 State.Path = new DirectoryInfo("YGO_2020").FullName;
 
 
-            if (OpenFolder.ShowDialog() != DialogResult.OK || OpenFolder.SelectedPath.EndsWith("YGO_2020") == false)
+
+
+            if (string.IsNullOrEmpty(State.Path) == false)
             {
-                MessageBox.Show("Please Select the YGO_2020 Folder", "Invalid Folder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CARDS_BTN_OpenCards_Click(this, new EventArgs());
                 return;
             }
             else
-                State.Path = OpenFolder.SelectedPath;
-
-            CARDS_BTN_OpenCards_Click(this, new EventArgs());
+            {
+                var Result = OpenFolder.ShowDialog();
+                if (Result != DialogResult.OK || OpenFolder.SelectedPath.EndsWith("YGO_2020") == false)
+                {
+                    MessageBox.Show("Please Select the YGO_2020 Folder", "Invalid Folder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                    State.Path = OpenFolder.SelectedPath;
+            }
         }
 
         private void WOLFUI_TOOLITEM_OpenConfigEditor_Click(object sender, EventArgs e)
@@ -36,6 +46,5 @@ namespace WolfX
             Config.ShowDialog();
         }
 
-       
     }
 }
