@@ -61,5 +61,8 @@
     <ClInclude Include="PolymerizationTwoOrMore.h">
       <Filter>Header Files\Effects</Filter>
     </ClInclude>
+    <ClInclude Include="CardsThatMakeYouDraw.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
