@@ -15,46 +15,34 @@ namespace WolfX
 
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
-            var file = Utility.Get_FilePath("Open Cards Indx File", $"{State.Language} Card Indx File|CARD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin");
+            if (string.IsNullOrEmpty(State.Path))
+                WOLFUI_TOOLITEM_LoadGame_Click(sender, e);
 
-            if (!CARDS_Cards.Setup_CardBinder(file, (CARDS_INFO.CARD_Language)State.Language))
+            if (!CARDS_Cards.Setup_CardBinder($"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language))
             {
                 MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (CARDS_CB_LoadCards.Checked)
-            {
-                file = Utility.Get_FilePath(
-                    "Open ZIB Archive",
-                    "ZIB Archive (*.zib)|*.zib",
-                    $"{State.Path}\\2020.full.illust_j.jpg.zib"
-                );
-
-                ZIB.Load(file);
-            }
+                ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
 
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
-
-            if(string.IsNullOrEmpty(State.Path))
-                WOLFUI_TOOLITEM_LoadGame_Click(sender, e);
-
-            Card_Same.Load(Utility.Get_FilePath("Open CARD_Same.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Same.bin"));
-            Card_Named.Load(Utility.Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
-            Card_Pass.Load(Utility.Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
-            Card_Kana.Load(Utility.Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin"), State.Language.ToString());
-            Card_PackID.Load(Utility.Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
+           
+            Card_Same.Load($"{State.Path}\\bin\\CARD_Same.bin");
+            Card_Named.Load($"{State.Path}\\bin\\CARD_Named.bin");
+            Card_Pass.Load($"{State.Path}\\bin\\CARD_Pass.bin");
+            Card_Kana.Load($"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin", State.Language.ToString());
+            Card_PackID.Load($"{State.Path}\\bin\\CARD_PackID.bin");
 
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
             CARDS_CB_SimilarCardName.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name} ({card.ID})", card.ID)).ToList();
-            CARDS_CB_SimilarCardName.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-
-            CARDS_TB_CardName.DisplayMember = "Key";
-            CARDS_TB_CardName.ValueMember = "Value";
-            CARDS_TB_CardName.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name}", card.ID)).ToList();
+            CARDS_CB_CardSearcher.DisplayMember = "Key";
+            CARDS_CB_CardSearcher.ValueMember = "Value";
+            CARDS_CB_CardSearcher.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name}", card.ID)).ToList();
 
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
@@ -66,19 +54,16 @@ namespace WolfX
             CARDS_Cards.SaveCardInfo();
 
             Card_Same.Save();
-
+            Card_Named.Save();
             Card_Pass.Save();
-
+            Card_Kana.Save();
+            Card_PackID.Save();
         }
-        private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
-        {
-            if (CARDS_CB_CardID.SelectedItem is int cardId)
-            {
-                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
-                card?.Name = CARDS_TB_CardName.Text;
-            }
-        }
-        private void CARDS_Nud_CardLevel_ValueChanged(object sender, EventArgs e)
+       
+        /// <summary>
+        /// The Card's Level has Changed. 
+        /// </summary>
+        private void CARDS_NUD_CardLevel_ValueChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedItem is int cardId)
             {
@@ -86,6 +71,10 @@ namespace WolfX
                 card?.Level = Convert.ToInt32(CARDS_Nud_CardLevel.Value);
             }
         }
+
+        /// <summary>
+        /// The Card's Type has Changed. Save The Value for Writing Back.
+        /// </summary>
         private void CARDS_CB_CardTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedItem is int cardId)
@@ -135,10 +124,12 @@ namespace WolfX
             }
         }
 
-        private void CARDS_TB_CardName_SelectedIndexChanged(object sender, EventArgs e)
+        private void CARDS_CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CARDS_CB_CardID.SelectedIndex = CARDS_CB_CardID.Items.IndexOf((int)CARDS_TB_CardName.SelectedValue);
+            CARDS_CB_CardID.SelectedIndex = CARDS_CB_CardID.Items.IndexOf((int)CARDS_CB_CardSearcher.SelectedValue);
         }
+
+
         private void CARDS_CB_CardID_SelectedIndexChanged(object? sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedIndex == -1)
@@ -155,7 +146,7 @@ namespace WolfX
                 return;
 
             // Update card display fields
-            CARDS_TB_CardName.Text = selectedCard.Name;
+            CARDS_CB_CardSearcher.Text = selectedCard.Name;
             CARDS_CB_CardTypes.Text = selectedCard.Kind.ToString();
             CARDS_CB_CardAttribute.Text = selectedCard.Attribute.ToString();
             CARDS_Nud_CardLevel.Text = selectedCard.Level.ToString();
@@ -222,8 +213,8 @@ namespace WolfX
             CARDS_Nud_CardLevel.ResetText();
             CARDS_PB_CardPicture.Image = null;
 
-            CARDS_TB_CardName.Items.Clear();
-            CARDS_TB_CardName.DataSource = null;
+            CARDS_CB_CardSearcher.Items.Clear();
+            CARDS_CB_CardSearcher.DataSource = null;
             CARDS_TB_Kana.Clear();
             CARDS_RB_AlwaysSimilar.Checked = false;
             CARDS_RB_SimilarOnEffect.Checked = false;
