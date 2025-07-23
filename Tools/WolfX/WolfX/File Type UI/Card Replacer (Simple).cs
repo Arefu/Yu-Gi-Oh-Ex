@@ -15,14 +15,31 @@ namespace WolfX.WolfX.File_Type_UI
         private void YDCSimple_BTN_AddCard_Click(object sender, EventArgs e)
         {
             string TempCards = TB_YDCSimple_CardIDs.Text;
-            Regex.Replace(TempCards, @"\s+", "");
+            if (string.IsNullOrWhiteSpace(TempCards))
+            {
+                this.Close();
+                return;
+            }
+
+            TempCards = Regex.Replace(TempCards, @"\s+", "");
             var StrCardIDs = TempCards.Split(',');
+
+            if (StrCardIDs.Length == 0)
+            {
+                this.Close();
+                return;
+            }
+
             foreach (var Card in StrCardIDs)
             {
-                CardIDs.Add(Int32.Parse(Card));
+                if (int.TryParse(Card, out int parsedID))
+                {
+                    CardIDs.Add(parsedID);
+                }
             }
+
             this.DialogResult = DialogResult.OK;
-            this.Close();
         }
+
     }
 }
