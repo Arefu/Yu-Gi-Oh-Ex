@@ -1,6 +1,6 @@
 ﻿namespace WolfX.WolfX.File_Type_UI
 {
-    partial class Card_Changer
+    partial class CardAdder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            YDCFull_LV_ListOfAllCards = new ListView();
             YDCFull_BTN_Save = new Button();
             YDCFull_BTN_Cancel = new Button();
+            dataGridView1 = new DataGridView();
+            CardAdder_TB_NameOfCard = new DataGridViewTextBoxColumn();
+            CardAdder_TB_IDOfCard = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // YDCFull_LV_ListOfAllCards
-            // 
-            YDCFull_LV_ListOfAllCards.Location = new Point(12, 12);
-            YDCFull_LV_ListOfAllCards.Name = "YDCFull_LV_ListOfAllCards";
-            YDCFull_LV_ListOfAllCards.Size = new Size(680, 388);
-            YDCFull_LV_ListOfAllCards.TabIndex = 0;
-            YDCFull_LV_ListOfAllCards.UseCompatibleStateImageBehavior = false;
             // 
             // YDCFull_BTN_Save
             // 
-            YDCFull_BTN_Save.Location = new Point(617, 406);
+            YDCFull_BTN_Save.Location = new Point(1177, 646);
             YDCFull_BTN_Save.Name = "YDCFull_BTN_Save";
             YDCFull_BTN_Save.Size = new Size(75, 23);
             YDCFull_BTN_Save.TabIndex = 1;
@@ -52,34 +47,55 @@
             // 
             // YDCFull_BTN_Cancel
             // 
-            YDCFull_BTN_Cancel.Location = new Point(536, 406);
+            YDCFull_BTN_Cancel.Location = new Point(1096, 646);
             YDCFull_BTN_Cancel.Name = "YDCFull_BTN_Cancel";
             YDCFull_BTN_Cancel.Size = new Size(75, 23);
             YDCFull_BTN_Cancel.TabIndex = 2;
             YDCFull_BTN_Cancel.Text = "Cancel";
             YDCFull_BTN_Cancel.UseVisualStyleBackColor = true;
             // 
-            // Card_Changer
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CardAdder_TB_NameOfCard, CardAdder_TB_IDOfCard });
+            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1240, 628);
+            dataGridView1.TabIndex = 3;
+            // 
+            // CardAdder_TB_NameOfCard
+            // 
+            CardAdder_TB_NameOfCard.HeaderText = "Name";
+            CardAdder_TB_NameOfCard.Name = "CardAdder_TB_NameOfCard";
+            // 
+            // CardAdder_TB_IDOfCard
+            // 
+            CardAdder_TB_IDOfCard.HeaderText = "ID";
+            CardAdder_TB_IDOfCard.Name = "CardAdder_TB_IDOfCard";
+            // 
+            // CardAdder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(704, 441);
+            ClientSize = new Size(1264, 681);
+            Controls.Add(dataGridView1);
             Controls.Add(YDCFull_BTN_Cancel);
             Controls.Add(YDCFull_BTN_Save);
-            Controls.Add(YDCFull_LV_ListOfAllCards);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Card_Changer";
+            Name = "CardAdder";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Card Replacer (Full)";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private ListView YDCFull_LV_ListOfAllCards;
         private Button YDCFull_BTN_Save;
         private Button YDCFull_BTN_Cancel;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn CardAdder_TB_NameOfCard;
+        private DataGridViewTextBoxColumn CardAdder_TB_IDOfCard;
     }
 }
