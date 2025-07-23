@@ -57,19 +57,22 @@ namespace WolfX
             CARDS_Nud_CardLevel = new NumericUpDown();
             CARDS_CB_CardAttribute = new ComboBox();
             CARDS_CB_CardTypes = new ComboBox();
-            CARDS_CB_CardID = new ComboBox();
             CB_CardLevel = new Label();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             groupBox1 = new GroupBox();
-            CARDS_TB_CardName = new ComboBox();
+            CARDS_TB_CardName = new TextBox();
             CARDS_TB_CardDef = new TextBox();
             CARDS_TB_CardAtk = new TextBox();
             label2 = new Label();
             label1 = new Label();
             CARDS_TB_CardDesc = new TextBox();
             CARDS_PB_CardPicture = new PictureBox();
+            groupBox23 = new GroupBox();
+            label24 = new Label();
+            label15 = new Label();
+            CARDS_CB_CardSearcher = new ComboBox();
+            CARDS_CB_CardID = new ComboBox();
             Page_ZibManager = new TabPage();
             groupBox4 = new GroupBox();
             ARCHIVE_BTN_PackZIB = new Button();
@@ -235,6 +238,7 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)CARDS_Nud_CardLevel).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CARDS_PB_CardPicture).BeginInit();
+            groupBox23.SuspendLayout();
             Page_ZibManager.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -304,6 +308,7 @@ namespace WolfX
             Page_CardManager.Controls.Add(groupBox6);
             Page_CardManager.Controls.Add(groupBox2);
             Page_CardManager.Controls.Add(groupBox1);
+            Page_CardManager.Controls.Add(groupBox23);
             Page_CardManager.Location = new Point(4, 24);
             Page_CardManager.Name = "Page_CardManager";
             Page_CardManager.Padding = new Padding(3);
@@ -325,9 +330,9 @@ namespace WolfX
             groupBox18.Controls.Add(CARDS_RB_AlwaysSimilar);
             groupBox18.Controls.Add(label25);
             groupBox18.Controls.Add(label6);
-            groupBox18.Location = new Point(334, 175);
+            groupBox18.Location = new Point(340, 257);
             groupBox18.Name = "groupBox18";
-            groupBox18.Size = new Size(320, 266);
+            groupBox18.Size = new Size(320, 184);
             groupBox18.TabIndex = 6;
             groupBox18.TabStop = false;
             groupBox18.Text = "Card Properties";
@@ -390,6 +395,7 @@ namespace WolfX
             // CARDS_CB_SimilarCardName
             // 
             CARDS_CB_SimilarCardName.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_SimilarCardName.AutoCompleteSource = AutoCompleteSource.ListItems;
             CARDS_CB_SimilarCardName.FormattingEnabled = true;
             CARDS_CB_SimilarCardName.Location = new Point(6, 37);
             CARDS_CB_SimilarCardName.Name = "CARDS_CB_SimilarCardName";
@@ -457,7 +463,7 @@ namespace WolfX
             CARDS_CB_LoadCards.AutoSize = true;
             CARDS_CB_LoadCards.Checked = true;
             CARDS_CB_LoadCards.CheckState = CheckState.Checked;
-            CARDS_CB_LoadCards.Location = new Point(204, 22);
+            CARDS_CB_LoadCards.Location = new Point(210, 22);
             CARDS_CB_LoadCards.Name = "CARDS_CB_LoadCards";
             CARDS_CB_LoadCards.Size = new Size(93, 19);
             CARDS_CB_LoadCards.TabIndex = 3;
@@ -466,7 +472,7 @@ namespace WolfX
             // 
             // CARDS_BTN_CloseBinder
             // 
-            CARDS_BTN_CloseBinder.Location = new Point(6, 123);
+            CARDS_BTN_CloseBinder.Location = new Point(8, 100);
             CARDS_BTN_CloseBinder.Name = "CARDS_BTN_CloseBinder";
             CARDS_BTN_CloseBinder.Size = new Size(107, 25);
             CARDS_BTN_CloseBinder.TabIndex = 2;
@@ -476,7 +482,7 @@ namespace WolfX
             // 
             // CARDS_BTN_OpenCards
             // 
-            CARDS_BTN_OpenCards.Location = new Point(6, 22);
+            CARDS_BTN_OpenCards.Location = new Point(12, 22);
             CARDS_BTN_OpenCards.Name = "CARDS_BTN_OpenCards";
             CARDS_BTN_OpenCards.Size = new Size(107, 25);
             CARDS_BTN_OpenCards.TabIndex = 1;
@@ -486,7 +492,7 @@ namespace WolfX
             // 
             // CARDS_BTN_SaveCard
             // 
-            CARDS_BTN_SaveCard.Location = new Point(6, 52);
+            CARDS_BTN_SaveCard.Location = new Point(12, 52);
             CARDS_BTN_SaveCard.Name = "CARDS_BTN_SaveCard";
             CARDS_BTN_SaveCard.Size = new Size(107, 25);
             CARDS_BTN_SaveCard.TabIndex = 0;
@@ -499,31 +505,29 @@ namespace WolfX
             groupBox2.Controls.Add(CARDS_Nud_CardLevel);
             groupBox2.Controls.Add(CARDS_CB_CardAttribute);
             groupBox2.Controls.Add(CARDS_CB_CardTypes);
-            groupBox2.Controls.Add(CARDS_CB_CardID);
             groupBox2.Controls.Add(CB_CardLevel);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Location = new Point(334, 6);
+            groupBox2.Location = new Point(340, 99);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(320, 163);
+            groupBox2.Size = new Size(320, 152);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
-            groupBox2.Text = "*";
+            groupBox2.Text = "Card Innformation";
             // 
             // CARDS_Nud_CardLevel
             // 
-            CARDS_Nud_CardLevel.Location = new Point(175, 42);
+            CARDS_Nud_CardLevel.Location = new Point(175, 43);
             CARDS_Nud_CardLevel.Name = "CARDS_Nud_CardLevel";
             CARDS_Nud_CardLevel.Size = new Size(128, 23);
             CARDS_Nud_CardLevel.TabIndex = 15;
-            CARDS_Nud_CardLevel.ValueChanged += CARDS_Nud_CardLevel_ValueChanged;
+            CARDS_Nud_CardLevel.ValueChanged += CARDS_NUD_CardLevel_ValueChanged;
             // 
             // CARDS_CB_CardAttribute
             // 
             CARDS_CB_CardAttribute.FormattingEnabled = true;
             CARDS_CB_CardAttribute.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
-            CARDS_CB_CardAttribute.Location = new Point(175, 91);
+            CARDS_CB_CardAttribute.Location = new Point(6, 92);
             CARDS_CB_CardAttribute.Name = "CARDS_CB_CardAttribute";
             CARDS_CB_CardAttribute.Size = new Size(128, 23);
             CARDS_CB_CardAttribute.TabIndex = 10;
@@ -532,21 +536,11 @@ namespace WolfX
             // CARDS_CB_CardTypes
             // 
             CARDS_CB_CardTypes.FormattingEnabled = true;
-            CARDS_CB_CardTypes.Location = new Point(6, 91);
+            CARDS_CB_CardTypes.Location = new Point(6, 43);
             CARDS_CB_CardTypes.Name = "CARDS_CB_CardTypes";
             CARDS_CB_CardTypes.Size = new Size(128, 23);
             CARDS_CB_CardTypes.TabIndex = 9;
             CARDS_CB_CardTypes.SelectedIndexChanged += CARDS_CB_CardTypes_SelectedIndexChanged;
-            // 
-            // CARDS_CB_CardID
-            // 
-            CARDS_CB_CardID.AutoCompleteMode = AutoCompleteMode.Suggest;
-            CARDS_CB_CardID.FormattingEnabled = true;
-            CARDS_CB_CardID.Location = new Point(6, 42);
-            CARDS_CB_CardID.Name = "CARDS_CB_CardID";
-            CARDS_CB_CardID.Size = new Size(128, 23);
-            CARDS_CB_CardID.TabIndex = 7;
-            CARDS_CB_CardID.SelectedIndexChanged += CARDS_CB_CardID_SelectedIndexChanged;
             // 
             // CB_CardLevel
             // 
@@ -562,7 +556,7 @@ namespace WolfX
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(6, 68);
+            label5.Location = new Point(6, 19);
             label5.Name = "label5";
             label5.Size = new Size(74, 20);
             label5.TabIndex = 2;
@@ -572,21 +566,11 @@ namespace WolfX
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(175, 68);
+            label4.Location = new Point(6, 69);
             label4.Name = "label4";
             label4.Size = new Size(103, 20);
             label4.TabIndex = 1;
             label4.Text = "Card Attribute";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(6, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Card ID";
             // 
             // groupBox1
             // 
@@ -606,14 +590,10 @@ namespace WolfX
             // 
             // CARDS_TB_CardName
             // 
-            CARDS_TB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CARDS_TB_CardName.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CARDS_TB_CardName.FormattingEnabled = true;
-            CARDS_TB_CardName.Location = new Point(6, 22);
+            CARDS_TB_CardName.Location = new Point(7, 22);
             CARDS_TB_CardName.Name = "CARDS_TB_CardName";
-            CARDS_TB_CardName.Size = new Size(305, 23);
+            CARDS_TB_CardName.Size = new Size(304, 23);
             CARDS_TB_CardName.TabIndex = 7;
-            CARDS_TB_CardName.SelectedIndexChanged += CARDS_TB_CardName_SelectedIndexChanged;
             // 
             // CARDS_TB_CardDef
             // 
@@ -668,6 +648,58 @@ namespace WolfX
             CARDS_PB_CardPicture.Size = new Size(305, 346);
             CARDS_PB_CardPicture.TabIndex = 0;
             CARDS_PB_CardPicture.TabStop = false;
+            // 
+            // groupBox23
+            // 
+            groupBox23.Controls.Add(label24);
+            groupBox23.Controls.Add(label15);
+            groupBox23.Controls.Add(CARDS_CB_CardSearcher);
+            groupBox23.Controls.Add(CARDS_CB_CardID);
+            groupBox23.Location = new Point(346, 6);
+            groupBox23.Name = "groupBox23";
+            groupBox23.Size = new Size(314, 87);
+            groupBox23.TabIndex = 8;
+            groupBox23.TabStop = false;
+            groupBox23.Text = "Card Search";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(6, 55);
+            label24.Name = "label24";
+            label24.Size = new Size(49, 15);
+            label24.TabIndex = 9;
+            label24.Text = "Card ID:";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(6, 25);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 15);
+            label15.TabIndex = 8;
+            label15.Text = "Name:";
+            // 
+            // CARDS_CB_CardSearcher
+            // 
+            CARDS_CB_CardSearcher.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardSearcher.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardSearcher.FormattingEnabled = true;
+            CARDS_CB_CardSearcher.Location = new Point(61, 22);
+            CARDS_CB_CardSearcher.Name = "CARDS_CB_CardSearcher";
+            CARDS_CB_CardSearcher.Size = new Size(247, 23);
+            CARDS_CB_CardSearcher.TabIndex = 7;
+            CARDS_CB_CardSearcher.SelectedIndexChanged += CARDS_CB_CardName_SelectedIndexChanged;
+            // 
+            // CARDS_CB_CardID
+            // 
+            CARDS_CB_CardID.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardID.FormattingEnabled = true;
+            CARDS_CB_CardID.Location = new Point(61, 51);
+            CARDS_CB_CardID.Name = "CARDS_CB_CardID";
+            CARDS_CB_CardID.Size = new Size(247, 23);
+            CARDS_CB_CardID.TabIndex = 7;
+            CARDS_CB_CardID.SelectedIndexChanged += CARDS_CB_CardID_SelectedIndexChanged;
             // 
             // Page_ZibManager
             // 
@@ -2278,6 +2310,8 @@ namespace WolfX
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CARDS_PB_CardPicture).EndInit();
+            groupBox23.ResumeLayout(false);
+            groupBox23.PerformLayout();
             Page_ZibManager.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
@@ -2357,7 +2391,6 @@ namespace WolfX
         private Label CB_CardLevel;
         private Label label5;
         private Label label4;
-        private Label label3;
         private GroupBox groupBox4;
         private Button ARCHIVE_BTN_ExtractZIB;
         public ListView ARCHIVE_LV_ArchiveItems;
@@ -2543,6 +2576,10 @@ namespace WolfX
         private GroupBox groupBox22;
         public Button button6;
         private Button SaveGame_BTN_OpenSave;
-        private ComboBox CARDS_TB_CardName;
+        private ComboBox CARDS_CB_CardSearcher;
+        private TextBox CARDS_TB_CardName;
+        private GroupBox groupBox23;
+        private Label label24;
+        private Label label15;
     }
 }
