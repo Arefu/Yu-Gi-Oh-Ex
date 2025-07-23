@@ -15,12 +15,7 @@ namespace WolfX
 
         private void CARDS_BTN_OpenCards_Click(object sender, EventArgs e)
         {
-            var langChar = State.Language.ToString()[0];
-            var file = Utility.Get_FilePath(
-                "Open Cards Indx File",
-                $"{State.Language} Card Indx File|CARD_Indx_{langChar}.bin|All Indx Files (*.bin)|*.bin",
-                $"{State.Path}\\bin\\CARD_Indx_{langChar}.bin"
-            );
+            var file = Utility.Get_FilePath("Open Cards Indx File", $"{State.Language} Card Indx File|CARD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin");
 
             if (!CARDS_Cards.Setup_CardBinder(file, (CARDS_INFO.CARD_Language)State.Language))
             {
@@ -42,16 +37,25 @@ namespace WolfX
             CARDS_Cards.LoadCardInfo();
             CARDS_Cards.LoadCardProps();
 
+            if(string.IsNullOrEmpty(State.Path))
+                WOLFUI_TOOLITEM_LoadGame_Click(sender, e);
+
             Card_Same.Load(Utility.Get_FilePath("Open CARD_Same.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Same.bin"));
-            CARD_Named.CARD_Named.Load(Utility.Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
-            CARD_Pass.CARD_Pass.Load(Utility.Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
-            CARD_Kana.CARD_Kana.Load(Utility.Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin"), State.Language.ToString());
-            CARD_PackID.CARD_PackID.Load(Utility.Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
+            Card_Named.Load(Utility.Get_FilePath("Open CARD_Named.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Named.bin"));
+            Card_Pass.Load(Utility.Get_FilePath("Open CARD_Pass.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Pass.bin"));
+            Card_Kana.Load(Utility.Get_FilePath("Open CARD_Kana.bin", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin"), State.Language.ToString());
+            Card_PackID.Load(Utility.Get_FilePath("", "BIN File (*.bin)|*.bin", $"{State.Path}\\bin\\CARD_PackID.bin"));
 
             CARDS_CB_SimilarCardName.DisplayMember = "Key";
             CARDS_CB_SimilarCardName.ValueMember = "Value";
             CARDS_CB_SimilarCardName.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name} ({card.ID})", card.ID)).ToList();
             CARDS_CB_SimilarCardName.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+
+            CARDS_TB_CardName.DisplayMember = "Key";
+            CARDS_TB_CardName.ValueMember = "Value";
+            CARDS_TB_CardName.DataSource = CARDS_Cards.Cards.Select(card => new KeyValuePair<string, int>($"{card.Name}", card.ID)).ToList();
+
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardTypes.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
@@ -63,7 +67,7 @@ namespace WolfX
 
             Card_Same.Save();
 
-            CARD_Pass.CARD_Pass.Save();
+            Card_Pass.Save();
 
         }
         private void CARDS_CB_CardName_TextChanged(object sender, EventArgs e)
@@ -131,6 +135,10 @@ namespace WolfX
             }
         }
 
+        private void CARDS_TB_CardName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CARDS_CB_CardID.SelectedIndex = CARDS_CB_CardID.Items.IndexOf((int)CARDS_TB_CardName.SelectedValue);
+        }
         private void CARDS_CB_CardID_SelectedIndexChanged(object? sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedIndex == -1)
@@ -196,9 +204,9 @@ namespace WolfX
 
             // Update additional fields
             int index = CARDS_CB_CardID.SelectedIndex;
-            CARDS_TB_CardPassword.Text = CARD_Pass.CARD_Pass._Passwords.ElementAt(index).ToString();
-            CARDS_TB_Kana.Text = CARD_Kana.CARD_Kana._Kana.ElementAt(index).ToString();
-            CARDS_TB_CardNumber.Text = CARD_PackID.CARD_PackID._CardNumbers.ElementAt(index).ToString();
+            CARDS_TB_CardPassword.Text = Card_Pass._Passwords.ElementAt(index).ToString();
+            CARDS_TB_Kana.Text = Card_Kana._Kana.ElementAt(index).ToString();
+            CARDS_TB_CardNumber.Text = Card_PackID._CardNumbers.ElementAt(index).ToString();
 
             PREVIOUS_INDEX = index;
         }
@@ -214,7 +222,8 @@ namespace WolfX
             CARDS_Nud_CardLevel.ResetText();
             CARDS_PB_CardPicture.Image = null;
 
-            CARDS_TB_CardName.Clear();
+            CARDS_TB_CardName.Items.Clear();
+            CARDS_TB_CardName.DataSource = null;
             CARDS_TB_Kana.Clear();
             CARDS_RB_AlwaysSimilar.Checked = false;
             CARDS_RB_SimilarOnEffect.Checked = false;
@@ -291,10 +300,10 @@ namespace WolfX
             if (int.TryParse(CARDS_TB_CardPassword.Text, out int newPassword))
             {
                 int index = CARDS_CB_CardID.SelectedIndex;
-
-                if (index >= 0 && index < CARD_Pass.CARD_Pass._Passwords.Count)
+                
+                if (index >= 0 && index < Card_Pass._Passwords.Count)
                 {
-                    CARD_Pass.CARD_Pass._Passwords[index] = newPassword;
+                    Card_Pass._Passwords[index] = newPassword;
                 }
             }
         }
@@ -304,9 +313,9 @@ namespace WolfX
             if (CARDS_TB_Kana.Text is string Kana)
             {
                 int index = CARDS_CB_CardID.SelectedIndex;
-                if (index >= 0 && index < CARD_Pass.CARD_Pass._Passwords.Count)
+                if (index >= 0 && index < Card_Pass._Passwords.Count)
                 {
-                    CARD_Kana.CARD_Kana._Kana[index] = Kana;
+                    Card_Kana._Kana[index] = Kana;
                 }
             }
         }
