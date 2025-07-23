@@ -18,5 +18,9 @@ namespace CARD_PackID
                 _CardNumbers.Add(Encoding.ASCII.GetString(Bytes));
             }
         }
+
+        public static void Save()
+        {
+        }
     }
 }
