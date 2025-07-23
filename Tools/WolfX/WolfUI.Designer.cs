@@ -63,7 +63,7 @@ namespace WolfX
             label4 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            CARDS_TB_CardName = new TextBox();
+            CARDS_TB_CardName = new ComboBox();
             CARDS_TB_CardDef = new TextBox();
             CARDS_TB_CardAtk = new TextBox();
             label2 = new Label();
@@ -607,11 +607,13 @@ namespace WolfX
             // CARDS_TB_CardName
             // 
             CARDS_TB_CardName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CARDS_TB_CardName.Location = new Point(6, 19);
+            CARDS_TB_CardName.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_TB_CardName.FormattingEnabled = true;
+            CARDS_TB_CardName.Location = new Point(6, 22);
             CARDS_TB_CardName.Name = "CARDS_TB_CardName";
             CARDS_TB_CardName.Size = new Size(305, 23);
             CARDS_TB_CardName.TabIndex = 7;
-            CARDS_TB_CardName.TextChanged += CARDS_CB_CardName_TextChanged;
+            CARDS_TB_CardName.SelectedIndexChanged += CARDS_TB_CardName_SelectedIndexChanged;
             // 
             // CARDS_TB_CardDef
             // 
@@ -1331,7 +1333,7 @@ namespace WolfX
             tabControl1.Location = new Point(8, 112);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(635, 496);
+            tabControl1.Size = new Size(1240, 496);
             tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -1340,7 +1342,7 @@ namespace WolfX
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(627, 468);
+            tabPage1.Size = new Size(1232, 468);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Main Deck";
             tabPage1.UseVisualStyleBackColor = true;
@@ -1350,7 +1352,7 @@ namespace WolfX
             YDC_LV_MainDeckCards.Dock = DockStyle.Fill;
             YDC_LV_MainDeckCards.Location = new Point(3, 3);
             YDC_LV_MainDeckCards.Name = "YDC_LV_MainDeckCards";
-            YDC_LV_MainDeckCards.Size = new Size(621, 462);
+            YDC_LV_MainDeckCards.Size = new Size(1226, 462);
             YDC_LV_MainDeckCards.TabIndex = 0;
             YDC_LV_MainDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_MainDeckCards.View = View.List;
@@ -1361,7 +1363,7 @@ namespace WolfX
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(627, 468);
+            tabPage2.Size = new Size(1232, 468);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Side Deck";
             tabPage2.UseVisualStyleBackColor = true;
@@ -1371,7 +1373,7 @@ namespace WolfX
             YDC_LV_SideDeckCards.Dock = DockStyle.Fill;
             YDC_LV_SideDeckCards.Location = new Point(3, 3);
             YDC_LV_SideDeckCards.Name = "YDC_LV_SideDeckCards";
-            YDC_LV_SideDeckCards.Size = new Size(621, 462);
+            YDC_LV_SideDeckCards.Size = new Size(1226, 462);
             YDC_LV_SideDeckCards.TabIndex = 1;
             YDC_LV_SideDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_SideDeckCards.View = View.List;
@@ -1381,7 +1383,7 @@ namespace WolfX
             tabPage3.Controls.Add(YDC_LV_ExtraDeckCards);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(627, 468);
+            tabPage3.Size = new Size(1232, 468);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Extra Deck";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1391,7 +1393,7 @@ namespace WolfX
             YDC_LV_ExtraDeckCards.Dock = DockStyle.Fill;
             YDC_LV_ExtraDeckCards.Location = new Point(0, 0);
             YDC_LV_ExtraDeckCards.Name = "YDC_LV_ExtraDeckCards";
-            YDC_LV_ExtraDeckCards.Size = new Size(627, 468);
+            YDC_LV_ExtraDeckCards.Size = new Size(1232, 468);
             YDC_LV_ExtraDeckCards.TabIndex = 2;
             YDC_LV_ExtraDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_ExtraDeckCards.View = View.List;
@@ -1885,6 +1887,7 @@ namespace WolfX
             // 
             // PACKDATA_BTN_RemoveCard
             // 
+            PACKDATA_BTN_RemoveCard.Enabled = false;
             PACKDATA_BTN_RemoveCard.Location = new Point(6, 53);
             PACKDATA_BTN_RemoveCard.Name = "PACKDATA_BTN_RemoveCard";
             PACKDATA_BTN_RemoveCard.Size = new Size(72, 25);
@@ -1895,6 +1898,7 @@ namespace WolfX
             // 
             // PACKDATA_BTN_AddCards
             // 
+            PACKDATA_BTN_AddCards.Enabled = false;
             PACKDATA_BTN_AddCards.Location = new Point(6, 22);
             PACKDATA_BTN_AddCards.Name = "PACKDATA_BTN_AddCards";
             PACKDATA_BTN_AddCards.Size = new Size(72, 25);
@@ -2386,7 +2390,6 @@ namespace WolfX
         public ComboBox CARDS_CB_CardAttribute;
         public NumericUpDown CARDS_Nud_CardLevel;
         public ComboBox CARDS_CB_CardTypes;
-        public TextBox CARDS_TB_CardName;
         private GroupBox groupBox6;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Pack;
@@ -2540,5 +2543,6 @@ namespace WolfX
         private GroupBox groupBox22;
         public Button button6;
         private Button SaveGame_BTN_OpenSave;
+        private ComboBox CARDS_TB_CardName;
     }
 }

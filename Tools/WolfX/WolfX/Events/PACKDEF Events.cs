@@ -50,6 +50,9 @@ namespace WolfX
 
             PACKDATA_LBL_NumberOfCommon.Text = PACKDATA.PACKDATA._CommonCards.Count.ToString();
             PACKDATA_LBL_NumberOfRare.Text = PACKDATA.PACKDATA._RareCards.Count.ToString();
+
+            PACKDATA_BTN_AddCards.Enabled = true;
+            PACKDATA_BTN_RemoveCard.Enabled = true;
         }
 
         private void PACKDATA_BTN_RemoveCard_Click(object sender, EventArgs e)
@@ -58,11 +61,16 @@ namespace WolfX
                 return;
 
             foreach (ListViewItem Item in PACKDATA_LV_CommonCards.SelectedItems)
+            {
                 PACKDATA_LV_CommonCards.Items.Remove(Item);
-
+                PACKDATA.PACKDATA._CommonCards.Remove(Convert.ToInt16(Item.Text));
+            }
             foreach (ListViewItem Item in PACKDATA_LV_RareCards.SelectedItems)
+            {
                 PACKDATA_LV_RareCards.Items.Remove(Item);
 
+                PACKDATA.PACKDATA._RareCards.Remove(Convert.ToInt16(Item.Text));
+            }
             PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_CommonCards.Items.Count;
             PACKDATA.PACKDATA._NumberOfRareCards = (short)PACKDATA_LV_RareCards.Items.Count;
         }
@@ -80,7 +88,6 @@ namespace WolfX
                         if (PACKDATA_TC_ListOfCardsSoldAtShop.SelectedTab.Text == "Common")
                         {
                             PACKDATA.PACKDATA._CommonCards.Add((short)Card);
-                            PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_CommonCards.Items.Count;
 
                             bool exists = PACKDATA_LV_CommonCards.Items.Cast<ListViewItem>().Any(item => item.Text == Card.ToString());
                             if (!exists)
@@ -90,11 +97,12 @@ namespace WolfX
 
                             PACKDATA_LV_CommonCards.Items.Clear();
                             PACKDATA_LV_CommonCards.Items.AddRange(sortedItems.ToArray());
+
+                            PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_CommonCards.Items.Count;
                         }
                         else
                         {
                             PACKDATA.PACKDATA._RareCards.Add((short)Card);
-                            PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_RareCards.Items.Count;
 
                             bool exists = PACKDATA_LV_RareCards.Items.Cast<ListViewItem>().Any(item => item.Text == Card.ToString());
                             if (!exists)
@@ -104,9 +112,25 @@ namespace WolfX
 
                             PACKDATA_LV_RareCards.Items.Clear();
                             PACKDATA_LV_RareCards.Items.AddRange(sortedItems.ToArray());
+
+
+                            PACKDATA.PACKDATA._NumberOfRareCards = (short)PACKDATA_LV_RareCards.Items.Count;
                         }
                     }
+                }
+            }
+            else
+            {
+                if(string.IsNullOrEmpty(State.Path))
+                {
+                    MessageBox.Show("Please Load Game", "Error - State not Set", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                var CardAdder = new CardAdder();
+                var Result = CardAdder.ShowDialog();
 
+                if(Result == DialogResult.OK)
+                {
 
                 }
             }
