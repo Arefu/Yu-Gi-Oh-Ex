@@ -48,20 +48,37 @@ namespace Types
             //12?
             Spell = 13,
             Trap = 14,
-            Tuner = 15,
+            Tuner_Normal = 15,
             Tuner_Effect = 16,
             Synchro = 17,
             Synchro_Effect = 18,
             Synchro_Tuner_Effect = 19,
             //20?
             //21?
-            Xyz = 23,
+            Xyz = 22,
+            Xyz_Efffect = 23,
             Flip_Effect = 24,
             Pendulum = 25,
             Pendulum_Effect = 26,
             SpecialSummoned_Effect = 27,
             Toon_Effect = 28,
             Spirit_Effect = 29,
+            Tuner = 30,
+            //31?
+            Tuner_Flip_Effect = 32,
+            Pendulum_Tuner_Effect = 33,
+            XYZ_Pendulum_Effect = 34,
+            Pendulum_Flip_Effect = 35,
+            Synchro_Pendulum_Effect = 36,
+            Union_Tuner_Effect = 37,
+            Ritual_Spirit_Effect = 38,
+            Fusion_Tuner = 39,
+            Pendulum_Effect_Alt = 40,
+            Fusion_Pendulum_Effect = 41,
+            Link = 42,
+            Link_Effect = 43,
+            Pendulum_Tuner_Normal = 44,
+            Pendulum_Spirit_Effect = 45
         }
     }
 
