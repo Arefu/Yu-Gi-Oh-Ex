@@ -169,6 +169,7 @@
     <None Include="Yu-Gi-Oh.def" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CardsThatMakeYouDraw.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="Effects.h" />
     <ClInclude Include="Logger.h" />
