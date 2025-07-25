@@ -54,6 +54,8 @@ namespace WolfX
             CARDS_BTN_OpenCards = new Button();
             CARDS_BTN_SaveCard = new Button();
             groupBox2 = new GroupBox();
+            CARDS_CB_CardType = new ComboBox();
+            label3 = new Label();
             CARDS_Nud_CardLevel = new NumericUpDown();
             CARDS_CB_CardAttribute = new ComboBox();
             CARDS_CB_CardKind = new ComboBox();
@@ -230,8 +232,6 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            CARDS_CB_CardType = new ComboBox();
-            label3 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -519,6 +519,28 @@ namespace WolfX
             groupBox2.TabStop = false;
             groupBox2.Text = "Card Innformation";
             // 
+            // CARDS_CB_CardType
+            // 
+            CARDS_CB_CardType.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardType.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardType.FormattingEnabled = true;
+            CARDS_CB_CardType.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
+            CARDS_CB_CardType.Location = new Point(175, 92);
+            CARDS_CB_CardType.Name = "CARDS_CB_CardType";
+            CARDS_CB_CardType.Size = new Size(128, 23);
+            CARDS_CB_CardType.TabIndex = 17;
+            CARDS_CB_CardType.SelectedIndexChanged += CARDS_CB_CardType_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F);
+            label3.Location = new Point(175, 69);
+            label3.Name = "label3";
+            label3.Size = new Size(75, 20);
+            label3.TabIndex = 16;
+            label3.Text = "Card Type";
+            // 
             // CARDS_Nud_CardLevel
             // 
             CARDS_Nud_CardLevel.Location = new Point(175, 43);
@@ -548,7 +570,7 @@ namespace WolfX
             CARDS_CB_CardKind.Name = "CARDS_CB_CardKind";
             CARDS_CB_CardKind.Size = new Size(128, 23);
             CARDS_CB_CardKind.TabIndex = 9;
-            CARDS_CB_CardKind.SelectedIndexChanged += CARDS_CB_CardTypes_SelectedIndexChanged;
+            CARDS_CB_CardKind.SelectedIndexChanged += CARDS_CB_CardKind_SelectedIndexChanged;
             // 
             // CB_CardLevel
             // 
@@ -2293,27 +2315,6 @@ namespace WolfX
             Language_spanish.Size = new Size(117, 22);
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
-            // 
-            // CARDS_CB_CardType
-            // 
-            CARDS_CB_CardType.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CARDS_CB_CardType.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CARDS_CB_CardType.FormattingEnabled = true;
-            CARDS_CB_CardType.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
-            CARDS_CB_CardType.Location = new Point(175, 92);
-            CARDS_CB_CardType.Name = "CARDS_CB_CardType";
-            CARDS_CB_CardType.Size = new Size(128, 23);
-            CARDS_CB_CardType.TabIndex = 17;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11F);
-            label3.Location = new Point(175, 69);
-            label3.Name = "label3";
-            label3.Size = new Size(75, 20);
-            label3.TabIndex = 16;
-            label3.Text = "Card Type";
             // 
             // WolfUI
             // 

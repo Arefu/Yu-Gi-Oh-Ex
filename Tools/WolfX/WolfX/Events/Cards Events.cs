@@ -229,12 +229,21 @@ namespace WolfX
             }
         }
 
-        private void CARDS_CB_CardTypes_SelectedIndexChanged(object sender, EventArgs e)
+        private void CARDS_CB_CardKind_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CARDS_CB_CardID.SelectedItem is int cardId)
             {
                 var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
                 card?.Kind = (CARDS_INFO.CARD_Kind)Enum.Parse(typeof(CARDS_INFO.CARD_Kind), CARDS_CB_CardKind.Text);
+            }
+        }
+
+        private void CARDS_CB_CardType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CARDS_CB_CardID.SelectedItem is int cardId)
+            {
+                var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
+                card?.Type = (CARDS_INFO.CARD_Type)Enum.Parse(typeof(CARDS_INFO.CARD_Type), CARDS_CB_CardType.Text);
             }
         }
 
