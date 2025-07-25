@@ -230,6 +230,8 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            CARDS_CB_CardType = new ComboBox();
+            label3 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -502,6 +504,8 @@ namespace WolfX
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(CARDS_CB_CardType);
+            groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(CARDS_Nud_CardLevel);
             groupBox2.Controls.Add(CARDS_CB_CardAttribute);
             groupBox2.Controls.Add(CARDS_CB_CardKind);
@@ -525,6 +529,8 @@ namespace WolfX
             // 
             // CARDS_CB_CardAttribute
             // 
+            CARDS_CB_CardAttribute.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardAttribute.AutoCompleteSource = AutoCompleteSource.ListItems;
             CARDS_CB_CardAttribute.FormattingEnabled = true;
             CARDS_CB_CardAttribute.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
             CARDS_CB_CardAttribute.Location = new Point(6, 92);
@@ -535,6 +541,8 @@ namespace WolfX
             // 
             // CARDS_CB_CardKind
             // 
+            CARDS_CB_CardKind.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardKind.AutoCompleteSource = AutoCompleteSource.ListItems;
             CARDS_CB_CardKind.FormattingEnabled = true;
             CARDS_CB_CardKind.Location = new Point(6, 43);
             CARDS_CB_CardKind.Name = "CARDS_CB_CardKind";
@@ -2286,6 +2294,27 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // CARDS_CB_CardType
+            // 
+            CARDS_CB_CardType.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CARDS_CB_CardType.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardType.FormattingEnabled = true;
+            CARDS_CB_CardType.Items.AddRange(new object[] { "Unknown", "Light Monster", "Dark Monster", "Water Monster", "Fire Monster", "Earth Monster", "Wind Monster", "Divine Monster", "Spell", "Trap" });
+            CARDS_CB_CardType.Location = new Point(175, 92);
+            CARDS_CB_CardType.Name = "CARDS_CB_CardType";
+            CARDS_CB_CardType.Size = new Size(128, 23);
+            CARDS_CB_CardType.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F);
+            label3.Location = new Point(175, 69);
+            label3.Name = "label3";
+            label3.Size = new Size(75, 20);
+            label3.TabIndex = 16;
+            label3.Text = "Card Type";
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2582,5 +2611,7 @@ namespace WolfX
         private GroupBox groupBox23;
         private Label label24;
         private Label label15;
+        public ComboBox CARDS_CB_CardType;
+        private Label label3;
     }
 }
