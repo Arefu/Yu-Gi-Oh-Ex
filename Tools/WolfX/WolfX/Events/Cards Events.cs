@@ -43,6 +43,7 @@ namespace WolfX
             CARDS_CB_CardID.DataSource = CARDS_Cards.Cards.Select(Select => Select.ID).ToList();
             CARDS_CB_CardKind.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
+            CARDS_CB_CardType.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
         }
 
         private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
@@ -100,6 +101,7 @@ namespace WolfX
             CARDS_CB_CardSearcher.Text = selectedCard.Name;
             CARDS_TB_CardName.Text = selectedCard.Name;
             CARDS_CB_CardKind.Text = selectedCard.Kind.ToString();
+            CARDS_CB_CardType.Text = selectedCard.Type.ToString();
             CARDS_CB_CardAttribute.Text = selectedCard.Attribute.ToString();
             CARDS_Nud_CardLevel.Text = selectedCard.Level.ToString();
             CARDS_TB_CardDesc.Text = selectedCard.Desc;
@@ -165,11 +167,6 @@ namespace WolfX
             {
                 var card = CARDS_Cards.Cards.FirstOrDefault(c => c.ID == cardId);
                 card?.Attribute = (CARDS_INFO.CARD_Attribute)Enum.Parse(typeof(CARDS_INFO.CARD_Attribute), CARDS_CB_CardAttribute.Text);
-                foreach (var carder in CARDS_Cards.Cards)
-                {
-                    if (carder.ID == 4844)
-                        card.Type = CARDS_INFO.CARD_Type.TunerEffect;
-                }
             }
         }
 
