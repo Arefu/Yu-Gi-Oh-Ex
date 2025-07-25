@@ -5,6 +5,7 @@
         ALWAYS = 0,
         EFFECT = 256
     }
+
     public class Similar_Card(short primaryCard, short targetCard, TYPE similarityType)
     {
         /// <summary>
@@ -52,6 +53,5 @@
                 writer.Write((short)card.SimilarityType);
             }
         }
-
     }
 }

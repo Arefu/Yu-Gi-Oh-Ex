@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Types
 {
-
     public static class CARDS_INFO
     {
-        public enum CARD_Language { English = 'E', French = 'F', German = 'G', Italian = 'I', Spanish = 'S', Japanese = 'J', Russian = 'R' };
-        public static CARD_Language _CARD_Language = CARD_Language.English;
+        public enum CARD_Language
+        { English = 'E', French = 'F', German = 'G', Italian = 'I', Spanish = 'S', Japanese = 'J', Russian = 'R' };
 
+        public static CARD_Language _CARD_Language = CARD_Language.English;
 
         public enum CARD_Attribute
         {
@@ -44,18 +44,22 @@ namespace Types
             Union = 8,
             Gemini = 9,
             Token = 10,
+
             //11?
             //12?
             Spell = 13,
+
             Trap = 14,
             Tuner_Normal = 15,
             Tuner_Effect = 16,
             Synchro = 17,
             Synchro_Effect = 18,
             Synchro_Tuner_Effect = 19,
+
             //20?
             //21?
             Xyz = 22,
+
             Xyz_Efffect = 23,
             Flip_Effect = 24,
             Pendulum = 25,
@@ -64,8 +68,10 @@ namespace Types
             Toon_Effect = 28,
             Spirit_Effect = 29,
             Tuner = 30,
+
             //31?
             Tuner_Flip_Effect = 32,
+
             Pendulum_Tuner_Effect = 33,
             XYZ_Pendulum_Effect = 34,
             Pendulum_Flip_Effect = 35,
@@ -106,7 +112,6 @@ namespace Types
 
         public BitVector32 First;
         public BitVector32 Second;
-
     }
 
     public static class CARDS_Cards
@@ -132,6 +137,7 @@ namespace Types
 
         private static Dictionary<uint, string> Names = new();
         private static Dictionary<uint, string> Descs = new();
+
         private static void Refresh()
         {
             Names.Clear();
@@ -142,7 +148,6 @@ namespace Types
             NameReader.BaseStream.Position = 0;
             DescReader.BaseStream.Position = 0;
         }
-
 
         public static bool Setup_CardBinder(string Indx_File, CARDS_INFO.CARD_Language Language)
         {
@@ -174,7 +179,6 @@ namespace Types
 
         public static bool Close_CardBinder()
         {
-
             IndxReader?.Close();
             NameReader?.Close();
             DescReader?.Close();
@@ -184,7 +188,6 @@ namespace Types
 
             return true;
         }
-
 
         public static void LoadCardInfo()
         {
@@ -270,7 +273,6 @@ namespace Types
                 }
             }
             while (PropReader.BaseStream.Position <= PropReader.BaseStream.Length);
-
         }
 
         public static void SaveCardInfo()
@@ -309,6 +311,7 @@ namespace Types
             writer.Write(encoded);
             writer.Write((ushort)0); // Null terminator
         }
+
         public static void SaveCardProps()
         {
             if (!Ready)
@@ -357,6 +360,7 @@ namespace Types
         }
 
         #region Card Getters
+
         public static string Get_CardNameFromID(short ID)
         {
             if (Cards.Count == 0)
@@ -364,125 +368,143 @@ namespace Types
 
             return Cards.Find(x => x.ID == ID).Name;
         }
+
         public static string Get_CardDescFromID(short ID)
         {
             if (Cards.Count == 0)
                 return ID.ToString();
             return Cards.Find(x => x.ID == ID).Desc;
         }
+
         public static int Get_CardAtkFromID(short ID)
         {
             if (Cards.Count == 0)
                 return ID;
             return Cards.Find(x => x.ID == ID).Attack;
         }
+
         public static int Get_CardDefFromID(short ID)
         {
             if (Cards.Count == 0)
                 return ID;
             return Cards.Find(x => x.ID == ID).Defense;
         }
+
         public static byte Get_CardLevelFromID(short ID)
         {
             if (Cards.Count == 0)
                 return 0;
             return (byte)Cards.Find(x => x.ID == ID).Level;
         }
+
         public static CARDS_INFO.CARD_Attribute Get_CardAttributeFromID(short ID)
         {
             if (Cards.Count == 0)
                 return CARDS_INFO.CARD_Attribute.Unknown;
             return Cards.Find(x => x.ID == ID).Attribute;
         }
+
         public static CARDS_INFO.CARD_Type Get_CardTypeFromID(short ID)
         {
             if (Cards.Count == 0)
                 return CARDS_INFO.CARD_Type.Default;
             return Cards.Find(x => x.ID == ID).Type;
         }
+
         public static byte Get_CardPendulumScale1FromID(short ID)
         {
             if (Cards.Count == 0)
                 return 0;
             return Cards.Find(x => x.ID == ID).PEND_Scale1;
         }
+
         public static byte Get_CardPendulumScale2FromID(short ID)
         {
             if (Cards.Count == 0)
                 return 0;
             return Cards.Find(x => x.ID == ID).PEND_Scale2;
         }
+
         public static short Get_CardPropFromID(short ID)
         {
             if (Cards.Count == 0)
                 return 0;
             return (short)Cards.Find(x => x.ID == ID).First.Data;
         }
-        #endregion
+
+        #endregion Card Getters
 
         #region Card Setters
+
         public static void Set_CardNameFromID(short ID, string Name)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Name = Name;
         }
+
         public static void Set_CardDescFromID(short ID, string Desc)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Desc = Desc;
         }
+
         public static void Set_CardAtkFromID(short ID, int Atk)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Attack = Atk;
         }
+
         public static void Set_CardDefFromID(short ID, int Def)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Defense = Def;
         }
+
         public static void Set_CardLevelFromID(short ID, byte Level)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Level = Level;
         }
+
         public static void Set_CardAttributeFromID(short ID, CARDS_INFO.CARD_Attribute Attribute)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Attribute = Attribute;
         }
+
         public static void Set_CardTypeFromID(short ID, CARDS_INFO.CARD_Type Type)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).Type = Type;
         }
+
         public static void Set_CardPendulumScale1FromID(short ID, byte Scale)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).PEND_Scale1 = Scale;
         }
+
         public static void Set_CardPendulumScale2FromID(short ID, byte Scale)
         {
             if (Cards.Count == 0)
                 return;
             Cards.Find(x => x.ID == ID).PEND_Scale2 = Scale;
         }
-        #endregion
 
-
+        #endregion Card Setters
     }
 
     internal static partial class Extensions
     {
-        public static string ReadNullTerminatedString(this BinaryReader reader, Encoding encoding)
+        internal static string ReadNullTerminatedString(this BinaryReader reader, Encoding encoding)
         {
             var Builder = new StringBuilder();
             var Reader = new StreamReader(reader.BaseStream, encoding);
@@ -511,14 +533,12 @@ namespace Types
             return Res;
         }
 
-        public static void WriteNullTerminatedString(this BinaryWriter writer, Encoding encoding)
+        internal static void WriteNullTerminatedString(this BinaryWriter writer, Encoding encoding)
         {
             var Builder = new StringBuilder();
             var Writer = new StreamWriter(writer.BaseStream, encoding);
 
             var Start = writer.BaseStream.Position;
-
-
         }
     }
 }

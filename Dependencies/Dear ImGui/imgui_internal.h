@@ -481,8 +481,8 @@ IM_MSVC_RUNTIME_CHECKS_OFF
 struct ImVec1
 {
 	float   x;
-	constexpr ImVec1() : x(0.0f) { }
-	constexpr ImVec1(float _x) : x(_x) { }
+	constexpr ImVec1() : x(0.0f) {}
+	constexpr ImVec1(float _x) : x(_x) {}
 };
 
 // Helper: ImVec2ih (2D vector, half-size integer, for long-term packed storage)
@@ -515,9 +515,9 @@ struct IMGUI_API ImRect
 	ImVec2      GetTR() const { return ImVec2(Max.x, Min.y); }  // Top-right
 	ImVec2      GetBL() const { return ImVec2(Min.x, Max.y); }  // Bottom-left
 	ImVec2      GetBR() const { return Max; }                   // Bottom-right
-	bool        Contains(const ImVec2& p) const { return p.x >= Min.x && p.y >= Min.y && p.x < Max.x&& p.y < Max.y; }
+	bool        Contains(const ImVec2& p) const { return p.x >= Min.x && p.y >= Min.y && p.x < Max.x && p.y < Max.y; }
 	bool        Contains(const ImRect& r) const { return r.Min.x >= Min.x && r.Min.y >= Min.y && r.Max.x <= Max.x && r.Max.y <= Max.y; }
-	bool        Overlaps(const ImRect& r) const { return r.Min.y <  Max.y&& r.Max.y >  Min.y && r.Min.x <  Max.x&& r.Max.x >  Min.x; }
+	bool        Overlaps(const ImRect& r) const { return r.Min.y <  Max.y && r.Max.y >  Min.y && r.Min.x <  Max.x && r.Max.x >  Min.x; }
 	void        Add(const ImVec2& p) { if (Min.x > p.x)     Min.x = p.x;     if (Min.y > p.y)     Min.y = p.y;     if (Max.x < p.x)     Max.x = p.x;     if (Max.y < p.y)     Max.y = p.y; }
 	void        Add(const ImRect& r) { if (Min.x > r.Min.x) Min.x = r.Min.x; if (Min.y > r.Min.y) Min.y = r.Min.y; if (Max.x < r.Max.x) Max.x = r.Max.x; if (Max.y < r.Max.y) Max.y = r.Max.y; }
 	void        Expand(const float amount) { Min.x -= amount;   Min.y -= amount;   Max.x += amount;   Max.y += amount; }
@@ -562,7 +562,7 @@ struct ImBitArray
 	bool            TestBit(int n) const { n += OFFSET; IM_ASSERT(n >= 0 && n < BITCOUNT); return ImBitArrayTestBit(Storage, n); }
 	void            SetBit(int n) { n += OFFSET; IM_ASSERT(n >= 0 && n < BITCOUNT); ImBitArraySetBit(Storage, n); }
 	void            ClearBit(int n) { n += OFFSET; IM_ASSERT(n >= 0 && n < BITCOUNT); ImBitArrayClearBit(Storage, n); }
-	void            SetBitRange(int n, int n2) { n += OFFSET; n2 += OFFSET; IM_ASSERT(n >= 0 && n < BITCOUNT&& n2 > n && n2 <= BITCOUNT); ImBitArraySetBitRange(Storage, n, n2); } // Works on range [n..n2)
+	void            SetBitRange(int n, int n2) { n += OFFSET; n2 += OFFSET; IM_ASSERT(n >= 0 && n < BITCOUNT && n2 > n && n2 <= BITCOUNT); ImBitArraySetBitRange(Storage, n, n2); } // Works on range [n..n2)
 	bool            operator[](int n) const { n += OFFSET; IM_ASSERT(n >= 0 && n < BITCOUNT); return ImBitArrayTestBit(Storage, n); }
 };
 
@@ -623,8 +623,8 @@ struct ImSpanAllocator
 	inline void  Reserve(int n, size_t sz, int a = 4) { IM_ASSERT(n == CurrIdx && n < CHUNKS); CurrOff = IM_MEMALIGN(CurrOff, a); Offsets[n] = CurrOff; Sizes[n] = (int)sz; CurrIdx++; CurrOff += (int)sz; }
 	inline int   GetArenaSizeInBytes() { return CurrOff; }
 	inline void  SetArenaBasePtr(void* base_ptr) { BasePtr = (char*)base_ptr; }
-	inline void* GetSpanPtrBegin(int n) { IM_ASSERT(n >= 0 && n < CHUNKS&& CurrIdx == CHUNKS); return (void*)(BasePtr + Offsets[n]); }
-	inline void* GetSpanPtrEnd(int n) { IM_ASSERT(n >= 0 && n < CHUNKS&& CurrIdx == CHUNKS); return (void*)(BasePtr + Offsets[n] + Sizes[n]); }
+	inline void* GetSpanPtrBegin(int n) { IM_ASSERT(n >= 0 && n < CHUNKS && CurrIdx == CHUNKS); return (void*)(BasePtr + Offsets[n]); }
+	inline void* GetSpanPtrEnd(int n) { IM_ASSERT(n >= 0 && n < CHUNKS && CurrIdx == CHUNKS); return (void*)(BasePtr + Offsets[n] + Sizes[n]); }
 	template<typename T>
 	inline void  GetSpan(int n, ImSpan<T>* span) { span->set((T*)GetSpanPtrBegin(n), (T*)GetSpanPtrEnd(n)); }
 };

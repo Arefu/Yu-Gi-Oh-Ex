@@ -1555,7 +1555,7 @@ void ImGui::ShrinkWidths(ImGuiShrinkWidthItem* items, int count, float width_exc
 	{
 		while (count_same_width < count && items[0].Width <= items[count_same_width].Width)
 			count_same_width++;
-		float max_width_to_remove_per_item = (count_same_width < count&& items[count_same_width].Width >= 0.0f) ? (items[0].Width - items[count_same_width].Width) : (items[0].Width - 1.0f);
+		float max_width_to_remove_per_item = (count_same_width < count && items[count_same_width].Width >= 0.0f) ? (items[0].Width - items[count_same_width].Width) : (items[0].Width - 1.0f);
 		if (max_width_to_remove_per_item <= 0.0f)
 			break;
 		float width_to_remove_per_item = ImMin(width_excess / count_same_width, max_width_to_remove_per_item);

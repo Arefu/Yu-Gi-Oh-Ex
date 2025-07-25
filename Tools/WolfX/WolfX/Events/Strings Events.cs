@@ -6,6 +6,7 @@ namespace WolfX
     {
         private List<BNDString> BNDStrings { get; set; } = new List<BNDString>();
         private List<string> Credits { get; set; } = new List<string>();
+
         private void STRMAN_BTN_OpenStrings_Click(object sender, EventArgs e)
         {
             using (var FileDialog = new OpenFileDialog())
@@ -66,9 +67,9 @@ namespace WolfX
                 {
                     STRMAN_LB_CurrentFileStrings.Items.Add(String.String);
                 }
-
             }
         }
+
         private void STRMAN_BTN_SaveStrings_Click(object sender, EventArgs e)
         {
             if (CREDITS_CheckB_IsCredit.Checked)

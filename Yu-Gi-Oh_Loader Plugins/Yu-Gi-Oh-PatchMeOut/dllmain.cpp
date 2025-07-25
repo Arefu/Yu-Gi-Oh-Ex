@@ -47,7 +47,6 @@ void __fastcall Patch_NoPause()
 
 void __fastcall Patch_UseJP(__int64 a1)
 {
-
 	YuGiOhEx::g_bUseJpLogo = 255;
 	return;
 }
@@ -58,10 +57,8 @@ LONG WINAPI CrashHandler(EXCEPTION_POINTERS* ExceptionInfo) {
 
 	log.close();
 
-
 	return EXCEPTION_EXECUTE_HANDLER;
 }
-
 
 void __fastcall Patch_DoJankenAndPlayerSelection(__int64 a1)
 {

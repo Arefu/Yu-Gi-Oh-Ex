@@ -167,14 +167,12 @@ extern "C" _declspec(dllexport) void ProcessInput(HWND hWnd, UINT msg, WPARAM wP
 			if (speed > 1)
 			{
 				speed--;
-
 			}
 			break;
 		case VK_ADD:
 			if (speed < 10)
 			{
 				speed++;
-
 			}
 			break;
 		}

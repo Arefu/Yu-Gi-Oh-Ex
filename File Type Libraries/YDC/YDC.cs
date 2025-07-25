@@ -10,7 +10,6 @@
         public static short NumberOfCardsInSideDeck;
         public static short NumberOfCardsInExtraDeck;
 
-
         public static List<short> Load(string path)
         {
             short CurrentlyRead = 0;
@@ -24,10 +23,8 @@
                     YDC.Add(Reader.ReadInt16());
                     CurrentlyRead++;
                 }
-
             }
             return YDC;
         }
-
     }
 }

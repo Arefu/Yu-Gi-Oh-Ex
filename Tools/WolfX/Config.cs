@@ -4,7 +4,8 @@ namespace WolfX.WolfX.File_Type_UI
 {
     public partial class Config : Form
     {
-        string _Path = "";
+        private string _Path = "";
+
         public Config()
         {
             InitializeComponent();
@@ -49,7 +50,6 @@ namespace WolfX.WolfX.File_Type_UI
             AllowMultiInstance = PInvoke.GetPrivateProfileInt("Yu-Gi-Oh-BetterLoad", "AllowMultiInstance", 0, _Path);
             AllowMultiInstance_CB.Checked = AllowMultiInstance == 1;
         }
-
 
         private void BTN_CONFIG_OnSave_Click(object sender, EventArgs e)
         {

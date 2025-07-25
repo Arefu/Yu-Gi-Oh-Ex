@@ -9,7 +9,6 @@
             while (!Reader.EndOfStream)
             {
                 Credits.Add(Reader.ReadLine());
-
             }
             return Credits;
         }
@@ -21,7 +20,6 @@
             {
                 Writer.WriteLine(Credit);
             }
-
         }
     }
 }

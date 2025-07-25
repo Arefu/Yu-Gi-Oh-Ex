@@ -17,13 +17,12 @@ std::vector<Cards::IN_MEMORY_CARD_PROP> Cards::MEMCardProps(10166);
 
 __int64 __fastcall Cards::Get_InternalID(__int16 a1)
 {
-	auto result = Cards::InternalIDs.at(a1- 3900);
+	auto result = Cards::InternalIDs.at(a1 - 3900);
 	return result;
 }
 
 __int64 __fastcall Cards::Get_KonamiID(__int16 a1)
 {
-
 	return  0;
 }
 

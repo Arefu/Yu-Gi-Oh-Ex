@@ -1,8 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Text;
-
-namespace PACKDATA
+﻿namespace PACKDATA
 {
     public static class PACKDATA
     {

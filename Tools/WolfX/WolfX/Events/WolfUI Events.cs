@@ -1,5 +1,4 @@
-﻿
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Security.Principal;
 using System.Text.RegularExpressions;
@@ -37,9 +36,9 @@ namespace WolfX
 
             Process.Start();
         }
+
         private void WOLFUI_TOOLITEM_Pack_Click(object sender, EventArgs e)
         {
-
             var FolderBrowser = new Microsoft.Win32.OpenFolderDialog();
             using var OpenFile = new OpenFileDialog();
             if (!File.Exists("Yami-Yugi.exe"))
@@ -72,6 +71,7 @@ namespace WolfX
 
             Process.Start();
         }
+
         private void WOLFUI_TOOLITEM_SetPath_Click(object sender, EventArgs e)
         {
             //Check for Administrator rights
@@ -102,6 +102,7 @@ namespace WolfX
 
             RegistryKey.Close();
         }
+
         internal void WOLFUI_TOOLITEM_VerifyFiles_Click(object sender, EventArgs e)
         {
             var Missing = false;
@@ -111,7 +112,6 @@ namespace WolfX
             if (OpenFile.ShowDialog() != DialogResult.OK) return;
             if (State.Path == string.Empty || State.Path == null)
                 State.Path = $"{Directory.GetCurrentDirectory()}\\YGO_2020\\";
-
 
             foreach (var Line in File.ReadLines(OpenFile.FileName))
             {
@@ -146,6 +146,7 @@ namespace WolfX
             Language_english.Checked = true;
             State.Language = Language.English;
         }
+
         private void Language_french_Click(object sender, EventArgs e)
         {
             foreach (var Item in languageToolStripMenuItem.DropDownItems)
@@ -157,6 +158,7 @@ namespace WolfX
             Language_french.Checked = true;
             State.Language = Language.French;
         }
+
         private void Language_german_Click(object sender, EventArgs e)
         {
             foreach (var Item in languageToolStripMenuItem.DropDownItems)
@@ -168,6 +170,7 @@ namespace WolfX
             Language_german.Checked = true;
             State.Language = Language.German;
         }
+
         private void Language_italian_Click(object sender, EventArgs e)
         {
             foreach (var Item in languageToolStripMenuItem.DropDownItems)
@@ -179,6 +182,7 @@ namespace WolfX
             Language_italian.Checked = true;
             State.Language = Language.Italian;
         }
+
         private void Language_spanish_Click(object sender, EventArgs e)
         {
             foreach (var Item in languageToolStripMenuItem.DropDownItems)
@@ -190,6 +194,7 @@ namespace WolfX
             Language_spanish.Checked = true;
             State.Language = Language.Spanish;
         }
+
         private void Language_japanese_Click(object sender, EventArgs e)
         {
             foreach (var Item in languageToolStripMenuItem.DropDownItems)
@@ -201,6 +206,7 @@ namespace WolfX
             Language_japanese.Checked = true;
             State.Language = Language.Japanese;
         }
+
         private void Language_russian_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("The game doesn't seemingly support Russian, do you wan't to continue?", "Russian Not Supported", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)

@@ -52,7 +52,6 @@ BOOL Game::Start()
 
 BOOL Game::Start(LPWSTR CustomPath)
 {
-	
 	STARTUPINFO info = { sizeof(info) };
 	PROCESS_INFORMATION processInfo;
 
@@ -73,11 +72,9 @@ void Game::LookForPlugins()
 
 	HANDLE hFind = FindFirstFileA(CurrentDir, &FindFileData);
 
-
 	CHAR FullPathOfDll[MAX_PATH];
 	GetCurrentDirectoryA(MAX_PATH, FullPathOfDll);
 	strncat(FullPathOfDll, "\\Plugins\\", sizeof("\\Plugins\\"));
-
 
 	int i = 0;
 	do
@@ -89,29 +86,25 @@ void Game::LookForPlugins()
 		i++;
 	} while (FindNextFileA(hFind, &FindFileData) != 0);
 
-
-
 	FindClose(hFind);
 }
 
 void Game::Set_GamePath(LPWSTR Path)
 {
-    char charPath[MAX_PATH];
-    wcstombs(charPath, Path, MAX_PATH);
+	char charPath[MAX_PATH];
+	wcstombs(charPath, Path, MAX_PATH);
 
-    strncpy(Game::gGamePath, charPath, MAX_PATH);
-    strncat(Game::gGameLocation, charPath, strlen(charPath));
-    strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+	strncpy(Game::gGamePath, charPath, MAX_PATH);
+	strncat(Game::gGameLocation, charPath, strlen(charPath));
+	strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
 
-    HKEY hKey;
-    if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
-    {
-        RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)charPath, strlen(charPath));
-        RegCloseKey(hKey);
-    }
+	HKEY hKey;
+	if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
+	{
+		RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)charPath, strlen(charPath));
+		RegCloseKey(hKey);
+	}
 }
-
-
 
 void Game::CreateConfig(LPCSTR ConfigName)
 {
@@ -131,7 +124,6 @@ void Game::CreateConfig(LPCSTR ConfigName)
 		ConfigFile.close();
 	}
 }
-
 
 void Game::CheckForLoadOrder()
 {
@@ -162,7 +154,7 @@ void Game::CheckForLoadOrder()
 	}
 }
 
-BOOL Game::Check(LPSTR Path) 
+BOOL Game::Check(LPSTR Path)
 {
 	return PathFileExistsA(Path);
 }

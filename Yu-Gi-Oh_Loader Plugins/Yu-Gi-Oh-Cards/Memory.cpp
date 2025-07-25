@@ -18,7 +18,7 @@ bool Memory::PatchBytes(void* address, const uint8_t* values, size_t size, bool 
 		}
 	}
 	else {
-		std::cout <<"FAIL";
+		std::cout << "FAIL";
 		memcpy(address, values, size);
 
 		return true;
@@ -159,4 +159,3 @@ bool Memory::EmplaceCMP(void* targetAddress, uintptr_t value, X64Register reg, b
 
 	return PatchBytes(targetAddress, cmpOpCode, sizeof(cmpOpCode), Protected);
 }
-

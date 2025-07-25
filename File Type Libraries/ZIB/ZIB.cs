@@ -11,7 +11,6 @@ namespace Types
 
     public static class ZIB
     {
-
         public static bool _Loaded = false;
         public static readonly List<ZIB_Item> _Items = [];
         public static bool _ImageArchive = false;
@@ -77,18 +76,17 @@ namespace Types
                 return null;
         }
 
-
         public static MemoryStream Get_CardImageFromDefaultArchiveByYDCID(string Item)
         {
             return Get_SpecificItemFromArchive($"{Item}.jpg");
         }
-
 
         private static uint SwapBytes(uint Number)
         {
             Number = (Number >> 16) | (Number << 16);
             return ((Number & 0xFF00FF00) >> 8) | ((Number & 0x00FF00FF) << 8);
         }
+
         public static void Save(string Path)
         {
             var Packed_File = new FileInfo(Path.Replace("!", string.Empty));
@@ -130,8 +128,6 @@ namespace Types
                 var FileDataPadding = 16 * ((FileData.Length + 15) / 16);
                 Writer.Write(FileData);
                 Writer.Write(new byte[FileDataPadding - FileData.Length]);
-
-
             }
 
             Writer.Close();
