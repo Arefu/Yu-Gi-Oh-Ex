@@ -18,11 +18,35 @@ namespace Types
 
         public enum CARD_Type
         {
-            Default = 0, Effect = 1, Fusion = 2, Normal = 3, Ritual = 4, RitualEffect = 5, ToonEffect = 6, SpiritEffect = 7, UnionEffect = 8, GeminiEffect = 9, Token = 10,
-            God = 11, Dummy = 12, Spell = 13, Trap = 14, FusionEffect = 15, TunerEffect = 16, Synchro = 17, SynchroEffect = 18, SynchroTunerEffect = 19, DarkTunerEffect = 20, DarkSynchroEffect = 21,
-            Xyz = 22, XyzEffect = 23, FlipEffect = 24, Pendulum = 25, PendulumEffect = 26, EffectSp = 27, ToonEffectSp = 28, SpiritEffectSp = 29, TunerEffectSp = 30, DarkTunerEffectSp = 31,
-            FlipTunerEffect = 32, PendulumTunerEffect = 33, XyzPendulumEffect = 34, PendulumFlipEffect = 35, SynchoPendulumEffect = 36, UnionTunerEffect = 37, RitualSpiritEffect = 38,
-            Underscores = 39, AnyTuner = 40, AnyFusion = 41, AnyRitual = 42, Link = 43, AnyFlip = 44
+            //This one is special and seemingly referenced within code via card ID.
+            //Can also mean "Normal"
+            Default= 0,
+            Dragon = 1,
+            Zombie =2,
+            Fiend = 3,
+            Pyro = 4,
+            SeaSerpent = 5,
+            Rock = 6,
+            Machine = 7,
+            Fish = 8,
+            Dinosaur = 9,
+            Insect = 10,
+            Beast = 11,
+            BeastWarrior = 12,
+            Plant = 13, 
+            Aqua = 14,
+            Warrior = 15,
+            WingedBeast = 16,
+            Fairy = 17,
+            Spellcaster = 18,
+            Thunder = 19,
+            Reptile = 20,
+            Psychic =21,
+            Wyrm = 22,
+            Cyberse = 23,
+            DivineBeast = 24,
+            Spell = 30,
+            Trap = 31
 
             //AnyNormal = 37,
             //AnySynchro = 38,
@@ -107,8 +131,8 @@ namespace Types
         public byte PEND_Scale2;
 
         public CARDS_INFO.CARD_Kind Kind;
-        public CARDS_INFO.CARD_Attribute Attribute;
-        public CARDS_INFO.CARD_Type Type;
+        public CARDS_INFO.CARD_Attribute Attribute { get; set; }
+        public CARDS_INFO.CARD_Type Type { get; set; }
 
         public BitVector32 First;
         public BitVector32 Second;
@@ -407,7 +431,8 @@ namespace Types
         public static CARDS_INFO.CARD_Type Get_CardTypeFromID(short ID)
         {
             if (Cards.Count == 0)
-                return CARDS_INFO.CARD_Type.Default;
+                return 0;
+
             return Cards.Find(x => x.ID == ID).Type;
         }
 
