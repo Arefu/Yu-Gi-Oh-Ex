@@ -13,7 +13,6 @@ namespace CARD_PackID
             while (Reader.BaseStream.Position < Reader.BaseStream.Length)
             {
                 var Bytes = Reader.ReadBytes(16);
-  
 
                 _CardNumbers.Add(Encoding.ASCII.GetString(Bytes));
             }

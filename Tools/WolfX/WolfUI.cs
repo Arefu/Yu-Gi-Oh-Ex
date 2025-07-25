@@ -1,4 +1,3 @@
-using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using WolfX.WolfX.File_Type_UI;
 
@@ -19,10 +18,7 @@ namespace WolfX
             if (Directory.Exists("YGO_2020"))
                 State.Path = new DirectoryInfo("YGO_2020").FullName;
 
-
-
-
-            if (string.IsNullOrEmpty(State.Path) == false)
+            if (string.IsNullOrEmpty(State.Path) == false && WolfX_TabManager.SelectedTab?.Text == "Card Manager")
             {
                 CARDS_BTN_OpenCards_Click(this, new EventArgs());
                 return;
@@ -46,5 +42,6 @@ namespace WolfX
             Config.ShowDialog();
         }
 
+        
     }
 }

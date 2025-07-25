@@ -8,9 +8,9 @@ namespace Types
         public Point ItemPosition { get; set; }
         public int ItemSlide { get; set; }
     }
+
     public static class Animlist
     {
-
         //TODO: Check cropped differences, impliment Slide logic.
         //TODO: Save Implementation.
         public static List<Animlist_Item> Load(String Path, bool Cropped = true)
@@ -33,7 +33,6 @@ namespace Types
 
                     if (Cropped == true)
                     {
-
                     }
                     else
                     {
@@ -54,7 +53,6 @@ namespace Types
 
         public static void Save()
         {
-
         }
     }
 }

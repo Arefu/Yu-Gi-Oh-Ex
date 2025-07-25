@@ -5,7 +5,7 @@
 
 static class CardsThatMakeYouDraw
 {
-	public:
+public:
 
 	struct CardsWithDrawCount
 	{

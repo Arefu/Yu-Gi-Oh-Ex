@@ -17,7 +17,6 @@
                 return;
             }
 
-
             using var Kana1Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
             using var Kana2Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_", $"CARD_Kana2_"), FileMode.Open, FileAccess.Read));
             using var Kana3Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_", $"CARD_Kana3_"), FileMode.Open, FileAccess.Read));
@@ -42,9 +41,23 @@
             _Kana = Kana;
         }
 
-        public static void Save()
+        public static void Save(char Language)
         {
+            using var Kana1Writer = new BinaryWriter(File.Open($"CARD_Kana1_{Language}.bin", FileMode.Create, FileAccess.Write));
+            using var Kana2Writer = new BinaryWriter(File.Open($"CARD_Kana2_{Language}.bin", FileMode.Create, FileAccess.Write));
+            using var Kana3Writer = new BinaryWriter(File.Open($"CARD_Kana3_{Language}.bin", FileMode.Create, FileAccess.Write));
 
+            foreach (var combined in _Kana)
+            {
+                string kana1 = combined.Length >= 2 ? combined.Substring(0, 2) : combined.PadRight(2, '\0');
+                string kana2 = combined.Length >= 4 ? combined.Substring(2, 2) : combined.Length > 2 ? combined.Substring(2).PadRight(2, '\0') : "\0\0";
+                string kana3 = combined.Length >= 6 ? combined.Substring(4, 2) : combined.Length > 4 ? combined.Substring(4).PadRight(2, '\0') : "\0\0";
+
+                Kana1Writer.Write(kana1.ToCharArray());
+                Kana2Writer.Write(kana2.ToCharArray());
+                Kana3Writer.Write(kana3.ToCharArray());
+            }
         }
+
     }
 }

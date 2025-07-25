@@ -1,6 +1,4 @@
-﻿using PACKDATA;
-using System.Diagnostics;
-using Types;
+﻿using Types;
 using WolfX.WolfX.File_Type_UI;
 
 namespace WolfX
@@ -74,6 +72,7 @@ namespace WolfX
             PACKDATA.PACKDATA._NumberOfCommonCards = (short)PACKDATA_LV_CommonCards.Items.Count;
             PACKDATA.PACKDATA._NumberOfRareCards = (short)PACKDATA_LV_RareCards.Items.Count;
         }
+
         private void PACKDATA_BTN_AddCards_Click(object sender, EventArgs e)
         {
             if (CardShop_CB_UseSimpleAdd.Checked)
@@ -113,7 +112,6 @@ namespace WolfX
                             PACKDATA_LV_RareCards.Items.Clear();
                             PACKDATA_LV_RareCards.Items.AddRange(sortedItems.ToArray());
 
-
                             PACKDATA.PACKDATA._NumberOfRareCards = (short)PACKDATA_LV_RareCards.Items.Count;
                         }
                     }
@@ -121,7 +119,7 @@ namespace WolfX
             }
             else
             {
-                if(string.IsNullOrEmpty(State.Path))
+                if (string.IsNullOrEmpty(State.Path))
                 {
                     MessageBox.Show("Please Load Game", "Error - State not Set", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -129,16 +127,17 @@ namespace WolfX
                 var CardAdder = new CardAdder();
                 var Result = CardAdder.ShowDialog();
 
-                if(Result == DialogResult.OK)
+                if (Result == DialogResult.OK)
                 {
-
                 }
             }
         }
+
         private void PACKDATA_BTN_SavePackDEF_Click(object sender, EventArgs e)
         {
             PACKDATA.PACKDATA.Save();
         }
+
         private void PACKDATA_CB_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
             if (PACKDATA_CB_UseCardID.Checked == false)
@@ -162,23 +161,23 @@ namespace WolfX
                 }
             }
         }
+
         private void PACKDATA_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
         {
-
             if (PACKDATA_CB_LoadImages.Checked)
             {
                 if (State.Path != null)
                     ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
                 else
                     ZIB.Load(Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib"));
-                    
+
                 PACKDATA_LV_CommonCards.View = View.LargeIcon;
                 PACKDATA_LV_RareCards.View = View.LargeIcon;
             }
             else
             {
                 PACKDATA_LV_CommonCards.View = View.List;
-                PACKDATA_LV_RareCards.View = View.List  ;
+                PACKDATA_LV_RareCards.View = View.List;
             }
         }
     }

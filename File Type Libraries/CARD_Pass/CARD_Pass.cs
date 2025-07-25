@@ -13,7 +13,7 @@
 
             using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
 
-            while(Reader.BaseStream.Position != Reader.BaseStream.Length)
+            while (Reader.BaseStream.Position != Reader.BaseStream.Length)
             {
                 Passwords.Add(Reader.ReadInt32());
             }
@@ -26,7 +26,7 @@
         {
             using var Writer = new BinaryWriter(File.Create("CARD_Pass.bin"));
 
-            foreach(var Password in _Passwords)
+            foreach (var Password in _Passwords)
             {
                 Writer.Write(Password);
             }

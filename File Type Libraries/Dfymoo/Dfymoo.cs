@@ -4,7 +4,6 @@ namespace Types
 {
     public class Dfymoo_Item
     {
-
         public string ItemName { get; set; }
 
         public Point ItemStartPoint { get; set; }
@@ -88,6 +87,5 @@ namespace Types
                 }
             }
         }
-
     }
 }

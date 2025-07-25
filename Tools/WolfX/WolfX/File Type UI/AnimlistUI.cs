@@ -6,17 +6,14 @@
         {
             this.SceneLocation = SceneLocation;
             InitializeComponent();
-
         }
 
         public void PrepareScene()
         {
-
         }
 
         private void ANIMS_Picture_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

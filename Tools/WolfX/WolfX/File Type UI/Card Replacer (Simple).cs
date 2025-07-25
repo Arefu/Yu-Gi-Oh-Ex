@@ -40,6 +40,5 @@ namespace WolfX.WolfX.File_Type_UI
 
             this.DialogResult = DialogResult.OK;
         }
-
     }
 }

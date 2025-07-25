@@ -11,10 +11,10 @@ namespace Effects_Functions
 static class Effects
 {
 public:
-	/// <summary>	
-	/// 	Will find the amount of cards to draw for the card ID. 
+	/// <summary>
+	/// 	Will find the amount of cards to draw for the card ID.
 	///		h = Hook function.
-	/// </summary>	
+	/// </summary>
 	/// <param name="Card">Card ID</param>
 	/// <param name="Default">If true, will use the default amount of cards to draw for the card ID. If false, you *SHOULD* have a Manifest.json for FindDrawAmountForCard..</param>
 	static void h_FindDrawAmountForCard(unsigned short*);
@@ -33,9 +33,8 @@ public:
 	/// <param name="Tag">The tag for the current thing in the Manifest.json</param>
 	static std::map<std::string, short> u_Populate_FromManifest_ForKVP(std::string);
 
-    private:
-	static nlohmann::json u_FindAndSelectManfestFile(std::string );
+private:
+	static nlohmann::json u_FindAndSelectManfestFile(std::string);
 
 	static std::map<std::string, short> _DrawAmountsForCards;
-
 };

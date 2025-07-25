@@ -13,7 +13,6 @@ using namespace nlohmann;
 
 std::map<std::string, short> Effects::_DrawAmountsForCards;
 
-
 void Effects::h_FindDrawAmountForCard(unsigned short* Card)
 {
 	std::cout << "[Yu-Gi-Oh-Effects]: Attempting To Find Card Draw For " << *Card << std::endl;
@@ -32,8 +31,6 @@ void Effects::h_FindDrawAmountForCard(unsigned short* Card)
 		std::cout << "[Yu-Gi-Oh-Effects]: Failed To Find Card ID: " << Card << std::endl;
 		return reinterpret_cast<__int64 (__fastcall*)(unsigned __int16* a1)>(Effects_Functions::o_GetNumberOfCardsToDraw)(Card);
 	}*/
-
-	
 }
 
 std::map<short, short> Effects::u_Populate_DrawAmountsForCards()
@@ -48,7 +45,7 @@ std::map<short, short> Effects::u_Populate_DrawAmountsForCards()
 		std::cout << "[Yu-Gi-Oh-Effects]: Found Card ID: " << _Card << " With Draw Amount: " << _Count << std::endl;
 		//Cards.emplace(_Card, _Count);
 	}
-	
+
 	return Cards;
 }
 
@@ -65,9 +62,9 @@ std::map<std::string, short> Effects::u_Populate_FromManifest_ForKVP(std::string
 				try
 				{
 					std::string K = key;
-				//	short V = value;
+					//	short V = value;
 
-				//	std::cout << "[Yu-Gi-Oh-Effects]: Adding Card ID: " << K << " With Draw Amount: " << V << std::endl;
+					//	std::cout << "[Yu-Gi-Oh-Effects]: Adding Card ID: " << K << " With Draw Amount: " << V << std::endl;
 				}
 				catch (const std::exception& e)
 				{
@@ -99,10 +96,9 @@ json Effects::u_FindAndSelectManfestFile(std::string Tag)
 				std::string jsonPath = Config::Get_WorkingDirectory() + "\\" + folderName + "\\*.json";
 				HANDLE hJsonFind = FindFirstFileA(jsonPath.c_str(), &findFileData);
 				if (hJsonFind != INVALID_HANDLE_VALUE) {
-
 					std::ifstream f(Config::Get_WorkingDirectory() + folderName + "\\" + findFileData.cFileName);
 					json Manifest = json::parse(f);
-					
+
 					if (Manifest["Tag"] == Tag)
 					{
 						std::cout << "[Yu-Gi-Oh-Effects]: Found & Loading: " << findFileData.cFileName << std::endl;

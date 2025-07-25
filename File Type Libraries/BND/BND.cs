@@ -15,9 +15,11 @@ namespace Types
             this.String = String;
         }
     }
+
     public static class BND
     {
         internal static string _Path { get; set; }
+
         private static uint SwapBytes(uint Number)
         {
             Number = (Number >> 16) | (Number << 16);
@@ -63,8 +65,6 @@ namespace Types
                 Strings.Add(new BNDString(Start, Length, String));
 
                 Reader.BaseStream.Position = CurrentPosition;
-
-
             } while ((Reader.BaseStream.Position < BreakOut));
             return Strings;
         }
@@ -89,9 +89,7 @@ namespace Types
                 {
                     Writer.Write(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0"));
                 }
-
             }
         }
-
     }
 }

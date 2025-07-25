@@ -248,8 +248,8 @@ IM_MSVC_RUNTIME_CHECKS_OFF
 struct ImVec2
 {
 	float                                   x, y;
-	constexpr ImVec2() : x(0.0f), y(0.0f) { }
-	constexpr ImVec2(float _x, float _y) : x(_x), y(_y) { }
+	constexpr ImVec2() : x(0.0f), y(0.0f) {}
+	constexpr ImVec2(float _x, float _y) : x(_x), y(_y) {}
 	float  operator[] (size_t idx) const { IM_ASSERT(idx <= 1); return (&x)[idx]; }    // We very rarely use this [] operator, the assert overhead is fine.
 	float& operator[] (size_t idx) { IM_ASSERT(idx <= 1); return (&x)[idx]; }    // We very rarely use this [] operator, the assert overhead is fine.
 #ifdef IM_VEC2_CLASS_EXTRA
@@ -261,8 +261,8 @@ struct ImVec2
 struct ImVec4
 {
 	float                                                     x, y, z, w;
-	constexpr ImVec4() : x(0.0f), y(0.0f), z(0.0f), w(0.0f) { }
-	constexpr ImVec4(float _x, float _y, float _z, float _w) : x(_x), y(_y), z(_z), w(_w) { }
+	constexpr ImVec4() : x(0.0f), y(0.0f), z(0.0f), w(0.0f) {}
+	constexpr ImVec4(float _x, float _y, float _z, float _w) : x(_x), y(_y), z(_z), w(_w) {}
 #ifdef IM_VEC4_CLASS_EXTRA
 	IM_VEC4_CLASS_EXTRA     // Define additional constructors and implicit cast operators in imconfig.h to convert back and forth between your math types and ImVec4.
 #endif
@@ -2202,7 +2202,7 @@ struct ImGuiTextBuffer
 	ImVector<char>      Buf;
 	IMGUI_API static char EmptyString[1];
 
-	ImGuiTextBuffer() { }
+	ImGuiTextBuffer() {}
 	inline char         operator[](int i) const { IM_ASSERT(Buf.Data != NULL); return Buf.Data[i]; }
 	const char* begin() const { return Buf.Data ? &Buf.front() : EmptyString; }
 	const char* end() const { return Buf.Data ? &Buf.back() : EmptyString; }   // Buf is zero-terminated, so end() will point on the zero-terminator
@@ -2342,8 +2342,8 @@ struct ImColor
 {
 	ImVec4          Value;
 
-	constexpr ImColor() { }
-	constexpr ImColor(float r, float g, float b, float a = 1.0f) : Value(r, g, b, a) { }
+	constexpr ImColor() {}
+	constexpr ImColor(float r, float g, float b, float a = 1.0f) : Value(r, g, b, a) {}
 	constexpr ImColor(const ImVec4& col) : Value(col) {}
 	ImColor(int r, int g, int b, int a = 255) { float sc = 1.0f / 255.0f; Value.x = (float)r * sc; Value.y = (float)g * sc; Value.z = (float)b * sc; Value.w = (float)a * sc; }
 	ImColor(ImU32 rgba) { float sc = 1.0f / 255.0f; Value.x = (float)((rgba >> IM_COL32_R_SHIFT) & 0xFF) * sc; Value.y = (float)((rgba >> IM_COL32_G_SHIFT) & 0xFF) * sc; Value.z = (float)((rgba >> IM_COL32_B_SHIFT) & 0xFF) * sc; Value.w = (float)((rgba >> IM_COL32_A_SHIFT) & 0xFF) * sc; }

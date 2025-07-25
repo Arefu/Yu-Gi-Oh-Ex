@@ -1,4 +1,3 @@
-
 #include <d3d11.h>
 #include <detours.h>
 #include <dxgi.h>
@@ -84,7 +83,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 	ImGui_ImplWin32_NewFrame();
 	ImGui_ImplDX11_NewFrame();
 	ImGui::NewFrame();
-	
+
 	if (bShowMenu)
 	{
 		ImGui::Begin("Yu-Gi-Oh!", &bShowMenu);
@@ -97,9 +96,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		ImGui::BeginGroup();
 		if (ImGui::CollapsingHeader("Player One"))
 		{
-			
-
-			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());	
+			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
 			if (ImGui::TreeNodeEx("Cards in Hand"))
 			{
 				for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
@@ -141,14 +138,12 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 		}
 		if (ImGui::CollapsingHeader("Player Two"))
 		{
-			
 		}
 
 		if (ImGui::CollapsingHeader("Deck Management"))
 		{
 			if (ImGui::Button("Export Decks"))
 			{
-				
 			}
 		}
 
@@ -158,13 +153,12 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
 		ImGui::BeginGroup();
 
-		if(ImGui::CollapsingHeader("Addresses - Misc"))
+		if (ImGui::CollapsingHeader("Addresses - Misc"))
 		{
 			ImGui::Text("Player One: 0x%X", PLAYER_ONE);
 
 			ImGui::Text("g_bIsGameTutorial: 0x%X", YuGiOh::Get_IsDuelTutorial());
 			ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
-		
 		}
 
 		if (ImGui::CollapsingHeader("Runtime Options", ImGuiTreeNodeFlags_DefaultOpen))
@@ -182,14 +176,13 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			}
 		}
 
-		if (ImGui::CollapsingHeader("Debug Mode",  ImGuiTreeNodeFlags_DefaultOpen))
+		if (ImGui::CollapsingHeader("Debug Mode", ImGuiTreeNodeFlags_DefaultOpen))
 		{
 			if (ImGui::Button("Load Plugins"))
 			{
 				if (PluginManager::_IsLoaded == false) {
-
 					PluginManager::Load();
-					
+
 					PluginManager::ProcessConfigForPlugin();
 					PluginManager::ProcessDetours();
 				}
@@ -202,7 +195,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
 		PluginManager::ProcessGui();
 	}
-
 
 	if (bShowDemo)
 	{
@@ -217,7 +209,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
 	return reinterpret_cast<HRESULT(__stdcall*)(IDXGISwapChain*, UINT, UINT)>(nPresent)(pSwapChain, SyncInterval, Flags);
 }
-
 
 HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, HMODULE Software, UINT Flags, const D3D_FEATURE_LEVEL* pFeatureLevels, UINT FeatureLevels, UINT SDKVersion, const DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext)
 {
@@ -250,7 +241,6 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
 	ImGui_ImplWin32_Init(sd.OutputWindow);
 	ImGui_ImplDX11_Init(pDevice, pContext);
 
-
 	ID3D11Texture2D* pBackBuffer = nullptr;
 
 	pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
@@ -279,7 +269,7 @@ extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
-{	
+{
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
@@ -291,15 +281,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
-		
+
 		DetourTransactionCommit();
 		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
 		break;
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:
 	case DLL_PROCESS_DETACH:
-	
-	
+
 		break;
 	}
 	return TRUE;

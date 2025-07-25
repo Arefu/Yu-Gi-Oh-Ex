@@ -89,6 +89,7 @@
             _SemiLimited.Remove(CardID);
             _SemiLimitedCount--;
         }
+
         public static void Remove_CardFromForbidden(ushort CardID)
         {
             _Forbidden.Remove(CardID);
@@ -128,7 +129,6 @@
             _Writer.Close();
         }
 
-
         public static void Add_CardToSemiLimited(ushort CardID)
         {
             _SemiLimited.Add(CardID);
@@ -146,6 +146,5 @@
             _Limited.Add(CardID);
             _LimitedCount++;
         }
-
     }
 }
