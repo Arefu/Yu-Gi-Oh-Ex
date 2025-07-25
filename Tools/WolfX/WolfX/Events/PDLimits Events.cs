@@ -5,7 +5,7 @@ namespace WolfX
 {
     public partial class WolfUI
     {
-        ImageList Images = new ImageList();
+        private ImageList Images = new ImageList();
 
         private void PDL_BTN_OpenPDL_Click(object sender, EventArgs e)
         {
@@ -86,10 +86,12 @@ namespace WolfX
             PDL_BTN_SavePDL.Enabled = true;
             PDL_BTN_AddCardToList.Enabled = true;
         }
+
         private void PDL_BTN_SavePDL_Click(object sender, EventArgs e)
         {
             PDLimits.PDLimits.Save();
         }
+
         private void PDL_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
         {
             if (PDL_CB_LoadImages.Checked)
@@ -116,6 +118,7 @@ namespace WolfX
                 PDL_LV_SemiLimitedCards.View = View.List;
             }
         }
+
         private void PDL_CB_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
             if (PDL_CB_UseCardID.Checked == false)
@@ -139,6 +142,7 @@ namespace WolfX
                 }
             }
         }
+
         private void PDL_LV_ItemSelectionChanged(object sender, EventArgs e)
         {
             if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0 || PDL_LV_LimitedCards.SelectedItems.Count > 0 || PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
@@ -146,6 +150,7 @@ namespace WolfX
             else
                 PDL_BTN_RemoveCardFromList.Enabled = false;
         }
+
         private void PDL_BTN_RemoveCardFromList_Click(object sender, EventArgs e)
         {
             if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0)
@@ -176,6 +181,7 @@ namespace WolfX
                 }
             }
         }
+
         private void PDL_BTN_AddCardToList_Click(object sender, EventArgs e)
         {
             if (PDL_CB_IsUsingSimpleAddBox.Checked)
@@ -203,6 +209,7 @@ namespace WolfX
 
                             PDL_LBL_NumOfForbidden.Text = SimpleAdder.CardIDs.Count.ToString();
                             break;
+
                         case "Semi-Limited":
                             foreach (var Card in SimpleAdder.CardIDs)
                             {
@@ -219,6 +226,7 @@ namespace WolfX
 
                             PDL_LBL_NumOfSemiLimited.Text = SimpleAdder.CardIDs.Count.ToString();
                             break;
+
                         case "Limited":
                             foreach (var Card in SimpleAdder.CardIDs)
                             {
@@ -240,9 +248,7 @@ namespace WolfX
             }
             else
             {
-
             }
         }
     }
-
 }

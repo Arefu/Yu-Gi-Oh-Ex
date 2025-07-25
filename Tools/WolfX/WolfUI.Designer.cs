@@ -56,7 +56,7 @@ namespace WolfX
             groupBox2 = new GroupBox();
             CARDS_Nud_CardLevel = new NumericUpDown();
             CARDS_CB_CardAttribute = new ComboBox();
-            CARDS_CB_CardTypes = new ComboBox();
+            CARDS_CB_CardKind = new ComboBox();
             CB_CardLevel = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -504,7 +504,7 @@ namespace WolfX
             // 
             groupBox2.Controls.Add(CARDS_Nud_CardLevel);
             groupBox2.Controls.Add(CARDS_CB_CardAttribute);
-            groupBox2.Controls.Add(CARDS_CB_CardTypes);
+            groupBox2.Controls.Add(CARDS_CB_CardKind);
             groupBox2.Controls.Add(CB_CardLevel);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
@@ -533,14 +533,14 @@ namespace WolfX
             CARDS_CB_CardAttribute.TabIndex = 10;
             CARDS_CB_CardAttribute.SelectedIndexChanged += CARDS_CB_CardAttribute_SelectedIndexChanged;
             // 
-            // CARDS_CB_CardTypes
+            // CARDS_CB_CardKind
             // 
-            CARDS_CB_CardTypes.FormattingEnabled = true;
-            CARDS_CB_CardTypes.Location = new Point(6, 43);
-            CARDS_CB_CardTypes.Name = "CARDS_CB_CardTypes";
-            CARDS_CB_CardTypes.Size = new Size(128, 23);
-            CARDS_CB_CardTypes.TabIndex = 9;
-            CARDS_CB_CardTypes.SelectedIndexChanged += CARDS_CB_CardTypes_SelectedIndexChanged;
+            CARDS_CB_CardKind.FormattingEnabled = true;
+            CARDS_CB_CardKind.Location = new Point(6, 43);
+            CARDS_CB_CardKind.Name = "CARDS_CB_CardKind";
+            CARDS_CB_CardKind.Size = new Size(128, 23);
+            CARDS_CB_CardKind.TabIndex = 9;
+            CARDS_CB_CardKind.SelectedIndexChanged += CARDS_CB_CardTypes_SelectedIndexChanged;
             // 
             // CB_CardLevel
             // 
@@ -594,6 +594,7 @@ namespace WolfX
             CARDS_TB_CardName.Name = "CARDS_TB_CardName";
             CARDS_TB_CardName.Size = new Size(304, 23);
             CARDS_TB_CardName.TabIndex = 7;
+            CARDS_TB_CardName.TextChanged += CARDS_TB_CardName_TextChanged;
             // 
             // CARDS_TB_CardDef
             // 
@@ -2422,7 +2423,7 @@ namespace WolfX
         public TextBox CARDS_TB_CardAtk;
         public ComboBox CARDS_CB_CardAttribute;
         public NumericUpDown CARDS_Nud_CardLevel;
-        public ComboBox CARDS_CB_CardTypes;
+        public ComboBox CARDS_CB_CardKind;
         private GroupBox groupBox6;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Extract;
         private ToolStripMenuItem WOLFUI_TOOLITEM_Pack;

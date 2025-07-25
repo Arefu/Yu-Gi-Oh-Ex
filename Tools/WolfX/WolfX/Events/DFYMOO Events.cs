@@ -1,5 +1,4 @@
-﻿
-using System.IO;
+﻿using System.IO;
 using Types;
 using WolfX.Types;
 
@@ -38,6 +37,7 @@ namespace WolfX
 
             DFY_Editor.Show();
         }
+
         private void DFY_BTN_Save_Click(object sender, EventArgs e)
         {
             if (DFY_Editor == null)
@@ -47,6 +47,7 @@ namespace WolfX
             }
             Dfymoo.Save(Path.GetFileName(DFY_Editor._PicturePath), DFY_Editor.DFY_Items, DFY_Editor.DFY_Picture.Size);
         }
+
         private void DFYMOO_ItemList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             if (!e.IsSelected)
@@ -77,6 +78,7 @@ namespace WolfX
 
             DFY_Editor.DFY_Picture.Refresh();
         }
+
         private void DFY_NUD_X_ValueChanged(object sender, EventArgs e)
         {
             if (DFY_Editor == null)

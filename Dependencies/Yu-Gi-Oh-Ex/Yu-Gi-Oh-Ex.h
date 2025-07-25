@@ -9,7 +9,6 @@ using std::vector;
 #define PLAYER_ONE 0x143497C40
 #define PLAYER_TWO 0x1434989D4
 
-
 namespace YuGiOhEx
 {
 	static bool& g_bIsQuitReady = *(bool*)0x14332A391;
@@ -28,7 +27,6 @@ namespace YuGiOhEx
 	static __int64 SetLP = 0x1407696E0;
 }
 
-
 class Player
 {
 private:
@@ -37,7 +35,7 @@ private:
 public:
 
 	Player(__int64  Player);
-	
+
 	INT Get_NumberOfCardsInHand();
 	SHORT Get_CardInHand(INT Slot);
 	vector<SHORT> Get_CardsInHand();
@@ -58,7 +56,6 @@ public:
 	SHORT Get_CardInDiscardPile(INT Slot);
 	vector<SHORT> Get_CardsInDiscardPile();
 
-
 	SHORT Get_MonsterInSlot(INT Slot);
 };
 
@@ -68,7 +65,6 @@ private:
 
 public:
 	static BYTE Get_IsDuelTutorial();
-
 
 	static INT Get_SelectedSlotOnDuelMat();
 };

@@ -22,14 +22,15 @@ void PluginManager::Load()
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto SetImGuiContextForPlugin = GetProcAddress(hModule, "SetContext");
 		if (SetImGuiContextForPlugin)
-		reinterpret_cast<void(__stdcall*)(ImGuiContext*)>(SetImGuiContextForPlugin)(ImGui::GetCurrentContext());
+			reinterpret_cast<void(__stdcall*)(ImGuiContext*)>(SetImGuiContextForPlugin)(ImGui::GetCurrentContext());
 	}
 
 	_IsLoaded = true;
 }
 
 void PluginManager::DelayLoad()
-{;
+{
+	;
 	std::this_thread::sleep_for(std::chrono::milliseconds(100)); //Wait just a smidge for Windows to do Windows things.
 	while (YuGiOhEx::g_bOnPageFirst == true)
 	{
@@ -55,11 +56,11 @@ void PluginManager::ProcessGui()
 	{
 		auto PluginPath = new CHAR[MAX_PATH];
 		GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginPath, MAX_PATH, ".\\Config.ini");
-		
+
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto DrawImGui = GetProcAddress(hModule, "ProcessWindow");
 		if (DrawImGui)
-		reinterpret_cast<void(__stdcall*)()>(DrawImGui)();
+			reinterpret_cast<void(__stdcall*)()>(DrawImGui)();
 	}
 }
 
@@ -77,7 +78,7 @@ void PluginManager::ProcessDetours()
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto ProcessDetours = GetProcAddress(hModule, "ProcessDetours");
 		if (ProcessDetours)
-		reinterpret_cast<void(__stdcall*)()>(ProcessDetours)();
+			reinterpret_cast<void(__stdcall*)()>(ProcessDetours)();
 
 		std::cout << "Processing Detours for: " << Plugin << std::endl;
 	}
@@ -95,7 +96,7 @@ void PluginManager::ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lPar
 		auto hModule = LoadLibraryA((std::string(PluginPath) + "\\YGO-Ex\\" + Plugin).c_str());
 		auto ProcessInput = GetProcAddress(hModule, "ProcessInput");
 		if (ProcessInput)
-		reinterpret_cast<void(__stdcall*)(HWND, UINT, WPARAM, LPARAM)>(ProcessInput)(hWnd, msg, wParam, lParam);
+			reinterpret_cast<void(__stdcall*)(HWND, UINT, WPARAM, LPARAM)>(ProcessInput)(hWnd, msg, wParam, lParam);
 	}
 }
 
@@ -122,7 +123,7 @@ std::vector<std::string> PluginManager::ScanForPlugins()
 
 	auto PluginPath = new CHAR[MAX_PATH];
 	GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginPath, MAX_PATH, ".\\Config.ini");
-	
+
 	//Scan for all DLLs in the YGO-Ex subfolder of gGamePath
 	WIN32_FIND_DATAA FindFileData;
 	HANDLE hFind = FindFirstFileA((std::string(PluginPath) + "\\YGO-Ex\\*.dll").c_str(), &FindFileData);
@@ -135,10 +136,8 @@ std::vector<std::string> PluginManager::ScanForPlugins()
 	do
 	{
 		DLLs.push_back(FindFileData.cFileName);
-
 	} while (FindNextFileA(hFind, &FindFileData) != 0);
 	FindClose(hFind);
 
 	return DLLs;
-
 }

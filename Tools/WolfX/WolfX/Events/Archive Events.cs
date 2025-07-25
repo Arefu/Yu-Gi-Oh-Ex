@@ -42,7 +42,6 @@ namespace WolfX
                     ARCHIVE_LV_ArchiveItems.LargeImageList = null;
                 }
 
-
                 foreach (var Item in Items)
                 {
                     if (ARCHIVE_CB_ShowPreviewImage.Checked)

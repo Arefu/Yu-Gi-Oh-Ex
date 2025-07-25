@@ -77,7 +77,6 @@ namespace WolfX
 
                         CARDS_Cards.LoadCardInfo();
                         CARDS_Cards.LoadCardProps();
-
                     }
                 }
             }
@@ -139,7 +138,6 @@ namespace WolfX
                 var SimpleAdder = new SimpleCardAdd();
                 var Result = SimpleAdder.ShowDialog();
             }
-
         }
 
         private void YDC_BTN_RemoveCard_Click(object sender, EventArgs e)

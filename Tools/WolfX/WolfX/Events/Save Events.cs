@@ -1,8 +1,4 @@
-﻿using System.IO;
-using Types;
-using WolfX.WolfX.File_Type_UI;
-
-using savegame;
+﻿using savegame;
 
 namespace WolfX
 {
@@ -13,7 +9,6 @@ namespace WolfX
             using var SaveGameFile = new OpenFileDialog();
             SaveGameFile.Title = "Select \"savegame.dat\"";
 
-            
             if (SaveGameFile.ShowDialog() != DialogResult.OK)
                 MessageBox.Show("Please \"savegame.dat\"", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

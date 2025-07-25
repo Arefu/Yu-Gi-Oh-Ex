@@ -18,7 +18,7 @@ public:
 	/// <param name="Path">The location to check</param>
 	/// <returns>TRUE if the EXE is there.</returns>
 	static BOOL Check(LPSTR Path);
-	
+
 	/// <summary>
 	/// Starts the game
 	/// </summary>
@@ -56,7 +56,6 @@ public:
 	/// </summary>
 	static void CheckForLoadOrder();
 
-
 	/// <summary>
 	/// The plugins to load, formatted for Detours.
 	/// </summary>
@@ -68,5 +67,4 @@ private:
 	static TCHAR gGamePath[MAX_PATH];
 	static TCHAR gGameLocation[MAX_PATH];
 	static std::vector<std::string> gDlls;
-	
 };

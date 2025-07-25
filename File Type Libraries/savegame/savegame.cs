@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace savegame
+﻿namespace savegame
 {
     public static class SaveGame
     {
@@ -44,7 +42,6 @@ namespace savegame
         {
             _Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
             Decks = new List<Deck_Entry>();
-
         }
 
         public static void Load_Decks()
@@ -62,7 +59,6 @@ namespace savegame
                 Cards_In_Deck.Clear();
                 Cards_In_Extra_Deck.Clear();
                 Cards_In_Side_Deck.Clear();
-
 
                 var Deck_Name = System.Text.Encoding.Unicode.GetString(_Reader.ReadBytes(Save_Gmae_Constants.DECK_NAME_LENGTH));
 

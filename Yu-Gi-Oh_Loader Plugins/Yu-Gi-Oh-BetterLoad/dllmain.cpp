@@ -25,7 +25,7 @@ __int64 __fastcall _hLoadArchive(__int64* Struct, const char* Archive)
 //The game doesn't save the HANDLE, we're just going to return ourselves.
 static FARPROC pCreateMutex = GetProcAddress(GetModuleHandle(L"kernel32.dll"), "CreateMutexW");
 HANDLE WINAPI HookCreateMutex(LPSECURITY_ATTRIBUTES lpMutexAttributes, BOOL bInitialOwner, LPCWSTR lpName)
-{	
+{
 	return GetModuleHandle(NULL);
 }
 
@@ -40,28 +40,26 @@ fread_t original_fread = nullptr;
 FILE* __cdecl hooked_fopen(const char* filename, const char* mode)
 {
 	Logger::WriteLog("Requested file (fopen): " + std::string(filename), MODULE_NAME, 0);
-	
+
 	return original_fopen(filename, mode);
 }
 
 errno_t __cdecl hooked_fopen_s(FILE** file, const char* filename, const char* mode)
 {
-Logger::WriteLog("Requested file (fopen_s): " + std::string(filename), MODULE_NAME, 0);
+	Logger::WriteLog("Requested file (fopen_s): " + std::string(filename), MODULE_NAME, 0);
 	return original_fopen_s(file, filename, mode);
 }
 
 size_t __cdecl hooked_fread(void* ptr, size_t size, size_t count, FILE* stream)
 {
 	// Just log and call original  int fd = _fileno(file);
-	Logger::WriteLog(std::format("Reading From {}", count),MODULE_NAME,0);
+	Logger::WriteLog(std::format("Reading From {}", count), MODULE_NAME, 0);
 	return original_fread(ptr, size, count, stream);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
 	Logger::SetupLogger();
-
-
 
 	switch (ul_reason_for_call)
 	{
@@ -72,21 +70,20 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		original_fread = (fread_t)GetProcAddress(stdio, "fread");
 
 		GetPrivateProfileStringA("Yu-Gi-Oh-BetterLoad", "Archive", "YGO_2020", _Archive, 255, ".\\Config.ini");
-		
+
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
 		DetourAttach(&(PVOID&)LoadArchive, _hLoadArchive);
 		DetourAttach(&(PVOID&)original_fopen, hooked_fopen);
 		DetourAttach(&(PVOID&)original_fopen_s, hooked_fopen_s);
-		
+
 		if (GetPrivateProfileIntA("Yu-Gi-Oh-BetterLoad", "AllowMultiInstance", 0, ".\\Config.ini") == 1)
 			DetourAttach(&(PVOID&)pCreateMutex, HookCreateMutex);
-		
+
 		DetourTransactionCommit();
 
 		break;
 	}
 	return TRUE;
 }
-

@@ -2,11 +2,9 @@
 
 #include "Yu-Gi-Oh-Ex.h"
 
-
 Player::Player(__int64   Player)
 {
 	_Player = Player;
-
 }
 
 INT Player::Get_NumberOfCardsInHand()
@@ -71,7 +69,7 @@ SHORT Player::Get_CardInGraveYard(INT Slot)
 		SetLastError(ERROR_INDEX_OUT_OF_BOUNDS);
 		return 0;
 	}
-	
+
 	return *(SHORT*)(_Player + 0x7B4 + (Slot * 0x4));
 }
 
@@ -125,7 +123,6 @@ SHORT Player::Get_MonsterInSlot(int Slot)
 
 	return *(SHORT*)(_Player + 0x4C + (Slot * 0x8));
 }
-
 
 BYTE YuGiOh::Get_IsDuelTutorial()
 {
