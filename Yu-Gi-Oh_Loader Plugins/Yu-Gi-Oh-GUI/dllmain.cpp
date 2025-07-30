@@ -77,7 +77,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 	return CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
 }
-
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
 	ImGui_ImplWin32_NewFrame();
@@ -101,7 +100,19 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 			{
 				for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
 				{
-					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInHand(i));
+					auto Get_CardNameFromID = reinterpret_cast<LPCTSTR(__fastcall*)(short)>(0x14076D0F0);
+					auto Get_CardDescFromID = reinterpret_cast<LPCTSTR(__fastcall*)(__int16)>(0x14076D070);
+					LPCTSTR name = Get_CardNameFromID(g_Player1.Get_CardInHand(i));
+					LPCTSTR desc = Get_CardDescFromID(g_Player1.Get_CardInHand(i));
+					ImGui::Text("Card %d: %ls (%d)", i, name,g_Player1.Get_CardInHand(i));
+					if (ImGui::IsItemHovered())
+					{
+						ImGui::BeginTooltip();
+						ImGui::PushTextWrapPos(ImGui::GetFontSize() * 35.0f);
+						ImGui::TextWrapped("%ls", desc);
+						ImGui::PopTextWrapPos();
+						ImGui::EndTooltip();
+					}
 				}
 				ImGui::TreePop();
 			}
