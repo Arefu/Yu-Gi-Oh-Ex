@@ -2,17 +2,21 @@
 
 namespace Types
 {
-    public class ZIB_Item(long Start, long Size, string Name)
+    public class Item(long Start, long Size, string Name)
     {
-        public long Start = Start;
-        public long Size = Size;
-        public string Name = Name;
+        private long _Start = Start;
+        private long _Size = Size;
+        private string _Name = Name;
+
+        public long Start { get { return _Start; } set { if (_Start != value) _Start = value; } }
+        public long Size { get { return _Size; } set { if (_Size != value) _Size = value;}}
+        public string Name { get { return _Name; } set { if (_Name != value) _Name = value; } }
     }
 
     public static class ZIB
     {
         public static bool _Loaded = false;
-        public static readonly List<ZIB_Item> _Items = [];
+        public static readonly List<Item> _Items = [];
         public static bool _ImageArchive = false;
         public static string _Archive = "";
 
@@ -21,7 +25,7 @@ namespace Types
         private static BinaryReader Reader;
         private static BinaryWriter Writer;
 
-        public static List<ZIB_Item> Load(string Archive)
+        public static List<Item> Load(string Archive)
         {
             if (Archive == String.Empty)
                 return null;
@@ -45,7 +49,7 @@ namespace Types
                 else
                     _ImageArchive = false;
 
-                _Items.Add(new ZIB_Item(FileStart, FileSize, FileName));
+                _Items.Add(new Item(FileStart, FileSize, FileName));
             }
 
             _Loaded = true;
