@@ -58,6 +58,5 @@
                 Kana3Writer.Write(kana3.ToCharArray());
             }
         }
-
     }
 }
