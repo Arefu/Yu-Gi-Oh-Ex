@@ -1,5 +1,4 @@
 ﻿using System.Collections.Specialized;
-using System.Diagnostics;
 using System.Text;
 
 namespace Types
@@ -20,9 +19,10 @@ namespace Types
         {
             //This one is special and seemingly referenced within code via card ID.
             //Can also mean "Normal"
-            Default= 0,
+            Default = 0,
+
             Dragon = 1,
-            Zombie =2,
+            Zombie = 2,
             Fiend = 3,
             Pyro = 4,
             SeaSerpent = 5,
@@ -33,7 +33,7 @@ namespace Types
             Insect = 10,
             Beast = 11,
             BeastWarrior = 12,
-            Plant = 13, 
+            Plant = 13,
             Aqua = 14,
             Warrior = 15,
             WingedBeast = 16,
@@ -41,7 +41,7 @@ namespace Types
             Spellcaster = 18,
             Thunder = 19,
             Reptile = 20,
-            Psychic =21,
+            Psychic = 21,
             Wyrm = 22,
             Cyberse = 23,
             DivineBeast = 24,
@@ -292,7 +292,6 @@ namespace Types
                 }
                 catch
                 {
-                    Debug.WriteLine("Bad card");
                     break;
                 }
             }

@@ -104,7 +104,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 					auto Get_CardDescFromID = reinterpret_cast<LPCTSTR(__fastcall*)(__int16)>(0x14076D070);
 					LPCTSTR name = Get_CardNameFromID(g_Player1.Get_CardInHand(i));
 					LPCTSTR desc = Get_CardDescFromID(g_Player1.Get_CardInHand(i));
-					ImGui::Text("Card %d: %ls (%d)", i, name,g_Player1.Get_CardInHand(i));
+					ImGui::Text("Card %d: %ls (%d)", i, name, g_Player1.Get_CardInHand(i));
 					if (ImGui::IsItemHovered())
 					{
 						ImGui::BeginTooltip();
