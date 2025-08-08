@@ -18,9 +18,12 @@ namespace WolfX
             if (Directory.Exists("YGO_2020"))
                 State.Path = new DirectoryInfo("YGO_2020").FullName;
 
+            var Source = sender as Button;
             if (string.IsNullOrEmpty(State.Path) == false && WolfX_TabManager.SelectedTab?.Text == "Card Manager")
             {
-                CARDS_BTN_OpenCards_Click(this, new EventArgs());
+                if (Source.Text != "Open Cards")
+                    CARDS_BTN_OpenCards_Click(this, new EventArgs());
+
                 return;
             }
             else
@@ -41,7 +44,5 @@ namespace WolfX
             var Config = new WolfX.File_Type_UI.Config();
             Config.ShowDialog();
         }
-
-       
     }
 }

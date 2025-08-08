@@ -3,7 +3,9 @@ using CARD_Named;
 using CARD_PackID;
 using CARD_Pass;
 using CARD_Same;
+using System.Diagnostics;
 using Types;
+using Windows.Gaming.Input.ForceFeedback;
 
 namespace WolfX
 {
@@ -44,6 +46,9 @@ namespace WolfX
             CARDS_CB_CardKind.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
             CARDS_CB_CardType.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
+            CARDS_CB_CardArchetypeNumberOne.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
+            CARDS_CB_CardArchetypeNumberTwo.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
+            CARDS_CB_CardArchetypeNumberThree.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
         }
 
         private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
@@ -135,6 +140,24 @@ namespace WolfX
             CARDS_TB_CardPassword.Text = Card_Pass._Passwords.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
             CARDS_TB_Kana.Text = Card_Kana._Kana.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
             CARDS_TB_CardNumber.Text = Card_PackID._CardNumbers.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
+            var CardArchetypes = Card_Named.CardsInArchetype.Where(Card => Card.Value.Contains(Convert.ToInt32(CARDS_CB_CardID.Text))).ToList();
+            if (CardArchetypes != null)
+            {
+                if (CardArchetypes.Count > 0)
+                    CARDS_CB_CardArchetypeNumberOne.Text = CardArchetypes[0].Key.ToString();
+
+                if (CardArchetypes.Count > 1)
+                    CARDS_CB_CardArchetypeNumberTwo.Text = CardArchetypes[1].Key.ToString();
+
+                if (CardArchetypes.Count > 2)
+                    CARDS_CB_CardArchetypeNumberThree.Text = CardArchetypes[2].Key.ToString();
+            }
+            else
+            {
+                CARDS_CB_CardArchetypeNumberOne.Text = null;
+                CARDS_CB_CardArchetypeNumberTwo.Text = null;
+                CARDS_CB_CardArchetypeNumberThree.Text = null;
+            }
         }
 
         #region CARD_EDIT_CHANGE_SAVE_FUNCTIONS

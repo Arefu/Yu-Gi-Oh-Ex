@@ -232,6 +232,13 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
+            groupBox24 = new GroupBox();
+            CARDS_CB_CardArchetypeNumberOne = new ComboBox();
+            label34 = new Label();
+            CARDS_CB_CardArchetypeNumberTwo = new ComboBox();
+            label30 = new Label();
+            CARDS_CB_CardArchetypeNumberThree = new ComboBox();
+            label31 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
             groupBox18.SuspendLayout();
@@ -284,6 +291,7 @@ namespace WolfX
             Page_SaveGameManager.SuspendLayout();
             groupBox22.SuspendLayout();
             MenuBar.SuspendLayout();
+            groupBox24.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -306,6 +314,7 @@ namespace WolfX
             // 
             // Page_CardManager
             // 
+            Page_CardManager.Controls.Add(groupBox24);
             Page_CardManager.Controls.Add(groupBox18);
             Page_CardManager.Controls.Add(groupBox6);
             Page_CardManager.Controls.Add(groupBox2);
@@ -453,7 +462,7 @@ namespace WolfX
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
-            groupBox6.Location = new Point(334, 447);
+            groupBox6.Location = new Point(666, 6);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
             groupBox6.TabIndex = 5;
@@ -2316,6 +2325,78 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
+            // groupBox24
+            // 
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberThree);
+            groupBox24.Controls.Add(label31);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberTwo);
+            groupBox24.Controls.Add(label30);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberOne);
+            groupBox24.Controls.Add(label34);
+            groupBox24.Location = new Point(340, 447);
+            groupBox24.Name = "groupBox24";
+            groupBox24.Size = new Size(320, 174);
+            groupBox24.TabIndex = 9;
+            groupBox24.TabStop = false;
+            groupBox24.Text = "Card Properties";
+            // 
+            // CARDS_CB_ArchetypeNumberOne
+            // 
+            CARDS_CB_CardArchetypeNumberOne.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberOne.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberOne.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberOne.Location = new Point(6, 37);
+            CARDS_CB_CardArchetypeNumberOne.Name = "CARDS_CB_ArchetypeNumberOne";
+            CARDS_CB_CardArchetypeNumberOne.Size = new Size(186, 23);
+            CARDS_CB_CardArchetypeNumberOne.TabIndex = 7;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(6, 19);
+            label34.Name = "label34";
+            label34.Size = new Size(108, 15);
+            label34.TabIndex = 0;
+            label34.Text = "Card Archetype #1:";
+            // 
+            // CARDS_CB_ArchetypeNumberTwo
+            // 
+            CARDS_CB_CardArchetypeNumberTwo.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberTwo.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberTwo.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberTwo.Location = new Point(6, 81);
+            CARDS_CB_CardArchetypeNumberTwo.Name = "CARDS_CB_ArchetypeNumberTwo";
+            CARDS_CB_CardArchetypeNumberTwo.Size = new Size(186, 23);
+            CARDS_CB_CardArchetypeNumberTwo.TabIndex = 9;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(6, 63);
+            label30.Name = "label30";
+            label30.Size = new Size(108, 15);
+            label30.TabIndex = 8;
+            label30.Text = "Card Archetype #2:";
+            // 
+            // CARDS_CB_ArchetypeNumberThree
+            // 
+            CARDS_CB_CardArchetypeNumberThree.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberThree.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberThree.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberThree.Location = new Point(6, 125);
+            CARDS_CB_CardArchetypeNumberThree.Name = "CARDS_CB_ArchetypeNumberThree";
+            CARDS_CB_CardArchetypeNumberThree.Size = new Size(186, 23);
+            CARDS_CB_CardArchetypeNumberThree.TabIndex = 11;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Location = new Point(6, 107);
+            label31.Name = "label31";
+            label31.Size = new Size(108, 15);
+            label31.TabIndex = 10;
+            label31.Text = "Card Archetype #3:";
+            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2404,6 +2485,8 @@ namespace WolfX
             groupBox22.ResumeLayout(false);
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
+            groupBox24.ResumeLayout(false);
+            groupBox24.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2614,5 +2697,12 @@ namespace WolfX
         private Label label15;
         public ComboBox CARDS_CB_CardType;
         private Label label3;
+        private GroupBox groupBox24;
+        private ComboBox CARDS_CB_CardArchetypeNumberThree;
+        private Label label31;
+        private ComboBox CARDS_CB_CardArchetypeNumberTwo;
+        private Label label30;
+        private ComboBox CARDS_CB_CardArchetypeNumberOne;
+        private Label label34;
     }
 }
