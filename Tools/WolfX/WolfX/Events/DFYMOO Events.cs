@@ -24,7 +24,7 @@ namespace WolfX
                 return;
             }
 
-            DFY_Editor = new DfymooUI(Path.GetFullPath(OpenFile.FileName));
+            DFY_Editor = new DfymooUI(Path.GetFullPath(OpenFile.FileName), DFY_PNL_BackgroundColour.BackColor, DFY_PNL_PenColour.BackColor);
             DFY_Editor.DFY_Items = Dfymoo.Load(OpenFile.FileName);
 
             foreach (var Item in DFY_Editor.DFY_Items)
@@ -119,6 +119,23 @@ namespace WolfX
                 DFY_Editor.DFY_Item.ItemDimensions = new Point((int)DFY_NUD_W.Value, DFY_Editor.DFY_Item.ItemDimensions.Y);
 
             DFY_Editor.DFY_Picture.Refresh();
+        }
+
+
+        private void DFY_BTN_ChangeBackGroundColour_Click(object sender, EventArgs e)
+        {
+            ColorDialog clrDialog = new();
+
+            if (clrDialog.ShowDialog() == DialogResult.OK)
+                DFY_PNL_BackgroundColour.BackColor = clrDialog.Color;
+        }
+        private void DFY_BTN_ChangePenColour_Click(object sender, EventArgs e)
+        {
+
+            ColorDialog clrDialog = new();
+
+            if (clrDialog.ShowDialog() == DialogResult.OK)
+                DFY_PNL_PenColour.BackColor = clrDialog.Color;
         }
     }
 }
