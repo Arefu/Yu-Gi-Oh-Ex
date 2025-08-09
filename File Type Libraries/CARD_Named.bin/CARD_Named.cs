@@ -58,6 +58,7 @@ namespace CARD_Named
             CardsLikeExodia = 44,
             CardsLikeUltimateCrystal = 45,
             CardsLikeCyberDragon = 46,
+            CardsLikeKuriboh = 287,
         }
 
         public static string Get_ArchetypeNameFromID(Archetype archetype)
@@ -85,14 +86,16 @@ namespace CARD_Named
                 case Archetype.CardsLikeNeos:
                     return "Neos";
                 case Archetype.CardsLikeNeoAndNeoSpacian:
-                    return "Neos AND Neo-Spacian";
+                    return "Neos & Neo-Spacian";
                 case Archetype.CardsLikeNeoFusion:
-                    return "Neo (Change Me)";
+                    return "Neo Fusion";
                 case Archetype.CardsLikeOjama:
                     return "Ojama";
-                default:
 
-                    return "None";
+                case Archetype.CardsLikeKuriboh:
+                    return "Kuriboh";
+                default:
+                    return archetype.ToString();
             }
         }
 
