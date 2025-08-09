@@ -119,6 +119,8 @@ namespace WolfX
                 var imageStream = ZIB.Get_CardImageFromDefaultArchiveByYDCID(selectedCard.ID.ToString());
                 if (imageStream != null)
                     CARDS_PB_CardPicture.Image = Image.FromStream(imageStream);
+                else
+                    CARDS_PB_CardPicture.Image = null;
             }
 
             // Update similarity type radio buttons
@@ -144,19 +146,43 @@ namespace WolfX
             if (CardArchetypes != null)
             {
                 if (CardArchetypes.Count > 0)
-                    CARDS_CB_CardArchetypeNumberOne.Text = CardArchetypes[0].Key.ToString();
+                    CARDS_CB_CardArchetypeNumberOne.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[0].Key);
+                else
+                    CARDS_CB_CardArchetypeNumberOne.ResetText();
 
                 if (CardArchetypes.Count > 1)
-                    CARDS_CB_CardArchetypeNumberTwo.Text = CardArchetypes[1].Key.ToString();
+                    CARDS_CB_CardArchetypeNumberTwo.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[1].Key);
+                else
+                    CARDS_CB_CardArchetypeNumberTwo.ResetText();
 
                 if (CardArchetypes.Count > 2)
-                    CARDS_CB_CardArchetypeNumberThree.Text = CardArchetypes[2].Key.ToString();
+                    CARDS_CB_CardArchetypeNumberThree.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[2].Key);
+                else
+                    CARDS_CB_CardArchetypeNumberThree.ResetText();
+
+                if (CardArchetypes.Count > 3)
+                    CARDS_CB_CardArchetypeNumberFour.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[3].Key);
+                else
+                    CARDS_CB_CardArchetypeNumberFour.ResetText();
+
+                if (CardArchetypes.Count > 4)
+                    CARDS_CB_CardArchetypeNumberFive.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[4].Key);
+                else
+                    CARDS_CB_CardArchetypeNumberFive.ResetText();
+
+                if (CardArchetypes.Count > 5)
+                    CARDS_CB_CardArchetypeNumberSix.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[5].Key);
+                else
+                    CARDS_CB_CardArchetypeNumberSix.ResetText();
             }
             else
             {
-                CARDS_CB_CardArchetypeNumberOne.Text = null;
-                CARDS_CB_CardArchetypeNumberTwo.Text = null;
-                CARDS_CB_CardArchetypeNumberThree.Text = null;
+                CARDS_CB_CardArchetypeNumberOne.ResetText();
+                CARDS_CB_CardArchetypeNumberTwo.ResetText();
+                CARDS_CB_CardArchetypeNumberThree.ResetText();
+                CARDS_CB_CardArchetypeNumberFour.ResetText();
+                CARDS_CB_CardArchetypeNumberFive.ResetText();
+                CARDS_CB_CardArchetypeNumberSix.ResetText();
             }
         }
 

@@ -36,6 +36,19 @@ namespace WolfX
         {
             WolfX_TabManager = new TabControl();
             Page_CardManager = new TabPage();
+            groupBox24 = new GroupBox();
+            CARDS_CB_CardArchetypeNumberSix = new ComboBox();
+            label32 = new Label();
+            CARDS_CB_CardArchetypeNumberFive = new ComboBox();
+            label33 = new Label();
+            CARDS_CB_CardArchetypeNumberFour = new ComboBox();
+            label35 = new Label();
+            CARDS_CB_CardArchetypeNumberThree = new ComboBox();
+            label31 = new Label();
+            CARDS_CB_CardArchetypeNumberTwo = new ComboBox();
+            label30 = new Label();
+            CARDS_CB_CardArchetypeNumberOne = new ComboBox();
+            label34 = new Label();
             groupBox18 = new GroupBox();
             label26 = new Label();
             CARDS_TB_CardNumber = new TextBox();
@@ -108,6 +121,11 @@ namespace WolfX
             lbl_Dfymoo_name = new Label();
             label10 = new Label();
             label12 = new Label();
+            groupBox25 = new GroupBox();
+            DFY_PNL_PenColour = new Panel();
+            DFY_PNL_BackgroundColour = new Panel();
+            DFY_BTN_ChangeBackGroundColour = new Button();
+            DFY_BTN_ChangePenColour = new Button();
             Page_ANIMLISTManager = new TabPage();
             ANIMS_LV_ItemsInScene = new ListView();
             groupBox10 = new GroupBox();
@@ -232,15 +250,9 @@ namespace WolfX
             Language_japanese = new ToolStripMenuItem();
             Language_russian = new ToolStripMenuItem();
             Language_spanish = new ToolStripMenuItem();
-            groupBox24 = new GroupBox();
-            CARDS_CB_CardArchetypeNumberOne = new ComboBox();
-            label34 = new Label();
-            CARDS_CB_CardArchetypeNumberTwo = new ComboBox();
-            label30 = new Label();
-            CARDS_CB_CardArchetypeNumberThree = new ComboBox();
-            label31 = new Label();
             WolfX_TabManager.SuspendLayout();
             Page_CardManager.SuspendLayout();
+            groupBox24.SuspendLayout();
             groupBox18.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -259,6 +271,7 @@ namespace WolfX
             ((System.ComponentModel.ISupportInitialize)DFY_NUD_X).BeginInit();
             groupBox8.SuspendLayout();
             groupBox9.SuspendLayout();
+            groupBox25.SuspendLayout();
             Page_ANIMLISTManager.SuspendLayout();
             groupBox10.SuspendLayout();
             ANIM_GB_Info.SuspendLayout();
@@ -291,7 +304,6 @@ namespace WolfX
             Page_SaveGameManager.SuspendLayout();
             groupBox22.SuspendLayout();
             MenuBar.SuspendLayout();
-            groupBox24.SuspendLayout();
             SuspendLayout();
             // 
             // WolfX_TabManager
@@ -327,6 +339,141 @@ namespace WolfX
             Page_CardManager.TabIndex = 0;
             Page_CardManager.Text = "Card Manager";
             Page_CardManager.UseVisualStyleBackColor = true;
+            // 
+            // groupBox24
+            // 
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberSix);
+            groupBox24.Controls.Add(label32);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberFive);
+            groupBox24.Controls.Add(label33);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberFour);
+            groupBox24.Controls.Add(label35);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberThree);
+            groupBox24.Controls.Add(label31);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberTwo);
+            groupBox24.Controls.Add(label30);
+            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberOne);
+            groupBox24.Controls.Add(label34);
+            groupBox24.Location = new Point(340, 447);
+            groupBox24.Name = "groupBox24";
+            groupBox24.Size = new Size(320, 174);
+            groupBox24.TabIndex = 9;
+            groupBox24.TabStop = false;
+            groupBox24.Text = "Card Properties";
+            // 
+            // CARDS_CB_CardArchetypeNumberSix
+            // 
+            CARDS_CB_CardArchetypeNumberSix.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberSix.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberSix.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberSix.Location = new Point(175, 125);
+            CARDS_CB_CardArchetypeNumberSix.Name = "CARDS_CB_CardArchetypeNumberSix";
+            CARDS_CB_CardArchetypeNumberSix.Size = new Size(127, 23);
+            CARDS_CB_CardArchetypeNumberSix.TabIndex = 17;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new Point(175, 107);
+            label32.Name = "label32";
+            label32.Size = new Size(108, 15);
+            label32.TabIndex = 16;
+            label32.Text = "Card Archetype #6:";
+            // 
+            // CARDS_CB_CardArchetypeNumberFive
+            // 
+            CARDS_CB_CardArchetypeNumberFive.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberFive.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberFive.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberFive.Location = new Point(175, 81);
+            CARDS_CB_CardArchetypeNumberFive.Name = "CARDS_CB_CardArchetypeNumberFive";
+            CARDS_CB_CardArchetypeNumberFive.Size = new Size(127, 23);
+            CARDS_CB_CardArchetypeNumberFive.TabIndex = 15;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Location = new Point(175, 63);
+            label33.Name = "label33";
+            label33.Size = new Size(108, 15);
+            label33.TabIndex = 14;
+            label33.Text = "Card Archetype #5:";
+            // 
+            // CARDS_CB_CardArchetypeNumberFour
+            // 
+            CARDS_CB_CardArchetypeNumberFour.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberFour.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberFour.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberFour.Location = new Point(175, 37);
+            CARDS_CB_CardArchetypeNumberFour.Name = "CARDS_CB_CardArchetypeNumberFour";
+            CARDS_CB_CardArchetypeNumberFour.Size = new Size(128, 23);
+            CARDS_CB_CardArchetypeNumberFour.TabIndex = 13;
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Location = new Point(175, 19);
+            label35.Name = "label35";
+            label35.Size = new Size(108, 15);
+            label35.TabIndex = 12;
+            label35.Text = "Card Archetype #4:";
+            // 
+            // CARDS_CB_CardArchetypeNumberThree
+            // 
+            CARDS_CB_CardArchetypeNumberThree.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberThree.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberThree.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberThree.Location = new Point(6, 125);
+            CARDS_CB_CardArchetypeNumberThree.Name = "CARDS_CB_CardArchetypeNumberThree";
+            CARDS_CB_CardArchetypeNumberThree.Size = new Size(128, 23);
+            CARDS_CB_CardArchetypeNumberThree.TabIndex = 11;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Location = new Point(6, 107);
+            label31.Name = "label31";
+            label31.Size = new Size(108, 15);
+            label31.TabIndex = 10;
+            label31.Text = "Card Archetype #3:";
+            // 
+            // CARDS_CB_CardArchetypeNumberTwo
+            // 
+            CARDS_CB_CardArchetypeNumberTwo.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberTwo.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberTwo.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberTwo.Location = new Point(6, 81);
+            CARDS_CB_CardArchetypeNumberTwo.Name = "CARDS_CB_CardArchetypeNumberTwo";
+            CARDS_CB_CardArchetypeNumberTwo.Size = new Size(128, 23);
+            CARDS_CB_CardArchetypeNumberTwo.TabIndex = 9;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(6, 63);
+            label30.Name = "label30";
+            label30.Size = new Size(108, 15);
+            label30.TabIndex = 8;
+            label30.Text = "Card Archetype #2:";
+            // 
+            // CARDS_CB_CardArchetypeNumberOne
+            // 
+            CARDS_CB_CardArchetypeNumberOne.AutoCompleteMode = AutoCompleteMode.Suggest;
+            CARDS_CB_CardArchetypeNumberOne.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberOne.FormattingEnabled = true;
+            CARDS_CB_CardArchetypeNumberOne.Location = new Point(6, 37);
+            CARDS_CB_CardArchetypeNumberOne.Name = "CARDS_CB_CardArchetypeNumberOne";
+            CARDS_CB_CardArchetypeNumberOne.Size = new Size(128, 23);
+            CARDS_CB_CardArchetypeNumberOne.TabIndex = 7;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(6, 19);
+            label34.Name = "label34";
+            label34.Size = new Size(108, 15);
+            label34.TabIndex = 0;
+            label34.Text = "Card Archetype #1:";
             // 
             // groupBox18
             // 
@@ -891,6 +1038,7 @@ namespace WolfX
             Page_DFYMOOManager.Controls.Add(DFYMOO_ItemList);
             Page_DFYMOOManager.Controls.Add(groupBox8);
             Page_DFYMOOManager.Controls.Add(groupBox9);
+            Page_DFYMOOManager.Controls.Add(groupBox25);
             Page_DFYMOOManager.Location = new Point(4, 24);
             Page_DFYMOOManager.Name = "Page_DFYMOOManager";
             Page_DFYMOOManager.Padding = new Padding(3);
@@ -1081,6 +1229,57 @@ namespace WolfX
             label12.Size = new Size(42, 15);
             label12.TabIndex = 0;
             label12.Text = "Name:";
+            // 
+            // groupBox25
+            // 
+            groupBox25.Controls.Add(DFY_PNL_PenColour);
+            groupBox25.Controls.Add(DFY_PNL_BackgroundColour);
+            groupBox25.Controls.Add(DFY_BTN_ChangeBackGroundColour);
+            groupBox25.Controls.Add(DFY_BTN_ChangePenColour);
+            groupBox25.Location = new Point(626, 6);
+            groupBox25.Name = "groupBox25";
+            groupBox25.Size = new Size(200, 100);
+            groupBox25.TabIndex = 9;
+            groupBox25.TabStop = false;
+            groupBox25.Text = "Color Tools";
+            // 
+            // DFY_PNL_PenColour
+            // 
+            DFY_PNL_PenColour.BackColor = Color.HotPink;
+            DFY_PNL_PenColour.Location = new Point(119, 48);
+            DFY_PNL_PenColour.Name = "DFY_PNL_PenColour";
+            DFY_PNL_PenColour.Size = new Size(75, 23);
+            DFY_PNL_PenColour.TabIndex = 8;
+            // 
+            // DFY_PNL_BackgroundColour
+            // 
+            DFY_PNL_BackgroundColour.BackColor = Color.Lime;
+            DFY_PNL_BackgroundColour.Location = new Point(119, 19);
+            DFY_PNL_BackgroundColour.Name = "DFY_PNL_BackgroundColour";
+            DFY_PNL_BackgroundColour.Size = new Size(75, 23);
+            DFY_PNL_BackgroundColour.TabIndex = 6;
+            // 
+            // DFY_BTN_ChangeBackGroundColour
+            // 
+            DFY_BTN_ChangeBackGroundColour.Font = new Font("Segoe UI", 9F);
+            DFY_BTN_ChangeBackGroundColour.Location = new Point(6, 19);
+            DFY_BTN_ChangeBackGroundColour.Name = "DFY_BTN_ChangeBackGroundColour";
+            DFY_BTN_ChangeBackGroundColour.Size = new Size(107, 23);
+            DFY_BTN_ChangeBackGroundColour.TabIndex = 7;
+            DFY_BTN_ChangeBackGroundColour.Text = "Change BG";
+            DFY_BTN_ChangeBackGroundColour.UseVisualStyleBackColor = true;
+            DFY_BTN_ChangeBackGroundColour.Click += DFY_BTN_ChangeBackGroundColour_Click;
+            // 
+            // DFY_BTN_ChangePenColour
+            // 
+            DFY_BTN_ChangePenColour.Font = new Font("Segoe UI", 9F);
+            DFY_BTN_ChangePenColour.Location = new Point(6, 48);
+            DFY_BTN_ChangePenColour.Name = "DFY_BTN_ChangePenColour";
+            DFY_BTN_ChangePenColour.Size = new Size(107, 23);
+            DFY_BTN_ChangePenColour.TabIndex = 5;
+            DFY_BTN_ChangePenColour.Text = "Change Pen";
+            DFY_BTN_ChangePenColour.UseVisualStyleBackColor = true;
+            DFY_BTN_ChangePenColour.Click += DFY_BTN_ChangePenColour_Click;
             // 
             // Page_ANIMLISTManager
             // 
@@ -2325,78 +2524,6 @@ namespace WolfX
             Language_spanish.Text = "Español";
             Language_spanish.Click += Language_spanish_Click;
             // 
-            // groupBox24
-            // 
-            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberThree);
-            groupBox24.Controls.Add(label31);
-            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberTwo);
-            groupBox24.Controls.Add(label30);
-            groupBox24.Controls.Add(CARDS_CB_CardArchetypeNumberOne);
-            groupBox24.Controls.Add(label34);
-            groupBox24.Location = new Point(340, 447);
-            groupBox24.Name = "groupBox24";
-            groupBox24.Size = new Size(320, 174);
-            groupBox24.TabIndex = 9;
-            groupBox24.TabStop = false;
-            groupBox24.Text = "Card Properties";
-            // 
-            // CARDS_CB_ArchetypeNumberOne
-            // 
-            CARDS_CB_CardArchetypeNumberOne.AutoCompleteMode = AutoCompleteMode.Suggest;
-            CARDS_CB_CardArchetypeNumberOne.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CARDS_CB_CardArchetypeNumberOne.FormattingEnabled = true;
-            CARDS_CB_CardArchetypeNumberOne.Location = new Point(6, 37);
-            CARDS_CB_CardArchetypeNumberOne.Name = "CARDS_CB_ArchetypeNumberOne";
-            CARDS_CB_CardArchetypeNumberOne.Size = new Size(186, 23);
-            CARDS_CB_CardArchetypeNumberOne.TabIndex = 7;
-            // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Location = new Point(6, 19);
-            label34.Name = "label34";
-            label34.Size = new Size(108, 15);
-            label34.TabIndex = 0;
-            label34.Text = "Card Archetype #1:";
-            // 
-            // CARDS_CB_ArchetypeNumberTwo
-            // 
-            CARDS_CB_CardArchetypeNumberTwo.AutoCompleteMode = AutoCompleteMode.Suggest;
-            CARDS_CB_CardArchetypeNumberTwo.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CARDS_CB_CardArchetypeNumberTwo.FormattingEnabled = true;
-            CARDS_CB_CardArchetypeNumberTwo.Location = new Point(6, 81);
-            CARDS_CB_CardArchetypeNumberTwo.Name = "CARDS_CB_ArchetypeNumberTwo";
-            CARDS_CB_CardArchetypeNumberTwo.Size = new Size(186, 23);
-            CARDS_CB_CardArchetypeNumberTwo.TabIndex = 9;
-            // 
-            // label30
-            // 
-            label30.AutoSize = true;
-            label30.Location = new Point(6, 63);
-            label30.Name = "label30";
-            label30.Size = new Size(108, 15);
-            label30.TabIndex = 8;
-            label30.Text = "Card Archetype #2:";
-            // 
-            // CARDS_CB_ArchetypeNumberThree
-            // 
-            CARDS_CB_CardArchetypeNumberThree.AutoCompleteMode = AutoCompleteMode.Suggest;
-            CARDS_CB_CardArchetypeNumberThree.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CARDS_CB_CardArchetypeNumberThree.FormattingEnabled = true;
-            CARDS_CB_CardArchetypeNumberThree.Location = new Point(6, 125);
-            CARDS_CB_CardArchetypeNumberThree.Name = "CARDS_CB_ArchetypeNumberThree";
-            CARDS_CB_CardArchetypeNumberThree.Size = new Size(186, 23);
-            CARDS_CB_CardArchetypeNumberThree.TabIndex = 11;
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Location = new Point(6, 107);
-            label31.Name = "label31";
-            label31.Size = new Size(108, 15);
-            label31.TabIndex = 10;
-            label31.Text = "Card Archetype #3:";
-            // 
             // WolfUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2412,6 +2539,8 @@ namespace WolfX
             Text = "WolfX";
             WolfX_TabManager.ResumeLayout(false);
             Page_CardManager.ResumeLayout(false);
+            groupBox24.ResumeLayout(false);
+            groupBox24.PerformLayout();
             groupBox18.ResumeLayout(false);
             groupBox18.PerformLayout();
             groupBox6.ResumeLayout(false);
@@ -2439,6 +2568,7 @@ namespace WolfX
             groupBox8.ResumeLayout(false);
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
+            groupBox25.ResumeLayout(false);
             Page_ANIMLISTManager.ResumeLayout(false);
             groupBox10.ResumeLayout(false);
             ANIM_GB_Info.ResumeLayout(false);
@@ -2485,8 +2615,6 @@ namespace WolfX
             groupBox22.ResumeLayout(false);
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
-            groupBox24.ResumeLayout(false);
-            groupBox24.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2704,5 +2832,16 @@ namespace WolfX
         private Label label30;
         private ComboBox CARDS_CB_CardArchetypeNumberOne;
         private Label label34;
+        private ComboBox CARDS_CB_CardArchetypeNumberSix;
+        private Label label32;
+        private ComboBox CARDS_CB_CardArchetypeNumberFive;
+        private Label label33;
+        private ComboBox CARDS_CB_CardArchetypeNumberFour;
+        private Label label35;
+        private Panel DFY_PNL_BackgroundColour;
+        private Button DFY_BTN_ChangePenColour;
+        private Panel DFY_PNL_PenColour;
+        private GroupBox groupBox25;
+        private Button DFY_BTN_ChangeBackGroundColour;
     }
 }
