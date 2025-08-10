@@ -114,28 +114,21 @@ namespace Types
 
     public class CARD_Card
     {
-        public int _Index;
-
-        public string Name { get; set; }
-        public string Desc;
-
-        public int Attack;
-        public int Defense;
-        public int Level;
+        public string? Name { get; set; }
+        public string? Desc { get; set; }
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int Level { get; set; }
         public int ID { get; set; }
-
-        public int Ico;
-        public int SecondUnk;
-
-        public byte PEND_Scale1;
-        public byte PEND_Scale2;
-
-        public CARDS_INFO.CARD_Kind Kind;
+        public int Ico { get; set; }
+        public int SecondUnk { get; set; }
+        public byte PEND_Scale1 { get; set; }
+        public byte PEND_Scale2 { get; set; }
+        public CARDS_INFO.CARD_Kind Kind { get; set; }
         public CARDS_INFO.CARD_Attribute Attribute { get; set; }
         public CARDS_INFO.CARD_Type Type { get; set; }
-
-        public BitVector32 First;
-        public BitVector32 Second;
+        public BitVector32 First { get; set; }
+        public BitVector32 Second { get; set; }
     }
 
     public static class CARDS_Cards
@@ -382,148 +375,16 @@ namespace Types
             PropWriter.Close();
         }
 
-        #region Card Getters
-
         public static string Get_CardNameFromID(short ID)
         {
             if (Cards.Count == 0)
                 return ID.ToString();
 
-            return Cards.Find(x => x.ID == ID).Name;
+            if (Cards == null) return ID.ToString();
+
+            var Card = Cards.Find(x => x.ID == ID)?.Name;
+            return Card == null ? ID.ToString() : Card;
         }
-
-        public static string Get_CardDescFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return ID.ToString();
-            return Cards.Find(x => x.ID == ID).Desc;
-        }
-
-        public static int Get_CardAtkFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return ID;
-            return Cards.Find(x => x.ID == ID).Attack;
-        }
-
-        public static int Get_CardDefFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return ID;
-            return Cards.Find(x => x.ID == ID).Defense;
-        }
-
-        public static byte Get_CardLevelFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return 0;
-            return (byte)Cards.Find(x => x.ID == ID).Level;
-        }
-
-        public static CARDS_INFO.CARD_Attribute Get_CardAttributeFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return CARDS_INFO.CARD_Attribute.Unknown;
-            return Cards.Find(x => x.ID == ID).Attribute;
-        }
-
-        public static CARDS_INFO.CARD_Type Get_CardTypeFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return 0;
-
-            return Cards.Find(x => x.ID == ID).Type;
-        }
-
-        public static byte Get_CardPendulumScale1FromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return 0;
-            return Cards.Find(x => x.ID == ID).PEND_Scale1;
-        }
-
-        public static byte Get_CardPendulumScale2FromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return 0;
-            return Cards.Find(x => x.ID == ID).PEND_Scale2;
-        }
-
-        public static short Get_CardPropFromID(short ID)
-        {
-            if (Cards.Count == 0)
-                return 0;
-            return (short)Cards.Find(x => x.ID == ID).First.Data;
-        }
-
-        #endregion Card Getters
-
-        #region Card Setters
-
-        public static void Set_CardNameFromID(short ID, string Name)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Name = Name;
-        }
-
-        public static void Set_CardDescFromID(short ID, string Desc)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Desc = Desc;
-        }
-
-        public static void Set_CardAtkFromID(short ID, int Atk)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Attack = Atk;
-        }
-
-        public static void Set_CardDefFromID(short ID, int Def)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Defense = Def;
-        }
-
-        public static void Set_CardLevelFromID(short ID, byte Level)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Level = Level;
-        }
-
-        public static void Set_CardAttributeFromID(short ID, CARDS_INFO.CARD_Attribute Attribute)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Attribute = Attribute;
-        }
-
-        public static void Set_CardTypeFromID(short ID, CARDS_INFO.CARD_Type Type)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).Type = Type;
-        }
-
-        public static void Set_CardPendulumScale1FromID(short ID, byte Scale)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).PEND_Scale1 = Scale;
-        }
-
-        public static void Set_CardPendulumScale2FromID(short ID, byte Scale)
-        {
-            if (Cards.Count == 0)
-                return;
-            Cards.Find(x => x.ID == ID).PEND_Scale2 = Scale;
-        }
-
-        #endregion Card Setters
     }
 
     internal static partial class Extensions

@@ -25,7 +25,7 @@ namespace WolfX
                     ANIMS_LV_ItemsInScene.Items.Add(Item.ItemName);
                 }
 
-                Form.ANIMS_LBL_Count.Text = ANIMS_Editor.Anim_Items.Count.ToString();
+                ANIMS_LBL_Count.Text = ANIMS_Editor.Anim_Items.Count.ToString();
 
                 ANIMS_Editor.PrepareScene();
                 ANIMS_Editor.Show();

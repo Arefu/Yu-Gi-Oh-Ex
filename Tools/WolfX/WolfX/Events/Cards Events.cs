@@ -3,9 +3,7 @@ using CARD_Named;
 using CARD_PackID;
 using CARD_Pass;
 using CARD_Same;
-using System.Diagnostics;
 using Types;
-using Windows.Gaming.Input.ForceFeedback;
 
 namespace WolfX
 {
@@ -49,6 +47,9 @@ namespace WolfX
             CARDS_CB_CardArchetypeNumberOne.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
             CARDS_CB_CardArchetypeNumberTwo.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
             CARDS_CB_CardArchetypeNumberThree.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
+            CARDS_CB_CardArchetypeNumberFour.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
+            CARDS_CB_CardArchetypeNumberFive.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
+            CARDS_CB_CardArchetypeNumberSix.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
         }
 
         private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
@@ -73,7 +74,10 @@ namespace WolfX
             CARDS_CB_CardKind.DataSource = null;
             CARDS_Nud_CardLevel.ResetText();
             CARDS_PB_CardPicture.Image = null;
-
+            CARDS_CB_CardType.DataSource = null;
+            CARDS_CB_CardType.Items.Clear();
+            CARDS_CB_CardAttribute.DataSource = null;
+            CARDS_CB_CardAttribute.Items.Clear();
             CARDS_CB_CardSearcher.DataSource = null;
             CARDS_CB_CardSearcher.Items.Clear();
             CARDS_TB_Kana.Clear();
@@ -82,6 +86,24 @@ namespace WolfX
             CARDS_TB_CardPassword.Clear();
 
             CARDS_TB_CardNumber.Clear();
+
+            CARDS_CB_SimilarCardName.DataSource = null;
+            CARDS_CB_SimilarCardName.Items.Clear();
+
+            var archetypeCombos = new ComboBox[]
+          {
+                CARDS_CB_CardArchetypeNumberOne,
+                CARDS_CB_CardArchetypeNumberTwo,
+                CARDS_CB_CardArchetypeNumberThree,
+                CARDS_CB_CardArchetypeNumberFour,
+                CARDS_CB_CardArchetypeNumberFive,
+                CARDS_CB_CardArchetypeNumberSix
+          };
+            for (int i = 0; i < archetypeCombos.Length; i++)
+            {
+                archetypeCombos[i].DataSource = null;
+                archetypeCombos[i].Items.Clear();
+            }
         }
 
         private void CARDS_CB_CardName_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,51 +164,52 @@ namespace WolfX
             CARDS_TB_CardPassword.Text = Card_Pass._Passwords.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
             CARDS_TB_Kana.Text = Card_Kana._Kana.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
             CARDS_TB_CardNumber.Text = Card_PackID._CardNumbers.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
-            var CardArchetypes = Card_Named.CardsInArchetype.Where(Card => Card.Value.Contains(Convert.ToInt32(CARDS_CB_CardID.Text))).ToList();
-            if (CardArchetypes != null)
+
+            var cardArchetypes = Card_Named.CardsInArchetype.Where(card => card.Value.Contains(Convert.ToInt32(CARDS_CB_CardID.Text))).ToList();
+
+            var archetypeCombos = new ComboBox[]
             {
-                if (CardArchetypes.Count > 0)
-                    CARDS_CB_CardArchetypeNumberOne.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[0].Key);
-                else
-                    CARDS_CB_CardArchetypeNumberOne.ResetText();
-
-                if (CardArchetypes.Count > 1)
-                    CARDS_CB_CardArchetypeNumberTwo.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[1].Key);
-                else
-                    CARDS_CB_CardArchetypeNumberTwo.ResetText();
-
-                if (CardArchetypes.Count > 2)
-                    CARDS_CB_CardArchetypeNumberThree.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[2].Key);
-                else
-                    CARDS_CB_CardArchetypeNumberThree.ResetText();
-
-                if (CardArchetypes.Count > 3)
-                    CARDS_CB_CardArchetypeNumberFour.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[3].Key);
-                else
-                    CARDS_CB_CardArchetypeNumberFour.ResetText();
-
-                if (CardArchetypes.Count > 4)
-                    CARDS_CB_CardArchetypeNumberFive.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[4].Key);
-                else
-                    CARDS_CB_CardArchetypeNumberFive.ResetText();
-
-                if (CardArchetypes.Count > 5)
-                    CARDS_CB_CardArchetypeNumberSix.Text = Card_Named.Get_ArchetypeNameFromID(CardArchetypes[5].Key);
-                else
-                    CARDS_CB_CardArchetypeNumberSix.ResetText();
-            }
-            else
+                CARDS_CB_CardArchetypeNumberOne,
+                CARDS_CB_CardArchetypeNumberTwo,
+                CARDS_CB_CardArchetypeNumberThree,
+                CARDS_CB_CardArchetypeNumberFour,
+                CARDS_CB_CardArchetypeNumberFive,
+                CARDS_CB_CardArchetypeNumberSix
+            };
+            for (int i = 0; i < archetypeCombos.Length; i++)
             {
-                CARDS_CB_CardArchetypeNumberOne.ResetText();
-                CARDS_CB_CardArchetypeNumberTwo.ResetText();
-                CARDS_CB_CardArchetypeNumberThree.ResetText();
-                CARDS_CB_CardArchetypeNumberFour.ResetText();
-                CARDS_CB_CardArchetypeNumberFive.ResetText();
-                CARDS_CB_CardArchetypeNumberSix.ResetText();
+                if (i < cardArchetypes.Count)
+                    archetypeCombos[i].SelectedIndex = archetypeCombos[i].Items.IndexOf(cardArchetypes[i].Key);
+                else
+                    archetypeCombos[i].SelectedIndex = -1;
             }
         }
 
         #region CARD_EDIT_CHANGE_SAVE_FUNCTIONS
+
+        private void CARDS_CB_CardArchetypeNumberOne_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void CARDS_CB_CardArchetypeNumberTwo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void CARDS_CB_CardArchetypeNumberThree_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void CARDS_CB_CardArchetypeNumberFour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void CARDS_CB_CardArchetypeNumberFive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void CARDS_CB_CardArchetypeNumberSix_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
 
         /// <summary>
         /// Updates the Card's Name in CARD_Props ready for calling Save.

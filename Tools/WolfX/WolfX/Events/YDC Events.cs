@@ -8,7 +8,7 @@ namespace WolfX
         private void YDC_BTN_OpenDeck_Click(object sender, EventArgs e)
         {
             var Images = new ImageList();
-            if (YDC_CHKBOX_LoadPictures.Checked)
+            if (YDC_CB_LoadPictures.Checked)
             {
                 Images.ImageSize = new Size(64, 64);
                 YDC_LV_MainDeckCards.View = View.LargeIcon;
@@ -30,10 +30,10 @@ namespace WolfX
             YDC_LBL_NumOfCardInMain.Text = YDC.MAX_NUMBER_OF_CARDS_IN_DECK.ToString();
             foreach (var Card in Cards)
             {
-                if (YDC_CHKBOX_LoadPictures.Checked)
+                if (YDC_CB_LoadPictures.Checked)
                     Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
 
-                if (YDC_CHKBOX_UseCardID.Checked)
+                if (YDC_CB_UseCardID.Checked)
                     YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString(), Card.ToString());
                 else
                     YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID(Card), Card.ToString());
@@ -46,7 +46,7 @@ namespace WolfX
 
         private void YDC_CHKBOX_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
-            if (YDC_CHKBOX_UseCardID.Checked == false)
+            if (YDC_CB_UseCardID.Checked == false)
             {
                 if (State.Path != null)
                 {
@@ -84,7 +84,7 @@ namespace WolfX
 
         private void YDC_CHKBOX_LoadPictures_CheckedChanged(object sender, EventArgs e)
         {
-            if (YDC_CHKBOX_LoadPictures.Checked)
+            if (YDC_CB_LoadPictures.Checked)
             {
                 if (State.Path != null)
                 {
@@ -122,6 +122,31 @@ namespace WolfX
             {
                 var SimpleAdder = new SimpleCardAdd();
                 var Result = SimpleAdder.ShowDialog();
+                if (Result != DialogResult.OK) return;
+
+                switch (YDC_TC_CardsInDeck.SelectedTab.Text)
+                {
+                    case "Main Deck":
+                        foreach (var Card in SimpleAdder.CardIDs)
+                        {
+                            if (YDC_CB_LoadPictures.Checked)
+                                Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+
+                            if (!YDC_CB_UseCardID.Checked)
+                                YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
+                            else
+                                YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString());
+
+                            YDC.CardsInMainDeck.Add(Convert.ToInt16(Card));
+                        }
+                        break;
+
+                    case "Side Deck":
+                        break;
+
+                    case "Extra Deck":
+                        break;
+                }
             }
         }
 

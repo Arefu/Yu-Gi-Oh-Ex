@@ -8,9 +8,14 @@ namespace Types
         private long _Size = Size;
         private string _Name = Name;
 
-        public long Start { get { return _Start; } set { if (_Start != value) _Start = value; } }
-        public long Size { get { return _Size; } set { if (_Size != value) _Size = value;}}
-        public string Name { get { return _Name; } set { if (_Name != value) _Name = value; } }
+        public long Start
+        { get { return _Start; } set { if (_Start != value) _Start = value; } }
+
+        public long Size
+        { get { return _Size; } set { if (_Size != value) _Size = value; } }
+
+        public string Name
+        { get { return _Name; } set { if (_Name != value) _Name = value; } }
     }
 
     public static class ZIB
@@ -25,6 +30,11 @@ namespace Types
         private static BinaryReader Reader;
         private static BinaryWriter Writer;
 
+        /// <summary>
+        /// This function will Load the specific Archive into thte Internal _Items List.
+        /// </summary>
+        /// <param name="Archive">The name of the Archive you're Loading.</param>
+        /// <returns>The collection of Files in the Archive.</returns>
         public static List<Item> Load(string Archive)
         {
             if (Archive == String.Empty)
@@ -80,6 +90,11 @@ namespace Types
                 return null;
         }
 
+        /// <summary>
+        /// Simple wrapper function to append .jpg to the file you're loading.
+        /// </summary>
+        /// <param name="Item">The File you're requesting.</param>
+        /// <returns>Byte Array (MemoryStream) that is the content of the file.</returns>
         public static MemoryStream Get_CardImageFromDefaultArchiveByYDCID(string Item)
         {
             return Get_SpecificItemFromArchive($"{Item}.jpg");
