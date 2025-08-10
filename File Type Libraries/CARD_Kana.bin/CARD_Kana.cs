@@ -6,10 +6,6 @@
 
         public static void Load(string Path, string Language)
         {
-            bool useJp = false;
-            if (Language[0] == 'J')
-                useJp = true;
-
             var Kana = new List<string>();
 
             if (File.Exists(Path.Replace("CARD_Kana1", "CARD_Kana2")) == false && File.Exists(Path.Replace("CARD_Kana1", "CARD_Kana3")) == false)
