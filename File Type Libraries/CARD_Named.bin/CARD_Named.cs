@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace CARD_Named
+﻿namespace CARD_Named
 {
     public static class Card_Named
     {
@@ -11,92 +9,125 @@ namespace CARD_Named
 
         public enum Archetype
         {
-            CardsLikeToon = 1,
-            CardsLikeArchfiend = 2,
-            CardsLikeGravekeeper = 3,
-            CardsLikeGuardian = 4,
-            CardsLikeDarkScorpion = 5,
-            CardsLikeAmazoness = 6,
-            CardsLikeNinja = 7,
-            CardsLikeLV = 8,
-            CardsLikeElementalHero = 9,
-            CardsLikeDestinyHero =10,
-            CardsLikeNeos = 11,
-            CardsLikeNeoAndNeoSpacian = 12,
-            CardsLikeNeoFusion= 13,
-            CardsLikeOjama = 14,
-            CardsLikeBatteryman = 15,
-            CardsLikeDarkWorld = 16,
-            CardsLikeBES = 17,
-            CardsLikeAncientGear = 18,
-            CardsLikeSphinx = 19,
-            CardsLikeMachina = 20,
-            CardsLikeHarpie = 21,
-            CardsLikeRoid = 22,
-            CardsLikeVehicroid = 23,
-            CardsLikeNeoSpacian = 24,
-            CardsLikeChrysalis = 25,
-            CardsLikeAlien = 26,
-            CardsLikePhantomBeast = 27,
-            CardsLikeHero = 28,
-            CardsLikeAllureQueen = 29,
-            CardsLikeGadget = 30,
-            CardsLikeSixSamurai = 31,
-            CardsLikeCrystalBeast = 32,
-            CardslikeVolcanic = 33,
-            CardsLikeBlazeAccelerator = 34,
-            CardsLikeVenom = 35,
-            CardsLikeCloudian = 36,
-            CardslikeGladiatorBeast = 37,
-            CardsLikeGladiatorBeastsBattle = 38,
-            CardsLikeBambooSword = 39,
-            CardsLikeEvilHero = 40,
+            None = 0,
+            Toon = 1,
+            Archfiend = 2,
+            Gravekeeper = 3,
+            Guardian = 4,
+            DarkScorpion = 5,
+            Amazoness = 6,
+            Ninja = 7,
+            LV = 8,
+            ElementalHero = 9,
+            DestinyHero = 10,
+            Neos = 11,
+            NeoSpacianWithSubArchetype = 12,
+            ElementalHeroNeo = 13,
+            Ojama = 14,
+            Batteryman = 15,
+            DarkWorld = 16,
+            BES = 17,
+            AncientGear = 18,
+            Sphinx = 19,
+            Machina = 20,
+            Harpie = 21,
+            Roid = 22,
+            Vehicroid = 23,
+            NeoSpacian = 24,
+            Chrysalis = 25,
+            Alien = 26,
+            PhantomBeast = 27,
+            Hero = 28,
+            AllureQueen = 29,
+            Gadget = 30,
+            SixSamurai = 31,
+            CrystalBeast = 32,
+            Volcanic = 33,
+            BlazeAccelerator = 34,
+            Venom = 35,
+            Cloudian = 36,
+            GladiatorBeast = 37,
+            GladiatorBeastsBattle = 38,
+            BambooSword = 39,
+            EvilHero = 40,
             //41
-            CardsLikeArcanaForce = 42,
+            ArcanaForce = 42,
             //43
-            CardsLikeSkyblaster = 43,
-            CardsLikeExodia = 44,
-            CardsLikeUltimateCrystal = 45,
-            CardsLikeCyberDragon = 46,
-            CardsLikeKuriboh = 287,
-        }
+            Skyblaster = 44,
+            Exodia = 45,
+            UltimateCrystal = 46,
+            CyberDragonFusionRequirement = 47,
+            IceBarrier = 48,
+            AllyOfJustice = 49,
+            Saber = 50,
+            Worm = 51,
+            Lightsworn = 52,
+            Frog = 53,
+            NitroWarrior = 54,
+            Genex = 55,
+            MistValley = 56,
+            Flamvell = 57,
+            AllHero = 58,
+            Morphtronic = 59,
+            IronChain = 61,
+            Naturia = 62,
+            Clear = 63,
+            RedEyes = 64,
+            Blackwing =  65,
+            SlashAssaultMode = 66,
+            Fabled = 67,
+            Jurrac = 68,
 
-        public static string Get_ArchetypeNameFromID(Archetype archetype)
-        {
-            switch (archetype)
-            {
-                case Archetype.CardsLikeToon:
-                    return "Toon";
-                case Archetype.CardsLikeArchfiend:
-                    return "Archfiend";
-                case Archetype.CardsLikeGravekeeper:
-                    return "Gravekeeper";
-                case Archetype.CardsLikeGuardian:
-                    return "Guardian";
-                case Archetype.CardsLikeDarkScorpion:
-                    return "Dark Scorpion";
-                case Archetype.CardsLikeAmazoness:
-                    return "Amazoness";
-                case Archetype.CardsLikeNinja:
-                    return "Ninja";
-                case Archetype.CardsLikeLV:
-                    return "LV";
-                case Archetype.CardsLikeElementalHero:
-                    return "Elemental HERO";
-                case Archetype.CardsLikeNeos:
-                    return "Neos";
-                case Archetype.CardsLikeNeoAndNeoSpacian:
-                    return "Neos & Neo-Spacian";
-                case Archetype.CardsLikeNeoFusion:
-                    return "Neo Fusion";
-                case Archetype.CardsLikeOjama:
-                    return "Ojama";
 
-                case Archetype.CardsLikeKuriboh:
-                    return "Kuriboh";
-                default:
-                    return archetype.ToString();
-            }
+
+
+
+
+            Kuriboh = 287,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //390
+            Mathmech = 391,
+            Dragonmaid = 392,
+            Generaider = 393,
+            Ignister =  394,
+            Ai = 395,
+            AncientWarriors  =  396,
+            Megalith = 397,
+            Palladium = 398,
+            Onomat = 399,
+            UtopicFuture = 400,
+            Rose = 401,
+            Rebellion = 402,
+            Barbaros = 405,
+            Phantasm = 412,
+            SacredBeast = 413,
+            SpiralSpearStrike = 414,
+            Potan = 417
         }
 
         public static Dictionary<Archetype, List<int>> CardsInArchetype = new Dictionary<Archetype, List<int>>();
@@ -139,6 +170,35 @@ namespace CARD_Named
 
         public static void Save()
         {
+            using var Writer = new BinaryWriter(File.Open("Card_named.bin", FileMode.Create, FileAccess.Write));
+            ushort archetypeCount = (ushort)CardsInArchetype.Count;
+            ushort totalCards = (ushort)CardsInArchetype.Sum(kv => kv.Value.Count);
+
+            Writer.Write((ushort)(archetypeCount + 1));
+            Writer.Write(totalCards);
+
+            Writer.BaseStream.Position = 0x6;
+
+            ushort runningSum = 0;
+            foreach (var kv in CardsInArchetype)
+            {
+                ushort cardsInArchetype = (ushort)kv.Value.Count;
+                runningSum += cardsInArchetype;
+
+                Writer.Write(cardsInArchetype);
+                Writer.Write(runningSum);
+
+                if (runningSum == totalCards)
+                    break;
+            }
+
+            Writer.Write((ushort)0);
+
+            foreach (var kv in CardsInArchetype)
+            {
+                foreach (var cardId in kv.Value)
+                    Writer.Write((ushort)cardId);
+            }
         }
     }
 }
