@@ -8,7 +8,8 @@ namespace WolfX
         private void PACKDEF_BTN_OpenPackDEF_Click(object sender, EventArgs e)
         {
             var File = Utility.Get_UserSelectedFile("Open Packdata File", "packdata_#_#.bin (*.bin)|*.bin");
-
+            if (File == "-1")
+                return;
             PACKDATA.PACKDATA.Load(File);
             PACKDATA_LV_CommonCards.Items.Clear();
             PACKDATA_LV_RareCards.Items.Clear();
