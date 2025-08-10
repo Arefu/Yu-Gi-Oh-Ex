@@ -21,7 +21,7 @@ namespace WolfX
             var Source = sender as Button;
             if (string.IsNullOrEmpty(State.Path) == false && WolfX_TabManager.SelectedTab?.Text == "Card Manager")
             {
-                if (Source.Text != "Open Cards")
+                if (Source?.Text != "Open Cards")
                     CARDS_BTN_OpenCards_Click(this, new EventArgs());
 
                 return;
@@ -45,5 +45,8 @@ namespace WolfX
             Config.ShowDialog();
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

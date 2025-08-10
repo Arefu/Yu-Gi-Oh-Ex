@@ -122,6 +122,8 @@ namespace WolfX
             label10 = new Label();
             label12 = new Label();
             groupBox25 = new GroupBox();
+            DFY_LBL_PenThickness = new Label();
+            DFY_NUD_PenThickness = new NumericUpDown();
             DFY_PNL_PenColour = new Panel();
             DFY_PNL_BackgroundColour = new Panel();
             DFY_BTN_ChangeBackGroundColour = new Button();
@@ -156,7 +158,7 @@ namespace WolfX
             YDC_BTN_ReplaceCard = new Button();
             YDC_BTN_RemoveCard = new Button();
             YDC_BTN_AddCard = new Button();
-            tabControl1 = new TabControl();
+            YDC_TC_CardsInDeck = new TabControl();
             tabPage1 = new TabPage();
             YDC_LV_MainDeckCards = new ListView();
             tabPage2 = new TabPage();
@@ -164,9 +166,9 @@ namespace WolfX
             tabPage3 = new TabPage();
             YDC_LV_ExtraDeckCards = new ListView();
             groupBox12 = new GroupBox();
-            YDC_CHKBOX_UseCardID = new CheckBox();
+            YDC_CB_UseCardID = new CheckBox();
             YDC_BTN_OpenSaveFile = new Button();
-            YDC_CHKBOX_LoadPictures = new CheckBox();
+            YDC_CB_LoadPictures = new CheckBox();
             YDC_BTN_SaveDeck = new Button();
             YDC_BTN_OpenDeck = new Button();
             groupBox13 = new GroupBox();
@@ -272,6 +274,7 @@ namespace WolfX
             groupBox8.SuspendLayout();
             groupBox9.SuspendLayout();
             groupBox25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DFY_NUD_PenThickness).BeginInit();
             Page_ANIMLISTManager.SuspendLayout();
             groupBox10.SuspendLayout();
             ANIM_GB_Info.SuspendLayout();
@@ -280,7 +283,7 @@ namespace WolfX
             groupBox11.SuspendLayout();
             Page_YDCManager.SuspendLayout();
             groupBox14.SuspendLayout();
-            tabControl1.SuspendLayout();
+            YDC_TC_CardsInDeck.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
@@ -365,11 +368,13 @@ namespace WolfX
             // 
             CARDS_CB_CardArchetypeNumberSix.AutoCompleteMode = AutoCompleteMode.Suggest;
             CARDS_CB_CardArchetypeNumberSix.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberSix.DropDownStyle = ComboBoxStyle.DropDownList;
             CARDS_CB_CardArchetypeNumberSix.FormattingEnabled = true;
             CARDS_CB_CardArchetypeNumberSix.Location = new Point(175, 125);
             CARDS_CB_CardArchetypeNumberSix.Name = "CARDS_CB_CardArchetypeNumberSix";
             CARDS_CB_CardArchetypeNumberSix.Size = new Size(127, 23);
             CARDS_CB_CardArchetypeNumberSix.TabIndex = 17;
+            CARDS_CB_CardArchetypeNumberSix.SelectedIndexChanged += CARDS_CB_CardArchetypeNumberSix_SelectedIndexChanged;
             // 
             // label32
             // 
@@ -384,11 +389,13 @@ namespace WolfX
             // 
             CARDS_CB_CardArchetypeNumberFive.AutoCompleteMode = AutoCompleteMode.Suggest;
             CARDS_CB_CardArchetypeNumberFive.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberFive.DropDownStyle = ComboBoxStyle.DropDownList;
             CARDS_CB_CardArchetypeNumberFive.FormattingEnabled = true;
             CARDS_CB_CardArchetypeNumberFive.Location = new Point(175, 81);
             CARDS_CB_CardArchetypeNumberFive.Name = "CARDS_CB_CardArchetypeNumberFive";
             CARDS_CB_CardArchetypeNumberFive.Size = new Size(127, 23);
             CARDS_CB_CardArchetypeNumberFive.TabIndex = 15;
+            CARDS_CB_CardArchetypeNumberFive.SelectedIndexChanged += CARDS_CB_CardArchetypeNumberFive_SelectedIndexChanged;
             // 
             // label33
             // 
@@ -403,11 +410,13 @@ namespace WolfX
             // 
             CARDS_CB_CardArchetypeNumberFour.AutoCompleteMode = AutoCompleteMode.Suggest;
             CARDS_CB_CardArchetypeNumberFour.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberFour.DropDownStyle = ComboBoxStyle.DropDownList;
             CARDS_CB_CardArchetypeNumberFour.FormattingEnabled = true;
             CARDS_CB_CardArchetypeNumberFour.Location = new Point(175, 37);
             CARDS_CB_CardArchetypeNumberFour.Name = "CARDS_CB_CardArchetypeNumberFour";
             CARDS_CB_CardArchetypeNumberFour.Size = new Size(128, 23);
             CARDS_CB_CardArchetypeNumberFour.TabIndex = 13;
+            CARDS_CB_CardArchetypeNumberFour.SelectedIndexChanged += CARDS_CB_CardArchetypeNumberFour_SelectedIndexChanged;
             // 
             // label35
             // 
@@ -422,11 +431,13 @@ namespace WolfX
             // 
             CARDS_CB_CardArchetypeNumberThree.AutoCompleteMode = AutoCompleteMode.Suggest;
             CARDS_CB_CardArchetypeNumberThree.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberThree.DropDownStyle = ComboBoxStyle.DropDownList;
             CARDS_CB_CardArchetypeNumberThree.FormattingEnabled = true;
             CARDS_CB_CardArchetypeNumberThree.Location = new Point(6, 125);
             CARDS_CB_CardArchetypeNumberThree.Name = "CARDS_CB_CardArchetypeNumberThree";
             CARDS_CB_CardArchetypeNumberThree.Size = new Size(128, 23);
             CARDS_CB_CardArchetypeNumberThree.TabIndex = 11;
+            CARDS_CB_CardArchetypeNumberThree.SelectedIndexChanged += CARDS_CB_CardArchetypeNumberThree_SelectedIndexChanged;
             // 
             // label31
             // 
@@ -441,11 +452,13 @@ namespace WolfX
             // 
             CARDS_CB_CardArchetypeNumberTwo.AutoCompleteMode = AutoCompleteMode.Suggest;
             CARDS_CB_CardArchetypeNumberTwo.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberTwo.DropDownStyle = ComboBoxStyle.DropDownList;
             CARDS_CB_CardArchetypeNumberTwo.FormattingEnabled = true;
             CARDS_CB_CardArchetypeNumberTwo.Location = new Point(6, 81);
             CARDS_CB_CardArchetypeNumberTwo.Name = "CARDS_CB_CardArchetypeNumberTwo";
             CARDS_CB_CardArchetypeNumberTwo.Size = new Size(128, 23);
             CARDS_CB_CardArchetypeNumberTwo.TabIndex = 9;
+            CARDS_CB_CardArchetypeNumberTwo.SelectedIndexChanged += CARDS_CB_CardArchetypeNumberTwo_SelectedIndexChanged;
             // 
             // label30
             // 
@@ -458,13 +471,14 @@ namespace WolfX
             // 
             // CARDS_CB_CardArchetypeNumberOne
             // 
-            CARDS_CB_CardArchetypeNumberOne.AutoCompleteMode = AutoCompleteMode.Suggest;
             CARDS_CB_CardArchetypeNumberOne.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CARDS_CB_CardArchetypeNumberOne.DropDownStyle = ComboBoxStyle.DropDownList;
             CARDS_CB_CardArchetypeNumberOne.FormattingEnabled = true;
             CARDS_CB_CardArchetypeNumberOne.Location = new Point(6, 37);
             CARDS_CB_CardArchetypeNumberOne.Name = "CARDS_CB_CardArchetypeNumberOne";
             CARDS_CB_CardArchetypeNumberOne.Size = new Size(128, 23);
             CARDS_CB_CardArchetypeNumberOne.TabIndex = 7;
+            CARDS_CB_CardArchetypeNumberOne.SelectedIndexChanged += CARDS_CB_CardArchetypeNumberOne_SelectedIndexChanged;
             // 
             // label34
             // 
@@ -833,6 +847,7 @@ namespace WolfX
             CARDS_PB_CardPicture.Location = new Point(6, 51);
             CARDS_PB_CardPicture.Name = "CARDS_PB_CardPicture";
             CARDS_PB_CardPicture.Size = new Size(305, 346);
+            CARDS_PB_CardPicture.SizeMode = PictureBoxSizeMode.CenterImage;
             CARDS_PB_CardPicture.TabIndex = 0;
             CARDS_PB_CardPicture.TabStop = false;
             // 
@@ -1232,6 +1247,8 @@ namespace WolfX
             // 
             // groupBox25
             // 
+            groupBox25.Controls.Add(DFY_LBL_PenThickness);
+            groupBox25.Controls.Add(DFY_NUD_PenThickness);
             groupBox25.Controls.Add(DFY_PNL_PenColour);
             groupBox25.Controls.Add(DFY_PNL_BackgroundColour);
             groupBox25.Controls.Add(DFY_BTN_ChangeBackGroundColour);
@@ -1243,10 +1260,27 @@ namespace WolfX
             groupBox25.TabStop = false;
             groupBox25.Text = "Color Tools";
             // 
+            // DFY_LBL_PenThickness
+            // 
+            DFY_LBL_PenThickness.AutoSize = true;
+            DFY_LBL_PenThickness.Location = new Point(6, 73);
+            DFY_LBL_PenThickness.Name = "DFY_LBL_PenThickness";
+            DFY_LBL_PenThickness.Size = new Size(85, 15);
+            DFY_LBL_PenThickness.TabIndex = 10;
+            DFY_LBL_PenThickness.Text = "Pen Thickness:";
+            // 
+            // DFY_NUD_PenThickness
+            // 
+            DFY_NUD_PenThickness.Location = new Point(119, 71);
+            DFY_NUD_PenThickness.Name = "DFY_NUD_PenThickness";
+            DFY_NUD_PenThickness.Size = new Size(75, 23);
+            DFY_NUD_PenThickness.TabIndex = 9;
+            DFY_NUD_PenThickness.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
             // DFY_PNL_PenColour
             // 
             DFY_PNL_PenColour.BackColor = Color.HotPink;
-            DFY_PNL_PenColour.Location = new Point(119, 48);
+            DFY_PNL_PenColour.Location = new Point(119, 43);
             DFY_PNL_PenColour.Name = "DFY_PNL_PenColour";
             DFY_PNL_PenColour.Size = new Size(75, 23);
             DFY_PNL_PenColour.TabIndex = 8;
@@ -1254,7 +1288,7 @@ namespace WolfX
             // DFY_PNL_BackgroundColour
             // 
             DFY_PNL_BackgroundColour.BackColor = Color.Lime;
-            DFY_PNL_BackgroundColour.Location = new Point(119, 19);
+            DFY_PNL_BackgroundColour.Location = new Point(119, 14);
             DFY_PNL_BackgroundColour.Name = "DFY_PNL_BackgroundColour";
             DFY_PNL_BackgroundColour.Size = new Size(75, 23);
             DFY_PNL_BackgroundColour.TabIndex = 6;
@@ -1262,7 +1296,7 @@ namespace WolfX
             // DFY_BTN_ChangeBackGroundColour
             // 
             DFY_BTN_ChangeBackGroundColour.Font = new Font("Segoe UI", 9F);
-            DFY_BTN_ChangeBackGroundColour.Location = new Point(6, 19);
+            DFY_BTN_ChangeBackGroundColour.Location = new Point(6, 14);
             DFY_BTN_ChangeBackGroundColour.Name = "DFY_BTN_ChangeBackGroundColour";
             DFY_BTN_ChangeBackGroundColour.Size = new Size(107, 23);
             DFY_BTN_ChangeBackGroundColour.TabIndex = 7;
@@ -1273,7 +1307,7 @@ namespace WolfX
             // DFY_BTN_ChangePenColour
             // 
             DFY_BTN_ChangePenColour.Font = new Font("Segoe UI", 9F);
-            DFY_BTN_ChangePenColour.Location = new Point(6, 48);
+            DFY_BTN_ChangePenColour.Location = new Point(6, 43);
             DFY_BTN_ChangePenColour.Name = "DFY_BTN_ChangePenColour";
             DFY_BTN_ChangePenColour.Size = new Size(107, 23);
             DFY_BTN_ChangePenColour.TabIndex = 5;
@@ -1527,7 +1561,7 @@ namespace WolfX
             // Page_YDCManager
             // 
             Page_YDCManager.Controls.Add(groupBox14);
-            Page_YDCManager.Controls.Add(tabControl1);
+            Page_YDCManager.Controls.Add(YDC_TC_CardsInDeck);
             Page_YDCManager.Controls.Add(groupBox12);
             Page_YDCManager.Controls.Add(groupBox13);
             Page_YDCManager.Location = new Point(4, 24);
@@ -1596,16 +1630,16 @@ namespace WolfX
             YDC_BTN_AddCard.UseVisualStyleBackColor = true;
             YDC_BTN_AddCard.Click += YDC_BTN_AddCard_Click;
             // 
-            // tabControl1
+            // YDC_TC_CardsInDeck
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(8, 112);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1240, 496);
-            tabControl1.TabIndex = 10;
+            YDC_TC_CardsInDeck.Controls.Add(tabPage1);
+            YDC_TC_CardsInDeck.Controls.Add(tabPage2);
+            YDC_TC_CardsInDeck.Controls.Add(tabPage3);
+            YDC_TC_CardsInDeck.Location = new Point(8, 112);
+            YDC_TC_CardsInDeck.Name = "YDC_TC_CardsInDeck";
+            YDC_TC_CardsInDeck.SelectedIndex = 0;
+            YDC_TC_CardsInDeck.Size = new Size(1240, 496);
+            YDC_TC_CardsInDeck.TabIndex = 10;
             // 
             // tabPage1
             // 
@@ -1671,9 +1705,9 @@ namespace WolfX
             // 
             // groupBox12
             // 
-            groupBox12.Controls.Add(YDC_CHKBOX_UseCardID);
+            groupBox12.Controls.Add(YDC_CB_UseCardID);
             groupBox12.Controls.Add(YDC_BTN_OpenSaveFile);
-            groupBox12.Controls.Add(YDC_CHKBOX_LoadPictures);
+            groupBox12.Controls.Add(YDC_CB_LoadPictures);
             groupBox12.Controls.Add(YDC_BTN_SaveDeck);
             groupBox12.Controls.Add(YDC_BTN_OpenDeck);
             groupBox12.Location = new Point(214, 6);
@@ -1685,16 +1719,16 @@ namespace WolfX
             // 
             // YDC_CHKBOX_UseCardID
             // 
-            YDC_CHKBOX_UseCardID.AutoSize = true;
-            YDC_CHKBOX_UseCardID.Checked = true;
-            YDC_CHKBOX_UseCardID.CheckState = CheckState.Checked;
-            YDC_CHKBOX_UseCardID.Location = new Point(84, 72);
-            YDC_CHKBOX_UseCardID.Name = "YDC_CHKBOX_UseCardID";
-            YDC_CHKBOX_UseCardID.Size = new Size(92, 19);
-            YDC_CHKBOX_UseCardID.TabIndex = 7;
-            YDC_CHKBOX_UseCardID.Text = "Use Card IDs";
-            YDC_CHKBOX_UseCardID.UseVisualStyleBackColor = true;
-            YDC_CHKBOX_UseCardID.CheckedChanged += YDC_CHKBOX_UseCardID_CheckedChanged;
+            YDC_CB_UseCardID.AutoSize = true;
+            YDC_CB_UseCardID.Checked = true;
+            YDC_CB_UseCardID.CheckState = CheckState.Checked;
+            YDC_CB_UseCardID.Location = new Point(84, 72);
+            YDC_CB_UseCardID.Name = "YDC_CHKBOX_UseCardID";
+            YDC_CB_UseCardID.Size = new Size(92, 19);
+            YDC_CB_UseCardID.TabIndex = 7;
+            YDC_CB_UseCardID.Text = "Use Card IDs";
+            YDC_CB_UseCardID.UseVisualStyleBackColor = true;
+            YDC_CB_UseCardID.CheckedChanged += YDC_CHKBOX_UseCardID_CheckedChanged;
             // 
             // YDC_BTN_OpenSaveFile
             // 
@@ -1707,14 +1741,14 @@ namespace WolfX
             // 
             // YDC_CHKBOX_LoadPictures
             // 
-            YDC_CHKBOX_LoadPictures.AutoSize = true;
-            YDC_CHKBOX_LoadPictures.Location = new Point(84, 53);
-            YDC_CHKBOX_LoadPictures.Name = "YDC_CHKBOX_LoadPictures";
-            YDC_CHKBOX_LoadPictures.Size = new Size(97, 19);
-            YDC_CHKBOX_LoadPictures.TabIndex = 5;
-            YDC_CHKBOX_LoadPictures.Text = "Load Pictures";
-            YDC_CHKBOX_LoadPictures.UseVisualStyleBackColor = true;
-            YDC_CHKBOX_LoadPictures.CheckedChanged += YDC_CHKBOX_LoadPictures_CheckedChanged;
+            YDC_CB_LoadPictures.AutoSize = true;
+            YDC_CB_LoadPictures.Location = new Point(84, 53);
+            YDC_CB_LoadPictures.Name = "YDC_CHKBOX_LoadPictures";
+            YDC_CB_LoadPictures.Size = new Size(97, 19);
+            YDC_CB_LoadPictures.TabIndex = 5;
+            YDC_CB_LoadPictures.Text = "Load Pictures";
+            YDC_CB_LoadPictures.UseVisualStyleBackColor = true;
+            YDC_CB_LoadPictures.CheckedChanged += YDC_CHKBOX_LoadPictures_CheckedChanged;
             // 
             // YDC_BTN_SaveDeck
             // 
@@ -2569,6 +2603,8 @@ namespace WolfX
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
             groupBox25.ResumeLayout(false);
+            groupBox25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DFY_NUD_PenThickness).EndInit();
             Page_ANIMLISTManager.ResumeLayout(false);
             groupBox10.ResumeLayout(false);
             ANIM_GB_Info.ResumeLayout(false);
@@ -2582,7 +2618,7 @@ namespace WolfX
             Page_YDCManager.ResumeLayout(false);
             groupBox14.ResumeLayout(false);
             groupBox14.PerformLayout();
-            tabControl1.ResumeLayout(false);
+            YDC_TC_CardsInDeck.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
@@ -2714,13 +2750,13 @@ namespace WolfX
         private TabPage Page_YDCManager;
         private CheckBox CREDITS_CheckB_IsCredit;
         private GroupBox groupBox12;
-        private CheckBox YDC_CHKBOX_LoadPictures;
+        private CheckBox YDC_CB_LoadPictures;
         public Button YDC_BTN_SaveDeck;
         private Button YDC_BTN_OpenDeck;
         private GroupBox groupBox13;
         private Label YDC_LBL_NumOfCardInMain;
         private Label label14;
-        private TabControl tabControl1;
+        private TabControl YDC_TC_CardsInDeck;
         private TabPage tabPage1;
         private TabPage tabPage2;
         private Button YDC_BTN_OpenSaveFile;
@@ -2738,7 +2774,7 @@ namespace WolfX
         private TextBox YDC_TB_DeckName;
         private Button CARDS_BTN_SaveCard;
         private Button CARDS_BTN_OpenCards;
-        private CheckBox YDC_CHKBOX_UseCardID;
+        private CheckBox YDC_CB_UseCardID;
         private CheckBox YDC_CB_UseSimpleEditor;
         private ToolStripMenuItem WOLFUI_TOOLITEM_SetPath;
         private Button CARDS_BTN_CloseBinder;
@@ -2775,8 +2811,6 @@ namespace WolfX
         private Label label17;
         private TabPage Page_CardShopManager;
         private GroupBox groupBox20;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
         public Button PACKDATA_BTN_SavePackDEF;
         private Button PACKDATA_BTN_OpenPackDEF;
         private GroupBox groupBox19;
@@ -2791,7 +2825,6 @@ namespace WolfX
         private Label label6;
         private RadioButton CARDS_RB_SimilarOnEffect;
         private RadioButton CARDS_RB_AlwaysSimilar;
-        private ComboBox CARDS_CB_SimilarID;
         private ComboBox CARDS_CB_SimilarCardName;
         private Label label28;
         private TextBox CARDS_TB_CardPassword;
@@ -2799,7 +2832,6 @@ namespace WolfX
         private TextBox CARDS_TB_Kana;
         private Label label26;
         private TextBox CARDS_TB_CardNumber;
-        private CheckBox PDL_CB_ManualOpenWhenPathSet;
         private TabControl PACKDATA_TC_ListOfCardsSoldAtShop;
         private TabPage tabPage4;
         private ListView PACKDATA_LV_CommonCards;
@@ -2843,5 +2875,7 @@ namespace WolfX
         private Panel DFY_PNL_PenColour;
         private GroupBox groupBox25;
         private Button DFY_BTN_ChangeBackGroundColour;
+        private NumericUpDown DFY_NUD_PenThickness;
+        private Label DFY_LBL_PenThickness;
     }
 }

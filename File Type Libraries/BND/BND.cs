@@ -18,7 +18,7 @@ namespace Types
 
     public static class BND
     {
-        internal static string _Path { get; set; }
+        internal static string? Path { get; set; }
 
         private static uint SwapBytes(uint Number)
         {
@@ -36,7 +36,7 @@ namespace Types
 
         public static List<BNDString> Load(string Path)
         {
-            _Path = new FileInfo(Path).Name;
+            BND.Path = new FileInfo(Path).Name;
 
             using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
             var Strings = new List<BNDString>();
@@ -71,12 +71,12 @@ namespace Types
 
         public static void Save(List<BNDString> BNDStrings)
         {
-            if (_Path == null)
+            if (Path == null)
                 return;
 
             uint CurrentSize = (uint)BNDStrings.Count * 4 + 4;
 
-            using var Writer = new BinaryWriter(File.Open(_Path, FileMode.OpenOrCreate, FileAccess.Write));
+            using var Writer = new BinaryWriter(File.Open(Path, FileMode.OpenOrCreate, FileAccess.Write));
             {
                 var NumberOfItemsInHex = BitConverter.GetBytes(SwapBytes((uint)BNDStrings.Count));
                 Writer.Write(NumberOfItemsInHex);
