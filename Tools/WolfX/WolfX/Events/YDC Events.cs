@@ -44,6 +44,11 @@ namespace WolfX
             YDC_BTN_ReplaceCard.Enabled = true;
         }
 
+        private void YDC_BTN_SaveDeck_Click(object sender, EventArgs e)
+        {
+            YDC.Save();
+        }
+
         private void YDC_CHKBOX_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
             if (YDC_CB_UseCardID.Checked == false)
@@ -124,29 +129,51 @@ namespace WolfX
                 var Result = SimpleAdder.ShowDialog();
                 if (Result != DialogResult.OK) return;
 
-                switch (YDC_TC_CardsInDeck.SelectedTab.Text)
+                var deckName = YDC_TC_CardsInDeck.SelectedTab?.Text ?? string.Empty;
+                if (string.IsNullOrEmpty(deckName))
+                    return;
+
+                List<short> targetDeck;
+                ListView targetListView;
+
+                switch (deckName)
                 {
                     case "Main Deck":
-                        foreach (var Card in SimpleAdder.CardIDs)
-                        {
-                            if (YDC_CB_LoadPictures.Checked)
-                                Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
-
-                            if (!YDC_CB_UseCardID.Checked)
-                                YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
-                            else
-                                YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString());
-
-                            YDC.CardsInMainDeck.Add(Convert.ToInt16(Card));
-                        }
+                        targetDeck = YDC.CardsInMainDeck;
+                        targetListView = YDC_LV_MainDeckCards;
                         break;
 
                     case "Side Deck":
+                        targetDeck = YDC.CardsInSideDeck;
+                        targetListView = YDC_LV_SideDeckCards;
                         break;
 
                     case "Extra Deck":
+                        targetDeck = YDC.CardsInExtraDeck;
+                        targetListView = YDC_LV_ExtraDeckCards;
                         break;
+
+                    default:
+                        return; // unknown deck type
                 }
+
+                foreach (var card in SimpleAdder.CardIDs)
+                {
+                    var cardKey = card.ToString();
+
+                    if (YDC_CB_LoadPictures.Checked)
+                        Images.Images.Add(cardKey, Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{card}.jpg")));
+
+                    targetListView.Items.Add(
+                        YDC_CB_UseCardID.Checked ? cardKey : CARDS_Cards.Get_CardNameFromID((short)card),
+                        cardKey
+                    );
+
+                    targetDeck.Add((short)card);
+                }
+
+                if (deckName == "Main Deck")
+                    YDC_LBL_NumOfCardInMain.Text = YDC.CardsInMainDeck.Count.ToString();
             }
         }
 
@@ -172,7 +199,42 @@ namespace WolfX
                 MessageBox.Show("No Card Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            YDC_LV_MainDeckCards.Items.Remove(YDC_LV_MainDeckCards.SelectedItems[0]);
+            var deckName = YDC_TC_CardsInDeck.SelectedTab?.Text ?? string.Empty;
+            if (string.IsNullOrEmpty(deckName))
+                return;
+
+            List<short> targetDeck;
+            ListView targetListView;
+
+            switch (deckName)
+            {
+                case "Main Deck":
+                    targetDeck = YDC.CardsInMainDeck;
+                    targetListView = YDC_LV_MainDeckCards;
+                    break;
+
+                case "Side Deck":
+                    targetDeck = YDC.CardsInSideDeck;
+                    targetListView = YDC_LV_SideDeckCards;
+                    break;
+
+                case "Extra Deck":
+                    targetDeck = YDC.CardsInExtraDeck;
+                    targetListView = YDC_LV_ExtraDeckCards;
+                    break;
+
+                default:
+                    return; // unknown deck type
+            }
+
+            foreach (ListViewItem item in targetListView.SelectedItems.Cast<ListViewItem>().ToList())
+            {
+                targetListView.Items.Remove(item);
+                short selectedItemId = Convert.ToInt16(item.Tag ?? item.Text);
+
+                if (deckName == "Main Deck")
+                    YDC.CardsInMainDeck.Remove(selectedItemId);
+            }
 
             YDC_LBL_NumOfCardInMain.Text = YDC_LV_MainDeckCards.Items.Count.ToString();
         }
