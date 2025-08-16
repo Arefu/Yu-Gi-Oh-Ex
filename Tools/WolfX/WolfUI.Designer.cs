@@ -1717,13 +1717,13 @@ namespace WolfX
             groupBox12.TabStop = false;
             groupBox12.Text = "Deck Tools";
             // 
-            // YDC_CHKBOX_UseCardID
+            // YDC_CB_UseCardID
             // 
             YDC_CB_UseCardID.AutoSize = true;
             YDC_CB_UseCardID.Checked = true;
             YDC_CB_UseCardID.CheckState = CheckState.Checked;
             YDC_CB_UseCardID.Location = new Point(84, 72);
-            YDC_CB_UseCardID.Name = "YDC_CHKBOX_UseCardID";
+            YDC_CB_UseCardID.Name = "YDC_CB_UseCardID";
             YDC_CB_UseCardID.Size = new Size(92, 19);
             YDC_CB_UseCardID.TabIndex = 7;
             YDC_CB_UseCardID.Text = "Use Card IDs";
@@ -1739,11 +1739,11 @@ namespace WolfX
             YDC_BTN_OpenSaveFile.Text = "Extract Save";
             YDC_BTN_OpenSaveFile.UseVisualStyleBackColor = true;
             // 
-            // YDC_CHKBOX_LoadPictures
+            // YDC_CB_LoadPictures
             // 
             YDC_CB_LoadPictures.AutoSize = true;
             YDC_CB_LoadPictures.Location = new Point(84, 53);
-            YDC_CB_LoadPictures.Name = "YDC_CHKBOX_LoadPictures";
+            YDC_CB_LoadPictures.Name = "YDC_CB_LoadPictures";
             YDC_CB_LoadPictures.Size = new Size(97, 19);
             YDC_CB_LoadPictures.TabIndex = 5;
             YDC_CB_LoadPictures.Text = "Load Pictures";
@@ -1752,13 +1752,13 @@ namespace WolfX
             // 
             // YDC_BTN_SaveDeck
             // 
-            YDC_BTN_SaveDeck.Enabled = false;
             YDC_BTN_SaveDeck.Location = new Point(6, 53);
             YDC_BTN_SaveDeck.Name = "YDC_BTN_SaveDeck";
             YDC_BTN_SaveDeck.Size = new Size(72, 25);
             YDC_BTN_SaveDeck.TabIndex = 4;
             YDC_BTN_SaveDeck.Text = "Save ";
             YDC_BTN_SaveDeck.UseVisualStyleBackColor = true;
+            YDC_BTN_SaveDeck.Click += YDC_BTN_SaveDeck_Click;
             // 
             // YDC_BTN_OpenDeck
             // 
