@@ -210,8 +210,6 @@ namespace Types
         {
             if (Ready != true)
                 return;
-            if (Ready == true)
-                Refresh();
 
             uint Offset = 0x0;
             string Data = "";
@@ -289,6 +287,11 @@ namespace Types
                 }
             }
             while (PropReader.BaseStream.Position <= PropReader.BaseStream.Length);
+
+            PropReader?.Close();
+            IndxReader?.Close();
+            NameReader?.Close();
+            DescReader?.Close();
         }
 
         public static void SaveCardInfo()
@@ -416,14 +419,6 @@ namespace Types
             reader.BaseStream.Position = Start + encoding.GetByteCount(Res + '\0');
 
             return Res;
-        }
-
-        internal static void WriteNullTerminatedString(this BinaryWriter writer, Encoding encoding)
-        {
-            var Builder = new StringBuilder();
-            var Writer = new StreamWriter(writer.BaseStream, encoding);
-
-            var Start = writer.BaseStream.Position;
         }
     }
 }
