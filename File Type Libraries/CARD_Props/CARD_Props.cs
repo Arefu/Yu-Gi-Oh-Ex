@@ -219,6 +219,7 @@ namespace Types
                 Offset = (uint)NameReader.BaseStream.Position;
                 Data = NameReader.ReadNullTerminatedString(Encoding.Unicode);
 
+                if (Names.ContainsKey(Offset)) continue;
                 Names.Add(Offset, Data);
             }
 
@@ -227,6 +228,7 @@ namespace Types
                 Offset = (uint)DescReader.BaseStream.Position;
                 Data = DescReader.ReadNullTerminatedString(Encoding.Unicode);
 
+                if (Descs.ContainsKey(Offset)) continue;
                 Descs.Add(Offset, Data);
             }
         }
