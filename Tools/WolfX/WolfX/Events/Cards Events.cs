@@ -27,7 +27,7 @@ namespace WolfX
             CARDS_Cards.LoadCardProps();
 
             Card_Same.Load($"{State.Path}\\bin\\CARD_Same.bin");
-            Card_Named.Load($"{State.Path}\\bin\\CARD_Named.bin");
+            Card_Named.Load($"{State.Path}\\bin\\Card_named.bin");
             Card_Pass.Load($"{State.Path}\\bin\\CARD_Pass.bin");
             Card_Kana.Load($"{State.Path}\\bin\\CARD_Kana1_{State.Language.ToString()[0]}.bin", State.Language.ToString());
             Card_PackID.Load($"{State.Path}\\bin\\CARD_PackID.bin");
