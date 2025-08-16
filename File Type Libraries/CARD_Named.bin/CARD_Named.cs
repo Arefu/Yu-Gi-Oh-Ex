@@ -50,10 +50,13 @@
             GladiatorBeastsBattle = 38,
             BambooSword = 39,
             EvilHero = 40,
+
             //41
             ArcanaForce = 42,
+
             //43
             Skyblaster = 44,
+
             Exodia = 45,
             UltimateCrystal = 46,
             CyberDragonFusionRequirement = 47,
@@ -73,50 +76,21 @@
             Naturia = 62,
             Clear = 63,
             RedEyes = 64,
-            Blackwing =  65,
+            Blackwing = 65,
             SlashAssaultMode = 66,
             Fabled = 67,
             Jurrac = 68,
 
-
-
-
-
-
             Kuriboh = 287,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             //390
             Mathmech = 391,
+
             Dragonmaid = 392,
             Generaider = 393,
-            Ignister =  394,
+            Ignister = 394,
             Ai = 395,
-            AncientWarriors  =  396,
+            AncientWarriors = 396,
             Megalith = 397,
             Palladium = 398,
             Onomat = 399,
@@ -170,7 +144,7 @@
 
         public static void Save()
         {
-            using var Writer = new BinaryWriter(File.Open("Card_named.bin", FileMode.Create, FileAccess.Write));
+            using var Writer = new BinaryWriter(File.Open("CARD_Named.bin", FileMode.Create, FileAccess.Write));
             ushort archetypeCount = (ushort)CardsInArchetype.Count;
             ushort totalCards = (ushort)CardsInArchetype.Sum(kv => kv.Value.Count);
 
