@@ -28,15 +28,27 @@ namespace WolfX
             YDC_TB_DeckName.Text = OpenFile.SafeFileName;
             YDC_LV_MainDeckCards.Items.Clear();
             YDC_LBL_NumOfCardInMain.Text = YDC.MAX_NUMBER_OF_CARDS_IN_DECK.ToString();
-            foreach (var Card in Cards)
+            foreach (var cardId in Cards)
             {
                 if (YDC_CB_LoadPictures.Checked)
-                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+                {
+                    if (Images.Images.ContainsKey(cardId.ToString())) continue;
 
-                if (YDC_CB_UseCardID.Checked)
-                    YDC_LV_MainDeckCards.Items.Add(Card.ToString(), Card.ToString(), Card.ToString());
-                else
-                    YDC_LV_MainDeckCards.Items.Add(CARDS_Cards.Get_CardNameFromID(Card), Card.ToString());
+                    Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
+                }
+
+                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
+
+                var item = new ListViewItem(text)
+                {
+                    Name = cardId.ToString(),
+                    Tag = cardId
+                };
+
+                if (YDC_CB_LoadPictures.Checked)
+                    item.ImageKey = cardId.ToString();
+
+                YDC_LV_MainDeckCards.Items.Add(item);
             }
 
             YDC_BTN_AddCard.Enabled = true;
