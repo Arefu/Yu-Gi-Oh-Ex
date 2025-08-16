@@ -1,0 +1,43 @@
+name: Build and Canary Release
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Restore NuGet packages
+        run: nuget restore WolfX.sln
+
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build solution
+        run: msbuild WolfX.sln /p:Configuration=Release
+
+      - name: Zip Binaries folder
+        run: Compress-Archive -Path Binaries\* -DestinationPath YuGiOhEX.zip
+
+      - name: Create or update canary release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: canary
+          name: "Canary Build - ${{ github.sha }}"
+          body: |
+            Canary build for commit ${{ github.sha }}
+            Triggered by ${{ github.actor }} on branch ${{ github.ref_name }}
+          draft: false
+          prerelease: true
+          files: |
+            YuGiOhEX.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
