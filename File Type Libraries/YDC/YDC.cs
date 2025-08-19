@@ -1,4 +1,6 @@
-﻿namespace Types
+﻿using System.Diagnostics;
+
+namespace Types
 {
     public static class YDC
     {
@@ -15,22 +17,47 @@
         public static List<short> CardsInSideDeck = [];
         public static List<short> CardsInExtraDeck = [];
 
-        public static List<short> Load(string path)
+        public static void Load(string path)
         {
+            CardsInMainDeck.Clear();
+            CardsInSideDeck.Clear();
+            CardsInExtraDeck.Clear();
+
             DECK_NAME = new FileInfo(path).Name;
             short CurrentlyRead = 0;
 
             using (var Reader = new BinaryReader(File.Open(path, FileMode.Open)))
             {
-                Reader.BaseStream.Position = 0x8;
-                MAX_NUMBER_OF_CARDS_IN_DECK = Reader.ReadInt16();
-                while (CurrentlyRead < MAX_NUMBER_OF_CARDS_IN_DECK && Reader.BaseStream.Position != Reader.BaseStream.Length)
+                while (Reader.BaseStream.Position != Reader.BaseStream.Length)
                 {
-                    CardsInMainDeck.Add(Reader.ReadInt16());
-                    CurrentlyRead++;
+                    Reader.BaseStream.Position = 0x8;
+                    NumberOfCardsInDeck = Reader.ReadInt16();
+                    while (CurrentlyRead < NumberOfCardsInDeck)
+                    {
+                        CardsInMainDeck.Add(Reader.ReadInt16());
+                        CurrentlyRead++;
+                    }
+                    if (Reader.BaseStream.Position == Reader.BaseStream.Length) break;
+                    CurrentlyRead = 0;
+
+                    NumberOfCardsInSideDeck = Reader.ReadInt16();
+                    while (CurrentlyRead < NumberOfCardsInSideDeck)
+                    {
+                        CardsInSideDeck.Add(Reader.ReadInt16());
+                        CurrentlyRead++;
+                    }
+
+                    if (Reader.BaseStream.Position == Reader.BaseStream.Length) break;
+                    CurrentlyRead = 0;
+
+                    NumberOfCardsInExtraDeck = Reader.ReadInt16();
+                    while (CurrentlyRead < NumberOfCardsInExtraDeck)
+                    {
+                        CardsInExtraDeck.Add(Reader.ReadInt16());
+                        CurrentlyRead++;
+                    }
                 }
             }
-            return CardsInMainDeck;
         }
 
         public static void Save()
