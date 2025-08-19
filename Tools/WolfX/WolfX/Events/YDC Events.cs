@@ -24,18 +24,17 @@ namespace WolfX
                 return;
             }
 
-            var Cards = YDC.Load(OpenFile.FileName);
+            YDC.Load(OpenFile.FileName);
             YDC_TB_DeckName.Text = OpenFile.SafeFileName;
             YDC_LV_MainDeckCards.Items.Clear();
-            YDC_LBL_NumOfCardInMain.Text = YDC.MAX_NUMBER_OF_CARDS_IN_DECK.ToString();
-            foreach (var cardId in Cards)
+            YDC_LBL_NumOfCardInMain.Text = YDC.NumberOfCardsInDeck.ToString();
+            YDC_LBL_NumOfCardsInSide.Text = YDC.NumberOfCardsInSideDeck.ToString();
+            YDC_LBL_NumOfCardsInExtra.Text = YDC.NumberOfCardsInExtraDeck.ToString();
+
+            foreach (var cardId in YDC.CardsInMainDeck)
             {
                 if (YDC_CB_LoadPictures.Checked)
-                {
-                    if (Images.Images.ContainsKey(cardId.ToString())) continue;
-
                     Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
-                }
 
                 var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
 
@@ -51,6 +50,44 @@ namespace WolfX
                 YDC_LV_MainDeckCards.Items.Add(item);
             }
 
+            foreach (var cardId in YDC.CardsInSideDeck)
+            {
+                if (YDC_CB_LoadPictures.Checked)
+                    Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
+
+                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
+
+                var item = new ListViewItem(text)
+                {
+                    Name = cardId.ToString(),
+                    Tag = cardId
+                };
+
+                if (YDC_CB_LoadPictures.Checked)
+                    item.ImageKey = cardId.ToString();
+
+                YDC_LV_SideDeckCards.Items.Add(item);
+            }
+
+            foreach (var cardId in YDC.CardsInExtraDeck)
+            {
+                if (YDC_CB_LoadPictures.Checked)
+                    Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
+
+                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
+
+                var item = new ListViewItem(text)
+                {
+                    Name = cardId.ToString(),
+                    Tag = cardId
+                };
+
+                if (YDC_CB_LoadPictures.Checked)
+                    item.ImageKey = cardId.ToString();
+
+                YDC_LV_ExtraDeckCards.Items.Add(item);
+            }
+
             YDC_BTN_AddCard.Enabled = true;
             YDC_BTN_RemoveCard.Enabled = true;
             YDC_BTN_ReplaceCard.Enabled = true;
@@ -63,7 +100,7 @@ namespace WolfX
 
         private void YDC_CHKBOX_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
-            if (YDC_CB_UseCardID.Checked == false)
+            if (!YDC_CB_UseCardID.Checked)
             {
                 if (State.Path != null)
                 {
@@ -73,28 +110,26 @@ namespace WolfX
                 }
                 else
                 {
-                    using (var OpenFile = new OpenFileDialog())
+                    using var OpenFile = new OpenFileDialog();
+                    OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
+                    OpenFile.Title = "Open Cards Indx File";
+                    OpenFile.Multiselect = false;
+                    OpenFile.InitialDirectory = State.Path;
+                    var Res = OpenFile.ShowDialog();
+                    if (Res != DialogResult.OK || !OpenFile.SafeFileName.StartsWith("CARD_Indx"))
                     {
-                        OpenFile.Filter = $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin";
-                        OpenFile.Title = "Open Cards Indx File";
-                        OpenFile.Multiselect = false;
-                        OpenFile.InitialDirectory = State.Path;
-                        var Res = OpenFile.ShowDialog();
-                        if (Res != DialogResult.OK || OpenFile.SafeFileName.StartsWith("CARD_Indx") != true)
-                        {
-                            MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        if (CARDS_Cards.Setup_CardBinder(OpenFile.FileName, (CARDS_INFO.CARD_Language)State.Language) == false)
-                        {
-                            MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        CARDS_Cards.LoadCardInfo();
-                        CARDS_Cards.LoadCardProps();
+                        MessageBox.Show("Please Select a Cards Indx File", "No Cards Indx File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
+
+                    if (!CARDS_Cards.Setup_CardBinder(OpenFile.FileName, (CARDS_INFO.CARD_Language)State.Language))
+                    {
+                        MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    CARDS_Cards.LoadCardInfo();
+                    CARDS_Cards.LoadCardProps();
                 }
             }
         }
@@ -105,9 +140,6 @@ namespace WolfX
             {
                 if (State.Path != null)
                 {
-                    CARDS_Cards.Setup_CardBinder($"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language);
-                    CARDS_Cards.LoadCardInfo();
-                    CARDS_Cards.LoadCardProps();
                     ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
                     YDC_LV_MainDeckCards.View = View.LargeIcon;
                 }
