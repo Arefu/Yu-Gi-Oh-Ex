@@ -13,5 +13,5 @@ std::string Config::Get_WorkingDirectory()
 	auto Path = new CHAR[MAX_PATH];
 	GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", Path, MAX_PATH, ".\\Config.ini");
 
-	return std::string(Path).append("\\Effects\\");
+	return std::string(Path).append("\\Effects");
 }
