@@ -161,9 +161,9 @@ namespace WolfX
             YDC_TC_CardsInDeck = new TabControl();
             tabPage1 = new TabPage();
             YDC_LV_MainDeckCards = new ListView();
-            tabPage2 = new TabPage();
-            YDC_LV_SideDeckCards = new ListView();
             tabPage3 = new TabPage();
+            YDC_LV_SideDeckCards = new ListView();
+            tabPage2 = new TabPage();
             YDC_LV_ExtraDeckCards = new ListView();
             groupBox12 = new GroupBox();
             YDC_CB_UseCardID = new CheckBox();
@@ -285,8 +285,8 @@ namespace WolfX
             groupBox14.SuspendLayout();
             YDC_TC_CardsInDeck.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPage2.SuspendLayout();
             groupBox12.SuspendLayout();
             groupBox13.SuspendLayout();
             Page_PDLimitsManager.SuspendLayout();
@@ -1662,16 +1662,16 @@ namespace WolfX
             YDC_LV_MainDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_MainDeckCards.View = View.List;
             // 
-            // tabPage2
+            // tabPage3
             // 
-            tabPage2.Controls.Add(YDC_LV_SideDeckCards);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1232, 468);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Side Deck";
-            tabPage2.UseVisualStyleBackColor = true;
+            tabPage3.Controls.Add(YDC_LV_SideDeckCards);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(1232, 468);
+            tabPage3.TabIndex = 1;
+            tabPage3.Text = "Side Deck";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // YDC_LV_SideDeckCards
             // 
@@ -1683,15 +1683,15 @@ namespace WolfX
             YDC_LV_SideDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_SideDeckCards.View = View.List;
             // 
-            // tabPage3
+            // tabPage2
             // 
-            tabPage3.Controls.Add(YDC_LV_ExtraDeckCards);
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1232, 468);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Extra Deck";
-            tabPage3.UseVisualStyleBackColor = true;
+            tabPage2.Controls.Add(YDC_LV_ExtraDeckCards);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(1232, 468);
+            tabPage2.TabIndex = 2;
+            tabPage2.Text = "Extra Deck";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // YDC_LV_ExtraDeckCards
             // 
@@ -2620,8 +2620,8 @@ namespace WolfX
             groupBox14.PerformLayout();
             YDC_TC_CardsInDeck.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
             groupBox12.ResumeLayout(false);
             groupBox12.PerformLayout();
             groupBox13.ResumeLayout(false);
@@ -2758,9 +2758,9 @@ namespace WolfX
         private Label label14;
         private TabControl YDC_TC_CardsInDeck;
         private TabPage tabPage1;
-        private TabPage tabPage2;
-        private Button YDC_BTN_OpenSaveFile;
         private TabPage tabPage3;
+        private Button YDC_BTN_OpenSaveFile;
+        private TabPage tabPage2;
         private GroupBox groupBox14;
         public Button YDC_BTN_ReplaceCard;
         public Button YDC_BTN_RemoveCard;
