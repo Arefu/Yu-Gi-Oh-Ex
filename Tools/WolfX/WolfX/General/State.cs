@@ -13,6 +13,7 @@
 
     internal static class State
     {
+        internal static ImageList Images = new ImageList();
         internal static string? Path { get; set; }
         public static Language Language { get; set; } = Language.English;
     }
