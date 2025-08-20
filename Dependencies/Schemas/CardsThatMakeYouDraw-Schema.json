@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Operation": {
+            "type": "string",
+            "enum": ["Add", "Remove", "Update"]
+          },
+          "Cards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "CardID": { "type": "integer" ,"minimum": 4007},
+                "Count": { "type": "integer"}
+              },
+              "required": ["CardID"]
+            },
+            "minItems": 1
+          }
+        },
+        "required": ["Operation", "Cards"]
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["Operations"]
+}
