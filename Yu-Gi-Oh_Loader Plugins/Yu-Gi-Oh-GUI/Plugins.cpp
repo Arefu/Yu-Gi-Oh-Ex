@@ -30,7 +30,6 @@ void PluginManager::Load()
 
 void PluginManager::DelayLoad()
 {
-	;
 	std::this_thread::sleep_for(std::chrono::milliseconds(100)); //Wait just a smidge for Windows to do Windows things.
 	while (YuGiOhEx::g_bOnPageFirst == true)
 	{
@@ -129,8 +128,8 @@ std::vector<std::string> PluginManager::ScanForPlugins()
 	HANDLE hFind = FindFirstFileA((std::string(PluginPath) + "\\YGO-Ex\\*.dll").c_str(), &FindFileData);
 	if (hFind == INVALID_HANDLE_VALUE)
 	{
-		MessageBoxA(NULL, PluginPath, "Plugin Path", MB_OK);
-		return DLLs;
+		MessageBoxA(NULL, "PluginsPath is empty! Check your Config.ini", "Plugin Path", MB_OK);
+		exit(ERROR_FILE_NOT_FOUND);
 	}
 
 	do
