@@ -1,4 +1,5 @@
-﻿using Types;
+﻿using System.Runtime.CompilerServices;
+using Types;
 using WolfX.WolfX.File_Type_UI;
 
 namespace WolfX
@@ -26,72 +27,59 @@ namespace WolfX
 
             YDC.Load(OpenFile.FileName);
             YDC_TB_DeckName.Text = OpenFile.SafeFileName;
-            YDC_LV_MainDeckCards.Items.Clear();
+
             YDC_LBL_NumOfCardInMain.Text = YDC.NumberOfCardsInDeck.ToString();
             YDC_LBL_NumOfCardsInSide.Text = YDC.NumberOfCardsInSideDeck.ToString();
             YDC_LBL_NumOfCardsInExtra.Text = YDC.NumberOfCardsInExtraDeck.ToString();
 
-            foreach (var cardId in YDC.CardsInMainDeck)
-            {
-                if (YDC_CB_LoadPictures.Checked)
-                    Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
-
-                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
-
-                var item = new ListViewItem(text)
-                {
-                    Name = cardId.ToString(),
-                    Tag = cardId
-                };
-
-                if (YDC_CB_LoadPictures.Checked)
-                    item.ImageKey = cardId.ToString();
-
-                YDC_LV_MainDeckCards.Items.Add(item);
-            }
-
-            foreach (var cardId in YDC.CardsInSideDeck)
-            {
-                if (YDC_CB_LoadPictures.Checked)
-                    Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
-
-                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
-
-                var item = new ListViewItem(text)
-                {
-                    Name = cardId.ToString(),
-                    Tag = cardId
-                };
-
-                if (YDC_CB_LoadPictures.Checked)
-                    item.ImageKey = cardId.ToString();
-
-                YDC_LV_SideDeckCards.Items.Add(item);
-            }
-
-            foreach (var cardId in YDC.CardsInExtraDeck)
-            {
-                if (YDC_CB_LoadPictures.Checked)
-                    Images.Images.Add(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
-
-                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
-
-                var item = new ListViewItem(text)
-                {
-                    Name = cardId.ToString(),
-                    Tag = cardId
-                };
-
-                if (YDC_CB_LoadPictures.Checked)
-                    item.ImageKey = cardId.ToString();
-
-                YDC_LV_ExtraDeckCards.Items.Add(item);
-            }
+            AddCardsToListViewFromDeck(YDC_LV_MainDeckCards, YDC.CardsInMainDeck);
+            AddCardsToListViewFromDeck(YDC_LV_SideDeckCards, YDC.CardsInSideDeck);
+            AddCardsToListViewFromDeck(YDC_LV_ExtraDeckCards, YDC.CardsInExtraDeck);
 
             YDC_BTN_AddCard.Enabled = true;
             YDC_BTN_RemoveCard.Enabled = true;
             YDC_BTN_ReplaceCard.Enabled = true;
         }
+
+        #region YDC_HELPER_FUNCTIONS
+
+        /// <summary>
+        /// Adds Cards to ListView List
+        /// </summary>
+        /// <param name="List">The destination ListView object</param>
+        /// <param name="Cards">The source Card ID lilst</param>
+        private void AddCardsToListViewFromDeck(ListView List, List<short> Cards)
+        {
+            if (YDC_CB_LoadPictures.Checked)
+            {
+                State.Images.ImageSize = new Size(64, 64);
+                List.View = View.LargeIcon;
+                List.LargeImageList = State.Images;
+            }
+            List.Items.Clear();
+
+            foreach (var cardId in Cards)
+            {
+                if (YDC_CB_LoadPictures.Checked)
+                    Utility.Add_ItemToStateImageList(cardId.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{cardId}.jpg")));
+
+                var text = YDC_CB_UseCardID.Checked ? cardId.ToString() : CARDS_Cards.Get_CardNameFromID(cardId);
+
+                var item = new ListViewItem(text)
+                {
+                    Name = cardId.ToString(),
+                    Tag = cardId,
+                    ImageKey = cardId.ToString()
+                };
+
+                if (YDC_CB_LoadPictures.Checked)
+                    item.ImageKey = cardId.ToString();
+
+                List.Items.Add(item);
+            }
+        }
+
+        #endregion YDC_HELPER_FUNCTIONS
 
         private void YDC_BTN_SaveDeck_Click(object sender, EventArgs e)
         {
@@ -167,58 +155,49 @@ namespace WolfX
 
         private void YDC_BTN_AddCard_Click(object sender, EventArgs e)
         {
-            if (YDC_CB_UseSimpleEditor.Checked)
+            if (!YDC_CB_UseSimpleEditor.Checked)
+                return;
+
+            var simpleAdder = new SimpleCardAdd();
+            if (simpleAdder.ShowDialog() != DialogResult.OK)
+                return;
+
+            var tab = YDC_TC_CardsInDeck.SelectedTab;
+            if (tab == null) return;
+
+            List<short> targetDeck;
+            ListView targetListView;
+            Label targetLabel;
+
+            switch (tab.Text)
             {
-                var SimpleAdder = new SimpleCardAdd();
-                var Result = SimpleAdder.ShowDialog();
-                if (Result != DialogResult.OK) return;
+                case "Main Deck":
+                    targetDeck = YDC.CardsInMainDeck;
+                    targetListView = YDC_LV_MainDeckCards;
+                    targetLabel = YDC_LBL_NumOfCardInMain;
+                    break;
 
-                var deckName = YDC_TC_CardsInDeck.SelectedTab?.Text ?? string.Empty;
-                if (string.IsNullOrEmpty(deckName))
+                case "Side Deck":
+                    targetDeck = YDC.CardsInSideDeck;
+                    targetListView = YDC_LV_SideDeckCards;
+                    targetLabel = YDC_LBL_NumOfCardsInSide;
+                    break;
+
+                case "Extra Deck":
+                    targetDeck = YDC.CardsInExtraDeck;
+                    targetListView = YDC_LV_ExtraDeckCards;
+                    targetLabel = YDC_LBL_NumOfCardsInExtra;
+                    break;
+
+                default:
                     return;
-
-                List<short> targetDeck;
-                ListView targetListView;
-
-                switch (deckName)
-                {
-                    case "Main Deck":
-                        targetDeck = YDC.CardsInMainDeck;
-                        targetListView = YDC_LV_MainDeckCards;
-                        break;
-
-                    case "Side Deck":
-                        targetDeck = YDC.CardsInSideDeck;
-                        targetListView = YDC_LV_SideDeckCards;
-                        break;
-
-                    case "Extra Deck":
-                        targetDeck = YDC.CardsInExtraDeck;
-                        targetListView = YDC_LV_ExtraDeckCards;
-                        break;
-
-                    default:
-                        return; // unknown deck type
-                }
-
-                foreach (var card in SimpleAdder.CardIDs)
-                {
-                    var cardKey = card.ToString();
-
-                    if (YDC_CB_LoadPictures.Checked)
-                        Images.Images.Add(cardKey, Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{card}.jpg")));
-
-                    targetListView.Items.Add(
-                        YDC_CB_UseCardID.Checked ? cardKey : CARDS_Cards.Get_CardNameFromID((short)card),
-                        cardKey
-                    );
-
-                    targetDeck.Add((short)card);
-                }
-
-                if (deckName == "Main Deck")
-                    YDC_LBL_NumOfCardInMain.Text = YDC.CardsInMainDeck.Count.ToString();
             }
+
+            foreach (var card in simpleAdder.CardIDs)
+                targetDeck.Add((short)card);
+
+            AddCardsToListViewFromDeck(targetListView, targetDeck);
+            targetLabel.Text = targetDeck.Count.ToString();
         }
 
         private void YDC_BTN_ReplaceCard_Click(object sender, EventArgs e)
