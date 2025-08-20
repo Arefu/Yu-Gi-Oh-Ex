@@ -38,6 +38,13 @@ namespace WolfX
                 : defaultFile;
         }
 
+        internal static void Add_ItemToStateImageList(string imageKey, Image image)
+        {
+            if (State.Images.Images.ContainsKey(imageKey)) return;
+
+            State.Images.Images.Add(imageKey, image);
+        }
+
         internal static string Get_UserSelectedFile(string Title, string Filter)
         {
             using (var OpenFile = new OpenFileDialog())
