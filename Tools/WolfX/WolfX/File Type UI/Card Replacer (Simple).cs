@@ -4,7 +4,7 @@ namespace WolfX.WolfX.File_Type_UI
 {
     public partial class SimpleCardAdd : Form
     {
-        public List<int> CardIDs { get; set; }
+        public List<short> CardIDs { get; set; }
 
         public SimpleCardAdd()
         {
@@ -32,7 +32,7 @@ namespace WolfX.WolfX.File_Type_UI
 
             foreach (var Card in StrCardIDs)
             {
-                if (int.TryParse(Card, out int parsedID))
+                if (short.TryParse(Card, out short parsedID))
                 {
                     CardIDs.Add(parsedID);
                 }
