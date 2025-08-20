@@ -1,6 +1,13 @@
 {
-    "operation": "Add",
-    "CardIDs": {
-        "4007": "2"
-    }
+    "Operations": [
+        {
+            "Operation": "Add",
+            "Cards": [
+                {
+                    "CardID": 4007,
+                    "Count": 2
+                }
+            ]
+        }
+    ]
 }
