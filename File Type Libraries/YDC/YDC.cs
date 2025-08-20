@@ -9,9 +9,39 @@ namespace Types
         private static short MAX_NUMBER_OF_CARDS_IN_EXTRA_DECK = 15;
         private static string DECK_NAME { get; set; }
 
-        public static short NumberOfCardsInDeck;
-        public static short NumberOfCardsInSideDeck;
-        public static short NumberOfCardsInExtraDeck;
+        private static short _numberOfCardsInDeck;
+        private static short _numebrOfCardsInSideDeck;
+        private static short _numberOfCardsInExtraDeck;
+
+        public static short NumberOfCardsInDeck
+        {
+            get => _numberOfCardsInDeck;
+            set
+            {
+                if (_numberOfCardsInDeck != value)
+                    _numberOfCardsInDeck = value;
+            }
+        }
+
+        public static short NumberOfCardsInSideDeck
+        {
+            get { return (short)CardsInSideDeck.Count; }
+            set
+            {
+                if (_numebrOfCardsInSideDeck != value)
+                    _numebrOfCardsInSideDeck = value;
+            }
+        }
+
+        public static short NumberOfCardsInExtraDeck
+        {
+            get { return (short)CardsInExtraDeck.Count; }
+            set
+            {
+                if (_numberOfCardsInExtraDeck != value)
+                    _numberOfCardsInExtraDeck = value;
+            }
+        }
 
         public static List<short> CardsInMainDeck = [];
         public static List<short> CardsInSideDeck = [];
@@ -31,29 +61,28 @@ namespace Types
                 while (Reader.BaseStream.Position != Reader.BaseStream.Length)
                 {
                     Reader.BaseStream.Position = 0x8;
-                    NumberOfCardsInDeck = Reader.ReadInt16();
-                    while (CurrentlyRead < NumberOfCardsInDeck)
+                    _numberOfCardsInDeck = Reader.ReadInt16();
+                    while (CurrentlyRead < _numberOfCardsInDeck)
                     {
                         CardsInMainDeck.Add(Reader.ReadInt16());
                         CurrentlyRead++;
                     }
                     if (Reader.BaseStream.Position == Reader.BaseStream.Length) break;
                     CurrentlyRead = 0;
-
-                    NumberOfCardsInSideDeck = Reader.ReadInt16();
-                    while (CurrentlyRead < NumberOfCardsInSideDeck)
+                    _numberOfCardsInExtraDeck = Reader.ReadInt16();
+                    while (CurrentlyRead < _numberOfCardsInExtraDeck)
                     {
-                        CardsInSideDeck.Add(Reader.ReadInt16());
+                        CardsInExtraDeck.Add(Reader.ReadInt16());
                         CurrentlyRead++;
                     }
 
                     if (Reader.BaseStream.Position == Reader.BaseStream.Length) break;
                     CurrentlyRead = 0;
 
-                    NumberOfCardsInExtraDeck = Reader.ReadInt16();
-                    while (CurrentlyRead < NumberOfCardsInExtraDeck)
+                    _numebrOfCardsInSideDeck = Reader.ReadInt16();
+                    while (CurrentlyRead < _numebrOfCardsInSideDeck)
                     {
-                        CardsInExtraDeck.Add(Reader.ReadInt16());
+                        CardsInSideDeck.Add(Reader.ReadInt16());
                         CurrentlyRead++;
                     }
                 }
