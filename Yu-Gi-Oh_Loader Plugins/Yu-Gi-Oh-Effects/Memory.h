@@ -33,7 +33,6 @@ public:
 	static uint8_t* EmplaceMOV(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
 	static uint8_t* EmplaceCMP(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
 	static uint8_t* EmplaceLEARelativeRsi(void* targetAddress, void* baseAddress, bool Protected);
-
 	static uint8_t* EmplaceRET(void* targetAddress, bool Protected);
 	static uint8_t* EmplaceNOP(void* targetAddress, bool Protected, int fillLength);
 private:
