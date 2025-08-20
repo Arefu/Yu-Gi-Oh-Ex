@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Effects">
       <UniqueIdentifier>{f9913fcc-9eae-47c0-a8f8-aaa033adc992}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\File">
+      <UniqueIdentifier>{de2f44d4-638a-4008-86d6-18d5a1b46af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\File">
+      <UniqueIdentifier>{63956e38-12ac-48ed-9843-8acfd13fd6c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -38,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="Memory.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FIle.cpp">
+      <Filter>Source Files\File</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +72,9 @@
     </ClInclude>
     <ClInclude Include="CardsThatMakeYouDraw.h">
       <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>Header Files\File</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
