@@ -16,19 +16,19 @@ namespace WolfX
 
             if (PACKDATA_CB_LoadImages.Checked)
             {
-                Images.ImageSize = new Size(64, 64);
+                State.Images.ImageSize = new Size(64, 64);
 
                 PACKDATA_LV_CommonCards.View = View.LargeIcon;
-                PACKDATA_LV_CommonCards.LargeImageList = Images;
+                PACKDATA_LV_CommonCards.LargeImageList = State.Images;
 
                 PACKDATA_LV_RareCards.View = View.LargeIcon;
-                PACKDATA_LV_RareCards.LargeImageList = Images;
+                PACKDATA_LV_RareCards.LargeImageList = State.Images;
             }
 
             foreach (short id in PACKDATA.PACKDATA._CommonCards)
             {
                 if (PACKDATA_CB_LoadImages.Checked)
-                    Images.Images.Add(id.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{id}.jpg")));
+                    Utility.Add_ItemToStateImageList(id.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{id}.jpg")));
 
                 if (!PACKDATA_CB_UseCardID.Checked)
                     PACKDATA_LV_CommonCards.Items.Add(CARDS_Cards.Get_CardNameFromID(id), id.ToString());
@@ -39,7 +39,7 @@ namespace WolfX
             foreach (short id in PACKDATA.PACKDATA._RareCards)
             {
                 if (PACKDATA_CB_LoadImages.Checked)
-                    Images.Images.Add(id.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{id}.jpg")));
+                    Utility.Add_ItemToStateImageList(id.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{id}.jpg")));
 
                 if (!PACKDATA_CB_UseCardID.Checked)
                     PACKDATA_LV_RareCards.Items.Add(CARDS_Cards.Get_CardNameFromID(id), id.ToString());

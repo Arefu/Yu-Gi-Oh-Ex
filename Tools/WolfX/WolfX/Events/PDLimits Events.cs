@@ -5,8 +5,6 @@ namespace WolfX
 {
     public partial class WolfUI
     {
-        private ImageList Images = new ImageList();
-
         private void PDL_BTN_OpenPDL_Click(object sender, EventArgs e)
         {
             PDL_LV_ForbiddenCards.Items.Clear();
@@ -15,15 +13,15 @@ namespace WolfX
 
             if (PDL_CB_LoadImages.Checked)
             {
-                Images.ImageSize = new Size(64, 64);
+                State.Images.ImageSize = new Size(64, 64);
                 PDL_LV_ForbiddenCards.View = View.LargeIcon;
-                PDL_LV_ForbiddenCards.LargeImageList = Images;
+                PDL_LV_ForbiddenCards.LargeImageList = State.Images;
 
                 PDL_LV_LimitedCards.View = View.LargeIcon;
-                PDL_LV_LimitedCards.LargeImageList = Images;
+                PDL_LV_LimitedCards.LargeImageList = State.Images;
 
                 PDL_LV_SemiLimitedCards.View = View.LargeIcon;
-                PDL_LV_SemiLimitedCards.LargeImageList = Images;
+                PDL_LV_SemiLimitedCards.LargeImageList = State.Images;
             }
 
             var Limits = "-1";
@@ -42,7 +40,7 @@ namespace WolfX
                 foreach (short i in PDLimits.PDLimits.GetForbidden())
                 {
                     if (PDL_CB_LoadImages.Checked)
-                        Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+                        Utility.Add_ItemToStateImageList(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
                     if (!PDL_CB_UseCardID.Checked)
                         PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
@@ -56,7 +54,7 @@ namespace WolfX
                 foreach (short i in PDLimits.PDLimits.GetLimited())
                 {
                     if (PDL_CB_LoadImages.Checked)
-                        Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+                        Utility.Add_ItemToStateImageList(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
                     if (!PDL_CB_UseCardID.Checked)
                         PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
@@ -70,7 +68,7 @@ namespace WolfX
                 foreach (short i in PDLimits.PDLimits.GetSemiLimited())
                 {
                     if (PDL_CB_LoadImages.Checked)
-                        Images.Images.Add(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
+                        Utility.Add_ItemToStateImageList(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
 
                     if (!PDL_CB_UseCardID.Checked)
                         PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
@@ -197,7 +195,7 @@ namespace WolfX
                             foreach (var Card in SimpleAdder.CardIDs)
                             {
                                 if (PDL_CB_LoadImages.Checked)
-                                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+                                    Utility.Add_ItemToStateImageList(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
 
                                 if (!PDL_CB_UseCardID.Checked)
                                     PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
@@ -214,7 +212,7 @@ namespace WolfX
                             foreach (var Card in SimpleAdder.CardIDs)
                             {
                                 if (PDL_CB_LoadImages.Checked)
-                                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+                                    Utility.Add_ItemToStateImageList(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
 
                                 if (!PDL_CB_UseCardID.Checked)
                                     PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
@@ -231,7 +229,7 @@ namespace WolfX
                             foreach (var Card in SimpleAdder.CardIDs)
                             {
                                 if (PDL_CB_LoadImages.Checked)
-                                    Images.Images.Add(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
+                                    Utility.Add_ItemToStateImageList(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
 
                                 if (!PDL_CB_UseCardID.Checked)
                                     PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
