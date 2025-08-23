@@ -25,14 +25,17 @@ public:
 		R15 = 0x0F
 	};
 
+	static uint8_t* EmplaceMOVSX(void* writeLocation, Memory::X64Register targetReg, Memory::X64Register offsetReg, uint32_t displacement, bool Protected, int writeLength);
+
 	static uint8_t* PatchBytes(void* address, const uint8_t* values, size_t size, bool Protected);
 	static uint8_t* PatchZeros(void* address, size_t size, bool Protected);
 
 	static uint8_t* EmplaceJMP(void* targetAddress, uintptr_t jumpAddress, bool Protected);
 	static uint8_t* EmplaceCALL(void* targetAddress, uintptr_t callAddress, bool Protected);
-	static uint8_t* EmplaceMOV(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
+	static uint8_t* EmplaceMOV(void* targetAddress, uintptr_t value, X64Register reg, bool Protected, size_t originalLength);
 	static uint8_t* EmplaceCMP(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
 	static uint8_t* EmplaceLEARelativeRsi(void* targetAddress, void* baseAddress, bool Protected);
+	static uint8_t* EmplaceAdd(void* address, Memory::X64Register dstRegister, Memory::X64Register srcRegister, bool Protected);
 	static uint8_t* EmplaceRET(void* targetAddress, bool Protected);
 	static uint8_t* EmplaceNOP(void* targetAddress, bool Protected, int fillLength);
 private:
