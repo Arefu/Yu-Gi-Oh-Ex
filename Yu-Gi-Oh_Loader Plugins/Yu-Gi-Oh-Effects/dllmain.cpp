@@ -29,9 +29,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
 
-		Logger::WriteLog("Start Copying Table for CardsThatMakeYouDraw", MODULE_NAME, 0);
 		Setup_CardsThatMakeYouDraw(std::format("{}{}", Path, "\\CardsThatMakeYouDraw\\CardsThatMakeYouDraw.json"));
-		Logger::WriteLog("Done Copying Table for CardsThatMakeYouDraw", MODULE_NAME, 0);
+
 		DetourTransactionCommit();
 
 		break;;

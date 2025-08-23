@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
+#include "detours.h"
 #include "Logger.h"
 #include "Memory.h"
 #include "File.h"
@@ -68,7 +68,6 @@ inline void to_json(json& j, const OperationList& b) {
 inline void from_json(const json& j, OperationList& b) {
 	j.at("Operations").get_to(b.Operations);
 }
-
 bool Validate(const json& j) {
 	if (!j.contains("Operations") || !j["Operations"].is_array())
 		return false;
@@ -93,41 +92,12 @@ bool Validate(const json& j) {
 	}
 	return true;
 }
-static std::vector<CardsThatMakeYouDraw_Item> CardsThatMakeYouDraw(470);
-uint8_t* EmitDrawCardPatch(uint8_t* patchStart) {
-	uintptr_t vecAddress = reinterpret_cast<uintptr_t>(CardsThatMakeYouDraw.data());
-	uint8_t* cursor = patchStart;
 
-	// mov rdx, &CardsThatMakeYouDraw
-	uint8_t movRdxImmediate[] = {
-		0x48, 0xBA,                      // mov rdx, imm64
-		0, 0, 0, 0, 0, 0, 0, 0           // placeholder
-	};
-	*reinterpret_cast<uintptr_t*>(&movRdxImmediate[2]) = vecAddress;
-	cursor = Memory::PatchBytes(cursor, movRdxImmediate, sizeof(movRdxImmediate), true);
+static std::vector<CardsThatMakeYouDraw_Item> CardsThatMakeYouDraw(469);
 
-	// mov rdx, [rdx] (vector.data())
-	uint8_t movRdxFromRdx[] = {
-		0x48, 0x8B, 0x12                 // mov rdx, [rdx]
-	};
-	cursor = Memory::PatchBytes(cursor, movRdxFromRdx, sizeof(movRdxFromRdx), true);
-
-	// lea rdx, [rdx + r12*2] (index into vector)
-	uint8_t leaRdxIndexed[] = {
-		0x4C, 0x8D, 0x14, 0x62           // lea rdx, [rdx + r12*2]
-	};
-	cursor = Memory::PatchBytes(cursor, leaRdxIndexed, sizeof(leaRdxIndexed), true);
-
-	// movsx eax, word ptr [rdx] (load value at index)
-	uint8_t movsxEaxFromRdx[] = {
-		0x66, 0x0F, 0xBF, 0x02           // movsx eax, word ptr [rdx]
-	};
-	cursor = Memory::PatchBytes(cursor, movsxEaxFromRdx, sizeof(movsxEaxFromRdx), true);
-
-	return cursor;
-}
 int Setup_CardsThatMakeYouDraw(std::string Path)
 {
+	Logger::WriteLog("Started Copying Table for CardsThatMakeYouDraw", MODULE_NAME, 0);
 	if (PathFileExists(Path.c_str()) == FALSE)
 	{
 		Logger::WriteLog("FILE_NOT_FOUND: CardsThatMakeYouDraw", MODULE_NAME, 1);
@@ -141,8 +111,15 @@ int Setup_CardsThatMakeYouDraw(std::string Path)
 		return ERROR_FILE_CORRUPT;
 	}
 
-	memcpy(CardsThatMakeYouDraw.data(), reinterpret_cast<void*>(0x140B15110), sizeof(CardsThatMakeYouDraw_Item) * 470);
-	Memory::PatchZeros(reinterpret_cast<void*>(0x140B15110), 470, true);
+	memcpy(CardsThatMakeYouDraw.data(), reinterpret_cast<void*>(0x140B15110), sizeof(CardsThatMakeYouDraw_Item) * 469);
+	//memset(CardsThatMakeYouDraw.data(), 0xCC, sizeof(CardsThatMakeYouDraw_Item) * 469);
+	Memory::PatchZeros(reinterpret_cast<void*>(0x140B15110), 469, true);
+
+	Memory::EmplaceMOVSX(reinterpret_cast<void*>(0x14015EB16), Memory::X64Register::RDX, Memory::X64Register::RCX, reinterpret_cast<uint32_t>(CardsThatMakeYouDraw.data()), true, 9);
+
+	auto Position = Memory::EmplaceCALL(reinterpret_cast<void*>(0x14015EB48), 0x140B15110, true);
+	Position = Memory::EmplaceMOV(reinterpret_cast<void*>(0x140B15110), reinterpret_cast<uintptr_t>(CardsThatMakeYouDraw.data()), Memory::X64Register::RDX, true, 10);
+	Memory::EmplaceRET(Position, true);
 
 	for (const auto& operationEntry : Content["Operations"])
 	{
@@ -196,8 +173,8 @@ int Setup_CardsThatMakeYouDraw(std::string Path)
 		}
 	}
 
-	auto res = EmitDrawCardPatch(reinterpret_cast<uint8_t*>(0x140B15110));
-	Memory::EmplaceRET(reinterpret_cast<void*>(res), true);
+	Memory::EmplaceMOV(reinterpret_cast<void*>(0x14015EAFA), (short)CardsThatMakeYouDraw.size(), Memory::X64Register::R12, true, 6);
 
+	Logger::WriteLog("Done Copying Table for CardsThatMakeYouDraw", MODULE_NAME, 0);
 	return 0;
 }
