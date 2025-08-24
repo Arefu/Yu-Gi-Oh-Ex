@@ -69,53 +69,70 @@ uint8_t* Memory::EmplaceCALL(void* targetAddress, uintptr_t callAddress, bool Pr
 	return PatchBytes(targetAddress, callOpCode, sizeof(callOpCode), Protected);
 }
 
-uint8_t* Memory::EmplaceMOV(void* targetAddress, uintptr_t value, X64Register reg, bool Protected, size_t  originalLength) {
-	std::vector<uint8_t> code;
+uint8_t* Memory::InsertMOV(void* targetAddress, uint32_t value, X64Register reg, bool Protected, size_t originalLength) {
+	uint8_t movOpCode[10];
+	size_t size = 0;
+
+	// REX.W prefix for 64-bit operand
+	if (static_cast<int>(reg) >= static_cast<int>(X64Register::R8)) {
+		movOpCode[size++] = 0x41; // REX.B
+		movOpCode[size++] = 0xB8 + (static_cast<int>(reg) - static_cast<int>(X64Register::R8)); // MOV opcode for R8–R15
+	}
+	else {
+		movOpCode[size++] = 0x48; // REX.W
+		movOpCode[size++] = 0xB8 + static_cast<int>(reg); // MOV opcode for RAX–RDI
+	}
+
+	std::memcpy(&movOpCode[size], &value, sizeof(value));
+	size += sizeof(value); // 4 bytes
+
+	if (size != originalLength) {
+		Logger::WriteLog(std::format("EmplaceMOV size mismatch: expected {}, got {}", originalLength, size), MODULE_NAME, 1);
+		return nullptr;
+	}
+
+	return PatchBytes(targetAddress, movOpCode, size, Protected);
+}
+
+uint8_t* Memory::EmplaceMOV(void* targetAddress, uintptr_t value, X64Register reg, bool Protected) {
+	uint8_t movOpCode[10]; // Max size needed
+	size_t size = 0;
 
 	// REX prefix
-	uint8_t rex = 0x40;
-	if (static_cast<int>(reg) >= static_cast<int>(X64Register::R8)) rex |= 0x01; // B
-	rex |= 0x08; // W = 64-bit
-	code.push_back(rex);
+	if (static_cast<int>(reg) >= static_cast<int>(X64Register::R8)) {
+		movOpCode[size++] = 0x49;
+	}
+	else {
+		movOpCode[size++] = 0x48;
+	}
 
 	// Opcode
 	switch (reg) {
-	case X64Register::RAX: code.push_back(0xB8); break;
-	case X64Register::RCX: code.push_back(0xB9); break;
-	case X64Register::RDX: code.push_back(0xBA); break;
-	case X64Register::RBX: code.push_back(0xBB); break;
-	case X64Register::RSP: code.push_back(0xBC); break;
-	case X64Register::RBP: code.push_back(0xBD); break;
-	case X64Register::RSI: code.push_back(0xBE); break;
-	case X64Register::RDI: code.push_back(0xBF); break;
-	case X64Register::R8:  code.push_back(0xB8); break;
-	case X64Register::R9:  code.push_back(0xB9); break;
-	case X64Register::R10: code.push_back(0xBA); break;
-	case X64Register::R11: code.push_back(0xBB); break;
-	case X64Register::R12: code.push_back(0xBC); break;
-	case X64Register::R13: code.push_back(0xBD); break;
-	case X64Register::R14: code.push_back(0xBE); break;
-	case X64Register::R15: code.push_back(0xBF); break;
-	default: return nullptr;
+	case X64Register::RAX: movOpCode[size++] = 0xB8; break;
+	case X64Register::RCX: movOpCode[size++] = 0xB9; break;
+	case X64Register::RDX: movOpCode[size++] = 0xBA; break;
+	case X64Register::RBX: movOpCode[size++] = 0xBB; break;
+	case X64Register::RSP: movOpCode[size++] = 0xBC; break;
+	case X64Register::RBP: movOpCode[size++] = 0xBD; break;
+	case X64Register::RSI: movOpCode[size++] = 0xBE; break;
+	case X64Register::RDI: movOpCode[size++] = 0xBF; break;
+	case X64Register::R8:  movOpCode[size++] = 0xB8; break;
+	case X64Register::R9:  movOpCode[size++] = 0xB9; break;
+	case X64Register::R10: movOpCode[size++] = 0xBA; break;
+	case X64Register::R11: movOpCode[size++] = 0xBB; break;
+	case X64Register::R12: movOpCode[size++] = 0xBC; break;
+	case X64Register::R13: movOpCode[size++] = 0xBD; break;
+	case X64Register::R14: movOpCode[size++] = 0xBE; break;
+	case X64Register::R15: movOpCode[size++] = 0xBF; break;
+	default:
+		return nullptr;
 	}
 
-	// Immediate
-	if (originalLength <= 6) {
-		// Use 32-bit immediate if overwriting small instruction
-		for (int i = 0; i < 4; i++)
-			code.push_back((value >> (i * 8)) & 0xFF);
-	}
-	else {
-		// Use full 64-bit immediate
-		for (int i = 0; i < 8; i++)
-			code.push_back((value >> (i * 8)) & 0xFF);
-	}
+	// Immediate value
+	std::memcpy(&movOpCode[size], &value, sizeof(value));
+	size += sizeof(value);
 
-	// Pad with NOPs if needed
-	while (code.size() < originalLength)
-		code.push_back(0x90);
-
-	return PatchBytes(targetAddress, code.data(), code.size(), Protected);
+	return PatchBytes(targetAddress, movOpCode, size, Protected);
 }
 
 uint8_t* Memory::EmplaceRET(void* targetAddress, bool Protected) {
