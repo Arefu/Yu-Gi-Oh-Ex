@@ -112,14 +112,7 @@ int Setup_CardsThatMakeYouDraw(std::string Path)
 	}
 
 	memcpy(CardsThatMakeYouDraw.data(), reinterpret_cast<void*>(0x140B15110), sizeof(CardsThatMakeYouDraw_Item) * 469);
-	//memset(CardsThatMakeYouDraw.data(), 0xCC, sizeof(CardsThatMakeYouDraw_Item) * 469);
 	Memory::PatchZeros(reinterpret_cast<void*>(0x140B15110), 469, true);
-
-	Memory::EmplaceMOVSX(reinterpret_cast<void*>(0x14015EB16), Memory::X64Register::RDX, Memory::X64Register::RCX, reinterpret_cast<uint32_t>(CardsThatMakeYouDraw.data()), true, 9);
-
-	auto Position = Memory::EmplaceCALL(reinterpret_cast<void*>(0x14015EB48), 0x140B15110, true);
-	Position = Memory::EmplaceMOV(reinterpret_cast<void*>(0x140B15110), reinterpret_cast<uintptr_t>(CardsThatMakeYouDraw.data()), Memory::X64Register::RDX, true, 10);
-	Memory::EmplaceRET(Position, true);
 
 	for (const auto& operationEntry : Content["Operations"])
 	{
@@ -166,14 +159,14 @@ int Setup_CardsThatMakeYouDraw(std::string Path)
 				}
 			}
 		}
-		else
-		{
-			Logger::WriteLog("ERROR_INVALID_OPERATION: CardsThatMakeYouDraw Has An Invalid Operation!", MODULE_NAME, 0);
-			return ERROR_INVALID_OPERATION;
-		}
 	}
+	std::sort(CardsThatMakeYouDraw.begin(), CardsThatMakeYouDraw.end(), [](const CardsThatMakeYouDraw_Item& a, const CardsThatMakeYouDraw_Item& b) {return a.CardID < b.CardID; });
 
-	Memory::EmplaceMOV(reinterpret_cast<void*>(0x14015EAFA), (short)CardsThatMakeYouDraw.size(), Memory::X64Register::R12, true, 6);
+	Memory::EmplaceMOVSX(reinterpret_cast<void*>(0x14015EB16), Memory::X64Register::RDX, Memory::X64Register::RCX, reinterpret_cast<uint32_t>(CardsThatMakeYouDraw.data()), true, 9);
+	auto Position = Memory::EmplaceCALL(reinterpret_cast<void*>(0x14015EB48), 0x140B15110, true);
+	Position = Memory::EmplaceMOV(reinterpret_cast<void*>(0x140B15110), reinterpret_cast<uintptr_t>(CardsThatMakeYouDraw.data()), Memory::X64Register::RDX, true);
+	Memory::EmplaceRET(Position, true);
+	Memory::InsertMOV(reinterpret_cast<void*>(0x14015EAFA), CardsThatMakeYouDraw.size(), Memory::X64Register::R12, true, 0x6);
 
 	Logger::WriteLog("Done Copying Table for CardsThatMakeYouDraw", MODULE_NAME, 0);
 	return 0;
