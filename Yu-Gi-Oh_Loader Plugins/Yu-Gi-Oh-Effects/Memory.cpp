@@ -93,7 +93,20 @@ uint8_t* Memory::InsertMOV(void* targetAddress, uint32_t value, X64Register reg,
 
 	return PatchBytes(targetAddress, movOpCode, size, Protected);
 }
+uint8_t* Memory::InsertCALL(void* targetAddress, uintptr_t callAddress, size_t originalLength, bool Protected) {
+	if (originalLength < 5) // CALL instruction is 5 bytes minimum
+	{
+		std::cout << "Aids";
+		return nullptr;
+	}
+	std::vector<uint8_t> buffer(originalLength, 0x90); // fill with NOPs
+	buffer[0] = 0xE8; // CALL opcode
 
+	int32_t relativeOffset = static_cast<int32_t>(callAddress - reinterpret_cast<uintptr_t>(targetAddress) - 5);
+	*reinterpret_cast<int32_t*>(&buffer[1]) = relativeOffset;
+
+	return PatchBytes(targetAddress, buffer.data(), buffer.size(), Protected);
+}
 uint8_t* Memory::EmplaceMOV(void* targetAddress, uintptr_t value, X64Register reg, bool Protected) {
 	uint8_t movOpCode[10]; // Max size needed
 	size_t size = 0;
