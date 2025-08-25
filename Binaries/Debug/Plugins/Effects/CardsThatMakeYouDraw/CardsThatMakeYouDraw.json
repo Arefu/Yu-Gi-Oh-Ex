@@ -1,11 +1,20 @@
 {
     "Operations": [
         {
+            "Operation": "Add",
+            "Cards": [
+                {
+                    "CardID": 4317,
+                    "Count": 10
+                }
+            ]
+        },
+        {
             "Operation": "Update",
             "Cards": [
                 {
                     "CardID": 4844,
-                    "Count": 4
+                    "Count": 15
                 }
             ]
         }
