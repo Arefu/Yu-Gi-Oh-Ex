@@ -5,8 +5,10 @@
 #include <string>
 
 #include "Memory.h"
+#include "Table_140B15B30.h"
 #include "CardsThatMakeYouDraw.h"
 
+#include "Effects.h"
 #include "Logger.h"
 #include "Config.h"
 
@@ -28,9 +30,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		Logger::WriteLog(std::format("Running from: {}", Path), MODULE_NAME, 0);
 		DetourTransactionBegin();
 		DetourUpdateThread(GetCurrentThread());
+		Table_140B15B30::Setup();
+		Table_140B15B30::Patch();
+		EffectTable_SpellAndTrap::SetupInternalEffectTable(0x140BA8730);
 
-		Setup_CardsThatMakeYouDraw(std::format("{}{}", Path, "\\CardsThatMakeYouDraw\\CardsThatMakeYouDraw.json"));
+		CardsThatMakeYouDraw::Setup(std::format("{}{}", Path, "\\CardsThatMakeYouDraw\\CardsThatMakeYouDraw.json"));
 
+		EffectTable_SpellAndTrap::InsertRedirects(0x140BA8730);
 		DetourTransactionCommit();
 
 		break;;
