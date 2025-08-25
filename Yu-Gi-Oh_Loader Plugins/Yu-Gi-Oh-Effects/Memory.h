@@ -40,6 +40,16 @@ public:
 	/// <param name="originalLength">Expected length of Instruction</param>
 	/// <returns></returns>
 	static uint8_t* InsertMOV(void* targetAddress, uint32_t value, X64Register reg, bool Protected, size_t originalLength);
+
+	/// <summary>
+	/// Insert CALL <Register> <Value> into targetAddress
+	/// </summary>
+	/// <param name="targetAddress">The Desitnation Address of where you want the MOV being Inserted.</param>
+	/// <param name="callAddress">Where You're CALLing too</param>
+	/// <param name="originalLength">Expected length of Instruction</param>
+	/// <param name="Protected">Set RXW Code Page Permissions on Target Address</param>
+	/// /// <returns></returns>
+	static uint8_t* InsertCALL(void* targetAddress, uintptr_t callAddress, size_t originalLength, bool Protected);
 #pragma endregion
 
 	static uint8_t* EmplaceMOVSX(void* writeLocation, Memory::X64Register targetReg, Memory::X64Register offsetReg, uint32_t displacement, bool Protected, int writeLength);
@@ -49,8 +59,6 @@ public:
 
 	static uint8_t* EmplaceJMP(void* targetAddress, uintptr_t jumpAddress, bool Protected);
 	static uint8_t* EmplaceCALL(void* targetAddress, uintptr_t callAddress, bool Protected);
-
-	//TODO: This EmplaceMOV ALWAYS writes 10 bytes, that isn't always needed. I also shouldn't need to always JMP to Code Caves
 
 	static uint8_t* EmplaceMOV(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
 	static uint8_t* EmplaceCMP(void* targetAddress, uintptr_t value, X64Register Register, bool Protected);
