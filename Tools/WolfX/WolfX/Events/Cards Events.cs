@@ -154,12 +154,29 @@ namespace WolfX
             CARDS_RB_SimilarOnEffect.Checked = similarityCondition == "EFFECT";
 
             // Update similar card selection
-            var similarCardEntry = Card_Same._SimilarCards
-                .FirstOrDefault(card => card.PrimaryCard == selectedCardID);
+            var similarCardEntry = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
 
-            var SimilarCards = CARDS_CB_SimilarCardName.DataSource as List<KeyValuePair<string, int>>;
-            var selectedKvp = SimilarCards?.FirstOrDefault(kvp => kvp.Value == similarCardEntry?.TargetCard);
-            CARDS_CB_SimilarCardName.SelectedItem = !selectedKvp.Equals(default) ? selectedKvp : SimilarCards?.Count > 0 ? SimilarCards[0] : null;
+            var similarCards = CARDS_CB_SimilarCardName.DataSource as List<KeyValuePair<string, int>>;
+
+            KeyValuePair<string, int> selectedKvp = default;
+
+            if (similarCardEntry != null && similarCards != null)
+            {
+                selectedKvp = similarCards.FirstOrDefault(kvp => kvp.Value == similarCardEntry.TargetCard);
+            }
+
+            if (!selectedKvp.Equals(default(KeyValuePair<string, int>)))
+            {
+                CARDS_CB_SimilarCardName.SelectedItem = selectedKvp;
+            }
+            else if (similarCards != null && similarCards.Count > 0)
+            {
+                CARDS_CB_SimilarCardName.SelectedItem = similarCards[0];
+            }
+            else
+            {
+                CARDS_CB_SimilarCardName.SelectedIndex = -1;
+            }
 
             CARDS_TB_CardPassword.Text = Card_Pass._Passwords.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
             CARDS_TB_Kana.Text = Card_Kana._Kana.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
@@ -244,11 +261,28 @@ namespace WolfX
 
         private void CARDS_CB_SimilarCardName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP &&
-                CARDS_CB_CardID.SelectedItem is int selectedCardID)
+            if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
             {
                 var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
                 target?.TargetCard = Convert.ToInt16(selectedKVP.Value);
+
+                if (target == null)
+                {
+                    var similarCards = CARDS_CB_SimilarCardName.DataSource as List<KeyValuePair<string, int>>;
+                    if (similarCards == null) return;
+
+                    int selectedId = similarCards[CARDS_CB_SimilarCardName.SelectedIndex].Value;
+                    if (CARDS_RB_SimilarOnEffect.Checked)
+                    {
+                        var Card = new Similar_Card(Convert.ToInt16(CARDS_CB_CardID.Text), (short)selectedId, CARD_Same.TYPE.EFFECT);
+                        Card_Same._SimilarCards.Add(Card);
+                    }
+                    else if (CARDS_RB_AlwaysSimilar.Checked)
+                    {
+                        var Card = new Similar_Card(Convert.ToInt16(CARDS_CB_CardID.Text), (short)selectedId, CARD_Same.TYPE.ALWAYS);
+                        Card_Same._SimilarCards.Add(Card);
+                    }
+                }
             }
         }
 
@@ -257,7 +291,8 @@ namespace WolfX
             if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
             {
                 var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
-                if (target == null) return;
+                if (target == null)
+                    return;
 
                 if (CARDS_RB_SimilarOnEffect.Checked)
                     target.SimilarityType = TYPE.EFFECT;
@@ -272,7 +307,7 @@ namespace WolfX
                 if (target == null) return;
 
                 if (CARDS_RB_AlwaysSimilar.Checked)
-                    target.SimilarityType = TYPE.EFFECT;
+                    target.SimilarityType = TYPE.ALWAYS;
             }
         }
 
