@@ -7,11 +7,11 @@
 
 std::string Config::Get_WorkingDirectory()
 {
-	if (PathFileExistsA(".\\Config.ini") == FALSE)
-		return "";
+    if (PathFileExistsA(".\\Config.ini") == FALSE)
+        return "";
 
-	auto Path = new CHAR[MAX_PATH];
-	GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", Path, MAX_PATH, ".\\Config.ini");
+    auto Path = new CHAR[MAX_PATH];
+    GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", Path, MAX_PATH, ".\\Config.ini");
 
-	return std::string(Path).append("\\Effects");
+    return std::string(Path).append("\\Effects");
 }

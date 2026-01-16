@@ -2,8 +2,8 @@
 
 #include <string>
 
-static class EffectFileHandler
+static class FileIO
 {
 public:
-	static std::string Read_FromEffectFile(const std::string& path);
+    static std::string Read_FromEffectFile(const std::string& path);
 };

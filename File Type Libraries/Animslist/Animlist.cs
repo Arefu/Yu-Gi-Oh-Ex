@@ -2,53 +2,55 @@
 
 namespace Types
 {
-    public class Animlist_Item
+    public class Animlist_Item(string Item, Point Position, int Slide)
     {
-        public string ItemName { get; set; }
-        public Point ItemPosition { get; set; }
-        public int ItemSlide { get; set; }
+        public string ItemName { get; set; } = Item;
+        public Point ItemPosition { get; set; } = Position;
+        public int ItemSlide { get; set; } = Slide;
     }
 
     public static class Animlist
     {
-        //TODO: Check cropped differences, impliment Slide logic.
-        //TODO: Save Implementation.
-        public static List<Animlist_Item> Load(String Path, bool Cropped = true)
+        public enum Side
         {
-            if (File.Exists(Path) == false)
-            {
-                throw new FileNotFoundException("File not found", Path);
-            }
+            Left = 0,
+            Right = 1
+        }
 
-            var Items = new List<Animlist_Item>();
+        public static Side TitleScreenSide;
 
-            using (var Reader = new StreamReader(Path))
+        public static List<Animlist_Item> Scene = new();
+
+        public static void Load(String Path)
+        {
+            DirectoryInfo? CurrentDirectory = new FileInfo(Path).Directory;
+            if (CurrentDirectory == null) return;
+
+            var Reader = new StreamReader(Path);
+            do
             {
-                while (!Reader.EndOfStream)
+                string? Line = Reader.ReadLine();
+                if (Line == null) return;
+
+                var Split = Line.Split(",");
+                if (Split.Length == 0) return;
+
+                if (string.Equals(Split[0], "side", StringComparison.OrdinalIgnoreCase))
                 {
-                    var Line = Reader.ReadLine();
-                    if (String.IsNullOrEmpty(Line))
-                        continue;
-                    if (Line.StartsWith("slide")) continue; //Skip for now.
-
-                    if (Cropped == true)
-                    {
-                    }
-                    else
-                    {
-                        var ItemProperties = Line.Split(',');
-                        var Item = new Animlist_Item();
-                        Item.ItemName = ItemProperties[0];
-                        Item.ItemPosition = new Point(int.Parse(ItemProperties[1]), int.Parse(ItemProperties[2])); //TOP, LEFT
-                        if (ItemProperties.Length == 4)
-                            Item.ItemSlide = int.Parse(ItemProperties[3]);
-                        else
-                            Item.ItemSlide = -1; //NO SLIDE INFORMATION
-                        Items.Add(Item);
-                    }
+                    if (Split.Length != 2) return;
+                    if (!Enum.TryParse(Split[1], out TitleScreenSide)) return;
                 }
-            }
-            return Items;
+                else
+                {
+                    if (Split.Length != 4) return;
+                    var matchedFile = Directory.EnumerateFiles(CurrentDirectory.FullName).FirstOrDefault(f => System.IO.Path.GetFileNameWithoutExtension(f).Equals(Split[0], StringComparison.OrdinalIgnoreCase));
+
+                    if (matchedFile == null)
+                        return;
+
+                    Scene.Add(new Animlist_Item($"{CurrentDirectory.FullName}\\{System.IO.Path.GetFileName(matchedFile)}", new Point(Convert.ToInt32(Split[1]), Convert.ToInt32(Split[2])), Convert.ToInt32(Split[3])));
+                }
+            } while (!Reader.EndOfStream);
         }
 
         public static void Save()
