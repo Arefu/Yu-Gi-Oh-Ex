@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Types
+﻿namespace Types
 {
     public static class YDC
     {

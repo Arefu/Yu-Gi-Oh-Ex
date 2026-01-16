@@ -18,143 +18,143 @@ std::vector<LPCSTR> Game::gPlugins;
 
 BOOL Game::Locate()
 {
-	HKEY hKey;
-	char lGamePath[MAX_PATH];
-	DWORD dwSize = sizeof(lGamePath);
-	if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_READ, &hKey) == ERROR_SUCCESS)
-	{
-		if (RegQueryValueExA(hKey, "InstallLocation", NULL, NULL, (LPBYTE)lGamePath, &dwSize) == ERROR_SUCCESS)
-		{
-			strncpy(Game::gGamePath, lGamePath, MAX_PATH);
-			strncat(Game::gGameLocation, lGamePath, strlen(lGamePath));
-			strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
-		}
-		else
-			return FALSE;
+    HKEY hKey;
+    char lGamePath[MAX_PATH];
+    DWORD dwSize = sizeof(lGamePath);
+    if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_READ, &hKey) == ERROR_SUCCESS)
+    {
+        if (RegQueryValueExA(hKey, "InstallLocation", NULL, NULL, (LPBYTE)lGamePath, &dwSize) == ERROR_SUCCESS)
+        {
+            strncpy(Game::gGamePath, lGamePath, MAX_PATH);
+            strncat(Game::gGameLocation, lGamePath, strlen(lGamePath));
+            strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+        }
+        else
+            return FALSE;
 
-		RegCloseKey(hKey);
-		return TRUE;
-	}
-	else
-		return FALSE;
+        RegCloseKey(hKey);
+        return TRUE;
+    }
+    else
+        return FALSE;
 }
 
 BOOL Game::Start()
 {
-	if (Game::Check(gGamePath) == FALSE)
-		return FALSE;
+    if (Game::Check(gGamePath) == FALSE)
+        return FALSE;
 
-	STARTUPINFO info = { sizeof(info) };
-	PROCESS_INFORMATION processInfo;
+    STARTUPINFO info = { sizeof(info) };
+    PROCESS_INFORMATION processInfo;
 
-	return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
+    return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
 
 BOOL Game::Start(LPWSTR CustomPath)
 {
-	STARTUPINFO info = { sizeof(info) };
-	PROCESS_INFORMATION processInfo;
+    STARTUPINFO info = { sizeof(info) };
+    PROCESS_INFORMATION processInfo;
 
-	Set_GamePath(CustomPath);
+    Set_GamePath(CustomPath);
 
-	Game::LookForPlugins();
+    Game::LookForPlugins();
 
-	return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, TRUE, NULL, NULL, NULL, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
+    return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, TRUE, NULL, NULL, NULL, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
 
 void Game::LookForPlugins()
 {
-	WIN32_FIND_DATAA FindFileData;
-	CHAR CurrentDir[MAX_PATH];
-	GetCurrentDirectoryA(MAX_PATH, CurrentDir);
+    WIN32_FIND_DATAA FindFileData;
+    CHAR CurrentDir[MAX_PATH];
+    GetCurrentDirectoryA(MAX_PATH, CurrentDir);
 
-	strncat(CurrentDir, "\\Plugins\\*.dll", sizeof("\\Plugins\\*.dll"));
+    strncat(CurrentDir, "\\Plugins\\*.dll", sizeof("\\Plugins\\*.dll"));
 
-	HANDLE hFind = FindFirstFileA(CurrentDir, &FindFileData);
+    HANDLE hFind = FindFirstFileA(CurrentDir, &FindFileData);
 
-	CHAR FullPathOfDll[MAX_PATH];
-	GetCurrentDirectoryA(MAX_PATH, FullPathOfDll);
-	strncat(FullPathOfDll, "\\Plugins\\", sizeof("\\Plugins\\"));
+    CHAR FullPathOfDll[MAX_PATH];
+    GetCurrentDirectoryA(MAX_PATH, FullPathOfDll);
+    strncat(FullPathOfDll, "\\Plugins\\", sizeof("\\Plugins\\"));
 
-	int i = 0;
-	do
-	{
-		auto bleh = std::string(FullPathOfDll) + std::string(FindFileData.cFileName);
-		gDlls.push_back(bleh);
-		gPlugins.push_back(gDlls.back().c_str());
+    int i = 0;
+    do
+    {
+        auto bleh = std::string(FullPathOfDll) + std::string(FindFileData.cFileName);
+        gDlls.push_back(bleh);
+        gPlugins.push_back(gDlls.back().c_str());
 
-		i++;
-	} while (FindNextFileA(hFind, &FindFileData) != 0);
+        i++;
+    } while (FindNextFileA(hFind, &FindFileData) != 0);
 
-	FindClose(hFind);
+    FindClose(hFind);
 }
 
 void Game::Set_GamePath(LPWSTR Path)
 {
-	char charPath[MAX_PATH];
-	wcstombs(charPath, Path, MAX_PATH);
+    char charPath[MAX_PATH];
+    wcstombs(charPath, Path, MAX_PATH);
 
-	strncpy(Game::gGamePath, charPath, MAX_PATH);
-	strncat(Game::gGameLocation, charPath, strlen(charPath));
-	strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
+    strncpy(Game::gGamePath, charPath, MAX_PATH);
+    strncat(Game::gGameLocation, charPath, strlen(charPath));
+    strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
 
-	HKEY hKey;
-	if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
-	{
-		RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)charPath, strlen(charPath));
-		RegCloseKey(hKey);
-	}
+    HKEY hKey;
+    if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
+    {
+        RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)charPath, strlen(charPath));
+        RegCloseKey(hKey);
+    }
 }
 
 void Game::CreateConfig(LPCSTR ConfigName)
 {
-	CHAR ConfigPath[MAX_PATH];
-	strncpy(ConfigPath, gGamePath, MAX_PATH);
-	strncat(ConfigPath, "\\", sizeof("\\"));
-	strncat(ConfigPath, ConfigName, strlen(ConfigName));
+    CHAR ConfigPath[MAX_PATH];
+    strncpy(ConfigPath, gGamePath, MAX_PATH);
+    strncat(ConfigPath, "\\", sizeof("\\"));
+    strncat(ConfigPath, ConfigName, strlen(ConfigName));
 
-	if (PathFileExistsA(ConfigPath) == FALSE)
-	{
-		std::ofstream ConfigFile(ConfigPath);
+    if (PathFileExistsA(ConfigPath) == FALSE)
+    {
+        std::ofstream ConfigFile(ConfigPath);
 
-		char CurrentDir[MAX_PATH];
-		GetCurrentDirectoryA(MAX_PATH, CurrentDir);
-		ConfigFile << "[Yu-Gi-Oh-GUI]" << std::endl;
-		ConfigFile << "PluginsPath=" << CurrentDir << "\\Plugins\\" << std::endl;
-		ConfigFile.close();
-	}
+        char CurrentDir[MAX_PATH];
+        GetCurrentDirectoryA(MAX_PATH, CurrentDir);
+        ConfigFile << "[Yu-Gi-Oh-GUI]" << std::endl;
+        ConfigFile << "PluginsPath=" << CurrentDir << "\\Plugins\\" << std::endl;
+        ConfigFile.close();
+    }
 }
 
 void Game::CheckForLoadOrder()
 {
-	char configPath[MAX_PATH] = { 0 };
-	strncpy(configPath, Game::gGamePath, MAX_PATH - 1);
+    char configPath[MAX_PATH] = { 0 };
+    strncpy(configPath, Game::gGamePath, MAX_PATH - 1);
 
-	size_t len = strlen(configPath);
-	if (len > 0 && configPath[len - 1] != '\\' && configPath[len - 1] != '/') {
-		strncat(configPath, "\\", MAX_PATH - len - 1);
-	}
-	strncat(configPath, "Config.ini", MAX_PATH - strlen(configPath) - 1);
+    size_t len = strlen(configPath);
+    if (len > 0 && configPath[len - 1] != '\\' && configPath[len - 1] != '/') {
+        strncat(configPath, "\\", MAX_PATH - len - 1);
+    }
+    strncat(configPath, "Config.ini", MAX_PATH - strlen(configPath) - 1);
 
-	char buffer[1024] = { 0 };
-	DWORD charsRead = GetPrivateProfileStringA("Yu-Gi-Oh-Loader", "LoadOrder", "", buffer, 1024, configPath
-	);
+    char buffer[1024] = { 0 };
+    DWORD charsRead = GetPrivateProfileStringA("Yu-Gi-Oh-Loader", "LoadOrder", "", buffer, 1024, configPath
+    );
 
-	if (charsRead == 0) {
-		return;
-	}
+    if (charsRead == 0) {
+        return;
+    }
 
-	std::string loadOrder(buffer);
+    std::string loadOrder(buffer);
 
-	std::stringstream stream(loadOrder);
-	std::string token;
+    std::stringstream stream(loadOrder);
+    std::string token;
 
-	while (std::getline(stream, token, ' ')) {
-		Game::gModsToLoad.push_back(token);
-	}
+    while (std::getline(stream, token, ' ')) {
+        Game::gModsToLoad.push_back(token);
+    }
 }
 
 BOOL Game::Check(LPSTR Path)
 {
-	return PathFileExistsA(Path);
+    return PathFileExistsA(Path);
 }
