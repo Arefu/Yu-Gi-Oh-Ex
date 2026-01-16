@@ -1,12 +1,12 @@
 {
-  "profiles": {
-    "Pack Example": {
-      "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Johnathon\\source\\repos\\Yu-Gi-Oh-Ex\\Binaries\\Debug\\Tools\\YGO_2020\""
-    },
-    "Unpack Example": {
-      "commandName": "Project",
-      "commandLineArgs": "\"D:\\SteamLibrary\\steamapps\\common\\Yu-Gi-Oh! Legacy of the Duelist Link Evolution\\YGO_2020.toc\""
+    "profiles": {
+        "Pack Example": {
+            "commandName": "Project",
+            "commandLineArgs": "\"C:\\Users\\Johnathon\\source\\repos\\Yu-Gi-Oh-Ex\\Binaries\\Debug\\Tools\\YGO_2020\""
+        },
+        "Unpack Example": {
+            "commandName": "Project",
+            "commandLineArgs": "\"D:\\SteamLibrary\\steamapps\\common\\Yu-Gi-Oh! Legacy of the Duelist Link Evolution\\YGO_2020.toc\""
+        }
     }
-  }
 }

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CardStats",
+  "type": "object",
+  "properties": {
+    "Attack": { "type": "integer" },
+    "Defense": { "type": "integer" },
+    "Kind": {
+      "type": "string",
+      "enum": [
+        "Normal", "Effect", "Fusion", "FusionEffect", "Ritual", "RitualEffect",
+        "Toon", "Spirit", "Union", "Gemini", "Token", "Spell", "Trap", "Tuner",
+        "TunerEffect", "Synchro", "SynchroEffect", "SynchroTuner", "DarkTuner",
+        "DarkSynchro", "Xyz", "XyzEffect", "Flip", "Pendulum", "PendulumEffect",
+        "SpecialEffect", "SpecialToon", "SpecialSpirit", "SpecialTuner",
+        "SpecialDarkTuner", "FlipTuner", "PendulumTunerEffect", "XyzPendulum",
+        "PendulumFlip", "SynchroPendulum", "UnionTuner", "RitualSpirit",
+        "FusionTuner", "SpecialPendulum", "FusionPendulum", "Link",
+        "LinkEffect", "PendulumTuner", "PendulumSpirit"
+      ]
+    },
+    "Type": {
+      "type": "string",
+      "enum": [
+        "QuestionMark", "Dragon", "Zombie", "Fiend", "Pyro", "SeaSerpent",
+        "Rock", "Machine", "Fish", "Dinosaur", "Insect", "Beast", "BeastWarrior",
+        "Plant", "Aqua", "Warrior", "WingedBeast", "Fairy", "Spellcaster",
+        "Thunder", "Reptile", "Psychic", "Wyrm", "Cyberse", "DivineBeast",
+        "CreatorGod", "Spell", "Trap"
+      ]
+    },
+    "Attribute": {
+      "type": "string",
+      "enum": [
+        "None", "Light", "Dark", "Water", "Fire", "Earth", "Wind", "Divine",
+        "Spell", "Trap"
+      ]
+    },
+    "Stars": { "type": "integer" },
+    "Icon": {
+      "type": "string",
+      "enum": [
+        "Normal", "Counter", "Field", "Equip", "Continuous", "QuickPlay", "Ritual"
+      ]
+    },
+    "Limitation": {
+      "type": "string",
+      "enum": ["Forbidden", "Limited", "SemiLimited", "NotLimited"]
+    },
+    "PendulumScale": { "type": "integer" },
+    "StarType": {
+      "type": "string",
+      "enum": ["None", "Level", "Rank", "LinkRating"]
+    }
+  },
+  "required": [
+    "CardID",
+    "Attack",
+    "Defense",
+    "Kind",
+    "Type",
+    "Attribute",
+    "Stars",
+    "Icon",
+    "Limitation",
+    "PendulumScale",
+    "StarType"
+  ]
+}
