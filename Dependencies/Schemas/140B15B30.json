@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Operation": {
+            "type": "string",
+            "enum": ["Create", "Read", "Update", "Delete"]
+          },
+          "Cards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "KonamiID": { "type": "integer", "minimum": 4007 },
+                "Amount": { "type": "integer" }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": ["Operation", "Cards"],
+        "allOf": [
+          {
+            "if": {
+              "properties": { "Operation": { "enum": ["Read", "Delete"] } }
+            },
+            "then": {
+              "properties": {
+                "Cards": {
+                  "items": {
+                    "required": ["KonamiID"]
+                  }
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "Cards": {
+                  "items": {
+                    "required": ["KonamiID", "Amount"]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "required": ["Operations"]
+}
