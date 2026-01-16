@@ -293,7 +293,6 @@ namespace WolfX
                 var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
                 if (target == null)
                     return;
-
                 if (CARDS_RB_SimilarOnEffect.Checked)
                     target.SimilarityType = TYPE.EFFECT;
             }
@@ -304,7 +303,8 @@ namespace WolfX
             if (CARDS_CB_SimilarCardName.SelectedItem is KeyValuePair<string, int> selectedKVP && CARDS_CB_CardID.SelectedItem is int selectedCardID)
             {
                 var target = Card_Same._SimilarCards.FirstOrDefault(card => card.PrimaryCard == selectedCardID);
-                if (target == null) return;
+                if (target == null)
+                    return;
 
                 if (CARDS_RB_AlwaysSimilar.Checked)
                     target.SimilarityType = TYPE.ALWAYS;
