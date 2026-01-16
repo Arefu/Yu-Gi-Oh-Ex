@@ -45,262 +45,261 @@ static bool DoIStart = false;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-	if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
-		return true;
+    if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
+        return true;
 
-	if (ImGui::GetIO().WantCaptureMouse)
-		return true;
+    if (ImGui::GetIO().WantCaptureMouse)
+        return true;
 
-	switch (msg)
-	{
-	case WM_KEYDOWN:
-		switch (wParam)
-		{
-		case VK_F1:
-			bShowMenu = !bShowMenu;
-			if (bShowMenu)
-				std::cout << "[Yu-Gi-Oh-GUI] Menu Opened" << std::endl;
-			else
-				std::cout << "[Yu-Gi-Oh-GUI] Menu Closed" << std::endl;
-			break;
-		case VK_F8:
-			bShowDemo = !bShowDemo;
-			break;
-		}break;
+    switch (msg)
+    {
+    case WM_KEYDOWN:
+        switch (wParam)
+        {
+        case VK_F1:
+            bShowMenu = !bShowMenu;
+            if (bShowMenu)
+                std::cout << "[Yu-Gi-Oh-GUI] Menu Opened" << std::endl;
+            else
+                std::cout << "[Yu-Gi-Oh-GUI] Menu Closed" << std::endl;
+            break;
+        case VK_F8:
+            bShowDemo = !bShowDemo;
+            break;
+        }break;
 
-	case WM_CLOSE:
-		YuGiOhEx::g_bIsQuitReady = true;
-		break;
-	}
+    case WM_CLOSE:
+        YuGiOhEx::g_bIsQuitReady = true;
+        break;
+    }
 
-	PluginManager::ProcessInput(hWnd, msg, wParam, lParam);
+    PluginManager::ProcessInput(hWnd, msg, wParam, lParam);
 
-	return CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
+    return CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
 }
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
-	ImGui_ImplWin32_NewFrame();
-	ImGui_ImplDX11_NewFrame();
-	ImGui::NewFrame();
+    ImGui_ImplWin32_NewFrame();
+    ImGui_ImplDX11_NewFrame();
+    ImGui::NewFrame();
 
-	if (bShowMenu)
-	{
-		ImGui::Begin("Yu-Gi-Oh!", &bShowMenu);
-		ImGui::Text("Yu-Gi-Oh-Ex: WolfX");
-		ImGui::Separator();
+    if (bShowMenu)
+    {
+        ImGui::Begin("Yu-Gi-Oh!", &bShowMenu);
+        ImGui::Text("Yu-Gi-Oh-Ex: WolfX");
+        ImGui::Separator();
 
-		if (ImGui::Button("Quit Game"))
-			YuGiOhEx::g_bIsQuitReady = true;
+        if (ImGui::Button("Quit Game"))
+            YuGiOhEx::g_bIsQuitReady = true;
 
-		ImGui::BeginGroup();
-		if (ImGui::CollapsingHeader("Player One"))
-		{
-			ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
-			if (ImGui::TreeNodeEx("Cards in Hand"))
-			{
-				for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
-				{
-					auto Get_CardNameFromID = reinterpret_cast<LPCTSTR(__fastcall*)(short)>(0x14076D0F0);
-					auto Get_CardDescFromID = reinterpret_cast<LPCTSTR(__fastcall*)(__int16)>(0x14076D070);
-					LPCTSTR name = Get_CardNameFromID(g_Player1.Get_CardInHand(i));
-					LPCTSTR desc = Get_CardDescFromID(g_Player1.Get_CardInHand(i));
-					ImGui::Text("Card %d: %ls (%d)", i, name, g_Player1.Get_CardInHand(i));
-					if (ImGui::IsItemHovered())
-					{
-						ImGui::BeginTooltip();
-						ImGui::PushTextWrapPos(ImGui::GetFontSize() * 35.0f);
-						ImGui::TextWrapped("%ls", desc);
-						ImGui::PopTextWrapPos();
-						ImGui::EndTooltip();
-					}
-				}
-				ImGui::TreePop();
-			}
+        ImGui::BeginGroup();
+        if (ImGui::CollapsingHeader("Player One"))
+        {
+            ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
+            if (ImGui::TreeNodeEx("Cards in Hand"))
+            {
+                for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
+                {
+                    ImGui::Text("Card %d: %ls (%d)", i, YuGiOhEx::Get_CardNameFromKonamiID(g_Player1.Get_CardInHand(i)), g_Player1.Get_CardInHand(i));
+                    if (ImGui::IsItemHovered())
+                    {
+                        ImGui::BeginTooltip();
+                        ImGui::PushTextWrapPos(ImGui::GetFontSize() * 35.0f);
+                        ImGui::TextWrapped("%ls", YuGiOhEx::Get_CardDescFromKonamiID(g_Player1.Get_CardInHand(i)));
+                        ImGui::PopTextWrapPos();
+                        ImGui::EndTooltip();
+                    }
+                }
+                ImGui::TreePop();
+            }
 
-			ImGui::Text("Number of Cards in Deck: %d", g_Player1.Get_NumberOfCardsInDeck());
-			if (ImGui::TreeNodeEx("Cards in Deck"))
-			{
-				for (int i = 0; i < g_Player1.Get_NumberOfCardsInDeck(); i++)
-				{
-					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInDeck(i));
-				}
-				ImGui::TreePop();
-			}
+            ImGui::Text("Number of Cards in Deck: %d", g_Player1.Get_NumberOfCardsInDeck());
+            if (ImGui::TreeNodeEx("Cards in Deck"))
+            {
+                for (int i = 0; i < g_Player1.Get_NumberOfCardsInDeck(); i++)
+                {
+                    auto Get_CardNameFromID = reinterpret_cast<LPCTSTR(__fastcall*)(short)>(0x14076D0F0);
+                    auto Get_CardDescFromID = reinterpret_cast<LPCTSTR(__fastcall*)(__int16)>(0x14076D070);
+                    LPCTSTR name = Get_CardNameFromID(g_Player1.Get_CardInDeck(i));
+                    ImGui::Text("Card %d: %ls (%d)", i, name, g_Player1.Get_CardInDeck(i));
+                }
+                ImGui::TreePop();
+            }
 
-			ImGui::Text("Number Of Cards in Grave Yard: %d", g_Player1.Get_NumberOfCardsInGraveYard());
-			if (ImGui::TreeNodeEx("Cards in Grave Yard"))
-			{
-				for (int i = 0; i < g_Player1.Get_NumberOfCardsInGraveYard(); i++)
-				{
-					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInGraveYard(i));
-				}
-				ImGui::TreePop();
-			}
+            ImGui::Text("Number Of Cards in Grave Yard: %d", g_Player1.Get_NumberOfCardsInGraveYard());
+            if (ImGui::TreeNodeEx("Cards in Grave Yard"))
+            {
+                for (int i = 0; i < g_Player1.Get_NumberOfCardsInGraveYard(); i++)
+                {
+                    ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInGraveYard(i));
+                }
+                ImGui::TreePop();
+            }
 
-			ImGui::Text("Number Of Cards in Discard Pile: %d", g_Player1.Get_NumberOfDiscardPile());
-			if (ImGui::TreeNodeEx("Cards in Discard Pile"))
-			{
-				for (int i = 0; i < g_Player1.Get_NumberOfDiscardPile(); i++)
-				{
-					ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInDiscardPile(i));
-				}
-				ImGui::TreePop();
-			}
-		}
-		if (ImGui::CollapsingHeader("Player Two"))
-		{
-		}
+            ImGui::Text("Number Of Cards in Discard Pile: %d", g_Player1.Get_NumberOfDiscardPile());
+            if (ImGui::TreeNodeEx("Cards in Discard Pile"))
+            {
+                for (int i = 0; i < g_Player1.Get_NumberOfDiscardPile(); i++)
+                {
+                    ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInDiscardPile(i));
+                }
+                ImGui::TreePop();
+            }
+        }
+        if (ImGui::CollapsingHeader("Player Two"))
+        {
+        }
 
-		if (ImGui::CollapsingHeader("Deck Management"))
-		{
-			if (ImGui::Button("Export Decks"))
-			{
-			}
-		}
+        if (ImGui::CollapsingHeader("Duel Manipulation"))
+        {
+            if (ImGui::Button("Export Decks"))
+            {
+            }
+        }
 
-		ImGui::EndGroup();
+        ImGui::EndGroup();
 
-		ImGui::Separator();
+        ImGui::Separator();
 
-		ImGui::BeginGroup();
+        ImGui::BeginGroup();
 
-		if (ImGui::CollapsingHeader("Addresses - Misc"))
-		{
-			ImGui::Text("Player One: 0x%X", PLAYER_ONE);
+        if (ImGui::CollapsingHeader("Addresses - Misc"))
+        {
+            ImGui::Text("Player One: 0x%X", PLAYER_ONE);
 
-			ImGui::Text("g_bIsGameTutorial: 0x%X", YuGiOh::Get_IsDuelTutorial());
-			ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
-		}
+            ImGui::Text("g_bIsGameTutorial: 0x%X", YuGiOh::Get_IsDuelTutorial());
+            ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
+        }
 
-		if (ImGui::CollapsingHeader("Runtime Options", ImGuiTreeNodeFlags_DefaultOpen))
-		{
-			if (ImGui::Checkbox("Player 1 Starts", &DoIStart))
-			{
-				if (DoIStart)
-				{
-					*(bool*)0x140C8D384 = 0;
-				}
-				else
-				{
-					*(bool*)0x140C8D384 = 1;
-				}
-			}
-		}
+        if (ImGui::CollapsingHeader("Runtime Options", ImGuiTreeNodeFlags_DefaultOpen))
+        {
+            if (ImGui::Checkbox("Player 1 Starts", &DoIStart))
+            {
+                if (DoIStart)
+                {
+                    *(bool*)0x140C8D384 = 0;
+                }
+                else
+                {
+                    *(bool*)0x140C8D384 = 1;
+                }
+            }
+        }
 
-		if (ImGui::CollapsingHeader("Debug Mode", ImGuiTreeNodeFlags_DefaultOpen))
-		{
-			if (ImGui::Button("Load Plugins"))
-			{
-				if (PluginManager::_IsLoaded == false) {
-					PluginManager::Load();
+        if (ImGui::CollapsingHeader("Debug Mode", ImGuiTreeNodeFlags_DefaultOpen))
+        {
+            if (ImGui::Button("Load Plugins"))
+            {
+                if (PluginManager::_IsLoaded == false) {
+                    PluginManager::Load();
 
-					PluginManager::ProcessConfigForPlugin();
-					PluginManager::ProcessDetours();
-				}
-			}
-		}
+                    PluginManager::ProcessConfigForPlugin();
+                    PluginManager::ProcessDetours();
+                }
+            }
+        }
 
-		ImGui::EndGroup();
+        ImGui::EndGroup();
 
-		ImGui::End();
+        ImGui::End();
 
-		PluginManager::ProcessGui();
-	}
+        PluginManager::ProcessGui();
+    }
 
-	if (bShowDemo)
-	{
-		ImGui::ShowDemoWindow(&bShowDemo);
-	}
+    if (bShowDemo)
+    {
+        ImGui::ShowDemoWindow(&bShowDemo);
+    }
 
-	ImGui::EndFrame();
+    ImGui::EndFrame();
 
-	ImGui::Render();
+    ImGui::Render();
 
-	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+    ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
 
-	return reinterpret_cast<HRESULT(__stdcall*)(IDXGISwapChain*, UINT, UINT)>(nPresent)(pSwapChain, SyncInterval, Flags);
+    return reinterpret_cast<HRESULT(__stdcall*)(IDXGISwapChain*, UINT, UINT)>(nPresent)(pSwapChain, SyncInterval, Flags);
 }
 
 HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter, D3D_DRIVER_TYPE DriverType, HMODULE Software, UINT Flags, const D3D_FEATURE_LEVEL* pFeatureLevels, UINT FeatureLevels, UINT SDKVersion, const DXGI_SWAP_CHAIN_DESC* pSwapChainDesc, IDXGISwapChain** ppSwapChain, ID3D11Device** ppDevice, D3D_FEATURE_LEVEL* pFeatureLevel, ID3D11DeviceContext** ppImmediateContext)
 {
-	auto result = reinterpret_cast<HRESULT(__stdcall*)(IDXGIAdapter*, D3D_DRIVER_TYPE, HMODULE, UINT, const D3D_FEATURE_LEVEL*, UINT, UINT, const DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, ID3D11Device**, D3D_FEATURE_LEVEL*, ID3D11DeviceContext**)>(nCreateDeviceAndSwapChain)(pAdapter, DriverType, Software, Flags, pFeatureLevels, FeatureLevels, SDKVersion, pSwapChainDesc, ppSwapChain, ppDevice, pFeatureLevel, ppImmediateContext);
+    auto result = reinterpret_cast<HRESULT(__stdcall*)(IDXGIAdapter*, D3D_DRIVER_TYPE, HMODULE, UINT, const D3D_FEATURE_LEVEL*, UINT, UINT, const DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, ID3D11Device**, D3D_FEATURE_LEVEL*, ID3D11DeviceContext**)>(nCreateDeviceAndSwapChain)(pAdapter, DriverType, Software, Flags, pFeatureLevels, FeatureLevels, SDKVersion, pSwapChainDesc, ppSwapChain, ppDevice, pFeatureLevel, ppImmediateContext);
 
-	pDevice = *ppDevice;
-	pContext = *ppImmediateContext;
-	pSwapChain = *ppSwapChain;
+    pDevice = *ppDevice;
+    pContext = *ppImmediateContext;
+    pSwapChain = *ppSwapChain;
 
-	void** vmt = *(void***)(pSwapChain);
-	oPresent = reinterpret_cast<Address>(vmt[8]);
+    void** vmt = *(void***)(pSwapChain);
+    oPresent = reinterpret_cast<Address>(vmt[8]);
 
-	DetourTransactionBegin();
-	DetourUpdateThread(GetCurrentThread());
+    DetourTransactionBegin();
+    DetourUpdateThread(GetCurrentThread());
 
-	DetourAttach(reinterpret_cast<PVOID*>(&oPresent), YGOGUIPresent);
+    DetourAttach(reinterpret_cast<PVOID*>(&oPresent), YGOGUIPresent);
 
-	DetourTransactionCommit();
-	nPresent = oPresent;
+    DetourTransactionCommit();
+    nPresent = oPresent;
 
-	ImGui::CreateContext();
-	_ImGuiContext = ImGui::GetCurrentContext();
-	ImGuiIO& io = ImGui::GetIO();
-	(void)io;
-	io.DisplaySize = ImVec2(1920, 1080);
+    ImGui::CreateContext();
+    _ImGuiContext = ImGui::GetCurrentContext();
+    ImGuiIO& io = ImGui::GetIO();
+    (void)io;
+    io.DisplaySize = ImVec2(1920, 1080);
 
-	DXGI_SWAP_CHAIN_DESC sd;
-	pSwapChain->GetDesc(&sd);
+    DXGI_SWAP_CHAIN_DESC sd;
+    pSwapChain->GetDesc(&sd);
 
-	ImGui_ImplWin32_Init(sd.OutputWindow);
-	ImGui_ImplDX11_Init(pDevice, pContext);
+    ImGui_ImplWin32_Init(sd.OutputWindow);
+    ImGui_ImplDX11_Init(pDevice, pContext);
 
-	ID3D11Texture2D* pBackBuffer = nullptr;
+    ID3D11Texture2D* pBackBuffer = nullptr;
 
-	pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
-	pDevice->CreateRenderTargetView(pBackBuffer, NULL, &pMainRenderTargetView);
+    pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+    pDevice->CreateRenderTargetView(pBackBuffer, NULL, &pMainRenderTargetView);
 
-	pBackBuffer->Release();
+    pBackBuffer->Release();
 
-	//Setup WndProc
-	oWndProc = reinterpret_cast<WNDPROC>(SetWindowLongPtrA(sd.OutputWindow, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(WndProc)));
+    //Setup WndProc
+    oWndProc = reinterpret_cast<WNDPROC>(SetWindowLongPtrA(sd.OutputWindow, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(WndProc)));
 
-	auto LoadPlugins = 0;
-	LoadPlugins = GetPrivateProfileIntA("Yu-Gi-Oh-GUI", "AutoLoadPlugins", 0, ".\\Config.ini");
+    auto LoadPlugins = 0;
+    LoadPlugins = GetPrivateProfileIntA("Yu-Gi-Oh-GUI", "AutoLoadPlugins", 0, ".\\Config.ini");
 
-	if (LoadPlugins == 1)
-		std::thread(PluginManager::DelayLoad).detach();
+    if (LoadPlugins == 1)
+        std::thread(PluginManager::DelayLoad).detach();
 
-	return result;
+    return result;
 }
 
 extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
 {
-	if (ImGui::GetCurrentContext() == nullptr)
-		return nullptr;
+    if (ImGui::GetCurrentContext() == nullptr)
+        return nullptr;
 
-	return ImGui::GetCurrentContext();
+    return ImGui::GetCurrentContext();
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
-	switch (ul_reason_for_call)
-	{
-	case DLL_PROCESS_ATTACH:
-		SetProcessDPIAware();
+    switch (ul_reason_for_call)
+    {
+    case DLL_PROCESS_ATTACH:
+        SetProcessDPIAware();
 
-		DetourRestoreAfterWith();
+        DetourRestoreAfterWith();
 
-		DetourTransactionBegin();
-		DetourUpdateThread(GetCurrentThread());
+        DetourTransactionBegin();
+        DetourUpdateThread(GetCurrentThread());
 
-		DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
+        DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
 
-		DetourTransactionCommit();
-		nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
-		break;
-	case DLL_THREAD_ATTACH:
-	case DLL_THREAD_DETACH:
-	case DLL_PROCESS_DETACH:
+        DetourTransactionCommit();
+        nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
+        break;
+    case DLL_THREAD_ATTACH:
+    case DLL_THREAD_DETACH:
+    case DLL_PROCESS_DETACH:
 
-		break;
-	}
-	return TRUE;
+        break;
+    }
+    return TRUE;
 }

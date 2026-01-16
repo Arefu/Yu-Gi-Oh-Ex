@@ -5,5 +5,5 @@
 static class Config
 {
 public:
-	static std::string Get_WorkingDirectory();
+    static std::string Get_WorkingDirectory();
 };
