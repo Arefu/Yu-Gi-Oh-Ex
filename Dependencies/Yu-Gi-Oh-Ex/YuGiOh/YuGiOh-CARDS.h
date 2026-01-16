@@ -1,0 +1,6 @@
+namespace YGO
+{
+    namespace CARDS
+    {
+    }
+}
