@@ -18,14 +18,7 @@ namespace WolfX
                 }
 
                 ANIMS_Editor = new AnimlistUI(OpenFile.FileName);
-                ANIMS_Editor.Anim_Items = Animlist.Load(OpenFile.FileName, false);
-
-                foreach (var Item in ANIMS_Editor.Anim_Items)
-                {
-                    ANIMS_LV_ItemsInScene.Items.Add(Item.ItemName);
-                }
-
-                ANIMS_LBL_Count.Text = ANIMS_Editor.Anim_Items.Count.ToString();
+                Animlist.Load(OpenFile.FileName);
 
                 ANIMS_Editor.PrepareScene();
                 ANIMS_Editor.Show();
