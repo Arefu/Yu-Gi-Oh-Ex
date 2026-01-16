@@ -11,6 +11,9 @@ using std::vector;
 
 namespace YuGiOhEx
 {
+	static auto Get_CardNameFromKonamiID = reinterpret_cast<LPCTSTR(__fastcall*)(short)>(0x14076D0F0);
+	static auto Get_CardDescFromKonamiID = reinterpret_cast<LPCTSTR(__fastcall*)(__int16)>(0x14076D070);
+
 	static bool& g_bIsQuitReady = *(bool*)0x14332A391;
 	static bool& g_bOnPageFirst = *(bool*)0x140C91C48;
 	static bool& g_bUseJpLogo = *(bool*)0x14332A348;
