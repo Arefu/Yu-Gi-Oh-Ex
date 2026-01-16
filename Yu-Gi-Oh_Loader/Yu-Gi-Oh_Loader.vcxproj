@@ -64,8 +64,8 @@
       <AdditionalDependencies>detours.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>taskkill /f /fi "pid gt 0" /im "YuGiOh.exe"
+</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -86,8 +86,8 @@
       <AdditionalDependencies>detours.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>taskkill /f /fi "pid gt 0" /im "YuGiOh.exe"
+</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
