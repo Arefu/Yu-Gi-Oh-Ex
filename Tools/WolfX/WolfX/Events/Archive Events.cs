@@ -83,6 +83,8 @@ namespace WolfX
 
                 ZIB.Save(SelectFolder.SelectedPath);
             }
+
+            MessageBox.Show("Archive Packing Complete", "Packing Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ARCHIVE_LV_ArchiveItems_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -106,6 +108,8 @@ namespace WolfX
             {
                 File.WriteAllBytes($"!{new FileInfo(ZIB._Archive).Name}/{Item.Name}", ZIB.Get_SpecificItemFromArchive(Item.Name).ToArray());
             }
+
+            MessageBox.Show("Archive Extraction Complete", "Extraction Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

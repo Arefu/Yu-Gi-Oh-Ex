@@ -61,6 +61,9 @@ namespace WolfX.Types
             DFY_Picture.TabIndex = 0;
             DFY_Picture.TabStop = false;
             DFY_Picture.Paint += DFY_Picture_Paint;
+            DFY_Picture.MouseDown += DFY_Picture_MouseDown;
+            DFY_Picture.MouseMove += DFY_Picture_MouseMove;
+            DFY_Picture.MouseUp += DFY_Picture_MouseUp;
             // 
             // DfymooUI
             // 
@@ -75,7 +78,7 @@ namespace WolfX.Types
             MinimizeBox = false;
             Name = "DfymooUI";
             ShowInTaskbar = false;
-            Text = "Dfymoo Image Editor";
+            Text = " ";
             DFY_Picture_Container.ResumeLayout(false);
             DFY_Picture_Container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DFY_Picture).EndInit();
