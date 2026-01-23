@@ -6,12 +6,13 @@
 #include <imgui_impl_win32.h>
 #include <string>
 #include <windows.h>
-
+#include <fstream>
 #include <iostream>
 #include <thread>
 
 #include "Plugins.h"
 #include "Yu-Gi-Oh-Ex.h"
+#include "YuGiOh/YuGiOh-GAME.h"
 
 typedef __int64 Address;
 
@@ -77,6 +78,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
     return CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
 }
+
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
     ImGui_ImplWin32_NewFrame();
@@ -152,8 +154,20 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
         if (ImGui::CollapsingHeader("Duel Manipulation"))
         {
-            if (ImGui::Button("Export Decks"))
+            if (ImGui::TreeNode("Deck List"))
             {
+                for (int i = 1; i < 700; i++)
+                {
+                    auto Deck = YGO::GAME::Get_DeckTemplateAtIndex(i);
+                    if (Deck == nullptr)
+                        continue;
+
+                    ImGui::Text("Name: %ls", Deck->Name);
+                    ImGui::Text("Number of Cards in Main Deck: %d", Deck->NumberOfCardsInMainDeck);
+                    ImGui::Text("Number of Cards in Extra Deck: %d", Deck->NumberOfCardsInExtraDeck);
+                    ImGui::Text("Number of Cards in Side Deck: %d", Deck->NumberOfCardsInSideDeck);
+                }
+                ImGui::TreePop();
             }
         }
 
