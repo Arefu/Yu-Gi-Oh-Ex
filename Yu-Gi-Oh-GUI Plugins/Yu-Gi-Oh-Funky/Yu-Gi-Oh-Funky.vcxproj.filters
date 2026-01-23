@@ -71,5 +71,14 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-DUEL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-CARDS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-EFFECTS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
