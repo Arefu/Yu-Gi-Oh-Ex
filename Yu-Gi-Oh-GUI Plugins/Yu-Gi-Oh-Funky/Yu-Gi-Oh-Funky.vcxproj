@@ -101,7 +101,10 @@
     <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_rectpack.h" />
     <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_textedit.h" />
     <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_truetype.h" />
+    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-CARDS.h" />
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-DUEL.h" />
+    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-EFFECTS.h" />
+    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
