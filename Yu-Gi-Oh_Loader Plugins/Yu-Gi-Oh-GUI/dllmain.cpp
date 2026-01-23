@@ -13,6 +13,7 @@
 #include "Plugins.h"
 #include "Yu-Gi-Oh-Ex.h"
 #include "YuGiOh/YuGiOh-GAME.h"
+#include "YuGiOh/YuGiOh-CARDS.h"
 
 typedef __int64 Address;
 
@@ -148,9 +149,6 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
                 ImGui::TreePop();
             }
         }
-        if (ImGui::CollapsingHeader("Player Two"))
-        {
-        }
 
         if (ImGui::CollapsingHeader("Duel Manipulation"))
         {
@@ -166,6 +164,13 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
                     ImGui::Text("Number of Cards in Main Deck: %d", Deck->NumberOfCardsInMainDeck);
                     ImGui::Text("Number of Cards in Extra Deck: %d", Deck->NumberOfCardsInExtraDeck);
                     ImGui::Text("Number of Cards in Side Deck: %d", Deck->NumberOfCardsInSideDeck);
+                    if (ImGui::CollapsingHeader("Main Deck Cards"))
+                    {
+                        for (int j = 0; j < Deck->NumberOfCardsInMainDeck; j++)
+                        {
+                            ImGui::Text("Card %ws", YGO::CARDS::Get_CardNameFromKonamiId(Deck->CardsInMainDeck[j]));
+                        }
+                    }
                 }
                 ImGui::TreePop();
             }
