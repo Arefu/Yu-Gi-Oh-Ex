@@ -9,7 +9,9 @@
 #include <iostream>
 
 #include "YuGiOh/YuGiOh-DUEL.h"
+#include "YuGiOh/YuGiOh-UTIL.h"
 #include "YuGiOh/YuGiOh-CARDS.h"
+#include "YuGiOh//YuGiOh-GAME.h"
 #include "YuGiOh//YuGiOh-UI.h"
 
 extern "C" __declspec(dllexport) void SetContext(ImGuiContext* Context)
@@ -100,6 +102,8 @@ extern "C" __declspec(dllexport) void ProcessWindow()
 
         ImGui::Text("Get_InternalIdFromKonamiId() %d", YGO::CARDS::Get_InternalIdFromKonamiId(KonamiId));
         ImGui::Text("Is_ValidCardId() %d", YGO::CARDS::Is_ValidCardId(KonamiId));
+
+        ImGui::Text("Get_XX() %d", YGO::CARDS::Is_CardKonamiIdLinkedToInternalId(KonamiId));
     }
 
     ImGui::End();
