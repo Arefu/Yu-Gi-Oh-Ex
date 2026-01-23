@@ -102,8 +102,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         }
         if (AutoPause == true)
         {
-            Logger::WriteLog("Patched AutoPause.", MODULE_NAME, 0);;
-            DetourAttach(&(PVOID&)YuGiOhEx::AutoPauseOnLostFocus, Patch_NoPause);
+            Logger::WriteLog("Patched AutoPause.", MODULE_NAME, 0);; static void* pAutoPause = (void*)0x14083C9F0;
+            DetourAttach(&pAutoPause, Patch_NoPause);
         }
         if (UseJP == true)
         {
@@ -120,8 +120,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             Logger::WriteLog(std::format("Changed LP To {}", SetLP), MODULE_NAME, 0);
             DetourAttach(&(PVOID&)YuGiOhEx::SetLP, Patch_SetLPToCustomValue);
         }
-
         DetourTransactionCommit();
+
         PDLimits = YuGiOhEx::UnkFuncForLoading;
         SetLang = YuGiOhEx::UseJPLogo;
 
