@@ -36,7 +36,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         Effects_FunctionTable::Setup();
 
         Table_140B15B30::Setup();
-        Table_140B15B30::AlterTable(FileIO::Read_FromEffectFile(std::format("{}{}", Path, "\\140B15B30\\140B15B30.json")));
+        //Table_140B15B30::AlterTable(FileIO::Read_FromEffectFile(std::format("{}{}", Path, "\\140B15B30\\140B15B30.json")));
         Table_140B15B30::Patch();
         Effects_FunctionTable::AdjustTable();
         //CardsThatMakeYouDraw::Setup(std::format("{}{}", Path, "\\CardsThatMakeYouDraw\\CardsThatMakeYouDraw.json"));
