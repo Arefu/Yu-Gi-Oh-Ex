@@ -3680,7 +3680,7 @@
         </CheatEntry>
         <CheatEntry>
           <ID>449</ID>
-          <Description>"UI"</Description>
+          <Description>"GAME"</Description>
           <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
@@ -3715,14 +3715,7 @@
       <Description>"No description"</Description>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
-      <Address>0x14349B3B4 +4</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>453</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0x14349B3B4 </Address>
+      <Address>140C8D1B8</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
