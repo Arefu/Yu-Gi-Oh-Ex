@@ -95,15 +95,19 @@ extern "C" __declspec(dllexport) void ProcessWindow()
         ImGui::Text("Get_CardNameFromKonamiId() %ls", YGO::CARDS::Get_CardNameFromKonamiId(KonamiId));
         ImGui::TextWrapped("Get_CardDescriptionFromKonamiId() %ls", YGO::CARDS::Get_CardDescriptionFromKonamiId(KonamiId));
         ImGui::Text("Get_EffectiveAttackFromKonamiId() %d", YGO::CARDS::Get_EffectiveAttackFromKonamiId(KonamiId));
+        ImGui::Text("Get_RawAttackFromKonamiId() %d", YGO::CARDS::Get_RawAttackFromKonamiId(KonamiId));
         ImGui::Text("Get_EffectiveDefenseFromKonamiId() %d", YGO::CARDS::Get_EffectiveDefenseFromKonamiId(KonamiId));
+        ImGui::Text("Get_RawDefenseFromKonamiId() %d", YGO::CARDS::Get_RawDefenseFromKonamiId(KonamiId));
+        ImGui::Text("Get_CardAttributeFromKonamiId() %d", YGO::CARDS::Get_CardAttributeFromKonamiId(KonamiId));
+        ImGui::Text("Get_SpellTrapCardProperty() %d", YGO::CARDS::Get_SpellTrapCardProperty(KonamiId));
+        ImGui::Text("Get_CardLimitedStatusFromKonamiId() %d", YGO::CARDS::Get_CardLimitedStatusFromKonamiId(KonamiId));
         ImGui::Text("Get_CardLevelFromKonamiId() %d", YGO::CARDS::Get_CardLevelFromKonamiId(KonamiId));
         ImGui::Text("Get_CardTypeFromKonamiId() %d", YGO::CARDS::Get_CardTypeFromKonamiId(KonamiId));
-        ImGui::Text("Get_CardLimitedStatus() %d", YGO::CARDS::Get_CardLimitedStatusFromKonamiId(KonamiId));
-
+        ImGui::Text("Get_CardMonsterTypeFromKonamiId() %d", YGO::CARDS::Get_CardMonsterTypeFromKonamiId(KonamiId));
+        ImGui::Text("Get_CardSameFromKonamiId() %d", YGO::CARDS::Get_CardSameFromKonamiId(KonamiId));
+        ImGui::Text("Get_CurrentCardId() %d", YGO::CARDS::Get_CurrentCardId(KonamiId));
         ImGui::Text("Get_InternalIdFromKonamiId() %d", YGO::CARDS::Get_InternalIdFromKonamiId(KonamiId));
-        ImGui::Text("Is_ValidCardId() %d", YGO::CARDS::Is_ValidCardId(KonamiId));
-
-        ImGui::Text("Get_XX() %d", YGO::CARDS::Is_CardKonamiIdLinkedToInternalId(KonamiId));
+        ImGui::Text("Get_CardPendulumScaleFromKonamiId() %d", YGO::CARDS::Get_CardPendulumScaleFromKonamiId(KonamiId));
     }
 
     ImGui::End();
