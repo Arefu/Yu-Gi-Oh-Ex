@@ -96,7 +96,6 @@ uint8_t* Memory::InsertMOV(void* targetAddress, uint32_t value, X64Register reg,
 uint8_t* Memory::InsertCALL(void* targetAddress, uintptr_t callAddress, size_t originalLength, bool Protected) {
     if (originalLength < 5) // CALL instruction is 5 bytes minimum
     {
-        std::cout << "Aids";
         return nullptr;
     }
     std::vector<uint8_t> buffer(originalLength, 0x90); // fill with NOPs
