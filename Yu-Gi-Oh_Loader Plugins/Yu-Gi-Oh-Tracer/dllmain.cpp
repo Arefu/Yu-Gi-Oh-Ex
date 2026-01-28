@@ -56,6 +56,7 @@ void AddTrace()
 {
     Tracer::Traces.push_back({ "YGO::DuelSetup::MP_Get_IsRoundBasedDuel", (void*)0x1407F1E80, (void*)YGO::DuelSetup::_D_MP_Get_IsRoundBasedDuel });
     Tracer::Traces.push_back({ "YGO::DuelUtility::Get_TutorialDuelIndex", (void*)0x140769180, (void*)YGO::DuelUtility::_D_Get_TutorialDuelIndex });
+
     //  Tracer::Traces.push_back({ "I don't know!", (void*)te, (void*)I_Dont_Know });
 }
 
@@ -68,10 +69,7 @@ void SetupTrace()
     for (auto& _Trace : Tracer::Traces)
     {
         WriteLog("Tracing Execution Of : " + _Trace._Name, MODULE_NAME, 1);
-        std::cout << "Tracing " << _Trace._Address << std::endl;
         auto res = DetourAttach((PVOID*)&_Trace._Address, _Trace._Detour);
-
-        std::cout << "RES: " << res << std::endl;
     }
 
     DetourAttach((PVOID*)&te, I_Dont_Know);
