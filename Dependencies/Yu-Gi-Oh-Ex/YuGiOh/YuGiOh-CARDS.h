@@ -41,7 +41,22 @@ namespace YGO
         inline auto Get_CardPropsFromKonamiId = reinterpret_cast<CARD_PROPS * (__fastcall*)(short KonamiID)>(0x1407CAB00);
         inline auto Get_CardProp = reinterpret_cast<short(__fastcall*)(short KonamiID)>(0x14076D5F0);
 
+        inline auto Get_CardTypeFromFullCardPropsByKonamiId = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14081A650);
+        inline auto Get_SpellTrapCardPropertyFromFullCardProps = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14081A630);
+        inline auto Get_RawDefFromFullCardProps = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14081A5D0);
+        inline auto Get_EffectiveDefFromFullCardProps = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14081A5B0);
+        inline auto Get_CardLimitedStatusFromKonamiIdProps = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14076DFD0);
+        inline auto Get_CardAttributeFromFullCardPropsByKonamiId = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14081A570);
+
+        inline auto Get_Something = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14081A800);
+
         inline auto Is_CardKonamiIdLinkedToInternalId = reinterpret_cast<int(__fastcall*)(short KonamiID)>(0x14076D5F0);
         inline auto Is_ValidCardId = reinterpret_cast<bool(__fastcall*)(short KonamiID)>(0x1407CA820);
+        inline auto Is_TokenCard = reinterpret_cast<bool(__fastcall*)(short KonamiID)>(0x140743010);
+        inline auto Is_SpellCard = reinterpret_cast<bool(__fastcall*)(short KonamiID)>(0x140742E30);
+        inline auto Is_FieldSpell = reinterpret_cast<bool(__fastcall*)(short KonamiID)>(0x140742E70);
+        inline auto Is_TrapCard = reinterpret_cast<bool(__fastcall*)(short KonamiID)>(0x140742E50);
+
+        inline auto Reset_CardNames = reinterpret_cast<void(__fastcall*)()>(0x14081A7D0);
     }
 }
