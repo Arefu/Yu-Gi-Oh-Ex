@@ -105,6 +105,7 @@
     <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_widgets.cpp" />
     <ClCompile Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Plugins.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,7 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Cards.h" />
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.h" />
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-GAME.h" />
+    <ClInclude Include="Logger.h" />
     <ClInclude Include="Plugins.h" />
   </ItemGroup>
   <ItemGroup>
