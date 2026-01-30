@@ -26,6 +26,7 @@ extern "C" __declspec(dllexport) void ProcessDetours()
 int KonamiId = 3900;
 int AnimationId = 1;
 int ArugmentOne = 0, a3 = 0, a4 = 0;
+static bool done = false;
 extern "C" __declspec(dllexport) void ProcessWindow()
 {
     ImGui::Begin("Yu-Gi-Oh! YGO::DUEL Function Testing");
@@ -75,13 +76,6 @@ extern "C" __declspec(dllexport) void ProcessWindow()
         ImGui::Text("YGO::DUEL::Get_DuelTimeLimit() %d", YGO::DUEL::Get_DuelTimeLimit());
         if (ImGui::IsItemHovered())
             ImGui::SetTooltip("Returns the duel time limit in milliseconds (0 for no limit)");
-
-        if (ImGui::Button("YGO::DUEL::Set_DuelTimeLimit(300000)"))
-        {
-            auto asf = reinterpret_cast<int(*)(short CardId)>(0x14015EA90);
-            *reinterpret_cast<short*>(0x14349BC80) = 4844;
-            std::cout << asf(4844);
-        }
     }
 
     ImGui::End();
@@ -103,11 +97,15 @@ extern "C" __declspec(dllexport) void ProcessWindow()
         ImGui::Text("Get_CardLimitedStatusFromKonamiId() %d", YGO::CARDS::Get_CardLimitedStatusFromKonamiId(KonamiId));
         ImGui::Text("Get_CardLevelFromKonamiId() %d", YGO::CARDS::Get_CardLevelFromKonamiId(KonamiId));
         ImGui::Text("Get_CardTypeFromKonamiId() %d", YGO::CARDS::Get_CardTypeFromKonamiId(KonamiId));
+        ImGui::Text("Get_CardTypeFromFullCardPropsByKonamiId() %d", YGO::CARDS::Get_CardTypeFromFullCardPropsByKonamiId(KonamiId));
         ImGui::Text("Get_CardMonsterTypeFromKonamiId() %d", YGO::CARDS::Get_CardMonsterTypeFromKonamiId(KonamiId));
         ImGui::Text("Get_CardSameFromKonamiId() %d", YGO::CARDS::Get_CardSameFromKonamiId(KonamiId));
         ImGui::Text("Get_CurrentCardId() %d", YGO::CARDS::Get_CurrentCardId(KonamiId));
         ImGui::Text("Get_InternalIdFromKonamiId() %d", YGO::CARDS::Get_InternalIdFromKonamiId(KonamiId));
         ImGui::Text("Get_CardPendulumScaleFromKonamiId() %d", YGO::CARDS::Get_CardPendulumScaleFromKonamiId(KonamiId));
+        ImGui::Text("Get_SpellTrapCardPropertyFromFullCardProps() %d", YGO::CARDS::Get_SpellTrapCardPropertyFromFullCardProps(KonamiId));
+
+        ImGui::Text("Get_Something() %d", YGO::CARDS::Get_Something(KonamiId));
     }
 
     ImGui::End();
@@ -158,6 +156,7 @@ extern "C" _declspec(dllexport) void ProcessInput(HWND hWnd, UINT msg, WPARAM wP
 {
     switch (msg)
     {
+        
     }
 }
 
