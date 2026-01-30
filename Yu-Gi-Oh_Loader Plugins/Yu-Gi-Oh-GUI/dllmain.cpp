@@ -10,6 +10,7 @@
 #include <iostream>
 #include <thread>
 
+#include "Logger.h"
 #include "Plugins.h"
 #include "Yu-Gi-Oh-Ex.h"
 #include "YuGiOh/YuGiOh-GAME.h"
@@ -299,6 +300,7 @@ extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
+    Logger::SetupLogger();
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
