@@ -1,20 +1,21 @@
 #include <d3d11.h>
 #include <detours.h>
 #include <dxgi.h>
+#include <fstream>
 #include <imgui.h>
 #include <imgui_impl_dx11.h>
 #include <imgui_impl_win32.h>
-#include <string>
-#include <windows.h>
-#include <fstream>
 #include <iostream>
+#include <string>
 #include <thread>
+#include <unordered_map>
+#include <windows.h>
 
 #include "Logger.h"
 #include "Plugins.h"
-#include "Yu-Gi-Oh-Ex.h"
-#include "YuGiOh/YuGiOh-GAME.h"
 #include "YuGiOh/YuGiOh-CARDS.h"
+#include "YuGiOh/YuGiOh-GAME.h"
+#include "Yu-Gi-Oh-Ex.h"
 
 typedef __int64 Address;
 
@@ -43,6 +44,7 @@ Player g_Player1 = Player(PLAYER_ONE);
 Player g_Player2 = Player(PLAYER_TWO);
 
 bool PluginManager::_IsLoaded;;
+std::unordered_map<std::string, bool> PluginManager::m_PluginEnabled;
 
 static bool DoIStart = false;
 
@@ -183,34 +185,16 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
         ImGui::BeginGroup();
 
-        if (ImGui::CollapsingHeader("Addresses - Misc"))
-        {
-            ImGui::Text("Player One: 0x%X", PLAYER_ONE);
-
-            ImGui::Text("g_bIsGameTutorial: 0x%X", YuGiOh::Get_IsDuelTutorial());
-            ImGui::Text("Selected Slot On Duel Mat: 0x%X", YuGiOh::Get_SelectedSlotOnDuelMat());
-        }
-
-        if (ImGui::CollapsingHeader("Runtime Options", ImGuiTreeNodeFlags_DefaultOpen))
-        {
-            if (ImGui::Checkbox("Player 1 Starts", &DoIStart))
-            {
-                if (DoIStart)
-                {
-                    *(bool*)0x140C8D384 = 0;
-                }
-                else
-                {
-                    *(bool*)0x140C8D384 = 1;
-                }
-            }
-        }
-
         if (ImGui::CollapsingHeader("Debug Mode", ImGuiTreeNodeFlags_DefaultOpen))
         {
+            auto Plugins = PluginManager::ScanForPlugins();
+            for (auto& Plugin : Plugins)
+                ImGui::Checkbox(Plugin.c_str(), &PluginManager::m_PluginEnabled[Plugin]);
+
             if (ImGui::Button("Load Plugins"))
             {
-                if (PluginManager::_IsLoaded == false) {
+                if (PluginManager::_IsLoaded == false)
+                {
                     PluginManager::Load();
 
                     PluginManager::ProcessConfigForPlugin();
@@ -281,15 +265,8 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(IDXGIAdapter* pAdapter,
     //Setup WndProc
     oWndProc = reinterpret_cast<WNDPROC>(SetWindowLongPtrA(sd.OutputWindow, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(WndProc)));
 
-    auto LoadPlugins = 0;
-    LoadPlugins = GetPrivateProfileIntA("Yu-Gi-Oh-GUI", "AutoLoadPlugins", 0, ".\\Config.ini");
-
-    if (LoadPlugins == 1)
-        std::thread(PluginManager::DelayLoad).detach();
-
     return result;
 }
-
 extern "C" __declspec(dllexport) ImGuiContext* __stdcall Get_ImGuiContext()
 {
     if (ImGui::GetCurrentContext() == nullptr)
