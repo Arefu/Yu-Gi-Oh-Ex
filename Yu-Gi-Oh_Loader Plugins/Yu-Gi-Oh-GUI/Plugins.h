@@ -1,11 +1,12 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <windows.h>
+#include <unordered_map>
 
-static class PluginManager
+class PluginManager
 {
 public:
-    static void DelayLoad();
     static void Load();
     static std::vector<std::string> ScanForPlugins();
 
@@ -15,4 +16,6 @@ public:
     static void ProcessGui();
 
     static bool _IsLoaded;
+    static std::unordered_map<std::string, bool> m_PluginEnabled;
+    static CHAR PluginPath[MAX_PATH];
 };
