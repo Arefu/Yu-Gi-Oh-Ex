@@ -1,4 +1,8 @@
-#include <Windows.h>
+#include "imgui.h"
+#include "Logger.h"
+#include "Plugins.h"
+#include "Yu-Gi-Oh-Ex.h"
+#include <chrono>
 #include <iostream>
 #include <string>
 #include "Plugins.h"
@@ -15,7 +19,9 @@ void PluginManager::Load()
     std::vector<std::string> Plugins = ScanForPlugins();
     for (auto& Plugin : Plugins)
     {
-        std::cout << "Loading Plugin: " << Plugin << std::endl;
+        if (Plugin.second == false) continue;
+
+        Logger::WriteLog("Loading Plugin: " + Plugin.first, MODULE_NAME, 0);
 
         auto PluginPath = new CHAR[MAX_PATH];
         GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginPath, MAX_PATH, ".\\Config.ini");
