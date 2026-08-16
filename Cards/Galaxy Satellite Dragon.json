@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 92362073,
+      "name": "Galaxy Satellite Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Dragon monsters\r\nDuring the Battle Phase (Quick Effect): You can banish this card from your field or GY, then target 1 \"Number\" Xyz Monster you control whose original Attribute/Type are LIGHT/Dragon; until the end of the Battle Phase, its ATK becomes equal to the value of the \"Number\" in its name x 100, also any battle damage your opponent takes is halved. During your opponent's End Phase: You can choose 1 card from your Deck and place it on top of your Deck. You can only use each effect of \"Galaxy Satellite Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-satellite-dragon-10344",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92362073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92362073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92362073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92362073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.82",
+          "amazon_price": "3.51",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126026,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010047,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14674,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

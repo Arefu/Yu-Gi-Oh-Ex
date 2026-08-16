@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 98380593,
+      "name": "Supremacy Berry",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your Life Points were lower than your opponent's when this card was activated, gain 2000 Life Points. If your Life Points were higher than your opponent's, you take 1000 damage.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supremacy-berry-8175",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN060",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98380593,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98380593.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98380593.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98380593.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.07",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30175,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8212,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

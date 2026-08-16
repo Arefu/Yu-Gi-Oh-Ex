@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 44430454,
+      "name": "Chamberlain of the Six Samurai",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The Six Samurai are supported from the shadows by this silent and mysterious warrior. His past is unknown to them, but his countless scars are proof of his experience.",
+      "race": "Warrior",
+      "atk": 200,
+      "def": 2000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chamberlain-of-the-six-samurai-3788",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN222",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44430454,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44430454.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44430454.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44430454.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72761,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7276,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

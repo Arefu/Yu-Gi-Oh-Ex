@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 67547370,
+      "name": "Zushin the Sleeping Giant",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing a monster you control with 10 Zushin Counters, and cannot be Special Summoned by other ways. Once per turn: You can reveal this card in your hand, then target 1 Level 1 Normal Monster you control (keep this card revealed until the end of this turn); place 1 Zushin Counter on it. Unaffected by other cards' effects. If this card battles a monster, during damage calculation: ATK and DEF of this card become equal to the current ATK of the monster it is battling +1000, during that damage calculation only.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zushin-the-sleeping-giant-5678",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN114",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67547370,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67547370.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67547370.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67547370.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37311,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12541,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

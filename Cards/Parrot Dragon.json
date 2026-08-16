@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 62762898,
+      "name": "Parrot Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A dragon from the cartoons that's more dangerous than it appears to be.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 1300,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/parrot-dragon-5300",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "12.17"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN010",
+          "set_rarity": "European & Oceanian debut",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62762898,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62762898.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62762898.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62762898.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106826,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4389,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

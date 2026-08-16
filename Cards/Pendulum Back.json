@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 76660409,
+      "name": "Pendulum Back",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you have 2 cards in your Pendulum Zones: Target 2 monsters in your Graveyard, each with a Level between (exclusive) the Pendulum Scales of the cards in your Pendulum Zones; add them to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-back-6451",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN078",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76660409,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76660409.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76660409.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76660409.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27831,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11287,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

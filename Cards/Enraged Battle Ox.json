@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "id": 76909279,
+      "name": "Enraged Battle Ox",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Beast, Beast-Warrior, or Winged Beast-Type monster you control attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Beast-Warrior",
+      "atk": 1700,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/enraged-battle-ox-6472",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN011",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 15 participation cards",
+          "set_code": "DL15-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.58"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.31"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76909279,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76909279.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76909279.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76909279.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 233359,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5884,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

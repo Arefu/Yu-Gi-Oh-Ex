@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 6165656,
+      "name": "Number C88: Gimmick Puppet Disaster Leo",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 9 monsters\nMust be Special Summoned with a \"Rank-Up-Magic\" Spell Card targeting \"Number 88: Gimmick Puppet of Leo\", and cannot be Special Summoned by other ways. This card cannot be targeted by card effects. Once per turn: You can detach 1 Xyz Material from this card; inflict 1000 damage to your opponent. During your End Phase, if your opponent's Life Points are 2000 or less, and this card has no Xyz Materials, you win the Duel.",
+      "race": "Machine",
+      "atk": 3500,
+      "def": 2500,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c88-gimmick-puppet-disaster-leo-543",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN021",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6165656,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6165656.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6165656.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6165656.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C88",
+          "views": 106858,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11016,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

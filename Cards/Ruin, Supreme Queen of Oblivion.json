@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 13518809,
+      "name": "Ruin, Supreme Queen of Oblivion",
+      "typeline": [
+        "Fairy",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Cycle of the World\". This card's name becomes \"Ruin, Queen of Oblivion\" while in the hand or on the field. While this Ritual Summoned card is on the field, Ritual Monsters you control cannot be destroyed by card effects. If all monsters used to Ritual Summon this card were Ritual Monsters, it can make a second attack during each Battle Phase. If this card destroys an opponent's monster by battle: You can inflict damage to your opponent equal to that destroyed monster's original ATK.",
+      "race": "Fairy",
+      "atk": 2900,
+      "def": 3000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Demise",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ruin-supreme-queen-of-oblivion-9369",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13518809,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13518809.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13518809.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13518809.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ruin, Graceful Queen of Oblivion",
+          "views": 156834,
+          "viewsweek": 23,
+          "upvotes": 22,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13745,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

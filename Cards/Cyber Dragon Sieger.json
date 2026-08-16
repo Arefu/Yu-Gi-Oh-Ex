@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 46724542,
+      "name": "Cyber Dragon Sieger",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Machine monsters, including \"Cyber Dragon\"\nThis card's name becomes \"Cyber Dragon\" while on the field or in the GY. During each Battle Phase, if this card has not declared an attack (Quick Effect): You can target 1 Machine monster you control with 2100 or more ATK; for the rest of this turn, that monster gains 2100 ATK/DEF, also neither player takes any battle damage from attacks involving this monster. You can only use this effect of \"Cyber Dragon Sieger\" once per turn.",
+      "race": "Machine",
+      "atk": 2100,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-dragon-sieger-9363",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN108",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.28"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46724542,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46724542.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46724542.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46724542.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.87",
+          "tcgplayer_price": "5.04",
+          "ebay_price": "4.95",
+          "amazon_price": "6.97",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cyber Dragon Zieger",
+          "views": 652293,
+          "viewsweek": 0,
+          "upvotes": 32,
+          "downvotes": 9,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13758,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 12953226,
+      "name": "Nuvia the Wicked",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this monster is Normal Summoned, destroy this card. If your opponent controls any monster, decrease the ATK of this card by 200 points for each monster on your opponents side of the field.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Mask",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nuvia-the-wicked-1113",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN216",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.76"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12953226,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12953226.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12953226.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12953226.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.29",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131342,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5096,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

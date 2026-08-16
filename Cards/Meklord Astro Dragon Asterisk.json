@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 38522377,
+      "name": "Meklord Astro Dragon Asterisk",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by controlling 3 or more \"Meklord\" monsters. When this card is Special Summoned: You can target any number of \"Meklord\" monsters you control, except this card; send those targets to the Graveyard, and if you do, this card's ATK becomes the combined original ATK of the monsters sent to the Graveyard by this effect. Each time a Synchro Monster(s) is Special Summoned: Inflict 1000 damage to the Summoning player.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Meklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meklord-astro-dragon-asterisk-3265",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN166",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38522377,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38522377.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38522377.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38522377.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.59",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44206,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9486,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

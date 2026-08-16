@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 64463828,
+      "name": "Superalloy Beast Raptinus",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Gemini Monster + 1 Gemini Monster\nAll Gemini Monsters on the field are treated as Effect Monsters, and gain their effects.",
+      "race": "Dragon",
+      "atk": 2200,
+      "def": 2200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superalloy-beast-raptinus-5443",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64463828,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64463828.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64463828.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64463828.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "2.50",
+          "amazon_price": "1.36",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100525,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7301,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

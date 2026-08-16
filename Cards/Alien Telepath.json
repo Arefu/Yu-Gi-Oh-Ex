@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 91070115,
+      "name": "Alien Telepath",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can remove 1 A-Counter from an opponent's monster to destroy 1 Spell or Trap Card. (If a monster with an A-Counter battles an \"Alien\" monster, it loses 300 ATK and DEF for each A-Counter during damage calculation only.)",
+      "race": "Reptile",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alien-telepath-7603",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91070115,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91070115.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91070115.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91070115.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.99",
+          "tcgplayer_price": "4.13",
+          "ebay_price": "3.99",
+          "amazon_price": "7.77",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75544,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7299,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

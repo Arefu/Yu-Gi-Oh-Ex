@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 66752837,
+      "name": "Keeper of the Shrine",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be treated as 2 Tributes for the Tribute Summon of a Dragon monster. While this card is in your hand or GY, if a face-up Dragon monster on the field, except \"Keeper of the Shrine\", is sent to the GY by a card effect or because it was destroyed by battle: You can Special Summon this card, then, if that monster sent to the GY is a Normal Monster, you can add 1 Dragon Normal Monster from your GY to your hand. You can only use this effect of \"Keeper of the Shrine\" once per turn.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 2100,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/keeper-of-the-shrine-5607",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ22",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66752837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66752837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66752837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66752837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220302,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11808,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

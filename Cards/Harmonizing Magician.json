@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 73941492,
+      "name": "Harmonizing Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAll monsters you control gain 100 ATK and DEF for each face-up \"Magician\" Pendulum Monster with different names in your Extra Deck.\n\n[ Monster Effect ] \nCannot be Special Summoned from the Extra Deck. Cannot be used as material for a Fusion, Synchro, or Xyz Summon, unless all other materials are \"Magician\" Pendulum Monsters. When this card is Pendulum Summoned from the hand: You can Special Summon 1 \"Magician\" Pendulum Monster from your Deck in Defense Position, except \"Harmonizing Magician\", but negate its effects, also banish it when it leaves the field. You can only use this effect of \"Harmonizing Magician\" once per turn.",
+      "race": "Spellcaster",
+      "pend_desc": "All monsters you control gain 100 ATK and DEF for each face-up \"Magician\" Pendulum Monster with different names in your Extra Deck.",
+      "monster_desc": "Cannot be Special Summoned from the Extra Deck. Cannot be used as material for a Fusion, Synchro, or Xyz Summon, unless all other materials are \"Magician\" Pendulum Monsters. When this card is Pendulum Summoned from the hand: You can Special Summon 1 \"Magician\" Pendulum Monster from your Deck in Defense Position, except \"Harmonizing Magician\", but negate its effects, also banish it when it leaves the field. You can only use this effect of \"Harmonizing Magician\" once per turn.",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harmonizing-magician-8488",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN010",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73941492,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73941492.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73941492.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73941492.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 599798,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-06-22",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12855,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

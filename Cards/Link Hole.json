@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 73275815,
+      "name": "Link Hole",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a Link-4 or higher monster: Destroy monsters your opponent controls, up to the number of Link-3 or higher monsters you control. You can only activate 1 \"Link Hole\" per turn.",
+      "race": "Normal",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-hole-9014",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN203",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73275815,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73275815.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73275815.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73275815.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29745,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13422,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

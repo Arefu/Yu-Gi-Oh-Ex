@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 53713014,
+      "name": "Crazy Fish",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A flying fish that attacks with its pointed head.",
+      "race": "Fish",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crazy-fish-4576",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53713014,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53713014.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53713014.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53713014.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.98",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15536,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-12-05",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4513,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

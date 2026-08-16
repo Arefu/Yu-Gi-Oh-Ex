@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": 25262697,
+      "name": "Gravekeeper's Assailant",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card declares an attack while \"Necrovalley\" is on the field: You can target 1 face-up monster your opponent controls; change that target's battle position.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-assailant-2172",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN189",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Two",
+          "set_code": "TU02-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25262697,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25262697.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25262697.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25262697.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 235818,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5517,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

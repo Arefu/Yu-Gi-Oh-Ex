@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 27182739,
+      "name": "Mathmech Sigma",
+      "typeline": [
+        "Cyberse",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters in the Extra Monster Zone, while this card is in your hand or GY: You can Special Summon this card, but banish it when it leaves the field, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Cyberse monsters. You can only use this effect of \"Mathmech Sigma\" once per turn. If this card you control is used as Synchro Material for a \"Mathmech\" monster, you can treat it as a non-Tuner.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mathmech-sigma-10411",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27182739,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27182739.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27182739.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27182739.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "13.49",
+          "amazon_price": "6.45",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Processlayer Sigma",
+          "views": 324320,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423001,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14744,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

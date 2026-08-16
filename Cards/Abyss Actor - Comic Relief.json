@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 15308295,
+      "name": "Abyss Actor - Comic Relief",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can target 1 \"Abyss Actor\" Pendulum Monster you control and 1 monster your opponent controls; switch control of both monsters, then destroy this card. You can only use this effect of \"Abyss Actor - Comic Relief\" once per turn.\n\n[ Monster Effect ] \nYou take no battle damage from attacks involving this card. Once per turn, during your Standby Phase: Give control of this card to your opponent. Once per turn, if control of this face-up card changes: Activate this effect; the owner of this card can destroy 1 Set \"Abyss Script\" Spell in their Spell & Trap Zone.",
+      "race": "Fiend",
+      "pend_desc": "You can target 1 \"Abyss Actor\" Pendulum Monster you control and 1 monster your opponent controls; switch control of both monsters, then destroy this card. You can only use this effect of \"Abyss Actor - Comic Relief\" once per turn.",
+      "monster_desc": "You take no battle damage from attacks involving this card. Once per turn, during your Standby Phase: Give control of this card to your opponent. Once per turn, if control of this face-up card changes: Activate this effect; the owner of this card can destroy 1 Set \"Abyss Script\" Spell in their Spell & Trap Zone.",
+      "atk": 1000,
+      "def": 2000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-comic-relief-9564",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15308295,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15308295.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15308295.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15308295.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81082,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13863,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

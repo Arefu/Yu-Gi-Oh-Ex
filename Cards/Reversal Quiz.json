@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 5990062,
+      "name": "Reversal Quiz",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send all cards in your hand and on your side of the field to the Graveyard. Call the type of card (Spell, Trap, or Monster) on top of your Deck. If you call it right, exchange your current Life Points with your opponent's current ones.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reversal-quiz-525",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5990062,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5990062.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5990062.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5990062.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "1.35",
+          "ebay_price": "2.69",
+          "amazon_price": "1.65",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112315,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5541,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

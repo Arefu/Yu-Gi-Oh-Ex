@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 68507541,
+      "name": "Amazoness Pet Liger",
+      "typeline": [
+        "Beast",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Amazoness Tiger\" + 1 \"Amazoness\" monster\r\nOnce per battle, if this card attacks, during damage calculation: You can make this card gain 500 ATK during that damage calculation only. If your \"Amazoness\" monster attacked an opponent's monster, after damage calculation: You can target 1 face-up monster your opponent controls; it loses 800 ATK. Monsters your opponent controls cannot attack \"Amazoness\" monsters you control, except this one.",
+      "race": "Beast",
+      "atk": 2500,
+      "def": 2400,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-pet-liger-8547",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN166",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68507541,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68507541.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68507541.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68507541.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.39",
+          "amazon_price": "3.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85625,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13147,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

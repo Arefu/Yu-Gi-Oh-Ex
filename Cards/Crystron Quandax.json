@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 39964797,
+      "name": "Crystron Quandax",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nOnce per Chain, during your opponent's Main or Battle Phase, you can (Quick Effect): Immediately after this effect resolves, Synchro Summon 1 Synchro Monster, using materials including this card you control. If this Synchro Summoned card is destroyed by battle or card effect: You can target 1 \"Crystron\" monster in your GY, except a Synchro Monster; Special Summon it.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Crystron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystron-quandax-3388",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39964797,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39964797.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39964797.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39964797.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.21",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "1.89",
+          "amazon_price": "4.74",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 260986,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12634,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

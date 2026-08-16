@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 9212051,
+      "name": "SPYRAL MISSION - Rescue",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Destroy this card during your 3rd End Phase after activation. Once per turn: You can target 1 \"SPYRAL\" monster in your GY; add it to your hand. You can banish this card from your GY, then target 1 \"SPYRAL\" monster in your GY; Special Summon it. You can only control 1 \"SPYRAL MISSION - Rescue\".",
+      "race": "Continuous",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-mission-rescue-8528",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9212051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9212051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9212051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9212051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.74",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83159,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 13028,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

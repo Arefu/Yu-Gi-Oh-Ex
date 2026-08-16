@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 78783370,
+      "name": "Barrel Behind the Door",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Activate only when a card's effect that would inflict damage to you is activated. Your opponent takes the damage instead.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barrel-behind-the-door-6618",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.33"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78783370,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78783370.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78783370.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78783370.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "4.75",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99279,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5543,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

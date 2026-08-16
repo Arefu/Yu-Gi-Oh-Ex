@@ -1,0 +1,266 @@
+{
+  "data": [
+    {
+      "id": 97268402,
+      "name": "Effect Veiler",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's Main Phase (Quick Effect): You can send this card from your hand to the GY, then target 1 Effect Monster your opponent controls; negate the effects of that face-up monster your opponent controls, until the end of this turn.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/effect-veiler-8093",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.91"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.28"
+        },
+        {
+          "set_name": "Eternity Code",
+          "set_code": "ETCO-EN100",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "821.87"
+        },
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENY16",
+          "set_rarity": "2",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.36"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.19"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Power-Up Pack",
+          "set_code": "NKRT-EN039",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos: Special Edition",
+          "set_code": "ORCS-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.5"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN036",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "11.44"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN004",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Albaz Strike",
+          "set_code": "SDAZ-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.34"
+        },
+        {
+          "set_name": "Structure Deck: Blue-Eyes White Destiny",
+          "set_code": "SDWD-EN018",
+          "set_rarity": "2",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.71"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2025 prize cards",
+          "set_code": "25YC-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97268402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97268402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97268402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97268402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "6.97",
+          "amazon_price": "2.52",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "staple": "Yes",
+          "views": 9031433,
+          "viewsweek": 169,
+          "upvotes": 47,
+          "downvotes": 13,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8933,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 53693416,
+      "name": "Eagle Eye",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned successfully, no Trap Cards can be activated.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 1200,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eagle-eye-4575",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53693416,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53693416.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53693416.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53693416.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.09",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51743,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6191,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

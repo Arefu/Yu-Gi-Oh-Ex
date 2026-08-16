@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 69633792,
+      "name": "Evolsaur Terias",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of an \"Evoltile\" monster: This card loses 500 ATK.",
+      "race": "Dinosaur",
+      "atk": 2400,
+      "def": 600,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Evolsaur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evolsaur-terias-5857",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69633792,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69633792.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69633792.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69633792.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31329,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9902,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

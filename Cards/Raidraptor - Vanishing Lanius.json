@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 53251824,
+      "name": "Raidraptor - Vanishing Lanius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase, if this card was Normal or Special Summoned this turn: You can Special Summon 1 Level 4 or lower \"Raidraptor\" monster from your hand.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-vanishing-lanius-4537",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN201",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN029",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53251824,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53251824.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53251824.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53251824.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "7.99",
+          "amazon_price": "0.77",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 227327,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11531,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

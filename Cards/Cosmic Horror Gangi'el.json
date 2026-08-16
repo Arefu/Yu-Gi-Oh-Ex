@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51192573,
+      "name": "Cosmic Horror Gangi'el",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you're Tributing a monster on your side of the field that is owned by your opponent, this card can be Normal Summoned with 1 Tribute. Once per turn, you can place 1 A-Counter on a monster on your opponent's side of the field. (If a monster with an A-Counter battles an \"Alien\" monster, it loses 300 ATK and DEF for each A-Counter during damage calculation only.)",
+      "race": "Reptile",
+      "atk": 2600,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cosmic-horror-gangi-el-4353",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN029",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51192573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51192573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51192573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51192573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "12.95",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66427,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6806,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

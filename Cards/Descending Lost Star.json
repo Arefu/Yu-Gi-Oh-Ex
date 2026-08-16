@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 42079445,
+      "name": "Descending Lost Star",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Synchro Monster in your Graveyard; Special Summon that target in Defense Position, but its effects are negated, its Level is reduced by 1, its DEF becomes 0, also its battle position cannot be changed.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/descending-lost-star-3590",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42079445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42079445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42079445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42079445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60844,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8060,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 57836546,
+      "name": "Xyz Double Back",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "During the turn a face-up Xyz Monster you control was destroyed, if you control no monsters: Target 1 Xyz Monster in your Graveyard that was destroyed this turn and 1 monster in your Graveyard with ATK less than or equal to that Xyz Monster's; Special Summon these targets, but they are destroyed during the End Phase.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-double-back-4925",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57836546,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57836546.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57836546.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57836546.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28732,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10415,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

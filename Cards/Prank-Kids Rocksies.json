@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 31440046,
+      "name": "Prank-Kids Rocksies",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY as material for the Fusion or Link Summon of a \"Prank-Kids\" monster: You can banish 1 card from your hand, and if you do, draw 1 card, then, you can Special Summon 1 \"Prank-Kids\" monster from your hand or Deck in Defense Position, except \"Prank-Kids Rocksies\". You can only use this effect of \"Prank-Kids Rocksies\" once per turn.",
+      "race": "Rock",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Prank-Kids",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-rocksies-9763",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN110",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion Special Edition",
+          "set_code": "SOFU-ENSE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31440046,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31440046.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31440046.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31440046.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.43",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids Rock",
+          "views": 266962,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-12-06",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14099,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

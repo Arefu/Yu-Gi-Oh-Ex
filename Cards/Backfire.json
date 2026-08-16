@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 82705573,
+      "name": "Backfire",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If a face-up FIRE monster(s) you control is destroyed and sent to the GY: Inflict 500 damage to your opponent.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/backfire-6951",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN158",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Structure Deck: Blaze of Destruction",
+          "set_code": "SD3-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82705573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82705573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82705573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82705573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117511,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5986,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 96540,
+      "name": "Downbeat",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 face-up monster; Special Summon from your Deck, 1 monster with the same original Type and Attribute that the Tributed monster had on the field, but 1 Level lower. You can only activate 1 \"Downbeat\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/downbeat-8930",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96540,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96540.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96540.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96540.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.49",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56587,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13434,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

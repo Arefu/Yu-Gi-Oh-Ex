@@ -1,0 +1,134 @@
+{
+  "data": [
+    {
+      "id": 95600067,
+      "name": "Crystal Beast Topaz Tiger",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks an opponent's monster, it gains 400 ATK during the Damage Step only. If this face-up card is destroyed while it is in a Monster Card Zone, you can place it face-up in your Spell & Trap Card Zone as a Continuous Spell Card, instead of sending it to the Graveyard.",
+      "race": "Beast",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Crystal Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystal-beast-topaz-tiger-7962",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Jesse Anderson",
+          "set_code": "DP07-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN004",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN158",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.73"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENF06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95600067,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95600067.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95600067.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95600067.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.23",
+          "amazon_price": "2.35",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 204070,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7076,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

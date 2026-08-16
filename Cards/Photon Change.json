@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 42925441,
+      "name": "Photon Change",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Send this card to the GY during your 2nd Standby Phase after activation. You can only use the following effect of \"Photon Change\" once per turn. Send 1 \"Photon\" or \"Galaxy\" monster you control to the GY to activate 1 of these effects, or, if you send \"Galaxy-Eyes Photon Dragon\", you can activate both, in sequence;\r\n● Special Summon 1 \"Photon\" monster from your Deck with a different original name than the sent monster.\r\n● Add 1 \"Photon\" card from your Deck to your hand, except \"Photon Change\".",
+      "race": "Continuous",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-change-9539",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.94"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42925441,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42925441.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42925441.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42925441.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Photon Transformation (card)",
+          "views": 52848,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13861,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

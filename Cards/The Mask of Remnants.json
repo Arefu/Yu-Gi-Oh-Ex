@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 22610082,
+      "name": "The Mask of Remnants",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Shuffle this card into its owner's Deck, OR if this card was put into play by the effect of \"Masked Beast Des Gardius\", this card is treated as an Equip Card. Control of the equipped monster is switched.",
+      "race": "Normal",
+      "archetype": "Mask",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-mask-of-remnants-1944",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Tactical Evolution: Special Edition",
+          "set_code": "TAEV-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.82"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22610082,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22610082.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22610082.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22610082.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.91",
+          "ebay_price": "1.99",
+          "amazon_price": "3.60",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122067,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-09-12",
+          "ocg_date": "2001-07-05",
+          "konami_id": 5098,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

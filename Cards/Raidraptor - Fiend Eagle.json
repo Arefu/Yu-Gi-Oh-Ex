@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 52323874,
+      "name": "Raidraptor - Fiend Eagle",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 \"Raidraptor\" monsters\nYou can detach 1 Xyz Material from this card, then target 1 face-up Special Summoned monster your opponent controls; inflict damage to your opponent equal to its original ATK on the field. You can only use this effect of \"Raidraptor - Fiend Eagle\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-fiend-eagle-4458",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52323874,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52323874.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52323874.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52323874.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.35",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48992,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11995,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

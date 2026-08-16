@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 78202553,
+      "name": "Subterror Behemoth Stalagmo",
+      "typeline": [
+        "Rock",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can discard 1 \"Subterror\" monster, and if you do, draw 2 cards. You can only use this effect of \"Subterror Behemoth Stalagmo\" once per turn.\r\nWhen a face-up monster you control is flipped face-down, if you control no face-up monsters: You can Special Summon this card from your hand in Defense Position. Once per turn: You can change this card to face-down Defense Position.",
+      "race": "Rock",
+      "atk": 2800,
+      "def": 2100,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-behemoth-stalagmo-6573",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78202553,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78202553.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78202553.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78202553.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.95",
+          "tcgplayer_price": "1.43",
+          "ebay_price": "1.74",
+          "amazon_price": "3.68",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77101,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12686,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

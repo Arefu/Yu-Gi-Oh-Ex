@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 5560911,
+      "name": "Destrudo the Lost Dragon's Frisson",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or GY: You can pay half your LP, then target 1 Level 6 or lower monster you control; Special Summon this card, and if you do, this card's Level is reduced by the Level of the targeted monster, also place this card on the bottom of the Deck if it leaves the field. You can only use this effect of \"Destrudo the Lost Dragon's Frisson\" once per turn.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 3000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destrudo-the-lost-dragon-s-frisson-8588",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN127",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19",
+          "set_code": "OP19-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5560911,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5560911.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5560911.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5560911.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.95",
+          "amazon_price": "12.70",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Destrudo, the Dead Drake of Dread",
+          "views": 1395424,
+          "viewsweek": 21,
+          "upvotes": 23,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13254,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

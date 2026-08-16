@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 82697249,
+      "name": "Number 59: Crooked Cook",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nWhile you control no other cards on the field, this card is unaffected by other cards' effects. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card; destroy as many other cards you control as possible, then this card gains 300 ATK until the end of this turn for each monster destroyed by this effect and sent to the Graveyard.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-59-crooked-cook-6950",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN121",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82697249,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82697249.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82697249.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82697249.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.92",
+          "ebay_price": "4.00",
+          "amazon_price": "2.85",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 59",
+          "views": 151948,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12548,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

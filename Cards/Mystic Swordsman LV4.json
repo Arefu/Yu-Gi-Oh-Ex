@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 74591968,
+      "name": "Mystic Swordsman LV4",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned (but can be Normal Set). At the start of the Damage Step, if this card attacked a face-down Defense Position monster: Destroy that monster. During the End Phase, if this card destroyed a monster by battle this turn: You can send this face-up card to the Graveyard; Special Summon 1 \"Mystic Swordsman LV6\" from your hand or Deck.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1600,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystic-swordsman-lv4-6269",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN201",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN012",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Warrior's Triumph",
+          "set_code": "SD5-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74591968,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74591968.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74591968.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74591968.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "19.99",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 164790,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6104,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

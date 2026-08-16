@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 15449853,
+      "name": "The Sanctum of Parshath",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "This card's name becomes \"The Sanctuary in the Sky\" while on the field or in the GY. Fairy monsters on the field gain 300 ATK/DEF. Set Spells/Traps cannot be targeted by, or destroyed by, card effects. Once per turn: You can target a total of 3 Fairy monsters and/or Counter Traps with different names in your GY; place them on top of your Deck in any order.",
+      "race": "Continuous",
+      "archetype": "Parshath",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-sanctum-of-parshath-8814",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN162",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15449853,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15449853.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15449853.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15449853.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.63",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 207040,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-01-18",
+          "ocg_date": "2017-09-23",
+          "konami_id": 13353,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

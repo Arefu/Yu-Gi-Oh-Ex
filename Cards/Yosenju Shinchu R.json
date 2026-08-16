@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 91420254,
+      "name": "Yosenju Shinchu R",
+      "typeline": [
+        "Rock",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if you have a \"Yosenju\" card in your other Pendulum Zone: You can make this card's Pendulum Scale become 11 until the end of this turn, also you cannot Special Summon monsters for the rest of this turn, except \"Yosenju\" monsters (even if this card leaves the field).\n\n[ Monster Effect ] \nIf this card is Normal Summoned: Change it to Defense Position. Monsters your opponent controls cannot target face-up \"Yosenju\" monsters for attacks, except this one.",
+      "race": "Rock",
+      "pend_desc": "Once per turn, if you have a \"Yosenju\" card in your other Pendulum Zone: You can make this card's Pendulum Scale become 11 until the end of this turn, also you cannot Special Summon monsters for the rest of this turn, except \"Yosenju\" monsters (even if this card leaves the field).",
+      "monster_desc": "If this card is Normal Summoned: Change it to Defense Position. Monsters your opponent controls cannot target face-up \"Yosenju\" monsters for attacks, except this one.",
+      "atk": 0,
+      "def": 2100,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yosenju-shinchu-r-7622",
+      "card_sets": [
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN008",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91420254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91420254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91420254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91420254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.00",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41317,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11477,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

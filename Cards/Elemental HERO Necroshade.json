@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 89252153,
+      "name": "Elemental HERO Necroshade",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once, while this card is in the Graveyard, 1 Level 5 or higher \"Elemental HERO\" monster you Normal Summon can be Summoned without Tributing.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1800,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-necroshade-7454",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN007",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENA11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Jaden Yuki",
+          "set_code": "YSDJ-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Duel Academy promotional cards",
+          "set_code": "GX1-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89252153,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89252153.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89252153.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89252153.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "4.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 183134,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-01-10",
+          "ocg_date": "2005-10-13",
+          "konami_id": 6527,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

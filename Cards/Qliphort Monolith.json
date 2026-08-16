@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 51194046,
+      "name": "Qliphort Monolith",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. Once per turn, during the End Phase, if you Tribute Summoned this turn: You can draw a number of cards equal to the number of \"Qli\" monsters you Tributed for Tribute Summons this turn.\n\n[ Monster Effect ] \n''Unhandled exception at 0x1i-666 in qliphort.exe: Access violation writing location 0x00-000\r\nContinue, ignoring this error? ...[ ]\r\nXlmgzxg drgs gsv Hzxivw Givv rh uliyrwwvm. Gsv hxlfitv szh yvvm fmovzhsvw.''",
+      "race": "Machine",
+      "pend_desc": "You cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. Once per turn, during the End Phase, if you Tribute Summoned this turn: You can draw a number of cards equal to the number of \"Qli\" monsters you Tributed for Tribute Summons this turn.",
+      "monster_desc": "''Unhandled exception at 0x1i-666 in qliphort.exe: Access violation writing location 0x00-000\r\nContinue, ignoring this error? ...[ ]\r\nXlmgzxg drgs gsv Hzxivw Givv rh uliyrwwvm. Gsv hxlfitv szh yvvm fmovzhsvw.''",
+      "atk": 2400,
+      "def": 1000,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-monolith-4354",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51194046,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51194046.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51194046.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51194046.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "5.99",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82899,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11540,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

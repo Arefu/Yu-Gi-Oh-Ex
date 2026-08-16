@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 28378427,
+      "name": "Damage Condenser",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When you take battle damage: Discard 1 card; Special Summon 1 monster from your Deck with ATK less than or equal to the battle damage you took, in face-up Attack Position.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/damage-condenser-2417",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN172",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "21.59"
+        },
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN048",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Saga of Blue-Eyes White Dragon Structure Deck",
+          "set_code": "SDBE-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN052",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28378427,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28378427.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28378427.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28378427.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81533,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6582,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

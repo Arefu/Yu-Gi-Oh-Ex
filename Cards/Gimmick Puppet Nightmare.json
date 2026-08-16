@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 55204071,
+      "name": "Gimmick Puppet Nightmare",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by Tributing 1 face-up Xyz Monster you control. You can only Special Summon \"Gimmick Puppet Nightmare\" once per turn this way. When you do: You can Special Summon 1 \"Gimmick Puppet Nightmare\" from your hand or Graveyard. If this card is Special Summoned, you cannot Special Summon any monsters for the rest of this turn, except \"Gimmick Puppet\" monsters.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gimmick-puppet-nightmare-4701",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.59"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 55204071,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55204071.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55204071.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55204071.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "16.90",
+          "amazon_price": "1.15",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 249766,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10695,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

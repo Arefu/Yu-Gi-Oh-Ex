@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 29146185,
+      "name": "World of Prophecy",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of a Spellcaster-Type monster or a \"Spellbook\" Spell Card: You can target 2 \"Spellbook\" Spell Cards in your Graveyard; add those targets to your hand. You cannot Special Summon other monsters during the turn you activate this effect. When you add card(s) to your hand by this effect: You can reveal 4 \"Spellbook\" Spell Cards with different names in your hand; destroy all other cards on the field.",
+      "race": "Spellcaster",
+      "atk": 2900,
+      "def": 2400,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-of-prophecy-2472",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29146185,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29146185.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29146185.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29146185.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.97",
+          "tcgplayer_price": "0.89",
+          "ebay_price": "2.38",
+          "amazon_price": "4.37",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53611,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10631,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

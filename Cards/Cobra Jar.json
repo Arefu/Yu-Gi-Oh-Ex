@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 86801871,
+      "name": "Cobra Jar",
+      "typeline": [
+        "Reptile",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Special Summon 1 \"Poisonous Snake Token\" (Reptile-Type/EARTH/3 Stars/ATK 1200/DEF 1200). When the \"Poisonous Snake Token\" is destroyed as a result of battle, inflict 500 points of damage to your opponent's Life Points.",
+      "race": "Reptile",
+      "atk": 600,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cobra-jar-7264",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86801871,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86801871.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86801871.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86801871.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.70",
+          "ebay_price": "8.99",
+          "amazon_price": "1.71",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116775,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5525,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

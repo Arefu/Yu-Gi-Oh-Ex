@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 43841694,
+      "name": "Spellbook of Miracles",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Spellcaster-Type Xyz Monster in your Graveyard and up to 2 of your banished \"Spellbook\" Spell Cards; Special Summon that monster, and if you do, attach the targeted \"Spellbook\" Spell Card(s) to it as Xyz Material. You can only activate 1 \"Spellbook of Miracles\" per turn.",
+      "race": "Normal",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spellbook-of-miracles-3743",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43841694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43841694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43841694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43841694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40310,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10602,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

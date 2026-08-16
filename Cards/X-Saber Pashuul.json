@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 23093604,
+      "name": "X-Saber Pashuul",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle. During each of your opponent's Standby Phases: You take 1000 damage. You must control this card in face-up Defense Position to activate and to resolve this effect.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 0,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/x-saber-pashuul-1984",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN076",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Seven",
+          "set_code": "TU07-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23093604,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23093604.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23093604.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23093604.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "7.99",
+          "amazon_price": "1.15",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82095,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7824,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

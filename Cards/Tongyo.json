@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 69572024,
+      "name": "Tongyo",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster captures other fish with its long tongue and sucks the energy out of them.",
+      "race": "Fish",
+      "atk": 1350,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tongyo-5850",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69572024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69572024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69572024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69572024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 98322,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4549,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

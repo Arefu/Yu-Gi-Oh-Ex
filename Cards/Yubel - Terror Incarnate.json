@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 4779091,
+      "name": "Yubel - Terror Incarnate",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must be Special Summoned by \"Yubel\", and cannot be Special Summoned by other ways. This card cannot be destroyed by battle. You take no Battle Damage from battles involving this card. Before damage calculation, when this face-up Attack Position card is attacked by an opponent's monster: Inflict damage to your opponent equal to that monster's ATK. During your End Phase: Destroy all other monsters on the field. When this face-up card leaves the field: You can Special Summon 1 \"Yubel - The Ultimate Nightmare\" from your hand, Deck, or Graveyard.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 11,
+      "attribute": "DARK",
+      "archetype": "Yubel",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yubel-terror-incarnate-422",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN198",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN007",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN190",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN190",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4779091,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4779091.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4779091.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4779091.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.03",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "19.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 436860,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7410,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

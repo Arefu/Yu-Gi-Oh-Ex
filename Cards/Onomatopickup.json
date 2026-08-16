@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 85119159,
+      "name": "Onomatopickup",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can add 1 \"Onomat\" card from your Deck to your hand, except \"Onomatopickup\". You can target 1 \"Zubaba\", \"Gagaga\", \"Gogogo\", or \"Dododo\" monster you control; all monsters you currently control become that monster's Level until the end of this turn (even if this card leaves the field). You can only use this effect of \"Onomatopickup\" once per turn. You can only activate 1 \"Onomatopickup\" per turn.",
+      "race": "Continuous",
+      "archetype": "Onomat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/onomatopickup-10701",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.64"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85119159,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85119159.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85119159.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85119159.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.55",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Onomatopick",
+          "views": 328167,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413037,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14923,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

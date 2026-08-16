@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 72192100,
+      "name": "Desrook Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The controller of this card pays 500 Life Points during each of his/her Standby Phases (this is not optional). When this card is targeted by the effect of a card controlled by your opponent, when resolving the effect, roll a six-sided die. If the result is 3, negate the effect and destroy the opponent's card. When a \"Terrorking Archfiend\" on your side of the field is destroyed and sent to the Graveyard, you can send this card from your hand to the Graveyard to Special Summon the \"Terrorking Archfiend\".",
+      "race": "Fiend",
+      "atk": 1100,
+      "def": 1800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/desrook-archfiend-6057",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN232",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENE08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72192100,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72192100.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72192100.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72192100.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124226,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5775,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

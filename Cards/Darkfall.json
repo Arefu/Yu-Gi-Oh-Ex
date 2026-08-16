@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 30127518,
+      "name": "Darkfall",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent Special Summons 2 or more face-up monsters at the same time: Send those monsters to the Graveyard, then send all monsters in the opponent's hand and Deck to the Graveyard that have the same name as the monsters sent to the Graveyard by this effect.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkfall-2555",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN020",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.89"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30127518,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30127518.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30127518.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30127518.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "4.75",
+          "amazon_price": "3.25",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115305,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9157,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 8034697,
+      "name": "Magical Marionette",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell Card resolves. This card gains 200 ATK for each Spell Counter on it. You can remove 2 Spell Counters from this card, then target 1 monster on the field; destroy that target.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 1000,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-marionette-680",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN124",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8034697,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8034697.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8034697.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8034697.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 224525,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5653,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

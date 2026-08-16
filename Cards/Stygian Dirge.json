@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 81489939,
+      "name": "Stygian Dirge",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Reduce the Levels of all monsters your opponent controls by 1.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stygian-dirge-6842",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "13.29"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN078",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2023 E",
+          "set_code": "LART-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81489939,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81489939.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81489939.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81489939.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "4.84",
+          "amazon_price": "7.01",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47984,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8513,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

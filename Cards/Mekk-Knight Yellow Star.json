@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29415459,
+      "name": "Mekk-Knight Yellow Star",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If 2 or more cards are in the same column, you can Special Summon this card (from your hand) in that column. You can only Special Summon \"Mekk-Knight Yellow Star\" once per turn this way. You can banish 1 \"Mekk-Knight\" monster from your GY, then target 1 Spell/Trap in this card's column; destroy it.",
+      "race": "Psychic",
+      "atk": 2200,
+      "def": 2800,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mekk-knight-yellow-star-8951",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN180",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29415459,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29415459.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29415459.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29415459.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mekk-Knight Yellow Bloom",
+          "views": 149933,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13387,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

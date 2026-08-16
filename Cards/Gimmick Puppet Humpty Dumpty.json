@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 8226374,
+      "name": "Gimmick Puppet Humpty Dumpty",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can Special Summon 1 \"Gimmick Puppet\" monster from your hand. You can only use this effect of \"Gimmick Puppet Humpty Dumpty\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 100,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gimmick-puppet-humpty-dumpty-696",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN011",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8226374,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8226374.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8226374.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8226374.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93580,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11007,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

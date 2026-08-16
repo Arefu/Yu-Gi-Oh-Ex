@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 10071151,
+      "name": "Lyla, Twilightsworn Enchantress",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, when a Spell/Trap Card or effect is activated (Quick Effect): You can banish 1 \"Lightsworn\" monster from your hand or GY, then target 1 face-up Spell/Trap on the field; destroy it. Once per turn, if your other \"Lightsworn\" monster's effect is activated: Send the top 3 cards of your Deck to the GY.",
+      "race": "Spellcaster",
+      "atk": 1700,
+      "def": 200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lyla-twilightsworn-enchantress-8465",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10071151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10071151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10071151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10071151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.67",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lyla, Twilightsworn Magus",
+          "views": 101419,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13064,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

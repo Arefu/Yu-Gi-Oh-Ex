@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 47013502,
+      "name": "Dodger Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's Normal Summon cannot be negated. After this card was Normal Summoned, your opponent cannot activate Counter Trap Cards for the rest of that turn.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dodger-dragon-4010",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN085",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47013502,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47013502.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47013502.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47013502.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.00",
+          "amazon_price": "2.97",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39498,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9700,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 97947705,
+      "name": "Backup Operator",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 face-up monster that a Link Monster you control points to; Special Summon this card from your hand, and if you do, return that monster to the hand. If Special Summoned this way, banish this card when it leaves the field. You can only use this effect of \"Backup Operator\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/backup-operator-9206",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97947705,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97947705.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97947705.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97947705.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45125,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13558,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

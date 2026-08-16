@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 55705473,
+      "name": "Baobaboon",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can draw 1 card, then place 1 card from your hand on either the top or bottom of your Deck. If this card is destroyed by battle or card effect: You can Special Summon any number of \"Baobaboon\" from your Deck.",
+      "race": "Plant",
+      "atk": 1200,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/baobaboon-8424",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest: Special Edition",
+          "set_code": "RATE-ENSE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55705473,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55705473.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55705473.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55705473.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107073,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-16",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12948,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

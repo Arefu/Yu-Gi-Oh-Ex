@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 61318483,
+      "name": "Ghostrick Jackfrost",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned, unless you control a \"Ghostrick\" monster. Once per turn: You can change this card to face-down Defense Position. When an opponent's monster declares a direct attack: You can change that opponent's monster to face-down Defense Position, and if you do, Special Summon this card from your hand in face-down Defense Position.",
+      "race": "Fiend",
+      "atk": 800,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-jackfrost-5199",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN202",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN111",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant: Deluxe Edition",
+          "set_code": "LVAL-ENDE2",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.36"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.6"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61318483,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61318483.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61318483.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61318483.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.44",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 136443,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10907,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

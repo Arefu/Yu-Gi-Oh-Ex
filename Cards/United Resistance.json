@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 85936485,
+      "name": "United Resistance",
+      "typeline": [
+        "Thunder",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The people that gather to swear to fight their oppressors. A revolution is coming.",
+      "race": "Thunder",
+      "atk": 1000,
+      "def": 400,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/united-resistance-7202",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85936485,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85936485.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85936485.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85936485.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61532,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5580,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

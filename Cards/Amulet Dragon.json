@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 75380687,
+      "name": "Amulet Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Dark Magician\" + 1 Dragon monster\r\nMust be Fusion Summoned with the above Fusion Materials or with \"The Eye of Timaeus\". If this card is Special Summoned: Target any number of Spells in any GY(s) (min.1); banish those targets, and if you do, this card gains 100 ATK for each card banished by this effect. If this card is destroyed: You can target 1 Spellcaster monster in your GY; Special Summon that target.",
+      "race": "Dragon",
+      "atk": 2900,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amulet-dragon-6344",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "14.22"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA35",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75380687,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75380687.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75380687.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75380687.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "3.24",
+          "amazon_price": "2.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 519164,
+          "viewsweek": 0,
+          "upvotes": 29,
+          "downvotes": 8,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 10325,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

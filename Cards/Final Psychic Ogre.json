@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 87622767,
+      "name": "Final Psychic Ogre",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card destroys an opponent's monster by battle, you can pay 800 Life Points to select 1 Psychic-Type monster in your Graveyard, and add it to your hand.",
+      "race": "Psychic",
+      "atk": 2200,
+      "def": 1700,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/final-psychic-ogre-7336",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN037",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87622767,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87622767.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87622767.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87622767.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27949,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8968,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

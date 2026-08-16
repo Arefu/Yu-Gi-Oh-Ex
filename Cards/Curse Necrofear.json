@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 14509651,
+      "name": "Curse Necrofear",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect. You can target 3 of your banished Fiend monsters; Special Summon this card from your hand, and if you do, shuffle those banished monsters into the Deck. During the End Phase, if this card is in the GY because it was destroyed in your Monster Zone by an opponent's card and sent there this turn: Special Summon this card from your GY, then, you can destroy cards your opponent controls, up to the number of face-up Spells/Traps you control with different names. You can only use each effect of \"Curse Necrofear\" once per turn.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/curse-necrofear-10297",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "26.83"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14509651,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14509651.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14509651.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14509651.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.09",
+          "tcgplayer_price": "0.97",
+          "ebay_price": "1.99",
+          "amazon_price": "2.07",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 196375,
+          "viewsweek": 0,
+          "upvotes": 27,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422001,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14581,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 85651167,
+      "name": "Gearfried the Red-Eyes Iron Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if either player equips an Equip Card(s) to this card: You can destroy those Equip Cards, then you can destroy 1 Spell/Trap your opponent controls. Once per turn: You can send 1 Equip Card you control that is equipped to this card to the GY, then target 1 Level 7 or lower \"Red-Eyes\" monster in your GY; Special Summon it.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gearfried-the-red-eyes-iron-knight-8502",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.69"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN011",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85651167,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85651167.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85651167.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85651167.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "3.17",
+          "ebay_price": "12.99",
+          "amazon_price": "19.16",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Red-Eyes Metal Knight Gearfried",
+          "views": 351794,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13169,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

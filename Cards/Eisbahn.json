@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 54059040,
+      "name": "Eisbahn",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If a non-WATER monster(s) is Normal or Special Summoned while you control a WATER monster: Change that Summoned monster to Defense Position.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eisbahn-4603",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN079",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Freezing Chains",
+          "set_code": "SDFC-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54059040,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54059040.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54059040.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54059040.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57464,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9797,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

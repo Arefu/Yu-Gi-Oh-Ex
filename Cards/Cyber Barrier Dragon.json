@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 68774379,
+      "name": "Cyber Barrier Dragon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Attack Reflector Unit\". Once per turn, while this card is in Attack Position, your opponent's next attack is negated.",
+      "race": "Machine",
+      "atk": 800,
+      "def": 2800,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-barrier-dragon-5776",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "48.8"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN006",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68774379,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68774379.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68774379.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68774379.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "2.00",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 109654,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6568,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

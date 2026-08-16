@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 45313993,
+      "name": "Red Warg",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Normal Summon a \"Resonator\" monster: You can Special Summon this card from your hand, but its ATK becomes halved.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 2200,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Resonator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-warg-3864",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45313993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45313993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45313993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45313993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.00",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 204315,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12413,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

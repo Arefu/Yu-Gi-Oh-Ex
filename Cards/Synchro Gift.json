@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 52128900,
+      "name": "Synchro Gift",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 2 face-up monsters you control (1 Synchro Monster and 1 non-Synchro monster). Until the End Phase of this turn, reduce the ATK of the Synchro Monster to 0, and the other monster gains ATK equal to the Synchro Monster's original ATK.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/synchro-gift-4442",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52128900,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52128900.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52128900.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52128900.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21379,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-21",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9239,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

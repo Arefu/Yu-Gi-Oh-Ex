@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 98439949,
+      "name": "Infinitrack Crab Crane",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 EARTH Machine monster; Special Summon this card from your hand in Defense Position. You can banish 1 Machine monster from your GY; add 1 \"Outrigger Extension\" from your Deck to your hand. You can only use each effect of \"Infinitrack Crab Crane\" once per turn.",
+      "race": "Machine",
+      "atk": 2100,
+      "def": 500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-crab-crane-10133",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN208",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98439949,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98439949.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98439949.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98439949.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Infinitrack Cancer Crane",
+          "views": 76311,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412003,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14393,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 66762372,
+      "name": "Brotherhood of the Fire Fist - Boar",
+      "typeline": [
+        "Beast-Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as a Synchro Material Monster, except for the Synchro Summon of a FIRE monster. When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 Level 4 \"Fire Fist\" monster from your Deck, except \"Brotherhood of the Fire Fist - Boar\". Once per turn, when a \"Fire Fist\" monster is Special Summoned from your Extra Deck: You can Set 1 \"Fire Formation\" Spell Card directly from your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 1100,
+      "def": 1400,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-boar-5608",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN079",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66762372,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66762372.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66762372.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66762372.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "2.50",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43931,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10629,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

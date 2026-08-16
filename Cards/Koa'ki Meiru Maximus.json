@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 65026212,
+      "name": "Koa'ki Meiru Maximus",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by removing from play 1 \"Iron Core of Koa'ki Meiru\" from your hand. During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" or 1 \"Koa'ki Meiru\" monster from your hand to the Graveyard. Once per turn, during your Main Phase, you can select and destroy 1 card your opponent controls.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-maximus-5482",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN081",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65026212,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65026212.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65026212.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65026212.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.44",
+          "tcgplayer_price": "1.47",
+          "ebay_price": "3.00",
+          "amazon_price": "4.00",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36694,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8594,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

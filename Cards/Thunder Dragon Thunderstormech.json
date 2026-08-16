@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 12081875,
+      "name": "Thunder Dragon Thunderstormech",
+      "typeline": [
+        "Thunder",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Thunder monsters\r\nDuring your Main Phase, if you control this Link Summoned card: You can target 1 of your \"Thunder Dragon\" monsters that is banished or in your GY; apply that monster's effect that discards itself to activate, then place that monster on the top or bottom of your Deck. You can only use this effect of \"Thunder Dragon Thunderstormech\" once per turn. If a Thunder monster(s) you control would be destroyed by battle or card effect, you can banish 3 cards from your GY instead.",
+      "race": "Thunder",
+      "atk": 2800,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Thunder Dragon",
+      "linkval": 4,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunder-dragon-thunderstormech-9885",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN030",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12081875,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12081875.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12081875.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12081875.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Thunder Dragon Goliath",
+          "views": 122769,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14195,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

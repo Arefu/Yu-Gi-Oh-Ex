@@ -1,0 +1,122 @@
+{
+  "data": [
+    {
+      "id": 63695531,
+      "name": "Gravekeeper's Spear Soldier",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks a Defense Position monster, inflict piercing Battle Damage to your opponent.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-spear-soldier-5379",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN185",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2"
+        },
+        {
+          "set_name": "Speed Duel Demo Deck",
+          "set_code": "DEM5-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.36"
+        },
+        {
+          "set_name": "Speed Duel Demo Deck 2020",
+          "set_code": "DEM6-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Two",
+          "set_code": "TU02-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63695531,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63695531.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63695531.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63695531.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.65",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178185,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5512,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

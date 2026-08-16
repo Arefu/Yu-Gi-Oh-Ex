@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 37241623,
+      "name": "Heraldry Record",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When an effect of your opponent's Xyz Monster is activated by detaching its own Xyz Material(s): Negate the activation, and if you do, destroy it.",
+      "race": "Counter",
+      "archetype": "Heraldry",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heraldry-record-3152",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37241623,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37241623.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37241623.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37241623.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19333,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10728,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

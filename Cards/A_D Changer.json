@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 96146814,
+      "name": "A/D Changer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your Graveyard, then target 1 monster on the field; change its battle position.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-d-changer-8003",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.79"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96146814,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96146814.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96146814.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96146814.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.55",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124470,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8936,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 57108202,
+      "name": "Morphtronic Remoten",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "● Once per turn, while in Attack Position: You can target 1 \"Morphtronic\" monster in your Graveyard; banish that target and add 1 \"Morphtronic\" monster with the same Level as the target from your Deck to your hand.\n● Once per turn, while in Defense Position: You can send 1 \"Morphtronic\" monster from your hand to the Graveyard and add 1 other \"Morphtronic\" monster with the same Level as that monster from your Graveyard to your hand.",
+      "race": "Machine",
+      "atk": 300,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-remoten-4867",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 22",
+          "set_code": "OP22-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57108202,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57108202.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57108202.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57108202.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "4.49",
+          "amazon_price": "9.00",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73661,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8166,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

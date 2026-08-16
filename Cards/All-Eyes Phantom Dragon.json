@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 70335319,
+      "name": "All-Eyes Phantom Dragon",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, at the end of the Damage Step, if your Dragon Pendulum Monster attacked an opponent's monster: You can activate this effect; it can attack again in a row. You cannot declare attacks the turn you activate this effect, except with that monster.\n\n[ Monster Effect ] \nCannot be Normal Summoned/Set. Must be Special Summoned (from your hand or face-up Extra Deck) by Tributing all monsters you control (min. 2), including a Dragon Pendulum Monster. You can only Special Summon \"All-Eyes Phantom Dragon\" once per turn this way. Once per turn, during damage calculation, if this card battles an opponent's monster: Double this card's current ATK until the end of this turn. Once per turn, when your opponent activates a Spell/Trap Card or effect (Quick Effect): You can send 1 Spell/Trap you control to the GY; negate the activation.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, at the end of the Damage Step, if your Dragon Pendulum Monster attacked an opponent's monster: You can activate this effect; it can attack again in a row. You cannot declare attacks the turn you activate this effect, except with that monster.",
+      "monster_desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand or face-up Extra Deck) by Tributing all monsters you control (min. 2), including a Dragon Pendulum Monster. You can only Special Summon \"All-Eyes Phantom Dragon\" once per turn this way. Once per turn, during damage calculation, if this card battles an opponent's monster: Double this card's current ATK until the end of this turn. Once per turn, when your opponent activates a Spell/Trap Card or effect (Quick Effect): You can send 1 Spell/Trap you control to the GY; negate the activation.",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "-Eyes Dragon",
+      "scale": 0,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/all-eyes-phantom-dragon-9950",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN043",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70335319,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70335319.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70335319.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70335319.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "2.79",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "God-Eyes Phantom Dragon",
+          "views": 91677,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2018-12-21",
+          "konami_id": 14363,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

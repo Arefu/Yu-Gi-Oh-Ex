@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 7602840,
+      "name": "UFOroid",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, you can Special Summon 1 Machine-Type monster with 1500 or less ATK from your Deck in face-up Attack Position.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/uforoid-652",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN010",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.23"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENB05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7602840,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7602840.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7602840.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7602840.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "2.33",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81173,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6388,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

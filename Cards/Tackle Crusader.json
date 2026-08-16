@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 12467005,
+      "name": "Tackle Crusader",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard: You can activate 1 of these effects.\n● Target 1 face-up monster your opponent controls; change that target to face-down Defense Position.\n● Target 1 face-up Spell/Trap Card your opponent controls; return that target to the hand. This turn, your opponent cannot activate cards with the same name as the card returned to the hand by this effect.",
+      "race": "Rock",
+      "atk": 1500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tackle-crusader-1076",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN113",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN113",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12467005,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12467005.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12467005.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12467005.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118726,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10929,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

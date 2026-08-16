@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 73051941,
+      "name": "Sand Stone",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Appears from underground and attacks with long, snake-like tentacles.",
+      "race": "Rock",
+      "atk": 1300,
+      "def": 1600,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sand-stone-6133",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73051941,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73051941.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73051941.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73051941.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 270319,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4523,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

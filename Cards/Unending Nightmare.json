@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 69452756,
+      "name": "Unending Nightmare",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can pay 1000 LP, then target 1 face-up Spell/Trap on the field; destroy it. You can only activate this effect of \"Unending Nightmare\" once per Chain.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unending-nightmare-8560",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN104",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN079",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENG16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69452756,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69452756.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69452756.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69452756.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 240893,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12993,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

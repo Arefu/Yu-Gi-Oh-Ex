@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 93260132,
+      "name": "Spell Shattering Arrow",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Destroy as many face-up Spells your opponent controls as possible, and if you do, inflict 500 damage to your opponent for each.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-shattering-arrow-7764",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN003",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.52"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN082",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Five",
+          "set_code": "TU05-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Zombie World Structure Deck",
+          "set_code": "SDZW-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93260132,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93260132.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93260132.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93260132.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "2.06",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97665,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-10-21",
+          "ocg_date": "2002-07-04",
+          "konami_id": 5290,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

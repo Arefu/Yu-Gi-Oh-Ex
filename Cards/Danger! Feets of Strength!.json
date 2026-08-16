@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 83928661,
+      "name": "Danger! Feets of Strength!",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a \"Danger!\" monster. It gains 800 ATK/DEF. It cannot be destroyed by card effects. It can make up to 2 attacks on monsters during each Battle Phase.",
+      "race": "Equip",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-feets-of-strength-10314",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83928661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83928661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83928661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83928661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Danger! Feet of Strength!",
+          "views": 40732,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101008084,
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14534,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

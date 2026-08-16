@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 95697223,
+      "name": "Dragon's Fighting Spirit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Dragon-Type monster you control that was Special Summoned this turn; for each monster your opponent currently controls that was Special Summoned this turn, it gains 1 additional attack during each Battle Phase this turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-s-fighting-spirit-7970",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.46"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS07",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG07",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95697223,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95697223.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95697223.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95697223.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47231,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12490,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

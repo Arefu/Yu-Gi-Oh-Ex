@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 39343610,
+      "name": "Darkblaze Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned from the Graveyard: Its ATK and DEF become double its original ATK and DEF. If this card destroys a monster by battle and sends it to the Graveyard: Inflict damage to your opponent equal to that monster's original ATK.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": 1000,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkblaze-dragon-3336",
+      "card_sets": [
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39343610,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39343610.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39343610.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39343610.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25637,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-10-24",
+          "ocg_date": "2007-06-23",
+          "konami_id": 7245,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

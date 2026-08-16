@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 70168345,
+      "name": "Dark Magic Twin Burst",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Dark Magician\" you control; it gains ATK equal to the combined ATK of all \"Dark Magician Girl\" currently on the field and in the GYs, until the end of this turn. You can only activate 1 \"Dark Magic Twin Burst\" per turn.",
+      "race": "Normal",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-magic-twin-burst-10129",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70168345,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70168345.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70168345.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70168345.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "1.97",
+          "ebay_price": "2.95",
+          "amazon_price": "3.50",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 153284,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14374,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

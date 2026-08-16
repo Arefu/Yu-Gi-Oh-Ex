@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 66540884,
+      "name": "Archfiend Heiress",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY by card effect, or by being destroyed by battle: You can add 1 \"Archfiend\" card from your Deck to your hand, except \"Archfiend Heiress\". You can only use this effect of \"Archfiend Heiress\" once per turn.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-heiress-5588",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN066",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 30",
+          "set_code": "OP30-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66540884,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66540884.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66540884.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66540884.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.50",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220709,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10632,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

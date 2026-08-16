@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 29253591,
+      "name": "Dragunity Couse",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as Synchro Material, except for the Synchro Summon of a \"Dragunity\" monster. This card on the field can be treated as a Level 4 monster when used for a Synchro Summon. If this card is currently equipped to a monster: You can Special Summon this equipped card.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 200,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-couse-9400",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29253591,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29253591.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29253591.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29253591.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragunity Kuse",
+          "views": 143453,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13725,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

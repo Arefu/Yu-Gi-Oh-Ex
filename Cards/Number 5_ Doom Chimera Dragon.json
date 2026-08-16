@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 90126061,
+      "name": "Number 5: Doom Chimera Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 5 monsters\r\nGains 1000 ATK for each material attached to it. This card with material can attack all monsters your opponent controls once each. At the end of the Battle Phase, if this card battled: You can activate one of the following effects.\r\n● Target 1 monster in your GY; attach it to this card as material.\r\n● Target 1 card in your opponent's GY; place it on top of their Deck.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-5-doom-chimera-dragon-9175",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN092",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90126061,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90126061.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90126061.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90126061.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "0.99",
+          "amazon_price": "0.82",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 5",
+          "views": 219374,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13546,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

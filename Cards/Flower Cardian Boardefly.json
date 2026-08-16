@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 3966653,
+      "name": "Flower Cardian Boardefly",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 2 non-Tuner monsters\nIf a \"Flower Cardian\" monster you control attacks a Defense Position monster, inflict piercing battle damage to your opponent. Once per turn: You can banish 1 \"Flower Cardian\" monster from your Graveyard; until the end of your opponent's next turn, your opponent cannot activate effects of cards in the Graveyard, also they cannot Special Summon monsters from the Graveyard.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-boardefly-354",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3966653,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3966653.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3966653.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3966653.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.54",
+          "ebay_price": "1.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64901,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12633,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

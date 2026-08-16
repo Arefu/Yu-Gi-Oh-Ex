@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 15175429,
+      "name": "Spell Reactor RE",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, when your opponent activates a Spell Card, you can destroy the Spell Card and inflict 800 damage to your opponent.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 900,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-reactor-re-1302",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15175429,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15175429.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15175429.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15175429.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "2.00",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Spell Reactor・RE",
+          "views": 51079,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8002,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

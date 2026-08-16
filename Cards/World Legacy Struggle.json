@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58374719,
+      "name": "World Legacy Struggle",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target Spells/Traps on the field, up to the number of co-linked monsters on the field; destroy them.",
+      "race": "Normal",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-struggle-9229",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58374719,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58374719.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58374719.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58374719.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy Resistance",
+          "views": 29654,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13626,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

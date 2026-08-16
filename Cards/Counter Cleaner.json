@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 38834303,
+      "name": "Counter Cleaner",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 500 Life Points. Remove all counters from the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/counter-cleaner-3291",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI32",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38834303,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38834303.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38834303.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38834303.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30297,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6902,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

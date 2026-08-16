@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 68057622,
+      "name": "Continuous Destruction Punch",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If the DEF of the attacked Defense Position monster on your side of the field is higher than the ATK of the attacking monster on your opponent's side of the field, destroy the attacking monster. Damage calculation is applied normally.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/continuous-destruction-punch-5720",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN140",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68057622,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68057622.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68057622.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68057622.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68251,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5678,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

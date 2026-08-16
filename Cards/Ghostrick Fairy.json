@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 36239585,
+      "name": "Ghostrick Fairy",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned, unless you control a \"Ghostrick\" monster. Once per turn: You can change this card to face-down Defense Position. When this card is flipped face-up: You can target 1 \"Ghostrick\" card in your GY; Set that card (but banish it when it leaves the field), then, you can change face-up monsters your opponent controls to face-down Defense Position, up to the number of Set cards you control.",
+      "race": "Spellcaster",
+      "atk": 900,
+      "def": 1000,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-fairy-10654",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36239585,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36239585.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36239585.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36239585.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99171,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011023,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14832,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

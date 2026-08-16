@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 38354937,
+      "name": "Locomotion R-Genex",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Genex\" Tuner + 1 or more non-Tuner DARK monsters\nWhen this card is Synchro Summoned, take control of the face-up monster your opponent controls with the highest Level. (If it's a tie, you get to choose.)",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 2000,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/locomotion-r-genex-3251",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN039",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38354937,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38354937.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38354937.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38354937.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31266,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8261,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

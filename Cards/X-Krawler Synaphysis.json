@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 39998992,
+      "name": "X-Krawler Synaphysis",
+      "typeline": [
+        "Insect",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 EARTH monsters\r\n\"Krawler\" monsters this card points to cannot be destroyed by battle, gain 300 ATK/DEF, and can make up to 2 attacks on monsters during each Battle Phase. If this face-up card is destroyed by battle, or leaves the field because of an opponent's card effect while its owner controls it: You can target 2 \"Krawler\" monsters with different names in your GY; Special Summon them in face-down Defense Position.",
+      "race": "Insect",
+      "atk": 1800,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Krawler",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/x-krawler-synaphysis-8613",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39998992,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39998992.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39998992.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39998992.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Excrawler Synapses",
+          "views": 70407,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13264,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

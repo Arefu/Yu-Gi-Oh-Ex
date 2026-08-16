@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 51351302,
+      "name": "A Man with Wdjat",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Normal Summon this card, and during each of your Standby Phases, select 1 Set card on your opponent's side of the field. Pick it up and look at it, then return it to its original position.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-man-with-wdjat-4367",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51351302,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51351302.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51351302.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51351302.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 154846,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5518,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

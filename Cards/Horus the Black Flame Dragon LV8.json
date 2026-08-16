@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 48229808,
+      "name": "Horus the Black Flame Dragon LV8",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Horus the Black Flame Dragon LV6\", and cannot be Special Summoned by other ways. During either player's turn, when a Spell Card is activated: You can negate the activation, and if you do, destroy it. You must control this face-up card to activate and to resolve this effect.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 1800,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Horus the Black Flame Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/horus-the-black-flame-dragon-lv8-4119",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 17 participation cards",
+          "set_code": "DL17-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.41"
+        },
+        {
+          "set_name": "Elemental Energy: Special Edition",
+          "set_code": "EEN-ENSE1",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "15.43"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN199",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.84"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN008",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48229808,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48229808.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48229808.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48229808.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.04",
+          "tcgplayer_price": "6.12",
+          "ebay_price": "5.99",
+          "amazon_price": "7.00",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 198531,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6100,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

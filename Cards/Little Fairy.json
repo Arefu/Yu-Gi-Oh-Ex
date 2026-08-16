@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45939611,
+      "name": "Little Fairy",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Up to twice per turn: You can send 1 card from your hand to the Graveyard; increase this card's Level by 1.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/little-fairy-3911",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45939611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45939611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45939611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45939611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "5.93",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29165,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10487,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 92881099,
+      "name": "Alluring Mirror Split",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When a \"Harpie Lady\" or \"Harpie Lady Sisters\" you control is destroyed by battle: You can Special Summon 1 \"Harpie\" monster from your Deck with a different original name than the destroyed monster. If this card you control is destroyed by a \"Harpie\" card's effect or your opponent's card effect: Target 1 \"Harpie\" monster in your GY; Special Summon it. You can only use each effect of \"Alluring Mirror Split\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alluring-mirror-split-9778",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.11"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2020 P",
+          "set_code": "LART-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92881099,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92881099.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92881099.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92881099.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "5.98",
+          "amazon_price": "19.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Split Mirrors of Seduction",
+          "views": 132628,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14167,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

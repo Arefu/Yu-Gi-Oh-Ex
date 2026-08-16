@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 96100333,
+      "name": "Triamid Pulse",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn: You can banish 2 cards from your Graveyard (any combination of Rock-Type monsters or Field Spell Cards), then activate 1 of these effects;\n● Target 1 other face-up card on the field; destroy it.\n● Target 1 Rock-Type monster in your Graveyard; Special Summon it in Defense Position.\n● Target up to 3 Field Spell Cards in your Graveyard; shuffle them into the Deck, then draw 1 card.",
+      "race": "Continuous",
+      "archetype": "Triamid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triamid-pulse-8001",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96100333,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96100333.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96100333.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96100333.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.47",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36144,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12473,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

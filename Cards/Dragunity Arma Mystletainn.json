@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 876330,
+      "name": "Dragunity Arma Mystletainn",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card from your hand by sending 1 face-up \"Dragunity\" monster you control to the Graveyard. When this card is Normal or Special Summoned from the hand, you can select 1 Dragon-Type \"Dragunity\" monster in your Graveyard, and equip it to this card.",
+      "race": "Dragon",
+      "atk": 2100,
+      "def": 1500,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-arma-mystletainn-76",
+      "card_sets": [
+        {
+          "set_name": "Dragunity Legion Structure Deck",
+          "set_code": "SDDL-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.67"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 876330,
+          "image_url": "https://images.ygoprodeck.com/images/cards/876330.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/876330.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/876330.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.41",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.30",
+          "amazon_price": "3.48",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 148231,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-03-04",
+          "ocg_date": "2010-06-19",
+          "konami_id": 9047,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

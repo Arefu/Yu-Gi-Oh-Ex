@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 23296404,
+      "name": "Igknight Lancer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is in your hand: You can target 3 \"Igknight\" cards you control; destroy them, and if you do, Special Summon this card. Once per turn: You can target 1 other \"Igknight\" monster you control; return it to the hand, and if you do, place 1 Spell/Trap Card your opponent controls on the bottom of the Deck.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 1800,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Igknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/igknight-lancer-2007",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN032",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23296404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23296404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23296404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23296404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21847,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11816,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

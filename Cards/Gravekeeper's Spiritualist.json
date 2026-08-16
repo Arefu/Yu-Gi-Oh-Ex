@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 58657303,
+      "name": "Gravekeeper's Spiritualist",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, if \"Necrovalley\" is on the field: You can Fusion Summon 1 Spellcaster Fusion Monster from your Extra Deck, using this card you control and other monsters from your hand or field as Fusion Material. You can only use this effect of \"Gravekeeper's Spiritualist\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-spiritualist-9663",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN164",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58657303,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58657303.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58657303.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58657303.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gravekeeper's Medium",
+          "views": 236910,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13900,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

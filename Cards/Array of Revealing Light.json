@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 69296555,
+      "name": "Array of Revealing Light",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Declare 1 Type of monster. Any monster of the declared Type cannot declare an attack during the turn it is Normal Summoned, Flip Summoned or Special Summoned.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/array-of-revealing-light-5829",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69296555,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69296555.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69296555.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69296555.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "4.39",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111133,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5329,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

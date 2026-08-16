@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 9236985,
+      "name": "Gishki Photomirror",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card can be used to Ritual Summon any \"Gishki\" Ritual Monster. You must also pay Life Points equal to the Level of the Ritual Summoned monster x 500 (when this card resolves).",
+      "race": "Ritual",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gishki-photomirror-781",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN044",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9236985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9236985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9236985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9236985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.02",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "3.69",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28607,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9828,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 23118924,
+      "name": "Element Doom",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This monster gets the following effect(s) while there is a monster(s) with the following Attribute(s) on the field: ● EARTH: Negate the effect of an Effect Monster that this card destroyed by battle. ● WIND: If this card destroyed your opponent's monster by battle, it can attack once again in a row.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/element-doom-1988",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN131",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23118924,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23118924.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23118924.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23118924.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67563,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6241,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

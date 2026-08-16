@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 6390406,
+      "name": "Emblem of Dragon Destroyer",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Buster Blader\" from your Deck or Graveyard to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/emblem-of-dragon-destroyer-564",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC34",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6390406,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6390406.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6390406.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6390406.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "1.54",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165426,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5673,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

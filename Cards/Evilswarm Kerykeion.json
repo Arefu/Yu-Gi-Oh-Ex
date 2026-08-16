@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 4756629,
+      "name": "Evilswarm Kerykeion",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only use each effect of \"Evilswarm Kerykeion\" once per turn. While this card is in the Graveyard, if it was sent there this turn, you can Normal Summon 1 \"lswarm\" monster for 1 less Tribute.\nYou can banish 1 \"lswarm\" monster from your Graveyard, then target 1 \"lswarm\" monster in your Graveyard; add that target to your hand, also, this card gains the following effect.\n● This turn: You can activate this effect; Normal Summon 1 \"lswarm\" monster.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1550,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Lswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evilswarm-kerykeion-421",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN061",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN094",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4756629,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4756629.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4756629.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4756629.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.95",
+          "tcgplayer_price": "1.99",
+          "ebay_price": "1.95",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65116,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2012-11-23",
+          "konami_id": 10441,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

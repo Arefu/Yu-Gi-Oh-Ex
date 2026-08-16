@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 73881652,
+      "name": "Zoodiac Combo",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Zoodiac\" Xyz Monster you control; attach 1 \"Zoodiac\" monster from your Deck to that Xyz Monster as Xyz Material. During either player's turn, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard, then target 5 \"Zoodiac\" cards in your Graveyard with different names; shuffle all 5 into the Deck, then draw 1 card.",
+      "race": "Normal",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-combo-6206",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN223",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73881652,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73881652.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73881652.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73881652.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.42",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Seasonal Direction of the Zodiac Beasts",
+          "views": 73432,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12806,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

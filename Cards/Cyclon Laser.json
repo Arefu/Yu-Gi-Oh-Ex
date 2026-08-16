@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 5494820,
+      "name": "Cyclon Laser",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "You can only equip this card to \"Gradius\". Increase the ATK of \"Gradius\" by 300 points. When the equipped \"Gradius\" attacks with an ATK that is higher than the DEF of a Defense Position monster, inflict the difference as Battle Damage to your opponent's Life Points.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyclon-laser-485",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.87"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "14.16"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5494820,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5494820.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5494820.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5494820.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "2.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115050,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5270,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

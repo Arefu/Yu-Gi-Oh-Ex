@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 51119924,
+      "name": "Puppet Plant",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card to the Graveyard, then target 1 Warrior or Spellcaster-Type monster your opponent controls; take control of that target until the End Phase.",
+      "race": "Plant",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/puppet-plant-4350",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Reloaded",
+          "set_code": "YSKR-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Five",
+          "set_code": "TU05-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51119924,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51119924.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51119924.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51119924.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60573,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6978,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

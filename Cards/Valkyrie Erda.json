@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 83705073,
+      "name": "Valkyrie Erda",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Valkyrie Erda\". While you control this card, Special Summoned by the effect of a \"Valkyrie\" card, all face-up monsters your opponent controls lose 1000 ATK. Any card destroyed by battle or card effect that would be sent to your opponent's GY is banished instead.",
+      "race": "Fairy",
+      "atk": 2000,
+      "def": 2200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrie-erda-10311",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN089",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83705073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83705073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83705073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83705073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68167,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101008087,
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14537,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

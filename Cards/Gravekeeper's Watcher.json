@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 26084285,
+      "name": "Gravekeeper's Watcher",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, when your opponent activates a Spell/Trap Card or monster effect that could make them discard when it resolves: You can send this card from your hand to the Graveyard; negate the activation, and if you do, destroy it.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-watcher-2246",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-064",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26084285,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26084285.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26084285.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26084285.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "1.34",
+          "ebay_price": "1.49",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124300,
+          "viewsweek": 42,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5514,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

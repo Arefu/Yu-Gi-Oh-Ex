@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 64726269,
+      "name": "Star Seraph Scale",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned: You can Special Summon 1 \"Star Seraph\" monster from your hand, then you can place 1 LIGHT monster from your Graveyard on top of your Deck. An Xyz Monster that was Summoned using 3 or more monsters, including this card on the field, as Xyz Materials gains this effect.\n● Once per turn, while this card has Xyz Material, if a monster(s) is Special Summoned from the hand, immediately draw 1 card.",
+      "race": "Fairy",
+      "atk": 1500,
+      "def": 900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Star Seraph",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/star-seraph-scale-5461",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64726269,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64726269.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64726269.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64726269.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.04",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27634,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11293,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

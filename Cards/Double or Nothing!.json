@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 94770493,
+      "name": "Double or Nothing!",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "When a monster's attack is negated: Target that monster; it can make a second attack during this Battle Phase, and if it does, its ATK is doubled during the Damage Step only.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-or-nothing-7884",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN064",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.53"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN156",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN156",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94770493,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94770493.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94770493.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94770493.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.99",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 694893,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9663,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 15083728,
+      "name": "House of Adhesive Tape",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If the DEF of a monster summoned by your opponent (excluding Special Summon) is 500 points or less, the monster is destroyed.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/house-of-adhesive-tape-1294",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.21"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15083728,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15083728.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15083728.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15083728.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155564,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4687,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

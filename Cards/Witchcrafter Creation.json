@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 57916305,
+      "name": "Witchcrafter Creation",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Witchcrafter\" monster from your Deck to your hand. During your End Phase, if you control a \"Witchcrafter\" monster, while this card is in your GY: You can add this card to your hand. You can only use 1 \"Witchcrafter Creation\" effect per turn, and only once that turn.",
+      "race": "Normal",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-creation-10148",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN225",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57916305,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57916305.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57916305.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57916305.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcraft Creation",
+          "views": 308833,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412020,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14410,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

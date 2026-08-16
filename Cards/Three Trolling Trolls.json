@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 43464884,
+      "name": "Three Trolling Trolls",
+      "typeline": [
+        "Beast-Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 Beast-Warrior monster in your GY; this card's Attribute and Level become the same as that monster's, until the end of this turn. During your Main Phase: You can Special Summon 1 Beast-Warrior monster with the same Attribute and Level as this card from your hand. You can only use each effect of \"Three Trolling Trolls\" once per turn. You cannot Special Summon monsters the turn you activate either of this card's effects, except Beast-Warrior monsters.",
+      "race": "Beast-Warrior",
+      "atk": 1000,
+      "def": 1300,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/three-trolling-trolls-9245",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43464884,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43464884.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43464884.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43464884.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Outroll of the Haunted Sea",
+          "views": 21649,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13584,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

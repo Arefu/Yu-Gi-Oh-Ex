@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 71060915,
+      "name": "Feather Wind",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card is activated while you control a face-up \"Elemental HERO Avian\": Negate the activation and destroy it.",
+      "race": "Counter",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/feather-wind-5969",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN118",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki",
+          "set_code": "DP1-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71060915,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71060915.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71060915.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71060915.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91475,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6496,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

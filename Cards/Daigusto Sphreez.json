@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 29552709,
+      "name": "Daigusto Sphreez",
+      "typeline": [
+        "Psychic",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner \"Gusto\" monsters\n When this card is Synchro Summoned: You can target 1 \"Gusto\" card in your Graveyard; add that target to your hand. Your opponent takes any Battle Damage you would have taken from battles involving a face-up \"Gusto\" monster you control. This card cannot be destroyed by battle.",
+      "race": "Psychic",
+      "atk": 2000,
+      "def": 1300,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/daigusto-sphreez-2504",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN040",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29552709,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29552709.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29552709.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29552709.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "1.98",
+          "amazon_price": "4.52",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Daigusto Sphreeze",
+          "views": 55637,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9395,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

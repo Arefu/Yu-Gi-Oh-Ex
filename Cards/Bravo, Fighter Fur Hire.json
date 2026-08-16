@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 66740005,
+      "name": "Bravo, Fighter Fur Hire",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can Special Summon 1 monster \"Fur Hire\" from your hand, except \"Bravo, Fighter Fur Hire\". If a monster \"Fur Hire\" is Special Summoned to your field while you control this monster (except during the Damage Step): You can have all monsters \"Fur Hire\" currently on the field gain 500 ATK/DEF until the end of this turn. You can only use each effect of \"Bravo, Fighter Fur Hire\" once per turn.",
+      "race": "Reptile",
+      "atk": 1900,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Fur Hire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bravo-fighter-fur-hire-9274",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN249",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66740005,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66740005.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66740005.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66740005.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.07",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Blavo, Fighter of the Skyfang Brigade",
+          "views": 148678,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13660,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

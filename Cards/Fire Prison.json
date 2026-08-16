@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 269510,
+      "name": "Fire Prison",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Dragon monsters on the field gain 300 DEF. If any Link Monsters are on the field, neither player can Link Summon a Link Monster with a lower Link Rating than the highest Link Rating on the field. Monsters cannot attack, except Link Monsters. Apply the following effects while 2 or more Cyberse Link Monsters are on the field.\r\n● Negate the activated effects of Cyberse monsters.\r\n● Cyberse monsters cannot attack, cannot be targeted for attacks, and cannot be targeted by card effects.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-prison-8822",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN204",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN043",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN043",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 269510,
+          "image_url": "https://images.ygoprodeck.com/images/cards/269510.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/269510.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/269510.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41044,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13423,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

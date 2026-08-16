@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 84055227,
+      "name": "Maiden of Macabre",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time this card destroys an opponent's monster by battle, place 1 Spell Counter on it. This card gains 200 ATK for each Spell Counter on it.",
+      "race": "Spellcaster",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/maiden-of-macabre-7049",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84055227,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84055227.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84055227.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84055227.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.35",
+          "amazon_price": "3.24",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56074,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7660,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

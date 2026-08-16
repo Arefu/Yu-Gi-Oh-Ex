@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 61962135,
+      "name": "Glorious Illusion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 \"Lightsworn\" monster in your Graveyard; Special Summon that target in face-up Attack Position. During each of your End Phases: Send the top 2 cards of your Deck to the Graveyard. When this card leaves the field, destroy that monster. When that monster leaves the field, destroy this card.",
+      "race": "Continuous",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/glorious-illusion-5243",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 14 participation cards",
+          "set_code": "DL14-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.95"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61962135,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61962135.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61962135.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61962135.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51280,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7644,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

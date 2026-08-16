@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 20201255,
+      "name": "Gladiator Beast's Comeback",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Gladiator Beast\" monster from your hand or GY, with a different Type from the monsters you control. It cannot be destroyed by battle.",
+      "race": "Normal",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-s-comeback-10439",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20201255,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20201255.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20201255.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20201255.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gladiator Beast Comeback",
+          "views": 151494,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010056,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14683,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

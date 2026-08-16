@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 75433814,
+      "name": "Number 40: Gimmick Puppet of Strings",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nOnce per turn: You can detach 1 material from this card; place 1 String Counter on each face-up monster on the field, except this card. Once per turn, during the next End Phase of the opponent of the player who placed a String Counter(s) by this effect: Destroy the monsters with String Counters, and if you do, inflict 500 damage to your opponent for each monster destroyed.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-40-gimmick-puppet-of-strings-6350",
+      "card_sets": [
+        {
+          "set_name": "2013 Collectible Tins Wave 1",
+          "set_code": "CT10-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.63"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Weekly Shonen Jump Alpha December 2012 membership promotional card",
+          "set_code": "JUMP-EN063",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.88"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 75433814,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75433814.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75433814.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75433814.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.76",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "1.18",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 40",
+          "views": 195176,
+          "viewsweek": 21,
+          "upvotes": 38,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-12-25",
+          "ocg_date": "2012-04-23",
+          "konami_id": 10216,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

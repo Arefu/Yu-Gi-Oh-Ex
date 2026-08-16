@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 39432962,
+      "name": "Dododo Witch",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can Special Summon 1 \"Dododo\" monster from your hand in Attack Position or face-down Defense Position, except \"Dododo Witch\".",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 1600,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Dododo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dododo-witch-3342",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39432962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39432962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39432962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39432962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "4.95",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56035,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2013-09-21",
+          "konami_id": 10831,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 732302,
+      "name": "Temple of Skulls",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mysterious temple of skulls and bones that pulls in unsuspecting enemies.",
+      "race": "Zombie",
+      "atk": 900,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/temple-of-skulls-68",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN015",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 8",
+          "set_code": "TP8-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 732302,
+          "image_url": "https://images.ygoprodeck.com/images/cards/732302.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/732302.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/732302.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.22",
+          "tcgplayer_price": "3.23",
+          "ebay_price": "1.80",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21628,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-04-28",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4152,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

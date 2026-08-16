@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 13455674,
+      "name": "Crystron Quariongandrax",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "2 or more Tuners + 1 non-Tuner monster\r\nIf this card is Synchro Summoned: You can target monsters your opponent controls and/or in their Graveyard, up to the number of Synchro Materials used for the Synchro Summon of this card; banish them. If this Synchro Summoned card is destroyed by battle or card effect: You can target 1 banished monster, except this card; Special Summon it to your field.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 3000,
+      "level": 9,
+      "attribute": "WATER",
+      "archetype": "Crystron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystron-quariongandrax-1153",
+      "card_sets": [
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13455674,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13455674.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13455674.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13455674.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.03",
+          "amazon_price": "5.94",
+          "coolstuffinc_price": "6.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 310520,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12781,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

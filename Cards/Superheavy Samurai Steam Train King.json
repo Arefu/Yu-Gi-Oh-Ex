@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 17775525,
+      "name": "Superheavy Samurai Steam Train King",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Superheavy Samurai\" Tuner + 2+ non-Tuner \"Superheavy Samurai\" monsters\r\nThis card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. Once per turn: You can discard up to 2 cards, then target that many cards your opponent controls; destroy them. Once per turn: You can banish all Spells and Traps from the GYs, and if you do, inflict 200 damage to your opponent for each card banished.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 4800,
+      "level": 12,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-steam-train-king-8479",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17775525,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17775525.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17775525.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17775525.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.00",
+          "amazon_price": "1.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Superheavy Samurai Steam Fiend Tetsudo'o",
+          "views": 119545,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13136,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

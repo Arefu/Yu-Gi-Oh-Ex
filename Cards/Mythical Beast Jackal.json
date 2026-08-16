@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 91182675,
+      "name": "Mythical Beast Jackal",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have no card in your other Pendulum Zone: You can target 1 face-up card you control that you can place a Spell Counter on; destroy this card, and if you do, place 1 Spell Counter on that card. You can only use this effect of \"Mythical Beast Jackal\" once per turn.\n\n[ Monster Effect ] \nEach time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from your field and Tribute this card; Special Summon 1 \"Mythical Beast\" Effect Monster from your Deck, except \"Mythical Beast Jackal\".",
+      "race": "Spellcaster",
+      "pend_desc": "If you have no card in your other Pendulum Zone: You can target 1 face-up card you control that you can place a Spell Counter on; destroy this card, and if you do, place 1 Spell Counter on that card. You can only use this effect of \"Mythical Beast Jackal\" once per turn.",
+      "monster_desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from your field and Tribute this card; Special Summon 1 \"Mythical Beast\" Effect Monster from your Deck, except \"Mythical Beast Jackal\".",
+      "atk": 0,
+      "def": 1400,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Mythical Beast",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-beast-jackal-8815",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91182675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91182675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91182675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91182675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.95",
+          "amazon_price": "1.89",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 152726,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13392,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

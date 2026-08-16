@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 54569495,
+      "name": "Marincess Crown Tail",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if a monster battles another monster (Quick Effect): You can send 1 other \"Marincess\" monster from your hand to the GY; Special Summon this card from your hand, and if you do, the damage you take from that battle is halved. At the start of the Damage Step, if an opponent's monster attacks: You can banish this card from your GY; this turn, you take no battle damage that is less than or equal to the total Link Rating of the \"Marincess\" Link Monsters in your GY x 1000. You can only use each effect of \"Marincess Crown Tail\" once per turn.",
+      "race": "Cyberse",
+      "atk": 600,
+      "def": 2300,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-crown-tail-10393",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54569495,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54569495.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54569495.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54569495.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54611,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010003,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14630,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

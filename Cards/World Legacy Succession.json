@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 99674361,
+      "name": "World Legacy Succession",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 monster in your GY; Special Summon it to your zone a Link Monster points to. You can only activate 1 \"World Legacy Succession\" per turn.",
+      "race": "Normal",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-succession-9210",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN038",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99674361,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99674361.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99674361.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99674361.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.67",
+          "tcgplayer_price": "1.95",
+          "ebay_price": "4.95",
+          "amazon_price": "5.95",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "staple": "Yes",
+          "views": 1247644,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13612,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

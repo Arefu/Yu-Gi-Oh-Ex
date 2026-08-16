@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 78625592,
+      "name": "Spiritual Swords of Revealing Light",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per attack, when an opponent's monster declares an attack: You can pay 1000 LP; negate that attack. During your opponent's turn: You can banish this card from your Graveyard; this turn, your opponent's monsters cannot attack directly.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spiritual-swords-of-revealing-light-6605",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS31",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG31",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78625592,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78625592.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78625592.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78625592.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.99",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162463,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12514,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 83048208,
+      "name": "Digital Bug LEDybug",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as an Xyz Material for an Xyz Summon, except for the Xyz Summon of an Insect monster. Once per turn, when this face-up card is changed from Attack Position to Defense Position: You can add 1 Level 3 Insect monster from your Deck to your hand. An Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\r\n● When this card destroys a monster by battle, draw 1 card.",
+      "race": "Insect",
+      "atk": 500,
+      "def": 0,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Digital Bug",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/digital-bug-ledybug-8332",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83048208,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83048208.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83048208.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83048208.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.40",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Digital Bug LED Bug",
+          "views": 34511,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12943,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

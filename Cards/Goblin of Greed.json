@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 425934,
+      "name": "Goblin of Greed",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains face-up on your side of the field, neither player can activate an effect by discarding from his/her hand.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goblin-of-greed-44",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN227",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 425934,
+          "image_url": "https://images.ygoprodeck.com/images/cards/425934.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/425934.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/425934.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "3.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93384,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5770,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

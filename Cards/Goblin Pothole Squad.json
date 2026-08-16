@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 12755462,
+      "name": "Goblin Pothole Squad",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, Trap Cards cannot be activated. Also, \"Trap Hole\" Trap Cards cannot be activated when a monster is Summoned, except \"Dark Trap Hole\".",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goblin-pothole-squad-1101",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN035",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12755462,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12755462.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12755462.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12755462.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30410,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9753,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

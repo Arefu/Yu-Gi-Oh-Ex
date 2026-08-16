@@ -1,0 +1,144 @@
+{
+  "data": [
+    {
+      "id": 91932350,
+      "name": "Harpie Lady 1",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(This card's name is always treated as \"Harpie Lady\".)\nAll WIND monsters gain 300 ATK.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-lady-1-7665",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal - Preview Wave 2",
+          "set_code": "DTP1-EN027",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "2001.08"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN057",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN010",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN090",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENC01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 1",
+          "set_code": "STP1-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91932350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91932350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91932350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91932350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "3.16",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 245830,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Harpie Lady",
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6186,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

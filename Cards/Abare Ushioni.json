@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 89718302,
+      "name": "Abare Ushioni",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can toss a coin and call it. If you call it right, inflict 1000 damage to your opponent. If you call it wrong, you take 1000 damage.",
+      "race": "Beast-Warrior",
+      "atk": 1200,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abare-ushioni-7496",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN146",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89718302,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89718302.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89718302.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89718302.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89290,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-03-01",
+          "ocg_date": "2005-12-08",
+          "konami_id": 6255,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

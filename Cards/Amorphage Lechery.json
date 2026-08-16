@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 70917315,
+      "name": "Amorphage Lechery",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhile you control an \"Amorphage\" monster, neither player can activate Spell Cards or their effects, except for \"Amorphage\" cards. Once per turn, during your Standby Phase, Tribute 1 monster or destroy this card.\n\n[ Monster Effect ] \nIf this card is Pendulum Summoned or flipped face-up, neither player can Special Summon monsters from the Extra Deck while this card is face-up on the field, except \"Amorphage\" monsters.",
+      "race": "Dragon",
+      "pend_desc": "While you control an \"Amorphage\" monster, neither player can activate Spell Cards or their effects, except for \"Amorphage\" cards. Once per turn, during your Standby Phase, Tribute 1 monster or destroy this card.",
+      "monster_desc": "If this card is Pendulum Summoned or flipped face-up, neither player can Special Summon monsters from the Extra Deck while this card is face-up on the field, except \"Amorphage\" monsters.",
+      "atk": 1350,
+      "def": 0,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Amorphage",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amorphage-lechery-5959",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70917315,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70917315.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70917315.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70917315.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "0.99",
+          "amazon_price": "1.44",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103467,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12297,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

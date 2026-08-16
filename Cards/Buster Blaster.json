@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 63676256,
+      "name": "Buster Blaster",
+      "typeline": [
+        "Machine",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 face-up monster you control; equip this card to that target, OR: Unequip this card and Special Summon it in face-up Attack Position. While equipped by this effect, the equipped monster loses 500 ATK and DEF. If the equipped monster destroys an opponent's monster by battle: Destroy all face-up monsters on the field with the same Monster Type as the destroyed monster. (A monster can only be equipped with 1 Union Monster at a time. If the equipped monster would be destroyed, destroy this card instead.)",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/buster-blaster-5377",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN055",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63676256,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63676256.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63676256.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63676256.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29408,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9493,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

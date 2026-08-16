@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 52417194,
+      "name": "Heavy Slump",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If your opponent has 8 or more cards in their hand: They shuffle their entire hand into the Deck, then draw 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heavy-slump-4466",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN054",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52417194,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52417194.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52417194.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52417194.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92195,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6145,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 1061200,
+      "name": "F.A. City Grand Prix",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Increase the Levels of all \"F.A.\" monsters on the field by 2 during the Main Phase and Battle Phase. Your opponent cannot target \"F.A.\" monsters you control with card effects. If this face-up card on the field is destroyed by a card effect: You can add 1 \"F.A.\" card from your Deck to your hand, except \"F.A. City Grand Prix\". You can only use this effect of \"F.A. City Grand Prix\" once per turn.",
+      "race": "Field",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-city-grand-prix-9269",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN227",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1061200,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1061200.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1061200.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1061200.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62622,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13540,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 3790062,
+      "name": "Number 65: Djinn Buster",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 DARK monsters\nDuring either player's turn, when an effect of an opponent's monster is activated: You can detach 2 Xyz Materials from this card; negate the activation, and if you do, inflict 500 damage to your opponent.",
+      "race": "Fiend",
+      "atk": 1300,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-65-djinn-buster-339",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3790062,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3790062.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3790062.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3790062.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.90",
+          "amazon_price": "4.82",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 65",
+          "views": 247732,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10778,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

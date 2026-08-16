@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 87917187,
+      "name": "Dark Summoning Beast",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; Special Summon 1 \"Uria, Lord of Searing Flames\", \"Hamon, Lord of Striking Thunder\", or \"Raviel, Lord of Phantasms\" from your hand or Deck, ignoring its Summoning conditions, also monsters you control cannot attack for the rest of this turn. You can only use this effect of \"Dark Summoning Beast\" once per turn. You can banish this card from your Graveyard; add 1 \"Uria, Lord of Searing Flames\", \"Hamon, Lord of Striking Thunder\", or \"Raviel, Lord of Phantasms\" from your Deck to your hand.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-summoning-beast-8302",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN030",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.8"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENG04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87917187,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87917187.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87917187.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87917187.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "2.84",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 399700,
+          "viewsweek": 0,
+          "upvotes": 35,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2016-12-17",
+          "konami_id": 12903,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

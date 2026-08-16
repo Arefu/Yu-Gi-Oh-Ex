@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 13758665,
+      "name": "Magician's Left Hand",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Negate the effect of your opponent's first Trap Card or effect that resolves each turn while you control a Spellcaster monster, and if you do, destroy that card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-s-left-hand-8389",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13758665,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13758665.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13758665.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13758665.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "3.00",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 232658,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12964,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

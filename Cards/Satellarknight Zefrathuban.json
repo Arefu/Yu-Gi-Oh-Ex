@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 96223501,
+      "name": "Satellarknight Zefrathuban",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"tellarknight\" and \"Zefra\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nIf this card is Normal, Flip, or Pendulum Summoned: You can target 1 other \"tellarknight\" or \"Zefra\" card in your Monster Zone or Pendulum Zone, and 1 face-up card your opponent controls; destroy them. You can only use this effect of \"Satellarknight Zefrathuban\" once per turn.",
+      "race": "Warrior",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"tellarknight\" and \"Zefra\" monsters. This effect cannot be negated.",
+      "monster_desc": "If this card is Normal, Flip, or Pendulum Summoned: You can target 1 other \"tellarknight\" or \"Zefra\" card in your Monster Zone or Pendulum Zone, and 1 face-up card your opponent controls; destroy them. You can only use this effect of \"Satellarknight Zefrathuban\" once per turn.",
+      "atk": 0,
+      "def": 2100,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "tellarknight",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellarknight-zefrathuban-8010",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96223501,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96223501.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96223501.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96223501.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60623,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11695,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

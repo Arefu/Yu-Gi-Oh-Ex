@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 8837932,
+      "name": "Cubic Mandala",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If you control a \"Cubic\" monster: Activate this card by targeting any number of monsters that are in your opponent's Graveyard because they were destroyed and sent there this turn; Special Summon them to your opponent's field, but each becomes ATK 0 and has 1 Cubic Counter placed on it. (Monsters with a Cubic Counter cannot attack, also negate their effects.) While your opponent controls any of the monsters Summoned by this effect, negate any monster effects your opponent activates. When the last of these monsters leaves the field, destroy this card.",
+      "race": "Continuous",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cubic-mandala-750",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS44",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG44",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8837932,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8837932.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8837932.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8837932.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.49",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48816,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12527,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

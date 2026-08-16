@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 45688586,
+      "name": "Karakuri Spider",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks a DARK monster, destroy the attack target after damage calculation.",
+      "race": "Machine",
+      "atk": 400,
+      "def": 500,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Karakuri",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/karakuri-spider-3893",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45688586,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45688586.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45688586.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45688586.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31786,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4416,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

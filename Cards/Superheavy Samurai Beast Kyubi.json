@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 85528209,
+      "name": "Superheavy Samurai Beast Kyubi",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner \"Superheavy Samurai\" monsters\nThis card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. If you have no Spell/Trap Cards in your Graveyard, this card gains 900 DEF for each Special Summoned monster your opponent controls.",
+      "race": "Machine",
+      "atk": 1900,
+      "def": 2500,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-beast-kyubi-7169",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85528209,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85528209.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85528209.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85528209.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.09",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74348,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12156,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

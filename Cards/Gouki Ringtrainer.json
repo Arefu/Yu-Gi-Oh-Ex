@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 93581434,
+      "name": "Gouki Ringtrainer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters: You can reveal this card in your hand, then target 1 \"Gouki\" Link Monster in your GY; Special Summon this card from your hand, then, Special Summon the target, but it loses 500 ATK. You can only use this effect of \"Gouki Ringtrainer\" once per turn. While you control a \"Gouki\" Link Monster, this card cannot be destroyed by battle.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-ringtrainer-9457",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93581434,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93581434.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93581434.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93581434.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gouki Trainer",
+          "views": 47698,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13721,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

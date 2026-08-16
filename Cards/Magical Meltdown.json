@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 47679935,
+      "name": "Magical Meltdown",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can add 1 \"Aleister the Invoker\" from your Deck to your hand. The activation of your cards and effects that include an effect that Fusion Summons a Fusion Monster cannot be negated, also your opponent's cards and effects cannot activate when a monster is Fusion Summoned this way. You can only activate 1 \"Magical Meltdown\" per turn.",
+      "race": "Field",
+      "archetype": "Invoked",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-meltdown-4071",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN152",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN280",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN280",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47679935,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47679935.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47679935.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47679935.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.73",
+          "tcgplayer_price": "5.40",
+          "ebay_price": "1.50",
+          "amazon_price": "2.86",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Reckless Magic Circle",
+          "views": 1081439,
+          "viewsweek": 42,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12851,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

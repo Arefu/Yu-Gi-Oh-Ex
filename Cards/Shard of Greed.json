@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 33904024,
+      "name": "Shard of Greed",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time you draw a card(s) for your normal draw in your Draw Phase, place 1 Greed Counter on this card. You can send this card with 2 or more Greed Counters to the GY; draw 2 cards.",
+      "race": "Continuous",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shard-of-greed-2878",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN165",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN165",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Event Pack Speed Duel",
+          "set_code": "EVSD-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.91"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN057",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENV01",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.95"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Reloaded",
+          "set_code": "YSKR-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.14"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.22"
+        },
+        {
+          "set_name": "The Pot Collection",
+          "set_code": "TBC1-EN014",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33904024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33904024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33904024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33904024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.99",
+          "amazon_price": "3.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 241762,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9775,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

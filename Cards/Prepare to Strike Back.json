@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 4483989,
+      "name": "Prepare to Strike Back",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time your opponent declares a face-up Defense Position monster as an attack target, toss a coin and call it. If you call it right, change the targeted monster to Attack Position. If you call it wrong, the controller of this card takes damage equal to the amount that the ATK of the attacking monster is higher than the DEF of the attack target.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prepare-to-strike-back-406",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN060",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4483989,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4483989.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4483989.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4483989.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64766,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6449,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

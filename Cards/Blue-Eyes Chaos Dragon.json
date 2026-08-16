@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 20654247,
+      "name": "Blue-Eyes Chaos Dragon",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Chaos Form\". Must be Ritual Summoned. Your opponent cannot target this card with card effects, also it cannot be destroyed by your opponent's card effects. If this card was Ritual Summoned using \"Blue-Eyes White Dragon\", when it declares an attack: You can change the battle positions of as many monsters your opponent controls as possible, and if you do, the ATK/DEF of those changed monsters become 0, also, this turn, if this card attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-eyes-chaos-dragon-9508",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "15.3"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.74"
+        },
+        {
+          "set_name": "Structure Deck: Blue-Eyes White Destiny",
+          "set_code": "SDWD-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20654247,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20654247.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20654247.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20654247.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "18.00",
+          "amazon_price": "4.79",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 540987,
+          "viewsweek": 21,
+          "upvotes": 71,
+          "downvotes": 9,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13842,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

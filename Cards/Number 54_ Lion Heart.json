@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 54366836,
+      "name": "Number 54: Lion Heart",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 1 monsters\nThis face-up Attack Position card cannot be destroyed by battle. When you take battle damage from battles involving this card: Inflict damage to your opponent equal to the amount of battle damage you took. If this card battles an opponent's monster, during damage calculation (in either player's turn): You can detach 1 Xyz Material from this card; your opponent takes any battle damage you would have taken from that battle.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-54-lion-heart-4628",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN026",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54366836,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54366836.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54366836.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54366836.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "13.00",
+          "amazon_price": "39.99",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 54",
+          "views": 119190,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10701,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

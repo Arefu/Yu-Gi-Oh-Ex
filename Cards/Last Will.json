@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 85602018,
+      "name": "Last Will",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If a monster on your side of the field was sent to your Graveyard this turn, you can Special Summon 1 monster with an ATK of 1500 points or less from your Deck once during this turn. Then shuffle your Deck.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/last-will-7174",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.68"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 85602018,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85602018.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85602018.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85602018.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "1.73",
+          "ebay_price": "2.95",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 199369,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4885,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

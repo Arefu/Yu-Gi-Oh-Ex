@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 70875686,
+      "name": "Prank-Kids Rip-Roarin-Roaster",
+      "typeline": [
+        "Aqua",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Prank-Kids\" monsters\r\nMust be Link Summoned. (Quick Effect): You can Tribute this card; destroy all Spells and Traps your opponent controls. If this card in your possession is sent to your GY by your opponent's card: You can target 1 card in your GY, except a Link Monster; add it to your hand. You can only use this effect of \"Prank-Kids Rip-Roarin-Roaster\" once per turn.",
+      "race": "Aqua",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "WATER",
+      "archetype": "Prank-Kids",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-rip-roarin-roaster-9714",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70875686,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70875686.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70875686.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70875686.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.11",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.57",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids Roargon",
+          "views": 150359,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14028,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

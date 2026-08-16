@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 93104632,
+      "name": "One-Time Passcode",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Security Token\" (Cyberse/LIGHT/Level 4/ATK 2000/DEF 2000) in Defense Position. You can only activate 1 \"One-Time Passcode\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/one-time-passcode-8845",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN141",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93104632,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93104632.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93104632.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93104632.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 177090,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13277,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

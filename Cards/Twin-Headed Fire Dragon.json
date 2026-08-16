@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 78984772,
+      "name": "Twin-Headed Fire Dragon",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Two dragons fused as one from the effects of the Big Bang.",
+      "race": "Pyro",
+      "atk": 2200,
+      "def": 1700,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twin-headed-fire-dragon-6635",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.13"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78984772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78984772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78984772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78984772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 179066,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4972,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

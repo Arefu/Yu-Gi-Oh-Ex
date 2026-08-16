@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 67159705,
+      "name": "Armored Cybern",
+      "typeline": [
+        "Machine",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 \"Cyber Dragon\" you control, or 1 Fusion Monster you control that lists \"Cyber Dragon\" as Fusion Material; equip this card to that target, OR: Unequip this card and Special Summon it. Once per turn, while equipped to a monster by this effect: You can target 1 face-up monster on the field; the equipped monster loses exactly 1000 ATK (even if this card leaves the field), and if it does, destroy that target. If the equipped monster would be destroyed by battle or card effect, destroy this card instead.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armored-cybern-5643",
+      "card_sets": [
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.96"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67159705,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67159705.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67159705.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67159705.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 113934,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7412,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

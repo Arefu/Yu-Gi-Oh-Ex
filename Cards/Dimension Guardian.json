@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 54175023,
+      "name": "Dimension Guardian",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 face-up Attack Position monster you control. It cannot be destroyed by battle or card effects. If the targeted monster leaves the field, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dimension-guardian-4610",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS24",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG24",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54175023,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54175023.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54175023.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54175023.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.95",
+          "amazon_price": "1.12",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 154118,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12507,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

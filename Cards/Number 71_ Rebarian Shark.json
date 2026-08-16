@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 59479050,
+      "name": "Number 71: Rebarian Shark",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nOnce per turn, if this card has material: You can target 1 \"Number\" Xyz Monster in your GY, except \"Number 71: Rebarian Shark\"; Special Summon it, and if you do, attach 1 material from this card to it. If this card is sent to the GY: You can choose 1 \"Rank-Up-Magic\" Spell from your Deck and place it on top of your Deck.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 2000,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-71-rebarian-shark-8534",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tins",
+          "set_code": "CT14-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.73"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59479050,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59479050.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59479050.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59479050.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 71",
+          "views": 133084,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-24",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13165,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 57282724,
+      "name": "World Gears of Theurlogical Demiurgy",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 Level 5 or higher monsters\r\nCannot be used as Link Material. This Link Summoned card is unaffected by other monsters' effects. You can only use each of the following effects of \"World Gears of Theurlogical Demiurgy\" once per turn.\r\n● During your Main Phase, if you control this card that was Link Summoned using 3 monsters that had 3 different Types and Attributes on the field: You can destroy all other cards on the field.\r\n● If your opponent Special Summons a monster(s) from the Extra Deck (except during the Damage Step): You can Special Summon 1 \"World Legacy\" monster from your Deck.",
+      "race": "Cyberse",
+      "atk": 3500,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "World Legacy",
+      "linkval": 3,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-gears-of-theurlogical-demiurgy-10039",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57282724,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57282724.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57282724.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57282724.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "4.49",
+          "amazon_price": "3.05",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Source Regalia Demiurgear",
+          "views": 130370,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14298,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 856784,
+      "name": "Draw of Fate",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your LP are lower than your opponent's and your opponent controls a monster with the highest ATK on the field (even if it's tied): Reveal 3 cards with different names from your Deck, place them on top of your Deck in random order, then draw 1 card. For the rest of this turn after this card resolves, you cannot Set Spells/Traps, also you can only activate one more card or effect. You can only activate 1 \"Draw of Fate\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draw-of-fate-10002",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 856784,
+          "image_url": "https://images.ygoprodeck.com/images/cards/856784.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/856784.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/856784.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Draw of Destiny",
+          "views": 374402,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14215,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

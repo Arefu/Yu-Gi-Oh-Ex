@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 38026562,
+      "name": "Vola-Chemicritter Methydraco",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 Gemini monsters\nWhen this card is Xyz Summoned: You can target 1 Gemini monster in your Graveyard; Special Summon it. While this card has Xyz Material, monsters your opponent controls cannot target Gemini monsters you control for attacks, also your opponent cannot target Gemini monsters you control with card effects. When a Gemini monster is Normal Summoned: You can detach 1 Xyz Material from this card; make your opponent send 1 card from their hand or field to the Graveyard (their choice).",
+      "race": "Beast-Warrior",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Chemicritter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vola-chemicritter-methydraco-3218",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38026562,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38026562.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38026562.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38026562.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48599,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12640,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

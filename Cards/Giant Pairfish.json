@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 92723496,
+      "name": "Giant Pairfish",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard 1 monster; Special Summon 1 Level 4 or lower Wyrm-Type monster from your Deck. You can only use this effect of \"Giant Pairfish\" once per turn.",
+      "race": "Wyrm",
+      "atk": 2000,
+      "def": 1200,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-pairfish-7718",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92723496,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92723496.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92723496.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92723496.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.07",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19940,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11981,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

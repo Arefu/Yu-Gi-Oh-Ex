@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 33017655,
+      "name": "The Gates of Dark World",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Fiend-Type monsters gain 300 ATK and DEF. Once per turn: You can banish 1 Fiend-Type monster from your Graveyard; discard 1 Fiend-Type monster, then draw 1 card.",
+      "race": "Field",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-gates-of-dark-world-2806",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.99"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN253",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33017655,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33017655.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33017655.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33017655.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.95",
+          "amazon_price": "4.57",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 371068,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-13",
+          "ocg_date": "2011-06-18",
+          "konami_id": 9715,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

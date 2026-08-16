@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 9260791,
+      "name": "Galaxy-Eyes Cloudragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; Special Summon 1 \"Galaxy-Eyes\" monster from your hand or Graveyard, except \"Galaxy-Eyes Cloudragon\". You can only use this effect of \"Galaxy-Eyes Cloudragon\" once per turn. If this card is in the Graveyard: You can target 1 \"Galaxy-Eyes\" Xyz Monster you control; attach this card to it as an Xyz Material. You can only use this effect of \"Galaxy-Eyes Cloudragon\" once per Duel.",
+      "race": "Dragon",
+      "atk": 300,
+      "def": 250,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-eyes-cloudragon-782",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9260791,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9260791.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9260791.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9260791.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.20",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "2.99",
+          "amazon_price": "2.97",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162962,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11113,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

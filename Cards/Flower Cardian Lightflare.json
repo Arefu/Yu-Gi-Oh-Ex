@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 87460579,
+      "name": "Flower Cardian Lightflare",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 4 non-Tuner monsters\r\nOnce per turn, during either player's turn, when your opponent activates a Spell/Trap Card: You can negate the activation, and if you do, destroy that card. If a \"Flower Cardian\" monster you control battles an opponent's monster, that opponent's monster has its effects negated during the Battle Phase only. If this face-up Synchro Summoned card is destroyed by battle, or leaves the field because of an opponent's card effect while its owner controls it: You can Special Summon 1 \"Flower Cardian\" Synchro Monster from your Extra Deck, except \"Flower Cardian Lightflare\".",
+      "race": "Warrior",
+      "atk": 5000,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-lightflare-7317",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87460579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87460579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87460579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87460579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "2.51",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Flower Cardian Five Lights",
+          "views": 111703,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12780,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

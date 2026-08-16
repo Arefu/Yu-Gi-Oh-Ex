@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 96890582,
+      "name": "Flash Assailant",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Decrease the ATK and DEF of this card by 400 points for each card in your hand.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flash-assailant-8059",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96890582,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96890582.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96890582.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96890582.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238651,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4918,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

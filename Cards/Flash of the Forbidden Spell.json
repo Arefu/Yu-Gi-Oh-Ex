@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 39956951,
+      "name": "Flash of the Forbidden Spell",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate only when all of your opponent's Monster Card Zones are occupied by monsters. Destroy all monsters on your opponent's side of the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flash-of-the-forbidden-spell-3387",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI33",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39956951,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39956951.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39956951.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39956951.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45660,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6899,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

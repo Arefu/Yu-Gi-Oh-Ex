@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 21501505,
+      "name": "Cairngorgon, Antiluminescent Knight",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nDuring either player's turn, when another card or effect is activated that targets exactly 1 card on the field (and no other cards): You can detach 1 Xyz Material from this card, then target another card on the field that would be an appropriate target for that card/effect; that card/effect now targets the new target.",
+      "race": "Rock",
+      "atk": 2450,
+      "def": 1950,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cairngorgon-antiluminescent-knight-1851",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21501505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21501505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21501505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21501505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.95",
+          "amazon_price": "2.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 140722,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11083,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

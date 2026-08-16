@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 38299233,
+      "name": "Needle Wall",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during your Standby Phase: Roll a six-sided die. Treat your opponent's Main Monster Zones as numbers 1-5, counting from your right, and destroy the monster that is in the same Main Monster Zone as the result. If the result is 6, roll again.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/needle-wall-3248",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN245",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN270",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38299233,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38299233.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38299233.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38299233.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171210,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5445,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

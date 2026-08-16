@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 76407432,
+      "name": "Assault Counter",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Activate only while you control an \"/Assault Mode\" monster. Negate the activation of a Spell Card, Trap Card, or Effect Monster's effect and destroy it.",
+      "race": "Counter",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-counter-6428",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "OTS Tournament Pack 30",
+          "set_code": "OP30-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76407432,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76407432.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76407432.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76407432.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46798,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8070,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

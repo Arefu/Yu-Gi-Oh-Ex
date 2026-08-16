@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 11834972,
+      "name": "Laval Blaster",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, if you have a \"Laval\" monster in your Graveyard other than \"Laval Blaster\": You can choose a number from 1 to 5, then send that many cards from the top of your Deck to the Graveyard; this card gains 200 ATK for each \"Laval\" monster sent to the Graveyard to activate this effect.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 800,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-blaster-1025",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN072",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11834972,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11834972.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11834972.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11834972.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.39",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29826,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9587,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

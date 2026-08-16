@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27796375,
+      "name": "Great Sorcerer of the Nekroz",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Tributed by a card effect: You can add 1 Spellcaster-Type \"Nekroz\" Ritual Monster from your Deck to your hand. If this card is banished: You can send 1 \"Nekroz\" monster from your Deck to the Graveyard, except \"Great Sorcerer of the Nekroz\". You can only use 1 \"Great Sorcerer of the Nekroz\" effect per turn, and only once that turn.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/great-sorcerer-of-the-nekroz-2365",
+      "card_sets": [
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27796375,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27796375.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27796375.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27796375.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55862,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11481,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

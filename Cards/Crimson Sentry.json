@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 28358902,
+      "name": "Crimson Sentry",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute this face-up card to return 1 of your monsters destroyed as a result of battle during this turn to the bottom of your Deck.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crimson-sentry-2415",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.78"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28358902,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28358902.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28358902.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28358902.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131385,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5196,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

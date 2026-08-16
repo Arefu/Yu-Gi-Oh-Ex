@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 52550973,
+      "name": "Pharaoh's Servant",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An apparition of those said to formerly serve the Pharaoh. It has tremendous loyalty that does not waiver.",
+      "race": "Zombie",
+      "atk": 900,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pharaoh-s-servant-4473",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-060",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.9"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN173",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.05"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52550973,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52550973.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52550973.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52550973.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "7.99",
+          "amazon_price": "22.38",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65669,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6022,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

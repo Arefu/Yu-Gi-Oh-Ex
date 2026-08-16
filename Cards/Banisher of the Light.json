@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 61528025,
+      "name": "Banisher of the Light",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Any card sent to the Graveyard is banished instead.",
+      "race": "Fairy",
+      "atk": 100,
+      "def": 2000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/banisher-of-the-light-5212",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN231",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-078",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.78"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E078",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.31"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN171",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-078",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.88"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN078",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61528025,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61528025.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61528025.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61528025.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "0.99",
+          "amazon_price": "4.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 292024,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4914,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

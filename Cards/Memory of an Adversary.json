@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 60080151,
+      "name": "Memory of an Adversary",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack: You take damage equal to the attacking monster's ATK, and if you do, banish that monster. During the End Phase of your opponent's next turn, Special Summon that monster to your side of the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/memory-of-an-adversary-5100",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN075",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN212",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN212",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60080151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60080151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60080151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60080151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.67",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42158,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10297,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

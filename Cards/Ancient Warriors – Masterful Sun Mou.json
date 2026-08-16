@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 40140448,
+      "name": "Ancient Warriors - Masterful Sun Mou",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control another \"Ancient Warriors\" monster, your opponent's monsters cannot target this card for attacks. You can only use each of the following effects of \"Ancient Warriors - Masterful Sun Mou\" once per turn.\r\n● You can send 1 card from your hand or field to the GY; add 1 \"Ancient Warriors\" monster from your Deck to your hand, except \"Ancient Warriors - Masterful Sun Mou\".\r\n● If your other \"Ancient Warriors\" monster's effect is activated (except during the Damage Step): You can target 1 monster your opponent controls; return it to the hand.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Ancient Warriors",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-warriors-masterful-sun-mou-10616",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40140448,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40140448.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40140448.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40140448.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.25",
+          "tcgplayer_price": "1.65",
+          "ebay_price": "4.25",
+          "amazon_price": "6.21",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Senka Intermediary - Sun Mou",
+          "views": 116269,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011008,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14817,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

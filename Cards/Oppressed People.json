@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 58538870,
+      "name": "Oppressed People",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "They are oppressed, but believe they will have their freedom someday.",
+      "race": "Aqua",
+      "atk": 400,
+      "def": 2000,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oppressed-people-4978",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58538870,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58538870.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58538870.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58538870.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "1.32",
+          "ebay_price": "2.50",
+          "amazon_price": "3.22",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90464,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5579,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

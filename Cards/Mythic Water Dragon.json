@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 92841002,
+      "name": "Mythic Water Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an EARTH monster, you can Special Summon this card (from your hand). You can only Special Summon \"Mythic Water Dragon\" once per turn this way.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythic-water-dragon-7728",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN135",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92841002,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92841002.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92841002.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92841002.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.95",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129024,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10742,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

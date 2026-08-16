@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 32015116,
+      "name": "Blind Destruction",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during your Standby Phase: Roll a six-sided die. If the result is 1-5, destroy all monsters on the field with the same Level as the number rolled. If it is 6, destroy all Level 6 and higher monsters on the field.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blind-destruction-2723",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.99"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN269",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32015116,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32015116.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32015116.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32015116.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 158817,
+          "viewsweek": 22,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5268,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

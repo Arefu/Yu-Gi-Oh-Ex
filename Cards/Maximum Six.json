@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 30707994,
+      "name": "Maximum Six",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned: Roll a six-sided die, and this card gains ATK equal to the result x 200.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1600,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/maximum-six-2609",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN097",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30707994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30707994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30707994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30707994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.83",
+          "tcgplayer_price": "0.76",
+          "ebay_price": "0.99",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51918,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2003-09-19",
+          "konami_id": 5943,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

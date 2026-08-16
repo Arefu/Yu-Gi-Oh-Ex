@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 2801664,
+      "name": "Ancient Warriors - Valiant Zhang De",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains 300 ATK for each monster your opponent controls, during your turn only. You can only use each of the following effects of \"Ancient Warriors - Valiant Zhang De\" once per turn.\r\n● If you control 2 or more \"Ancient Warriors\" monsters: You can Special Summon this card from your hand.\r\n● If your opponent controls more monsters than you do: You can activate this effect; this card can make up to 2 attacks on monsters during each Battle Phase this turn.",
+      "race": "Beast-Warrior",
+      "atk": 2700,
+      "def": 900,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Ancient Warriors",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-warriors-valiant-zhang-de-10615",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2801664,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2801664.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2801664.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2801664.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Senka Champion - Zhang De",
+          "views": 76157,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011013,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14822,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

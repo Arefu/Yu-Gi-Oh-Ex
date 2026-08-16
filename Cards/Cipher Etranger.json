@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 79094383,
+      "name": "Cipher Etranger",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or Graveyard: You can target 1 \"Cipher\" Xyz Monster you control; attach this card to it as an Xyz Material. If this card is sent to the Graveyard: You can add 1 \"Cipher\" Spell/Trap Card from your Deck to your hand. You can only use 1 \"Cipher Etranger\" effect per turn, and only once that turn.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Cipher",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cipher-etranger-6639",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN179",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79094383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79094383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79094383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79094383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57863,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12746,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

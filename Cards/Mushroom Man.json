@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 14181608,
+      "name": "Mushroom Man",
+      "typeline": [
+        "Plant",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Found in humid regions, this creature attacks enemies with a lethal rain of poison spores.",
+      "race": "Plant",
+      "atk": 800,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mushroom-man-1214",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Eight",
+          "set_code": "CP08-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14181608,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14181608.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14181608.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14181608.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.86",
+          "tcgplayer_price": "5.81",
+          "ebay_price": "3.00",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27122,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-01-05",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4014,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

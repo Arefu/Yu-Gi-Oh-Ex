@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 21088856,
+      "name": "Spy-C-Spy",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Look at 1 random card in your opponent's Extra Deck, and if it has 2000 or more ATK, this card gains 1000 ATK. If it has less than 2000 ATK, you gain LP equal to that monster's ATK.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 1300,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spy-c-spy-1812",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN046",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21088856,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21088856.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21088856.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21088856.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29335,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11255,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

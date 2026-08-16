@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 13210191,
+      "name": "Storm",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy as many Spell/Trap Cards you control as possible, then destroy as many Spell/Trap Cards your opponent controls as possible, up to the number of cards destroyed by this effect.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/storm-1137",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN065",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN191",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13210191,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13210191.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13210191.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13210191.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "102.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54127,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10088,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

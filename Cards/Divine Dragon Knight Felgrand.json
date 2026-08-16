@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 1639384,
+      "name": "Divine Dragon Knight Felgrand",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster on the field; this turn, its effects are negated, but it is unaffected by other card effects.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 1800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-dragon-knight-felgrand-144",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN166",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN056",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN056",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN056",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1639384,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1639384.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1639384.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1639384.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.11",
+          "tcgplayer_price": "15.43",
+          "ebay_price": "25.99",
+          "amazon_price": "15.84",
+          "coolstuffinc_price": "11.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 434925,
+          "viewsweek": 21,
+          "upvotes": 16,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10787,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 32623004,
+      "name": "Nopenguin",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, when an effect of a \"Penguin\" monster is activated: Special Summon this card from your Graveyard. You can only use this effect of \"Nopenguin\" once per turn. If a card would be returned from the field to the hand by the effect of a \"Penguin\" card, banish it instead.",
+      "race": "Aqua",
+      "atk": 1600,
+      "def": 100,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Penguin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nopenguin-2776",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32623004,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32623004.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32623004.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32623004.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "1.61",
+          "amazon_price": "2.26",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97390,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11066,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

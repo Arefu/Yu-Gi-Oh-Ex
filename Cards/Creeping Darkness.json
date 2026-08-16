@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 78811937,
+      "name": "Creeping Darkness",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 2 DARK monsters from your GY; add 1 Level 4 DARK monster from your Deck to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/creeping-darkness-6622",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENA27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78811937,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78811937.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78811937.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78811937.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.40",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55583,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9933,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 30600344,
+      "name": "Xyz Burst",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a Rank 6 or higher Xyz Monster: Destroy all Set cards your opponent controls.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-burst-2599",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN116",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30600344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30600344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30600344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30600344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40270,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9935,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

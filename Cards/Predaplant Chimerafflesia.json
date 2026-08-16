@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 25586143,
+      "name": "Predaplant Chimerafflesia",
+      "typeline": [
+        "Plant",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Predaplant\" monster + 1 DARK monster\r\nOnce per turn: You can target 1 monster on the field with a Level less than or equal to this card's; banish it. When an attack is declared involving this card and an opponent's face-up monster: You can activate this effect; until the end of this turn, that opponent's monster loses 1000 ATK, and if it does, this card gains 1000 ATK. Once per turn, during the next Standby Phase after this card was sent to the Graveyard: You can add 1 \"Polymerization\" Spell Card or \"Fusion\" Spell Card from your Deck to your hand.",
+      "race": "Plant",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-chimerafflesia-2201",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN074",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25586143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25586143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25586143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25586143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.19",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 291668,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12835,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

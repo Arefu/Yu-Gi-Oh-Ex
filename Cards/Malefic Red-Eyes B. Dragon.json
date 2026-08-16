@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 55343236,
+      "name": "Malefic Red-Eyes Black Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 \"Red-Eyes Black Dragon\" from your Deck. There can only be 1 \"Malefic\" monster on the field. Other monsters you control cannot declare an attack. If there is no face-up Field Spell on the field, destroy this card.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-red-eyes-black-dragon-4712",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time DVD promotional card",
+          "set_code": "MOV2-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time Movie Pack",
+          "set_code": "YMP1-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time Theater distribution card",
+          "set_code": "MOV2-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.85"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55343236,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55343236.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55343236.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55343236.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "2.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Malefic Red-Eyes B. Dragon",
+          "views": 150535,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-22",
+          "ocg_date": "2010-01-23",
+          "konami_id": 8892,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

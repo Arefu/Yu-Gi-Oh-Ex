@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 72291412,
+      "name": "D/D Necro Slime",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your Graveyard: You can Fusion Summon 1 \"D/D/D\" Fusion Monster from your Extra Deck, by banishing Fusion Materials listed on it from your Graveyard, including this card. You can only use this effect of \"D/D Necro Slime\" once per turn.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-necro-slime-6066",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN027",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72291412,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72291412.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72291412.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72291412.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 313227,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11956,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

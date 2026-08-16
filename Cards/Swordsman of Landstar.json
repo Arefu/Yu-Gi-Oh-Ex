@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 3573512,
+      "name": "Swordsman of Landstar",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An amateur with a sword, this fairy warrior relies on its mysterious powers.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swordsman-of-landstar-316",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN206",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.07"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.99"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3573512,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3573512.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3573512.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3573512.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 159710,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 6,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 4759,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 52497105,
+      "name": "Berserk Scales",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up monster you control (except a monster that is attacking directly); it gains 1000 ATK, also it cannot attack your opponent directly for the rest of this turn. During the End Phase of this turn, it loses 2000 ATK.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/berserk-scales-4469",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENE16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.38"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52497105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52497105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52497105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52497105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31165,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10077,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

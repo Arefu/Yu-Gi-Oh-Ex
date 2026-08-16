@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 12219047,
+      "name": "The Phantom Knights of Cursed Javelin",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters\r\nYou can detach 1 material from this card, then target 1 face-up monster your opponent controls; until the end of this turn, change its ATK to 0, also negate its effects. This is a Quick Effect if this card has a \"The Phantom Knights\" card as material. You can only use this effect of \"The Phantom Knights of Cursed Javelin\" once per turn.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Phantom Knights",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-phantom-knights-of-cursed-javelin-8383",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC32",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12219047,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12219047.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12219047.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12219047.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.45",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 296711,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12956,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

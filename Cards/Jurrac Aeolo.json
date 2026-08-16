@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 80727721,
+      "name": "Jurrac Aeolo",
+      "typeline": [
+        "Dinosaur",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card to select 1 Level 4 or lower \"Jurrac\" monster in your Graveyard, except \"Jurrac Aeolo\". Special Summon that monster from the Graveyard.",
+      "race": "Dinosaur",
+      "atk": 200,
+      "def": 200,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-aeolo-6771",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN106",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN027",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80727721,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80727721.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80727721.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80727721.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.60",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 277271,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2009-10-01",
+          "konami_id": 8565,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

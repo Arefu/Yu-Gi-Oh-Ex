@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 47693640,
+      "name": "Zombie Tiger",
+      "typeline": [
+        "Zombie",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 \"Decayed Commander\" you control; equip this card to that target, OR: Unequip this card and Special Summon it in Attack Position. While equipped by this effect, the equipped monster gains 500 ATK/DEF. If the equipped monster destroys an opponent's monster by battle: Discard 1 random card from their hand. (A monster can only be equipped with 1 Union monster at a time. If the equipped monster would be destroyed by battle, destroy this card instead.)",
+      "race": "Zombie",
+      "atk": 1400,
+      "def": 1600,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zombie-tiger-4073",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47693640,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47693640.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47693640.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47693640.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95085,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5585,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

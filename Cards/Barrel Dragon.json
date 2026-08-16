@@ -1,0 +1,184 @@
+{
+  "data": [
+    {
+      "id": 81480461,
+      "name": "Barrel Dragon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 monster your opponent controls; toss a coin 3 times and destroy it if at least 2 of the results are heads.",
+      "race": "Machine",
+      "atk": 2600,
+      "def": 2200,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barrel-dragon-6840",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.69"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.55"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN005",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "11.05"
+        },
+        {
+          "set_name": "Duelist League Series 1 participation cards",
+          "set_code": "DL1-E002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.53"
+        },
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.14"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN177",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Master Collection Volume 1",
+          "set_code": "MC1-EN002",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "9.99"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-126",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.69"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E126",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.78"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN126",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.72"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 2",
+          "set_code": "STP2-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "31.92"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.95"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2021 G",
+          "set_code": "LART-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81480461,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81480461.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81480461.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81480461.jpg"
+        },
+        {
+          "id": 81480460,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81480460.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81480460.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81480460.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "44.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 231184,
+          "viewsweek": 42,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Barrel Dragon",
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4749,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

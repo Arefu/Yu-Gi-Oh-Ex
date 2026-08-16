@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": 14017402,
+      "name": "Dragon Knight Draco-Equiste",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Dragon-Type Synchro Monster + 1 Warrior-Type monster\nMust first be Fusion Summoned. Once per turn: You can target 1 Dragon-Type Synchro Monster in the Graveyard; banish that target, and if you do, until the End Phase, this card's name becomes that monster's, and replace this effect with that monster's original effects. While this card is in Attack Position, your opponent takes any effect damage you would have taken from their card effects, instead.",
+      "race": "Dragon",
+      "atk": 3200,
+      "def": 2000,
+      "level": 10,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-knight-draco-equiste-1202",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 1",
+          "set_code": "CT07-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "7.3"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN038",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14017402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14017402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14017402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14017402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "1.67",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 212325,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8969,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 41114306,
+      "name": "Dark Garnex the Cubic Beast",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by sending 1 \"Cubic\" monster you control to the Graveyard. If Summoned this way, this card gains 1000 ATK. When this card destroys a monster by battle: You can target up to 2 \"Vijam the Cubic Seed\" in your Graveyard; send this card to the Graveyard, and if you do, Special Summon them, then you can add 1 \"Blade Garoodia the Cubic Beast\" from your Deck to your hand.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 0,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-garnex-the-cubic-beast-3501",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS33",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG33",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41114306,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41114306.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41114306.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41114306.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77038,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12516,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

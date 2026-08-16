@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 21516908,
+      "name": "Hi-Speedroid Hagoita",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nDuring either player's turn: You can Tribute this card; increase the Levels of all monsters currently on the field by 1, until the end of this turn. If this card is in your Graveyard and you control a \"Speedroid\" Tuner monster: You can Special Summon this card, also you cannot Special Summon monsters for the rest of this turn, except WIND monsters. You can only use this effect of \"Hi-Speedroid Hagoita\" once per turn.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 1000,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Hi-Speedroid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hi-speedroid-hagoita-1854",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS26",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21516908,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21516908.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21516908.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21516908.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.49",
+          "amazon_price": "3.38",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hi-Speedroid Mach Hagoita",
+          "views": 122858,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12157,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

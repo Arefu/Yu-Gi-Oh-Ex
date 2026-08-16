@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 81383947,
+      "name": "White Magician Pikeru",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Standby Phase, increase your Life Points by 400 points for each monster on your side of the field.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 0,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-magician-pikeru-6832",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-033",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "3.99"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENE02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spellcaster's Judgment",
+          "set_code": "SD6-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81383947,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81383947.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81383947.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81383947.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "3.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92866,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5975,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

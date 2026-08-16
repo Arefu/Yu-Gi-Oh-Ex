@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 71344451,
+      "name": "Slash Draw",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 card; send cards from the top of your Deck to the GY, equal to the number of cards your opponent controls, then draw 1 card and show it. Then, if it was \"Slash Draw\", send it to the GY, and if you do, destroy as many cards on the field as possible, then inflict 2000 damage to your opponent for each card destroyed and sent to the GY by this effect. If the card you drew was not \"Slash Draw\", shuffle cards from your GY into your Deck, equal to the number of cards sent from your Deck to the GY by this effect. You can only activate 1 \"Slash Draw\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/slash-draw-9507",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.57"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 71344451,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71344451.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71344451.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71344451.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "2.50",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128874,
+          "viewsweek": 21,
+          "upvotes": 28,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13814,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

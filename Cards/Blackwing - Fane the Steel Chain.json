@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 9109991,
+      "name": "Blackwing - Fane the Steel Chain",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack your opponent directly. If this card inflicts battle damage to your opponent by a direct attack: Target 1 Attack Position monster your opponent controls; change that target to Defense Position.",
+      "race": "Winged Beast",
+      "atk": 500,
+      "def": 800,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-fane-the-steel-chain-772",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9109991,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9109991.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9109991.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9109991.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55212,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8297,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

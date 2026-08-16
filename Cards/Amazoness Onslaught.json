@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 83407038,
+      "name": "Amazoness Onslaught",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during the Battle Phase: You can Special Summon 1 \"Amazoness\" monster from your hand, and if you do, it gains 500 ATK until the end of this turn (even if this card leaves the field). After damage calculation, if your \"Amazoness\" monster battled an opponent's monster while this card is already face-up in your Spell & Trap Zone: You can banish that opponent's monster. If this card on the field is destroyed and sent to the GY: You can target 1 \"Amazoness\" monster in your GY; Special Summon it.",
+      "race": "Continuous",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-onslaught-8500",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83407038,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83407038.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83407038.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83407038.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.95",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Amazoness Ambush",
+          "views": 95935,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13175,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

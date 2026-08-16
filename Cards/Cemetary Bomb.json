@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 51394546,
+      "name": "Cemetary Bomb",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Inflict 100 damage to your opponent for each card in their Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cemetary-bomb-4372",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN059",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Starter Deck 2006",
+          "set_code": "YSD-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51394546,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51394546.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51394546.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51394546.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.65",
+          "amazon_price": "1.42",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cemetery Bomb",
+          "views": 63467,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6148,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

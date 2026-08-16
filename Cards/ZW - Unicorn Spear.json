@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 76080032,
+      "name": "ZW - Unicorn Spear",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Number C39: Utopia Ray\" you control; equip this card from your hand to that target. It gains 1900 ATK. If the equipped monster battles an opponent's monster, the opponent's monster's effect is negated during the Battle Phase only. You can only control 1 \"ZW - Unicorn Spear\".",
+      "race": "Beast",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zw-unicorn-spear-6405",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN004",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76080032,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76080032.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76080032.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76080032.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62061,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9879,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 9888196,
+      "name": "Ally of Justice Decisive Armor",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 2 or more non-Tuner monsters \n Once per turn, if your opponent controls a face-up LIGHT monster(s), you can activate 1 of these effects:\n● Select 1 Set card your opponent controls, and destroy it.\n● Send 1 card from your hand to the Graveyard to destroy all Spell/Trap Cards your opponent controls.\n● Send all cards in your hand to the Graveyard to look at your opponent's hand and send all LIGHT monsters in their hand to the Graveyard. Then, inflict damage to your opponent equal to the total ATK of the opponent's monsters sent to the Graveyard.",
+      "race": "Machine",
+      "atk": 3300,
+      "def": 3300,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Ally of Justice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ally-of-justice-decisive-armor-835",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN090",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN060",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN092",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9888196,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9888196.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9888196.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9888196.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "3.94",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57438,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8417,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

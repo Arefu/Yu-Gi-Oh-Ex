@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 75906310,
+      "name": "Armed Dragon Catapult Cannon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"VWXYZ-Dragon Catapult Cannon\" + \"Armed Dragon LV7\"\r\nMust first be Special Summoned (from your Extra Deck) during a Duel you Special Summoned both the above cards, by banishing the above cards from your field and/or GY. (You do not use \"Polymerization\".) Your opponent cannot activate cards or effects with the same name as any banished card. Once per turn, during your opponent's turn (Quick Effect): You can banish 1 card from your Deck or Extra Deck, face-up; banish all cards your opponent controls and in their GY.",
+      "race": "Machine",
+      "atk": 3500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Armed Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armed-dragon-catapult-cannon-8975",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75906310,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75906310.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75906310.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75906310.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.18",
+          "tcgplayer_price": "9.74",
+          "ebay_price": "4.00",
+          "amazon_price": "11.99",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134472,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13476,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 4259068,
+      "name": "Spell Economics",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You do not pay Life Points to activate Spell Cards.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-economics-386",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.36"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN202",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN278",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4259068,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4259068.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4259068.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4259068.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "1.39",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66381,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6051,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

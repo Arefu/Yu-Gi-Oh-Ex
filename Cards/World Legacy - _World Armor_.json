@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 83477829,
+      "name": "World Legacy - \"World Armor\"",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a monster is Flip Summoned: You can Special Summon this card from your hand. If this card is Normal or Special Summoned: You can add 1 \"World Legacy\" card from your Deck to your hand. If this Normal Summoned/Set card is on the field (Quick Effect): You can target 1 face-up opponent's monster that was Special Summoned from the Extra Deck; return both that monster and this card to the hand. You can only use each effect of \"World Legacy - \"World Armor\"\" once per turn.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 2500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-world-armor-8722",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN117",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83477829,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83477829.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83477829.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83477829.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.95",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy - World Armor",
+          "views": 157639,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13238,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

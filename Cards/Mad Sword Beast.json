@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "id": 79870141,
+      "name": "Mad Sword Beast",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Dinosaur",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mad-sword-beast-6701",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN201",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.45"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Tournament Pack 4",
+          "set_code": "TP4-020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79870141,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79870141.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79870141.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79870141.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 176741,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5142,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

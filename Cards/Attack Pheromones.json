@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 68786330,
+      "name": "Attack Pheromones",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If a monster you control attacks a Defense Position monster, change that monster to face-up Attack Position at the end of the Damage Step if your attacking monster is Reptile-Type.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/attack-pheromones-5777",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68786330,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68786330.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68786330.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68786330.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39412,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8483,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

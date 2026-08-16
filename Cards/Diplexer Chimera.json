@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 78084378,
+      "name": "Diplexer Chimera",
+      "typeline": [
+        "Cyberse",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 Cyberse monsters\r\nOnce per turn: You can Tribute 1 Cyberse monster; Spell/Trap Cards, and their effects, cannot be activated during the Battle Phase of this turn. If this Fusion Summoned card is sent to your GY: You can target 1 \"Cynet Fusion\" and 1 Cyberse monster in your GY, except this card; add them to your hand. You can only use this effect of \"Diplexer Chimera\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": 800,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/diplexer-chimera-9667",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78084378,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78084378.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78084378.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78084378.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151522,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13925,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

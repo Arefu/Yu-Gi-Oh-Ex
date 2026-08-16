@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 16191953,
+      "name": "Master Gig",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can pay 1000 Life Points to destroy monsters your opponent controls equal to the number of face-up Psychic-Type monsters you control.",
+      "race": "Psychic",
+      "atk": 2600,
+      "def": 1400,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-gig-1390",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack Collection Tin 2009",
+          "set_code": "RGBT-ENPP5",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.35"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16191953,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16191953.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16191953.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16191953.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39275,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-03-10",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8182,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

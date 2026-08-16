@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 41089128,
+      "name": "Flame Ruler",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be treated as 2 Tributes for the Tribute Summon of a FIRE monster.",
+      "race": "Pyro",
+      "atk": 1500,
+      "def": 1600,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flame-ruler-3495",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN151",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41089128,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41089128.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41089128.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41089128.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78307,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6260,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

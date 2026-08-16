@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 42899204,
+      "name": "Evil Eye Mesmerism",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When your opponent Special Summons a monster(s): Activate this card by targeting 1 of those Summoned monsters in Attack Position, with less ATK than an \"Evil Eye\" monster you control; take control of that monster. When that monster leaves the field, destroy this card. While \"Evil Eye of Selene\" is in your Spell & Trap Zone, that targeted monster is also treated as an \"Evil Eye\" monster. You can only activate 1 \"Evil Eye Mesmerism\" per turn.",
+      "race": "Continuous",
+      "archetype": "Evil Eye",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-eye-mesmerism-10103",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN243",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42899204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42899204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42899204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42899204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Death Control of the Evil Eye",
+          "views": 30365,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412038,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14428,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

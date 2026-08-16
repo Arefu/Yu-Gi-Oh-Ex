@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "id": 77121851,
+      "name": "Manticore of Darkness",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase of the turn this card was sent to the Graveyard: You can send to the Graveyard 1 Beast, Beast-Warrior, or Winged Beast-Type monster from your hand or your side of the field; Special Summon this card from your Graveyard.",
+      "race": "Beast-Warrior",
+      "atk": 2300,
+      "def": 1000,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/manticore-of-darkness-6490",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Three",
+          "set_code": "CP03-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN068",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.04"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Semi-Limited"
+      },
+      "card_images": [
+        {
+          "id": 77121851,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77121851.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77121851.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77121851.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "2.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114035,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5881,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

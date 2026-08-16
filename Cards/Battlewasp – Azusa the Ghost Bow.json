@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 27565379,
+      "name": "Battlewasp - Azusa the Ghost Bow",
+      "typeline": [
+        "Insect",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nWhen your opponent takes effect damage from another \"Battlewasp\" monster: You can inflict damage to your opponent equal to the original ATK of that monster. You can only use this effect of \"Battlewasp - Azusa the Ghost Bow\" once per turn. When a monster is destroyed by battle with your \"Battlewasp\" monster, while this card is in your GY: You can Special Summon this card in Defense Position, but banish it when it leaves the field.",
+      "race": "Insect",
+      "atk": 2200,
+      "def": 1600,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlewasp-azusa-the-ghost-bow-10317",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27565379,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27565379.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27565379.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27565379.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.25",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65077,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248039,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14572,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

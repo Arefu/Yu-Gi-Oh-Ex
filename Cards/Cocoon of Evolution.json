@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 40240595,
+      "name": "Cocoon of Evolution",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Petit Moth\" you control; equip this card from your hand to that target. While equipped by this effect, the original ATK/DEF of that \"Petit Moth\" becomes the ATK/DEF of \"Cocoon of Evolution\".",
+      "race": "Insect",
+      "atk": 0,
+      "def": 2000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cocoon-of-evolution-3420",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-011",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E011",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "9.28"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN011",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN011",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Metal Raiders (25th Anniversary Edition)",
+          "set_code": "MRD-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40240595,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40240595.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40240595.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40240595.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 345613,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4078,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

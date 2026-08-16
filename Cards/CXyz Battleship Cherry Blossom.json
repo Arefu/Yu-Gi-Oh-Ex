@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 76419637,
+      "name": "CXyz Battleship Cherry Blossom",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 4 monsters\nOnce per turn, during your opponent's End Phase, if your opponent has more cards in their hand than you do: They discard 1 card. If this card has \"Battlecruiser Dianthus\" as an Xyz Material, it gains this effect.\n● You can detach 1 Xyz Material from this card; inflict 300 damage to your opponent for each card on the field. You can only use this effect of \"CXyz Battleship Cherry Blossom\" once per turn.",
+      "race": "Plant",
+      "atk": 2400,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "CXyz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cxyz-battleship-cherry-blossom-6429",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN044",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76419637,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76419637.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76419637.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76419637.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29992,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10717,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

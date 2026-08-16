@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 35866404,
+      "name": "Grandram",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a face-up Xyz Monster, you can Special Summon this card (from your hand) in face-up Attack Position.",
+      "race": "Rock",
+      "atk": 0,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grandram-3037",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35866404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35866404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35866404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35866404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15940,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10227,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 50470982,
+      "name": "The Paths of Destiny",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Both players toss a coin once. If a player's result is Heads, they gain 2000 Life Points, and if their result is Tails, they take 2000 damage.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-paths-of-destiny-4300",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50470982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50470982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50470982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50470982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "1.75",
+          "amazon_price": "2.12",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 203477,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6809,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

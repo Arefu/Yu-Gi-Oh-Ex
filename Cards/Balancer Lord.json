@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 8567955,
+      "name": "Balancer Lord",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can pay 1000 LP; during your Main Phase this turn, you can Normal Summon 1 Cyberse monster, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) If this card is banished: You can Special Summon 1 Level 4 or lower monster from your hand. You can only use this effect of \"Balancer Lord\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1700,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/balancer-lord-8522",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8567955,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8567955.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8567955.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8567955.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.64",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 379098,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13196,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

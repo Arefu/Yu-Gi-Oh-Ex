@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 63308047,
+      "name": "Terra the Terrible",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Known as a swamp dweller, this creature is a minion of the dark forces.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/terra-the-terrible-5348",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.78"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63308047,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63308047.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63308047.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63308047.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.00",
+          "amazon_price": "1.33",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 292218,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4200,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

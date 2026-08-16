@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 77967790,
+      "name": "Dinowrestler King T Wrextle",
+      "typeline": [
+        "Dinosaur",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Dinowrestler\" monsters\r\nIf this card battles, your opponent cannot activate Spell/Trap Cards until the end of the Damage Step. Your opponent's monsters cannot target monsters for attacks, except this one. At the start of your opponent's Battle Phase: You can target 1 Attack Position monster your opponent controls; this Battle Phase, your opponent cannot attack with other monsters until that one has, and if it does not declare an attack, destroy it at the end of the Battle Phase.",
+      "race": "Dinosaur",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-king-t-wrextle-9606",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN187",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77967790,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77967790.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77967790.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77967790.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80808,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13928,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

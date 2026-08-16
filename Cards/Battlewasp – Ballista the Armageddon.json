@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 26443791,
+      "name": "Battlewasp - Ballista the Armageddon",
+      "typeline": [
+        "Insect",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card is Special Summoned: You can banish all Insect monsters from your GY; all monsters your opponent currently controls lose 500 ATK/DEF for each of your banished Insect monsters. If this card attacks a Defense Position monster, inflict piercing battle damage. If this Synchro Summoned card in its owner's control is destroyed by an opponent's card: You can Special Summon 3 of your banished Level 11 or lower Insect monsters.",
+      "race": "Insect",
+      "atk": 3000,
+      "def": 800,
+      "level": 12,
+      "attribute": "WIND",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlewasp-ballista-the-armageddon-10329",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26443791,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26443791.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26443791.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26443791.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67682,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248042,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14575,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

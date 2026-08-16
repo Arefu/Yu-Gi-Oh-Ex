@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 41735184,
+      "name": "Dark Magic Inheritance",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Banish 2 Spells from your GY; add 1 Spell/Trap from your Deck to your hand, that specifically lists the card \"Dark Magician\" or \"Dark Magician Girl\" in its text, except \"Dark Magic Inheritance\". You can only activate 1 \"Dark Magic Inheritance\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-magic-inheritance-3564",
+      "card_sets": [
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.75"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41735184,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41735184.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41735184.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41735184.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.71",
+          "ebay_price": "2.99",
+          "amazon_price": "4.10",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dark Magic Succession",
+          "views": 357402,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12579,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

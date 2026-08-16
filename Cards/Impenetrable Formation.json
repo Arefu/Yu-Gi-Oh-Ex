@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 96631852,
+      "name": "Impenetrable Formation",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Select 1 monster on your side of the field to activate this card. While you have 2 or more monsters on your side of the field, and all monsters on your side of the field are in Defense Position, the selected monster gains 700 DEF. When the selected monster is removed from the field, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/impenetrable-formation-8041",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN228",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96631852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96631852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96631852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96631852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61457,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6355,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "id": 54880296,
+      "name": "Yosenju Wind Worship",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If you control 3 or more \"Yosenju\" Monster Cards with different names: Return as many \"Yosenju\" Monster Cards you control to the hand as possible, then you can draw until you have 5 cards in your hand. You can only activate 1 \"Yosenju Wind Worship\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Yosenju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yosenju-wind-worship-10237",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54880296,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54880296.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54880296.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54880296.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Yosenju Wind Ritual",
+          "views": 19918,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009057,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14510,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

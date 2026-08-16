@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 9995766,
+      "name": "Imperial Custom",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Face-up Continuous Traps cannot be destroyed by battle or card effect, except \"Imperial Custom\". You can only control 1 \"Imperial Custom\".",
+      "race": "Continuous",
+      "archetype": "Royal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/imperial-custom-844",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN120",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9995766,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9995766.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9995766.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9995766.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 143475,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8357,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 36857073,
+      "name": "Hot Red Dragon Archfiend Bane",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 non-Tuner DARK Dragon Synchro Monster\nYou can Tribute 1 monster, then target 1 \"Red Dragon Archfiend\" monster in your GY; Special Summon it. When this card inflicts battle damage to your opponent: You can Special Summon 2 Tuners with the same Level (1 from your Deck and 1 from your GY) in Defense Position. You can only use each effect of \"Hot Red Dragon Archfiend Bane\" once per turn.",
+      "race": "Dragon",
+      "atk": 3500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hot-red-dragon-archfiend-bane-3117",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN042",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.75"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36857073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36857073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36857073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36857073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.57",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 484768,
+          "viewsweek": 21,
+          "upvotes": 20,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12079,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

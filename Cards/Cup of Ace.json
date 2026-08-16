@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 37812118,
+      "name": "Cup of Ace",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Toss a coin: ● Heads: Draw 2 cards. ● Tails: Your opponent draws 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cup-of-ace-3204",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37812118,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37812118.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37812118.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37812118.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "3.55",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 376021,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7623,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

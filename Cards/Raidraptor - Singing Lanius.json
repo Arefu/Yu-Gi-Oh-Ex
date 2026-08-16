@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 31314549,
+      "name": "Raidraptor - Singing Lanius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a face-up Xyz Monster, you can Special Summon this card (from your hand). You can only Special Summon \"Raidraptor - Singing Lanius\" once per turn this way.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-singing-lanius-2655",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31314549,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31314549.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31314549.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31314549.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.40",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 268910,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11798,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

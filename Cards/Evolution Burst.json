@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 52875873,
+      "name": "Evolution Burst",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control \"Cyber Dragon\": Target 1 card your opponent controls; destroy that target. \"Cyber Dragon\" cannot attack the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evolution-burst-4505",
+      "card_sets": [
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN045",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN170",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN170",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52875873,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52875873.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52875873.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52875873.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102166,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7556,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

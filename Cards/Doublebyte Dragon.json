@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 23971061,
+      "name": "Doublebyte Dragon",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Link Monsters\r\nGains ATK equal to the combined Link Ratings of the monsters used for its Link Summon x 300. Unaffected by monster effects, except Link Monsters' effects, and cannot be destroyed by battle, except by battle with a Link Monster.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doublebyte-dragon-9208",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23971061,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23971061.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23971061.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23971061.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.25",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Double Byte Dragon",
+          "views": 52821,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-12-23",
+          "konami_id": 13510,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

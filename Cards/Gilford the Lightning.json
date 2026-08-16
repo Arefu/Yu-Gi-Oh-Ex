@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "id": 36354007,
+      "name": "Gilford the Lightning",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 3 monsters to Tribute Summon (but not Set) this card. If Summoned this way: Destroy all monsters your opponent controls.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 1400,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gilford-the-lightning-3071",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2005",
+          "set_code": "CT2-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "11.19"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN242",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "342.87"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.83"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.62"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN040",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "3.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36354007,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36354007.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36354007.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36354007.jpg"
+        },
+        {
+          "id": 36354008,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36354008.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36354008.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36354008.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "5.13",
+          "amazon_price": "7.04",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150691,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 36354008,
+          "treated_as": "Gilford the Lightning",
+          "tcg_date": "2005-09-01",
+          "ocg_date": "2001-12-20",
+          "konami_id": 5451,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

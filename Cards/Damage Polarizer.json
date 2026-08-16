@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 46031686,
+      "name": "Damage Polarizer",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Activate only when an effect that inflicts damage is activated. Negate its activation and effect, and each player draws 1 card.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/damage-polarizer-3921",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46031686,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46031686.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46031686.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46031686.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.23",
+          "tcgplayer_price": "2.03",
+          "ebay_price": "6.50",
+          "amazon_price": "7.60",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47399,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-03-07",
+          "ocg_date": "2006-10-26",
+          "konami_id": 6947,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

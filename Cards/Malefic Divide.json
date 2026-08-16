@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 81384993,
+      "name": "Malefic Divide",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Malefic\" monster in your GY; Special Summon it, ignoring its Summoning conditions, but its effects are negated, also banish it during the End Phase.",
+      "race": "Quick-Play",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-divide-10078",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81384993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81384993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81384993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81384993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56648,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14371,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

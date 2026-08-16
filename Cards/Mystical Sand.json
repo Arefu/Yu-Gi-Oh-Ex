@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32751480,
+      "name": "Mystical Sand",
+      "typeline": [
+        "Rock",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Giant Soldier of Stone\" + \"Ancient Elf\"",
+      "race": "Rock",
+      "atk": 2100,
+      "def": 1700,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystical-sand-2789",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN019",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "16.31"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN119",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32751480,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32751480.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32751480.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32751480.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.62",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37459,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-23",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4537,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

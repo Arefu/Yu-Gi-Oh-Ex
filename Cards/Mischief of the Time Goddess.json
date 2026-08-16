@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 92182447,
+      "name": "Mischief of the Time Goddess",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Neither player can activate cards or effects in response to this card's activation. Cannot be activated as Chain Link 2 or higher. At the end of your Battle Phase, if all monsters you control are \"Valkyrie\" monsters (min. 1): Send this card to the GY, also, immediately after this effect resolves, skip to the start of the Battle Phase of your next turn. If you do, you cannot activate \"Mischief of the Time Goddess\" until the end of that turn.",
+      "race": "Quick-Play",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mischief-of-the-time-goddess-9750",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "11.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92182447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92182447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92182447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92182447.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.44",
+          "tcgplayer_price": "7.89",
+          "ebay_price": "9.94",
+          "amazon_price": "10.06",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85046,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 8,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13998,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

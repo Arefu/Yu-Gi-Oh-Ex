@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 62034800,
+      "name": "Infinitrack Anchor Drill",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 EARTH Machine monster from your hand in Defense Position, except \"Infinitrack Anchor Drill\". You can target 1 other Machine monster you control; the Levels of both that monster and this card become the combined original Levels of those 2 monsters, until the end of this turn. You can only use each effect of \"Infinitrack Anchor Drill\" once per turn.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-anchor-drill-10132",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN207",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.17"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN002",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62034800,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62034800.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62034800.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62034800.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.60",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "6.95",
+          "amazon_price": "2.74",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Infinitrack Rock Anchor",
+          "views": 368331,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412002,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14392,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

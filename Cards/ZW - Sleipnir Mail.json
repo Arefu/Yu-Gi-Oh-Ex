@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 2648201,
+      "name": "ZW - Sleipnir Mail",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Utopia\" monster you control; equip this monster from your hand or your side of the field to that target. It gains 1000 ATK. When this card you control is sent to your Graveyard because the equipped monster was destroyed by your opponent's card (by battle or card effect): You can target 1 \"Utopia\" monster in your Graveyard; Special Summon that target. You can only control 1 \"ZW - Sleipnir Mail\".",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zw-sleipnir-mail-239",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2648201,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2648201.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2648201.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2648201.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52123,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2013-08-05",
+          "konami_id": 10844,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

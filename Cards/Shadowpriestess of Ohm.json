@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27869883,
+      "name": "Shadowpriestess of Ohm",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 face-up DARK monster you control to inflict 800 damage to your opponent.",
+      "race": "Spellcaster",
+      "atk": 1700,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Priestess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shadowpriestess-of-ohm-2371",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27869883,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27869883.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27869883.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27869883.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.45",
+          "amazon_price": "3.46",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47536,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7426,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

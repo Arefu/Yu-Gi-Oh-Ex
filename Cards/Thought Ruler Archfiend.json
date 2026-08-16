@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 70780151,
+      "name": "Thought Ruler Archfiend",
+      "typeline": [
+        "Psychic",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card destroys a monster by battle and sends it to the Graveyard: Gain LP equal to that monster's original ATK in the Graveyard. During either player's turn, when a Spell/Trap Card is activated that targets exactly 1 Psychic-Type monster (and no other cards): You can pay 1000 LP; negate the activation, and if you do, destroy it.",
+      "race": "Psychic",
+      "atk": 2700,
+      "def": 2300,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thought-ruler-archfiend-5940",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN088",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 2 participation cards",
+          "set_code": "DL11-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "14.15"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN233",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70780151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70780151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70780151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70780151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.28",
+          "tcgplayer_price": "1.34",
+          "ebay_price": "0.99",
+          "amazon_price": "0.43",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 284263,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7738,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

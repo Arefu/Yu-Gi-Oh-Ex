@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 3897065,
+      "name": "Super Vehicroid - Stealth Union",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Truckroid\" + \"Expressroid\" + \"Drillroid\" + \"Stealthroid\"\nOnce per turn: You can target 1 face-up non-Machine monster on the field; equip that target to this card. While equipped with a monster by this effect, this card can attack all monsters your opponent controls, once each. If this card attacks, its original ATK is halved. If this card attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Machine",
+      "atk": 3600,
+      "def": 3000,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-vehicroid-stealth-union-349",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN078",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Duelist League 3 participation cards",
+          "set_code": "DL12-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.54"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENB24",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3897065,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3897065.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3897065.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3897065.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63511,
+          "viewsweek": 0,
+          "upvotes": 147,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 6835,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

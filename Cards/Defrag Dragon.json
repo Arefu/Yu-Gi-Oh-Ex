@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 58582979,
+      "name": "Defrag Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by sending 1 other monster from your hand to the GY. You can only Special Summon \"Defrag Dragon\" once per turn this way. If this card is in the GY: You can banish 3 monsters from your GY with the same name, except \"Defrag Dragon\"; Special Summon this card. You can only use this effect of \"Defrag Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/defrag-dragon-9194",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58582979,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58582979.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58582979.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58582979.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Defradragun",
+          "views": 128396,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13566,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

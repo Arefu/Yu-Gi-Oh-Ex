@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 15754711,
+      "name": "Dragonmaid Send-Off",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Dragonmaid\" monster you control; Special Summon 1 \"Dragonmaid\" monster with a different name from your hand, in Defense Position, and if you do, return that targeted monster to the hand. The Special Summoned monster cannot be destroyed by battle or card effects until the end of the next turn. You can only activate 1 \"Dragonmaid Send-Off\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonmaid-send-off-10546",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact Special Edition",
+          "set_code": "CHIM-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.05"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15754711,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15754711.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15754711.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15754711.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "0.99",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaids' Sendoff",
+          "views": 127212,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011064,
+          "tcg_date": "2019-12-05",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14873,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 39765958,
+      "name": "Hot Red Dragon Archfiend",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn, during your Main Phase 1: You can destroy all other face-up Attack Position monsters on the field. Monsters other than this card cannot attack the turn you activate this effect.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hot-red-dragon-archfiend-3372",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Volume 6 promotional card",
+          "set_code": "YF06-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39765958,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39765958.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39765958.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39765958.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "2.49",
+          "amazon_price": "0.42",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 280696,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-09-02",
+          "ocg_date": "2013-08-03",
+          "konami_id": 10842,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

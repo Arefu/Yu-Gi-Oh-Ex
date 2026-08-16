@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 81172176,
+      "name": "Fiend Comedian",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Toss a coin and call it. If you call it right, all your opponent's cards in the Graveyard are removed from play immediately. If you call it wrong, send a number of cards equal to the cards in your opponent's Graveyard from your Deck to your Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiend-comedian-6813",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.82"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81172176,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81172176.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81172176.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81172176.jpg"
+        },
+        {
+          "id": 81172177,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81172177.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81172177.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81172177.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.32",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "2.21",
+          "amazon_price": "3.60",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160460,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Fiend Comedian",
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5405,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

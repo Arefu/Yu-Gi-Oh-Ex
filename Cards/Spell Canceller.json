@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 84636823,
+      "name": "Spell Canceller",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Spell Cards, and their effects on the field, cannot be activated. Negate all Spell effects on the field.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 1600,
+      "level": 5,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-canceller-7098",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN131",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.11"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.66"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN174",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN174",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.43"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENE08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84636823,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84636823.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84636823.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84636823.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 193083,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5594,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

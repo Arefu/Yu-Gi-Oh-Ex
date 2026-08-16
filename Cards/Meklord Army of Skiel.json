@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 75733063,
+      "name": "Meklord Army of Skiel",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 200 ATK for each \"Meklord\" monster on the field, except this card. When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 \"Meklord Army\" monster from your Deck.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Meklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meklord-army-of-skiel-6375",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN164",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75733063,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75733063.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75733063.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75733063.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57102,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9484,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

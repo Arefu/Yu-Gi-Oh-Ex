@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 36607978,
+      "name": "Mystical Moon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Beast-Warrior-Type monster. It gains 300 ATK and DEF.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystical-moon-3095",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-094",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.91"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E074",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "11.03"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN094",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.61"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon (25th Anniversary Edition)",
+          "set_code": "LOB-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA30",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36607978,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36607978.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36607978.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36607978.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 322874,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4325,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

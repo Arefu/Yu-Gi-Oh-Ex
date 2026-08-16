@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 72549351,
+      "name": "Dragonic Tactics",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 2 Dragon monsters; Special Summon 1 Level 8 Dragon monster from your Deck.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonic-tactics-6089",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years",
+          "set_code": "LC02-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.14"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN073",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Saga of Blue-Eyes White Dragon Structure Deck",
+          "set_code": "SDBE-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Reloaded",
+          "set_code": "YSKR-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72549351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72549351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72549351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72549351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47208,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-04",
+          "ocg_date": "2010-03-20",
+          "konami_id": 8422,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

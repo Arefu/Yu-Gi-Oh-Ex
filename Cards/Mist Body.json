@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 47529357,
+      "name": "Mist Body",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The equipped monster cannot be destroyed by battle.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-body-4058",
+      "card_sets": [
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "McDonald's Promotional Cards 2",
+          "set_code": "MDP2-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.05"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47529357,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47529357.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47529357.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47529357.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "4.00",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51462,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-12-22",
+          "ocg_date": "2005-12-17",
+          "konami_id": 6546,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

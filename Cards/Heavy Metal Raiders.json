@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 3113667,
+      "name": "Heavy Metal Raiders",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "The first time each DARK Machine monster you control would be destroyed by battle each turn, it is not destroyed, and if you took battle damage from the battle, it gains that much ATK after damage calculation, and keeps that ATK gain as long as this card is on the field. Once per turn, if a monster you control that was originally a DARK Machine destroys a card(s) on the field by battle or card effect: You can Special Summon 1 DARK Machine monster from your hand.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heavy-metal-raiders-9081",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.32"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3113667,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3113667.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3113667.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3113667.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "2.55",
+          "amazon_price": "4.10",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104599,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13474,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 58071123,
+      "name": "Oxygeddon",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle with a Pyro monster and sent to the GY: Each player takes 800 damage.",
+      "race": "Dinosaur",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Bonding",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oxygeddon-4941",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.16"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENC04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58071123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58071123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58071123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58071123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "3.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131748,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6480,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

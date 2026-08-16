@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 79613121,
+      "name": "Magician of Black Chaos MAX",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Chaos Form\". If this card is Special Summoned: You can Tribute 1 monster; your opponent cannot activate monster effects this turn. When this card destroys an opponent's monster by battle: You can target 1 Spell in your GY; add it to your hand. You can only use each effect of \"Magician of Black Chaos MAX\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-of-black-chaos-max-10075",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin",
+          "set_code": "TN19-EN002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "3.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79613121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79613121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79613121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79613121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.23",
+          "tcgplayer_price": "3.68",
+          "ebay_price": "2.95",
+          "amazon_price": "2.17",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 296462,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2019-08-29",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14366,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

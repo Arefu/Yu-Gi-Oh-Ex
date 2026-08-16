@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 24221739,
+      "name": "Protector of the Sanctuary",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot draw cards except during Draw Phases.",
+      "race": "Fiend",
+      "atk": 1100,
+      "def": 1900,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/protector-of-the-sanctuary-2093",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Champion Pack: Game Five",
+          "set_code": "CP05-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN178",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 24221739,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24221739.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24221739.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24221739.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "2.36",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89164,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6027,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

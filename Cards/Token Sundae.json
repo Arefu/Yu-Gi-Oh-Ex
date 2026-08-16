@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 52971673,
+      "name": "Token Sundae",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy all Tokens you control, then destroy cards on the field up to the number of Tokens destroyed by this effect.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/token-sundae-4511",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENH14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52971673,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52971673.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52971673.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52971673.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39264,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9348,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

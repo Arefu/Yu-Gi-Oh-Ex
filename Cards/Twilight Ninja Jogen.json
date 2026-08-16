@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 79441381,
+      "name": "Twilight Ninja Jogen",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf your \"Ninja\" monster attacks a Defense Position monster, inflict piercing battle damage to your opponent.\n\n[ Monster Effect ] \nYou can reveal 1 \"Ninjitsu Art\" card in your hand; Special Summon this card from your hand. If this card attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Warrior",
+      "pend_desc": "If your \"Ninja\" monster attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "monster_desc": "You can reveal 1 \"Ninjitsu Art\" card in your hand; Special Summon this card from your hand. If this card attacks a Defense Position monster, inflict piercing battle damage.",
+      "atk": 2000,
+      "def": 1000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Ninja",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twilight-ninja-jogen-8460",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79441381,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79441381.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79441381.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79441381.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87516,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13141,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

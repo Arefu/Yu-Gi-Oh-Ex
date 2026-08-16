@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 22617205,
+      "name": "Stellarknight Zefraxciton",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"tellarknight\" and \"Zefra\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nIf this card is Normal, Flip, or Pendulum Summoned: You can target 1 other \"tellarknight\" or \"Zefra\" card in your Monster Zone or Pendulum Zone, and 1 Set card your opponent controls; destroy them. You can only use this effect of \"Stellarknight Zefraxciton\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"tellarknight\" and \"Zefra\" monsters. This effect cannot be negated.",
+      "monster_desc": "If this card is Normal, Flip, or Pendulum Summoned: You can target 1 other \"tellarknight\" or \"Zefra\" card in your Monster Zone or Pendulum Zone, and 1 Set card your opponent controls; destroy them. You can only use this effect of \"Stellarknight Zefraxciton\" once per turn.",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Stellarknight",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stellarknight-zefraxciton-1945",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22617205,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22617205.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22617205.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22617205.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55668,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11696,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

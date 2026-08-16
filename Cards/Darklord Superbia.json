@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 11260714,
+      "name": "Darklord Superbia",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned from the Graveyard: You can target 1 Fairy-Type monster in your Graveyard, except \"Darklord Superbia\"; Special Summon that target.",
+      "race": "Fairy",
+      "atk": 2900,
+      "def": 2400,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-superbia-973",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years",
+          "set_code": "LC02-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.3"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
+          "set_code": "YCSW-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3990"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
+          "set_code": "YCSW-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11260714,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11260714.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11260714.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11260714.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.95",
+          "amazon_price": "2.17",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 318138,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-16",
+          "ocg_date": "2009-03-21",
+          "konami_id": 8288,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 99011763,
+      "name": "Beat Cop from the Underworld",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters\r\nIf this card is Link Summoned using 2 DARK monsters with different names as material, it gains this effect.\r\n● You can Tribute 1 monster, then target 1 face-up card on the field; place 1 Patrol Counter on it. You can only use this effect of \"Beat Cop from the Underworld\" once per turn. (If a card with a Patrol Counter would be destroyed by battle or card effect, remove 1 Patrol Counter from it instead.)",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beat-cop-from-the-underworld-9561",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.43"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN048",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99011763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99011763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99011763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99011763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.89",
+          "amazon_price": "1.37",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Police Patrol of the Underworld",
+          "views": 385866,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-06-21",
+          "konami_id": 14007,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

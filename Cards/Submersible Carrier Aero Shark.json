@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 5014629,
+      "name": "Submersible Carrier Aero Shark",
+      "typeline": [
+        "Fish",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; inflict 100 damage to your opponent for each of your banished monsters.",
+      "race": "Fish",
+      "atk": 1900,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/submersible-carrier-aero-shark-446",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN084",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN024",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5014629,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5014629.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5014629.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5014629.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.69",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103957,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9657,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 80651316,
+      "name": "Evolsaur Cerato",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of an \"Evoltile\" monster: It gains 200 ATK. If this card was Special Summoned by the effect of an \"Evoltile\" monster, each time this card destroys an opponent's monster by battle: You can add 1 \"Evoltile\" monster from your Deck to your hand.",
+      "race": "Dinosaur",
+      "atk": 1900,
+      "def": 1400,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Evolsaur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evolsaur-cerato-6765",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN020",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80651316,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80651316.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80651316.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80651316.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.65",
+          "tcgplayer_price": "0.91",
+          "ebay_price": "3.99",
+          "amazon_price": "4.10",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35571,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9738,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

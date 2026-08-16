@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 8561192,
+      "name": "Leo, the Keeper of the Sacred Tree",
+      "typeline": [
+        "Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nYour opponent cannot target this card with card effects, except during your Main Phase 2.",
+      "race": "Beast",
+      "atk": 3100,
+      "def": 1900,
+      "level": 10,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leo-the-keeper-of-the-sacred-tree-725",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB33",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8561192,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8561192.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8561192.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8561192.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 206222,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10944,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

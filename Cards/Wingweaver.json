@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 31447217,
+      "name": "Wingweaver",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A six-winged fairy who prays for peace and hope.",
+      "race": "Fairy",
+      "atk": 2750,
+      "def": 2400,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wingweaver-2666",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.24"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.66"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31447217,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31447217.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31447217.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31447217.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 207465,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5147,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

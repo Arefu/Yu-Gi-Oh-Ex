@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 86049351,
+      "name": "Last Counter",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When an attack is declared involving a \"Battlin' Boxer\" monster you control and an opponent's monster: Negate the attack, and if you do, send that monster you control to the Graveyard, then 1 \"Battlin' Boxer\" monster you control (in Attack Position, if you declared the attack) gains ATK equal to the original ATK of that opponent's monster, also proceed to damage calculation using those monsters. Then, you take damage equal to the amount of ATK gained from this effect.",
+      "race": "Counter",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/last-counter-7208",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86049351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86049351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86049351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86049351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "5.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30034,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11100,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

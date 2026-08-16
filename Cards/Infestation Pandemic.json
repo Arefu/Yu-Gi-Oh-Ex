@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 27541267,
+      "name": "Infestation Pandemic",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "All face-up \"lswarm\" monsters you currently control are unaffected by other Spell/Trap effects this turn.",
+      "race": "Quick-Play",
+      "archetype": "Infestation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infestation-pandemic-2348",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN096",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN068",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27541267,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27541267.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27541267.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27541267.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "3.82",
+          "ebay_price": "1.99",
+          "amazon_price": "3.10",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56409,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 10010,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

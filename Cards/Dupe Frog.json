@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 46239604,
+      "name": "Dupe Frog",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Des Frog\" while it is on the field. Monsters your opponent controls cannot target monsters for attacks, except this one. When this card is sent from the field to the Graveyard: You can add 1 \"Frog\" monster from your Deck or Graveyard to your hand, except \"Dupe Frog\".",
+      "race": "Aqua",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dupe-frog-3942",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 3",
+          "set_code": "OP03-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Freezing Chains",
+          "set_code": "SDFC-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46239604,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46239604.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46239604.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46239604.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.99",
+          "amazon_price": "2.97",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 437804,
+          "viewsweek": 42,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 7788,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

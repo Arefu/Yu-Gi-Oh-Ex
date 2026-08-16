@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 34614289,
+      "name": "U.A. Blockbacker",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by returning 1 \"U.A.\" monster you control to the hand, except \"U.A. Blockbacker\". You can only Special Summon \"U.A. Blockbacker\" once per turn this way. Once per turn, when your opponent Special Summons a monster(s): You can change their battle positions, and if you do, negate their effects.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 2700,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "U.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/u-a-blockbacker-2939",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34614289,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34614289.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34614289.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34614289.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.79",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46270,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11638,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

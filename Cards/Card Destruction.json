@@ -1,0 +1,173 @@
+{
+  "data": [
+    {
+      "id": 72892473,
+      "name": "Card Destruction",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Both players discard as many cards as possible from their hands, then each player draws the same number of cards they discarded.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/card-destruction-6117",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN104",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN085",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.29"
+        },
+        {
+          "set_name": "Dragunity Legion Structure Deck",
+          "set_code": "SDDL-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.91"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN060",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9",
+          "set_code": "OP09-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "48.87"
+        },
+        {
+          "set_name": "Starter Deck: Duelist Toolbox",
+          "set_code": "5DS3-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.28"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.87"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.1"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Zombie World Structure Deck",
+          "set_code": "SDZW-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Limited",
+        "ban_goat": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 72892473,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72892473.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72892473.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72892473.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "4.99",
+          "amazon_price": "2.38",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1178449,
+          "viewsweek": 21,
+          "upvotes": 26,
+          "downvotes": 8,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "2000-11-23",
+          "konami_id": 4821,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 35272499,
+      "name": "Predaplant Ophrys Scorpio",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 monster from your hand to the GY; Special Summon 1 \"Predaplant\" monster from your Deck, except \"Predaplant Ophrys Scorpio\". You can only use this effect of \"Predaplant Ophrys Scorpio\" once per turn.",
+      "race": "Plant",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-ophrys-scorpio-8325",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN041",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.92"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35272499,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35272499.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35272499.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35272499.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.99",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 753783,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12923,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

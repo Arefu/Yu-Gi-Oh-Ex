@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 39475024,
+      "name": "Gashadokuro, the Skeletal Mayakashi",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters / You can only control 1 \"Gashadokuro, the Skeletal Mayakashi\". You can only use each of these effects of \"Gashadokuro, the Skeletal Mayakashi\" once per turn.\r\n● If a Link Monster in your possession is destroyed by battle or an opponent's card effect while this card is in the GY: You can banish 1 other Zombie monster from your GY, and if you do, Special Summon this card.\r\n● If this card is Special Summoned from the GY: You can activate this effect; this turn, this face-up card is unaffected by other cards' effects.",
+      "race": "Zombie",
+      "atk": 3300,
+      "def": 2600,
+      "level": 11,
+      "attribute": "DARK",
+      "archetype": "Mayakashi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gashadokuro-the-skeletal-mayakashi-9733",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN036",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39475024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39475024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39475024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39475024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.50",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Skeleton Mayakashi - Gashadokuro",
+          "views": 187890,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14042,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

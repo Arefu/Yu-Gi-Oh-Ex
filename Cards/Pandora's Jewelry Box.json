@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 15936370,
+      "name": "Pandora's Jewelry Box",
+      "typeline": [
+        "Wyrm",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhile you have no cards in your Extra Deck: You can target 1 card in your opponent's Pendulum Zone; destroy it, and if you do, place this card in your opponent's Pendulum Zone.\n\n[ Monster Effect ] \nWhile you have no cards in your Extra Deck, draw 2 cards instead of 1 for your normal draw during your Draw Phase.",
+      "race": "Wyrm",
+      "pend_desc": "While you have no cards in your Extra Deck: You can target 1 card in your opponent's Pendulum Zone; destroy it, and if you do, place this card in your opponent's Pendulum Zone.",
+      "monster_desc": "While you have no cards in your Extra Deck, draw 2 cards instead of 1 for your normal draw during your Draw Phase.",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pandora-s-jewelry-box-1369",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN034",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15936370,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15936370.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15936370.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15936370.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21218,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12624,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 58139128,
+      "name": "Gravekeeper's Shaman",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains 200 DEF for each \"Gravekeeper's\" monster in your GY. Negate all monster effects that activate in the GY, except \"Gravekeeper's\" monsters. While \"Necrovalley\" is on the field, your opponent cannot activate Field Spell Cards, also Field Spell Cards cannot be destroyed by your opponent's card effects.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1500,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-shaman-4947",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN214",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58139128,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58139128.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58139128.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58139128.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.09",
+          "tcgplayer_price": "2.78",
+          "ebay_price": "3.95",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108372,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10919,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

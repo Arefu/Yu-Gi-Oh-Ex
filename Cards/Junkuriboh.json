@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 38491199,
+      "name": "Junkuriboh",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a card or effect that would inflict damage to you (Quick Effect): You can send this card from your hand or field to the GY; negate the activation, and if you do, destroy that card.",
+      "race": "Machine",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junkuriboh-3260",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN003",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.75"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2019)",
+          "set_code": "AC19-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38491199,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38491199.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38491199.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38491199.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.88",
+          "ebay_price": "2.09",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112156,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-03-17",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12256,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

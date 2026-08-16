@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 35448319,
+      "name": "Snyffus",
+      "typeline": [
+        "Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can Tribute 1 Plant-Type monster to select and destroy 1 face-up card your opponent controls. When a Plant-Type monster(s) on the field is destroyed while this card is in the Graveyard, you can Special Summon this card from the Graveyard. If you do, remove this card from play when it is removed from the field.",
+      "race": "Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/snyffus-3003",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35448319,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35448319.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35448319.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35448319.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.76",
+          "tcgplayer_price": "2.46",
+          "ebay_price": "2.99",
+          "amazon_price": "9.40",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15392,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9037,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

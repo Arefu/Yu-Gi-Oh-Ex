@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 2370081,
+      "name": "Steel Shell",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "A WATER monster equipped with this card increases its ATK by 400 points and decreases its DEF by 200 points.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steel-shell-213",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "71.4"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "151.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2370081,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2370081.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2370081.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2370081.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.57",
+          "tcgplayer_price": "34.59",
+          "ebay_price": "3.50",
+          "amazon_price": "58.91",
+          "coolstuffinc_price": "59.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38960,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4315,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

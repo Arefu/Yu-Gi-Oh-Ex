@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 61181383,
+      "name": "Battery Charger",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 500 Life Points. Special Summon 1 \"Batteryman\" monster from your Graveyard.",
+      "race": "Normal",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battery-charger-5189",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN221",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61181383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61181383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61181383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61181383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.49",
+          "amazon_price": "1.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103416,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6348,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

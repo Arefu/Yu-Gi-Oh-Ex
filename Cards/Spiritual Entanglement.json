@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 28234578,
+      "name": "Spiritual Entanglement",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up monster your opponent controls; banish it until the End Phase. You can only activate 1 \"Spiritual Entanglement\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spiritual-entanglement-10466",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN188",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN065",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28234578,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28234578.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28234578.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28234578.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Spiritual Energy Entanglement",
+          "views": 14314,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010065,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14692,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

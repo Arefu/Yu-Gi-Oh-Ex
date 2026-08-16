@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 43959432,
+      "name": "Metamorphortress",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 Level 4 or higher monster you control; Special Summon this card as an Effect Monster (Rock-Type/EARTH/Level 4/ATK 1000/DEF 1000), then equip that face-up monster to this card. (This card is also still a Trap Card.) If Summoned this way, this card gains ATK and DEF equal to the ATK of the monster equipped to it by this effect, also if it attacks, change it to Defense Position at the end of the Damage Step.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metamorphortress-3754",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN027",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS27",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG27",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43959432,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43959432.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43959432.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43959432.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63583,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12510,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

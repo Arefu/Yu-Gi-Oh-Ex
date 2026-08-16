@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "id": 56094445,
+      "name": "Ancient Gear Soldier",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step.",
+      "race": "Machine",
+      "atk": 1300,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-soldier-4778",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN188",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56094445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56094445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56094445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56094445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 157555,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6317,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

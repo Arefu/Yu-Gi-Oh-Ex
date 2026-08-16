@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 45778242,
+      "name": "Cliant",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this Normal Summoned/Set card is face-up on the field, all Cyberse monsters you control gain 500 ATK/DEF during your turn only. If this card on the field would be destroyed by battle or card effect, you can destroy 1 Cyberse monster in your hand or face-up field instead.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cliant-8781",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45778242,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45778242.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45778242.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45778242.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Kleinant",
+          "views": 24970,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13194,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

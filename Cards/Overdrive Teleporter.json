@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 1834753,
+      "name": "Overdrive Teleporter",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. You can pay 2000 Life Points to Special Summon 2 Level 3 Psychic-Type monsters from your Deck. This effect can only be used once while this card is face-up on the field.",
+      "race": "Psychic",
+      "atk": 2100,
+      "def": 1200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/overdrive-teleporter-165",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1834753,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1834753.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1834753.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1834753.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "21.92",
+          "tcgplayer_price": "21.07",
+          "ebay_price": "94.99",
+          "amazon_price": "24.99",
+          "coolstuffinc_price": "17.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55936,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8080,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

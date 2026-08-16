@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 41431329,
+      "name": "Vylon Cube",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard for the Synchro Summon of a LIGHT monster: You can add 1 Equip Spell Card from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 800,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-cube-3540",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN030",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41431329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41431329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41431329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41431329.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.99",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70966,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8907,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

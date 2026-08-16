@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 38562933,
+      "name": "Blackwing - Jin the Rain Shadow",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card battles a face-up monster with DEF equal to or less than this card's ATK, destroy that monster at the start of the Damage Step (without damage calculation).",
+      "race": "Winged Beast",
+      "atk": 600,
+      "def": 500,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-jin-the-rain-shadow-3270",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38562933,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38562933.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38562933.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38562933.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.00",
+          "amazon_price": "2.03",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30780,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2010-10-21",
+          "konami_id": 9437,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

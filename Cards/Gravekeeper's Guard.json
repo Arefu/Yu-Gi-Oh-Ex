@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 37101832,
+      "name": "Gravekeeper's Guard",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Target 1 monster your opponent controls; return that target to the hand.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1900,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-guard-3137",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN184",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37101832,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37101832.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37101832.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37101832.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "5.45",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 479284,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5511,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

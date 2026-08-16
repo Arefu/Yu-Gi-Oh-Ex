@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 28297833,
+      "name": "Necroface",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Shuffle all banished cards into the Deck. This card gains 100 ATK for each card shuffled into the Main Deck by this effect. If this card is banished: Each player banishes 5 cards from the top of their Deck (or their entire Deck, if less than 5).",
+      "race": "Zombie",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/necroface-2407",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis: Special Edition",
+          "set_code": "CRMS-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.94"
+        },
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN090",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28297833,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28297833.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28297833.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28297833.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.25",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 641325,
+          "viewsweek": 21,
+          "upvotes": 20,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2006-08-24",
+          "konami_id": 6075,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

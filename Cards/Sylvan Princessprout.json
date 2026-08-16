@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 20579538,
+      "name": "Sylvan Princessprout",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only activate each effect of \"Sylvan Princessprout\" once per turn.\r\n● You can Tribute this card; excavate the top card of your Deck, send it to the Graveyard, then you can place 1 \"sprout\" monster in your Graveyard on top of your Deck.\r\n● If this card is excavated from the Deck and sent to the Graveyard by a card effect: You can declare a Level from 1 to 8; Special Summon this card from the Graveyard, and if you do, it becomes that Level.",
+      "race": "Plant",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sylvan-princessprout-1768",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20579538,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20579538.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20579538.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20579538.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.04",
+          "tcgplayer_price": "2.10",
+          "ebay_price": "2.48",
+          "amazon_price": "6.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50958,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11198,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

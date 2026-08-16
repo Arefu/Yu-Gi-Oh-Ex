@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 42429678,
+      "name": "Bururu @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 \"@Ignister\" monster from your Deck to the GY. If this card is sent to the GY as material for the Synchro Summon of a Cyberse monster: You can target 1 monster in your GY that was used for that Synchro Summon, except \"Bururu @Ignister\"; Special Summon that monster. You can only use each effect of \"Bururu @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 600,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bururu-ignister-10589",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42429678,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42429678.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42429678.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42429678.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "9.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 141454,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011002,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14811,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

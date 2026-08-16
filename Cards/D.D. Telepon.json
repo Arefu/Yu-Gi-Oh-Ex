@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 51701885,
+      "name": "D.D. Telepon",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this face-up card you control is banished: You can banish 1 Psychic-Type monster with 1500 or less ATK from your Deck. Then, during your next Standby Phase, if this card is still banished: Special Summon that monster banished by this effect.",
+      "race": "Psychic",
+      "atk": 500,
+      "def": 1800,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-telepon-4399",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51701885,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51701885.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51701885.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51701885.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29704,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9745,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

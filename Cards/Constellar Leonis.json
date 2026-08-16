@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 17129783,
+      "name": "Constellar Leonis",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, you can Normal Summon 1 \"Constellar\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 1800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-leonis-1478",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN067",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17129783,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17129783.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17129783.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17129783.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34035,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9985,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

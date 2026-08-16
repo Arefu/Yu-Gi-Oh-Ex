@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 58092907,
+      "name": "Performapal Celestial Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen exactly 1 face-up Fusion, Synchro, or Xyz Monster you control that was Special Summoned from the Extra Deck is destroyed by battle, or an opponent's card effect: You can Special Summon that destroyed monster, then destroy this card. You can only use this effect of \"Performapal Celestial Magician\" once per turn.\n\n[ Monster Effect ] \nDuring your Main Phase, if this card was Normal or Special Summoned this turn: You can apply the following effect(s) for the rest of this turn, based on the other monsters you currently control.\r\n● Fusion: This card can attack directly.\r\n● Synchro: Your opponent cannot activate monster effects.\r\n● Xyz: This card's ATK becomes double its original ATK.\r\n● Pendulum: During the End Phase, add 1 Pendulum Monster from your Deck to your hand.\r\nYou can only use this effect of \"Performapal Celestial Magician\" once per turn.",
+      "race": "Spellcaster",
+      "pend_desc": "When exactly 1 face-up Fusion, Synchro, or Xyz Monster you control that was Special Summoned from the Extra Deck is destroyed by battle, or an opponent's card effect: You can Special Summon that destroyed monster, then destroy this card. You can only use this effect of \"Performapal Celestial Magician\" once per turn.",
+      "monster_desc": "During your Main Phase, if this card was Normal or Special Summoned this turn: You can apply the following effect(s) for the rest of this turn, based on the other monsters you currently control.\r\n● Fusion: This card can attack directly.\r\n● Synchro: Your opponent cannot activate monster effects.\r\n● Xyz: This card's ATK becomes double its original ATK.\r\n● Pendulum: During the End Phase, add 1 Pendulum Monster from your Deck to your hand.\r\nYou can only use this effect of \"Performapal Celestial Magician\" once per turn.",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Performapal",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-celestial-magician-10681",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.24"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN130",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58092907,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58092907.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58092907.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58092907.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.19",
+          "amazon_price": "0.46",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Empyrean Magician",
+          "views": 292367,
+          "viewsweek": 21,
+          "upvotes": 25,
+          "downvotes": 6,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413045,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14925,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

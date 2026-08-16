@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 87588741,
+      "name": "Qliphort Cephalopod",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All monsters your opponent controls lose 300 ATK.\n\n[ Monster Effect ] \nYou can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. When this card is Tribute Summoned by Tributing a \"Qli\" monster(s): You can activate this effect; if your opponent has more monsters in their Graveyard than you do, you gain LP equal to the difference x 300, and if you do, inflict the same amount of damage to your opponent.",
+      "race": "Machine",
+      "pend_desc": "You cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All monsters your opponent controls lose 300 ATK.",
+      "monster_desc": "You can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. When this card is Tribute Summoned by Tributing a \"Qli\" monster(s): You can activate this effect; if your opponent has more monsters in their Graveyard than you do, you gain LP equal to the difference x 300, and if you do, inflict the same amount of damage to your opponent.",
+      "atk": 2800,
+      "def": 1000,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "scale": 9,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-cephalopod-7330",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS04",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87588741,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87588741.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87588741.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87588741.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.82",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "3.50",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31557,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11541,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

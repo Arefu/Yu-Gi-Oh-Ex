@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 64635042,
+      "name": "Archfiend's Call",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nThis card's name becomes \"Summoned Skull\" on the field, but is still treated as an \"Archfiend\" card. Your opponent cannot target any \"Summoned Skull\" you control with card effects. If this Synchro Summoned card you control is sent to your GY by an opponent's card: You can Special Summon 1 \"Summoned Skull\" from your hand, Deck, or GY.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-s-call-9760",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN032",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64635042,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64635042.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64635042.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64635042.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "1.45",
+          "ebay_price": "4.00",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Beckoned Skull Archfiend",
+          "views": 89913,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-09-08",
+          "konami_id": 14063,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

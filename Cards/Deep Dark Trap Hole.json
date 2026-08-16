@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 28654932,
+      "name": "Deep Dark Trap Hole",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a Level 5 or higher Effect Monster(s) is Special Summoned: Banish that Level 5 or higher Effect Monster(s).",
+      "race": "Normal",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deep-dark-trap-hole-2442",
+      "card_sets": [
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN037",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28654932,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28654932.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28654932.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28654932.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "1.64",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117348,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9796,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

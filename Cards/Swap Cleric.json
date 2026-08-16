@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 30968774,
+      "name": "Swap Cleric",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY as Link Material: You can have that Link Monster lose 500 ATK, then draw 1 card. You can only use this effect of \"Swap Cleric\" once per turn.",
+      "race": "Cyberse",
+      "atk": 500,
+      "def": 1000,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swap-cleric-9584",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30968774,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30968774.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30968774.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30968774.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23244,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13870,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

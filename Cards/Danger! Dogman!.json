@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 26302107,
+      "name": "Danger! Dogman!",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand; your opponent randomly chooses 1 card from your entire hand, then you discard the chosen card. Then, if the discarded card was not \"Danger! Dogman!\", Special Summon 1 \"Danger! Dogman!\" from your hand, and if you do, draw 1 card. If this card is discarded: You can have all face-up monsters your opponent currently controls lose 1000 ATK until the end of this turn. You can only use this effect of \"Danger! Dogman!\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 2400,
+      "def": 1000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-dogman-9814",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN218",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26302107,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26302107.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26302107.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26302107.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.39",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 235708,
+          "viewsweek": 22,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14068,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

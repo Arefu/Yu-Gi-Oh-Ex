@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 81510157,
+      "name": "Soul Taker",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up monster your opponent controls; destroy that target, then your opponent gains 1000 LP.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-taker-6844",
+      "card_sets": [
+        {
+          "set_name": "Demo Deck 2015",
+          "set_code": "DEM2-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Duelist League 2010 participation cards",
+          "set_code": "DL09-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.98"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN092",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB25",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Zombie World Structure Deck",
+          "set_code": "SDZW-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81510157,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81510157.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81510157.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81510157.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "5.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 207341,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2003-04-08",
+          "konami_id": 5743,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

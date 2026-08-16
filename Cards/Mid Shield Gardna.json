@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 75487237,
+      "name": "Mid Shield Gardna",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can flip this card into face-down Defense Position. Negate the activation of any Spell Card that targets this 1 face-down monster. At that time, flip this card into face-up Defense Position.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mid-shield-gardna-6353",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN204",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN024",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75487237,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75487237.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75487237.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75487237.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "11.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60748,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6333,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

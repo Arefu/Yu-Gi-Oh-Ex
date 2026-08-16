@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 17412721,
+      "name": "Elder Entity Norden",
+      "typeline": [
+        "Fairy",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Synchro or Xyz Monster + 1 Synchro or Xyz Monster\nWhen this card is Special Summoned: You can target 1 Level 4 or lower monster in your Graveyard; Special Summon it, but its effects are negated, also banish it when this card leaves the field.",
+      "race": "Fairy",
+      "atk": 2000,
+      "def": 2200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elder-entity-norden-1508",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tins",
+          "set_code": "CT12-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.19"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN226",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN226",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 17412721,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17412721.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17412721.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17412721.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "2.43",
+          "amazon_price": "1.85",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 142052,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-09-17",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11207,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

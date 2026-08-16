@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 7304544,
+      "name": "Naturia Pineapple",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "All face-up monsters you control are treated as Plant-Type. During your Standby Phase, if you do not control a face-up \"Naturia Pineapple\", and have no monsters in your Graveyard except Plant or Beast-Type: You can Special Summon this card from your Graveyard. You must not control any Spell or Trap Cards to activate and resolve this effect.",
+      "race": "Plant",
+      "atk": 100,
+      "def": 100,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-pineapple-627",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN082",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN118",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN118",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "2.2"
+        },
+        {
+          "set_name": "Hidden Arsenal: Special Edition",
+          "set_code": "HASE-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7304544,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7304544.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7304544.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7304544.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "5.99",
+          "amazon_price": "6.90",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27556,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9204,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

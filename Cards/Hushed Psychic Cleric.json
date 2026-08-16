@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 25343017,
+      "name": "Hushed Psychic Cleric",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Flip Summoned: Change it to Defense Position. Once per turn: You can send 1 card from your hand to the Graveyard, then target 1 Psychic-Type monster in your Graveyard; banish that target. If this card is sent from the field to the Graveyard: Target 1 monster banished by this card's effect; Special Summon that target.",
+      "race": "Psychic",
+      "atk": 0,
+      "def": 2100,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hushed-psychic-cleric-2178",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25343017,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25343017.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25343017.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25343017.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56546,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9498,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

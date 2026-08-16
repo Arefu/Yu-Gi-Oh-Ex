@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 17469113,
+      "name": "Avida, Rebuilder of Worlds",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by there being at least 8 or more Link Monsters with different names on the field and/or in the GYs. You cannot Special Summon other monsters the turn you Special Summon this card. This card's Special Summon cannot be negated. If this card is Special Summoned: Shuffle all other monsters that are banished, on the field, and in the GYs into the Decks. Neither player can activate cards or effects in response to this effect's activation.",
+      "race": "Cyberse",
+      "atk": 3500,
+      "def": 3500,
+      "level": 11,
+      "attribute": "LIGHT",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/avida-rebuilder-of-worlds-10273",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17469113,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17469113.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17469113.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17469113.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "A-vida, the Dual World Crafter",
+          "views": 49695,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009027,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14484,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

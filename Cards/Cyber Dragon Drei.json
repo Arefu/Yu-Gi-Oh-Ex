@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 59281922,
+      "name": "Cyber Dragon Drei",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Cyber Dragon\" while on the field or in the GY. When this card is Normal Summoned: You can make all \"Cyber Dragon\" you currently control become Level 5. You cannot Special Summon any monsters during the turn you activate this effect, except Machine monsters. If this card is banished: You can target 1 \"Cyber Dragon\" you control; it cannot be destroyed by battle or card effects this turn.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-dragon-drei-5038",
+      "card_sets": [
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.35"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59281922,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59281922.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59281922.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59281922.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.40",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 429656,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-02-06",
+          "ocg_date": "2013-12-07",
+          "konami_id": 10867,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

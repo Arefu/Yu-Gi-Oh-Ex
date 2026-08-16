@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 20788863,
+      "name": "Salamangreat Gift",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can discard 1 \"Salamangreat\" monster; send 1 \"Salamangreat\" monster from your Deck to the GY, then draw 1 card. If you control a \"Salamangreat\" Link Monster that was Link Summoned using a monster with its same name as material: You can discard 1 \"Salamangreat\" monster; draw 2 cards. You can only use 1 \"Salamangreat Gift\" effect per turn, and only once that turn.",
+      "race": "Continuous",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-gift-9640",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN204",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20788863,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20788863.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20788863.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20788863.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54783,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13954,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 12644061,
+      "name": "Advanced Dark",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Crystal Beast\" monsters on the field and in the GY become DARK. If an \"Ultimate Crystal\" monster attacks, negate the effects of the attack target during that Battle Phase. During damage calculation, if a \"Crystal Beast\" monster you control battles and you would take damage: You can send 1 \"Crystal Beast\" monster from your Deck to the GY; you take no battle damage from that battle.",
+      "race": "Field",
+      "archetype": "Crystal Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/advanced-dark-1093",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN094",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12644061,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12644061.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12644061.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12644061.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106818,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-05-12",
+          "konami_id": 10214,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 7563579,
+      "name": "Performage Plushfire",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a \"Performage\" monster(s) you control is destroyed by battle or card effect: You can Special Summon this card from your Pendulum Zone, then take 500 damage. You can only use this effect of \"Performage Plushfire\" once per turn.\n\n[ Monster Effect ] \nIf this card on the field is destroyed by battle or card effect: You can Special Summon 1 \"Performage\" monster from your hand or Deck, except \"Performage Plushfire\".",
+      "race": "Spellcaster",
+      "pend_desc": "If a \"Performage\" monster(s) you control is destroyed by battle or card effect: You can Special Summon this card from your Pendulum Zone, then take 500 damage. You can only use this effect of \"Performage Plushfire\" once per turn.",
+      "monster_desc": "If this card on the field is destroyed by battle or card effect: You can Special Summon 1 \"Performage\" monster from your hand or Deck, except \"Performage Plushfire\".",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Performage",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performage-plushfire-646",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 27",
+          "set_code": "OP27-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7563579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7563579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7563579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7563579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76854,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11960,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

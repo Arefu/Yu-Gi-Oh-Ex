@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 27581098,
+      "name": "Non-Fusion Area",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Neither player can Fusion Summon.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/non-fusion-area-2351",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.79"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN260",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.91"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN095",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27581098,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27581098.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27581098.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27581098.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.50",
+          "amazon_price": "2.78",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139878,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6522,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

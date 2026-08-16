@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 87288189,
+      "name": "Caius the Mega Monarch",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card by Tributing 1 Tribute Summoned monster. If this card is Tribute Summoned: Target 1 card on the field; banish it, and if you do, inflict 1000 damage to your opponent, then, if it is a DARK Monster Card, banish all cards with that name from the hand, Main Deck, Extra Deck, and GY of the player who controlled it. If this card was Tribute Summoned by Tributing a DARK monster, add this additional effect.\n● You can target 2 cards, instead.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/caius-the-mega-monarch-7302",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN215",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87288189,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87288189.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87288189.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87288189.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "4.55",
+          "amazon_price": "8.94",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 249990,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11555,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

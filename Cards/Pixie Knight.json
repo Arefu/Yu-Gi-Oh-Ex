@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 35429292,
+      "name": "Pixie Knight",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent to the Graveyard as a result of battle, your opponent selects 1 Spell Card from your Graveyard, and places that card on the top of your Deck.",
+      "race": "Spellcaster",
+      "atk": 1300,
+      "def": 200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pixie-knight-3002",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN125",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35429292,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35429292.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35429292.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35429292.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105979,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5654,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

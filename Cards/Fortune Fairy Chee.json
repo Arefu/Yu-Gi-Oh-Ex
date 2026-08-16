@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 68078978,
+      "name": "Fortune Fairy Chee",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you draw this card: You can reveal it; Special Summon it from your hand. If this card is Special Summoned from the hand: You can make each player draw 1 card. You can only use each effect of \"Fortune Fairy Chee\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Fortune Fairy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-fairy-chee-10283",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68078978,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68078978.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68078978.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68078978.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47295,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248022,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14555,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

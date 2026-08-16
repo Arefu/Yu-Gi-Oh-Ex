@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 85787173,
+      "name": "Generation Next",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If your LP are lower than your opponent's: Add to your hand, or Special Summon, 1 \"Elemental HERO\" monster, \"Kuriboh\" monster, or \"Neo-Spacian\" monster from your Deck or GY, with ATK less than or equal to the difference in LPs, also for the rest of this turn, you cannot activate cards, or the effects of cards, with the same name as that card. You can only activate 1 \"Generation Next\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/generation-next-10650",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN113",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85787173,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85787173.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85787173.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85787173.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.39",
+          "amazon_price": "1.80",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63355,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413014,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14912,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

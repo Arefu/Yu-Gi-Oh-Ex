@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 43405287,
+      "name": "D - Chain",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target a \"Destiny HERO\" monster you control; equip this card to that target. It gains 500 ATK. When it destroys a monster your opponent controls by battle and sends it to the Graveyard: Inflict 500 damage to your opponent.",
+      "race": "Normal",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-chain-3700",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN152",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.91"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN050",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENB18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43405287,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43405287.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43405287.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43405287.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.09",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50614,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6761,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

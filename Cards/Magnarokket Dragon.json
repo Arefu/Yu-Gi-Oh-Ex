@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 26655293,
+      "name": "Magnarokket Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Link Monster's effect is activated that targets this face-up card on the field (Quick Effect): You can destroy this card, then send 1 monster on the field to the GY. During the End Phase, if this card is in the GY because it was destroyed on the field by battle or card effect and sent there this turn: You can Special Summon 1 \"Rokket\" monster from your Deck, except \"Magnarokket Dragon\". You can only use each effect of \"Magnarokket Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magnarokket-dragon-8832",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN112",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26655293,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26655293.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26655293.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26655293.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.38",
+          "amazon_price": "0.76",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 382951,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13227,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

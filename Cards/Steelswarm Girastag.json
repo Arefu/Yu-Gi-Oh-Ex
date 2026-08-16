@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 58494728,
+      "name": "Steelswarm Girastag",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card in face-up Attack Position by Tributing 1 \"Steelswarm\" monster. When this card is Tribute Summoned by Tributing a \"Steelswarm\" monster(s): You can target 1 card your opponent controls; send that target to the Graveyard and gain 1000 Life Points.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-girastag-4974",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN082",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN049",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58494728,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58494728.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58494728.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58494728.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.15",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27384,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9176,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

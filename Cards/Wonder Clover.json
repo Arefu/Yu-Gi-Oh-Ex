@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 38568567,
+      "name": "Wonder Clover",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up monster you control and send 1 Level 4 Plant-Type monster from your hand to the Graveyard. During this turn, the selected monster can attack twice, but other monsters you control cannot declare an attack.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wonder-clover-3271",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38568567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38568567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38568567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38568567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27965,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8201,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "id": 39303359,
+      "name": "Ancient Gear Knight",
+      "typeline": [
+        "Machine",
+        "Gemini",
+        "Effect"
+      ],
+      "type": "Gemini Monster",
+      "humanReadableCardType": "Gemini Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field or in the Graveyard. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with this effect.\n● If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-knight-3335",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN056",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN033",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN033",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN146",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN146",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39303359,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39303359.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39303359.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39303359.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 196550,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7294,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 73820802,
+      "name": "Onikuji",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during your Standby Phase: Your opponent declares 1 card type (Monster, Spell, or Trap). Excavate the top card of your Deck, then if it is that type of card, your opponent draws 1 card. Otherwise, discard 1 random card from their hand. Place the excavated card on the bottom of your Deck.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/onikuji-6199",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73820802,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73820802.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73820802.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73820802.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14467,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2016-02-11",
+          "konami_id": 12397,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

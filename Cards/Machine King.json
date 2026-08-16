@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 46700124,
+      "name": "Machine King",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 100 ATK for each Machine-Type monster on the field.",
+      "race": "Machine",
+      "atk": 2200,
+      "def": 2000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/machine-king-3982",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League Series 4 participation card",
+          "set_code": "DL4-001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.74"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN179",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Trading Card Game Tour 2004 promotional card",
+          "set_code": "EM1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "23.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46700124,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46700124.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46700124.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46700124.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "1.02",
+          "ebay_price": "10.00",
+          "amazon_price": "3.38",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107320,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-19",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4413,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

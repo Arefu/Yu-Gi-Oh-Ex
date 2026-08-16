@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 581014,
+      "name": "Daigusto Emeral",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nOnce per turn: You can detach 1 material from this card, then activate 1 of these effects.\n● Target 3 monsters in your GY; shuffle all 3 into the Deck, then draw 1 card.\n● Target 1 non-Effect Monster in your GY; Special Summon that target.",
+      "race": "Rock",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/daigusto-emeral-55",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAX-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN122",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.28"
+        },
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN036",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN065",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN163",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN163",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 581014,
+          "image_url": "https://images.ygoprodeck.com/images/cards/581014.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/581014.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/581014.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 680041,
+          "viewsweek": 63,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9822,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

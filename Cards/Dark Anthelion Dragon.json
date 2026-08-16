@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 95685352,
+      "name": "Dark Anthelion Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "XYZ Pendulum Effect Monster",
+      "humanReadableCardType": "Xyz Pendulum Effect Monster",
+      "frameType": "xyz_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up monster your opponent controls; halve its original ATK until the end of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \n2 Level 7 monsters\r\nIf you can Pendulum Summon Level 7, you can Pendulum Summon this face-up card in your Extra Deck. Once per turn (Quick Effect): You can detach 1 material from this card, then target 1 face-up monster your opponent controls; until the end of this turn, its ATK becomes half its current ATK, and if it does, this card gains that lost ATK. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn: You can target 1 face-up monster your opponent controls; halve its original ATK until the end of this turn (even if this card leaves the field).",
+      "monster_desc": "2 Level 7 monsters\r\nIf you can Pendulum Summon Level 7, you can Pendulum Summon this face-up card in your Extra Deck. Once per turn (Quick Effect): You can detach 1 material from this card, then target 1 face-up monster your opponent controls; until the end of this turn, its ATK becomes half its current ATK, and if it does, this card gains that lost ATK. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "atk": 3000,
+      "def": 2500,
+      "level": 7,
+      "attribute": "DARK",
+      "scale": 10,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-anthelion-dragon-9965",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95685352,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95685352.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95685352.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95685352.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 197632,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14342,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

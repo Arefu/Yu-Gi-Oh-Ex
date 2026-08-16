@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 2521011,
+      "name": "Brotherhood of the Fire Fist - Swallow",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by sending 3 face-up \"Fire Formation\" Spell/Trap Cards you control to the Graveyard. When this card is Normal or Special Summoned: You can Set 1 \"Fire Formation\" Trap Card directly from your Deck. You can only use this effect of \"Brotherhood of the Fire Fist - Swallow\" once per turn. Face-up Beast-Warrior-Type monsters you control cannot be targeted by your opponent's card effects.",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 800,
+      "level": 5,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-swallow-229",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2521011,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2521011.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2521011.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2521011.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.43",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "1.99",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35863,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10386,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 75923050,
+      "name": "Super Robolady",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Robolady\" + \"Roboyarou\"\nYou can Special Summon \"Super Roboyarou\" by returning this card from the field to the Extra Deck. You cannot use this effect during the same turn this monster is Special Summoned. In addition, increase the ATK of this monster by 1000 points during the Damage Step when this monster inflicts Direct Damage to your opponent's Life Points.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 500,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-robolady-6390",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75923050,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75923050.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75923050.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75923050.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "3.50",
+          "amazon_price": "0.74",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121489,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5383,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

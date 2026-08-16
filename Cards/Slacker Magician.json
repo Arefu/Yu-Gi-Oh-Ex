@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58058134,
+      "name": "Slacker Magician",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 1 monsters\nOnce per turn, this card cannot be destroyed by battle. During either player's turn, when a card or effect is activated that targets this face-up card: You can detach 1 Xyz Material from this card; negate the activation, and if you do, destroy that card.",
+      "race": "Spellcaster",
+      "atk": 200,
+      "def": 2100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/slacker-magician-4939",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58058134,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58058134.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58058134.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58058134.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.93",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "3.50",
+          "amazon_price": "4.38",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 189928,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10412,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

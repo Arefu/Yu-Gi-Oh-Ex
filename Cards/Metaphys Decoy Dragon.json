@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 12196873,
+      "name": "Metaphys Decoy Dragon",
+      "typeline": [
+        "Wyrm",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen your monster is targeted for an attack: You can target 1 of your \"Metaphys\" monsters that is banished or in your GY; banish this card, and if you do, Special Summon that monster in Attack Position. You can only use this effect of \"Metaphys Decoy Dragon\" once per turn.\n\n[ Monster Effect ] \nWhen your monster is targeted for an attack: You can target 1 of your \"Metaphys\" monsters that is banished or in your GY; banish this card, and if you do, Special Summon that monster in Attack Position. During the Standby Phase of the next turn after this card was banished: You can Special Summon this banished card. You can only use each effect of \"Metaphys Decoy Dragon\" once per turn.",
+      "race": "Wyrm",
+      "pend_desc": "When your monster is targeted for an attack: You can target 1 of your \"Metaphys\" monsters that is banished or in your GY; banish this card, and if you do, Special Summon that monster in Attack Position. You can only use this effect of \"Metaphys Decoy Dragon\" once per turn.",
+      "monster_desc": "When your monster is targeted for an attack: You can target 1 of your \"Metaphys\" monsters that is banished or in your GY; banish this card, and if you do, Special Summon that monster in Attack Position. During the Standby Phase of the next turn after this card was banished: You can Special Summon this banished card. You can only use each effect of \"Metaphys Decoy Dragon\" once per turn.",
+      "atk": 300,
+      "def": 200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Metaphys",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metaphys-decoy-dragon-9456",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12196873,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12196873.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12196873.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12196873.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "1.90",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83730,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13734,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

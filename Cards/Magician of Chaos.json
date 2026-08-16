@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 47963370,
+      "name": "Magician of Chaos",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Chaos Form\". This card's name becomes \"Dark Magician\" while on the field or in the GY. Once per turn, when a Spell/Trap Card or effect is activated (Quick Effect): You can target 1 card on the field; destroy it. If this Ritual Summoned card is destroyed by battle or card effect: You can Special Summon 1 \"Chaos\" or \"Black Luster Soldier\" Ritual Monster from your hand, except \"Magician of Chaos\", ignoring its Summoning conditions.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-of-chaos-9918",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN266",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.17"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47963370,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47963370.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47963370.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47963370.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "1.87",
+          "amazon_price": "1.55",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 443872,
+          "viewsweek": 0,
+          "upvotes": 40,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14213,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

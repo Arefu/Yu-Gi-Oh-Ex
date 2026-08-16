@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 73398797,
+      "name": "Paladin of White Dragon",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"White Dragon Ritual\". At the start of the Damage Step, if this card attacks a face-down Defense Position monster: Destroy that face-down monster. You can Tribute this card; Special Summon 1 \"Blue-Eyes White Dragon\" from your hand or Deck, but \"Blue-Eyes White Dragons\" cannot attack for the rest of this turn.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paladin-of-white-dragon-6162",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "32.1"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN185",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73398797,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73398797.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73398797.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73398797.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "0.99",
+          "amazon_price": "9.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 175502,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5600,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

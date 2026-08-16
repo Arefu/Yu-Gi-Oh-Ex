@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 40502912,
+      "name": "Aria the Melodious Diva",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this Special Summoned card is on the field, \"Melodious\" monsters you control cannot be targeted by card effects, or be destroyed by battle.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Melodious",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aria-the-melodious-diva-3444",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN018",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40502912,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40502912.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40502912.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40502912.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "1.29",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 168106,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11223,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

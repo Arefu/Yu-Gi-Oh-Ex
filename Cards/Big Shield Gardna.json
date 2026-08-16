@@ -1,0 +1,156 @@
+{
+  "data": [
+    {
+      "id": 65240384,
+      "name": "Big Shield Gardna",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Spell Card is activated that targets this face-down card (and no other cards) (Quick Effect): Change this card to face-up Defense Position, and if you do, negate the activation. If this card is attacked, change it to Attack Position at the end of the Damage Step.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 2600,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/big-shield-gardna-5497",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN032",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN176",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN176",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game One",
+          "set_code": "CP01-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.29"
+        },
+        {
+          "set_name": "Duelist League 2010 participation cards",
+          "set_code": "DL09-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.27"
+        },
+        {
+          "set_name": "Duelist Pack: Yugi",
+          "set_code": "DPYG-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN032",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENY16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65240384,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65240384.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65240384.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65240384.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "17.24",
+          "amazon_price": "17.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 397389,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-12",
+          "ocg_date": "2001-07-05",
+          "konami_id": 4764,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

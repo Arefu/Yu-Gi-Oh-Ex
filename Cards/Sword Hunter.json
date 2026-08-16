@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 51345461,
+      "name": "Sword Hunter",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Battle Phase, if this card destroyed a monster(s) by battle and sent it to the Graveyard this Battle Phase: Equip all those monsters from the Graveyard to this card as an Equip Spell Card(s) with this effect.\n● The equipped monster gains 200 ATK.",
+      "race": "Warrior",
+      "atk": 2450,
+      "def": 1700,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sword-hunter-4366",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN191",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-077",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.74"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E077",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "3.4"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN077",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51345461,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51345461.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51345461.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51345461.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.25",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 230036,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4774,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

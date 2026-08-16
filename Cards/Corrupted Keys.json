@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 67949763,
+      "name": "Corrupted Keys",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up Xyz Monster you control; Special Summon 3 \"Umbral Horror Mirage Tokens\" (Fiend-Type/DARK/Level 1/ATK ?/DEF 0). (When Summoned, each Token's ATK becomes equal to that Xyz Monster's current ATK. They cannot attack your opponent directly or be Tributed, except for a Tribute Summon.) When that face-up Xyz Monster leaves the field, destroy these Tokens.",
+      "race": "Normal",
+      "archetype": "Umbral Horror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/corrupted-keys-5705",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67949763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67949763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67949763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67949763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29555,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10675,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

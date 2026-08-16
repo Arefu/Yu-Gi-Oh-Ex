@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 33837653,
+      "name": "Tenma the Sky Star",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If only your opponent controls a monster, or if you control an EARTH monster, you can Normal Summon this card without Tributing. If this card is Normal or Special Summoned: You can Special Summon 1 Level 5 EARTH Warrior monster from your hand. You can only use this effect of \"Tenma the Sky Star\" once per turn. Once per turn, when your opponent activates a card or effect that targets a Warrior monster you control (Quick Effect): You can make this card lose exactly 500 ATK, and if you do, negate the activation, and if you do that, destroy that card.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1000,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tenma-the-sky-star-9483",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33837653,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33837653.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33837653.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33837653.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66742,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13830,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

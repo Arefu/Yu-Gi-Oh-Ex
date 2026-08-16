@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 29649320,
+      "name": "Mirror Force Launcher",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during your Main Phase: You can discard 1 monster; add 1 \"Mirror Force\" from your Deck or GY to your hand. If this Set card is destroyed by your opponent's card effect and sent to your GY: You can Set this card from your GY and 1 \"Mirror Force\" from your hand, Deck, or GY. They can be activated this turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mirror-force-launcher-9376",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN069",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29649320,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29649320.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29649320.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29649320.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150804,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13785,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

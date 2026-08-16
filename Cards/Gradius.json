@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 10992251,
+      "name": "Gradius",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A high-performance jet fighter with power capsules for variable attack capabilities.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gradius-945",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN199",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-089",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.74"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E089",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.67"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN089",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10992251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10992251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10992251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10992251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.00",
+          "amazon_price": "1.13",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139948,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5140,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

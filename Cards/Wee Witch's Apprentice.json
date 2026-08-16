@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 71384012,
+      "name": "Wee Witch's Apprentice",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 DARK monsters\r\nAll DARK monsters on the field gain 500 ATK/DEF, also all LIGHT monsters on the field lose 400 ATK/DEF. If this card is destroyed by battle or card effect: You can target 1 DARK monster in your GY; add it to your hand. You can only use this effect of \"Wee Witch's Apprentice\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wee-witch-s-apprentice-9435",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN111",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71384012,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71384012.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71384012.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71384012.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "2.06",
+          "amazon_price": "2.08",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Apprentice Witchling",
+          "views": 809779,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13765,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

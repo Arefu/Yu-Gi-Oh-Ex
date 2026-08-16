@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 69121954,
+      "name": "Dinowrestler Terra Parkourio",
+      "typeline": [
+        "Dinosaur",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Dinowrestler\" monsters\r\nIf you activate \"World Dino Wrestling\": You can target 1 \"Dinowrestler\" monster in your GY; add it to your hand. If this card is sent to the GY as Link Material: You can target 1 \"Dinowrestler\" monster in your GY; Special Summon it in Defense Position, but negate its effects, also you cannot Special Summon monsters for the rest of this turn, except \"Dinowrestler\" monsters. You can only use each effect of \"Dinowrestler Terra Parkourio\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-terra-parkourio-10036",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69121954,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69121954.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69121954.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69121954.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68030,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14292,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

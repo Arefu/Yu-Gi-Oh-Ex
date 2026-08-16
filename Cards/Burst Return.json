@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27191436,
+      "name": "Burst Return",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a face-up \"Elemental HERO Burstinatrix\": Return all face-up \"Elemental HERO\" monsters on the field to the hand, except \"Elemental HERO Burstinatrix\".",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/burst-return-2327",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki",
+          "set_code": "DP1-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.52"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27191436,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27191436.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27191436.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27191436.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "3.00",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43301,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-08",
+          "ocg_date": "2005-10-20",
+          "konami_id": 6536,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "data": [
+    {
+      "id": 99861526,
+      "name": "Submarineroid",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack your opponent directly, but when it does so using this effect, the battle damage inflicted to your opponent is the original ATK of this card. At the end of the Damage Step, if this card attacked or was attacked: You can change this card to Defense Position.",
+      "race": "Machine",
+      "atk": 800,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/submarineroid-8288",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN044",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN024",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN008",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Syrus Truesdale",
+          "set_code": "YSDS-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99861526,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99861526.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99861526.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99861526.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "4.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104184,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6738,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

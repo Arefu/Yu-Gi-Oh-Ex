@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 55787576,
+      "name": "World Legacy - \"World Shield\"",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Unaffected by activated effects from any monster Special Summoned from the Extra Deck. Your opponent cannot target your \"World Legacy\" cards in this card's column with card effects, also they cannot be destroyed by your opponent's card effects. During the Standby Phase, if this card is in your GY: You can pay 1000 LP; Special Summon this card, then your opponent can Special Summon 1 monster from their hand or GY. You can only use this effect of \"World Legacy - \"World Shield\"\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 3000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-world-shield-9003",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55787576,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55787576.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55787576.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55787576.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy - World Shield",
+          "views": 75457,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13391,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 19066538,
+      "name": "Roaring Ocean Snake",
+      "typeline": [
+        "Aqua",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Mystic Lamp\" + \"Hyosube\"",
+      "race": "Aqua",
+      "atk": 2100,
+      "def": 1800,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/roaring-ocean-snake-1648",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.86"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19066538,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19066538.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19066538.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19066538.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.85",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 473524,
+          "viewsweek": 63,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4229,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

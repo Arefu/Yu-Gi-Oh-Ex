@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 53027855,
+      "name": "Windrose the Elemental Lord",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having exactly 5 WIND monsters in your GY. If this card is Special Summoned: Destroy all Spells and Traps your opponent controls. You can only use this effect of \"Windrose the Elemental Lord\" once per turn. If this face-up card leaves the field, skip the Battle Phase of your next turn.",
+      "race": "Winged Beast",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Elemental Lord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windrose-the-elemental-lord-4515",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN037",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53027855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53027855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53027855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53027855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.25",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66706,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10518,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

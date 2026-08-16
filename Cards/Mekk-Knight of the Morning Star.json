@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 72006609,
+      "name": "Mekk-Knight of the Morning Star",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters, including a \"Mekk-Knight\" monster\r\nIf this card is Link Summoned: You can discard 1 \"Mekk-Knight\" monster or 1 \"World Legacy\" card; add 1 \"World Legacy\" card from your Deck to your hand. You can only use this effect of \"Mekk-Knight of the Morning Star\" once per turn. If your \"Mekk-Knight\" monster battles a monster in a different column than it, your monster cannot be destroyed by that battle, also you take no battle damage from that battle.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Mekk-Knight",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mekk-knight-of-the-morning-star-9451",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN045",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN137",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72006609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72006609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72006609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72006609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "3.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mekk-Knight Morning Star",
+          "views": 171367,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13762,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

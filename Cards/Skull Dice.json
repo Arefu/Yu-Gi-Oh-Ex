@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 126218,
+      "name": "Skull Dice",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Roll a six-sided die. All monsters your opponent currently controls lose ATK/DEF equal to the result x 100, until the end of this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-dice-12",
+      "card_sets": [
+        {
+          "set_name": "Event Pack Speed Duel",
+          "set_code": "EVSD-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.52"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENB17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENB18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Eternal Duelist Soul promotional cards",
+          "set_code": "EDS-003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "8.67"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Sacred Cards promotional cards",
+          "set_code": "TSC-E003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "27.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 126218,
+          "image_url": "https://images.ygoprodeck.com/images/cards/126218.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/126218.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/126218.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "2.99",
+          "amazon_price": "4.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 222519,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-15",
+          "ocg_date": "2001-07-05",
+          "konami_id": 4816,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

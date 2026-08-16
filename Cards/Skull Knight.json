@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 2504891,
+      "name": "Skull Knight",
+      "typeline": [
+        "Spellcaster",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Tainted Wisdom\" + \"Ancient Brain\"",
+      "race": "Spellcaster",
+      "atk": 2650,
+      "def": 2250,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-knight-226",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.47"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.32"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2504891,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2504891.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2504891.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2504891.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.50",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 212049,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4713,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

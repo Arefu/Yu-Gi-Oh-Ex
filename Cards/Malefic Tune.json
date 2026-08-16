@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 44763696,
+      "name": "Malefic Tune",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a face-up \"Malefic\" monster(s) you control is destroyed by battle or an opponent's card effect: Draw 2 cards. If a face-up \"Malefic\" monster(s) you control is destroyed, while this card is in your GY (except during the Damage Step): You can banish this card from your GY; add 1 \"Malefic\" monster from your Deck to your hand. You can only use each effect of \"Malefic Tune\" once per turn.",
+      "race": "Normal",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-tune-10127",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44763696,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44763696.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44763696.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44763696.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48036,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14373,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

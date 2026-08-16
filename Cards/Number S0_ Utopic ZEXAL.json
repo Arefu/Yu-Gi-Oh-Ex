@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 52653092,
+      "name": "Number S0: Utopic ZEXAL",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 \"Number\" Xyz Monsters with the same Rank\r\n(This card's original Rank is always treated as 1.) You can also Xyz Summon this card by discarding 1 \"Rank-Up-Magic\" Normal Spell Card, then using a \"Utopia\" monster you control as the Xyz Material. (Transfer its Xyz Materials to this card.) This card's Xyz Summon cannot be negated. When Xyz Summoned, your opponent's cards and effects cannot be activated. Gains 1000 ATK and DEF for each Xyz Material attached to it. Once per opponent's turn (Quick Effect): You can detach 1 Xyz Material from this card; your opponent's cards and effects cannot be activated this turn.",
+      "race": "Warrior",
+      "atk": -1,
+      "def": -1,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-s0-utopic-zexal-4484",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis: Special Edition",
+          "set_code": "MACR-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.68"
+        },
+        {
+          "set_name": "Weekly Shonen Jump July 2016 membership promotional card",
+          "set_code": "JUMP-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.83"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 52653092,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52653092.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52653092.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52653092.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.31",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.39",
+          "amazon_price": "7.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number S0",
+          "views": 293269,
+          "viewsweek": 0,
+          "upvotes": 45,
+          "downvotes": 86,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-04",
+          "ocg_date": "2015-05-28",
+          "konami_id": 11932,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

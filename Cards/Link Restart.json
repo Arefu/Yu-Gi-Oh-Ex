@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 27664101,
+      "name": "Link Restart",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated that would inflict damage to you: Negate the activation, and if you do, Special Summon 1 Link Monster from your GY.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-restart-8710",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN050",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN050",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27664101,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27664101.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27664101.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27664101.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34253,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13284,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

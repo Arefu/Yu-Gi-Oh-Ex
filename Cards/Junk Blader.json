@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51855378,
+      "name": "Junk Blader",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish 1 \"Junk\" monster from your Graveyard; this card gains 400 ATK until the end of this turn.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-blader-4413",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51855378,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51855378.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51855378.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51855378.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60049,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2009-10-21",
+          "konami_id": 8735,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

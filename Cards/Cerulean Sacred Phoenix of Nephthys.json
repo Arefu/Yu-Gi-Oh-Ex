@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 24175232,
+      "name": "Cerulean Sacred Phoenix of Nephthys",
+      "typeline": [
+        "Winged Beast",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Rebirth of Nephthys\". You can only use each of the following effects of \"Cerulean Sacred Phoenix of Nephthys\" once per turn.\r\n● During your Main Phase: You can destroy \"Nephthys\" cards in your hand and/or face-up field, then destroy an equal number of monsters your opponent controls.\r\n● During your next Standby Phase after this card was destroyed by battle or card effect and sent to the GY: You can Special Summon this card from the GY.",
+      "race": "Winged Beast",
+      "atk": 3000,
+      "def": 1000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Nephthys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cerulean-sacred-phoenix-of-nephthys-9703",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24175232,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24175232.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24175232.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24175232.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.00",
+          "tcgplayer_price": "0.97",
+          "ebay_price": "4.25",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sacred Azure Phoenix of Nephthys",
+          "views": 102211,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14014,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

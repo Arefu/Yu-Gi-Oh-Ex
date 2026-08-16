@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 99274184,
+      "name": "Crystron Impact",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 of your banished \"Crystron\" monsters; Special Summon it, and if you do, if your opponent controls any face-up monsters, change their DEF to 0. During either player's turn, except the turn this card was sent to the Graveyard, when a card or effect is activated that targets a \"Crystron\" monster you control: You can banish this card from your Graveyard; negate that effect.",
+      "race": "Normal",
+      "archetype": "Crystron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystron-impact-8243",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN161",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99274184,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99274184.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99274184.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99274184.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.19",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51895,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12662,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

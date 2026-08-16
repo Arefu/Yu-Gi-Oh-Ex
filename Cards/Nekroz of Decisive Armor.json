@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 88240999,
+      "name": "Nekroz of Decisive Armor",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Nekroz\" Ritual Spell Card. Must be Ritual Summoned without using any Level 10 monsters, and cannot be Special Summoned by other ways. You can only use each of these effects of \"Nekroz of Decisive Armor\" once per turn.\n● During either player's turn: You can discard this card, then target 1 \"Nekroz\" monster you control; it gains 1000 ATK and DEF until the end of this turn.\n● You can target 1 Set card your opponent controls; destroy it, and if you do, banish it.",
+      "race": "Dragon",
+      "atk": 3300,
+      "def": 2300,
+      "level": 10,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nekroz-of-decisive-armor-7380",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN133",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.85"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88240999,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88240999.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88240999.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88240999.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.39",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82521,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11489,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

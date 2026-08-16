@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 80186010,
+      "name": "Destroyersaurus",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card to the Graveyard; add 1 \"Jurassic World\" from your Deck to your hand.",
+      "race": "Dinosaur",
+      "atk": 1800,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destroyersaurus-6723",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN017",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN158",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80186010,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80186010.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80186010.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80186010.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.50",
+          "amazon_price": "1.93",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83262,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7108,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

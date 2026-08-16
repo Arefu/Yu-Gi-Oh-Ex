@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 69303178,
+      "name": "Majestic Mech - Ohka",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Normal Summon this card without Tributing. If you do, during the End Phase: Send it to the Graveyard.",
+      "race": "Fairy",
+      "atk": 2400,
+      "def": 1400,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Majestic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majestic-mech-ohka-5830",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Six",
+          "set_code": "CP06-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN195",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "38.19"
+        },
+        {
+          "set_name": "Demo Pack",
+          "set_code": "DEM1-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN015",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69303178,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69303178.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69303178.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69303178.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "54.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75966,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6688,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

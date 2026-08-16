@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 95231062,
+      "name": "Lost Blue Breaker",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If there is another face-up Fish, Sea Serpent, or Aqua monster on the field: You can Tribute this card, then target 1 Spell/Trap on the field; destroy that target.",
+      "race": "Sea Serpent",
+      "atk": 1400,
+      "def": 0,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lost-blue-breaker-7928",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of the Sea Emperor Structure Deck",
+          "set_code": "SDRE-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95231062,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95231062.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95231062.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95231062.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33441,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2012-06-16",
+          "konami_id": 9843,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

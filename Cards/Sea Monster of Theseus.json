@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 96334243,
+      "name": "Sea Monster of Theseus",
+      "typeline": [
+        "Zombie",
+        "Fusion",
+        "Tuner"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Tuner Monster",
+      "frameType": "fusion",
+      "desc": "2 Tuners",
+      "race": "Zombie",
+      "atk": 2200,
+      "def": 1800,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sea-monster-of-theseus-8431",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN231",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96334243,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96334243.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96334243.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96334243.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "11.55",
+          "tcgplayer_price": "18.86",
+          "ebay_price": "2.99",
+          "amazon_price": "5.18",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 733506,
+          "viewsweek": 210,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12871,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

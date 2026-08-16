@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 69954399,
+      "name": "Ekibyo Drakmord",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The equipped monster cannot attack. Destroy the equipped monster at the end of its controller's 2nd turn after this card is activated. At that time, this card is returned to the owner's hand.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ekibyo-drakmord-5884",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.28"
+        },
+        {
+          "set_name": "Warriors' Strike Structure Deck",
+          "set_code": "SDWS-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69954399,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69954399.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69954399.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69954399.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 183076,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5277,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 56827051,
+      "name": "Ariel, Priestess of the Nekroz",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can reveal any number of \"Nekroz\" cards in your hand; increase or reduce this card's Level by the number of revealed cards until the end of this turn. If this card is Tributed by a card effect: You can add 1 \"Nekroz\" monster from your Deck to your hand, except a Ritual Monster. You can only use this effect of \"Ariel, Priestess of the Nekroz\" once per turn.",
+      "race": "Psychic",
+      "atk": 1000,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ariel-priestess-of-the-nekroz-8378",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN128",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56827051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56827051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56827051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56827051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.00",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43779,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12945,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

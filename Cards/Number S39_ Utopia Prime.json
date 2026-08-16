@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 86532744,
+      "name": "Number S39: Utopia Prime",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 LIGHT monsters\nYou can also Xyz Summon this card by using a \"Number 39: Utopia\" you control as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) If your opponent's LP is at least 3000 higher than yours: You can detach 3 Xyz Materials from this card and pay LP so that you only have 10 left; destroy as many Special Summoned monsters your opponent controls as possible, and if you do, banish them, then inflict 300 damage to your opponent for each monster banished.",
+      "race": "Warrior",
+      "atk": 2510,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-s39-utopia-prime-7248",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN094",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86532744,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86532744.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86532744.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86532744.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.89",
+          "tcgplayer_price": "3.02",
+          "ebay_price": "1.43",
+          "amazon_price": "20.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number S39",
+          "views": 472089,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2014-01-11",
+          "konami_id": 10977,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

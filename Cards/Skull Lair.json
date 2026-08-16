@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 6733059,
+      "name": "Skull Lair",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Remove from play any number of Monster Cards in your Graveyard to destroy 1 face-up monster on the field whose Level is equal to the number of the cards you removed from play.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-lair-584",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.82"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6733059,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6733059.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6733059.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6733059.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.00",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 228069,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5264,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

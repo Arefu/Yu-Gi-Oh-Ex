@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 79206925,
+      "name": "Gravekeeper's Supernaturalist",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"Gravekeeper's\" monsters\r\nGains ATK/DEF equal to the combined original Levels of the materials used for its Fusion Summon x 100. While \"Necrovalley\" is on the field, this card, and any card in your Field Zone, cannot be destroyed by card effects. During your Main Phase: You can activate this effect; during the End Phase of this turn, add 1 \"Gravekeeper's\" monster or 1 \"Necrovalley\" card from your Deck to your hand. You can only use this effect of \"Gravekeeper's Supernaturalist\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-supernaturalist-9642",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN181",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79206925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79206925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79206925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79206925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "2.64",
+          "amazon_price": "4.64",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gravekeeper's Esper",
+          "views": 211801,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13922,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

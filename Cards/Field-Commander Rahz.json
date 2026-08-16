@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 89529919,
+      "name": "Field-Commander Rahz",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: Choose 1 Level 4 or lower Warrior-Type monster from your Deck, except \"Field-Commander Rahz\", and place it on top of your Deck.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/field-commander-rahz-7476",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Dawn of the Xyz",
+          "set_code": "YS11-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Warriors' Strike Structure Deck",
+          "set_code": "SDWS-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89529919,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89529919.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89529919.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89529919.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "5.99",
+          "amazon_price": "1.66",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65697,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7431,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

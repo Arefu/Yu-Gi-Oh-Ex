@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 51043243,
+      "name": "Worm Cartaros",
+      "typeline": [
+        "Reptile",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Add 1 Level 4 or lower Reptile-Type \"Worm\" monster from your Deck to your hand.",
+      "race": "Reptile",
+      "atk": 1200,
+      "def": 500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-cartaros-4345",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN028",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51043243,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51043243.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51043243.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51043243.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40128,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7545,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

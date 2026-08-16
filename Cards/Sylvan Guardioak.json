@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 99429730,
+      "name": "Sylvan Guardioak",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can choose a number from 1 to 3, then excavate that many cards from the top of your Deck, send any excavated Plant-Type monsters to the Graveyard, also place the other cards on the bottom of your Deck in any order. If this card is excavated from the Deck and sent to the Graveyard by a card effect: You can target 1 other Plant-Type monster in your Graveyard; place that target on the top of your Deck.",
+      "race": "Plant",
+      "atk": 2400,
+      "def": 1500,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sylvan-guardioak-8258",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN200",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99429730,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99429730.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99429730.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99429730.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37792,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10905,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

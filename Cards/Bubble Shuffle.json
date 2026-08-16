@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 61968753,
+      "name": "Bubble Shuffle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up Attack Position \"Elemental HERO Bubbleman\" you control and 1 face-up Attack Position monster your opponent controls; change both those targets to Defense Position, then Tribute that \"Elemental HERO Bubbleman\", then Special Summon 1 \"Elemental HERO\" monster from your hand.",
+      "race": "Quick-Play",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bubble-shuffle-5245",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN046",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.14"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki",
+          "set_code": "DP1-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN080",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61968753,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61968753.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61968753.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61968753.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "9.75",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76117,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6408,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

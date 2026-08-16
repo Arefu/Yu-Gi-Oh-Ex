@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 93187568,
+      "name": "Spell Striker",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by banishing 1 Spell Card from your Graveyard. This card can attack directly. You take no battle damage from attacks involving this card.",
+      "race": "Warrior",
+      "atk": 600,
+      "def": 200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-striker-7755",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN050",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game Seven",
+          "set_code": "CP07-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Warriors' Strike Structure Deck",
+          "set_code": "SDWS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship 2007 promotional cards",
+          "set_code": "WC07-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93187568,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93187568.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93187568.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93187568.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "4.46",
+          "amazon_price": "3.80",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103274,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-03-20",
+          "ocg_date": "2007-03-15",
+          "konami_id": 7093,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

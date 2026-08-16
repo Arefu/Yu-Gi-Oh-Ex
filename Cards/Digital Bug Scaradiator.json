@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 12615446,
+      "name": "Digital Bug Scaradiator",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 or more Level 3 LIGHT Insect-Type monsters\nOnce per turn, during either player's turn: You can detach 2 Xyz Materials from this card, then target 1 monster your opponent controls; change its battle position, and if you do, it has its effects negated until the end of this turn. Once per turn, when this card destroys an opponent's monster by battle and sends it to the Graveyard: You can attach that destroyed monster to this card as Xyz Material.",
+      "race": "Insect",
+      "atk": 1800,
+      "def": 1400,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Digital Bug",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/digital-bug-scaradiator-1090",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12615446,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12615446.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12615446.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12615446.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43862,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12326,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

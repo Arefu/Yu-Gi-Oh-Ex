@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 56387350,
+      "name": "Vampire Baby",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Battle Phase, if this card destroyed a monster by battle and sent it to the Graveyard this turn: You can Special Summon that monster to your side of the field.",
+      "race": "Zombie",
+      "atk": 700,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-baby-4800",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN200",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.78"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENC02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56387350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56387350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56387350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56387350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Red-Moon Baby",
+          "views": 140503,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5141,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

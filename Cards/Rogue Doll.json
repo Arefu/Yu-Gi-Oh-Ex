@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 91939608,
+      "name": "Rogue Doll",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A deadly doll gifted with mystical power, it is particularly powerful when attacking against dark forces.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rogue-doll-7666",
+      "card_sets": [
+        {
+          "set_name": "Event Pack Speed Duel",
+          "set_code": "EVSD-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENA03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91939608,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91939608.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91939608.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91939608.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114622,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4050,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

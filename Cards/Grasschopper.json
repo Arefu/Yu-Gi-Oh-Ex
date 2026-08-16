@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 95166228,
+      "name": "Grasschopper",
+      "typeline": [
+        "Insect",
+        "Gemini",
+        "Effect"
+      ],
+      "type": "Gemini Monster",
+      "humanReadableCardType": "Gemini Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field or in the Graveyard. While this card is face-up on the field, you can Normal Summon it to have it be treated as an Effect Monster with this effect:\n● This card can attack all monsters your opponent controls once each.",
+      "race": "Insect",
+      "atk": 2350,
+      "def": 1000,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grasschopper-7920",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95166228,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95166228.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95166228.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95166228.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "4.00",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40894,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7199,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

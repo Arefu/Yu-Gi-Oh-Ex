@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 76375976,
+      "name": "Mystic Mine",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls more monsters than you do, your opponent cannot activate monster effects or declare an attack. If you control more monsters than your opponent does, you cannot activate monster effects or declare an attack. Once per turn, during the End Phase, if both players control the same number of monsters: Destroy this card.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystic-mine-10071",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN080",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "10.66"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN064",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN047",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 76375976,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76375976.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76375976.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76375976.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "2.99",
+          "amazon_price": "3.23",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Spellkarst Cave",
+          "staple": "Yes",
+          "views": 1867052,
+          "viewsweek": 0,
+          "upvotes": 191,
+          "downvotes": 111,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14314,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

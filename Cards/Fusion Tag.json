@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 59432181,
+      "name": "Fusion Tag",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 monster you control; reveal 1 Fusion Monster in your Extra Deck, and if you do, the targeted monster's name can be treated as the revealed Fusion Monster's, if used for a Fusion Summon this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusion-tag-5051",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59432181,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59432181.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59432181.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59432181.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.99",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81825,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12338,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

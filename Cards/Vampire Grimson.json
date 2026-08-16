@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 33438666,
+      "name": "Vampire Grimson",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a monster(s) you control would be destroyed by battle or an opponent's card effect, you can pay 1000 LP for each monster that would be destroyed, instead (you must protect all your monsters that would be destroyed, if you use this effect). At the end of the Battle Phase, if this card destroyed any monster(s) by battle: You can Special Summon them from the GYs to your field.",
+      "race": "Zombie",
+      "atk": 2000,
+      "def": 1400,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-grimson-9342",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN236",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33438666,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33438666.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33438666.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33438666.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.02",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149912,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13647,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

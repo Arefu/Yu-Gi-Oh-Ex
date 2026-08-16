@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 51497409,
+      "name": "D/D/D Stone King Darius",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 Fiend-Type monsters\r\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 \"Dark Contract\" card you control; destroy it, and if you do, draw 1 card. If this card battles an opponent's monster, during damage calculation: You can detach 1 Xyz Material from this card; make this card unable to be destroyed by that battle, destroy the opponent's monster that battled it after damage calculation, and if you do, inflict 500 damage to your opponent.",
+      "race": "Fiend",
+      "atk": 1900,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-stone-king-darius-8386",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51497409,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51497409.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51497409.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51497409.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.84",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "3.00",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "D/D/D Boulder King Darius",
+          "views": 130814,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12959,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

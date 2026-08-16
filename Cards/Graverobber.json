@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 61705417,
+      "name": "Graverobber",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 Spell Card from your opponent's Graveyard. You can use it as your hand until the end of the turn. If you use it, you take 2000 points of damage.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/graverobber-5225",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "9.46"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "40.38"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61705417,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61705417.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61705417.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61705417.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "1.35",
+          "ebay_price": "1.99",
+          "amazon_price": "8.80",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238326,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4985,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

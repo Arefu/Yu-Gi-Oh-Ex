@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 55401221,
+      "name": "Batteryman D",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot select a Thunder-Type monster you control as an attack target (except \"Batteryman D\").",
+      "race": "Thunder",
+      "atk": 0,
+      "def": 1900,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/batteryman-d-4715",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN210",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.87"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55401221,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55401221.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55401221.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55401221.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.95",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58640,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6703,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

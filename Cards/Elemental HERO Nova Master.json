@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 1945387,
+      "name": "Elemental HERO Nova Master",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Elemental HERO\" monster + 1 FIRE monster\r\nMust be Fusion Summoned. If this card destroys an opponent's monster by battle: Draw 1 card.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-nova-master-171",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN056",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN093",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENA25",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1945387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1945387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1945387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1945387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.49",
+          "amazon_price": "3.16",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170439,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2010-10-21",
+          "konami_id": 9439,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

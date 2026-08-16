@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 59208943,
+      "name": "Time Thief Perpetua",
+      "typeline": [
+        "Psychic",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nDuring the Standby Phase: You can detach 1 material from this card, then target 1 \"Time Thief\" monster in your GY, except \"Time Thief Perpetua\"; Special Summon that monster. (Quick Effect): You can target 1 other Xyz Monster you control; attach 1 \"Time Thief\" card from your Deck to it as material. You can only use each effect of \"Time Thief Perpetua\" once per turn.",
+      "race": "Psychic",
+      "atk": 1900,
+      "def": 2500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Time Thief",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-thief-perpetua-10570",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.52"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN094",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN094",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59208943,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59208943.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59208943.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59208943.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 157218,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100258044,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14799,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

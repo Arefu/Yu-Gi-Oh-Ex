@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 33453260,
+      "name": "Comic Hand",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "If you control \"Toon World\", equip to an opponent's monster. Take control of it. It is treated as a Toon monster. If your opponent controls no Toon monsters, it can attack your opponent directly. If \"Toon World\" is not on the field, destroy this card.",
+      "race": "Equip",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/comic-hand-2840",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN026",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.46"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33453260,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33453260.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33453260.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33453260.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.35",
+          "tcgplayer_price": "3.22",
+          "ebay_price": "8.00",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 276188,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11904,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

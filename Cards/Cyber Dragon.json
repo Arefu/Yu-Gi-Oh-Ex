@@ -1,0 +1,407 @@
+{
+  "data": [
+    {
+      "id": 70095154,
+      "name": "Cyber Dragon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If only your opponent controls a monster, you can Special Summon this card (from your hand).",
+      "race": "Machine",
+      "atk": 2100,
+      "def": 1600,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-dragon-5898",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Deck: Yuya & Declan",
+          "set_code": "YS15-ENY04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.22"
+        },
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAX-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Tin: Dueling Heroes",
+          "set_code": "TN23-EN005",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN039",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN138",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN138",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2006 Wave 1",
+          "set_code": "CT03-EN002",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "17.15"
+        },
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN015",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "173.84"
+        },
+        {
+          "set_name": "Duel Terminal - Preview Wave 1",
+          "set_code": "DTP1-EN009",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Duel Terminal - Preview Wave 2",
+          "set_code": "DTP1-EN009",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN009",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN057",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.67"
+        },
+        {
+          "set_name": "Egyptian God Deck: Obelisk the Tormentor",
+          "set_code": "EGO1-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN178",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN022",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN014",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN175",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN176",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Mattel Action Figure promotional cards: Series 3",
+          "set_code": "MF03-EN009",
+          "set_rarity": "Normal Parallel Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16",
+          "set_code": "OP16-EN001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN053",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "5.04"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN155",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN155",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN059",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Saber Force Starter Deck",
+          "set_code": "YS15-ENF05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENG01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENG01",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI28",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Xyz Symphony",
+          "set_code": "YS12-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2025 prize cards",
+          "set_code": "25YC-ENP02",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70095154,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70095154.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70095154.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70095154.jpg"
+        },
+        {
+          "id": 70095155,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70095155.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70095155.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70095155.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1645550,
+          "viewsweek": 42,
+          "upvotes": 102,
+          "downvotes": 34,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Cyber Dragon",
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6390,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

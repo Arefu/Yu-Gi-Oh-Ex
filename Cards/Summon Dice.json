@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 41139112,
+      "name": "Summon Dice",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 1000 LP; roll a six-sided die and apply the result.\n● 1 or 2: Immediately after this effect resolves, you can Normal Summon 1 monster.\n● 3 or 4: You can Special Summon 1 monster from your GY.\n● 5 or 6: You can Special Summon 1 Level 5 or higher monster from your hand.\nYou can only activate 1 \"Summon Dice\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/summon-dice-9525",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41139112,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41139112.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41139112.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41139112.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85090,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13801,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

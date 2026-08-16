@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 56532632,
+      "name": "Chivalry",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Activate only during the Battle Phase, when the effect of an opponent's Effect Monster is activated. Negate the activation and destroy that card.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chivalry-4812",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN079",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56532632,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56532632.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56532632.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56532632.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.72",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "1.79",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21241,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 9010,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

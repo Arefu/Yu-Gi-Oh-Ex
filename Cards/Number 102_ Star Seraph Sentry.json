@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 49678559,
+      "name": "Number 102: Star Seraph Sentry",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 LIGHT monsters\r\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; halve its ATK, also, negate its effects. If this face-up card on the field would be destroyed, you can detach all of its Xyz Materials instead. If you do, any battle damage you take this turn is halved.",
+      "race": "Fairy",
+      "atk": 2500,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Star Seraph",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-102-star-seraph-sentry-4232",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49678559,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49678559.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49678559.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49678559.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.45",
+          "tcgplayer_price": "1.93",
+          "ebay_price": "3.00",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 102",
+          "views": 157072,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10656,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

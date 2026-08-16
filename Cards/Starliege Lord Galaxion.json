@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 40390147,
+      "name": "Starliege Lord Galaxion",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Photon\" monsters\nOnce per turn: You can detach 1 or 2 Xyz Materials from this card; apply this effect, depending on the number you detached.\n● 1: Special Summon 1 \"Galaxy-Eyes Photon Dragon\" from your hand.\n● 2: Special Summon 1 \"Galaxy-Eyes Photon Dragon\" from your Deck.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2100,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/starliege-lord-galaxion-3434",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40390147,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40390147.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40390147.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40390147.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "1.21",
+          "ebay_price": "3.00",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 152795,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10653,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

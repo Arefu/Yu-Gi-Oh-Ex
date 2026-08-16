@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 8875971,
+      "name": "Star Seraph Scout",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 \"Star Seraph\" monster from your hand.",
+      "race": "Fairy",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Star Seraph",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/star-seraph-scout-753",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8875971,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8875971.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8875971.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8875971.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.09",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31959,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10612,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

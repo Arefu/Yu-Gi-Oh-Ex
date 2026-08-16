@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 39229392,
+      "name": "Overlay Sentinel",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. When this card is Normal Summoned: Change this card to Defense Position. If you control a face-up Xyz Monster that has Xyz Material: You can banish this card from your Graveyard, then target 1 monster your opponent controls; it loses 500 ATK for each Xyz Material attached to a monster you control.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/overlay-sentinel-3325",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39229392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39229392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39229392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39229392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29511,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10891,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

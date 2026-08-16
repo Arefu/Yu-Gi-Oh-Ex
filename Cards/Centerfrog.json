@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 47346782,
+      "name": "Centerfrog",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as material for a Fusion, Synchro, Xyz, or Link Summon. If this card is Normal or Flip Summoned: Change it to Defense Position. Once per turn: You can target 1 monster in your opponent's Main Monster Zone; give your opponent control of this Defense Position card by moving it to their zone adjacent to the target, then if your opponent controls exactly 2 \"Centerfrog\" in the Main Monster Zone, gain control of all monsters in between those 2 cards.",
+      "race": "Aqua",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/centerfrog-9452",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN025",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47346782,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47346782.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47346782.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47346782.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Doublecross Frog",
+          "views": 39021,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13741,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 1508649,
+      "name": "Altergeist Hexstia",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Altergeist\" monsters\r\nGains ATK equal to the original ATK of each \"Altergeist\" monster it points to. When a Spell/Trap Card or effect is activated (Quick Effect): You can Tribute 1 \"Altergeist\" monster this card points to; negate the activation, and if you do, destroy that card. If this card is sent from the field to the GY: You can add 1 \"Altergeist\" card from your Deck to your hand. You can only use this effect of \"Altergeist Hexstia\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": null,
+      "level": 0,
+      "attribute": "FIRE",
+      "archetype": "Altergeist",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/altergeist-hexstia-8932",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN200",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1508649,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1508649.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1508649.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1508649.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "1.19",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 206087,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13417,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

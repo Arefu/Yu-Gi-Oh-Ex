@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 94940436,
+      "name": "Magnet Circle LV2",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 Level 2 or lower Machine-Type monster from your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magnet-circle-lv2-7902",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN158",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.17"
+        },
+        {
+          "set_name": "OTS Tournament Pack 30",
+          "set_code": "OP30-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94940436,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94940436.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94940436.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94940436.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87686,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6572,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

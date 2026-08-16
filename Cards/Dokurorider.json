@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 99721536,
+      "name": "Dokurorider",
+      "typeline": [
+        "Zombie",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "This monster can only be Ritual Summoned with the Ritual Spell Card, \"Revival of Dokurorider\". You must also offer monsters whose total Level Stars equal 6 or more as a Tribute from the field or your hand.",
+      "race": "Zombie",
+      "atk": 1900,
+      "def": 1850,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dokurorider-8279",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "115.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99721536,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99721536.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99721536.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99721536.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "3.95",
+          "amazon_price": "188.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45081,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-08-20",
+          "konami_id": 4725,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 94515289,
+      "name": "Frozen Fitzgerald",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 DARK Tuner + 1 non-Tuner Beast-Type monster\nIf this card attacks, your opponent cannot activate any Spell or Trap Cards until the end of the Damage Step. When this card is destroyed by battle and sent to the Graveyard, while you control no monsters, you can discard 1 card to Special Summon this card from the Graveyard in face-up Defense Position.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 2500,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frozen-fitzgerald-7861",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack Collection Tin 2011",
+          "set_code": "DPCT-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94515289,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94515289.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94515289.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94515289.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "3.69",
+          "amazon_price": "0.94",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21723,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-03-31",
+          "ocg_date": "2010-11-20",
+          "konami_id": 9216,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

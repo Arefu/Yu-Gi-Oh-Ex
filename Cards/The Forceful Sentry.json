@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 42829885,
+      "name": "The Forceful Sentry",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Look at your opponent's hand. Select 1 card among them and return it to his/her Deck. The Deck is then shuffled.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-forceful-sentry-3653",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.5"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "25.51"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.92"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden",
+        "ban_goat": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 42829885,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42829885.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42829885.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42829885.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.00",
+          "tcgplayer_price": "3.52",
+          "ebay_price": "4.99",
+          "amazon_price": "5.63",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178290,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4907,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

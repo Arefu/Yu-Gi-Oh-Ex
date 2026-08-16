@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 71985676,
+      "name": "Performapal Inflater Tapir",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation (in either player's turn), if a monster you control battles an opponent's monster: You can discard this card; neither player takes any battle damage from that battle. When an opponent's monster declares a direct attack while this card is in your Graveyard: You can discard 1 \"Performapal\" monster; Special Summon this card in Defense Position. You can only use this effect of \"Performapal Inflater Tapir\" once per turn.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-inflater-tapir-6044",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71985676,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71985676.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71985676.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71985676.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21979,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12403,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

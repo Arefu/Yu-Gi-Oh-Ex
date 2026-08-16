@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 76137276,
+      "name": "Spell Reclamation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Discard 1 card and chain this card to a Spell Card you activated. Whenever that Spell Card is sent to the Graveyard, return it to its owner's hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-reclamation-6409",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN076",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76137276,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76137276.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76137276.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76137276.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.49",
+          "amazon_price": "1.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22249,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7232,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

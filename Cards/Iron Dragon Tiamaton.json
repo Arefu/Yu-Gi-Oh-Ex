@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 46247282,
+      "name": "Iron Dragon Tiamaton",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by the following effect. If 3 or more cards are in the same column (Quick Effect): You can Special Summon this card from your hand. You can only use this effect of \"Iron Dragon Tiamaton\" once per turn. If this card is Special Summoned: Destroy all other cards in this card's column. Neither player can use the unused zones in this card's column.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/iron-dragon-tiamaton-9186",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN016",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46247282,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46247282.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46247282.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46247282.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.88",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tiamaton the Steel Battalion Dragon",
+          "views": 134885,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13586,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

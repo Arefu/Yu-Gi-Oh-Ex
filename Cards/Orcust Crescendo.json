@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 703897,
+      "name": "Orcust Crescendo",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated while you control an \"Orcust\" Link Monster: Negate the activation, and if you do, banish that card. You can banish this card from your GY; add to your hand 1 of your DARK Machine monsters that is banished or in your Deck. You cannot Special Summon monsters the turn you activate this effect, except DARK Machine monsters. You can only use 1 \"Orcust Crescendo\" effect per turn, and only once that turn.",
+      "race": "Counter",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcust-crescendo-10054",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN098",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN074",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 703897,
+          "image_url": "https://images.ygoprodeck.com/images/cards/703897.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/703897.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/703897.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.49",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orcustrated Climax",
+          "views": 365895,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14324,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

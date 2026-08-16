@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 39276790,
+      "name": "Face-Off",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated during the Damage Step: Negate the activation, and if you do, destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/face-off-3333",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN077",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39276790,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39276790.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39276790.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39276790.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.82",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28706,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11286,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

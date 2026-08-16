@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 89310929,
+      "name": "Mist Valley Thunder Lord",
+      "typeline": [
+        "Thunder",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner \"Mist Valley\" monsters\nOnce per turn, you can select 1 card you control. Return it to the hand, and this card gains 500 ATK until the End Phase. This effect can be activated during either player's turn.",
+      "race": "Thunder",
+      "atk": 2600,
+      "def": 2400,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Mist Valley",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-valley-thunder-lord-7459",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN090",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN060",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN063",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89310929,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89310929.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89310929.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89310929.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.78",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29922,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8121,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

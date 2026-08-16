@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 45702357,
+      "name": "Reversible Beetle",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Shuffle this card, and any face-up monsters in its column, into the Deck(s).\r\nIf this card is Normal or Special Summoned: Change this card, and any monsters in its column, to face-down Defense Position. You can only use each effect of \"Reversible Beetle\" once per turn.",
+      "race": "Insect",
+      "atk": 1100,
+      "def": 1500,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reversible-beetle-10270",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45702357,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45702357.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45702357.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45702357.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17629,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009035,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14479,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

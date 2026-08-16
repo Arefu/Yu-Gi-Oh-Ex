@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 47594192,
+      "name": "Three of a Kind",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control 3 or more monsters with the same name, except Tokens: Target 3 cards your opponent controls; destroy those targets.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/three-of-a-kind-4061",
+      "card_sets": [
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47594192,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47594192.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47594192.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47594192.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37334,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10207,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

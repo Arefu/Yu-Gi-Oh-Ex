@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 30922149,
+      "name": "Side Effects?",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Your opponent draws 1 to 3 cards, then you gain 2000 LP for each card they drew with this effect.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/side-effects-2625",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30922149,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30922149.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30922149.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30922149.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83113,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11864,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

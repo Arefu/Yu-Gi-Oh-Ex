@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 5556668,
+      "name": "Exchange",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Both players reveal their hands and add 1 card from each other's hand to their hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exchange-491",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN170",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yugi",
+          "set_code": "DPYG-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN125",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI16",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Eternal Duelist Soul promotional cards",
+          "set_code": "EDS-001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "5.31"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Sacred Cards promotional cards",
+          "set_code": "TSC-E001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "18.18"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5556668,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5556668.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5556668.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5556668.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "3.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 296421,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-15",
+          "ocg_date": "2001-07-05",
+          "konami_id": 5218,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

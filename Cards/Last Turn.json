@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 28566710,
+      "name": "Last Turn",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "This card can only be activated during your opponent's turn when your Life Points are 1000 or less. Select 1 monster on your side of the field and send all other cards on the field and in their respective owners' hands to their respective Graveyards. After that, your opponent selects and Special Summons 1 monster from their Deck in face-up Attack Position and attacks your selected monster. (Any Battle Damage from this battle is treated as 0.) The player whose monster remains alone on the field at the End Phase of this turn wins the Duel. Any other case results in a DRAW.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/last-turn-2431",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB-EN97",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN206",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.74"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.1"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Tournament Pack 6",
+          "set_code": "TP6-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden",
+        "ban_goat": "Semi-Limited"
+      },
+      "card_images": [
+        {
+          "id": 28566710,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28566710.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28566710.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28566710.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.05",
+          "tcgplayer_price": "3.60",
+          "ebay_price": "14.99",
+          "amazon_price": "13.04",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121556,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5406,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

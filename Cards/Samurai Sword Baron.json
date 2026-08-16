@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 14344682,
+      "name": "Samurai Sword Baron",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can select 1 Defense Position monster your opponent controls. Change it to face-up Attack Position.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/samurai-sword-baron-1230",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+          "set_code": "WC10-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "21.1"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+          "set_code": "WC10-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14344682,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14344682.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14344682.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14344682.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "1.47",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22272,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-23",
+          "ocg_date": "2011-02-24",
+          "konami_id": 8737,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

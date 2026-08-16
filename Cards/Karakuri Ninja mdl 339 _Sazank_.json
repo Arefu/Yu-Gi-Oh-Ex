@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 93724592,
+      "name": "Karakuri Ninja mdl 339 \"Sazank\"",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card must attack if able. When this face-up Attack Position card is selected as an attack target, change it to Defense Position. When this card is flipped face-up, select 1 face-up monster on the field, and send it to the Graveyard. During the turn this card is flipped face-up, it can attack your opponent directly.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Karakuri",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/karakuri-ninja-mdl-339-sazank-7799",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93724592,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93724592.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93724592.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93724592.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.25",
+          "tcgplayer_price": "6.32",
+          "ebay_price": "4.95",
+          "amazon_price": "6.19",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Karakuri Ninja mdl 339",
+          "views": 44812,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9099,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

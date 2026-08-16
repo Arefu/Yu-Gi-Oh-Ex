@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 9718968,
+      "name": "Photon Slasher",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up Xyz Monster is on the field, you can Special Summon this card (from your hand) in face-up Defense Position.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1000,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-slasher-819",
+      "card_sets": [
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9718968,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9718968.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9718968.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9718968.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.09",
+          "amazon_price": "0.87",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56490,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10335,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 98159737,
+      "name": "Tenyi Spirit - Adhara",
+      "typeline": [
+        "Wyrm",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. If you control a face-up non-Effect Monster: You can banish this card from your hand or GY, then target 1 of your banished Wyrm monsters, except this card; add it to your hand. You can only use each effect of \"Tenyi Spirit - Adhara\" once per turn.",
+      "race": "Wyrm",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Tenyi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tenyi-spirit-adhara-10213",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.58"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98159737,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98159737.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98159737.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98159737.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.56",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tenyi Dragon Adhara",
+          "views": 713906,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009012,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14456,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

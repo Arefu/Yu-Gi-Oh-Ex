@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 86690572,
+      "name": "Burgeoning Whirlflame",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Trap Card is activated: Send 1 \"Laval\" monster from your hand to the Graveyard; negate the activation and destroy it. If this card is in the Graveyard: You can banish 2 FIRE monsters from your Graveyard; add this card to your hand.",
+      "race": "Counter",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/burgeoning-whirlflame-7259",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86690572,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86690572.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86690572.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86690572.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31264,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9689,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44891812,
+      "name": "Superheavy Samurai Helper",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your Defense Position monster battles an opponent's monster while you have no Spells/Traps in your GY (Quick Effect): You can discard this card, then target 1 \"Superheavy Samurai\" monster you control other than the battling monster; your battling monster gains DEF equal to that monster's DEF, during that damage calculation only. When an opponent's monster declares a direct attack: You can banish this card from your GY, then target 1 \"Superheavy Samurai\" monster in your GY; Special Summon it.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-helper-8655",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44891812,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44891812.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44891812.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44891812.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.55",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37309,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13134,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

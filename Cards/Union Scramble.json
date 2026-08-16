@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 39778366,
+      "name": "Union Scramble",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target up to 3 of your banished LIGHT Machine-Type Normal Monsters and/or LIGHT Machine-Type Union monsters; Special Summon them. During either player's turn, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard, then target 1 of your banished LIGHT Machine-Type Normal Monsters or LIGHT Machine-Type Union monsters; return it to the hand. You can only activate 1 \"Union Scramble\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/union-scramble-3374",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN104",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 4",
+          "set_code": "STP4-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39778366,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39778366.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39778366.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39778366.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76164,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12588,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

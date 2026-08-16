@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 27671321,
+      "name": "Lightning Conger",
+      "typeline": [
+        "Thunder",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This massive eel generates huge charges of electricity and unleashes them as thunderbolts.",
+      "race": "Thunder",
+      "atk": 350,
+      "def": 750,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightning-conger-2357",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.24"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27671321,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27671321.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27671321.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27671321.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50975,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5079,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 28053106,
+      "name": "Cyber Egg Angel",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can add 1 \"Machine Angel\" Spell or 1 \"Ritual Sanctuary\" from your Deck to your hand. You can only use this effect of \"Cyber Egg Angel\" once per turn.",
+      "race": "Fairy",
+      "atk": 200,
+      "def": 300,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Angel",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-egg-angel-9874",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28053106,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28053106.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28053106.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28053106.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75584,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14171,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

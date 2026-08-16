@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 98139712,
+      "name": "Skull Invitation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time a card(s) is sent to the Graveyard, inflict 300 damage to its owner for each card sent.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-invitation-8153",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN175",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.77"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98139712,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98139712.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98139712.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98139712.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.85",
+          "amazon_price": "1.46",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 282688,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4961,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

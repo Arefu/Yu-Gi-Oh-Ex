@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 60226558,
+      "name": "Nephe Shaddoll Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by declaring 1 Attribute. Equip only to a \"Shaddoll\" monster, and it becomes that Attribute. During your Main Phase: You can Fusion Summon 1 \"Shaddoll\" Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material, including the equipped monster. You can only use this effect of \"Nephe Shaddoll Fusion\" once per turn.",
+      "race": "Equip",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nephe-shaddoll-fusion-5109",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN230",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN059",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60226558,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60226558.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60226558.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60226558.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90265,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11579,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

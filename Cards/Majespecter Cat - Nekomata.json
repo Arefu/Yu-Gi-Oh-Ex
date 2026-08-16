@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 5506791,
+      "name": "Majespecter Cat - Nekomata",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "When this card is Normal or Special Summoned: You can add 1 \"Majespecter\" card from your Deck to your hand during the End Phase of this turn. You can only use this effect of \"Majespecter Cat - Nekomata\" once per turn. Cannot be targeted or destroyed by your opponent's card effects.",
+      "race": "Spellcaster",
+      "atk": 100,
+      "def": 1800,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Majespecter",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-cat-nekomata-487",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN125",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5506791,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5506791.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5506791.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5506791.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.29",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59838,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11969,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

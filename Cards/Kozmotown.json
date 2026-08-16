@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 67237709,
+      "name": "Kozmotown",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can target 1 of your banished \"Kozmo\" monsters; return it to the hand, and if you do, lose LP equal to its original Level x 100. Once per turn: You can reveal any number of \"Kozmo\" monsters in your hand and shuffle them into the Deck, then draw cards equal to the number of cards you shuffled into the Deck. If this card in the Field Zone is destroyed by a card effect: You can add 1 \"Kozmo\" card from your Deck to your hand.",
+      "race": "Field",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmotown-5652",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Eight",
+          "set_code": "AP08-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN050",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN032",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67237709,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67237709.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67237709.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67237709.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.29",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124704,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12037,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

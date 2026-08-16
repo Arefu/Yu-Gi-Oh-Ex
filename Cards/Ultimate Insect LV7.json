@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 19877898,
+      "name": "Ultimate Insect LV7",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Special Summoned by the effect of \"Ultimate Insect LV5\", while it remains on the field all your opponent's monsters lose 700 ATK and DEF.",
+      "race": "Insect",
+      "atk": 2600,
+      "def": 1200,
+      "level": 7,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-insect-lv7-1710",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN190",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN010",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19877898,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19877898.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19877898.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19877898.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.75",
+          "tcgplayer_price": "1.33",
+          "ebay_price": "9.99",
+          "amazon_price": "4.18",
+          "coolstuffinc_price": "29.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69494,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6319,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

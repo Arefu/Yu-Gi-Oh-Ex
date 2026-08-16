@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 52624755,
+      "name": "Peten the Dark Clown",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent to your Graveyard: You can banish this card from your Graveyard; Special Summon 1 \"Peten the Dark Clown\" from your hand or Deck.",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 1200,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/peten-the-dark-clown-4480",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Exclusive Pack",
+          "set_code": "EP1-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16",
+          "set_code": "OP16-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52624755,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52624755.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52624755.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52624755.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.55",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119987,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-07-25",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6085,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

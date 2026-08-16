@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 69351984,
+      "name": "Metalfoes Volflame",
+      "typeline": [
+        "Psychic",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 other face-up card you control; destroy it, and if you do, Set 1 \"Metalfoes\" Spell/Trap directly from your Deck.\n\n[ Monster Effect ] \n''Roasting red rockets boost its blazing, bright-blast burners to liquified lava levels. Vanquisher of the Vanisher!''",
+      "race": "Psychic",
+      "pend_desc": "Once per turn: You can target 1 other face-up card you control; destroy it, and if you do, Set 1 \"Metalfoes\" Spell/Trap directly from your Deck.",
+      "monster_desc": "''Roasting red rockets boost its blazing, bright-blast burners to liquified lava levels. Vanquisher of the Vanisher!''",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Metalfoes",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metalfoes-volflame-5835",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN079",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN103",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69351984,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69351984.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69351984.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69351984.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.10",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Metalphosis Volflame",
+          "views": 103670,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12423,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

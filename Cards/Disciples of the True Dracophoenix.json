@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 75425320,
+      "name": "Disciples of the True Dracophoenix",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You can target 3 \"True Draco\" and/or \"True King\" cards in your GY; shuffle them into the Deck, then draw 1 card. During your Main Phase, you can: Immediately after this effect resolves, Tribute Summon 1 \"True Draco\" or \"True King\" monster face-up. If this card is sent from the Spell & Trap Zone to the GY: You can target 1 Spell/Trap on the field; destroy it. You can only use each effect of \"Disciples of the True Dracophoenix\" once per turn.",
+      "race": "Continuous",
+      "archetype": "True Draco",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/disciples-of-the-true-dracophoenix-8392",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN169",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75425320,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75425320.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75425320.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75425320.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "3.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 267795,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12969,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

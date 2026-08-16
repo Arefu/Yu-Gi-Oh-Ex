@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 66719324,
+      "name": "Rain of Mercy",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Increases the Life Points of both players by 1000 points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rain-of-mercy-5603",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN180",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.14"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66719324,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66719324.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66719324.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66719324.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.11",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 157834,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5151,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

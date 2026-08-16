@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 45379225,
+      "name": "Psychic Lifetrancer",
+      "typeline": [
+        "Psychic",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn, you can remove from play 1 Psychic-Type monster from your Graveyard to gain 1200 Life Points.",
+      "race": "Psychic",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-lifetrancer-3867",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45379225,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45379225.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45379225.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45379225.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.77",
+          "tcgplayer_price": "1.32",
+          "ebay_price": "2.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 159437,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7900,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 53573406,
+      "name": "Masked Chameleon",
+      "typeline": [
+        "Reptile",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned if you control a Level 5 or higher monster. When this card is Normal Summoned: You can target 1 monster with 0 DEF in your Graveyard; Special Summon that target in face-up Defense Position. Its effects are negated. You cannot Special Summon any other monsters, except from the Extra Deck, during the turn you activate this effect.",
+      "race": "Reptile",
+      "atk": 1600,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-chameleon-4565",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN091",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53573406,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53573406.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53573406.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53573406.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.82",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.00",
+          "amazon_price": "4.18",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59865,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10641,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

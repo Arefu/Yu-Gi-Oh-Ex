@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 28121403,
+      "name": "Really Eternal Rest",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Destroy all monsters equipped with an Equip Card(s).",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/really-eternal-rest-2394",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN212",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Eight",
+          "set_code": "TU08-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28121403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28121403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28121403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28121403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66445,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5741,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

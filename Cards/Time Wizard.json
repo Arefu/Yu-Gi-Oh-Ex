@@ -1,0 +1,178 @@
+{
+  "data": [
+    {
+      "id": 71625222,
+      "name": "Time Wizard",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can toss a coin and call it. If you call it right, destroy all monsters your opponent controls. If you call it wrong, destroy as many monsters you control as possible, and if you do, take damage equal to half the total ATK those destroyed monsters had while face-up on the field.",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 400,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-wizard-6017",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN036",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.94"
+        },
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN004",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League Series 1 participation cards",
+          "set_code": "DL1-E001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "48.07"
+        },
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN060",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "30.36"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "38.16"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "391.34"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENB07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 1",
+          "set_code": "STP1-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENB03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71625222,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71625222.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71625222.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71625222.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "11.95",
+          "amazon_price": "5.76",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 527770,
+          "viewsweek": 21,
+          "upvotes": 129,
+          "downvotes": 108,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-12-01",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4022,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

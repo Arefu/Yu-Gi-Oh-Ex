@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 77848740,
+      "name": "Madolche Petingcessoeur",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in your possession is destroyed by an opponent's card and sent to your GY: Shuffle this card into the Deck. You can only use each of the following effects of \"Madolche Petingcessoeur\" once per turn.\r\n● If you have no monsters in your GY: You can Special Summon this card from your hand.\r\n● If this card is Special Summoned: You can Special Summon 1 \"Madolche\" monster from your hand or Deck, except \"Madolche Petingcessoeur\", and if you do, reduce its Level by 1, also you cannot Special Summon monsters for the rest of this turn, except \"Madolche\" monsters.",
+      "race": "Fairy",
+      "atk": 1400,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-petingcessoeur-9830",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN091",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.71"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77848740,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77848740.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77848740.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77848740.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.34",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Madolche Puddingsis",
+          "views": 311944,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14100,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

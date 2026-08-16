@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 2368215,
+      "name": "Abyss Actor - Hyper Director",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 \"Abyss Actor\" Pendulum Monster\r\nYou can target 1 card in your Pendulum Zone; Special Summon it, then place 1 \"Abyss Actor\" Pendulum Monster with a different name, from your Deck or face-up Extra Deck, to your Pendulum Zone, also you cannot Normal or Special Summon monsters for the rest of this turn, except \"Abyss Actor\" monsters. You can only use this effect of \"Abyss Actor - Hyper Director\" once per turn.",
+      "race": "Fiend",
+      "atk": 800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-hyper-director-10736",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2368215,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2368215.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2368215.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2368215.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63672,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257076,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14945,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

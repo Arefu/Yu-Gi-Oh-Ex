@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 81193865,
+      "name": "Super Strident Blaze",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Machine Fusion Monster. Your opponent cannot activate cards or effects during your Battle Phase. At the end of the Damage Step, if the equipped monster attacked an opponent's monster: You can banish 1 \"Cyber Dragon\" monster from your GY; the equipped monster can attack an opponent's monster again in a row. Your other monsters cannot attack the turn you activate this effect.",
+      "race": "Equip",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-strident-blaze-9571",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81193865,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81193865.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81193865.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81193865.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "14.44",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Eternal Evolution Burst",
+          "views": 56022,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13850,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

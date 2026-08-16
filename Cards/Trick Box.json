@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 93983867,
+      "name": "Trick Box",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a face-up \"Performage\" monster(s) you control is destroyed by battle or card effect and sent to the Graveyard: Target 1 monster your opponent controls; take control of it until the End Phase, then Special Summon 1 \"Performage\" monster from your Graveyard to your opponent's field. During the End Phase of this turn, give control of the monster Special Summoned by this effect to its owner.",
+      "race": "Normal",
+      "archetype": "Performage",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trick-box-7821",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93983867,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93983867.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93983867.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93983867.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20149,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11855,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 30691817,
+      "name": "Marincess Sea Angel",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower \"Marincess\" monster\r\nIf this card is Link Summoned: You can add 1 \"Marincess\" Spell from your Deck to your hand. You can only Link Summon \"Marincess Sea Angel\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "linkval": 1,
+      "linkmarkers": [
+        "Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-sea-angel-10397",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN172",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Rising Rampage Special Edition",
+          "set_code": "RIRA-ENSE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.85"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30691817,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30691817.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30691817.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30691817.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 154890,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010042,
+          "tcg_date": "2019-09-12",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14669,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

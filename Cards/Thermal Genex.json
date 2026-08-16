@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 6588580,
+      "name": "Thermal Genex",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Genex Controller\" + 1 or more non-Tuner FIRE monsters\nThis card gains 200 ATK for each FIRE monster in your Graveyard. If this card destroys an opponent's monster by battle, inflict 200 damage to your opponent for each \"Genex\" monster in your Graveyard.",
+      "race": "Machine",
+      "atk": 2400,
+      "def": 1200,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thermal-genex-575",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN034",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6588580,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6588580.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6588580.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6588580.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.81",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "1.00",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23918,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 11,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-09-22",
+          "konami_id": 7971,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

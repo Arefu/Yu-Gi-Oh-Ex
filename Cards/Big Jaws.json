@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 51254277,
+      "name": "Big Jaws",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Battle Phase, if this card attacked: Banish it.",
+      "race": "Fish",
+      "atk": 1800,
+      "def": 300,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/big-jaws-4359",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN165",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN165",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN002",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN006",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51254277,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51254277.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51254277.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51254277.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58164,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9622,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

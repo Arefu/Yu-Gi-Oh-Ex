@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 92720564,
+      "name": "Morphtronic Boomboxen",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "● While in Attack Position, this card can attack twice during each Battle Phase.\n● Once per turn, while in Defense Position, when a face-up \"Morphtronic\" monster you control is targeted for an attack: You can negate the attack.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-boomboxen-7717",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN052",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "6.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92720564,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92720564.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92720564.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92720564.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "3.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72212,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7877,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

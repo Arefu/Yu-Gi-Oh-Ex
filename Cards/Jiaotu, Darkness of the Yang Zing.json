@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 25935625,
+      "name": "Jiaotu, Darkness of the Yang Zing",
+      "typeline": [
+        "Wyrm",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed by battle or card effect and sent to your Graveyard: You can Special Summon 1 \"Yang Zing\" monster from your Deck in Attack Position, except \"Jiaotu, Darkness of the Yang Zing\". If you control no other monsters: You can send 2 \"Yang Zing\" cards from your hand to the Graveyard; Special Summon 1 \"Yang Zing\" monster with 0 ATK and 1 \"Yang Zing\" monster with 0 DEF from your Deck, but banish them during the End Phase. You can only use 1 \"Jiaotu, Darkness of the Yang Zing\" effect per turn, and only once that turn.",
+      "race": "Wyrm",
+      "atk": 0,
+      "def": 2000,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Yang Zing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jiaotu-darkness-of-the-yang-zing-2235",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN151",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25935625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25935625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25935625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25935625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.66",
+          "tcgplayer_price": "1.43",
+          "ebay_price": "3.64",
+          "amazon_price": "8.18",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89608,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11364,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

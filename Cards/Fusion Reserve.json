@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 66127916,
+      "name": "Fusion Reserve",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Reveal 1 Fusion Monster in your Extra Deck, add 1 of the Fusion Materials whose name is specifically listed on that card from your Deck to your hand, then you can add 1 \"Polymerization\" from your Graveyard to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusion-reserve-5559",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN185",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.64"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENK37",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN078",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66127916,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66127916.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66127916.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66127916.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111976,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11410,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

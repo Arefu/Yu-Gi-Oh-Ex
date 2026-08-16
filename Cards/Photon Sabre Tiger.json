@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 80495985,
+      "name": "Photon Sabre Tiger",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Flip Summoned: You can add 1 \"Photon Sabre Tiger\" from your Deck to your hand. If you do not control another \"Photon Sabre Tiger\", this card loses 800 ATK.",
+      "race": "Beast",
+      "atk": 2000,
+      "def": 300,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-sabre-tiger-6748",
+      "card_sets": [
+        {
+          "set_name": "Egyptian God Deck: Obelisk the Tormentor",
+          "set_code": "EGO1-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80495985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80495985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80495985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80495985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "1.75",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67987,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9864,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

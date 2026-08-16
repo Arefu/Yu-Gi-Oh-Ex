@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 12950294,
+      "name": "Speedburst Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you take effect damage (except during the Damage Step): You can Special Summon this card from your hand, then inflict damage to your opponent equal to the damage you took, and if you do, you gain LP equal to half that damage you inflicted. When this card is Tribute Summoned: You can add 2 \"Rokket\" monsters with different names from your Deck to your hand. You can only use each effect of \"Speedburst Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 600,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedburst-dragon-9810",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12950294,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12950294.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12950294.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12950294.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73378,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14083,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

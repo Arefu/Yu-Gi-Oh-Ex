@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 45644898,
+      "name": "Master with Eyes of Blue",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 Level 1 LIGHT Tuner in your GY; add it to your hand. You can shuffle this card from your GY into the Deck, then target 1 Effect Monster you control; send it to the GY, and if you do, Special Summon 1 \"Blue-Eyes\" monster from your GY, other than the sent monster. You can only use this effect of \"Master with Eyes of Blue\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 300,
+      "def": 1200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-with-eyes-of-blue-3888",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENK08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Blue-Eyes White Destiny",
+          "set_code": "SDWD-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45644898,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45644898.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45644898.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45644898.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.79",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 377576,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12293,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

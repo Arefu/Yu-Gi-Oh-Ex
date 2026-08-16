@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 8763963,
+      "name": "Beelzeus of the Diabolic Dragons",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 DARK Tuner + 2+ non-Tuner monsters\r\nCannot be destroyed by battle or card effects. Other monsters you control cannot attack. Once per turn: You can target 1 monster your opponent controls; any battle damage your opponent takes from attacks involving this card this turn is halved, also, change that monster's ATK to 0, and if you do, gain LP equal to its original ATK.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beelzeus-of-the-diabolic-dragons-742",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB35",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's volume 8 promotional card",
+          "set_code": "YF08-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8763963,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8763963.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8763963.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8763963.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151984,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 7,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-06",
+          "ocg_date": "2014-10-03",
+          "konami_id": 11514,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

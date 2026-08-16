@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 29116732,
+      "name": "Daybreaker",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned: You can Special Summon 1 \"Daybreaker\" from your hand.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/daybreaker-2469",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN003",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN002",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29116732,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29116732.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29116732.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29116732.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52519,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9730,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

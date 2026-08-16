@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": 66015185,
+      "name": "Twin Triangle Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Level 4 or lower Dragon monsters, except Tokens\r\nWhen this card is Link Summoned: You can pay 500 LP, then target 1 Level 5 or higher monster in your GY; Special Summon it to your zone this card points to, but it cannot attack this turn, also it has its effects negated.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twin-triangle-dragon-8738",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN134",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN036",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN036",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66015185,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66015185.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66015185.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66015185.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.89",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 130933,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13262,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

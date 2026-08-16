@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 64961254,
+      "name": "Goddess Verdande's Guidance",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: If all monsters you control are \"Valkyrie\" monsters (min. 1), you can add 1 \"Goddess Urd's Verdict\" from your Deck to your hand. Once per turn: You can declare 1 type of card (Monster, Spell, or Trap); reveal the top card of your opponent's Deck and if it was the declared type, they Set it to their field. Otherwise, they add it to their hand. You can only activate 1 \"Goddess Verdande's Guidance\" per turn.",
+      "race": "Continuous",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goddess-verdande-s-guidance-9752",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.6"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64961254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64961254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64961254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64961254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57818,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14000,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

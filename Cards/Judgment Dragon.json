@@ -1,0 +1,154 @@
+{
+  "data": [
+    {
+      "id": 57774843,
+      "name": "Judgment Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having 4 or more \"Lightsworn\" monsters with different names in your GY. You can pay 1000 LP; destroy all other cards on the field. Once per turn, during your End Phase: Send the top 4 cards of your Deck to the GY.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2600,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/judgment-dragon-4917",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack Tournament Prize Cards",
+          "set_code": "BATT-EN017",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.56"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN016",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN249",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.73"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN026",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN072",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "4.51"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN196",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN196",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN104",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Turbo Pack: Booster One",
+          "set_code": "TU01-EN000",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57774843,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57774843.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57774843.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57774843.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "250.00",
+          "amazon_price": "2.71",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 408021,
+          "viewsweek": 42,
+          "upvotes": 43,
+          "downvotes": 16,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7599,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

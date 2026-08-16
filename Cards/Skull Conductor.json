@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62782218,
+      "name": "Skull Conductor",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is face-up on the field at the end of the Battle Phase: Destroy this face-up card. You can send this card from your hand to the Graveyard; Special Summon up to 2 Zombie-Type monsters from your hand whose combined ATK is exactly 2000.",
+      "race": "Zombie",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-conductor-5301",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN098",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN209",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62782218,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62782218.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62782218.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62782218.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41830,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-03-26",
+          "konami_id": 8271,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 30068120,
+      "name": "Edge Imp Sabres",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your GY: You can place 1 card from your hand on the top of the Deck; Special Summon this card in Defense Position. You can only use this effect of \"Edge Imp Sabres\" once per turn.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/edge-imp-sabres-2544",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.09"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN022",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion O",
+          "set_code": "LART-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS02",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "15.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30068120,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30068120.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30068120.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30068120.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "2.29",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 282462,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11346,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

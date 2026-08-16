@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 3146695,
+      "name": "Psychic Reactor",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control a Psychic-Type monster: Apply this effect to all Psychic-Type monsters you currently control, for the rest of this turn. When a Psychic-Type monster you control battles an opponent's monster, after damage calculation: Banish that Psychic-Type monster, also banish that opponent's monster.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-reactor-286",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN222",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN222",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3146695,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3146695.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3146695.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3146695.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21086,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9542,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

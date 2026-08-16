@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 93124273,
+      "name": "Samurai Cavalry of Reptier",
+      "typeline": [
+        "Dinosaur",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "At the start of the Damage Step, if this card attacks an opponent's face-up monster that is not a Pendulum Monster: You can destroy that monster.",
+      "race": "Dinosaur",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/samurai-cavalry-of-reptier-7749",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos Sneak Peek Participation Card",
+          "set_code": "DOCS-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93124273,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93124273.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93124273.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93124273.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28328,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-31",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12098,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

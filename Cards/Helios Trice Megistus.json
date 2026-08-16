@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 17286057,
+      "name": "Helios Trice Megistus",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card by Tributing 1 \"Helios Duo Megistus\". This card's ATK and DEF are each equal to the number of removed from play monsters x 300. After this card attacks, it can attack once more if your opponent controls a monster. If this card is destroyed by battle and sent to the Graveyard, Special Summon it during the End Phase and it gains 500 ATK and DEF.",
+      "race": "Pyro",
+      "atk": -1,
+      "def": -1,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/helios-trice-megistus-1498",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17286057,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17286057.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17286057.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17286057.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "6.88",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67588,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2006-02-23",
+          "konami_id": 6648,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

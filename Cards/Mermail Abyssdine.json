@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 74298287,
+      "name": "Mermail Abyssdine",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is added from your Deck or Graveyard to your hand by a card effect: You can Special Summon this card from your hand. You must control a \"Mermail\" monster to activate and to resolve this effect. When this card is Special Summoned by the effect of a \"Mermail\" monster: You can target 1 Level 3 or lower \"Mermail\" monster in your Graveyard; Special Summon that target. You can only use 1 \"Mermail Abyssdine\" effect per turn, and only once that turn.",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 200,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Mermail",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mermail-abyssdine-6245",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74298287,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74298287.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74298287.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74298287.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.06",
+          "tcgplayer_price": "1.50",
+          "ebay_price": "1.98",
+          "amazon_price": "2.39",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56720,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10391,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 17078030,
+      "name": "Wall of Revealing Light",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate by paying any multiple of 1000 Life Points. Monsters your opponent controls cannot attack if their ATK is less than or equal to the amount you paid.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wall-of-revealing-light-1474",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.3"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN162",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN046",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17078030,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17078030.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17078030.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17078030.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "1.49",
+          "amazon_price": "5.68",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 289499,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5990,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

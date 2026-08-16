@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 23289281,
+      "name": "Karate Man",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can double the original ATK of this card once per turn. If you used this effect, destroy this card during the End Phase.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/karate-man-2006",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.84"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.83"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        },
+        {
+          "set_name": "Tournament Pack 4",
+          "set_code": "TP4-013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23289281,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23289281.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23289281.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23289281.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.60",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 173349,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4919,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

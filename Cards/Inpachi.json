@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 97923414,
+      "name": "Inpachi",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A log that attacks lost travelers in the forest. Originally a big tree, it was cut down and possessed by a wicked spirit.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 1900,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inpachi-8139",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97923414,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97923414.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97923414.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97923414.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81667,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2004-09-23",
+          "konami_id": 5508,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

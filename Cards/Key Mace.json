@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 1929294,
+      "name": "Key Mace",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Enemies' hearts will melt at the sight of this small fairy's cuteness.",
+      "race": "Fairy",
+      "atk": 400,
+      "def": 300,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/key-mace-170",
+      "card_sets": [
+        {
+          "set_name": "Turbo Pack: Booster Four",
+          "set_code": "TU04-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1929294,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1929294.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1929294.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1929294.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.76",
+          "tcgplayer_price": "0.71",
+          "ebay_price": "2.49",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38586,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-14",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4198,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

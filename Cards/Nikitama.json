@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 24701235,
+      "name": "Nikitama",
+      "typeline": [
+        "Fairy",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. During the End Phase of the turn this card is Normal Summoned or flipped face-up: Return it to the hand. During the turn this card was Normal Summoned or flipped face-up, you can Normal Summon 1 Spirit monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) When this card is sent to the Graveyard: Draw 1 card. You must control a Spirit monster to activate and to resolve this effect.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nikitama-2136",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24701235,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24701235.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24701235.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24701235.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.67",
+          "tcgplayer_price": "3.02",
+          "ebay_price": "0.99",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76426,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10923,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

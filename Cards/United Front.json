@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 86474024,
+      "name": "United Front",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Trap Card is activated while you control 2 or more face-up monsters with the same Level: Negate the activation and destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/united-front-7244",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN075",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86474024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86474024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86474024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86474024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20044,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9692,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

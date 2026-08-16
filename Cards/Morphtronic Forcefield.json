@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 77229910,
+      "name": "Morphtronic Forcefield",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Negate the activation of a Spell or Trap Card that would destroy a face-up \"Morphtronic\" monster you control and destroy it. Add 1 \"Morphtronic\" card from your Deck to your hand.",
+      "race": "Counter",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-forcefield-6498",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77229910,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77229910.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77229910.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77229910.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.76",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35088,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8067,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

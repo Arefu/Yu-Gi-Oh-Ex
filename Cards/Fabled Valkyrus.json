@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 54048462,
+      "name": "Fabled Valkyrus",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Fabled\" Tuner + 1+ non-Tuner monsters\r\nOnce per turn: You can discard 1 Fiend monster; draw 1 card.",
+      "race": "Fiend",
+      "atk": 2900,
+      "def": 1700,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Fabled",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fabled-valkyrus-4602",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN086",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN056",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN144",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN144",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54048462,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54048462.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54048462.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54048462.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "5.01",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51263,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8117,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

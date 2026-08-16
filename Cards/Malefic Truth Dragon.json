@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 37115575,
+      "name": "Malefic Truth Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect, and cannot be Special Summoned by other ways. If a \"Malefic\" monster you control, except \"Malefic Truth Dragon\", is destroyed by battle or by card effect: You can pay half your Life Points; Special Summon this card from your hand or Graveyard. There can only be 1 \"Malefic\" monster on the field. If there is no face-up Field Spell Card on the field, destroy this card. If this card destroys an opponent's monster by battle: Destroy all face-up monsters your opponent controls.",
+      "race": "Dragon",
+      "atk": 5000,
+      "def": 5000,
+      "level": 12,
+      "attribute": "DARK",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-truth-dragon-3139",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2012 Wave 2",
+          "set_code": "CT09-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.19"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 9, Issue 3 promotional card",
+          "set_code": "JUMP-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14.32"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN044",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37115575,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37115575.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37115575.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37115575.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.00",
+          "amazon_price": "3.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91293,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 11,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-10-26",
+          "ocg_date": "2010-04-21",
+          "konami_id": 9042,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

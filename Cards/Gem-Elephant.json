@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 19019586,
+      "name": "Gem-Elephant",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can return this face-up card on the field to the hand. During damage calculation, if this card attacked or was attacked: You can send 1 Normal Monster from your hand to the Graveyard; this card gains 1000 DEF.",
+      "race": "Rock",
+      "atk": 400,
+      "def": 1900,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-elephant-1641",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN112",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19019586,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19019586.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19019586.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19019586.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36211,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9642,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

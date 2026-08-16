@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 59546797,
+      "name": "Juragedo",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the Battle Step (Quick Effect): You can Special Summon this card from your hand, and if you do, gain 1000 LP. You can only use this effect of \"Juragedo\" once per turn. (Quick Effect): You can Tribute this card, then target 1 face-up monster you control; it gains 1000 ATK until the end of the next turn.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/juragedo-5059",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59546797,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59546797.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59546797.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59546797.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 193691,
+          "viewsweek": 22,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-06-19",
+          "ocg_date": "2015-06-06",
+          "konami_id": 5636,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

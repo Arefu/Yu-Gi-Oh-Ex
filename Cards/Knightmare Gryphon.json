@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 65330383,
+      "name": "Knightmare Gryphon",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters with different names\r\nIf this card is Link Summoned: You can discard 1 card, then target 1 Spell/Trap in your GY; Set it to your field, but it cannot be activated this turn, then, if this card was co-linked when this effect was activated, you can draw 1 card. You can only use this effect of \"Knightmare Gryphon\" once per turn. Special Summoned monsters on the field cannot activate their effects, unless they are linked.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Knightmare",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knightmare-gryphon-9236",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.28"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 65330383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65330383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65330383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65330383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Troymare Gryphon",
+          "views": 722639,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13602,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

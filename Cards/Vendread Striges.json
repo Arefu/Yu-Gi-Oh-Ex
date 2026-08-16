@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 49477180,
+      "name": "Vendread Striges",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY: You can reveal 1 \"Vendread\" card in your hand; Special Summon this card, but banish it when it leaves the field. A \"Vendread\" monster Ritual Summoned using this card on the field gains the following effect. You can only use each of the preceding effects of \"Vendread Striges\" once per turn.\r\n● After damage calculation, if this card battled an opponent's monster: You can draw 1 card, then discard 1 card.",
+      "race": "Zombie",
+      "atk": 500,
+      "def": 2000,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vendread-striges-9000",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49477180,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49477180.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49477180.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49477180.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "3.00",
+          "amazon_price": "1.56",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Vendread Strix",
+          "views": 77830,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13363,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

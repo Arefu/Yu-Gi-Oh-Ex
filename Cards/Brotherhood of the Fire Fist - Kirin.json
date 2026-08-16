@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 89856523,
+      "name": "Brotherhood of the Fire Fist - Kirin",
+      "typeline": [
+        "Beast-Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 FIRE Tuner + 1 or more non-Tuner \"Fire Fist\" monsters\nWhen this card is Synchro Summoned: You can Set 1 \"Fire Formation\" Spell/Trap Card directly from your Deck. All monsters your opponent controls lose 100 ATK for each face-up Spell/Trap Card you control.",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-kirin-7508",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89856523,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89856523.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89856523.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89856523.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54569,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10645,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 87259933,
+      "name": "Crystal Conclave",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, if a face-up \"Crystal Beast\" monster(s) you control is destroyed by battle or card effect: You can Special Summon 1 \"Crystal Beast\" monster from your Deck. You can send this face-up card from the field to the GY, then target 1 \"Crystal Beast\" card you control and 1 card on the field; return them to the hand. You cannot activate these effects in the same Chain.",
+      "race": "Continuous",
+      "archetype": "Crystal Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystal-conclave-7301",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENF20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87259933,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87259933.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87259933.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87259933.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Crystal Hoard",
+          "views": 195288,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11604,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

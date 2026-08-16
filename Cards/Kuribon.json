@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 47432275,
+      "name": "Kuribon",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if this card is attacked by your opponent's monster: You can activate this effect; you take no battle damage from that battle, your opponent gains LP equal to the attacking monster's ATK, also you return this card to your hand.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kuribon-4047",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN052",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 28",
+          "set_code": "OP28-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2019)",
+          "set_code": "AC19-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47432275,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47432275.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47432275.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47432275.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "2.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63995,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8292,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

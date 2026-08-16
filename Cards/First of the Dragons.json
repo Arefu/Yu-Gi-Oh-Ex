@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 10817524,
+      "name": "First of the Dragons",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 Normal Monsters\nMust be Fusion Summoned and cannot be Special Summoned by other ways. You can only control 1 \"First of the Dragons\". This card cannot be destroyed by battle, except by battle with a Normal Monster, and is unaffected by other monsters' effects.",
+      "race": "Dragon",
+      "atk": 2700,
+      "def": 2000,
+      "level": 9,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/first-of-the-dragons-934",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN162",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Advanced Demo Deck Extra Pack",
+          "set_code": "DEM4-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENK41",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.87"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS08",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "18.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10817524,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10817524.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10817524.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10817524.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "4.77",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 310311,
+          "viewsweek": 21,
+          "upvotes": 26,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11382,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

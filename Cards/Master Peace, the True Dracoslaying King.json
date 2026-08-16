@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 21377582,
+      "name": "Master Peace, the True Dracoslaying King",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "To Tribute Summon this card face-up, you can Tribute Continuous Spell/Trap Card(s) you control, as well as monsters. Unaffected by the effects of cards with the same card type (Monster, Spell, and/or Trap) as the original card type of the cards Tributed for its Tribute Summon. Once per turn, during either player's turn, if you control this Tribute Summoned monster: You can banish 1 Continuous Spell/Trap Card from your Graveyard, then target 1 other card on the field; destroy it.",
+      "race": "Wyrm",
+      "atk": 2950,
+      "def": 2950,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "True Draco",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-peace-the-true-dracoslaying-king-8374",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN127",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN283",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN283",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21377582,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21377582.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21377582.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21377582.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "18.65",
+          "amazon_price": "32.95",
+          "coolstuffinc_price": "13.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 164220,
+          "viewsweek": 0,
+          "upvotes": 28,
+          "downvotes": 107,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12938,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

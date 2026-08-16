@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 74163487,
+      "name": "Restoration Point Guard",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Cyberse monsters\r\nOnce per turn, if another Link Monster is Link Summoned: This card cannot be destroyed by battle or card effects for the rest of this turn. If a Link Monster, that was Link Summoned using this card as material, is destroyed by an opponent's card effect, while this card is in the GY (except during the Damage Step): You can Special Summon this card. You can only use this effect of \"Restoration Point Guard\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/restoration-point-guard-9375",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74163487,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74163487.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74163487.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74163487.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Restoration Pointguard",
+          "views": 30502,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13753,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

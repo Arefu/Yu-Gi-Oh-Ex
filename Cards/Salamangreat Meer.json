@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 67225377,
+      "name": "Salamangreat Meer",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is added to your hand, except by drawing it for your normal draw: You can reveal this card; Special Summon it from your hand. If this card is in your hand: You can discard 1 other \"Salamangreat\" card; Special Summon this card from your hand. You can only use each effect of \"Salamangreat Meer\" once per turn.",
+      "race": "Cyberse",
+      "atk": 800,
+      "def": 600,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-meer-9623",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN153",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67225377,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67225377.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67225377.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67225377.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134123,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13889,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

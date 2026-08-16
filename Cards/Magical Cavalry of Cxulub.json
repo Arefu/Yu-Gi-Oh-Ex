@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 23220863,
+      "name": "Magical Cavalry of Cxulub",
+      "typeline": [
+        "Dinosaur",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "This card is unaffected by monsters' activated effects, except Pendulum Monsters'.",
+      "race": "Dinosaur",
+      "atk": 1500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-cavalry-of-cxulub-1998",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories Sneak Peek Participation Card",
+          "set_code": "SHVI-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23220863,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23220863.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23220863.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23220863.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20737,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-04-30",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12383,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 58600555,
+      "name": "Digital Bug Corebage",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 or more Level 5 LIGHT Insect-Type monsters\nYou can also Xyz Summon this card by detaching 2 Xyz Materials from a Rank 3 or 4 Insect-Type Xyz Monster you control, then using that Xyz Monster as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) Once per turn: You can detach 1 Xyz Material from this card, then target 1 Defense Position monster your opponent controls; shuffle it into the Deck. Once per turn, if the battle position of a monster(s) on the field is changed (except during the Damage Step): You can attach 1 Insect-Type monster from your Graveyard to this card as Xyz Material.",
+      "race": "Insect",
+      "atk": 2200,
+      "def": 1800,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Digital Bug",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/digital-bug-corebage-4983",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58600555,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58600555.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58600555.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58600555.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67359,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12327,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

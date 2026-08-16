@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "id": 52824910,
+      "name": "Kaiser Glider",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by battle with a monster that has the same ATK. If this card is destroyed and sent to the Graveyard: Target 1 monster on the field; return that target to the hand.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kaiser-glider-4498",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.36"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN213",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Saber Force Starter Deck",
+          "set_code": "YS15-ENF04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Saga of Blue-Eyes White Dragon Structure Deck",
+          "set_code": "SDBE-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52824910,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52824910.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52824910.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52824910.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.02",
+          "ebay_price": "1.35",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 287373,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5353,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

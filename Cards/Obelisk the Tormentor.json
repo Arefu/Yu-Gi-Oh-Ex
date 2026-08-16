@@ -1,0 +1,244 @@
+{
+  "data": [
+    {
+      "id": 10000000,
+      "name": "Obelisk the Tormentor",
+      "typeline": [
+        "Divine-Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Requires 3 Tributes to Normal Summon (cannot be Normal Set). This card's Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Neither player can target this card with card effects. Once per turn, during the End Phase, if this card was Special Summoned: Send it to the GY. You can Tribute 2 monsters; destroy all monsters your opponent controls. This card cannot declare an attack the turn this effect is activated.",
+      "race": "Divine-Beast",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DIVINE",
+      "archetype": "Egyptian God",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/obelisk-the-tormentor-847",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tins",
+          "set_code": "CT13-EN002",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.87"
+        },
+        {
+          "set_name": "2019 Gold Sarcophagus Tin",
+          "set_code": "TN19-EN007",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "3.69"
+        },
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN125",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN021",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Egyptian God Deck: Obelisk the Tormentor",
+          "set_code": "EGO1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.78"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN030",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN064",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "57.32"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN064",
+          "set_rarity": "Ultra Rare (Pharaoh's Rare)",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENS02",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.36"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN030",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN230",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN230",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN116",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN116",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN129",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN129",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 8, Issue 1 promotional card",
+          "set_code": "JUMP-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.71"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN202",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.35"
+        },
+        {
+          "set_name": "WSJ Jump Pack Spring 2017 promotional card",
+          "set_code": "JMPS-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "30.3"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Blu-ray & DVD promotional card",
+          "set_code": "MVPC-EN001",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENSV5",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.77"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Theater distribution cards",
+          "set_code": "MVPC-EN001",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "13.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10000000,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10000000.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10000000.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10000000.jpg"
+        },
+        {
+          "id": 10000001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10000001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10000001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10000001.jpg"
+        },
+        {
+          "id": 10000002,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10000002.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10000002.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10000002.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "2.49",
+          "amazon_price": "3.34",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 741975,
+          "viewsweek": 21,
+          "upvotes": 214,
+          "downvotes": 39,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Obelisk the Tormentor",
+          "tcg_date": "2010-01-01",
+          "ocg_date": "2008-12-20",
+          "konami_id": 4998,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 39392286,
+      "name": "Harpie Perfumer",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Harpie Lady\" while on the field or in the GY. If this card is Normal or Special Summoned: You can add 1 Spell/Trap from your Deck to your hand that specifically lists the card \"Harpie Lady Sisters\" in its text. If you controlled a Level 5 or higher \"Harpie\" monster when you activated this effect, you can also add a second such card, with a different name from the first. You can only use this effect of \"Harpie Perfumer\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 1400,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-perfumer-9776",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN076",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "11.85"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39392286,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39392286.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39392286.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39392286.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "19.99",
+          "amazon_price": "16.98",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 267744,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14165,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

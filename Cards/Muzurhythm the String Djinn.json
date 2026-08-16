@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 26563200,
+      "name": "Muzurhythm the String Djinn",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nWhen a \"Djinn\" Xyz Monster you control is attacking an opponent's monster, during the Damage Step: You can detach 1 Xyz Material from this card; the attacking monster's ATK is doubled until the End Phase. You can only use this effect of \"Muzurhythm the String Djinn\" once per turn.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/muzurhythm-the-string-djinn-2278",
+      "card_sets": [
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN028",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Xyz Symphony",
+          "set_code": "YS12-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26563200,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26563200.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26563200.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26563200.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.55",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54062,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-13",
+          "ocg_date": "2012-03-17",
+          "konami_id": 10125,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

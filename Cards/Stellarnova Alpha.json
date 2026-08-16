@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 41510920,
+      "name": "Stellarnova Alpha",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated: Send 1 face-up \"tellarknight\" monster you control to the Graveyard; negate the activation, and if you do, destroy that card, then draw 1 card.",
+      "race": "Counter",
+      "archetype": "Tellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stellarnova-alpha-3551",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN113",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41510920,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41510920.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41510920.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41510920.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.03",
+          "tcgplayer_price": "8.04",
+          "ebay_price": "3.00",
+          "amazon_price": "4.50",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65813,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11280,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

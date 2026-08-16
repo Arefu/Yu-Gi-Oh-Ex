@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 77714963,
+      "name": "Yasha, the Skeletal Mayakashi",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard 1 other \"Mayakashi\" monster; Special Summon this card from your hand. You can only use this effect of \"Yasha, the Skeletal Mayakashi\" once per turn. You cannot Special Summon monsters from the Extra Deck, except \"Mayakashi\" monsters.",
+      "race": "Zombie",
+      "atk": 2000,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Mayakashi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yasha-the-skeletal-mayakashi-9732",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77714963,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77714963.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77714963.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77714963.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Skeleton Mayakashi - Yasha",
+          "views": 60421,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14037,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

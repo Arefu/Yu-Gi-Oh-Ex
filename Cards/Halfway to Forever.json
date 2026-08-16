@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 20285786,
+      "name": "Halfway to Forever",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 2 monsters in your GY; Special Summon both, but negate their effects (if any), and if you do, immediately after this effect resolves, Xyz Summon 1 LIGHT \"Utopia\" or \"Utopic\" Xyz Monster using only those 2 monsters.",
+      "race": "Normal",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/halfway-to-forever-8430",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN285",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN285",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20285786,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20285786.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20285786.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20285786.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59516,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-02-11",
+          "konami_id": 13004,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

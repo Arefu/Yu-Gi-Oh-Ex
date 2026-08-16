@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 49771608,
+      "name": "Absorbing Kid from the Sky",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys a monster and sends it to the Graveyard as a result of battle, increase your Life Points by the Level of the destroyed monster x 300 points.",
+      "race": "Fairy",
+      "atk": 1300,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/absorbing-kid-from-the-sky-4237",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN185",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49771608,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49771608.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49771608.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49771608.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82522,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6034,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 41442341,
+      "name": "Puppet Master",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned: You can pay 2000 LP, then target 2 Fiend monsters in your GY; Special Summon those targets, but they cannot attack this turn.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/puppet-master-3543",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN090",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN054",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN122",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENA12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41442341,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41442341.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41442341.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41442341.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.59",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115837,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2002-08-06",
+          "konami_id": 5482,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

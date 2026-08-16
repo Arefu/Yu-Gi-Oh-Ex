@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 24658418,
+      "name": "Galaxy Tyranno",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Galaxy\" monster you control is targeted for an attack: You can Special Summon this card from your hand in Defense Position. When Summoned this way, you can: Immediately after this effect resolves, Xyz Summon 1 \"Galaxy\" Xyz Monster, using only \"Galaxy\" monsters you control.",
+      "race": "Dinosaur",
+      "atk": 2000,
+      "def": 0,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-tyranno-2129",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24658418,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24658418.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24658418.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24658418.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.95",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47819,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11032,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

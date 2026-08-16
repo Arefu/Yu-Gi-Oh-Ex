@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 2204038,
+      "name": "Valkyrie Brunhilde",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Unaffected by your opponent's Spell effects. Gains 500 ATK for each monster your opponent controls. When an opponent's monster declares an attack: You can have this card lose exactly 1000 DEF, and if you do, your \"Valkyrie\" monsters cannot be destroyed by battle this turn.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrie-brunhilde-9747",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "13.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2204038,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2204038.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2204038.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2204038.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "11.09",
+          "tcgplayer_price": "30.31",
+          "ebay_price": "3.00",
+          "amazon_price": "13.52",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80934,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13995,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 6795211,
+      "name": "Teleport",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, if your opponent controls a monster and you control no monsters, you can pay 800 Life Points to Special Summon 1 Psychic-Type monster from your hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/teleport-586",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6795211,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6795211.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6795211.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6795211.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.49",
+          "amazon_price": "4.56",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45981,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7911,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

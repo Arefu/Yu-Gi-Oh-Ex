@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 92693205,
+      "name": "Geargianchor",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can change this card to face-down Defense Position. If this card is flipped face-up: You can destroy monsters on the field, up to the number of other \"Geargia\" monsters you currently control.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Geargia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geargianchor-7715",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92693205,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92693205.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92693205.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92693205.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28395,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11869,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

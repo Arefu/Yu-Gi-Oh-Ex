@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 94973028,
+      "name": "Mecha Phantom Beast Coltwing",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned: Special Summon 2 \"Mecha Phantom Beast Tokens\" (Machine-Type/WIND/Level 3/ATK 0/DEF 0). You must control another \"Mecha Phantom Beast\" monster to activate and to resolve this effect. This card's Level is increased by the total Levels of all \"Mecha Phantom Beast Tokens\" you control. While you control a Token, this card cannot be destroyed by battle or card effects. Once per turn: You can Tribute 2 Tokens, then target 1 card your opponent controls; destroy that target, and if you do, banish it.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-coltwing-7905",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN103",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN065",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94973028,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94973028.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94973028.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94973028.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.50",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 240037,
+          "viewsweek": 84,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10627,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

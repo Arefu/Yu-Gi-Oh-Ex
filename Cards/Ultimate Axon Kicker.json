@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40101111,
+      "name": "Ultimate Axon Kicker",
+      "typeline": [
+        "Psychic",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Psychic-Type Synchro Monster + 1 Psychic-Type monster\r\nThis monster can only be Special Summoned by Fusion Summon (from the Extra Deck). This card cannot be destroyed by card effects. During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent. When this card destroys an opponent's monster by battle and sends it to the Graveyard, you gain Life Points equal to the destroyed monster's ATK.",
+      "race": "Psychic",
+      "atk": 2900,
+      "def": 1700,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-axon-kicker-3404",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40101111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40101111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40101111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40101111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.32",
+          "tcgplayer_price": "10.23",
+          "ebay_price": "6.89",
+          "amazon_price": "8.77",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52062,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8970,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

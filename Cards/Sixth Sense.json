@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 3280747,
+      "name": "Sixth Sense",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Declare 2 numbers from 1 to 6, then your opponent rolls a six-sided die, and if the result is one of the numbers you declared, you draw that many cards. Otherwise, send a number of cards from the top of your Deck to the Graveyard equal to the result.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sixth-sense-295",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN273",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.13"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 3280747,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3280747.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3280747.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3280747.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.79",
+          "tcgplayer_price": "9.00",
+          "ebay_price": "8.49",
+          "amazon_price": "9.94",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75425,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-10-11",
+          "ocg_date": "2003-09-19",
+          "konami_id": 5945,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

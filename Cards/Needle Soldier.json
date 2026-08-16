@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 17841097,
+      "name": "Needle Soldier",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is used as a Synchro Material Monster for a Synchro Monster, during battle between that Synchro Monster and a Defense Position monster whose DEF is lower than the ATK of that Synchro Monster, inflict the difference as Battle Damage to your opponent.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/needle-soldier-1548",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17841097,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17841097.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17841097.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17841097.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16027,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9081,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

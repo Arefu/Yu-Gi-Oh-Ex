@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 58818411,
+      "name": "Empress Mantis",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Queen of an army of giant mantises whose command moves legions.",
+      "race": "Insect",
+      "atk": 2200,
+      "def": 1400,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/empress-mantis-5000",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.44"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58818411,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58818411.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58818411.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58818411.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89330,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5203,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

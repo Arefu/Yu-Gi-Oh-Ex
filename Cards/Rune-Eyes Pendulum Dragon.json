@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 1516510,
+      "name": "Rune-Eyes Pendulum Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Odd-Eyes Pendulum Dragon\" + 1 Spellcaster-Type monster\r\nIf this card was Fusion Summoned using a Pendulum Summoned monster(s) on the field as Fusion Material, it is unaffected by your opponent's card effects this turn. Apply the appropriate effect, depending on the original Level of the monster used as Fusion Material that was not \"Odd-Eyes Pendulum Dragon\".\r\n● Level 4 or lower: This card can make up to 2 attacks on monsters during each Battle Phase.\r\n● Level 5 or higher: This card can make up to 3 attacks on monsters during each Battle Phase.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rune-eyes-pendulum-dragon-129",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN220",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN032",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1516510,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1516510.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1516510.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1516510.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "4.95",
+          "amazon_price": "3.27",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149924,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11565,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44236692,
+      "name": "Necro Linker",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card to select 1 \"Synchron\" Tuner monster in your Graveyard. Special Summon that monster. It cannot be used as a Synchro Material Monster during the turn it is Special Summoned by this effect.",
+      "race": "Fiend",
+      "atk": 600,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/necro-linker-3773",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44236692,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44236692.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44236692.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44236692.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23341,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9082,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

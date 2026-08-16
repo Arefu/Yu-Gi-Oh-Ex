@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 45311864,
+      "name": "Goblin Thief",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Inflict 500 points of damage to your opponent's Life Points and increase your Life Points by 500 points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goblin-thief-3863",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN157",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45311864,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45311864.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45311864.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45311864.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "3.35",
+          "amazon_price": "3.78",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93307,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5985,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

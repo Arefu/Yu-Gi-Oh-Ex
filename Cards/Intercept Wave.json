@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 39440937,
+      "name": "Intercept Wave",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "All Synchro Monsters on the field are changed to Defense Position. And then, return all face-up Synchro Monsters to the Extra Deck during the End Phase.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/intercept-wave-3344",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN050",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39440937,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39440937.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39440937.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39440937.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.72",
+          "tcgplayer_price": "2.21",
+          "ebay_price": "11.99",
+          "amazon_price": "3.87",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16980,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8825,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

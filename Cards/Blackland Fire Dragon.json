@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 87564352,
+      "name": "Blackland Fire Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A dragon that dwells in the depths of darkness, its vulnerability lies in its poor eyesight.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackland-fire-dragon-7327",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Five",
+          "set_code": "AP05-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.37"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.02"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87564352,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87564352.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87564352.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87564352.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.10",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 219091,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4016,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

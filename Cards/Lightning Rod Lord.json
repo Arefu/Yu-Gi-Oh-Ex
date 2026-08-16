@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 40672993,
+      "name": "Lightning Rod Lord",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Neither player can activate Spell Cards during Main Phase 1.",
+      "race": "Thunder",
+      "atk": 1800,
+      "def": 100,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightning-rod-lord-3461",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN216",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS09",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.72"
+        },
+        {
+          "set_name": "Ultimate Tournament Pack 1",
+          "set_code": "UP01-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40672993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40672993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40672993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40672993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.98",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52898,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11557,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

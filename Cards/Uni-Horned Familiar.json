@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 22318971,
+      "name": "Uni-Horned Familiar",
+      "typeline": [
+        "Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this face-up Defense Position card is selected as an attack target, you can remove from play 1 monster you control other than this card to remove this card from play. The attacking monster must attack. During your next Standby Phase, if this card was removed from play by this effect, this card returns to the field.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 1000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/uni-horned-familiar-1918",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22318971,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22318971.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22318971.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22318971.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26004,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8940,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

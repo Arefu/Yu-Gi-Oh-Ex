@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 75285069,
+      "name": "Moisture Creature",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Tribute Summon this monster by Tributing 3 monsters on the field, destroy all Spell and Trap Cards on your opponent's side of the field.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2900,
+      "level": 9,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/moisture-creature-6331",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN214",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN133",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75285069,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75285069.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75285069.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75285069.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.49",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115605,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5045,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

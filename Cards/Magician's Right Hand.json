@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 87769556,
+      "name": "Magician's Right Hand",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Negate the effect of your opponent's first Spell Card or effect that resolves each turn while you control a Spellcaster monster, and if you do, or if it did not have an effect, destroy that card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-s-right-hand-8388",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87769556,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87769556.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87769556.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87769556.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "4.00",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 322686,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12963,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

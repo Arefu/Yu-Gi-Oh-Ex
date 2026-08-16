@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 95841282,
+      "name": "Cat's Ear Tribe",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The original ATK of your opponent's monster(s) that battles with this card during his/her turn becomes 200 points during the Damage Step.",
+      "race": "Beast-Warrior",
+      "atk": 200,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cat-s-ear-tribe-7982",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95841282,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95841282.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95841282.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95841282.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82857,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5665,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

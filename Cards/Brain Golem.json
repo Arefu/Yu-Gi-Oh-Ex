@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 17313545,
+      "name": "Brain Golem",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Effects of face-up LIGHT monsters are negated. If this card destroys a LIGHT monster by battle, it can attack once again in a row.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1800,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brain-golem-1499",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17313545,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17313545.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17313545.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17313545.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.49",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24440,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8179,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

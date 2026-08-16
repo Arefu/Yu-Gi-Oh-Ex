@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 34290067,
+      "name": "Corroding Shark",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A zombie shark that can deliver its lethal curse with a spell.",
+      "race": "Zombie",
+      "atk": 1100,
+      "def": 700,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Shark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/corroding-shark-2912",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.14"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34290067,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34290067.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34290067.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34290067.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.86",
+          "tcgplayer_price": "10.87",
+          "ebay_price": "5.00",
+          "amazon_price": "13.01",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47884,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4545,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

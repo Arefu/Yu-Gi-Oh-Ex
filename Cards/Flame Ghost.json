@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 58528964,
+      "name": "Flame Ghost",
+      "typeline": [
+        "Zombie",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Skull Servant\" + \"Dissolverock\"",
+      "race": "Zombie",
+      "atk": 1000,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Skull Servant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flame-ghost-4976",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.67"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "12.15"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58528964,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58528964.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58528964.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58528964.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "1.25",
+          "amazon_price": "1.21",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 346028,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4221,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

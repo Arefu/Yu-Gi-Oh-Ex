@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 38148100,
+      "name": "Aromaseraphy Rosemary",
+      "typeline": [
+        "Plant",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nWhile your LP is higher than your opponent's, all Plant-Type monsters you control gain 500 ATK and DEF. Once per turn, if you gain LP: Target 1 face-up card your opponent controls; that face-up card has its effects negated until the end of this turn.",
+      "race": "Plant",
+      "atk": 2000,
+      "def": 900,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aromaseraphy-rosemary-3235",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38148100,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38148100.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38148100.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38148100.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.12",
+          "tcgplayer_price": "1.20",
+          "ebay_price": "2.21",
+          "amazon_price": "2.30",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182591,
+          "viewsweek": 21,
+          "upvotes": 38,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12637,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

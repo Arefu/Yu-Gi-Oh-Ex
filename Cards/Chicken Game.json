@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 67616300,
+      "name": "Chicken Game",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "The player with the lowest LP takes no damage. Once per turn, during the Main Phase: The turn player can pay 1000 LP, then activate 1 of these effects;\n● Draw 1 card.\n● Destroy this card.\n● Your opponent gains 1000 LP.\nNeither player can activate cards or effects in response to this effect's activation.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chicken-game-5681",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN067",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 26",
+          "set_code": "OP26-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 67616300,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67616300.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67616300.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67616300.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.47",
+          "tcgplayer_price": "1.07",
+          "ebay_price": "3.99",
+          "amazon_price": "4.11",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 527632,
+          "viewsweek": 42,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11851,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

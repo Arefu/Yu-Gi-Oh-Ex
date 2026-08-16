@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 47228077,
+      "name": "Vylon Pentachloro",
+      "typeline": [
+        "Machine",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 face-up \"Vylon\" monster you control; equip this card to that target, OR: Unequip this card and Special Summon it in face-up Attack Position. While equipped by this effect, if the equipped monster destroys an opponent's monster by battle: You can target 1 card your opponent controls; destroy that target. (A monster can only be equipped with 1 Union Monster at a time. If the equipped monster would be destroyed, destroy this card instead.)",
+      "race": "Machine",
+      "atk": 500,
+      "def": 400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-pentachloro-4028",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN073",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47228077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47228077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47228077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47228077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20565,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9588,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 70084224,
+      "name": "Neck Hunter",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A fiend that wields a mean sickle and fires devastating beams from its eyes.",
+      "race": "Fiend",
+      "atk": 1750,
+      "def": 1900,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neck-hunter-5896",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENA02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70084224,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70084224.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70084224.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70084224.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "4.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14091,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-05-14",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4532,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

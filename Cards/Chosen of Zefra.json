@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 98076754,
+      "name": "Chosen of Zefra",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "This card gains these effects depending on the number of face-up \"Zefra\" monsters with different names in your Extra Deck.\n● 3 or more: Monsters you control gain 100 ATK for each face-up card in any Extra Deck.\n● 5 or more: Monsters you control cannot be destroyed by an opponent's card effects.\n● 8 or more: Monsters you control cannot be targeted by an opponent's card effects.\n● 10: You can send this card to the Graveyard; shuffle all cards from your opponent's hand, field, and Graveyard into the Deck.",
+      "race": "Continuous",
+      "archetype": "Zefra",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chosen-of-zefra-8151",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls: Advance Edition",
+          "set_code": "CROS-ENAE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98076754,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98076754.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98076754.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98076754.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17394,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11746,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

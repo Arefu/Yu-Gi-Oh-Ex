@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 17994645,
+      "name": "Assault Blackwing - Sayo the Rain Hider",
+      "typeline": [
+        "Winged Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 non-Tuner monster\nIf this card is Synchro Summoned using a \"Blackwing\" monster as Material, it is treated as a Tuner while face-up on the field. Twice per turn, this card cannot be destroyed by battle.",
+      "race": "Winged Beast",
+      "atk": 800,
+      "def": 100,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-blackwing-sayo-the-rain-hider-1561",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17994645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17994645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17994645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17994645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81289,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12446,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

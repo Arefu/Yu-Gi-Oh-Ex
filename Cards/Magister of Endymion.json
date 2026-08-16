@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 66104644,
+      "name": "Magister of Endymion",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nEach time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from this card; Special Summon both this card from your Pendulum Zone and 1 face-up monster from your Extra Deck that you can place a Spell Counter on, and if you do, place 1 Spell Counter on each.\n\n[ Monster Effect ] \nYou can only Special Summon \"Magister(s) of Endymion\" once per turn. When this card declares an attack: You can place 1 Spell Counter on it. Once per opponent's turn (Quick Effect): You can remove 3 Spell Counters from your field; Special Summon 1 monster from your Deck that you can place a Spell Counter on. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone, then place the same number of Spell Counters on it that it had as a monster.",
+      "race": "Spellcaster",
+      "pend_desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from this card; Special Summon both this card from your Pendulum Zone and 1 face-up monster from your Extra Deck that you can place a Spell Counter on, and if you do, place 1 Spell Counter on each.",
+      "monster_desc": "You can only Special Summon \"Magister(s) of Endymion\" once per turn. When this card declares an attack: You can place 1 Spell Counter on it. Once per opponent's turn (Quick Effect): You can remove 3 Spell Counters from your field; Special Summon 1 monster from your Deck that you can place a Spell Counter on. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone, then place the same number of Spell Counters on it that it had as a monster.",
+      "atk": 1500,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Endymion",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magister-of-endymion-10163",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66104644,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66104644.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66104644.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66104644.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "1.08",
+          "ebay_price": "4.79",
+          "amazon_price": "2.93",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 265630,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100308003,
+          "tcg_date": "2019-04-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14441,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

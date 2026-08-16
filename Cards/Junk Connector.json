@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 37337327,
+      "name": "Junk Connector",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Effect Monsters (Warrior and/or Machine), including a Tuner\r\nOnce per turn, during the Main or Battle Phase, you can (Quick Effect): Immediately after this effect resolves, Synchro Summon 1 Synchro Monster, using only materials this card points to. If this Link Summoned card you control is destroyed by battle or opponent's card effect and sent to your GY: You can Special Summon 1 \"Junk\" Synchro Monster from your Extra Deck. (This is treated as a Synchro Summon.)",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Junk",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-connector-9174",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN010",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37337327,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37337327.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37337327.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37337327.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "4.95",
+          "amazon_price": "0.54",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71972,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13544,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

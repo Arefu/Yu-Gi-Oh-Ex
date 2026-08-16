@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 34160055,
+      "name": "Master of the Flaming Dragonswords",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a monster is Normal Summoned to your side of the field, except \"Master of the Flaming Dragonswords\": You can increase that monster's Level by 1, and this card gains 300 ATK until the End Phase.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-of-the-flaming-dragonswords-2903",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34160055,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34160055.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34160055.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34160055.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30543,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9649,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 55171412,
+      "name": "Elemental HERO Aqua Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Aqua Dolphin\"\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) Once per turn: You can discard 1 card; destroy 1 random card in your opponent's hand. During the End Phase: Shuffle this card into the Extra Deck.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-aqua-neos-4700",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.55"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55171412,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55171412.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55171412.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55171412.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.04",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "3.95",
+          "amazon_price": "85.84",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 192220,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6766,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

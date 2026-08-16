@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 66523544,
+      "name": "Superdimensional Robot Galaxy Destroyer",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 10 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; destroy all Spell and Trap Cards your opponent controls. Your opponent cannot activate Spell/Trap Cards in response to this effect's activation.",
+      "race": "Machine",
+      "atk": 5000,
+      "def": 2000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superdimensional-robot-galaxy-destroyer-5586",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN130",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66523544,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66523544.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66523544.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66523544.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "10.56",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 244265,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10174,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

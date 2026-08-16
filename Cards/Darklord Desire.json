@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 55690251,
+      "name": "Darklord Desire",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. You can Tribute Summon this card by Tributing 1 Fairy-Type monster. Once per turn: You can target 1 monster your opponent controls; this card loses exactly 1000 ATK, and if it does, send that target to the Graveyard.",
+      "race": "Fairy",
+      "atk": 3000,
+      "def": 2800,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-desire-4740",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN090",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN210",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.52"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Volume 5 promotional card",
+          "set_code": "YG05-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55690251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55690251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55690251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55690251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.00",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81814,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-10-05",
+          "ocg_date": "2009-05-01",
+          "konami_id": 8386,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

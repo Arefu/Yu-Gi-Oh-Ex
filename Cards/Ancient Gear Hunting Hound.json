@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 42878636,
+      "name": "Ancient Gear Hunting Hound",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Inflict 600 damage to your opponent. If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step. Once per turn: You can Fusion Summon 1 \"Ancient Gear\" Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Materials.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-hunting-hound-3657",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN180",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42878636,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42878636.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42878636.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42878636.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.56",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.07",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 263804,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12748,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

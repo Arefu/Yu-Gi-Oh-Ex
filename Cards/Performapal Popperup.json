@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 11481610,
+      "name": "Performapal Popperup",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send up to 3 cards from your hand to the GY; draw that many cards, then you can Special Summon up to that many monsters from your hand, with different names, that are \"Performapal\" monsters, \"Magician\" Pendulum Monsters, and/or \"Odd-Eyes\" monsters, each with a Level between the Pendulum Scales of the 2 cards in your Pendulum Zones. If you did not Special Summon by this effect, you lose 1000 LP for each card in your hand. You can only activate 1 \"Performapal Popperup\" per turn.",
+      "race": "Normal",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-popperup-10653",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN132",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11481610,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11481610.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11481610.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11481610.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Pop-Up",
+          "views": 392235,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413047,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14927,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 71095768,
+      "name": "Bujinki Ahashima",
+      "typeline": [
+        "Beast-Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with the same Level\r\nCannot be used as Link Material. You can only use each of the following effects of \"Bujinki Ahashima\" once per turn.\r\n● If this card is Link Summoned: You can Special Summon 2 monsters with the same Level, 1 from your hand and 1 from your GY, but negate their effects, and immediately after this effect resolves, Xyz Summon 1 Xyz Monster using those 2 monsters only.\r\n● If an Xyz Monster this card points to activates an effect by detaching material(s) (except during the Damage Step): You can target 1 Spell/Trap your opponent controls; destroy it.",
+      "race": "Beast-Warrior",
+      "atk": 1500,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujinki-ahashima-10741",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71095768,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71095768.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71095768.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71095768.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.80",
+          "tcgplayer_price": "2.32",
+          "ebay_price": "9.99",
+          "amazon_price": "8.17",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 252194,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257056,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14941,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

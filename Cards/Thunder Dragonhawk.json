@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 83107873,
+      "name": "Thunder Dragonhawk",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card; Special Summon 1 of your \"Thunder Dragon\" monsters that is banished or in your GY, except \"Thunder Dragonhawk\". If this card is banished, or sent from the field to the GY: You can shuffle any number of cards from your hand into the Deck, then draw the same number of cards. You can only use 1 \"Thunder Dragonhawk\" effect per turn, and only once that turn.",
+      "race": "Thunder",
+      "atk": 1800,
+      "def": 2200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Thunder Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunder-dragonhawk-9617",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN168",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN076",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83107873,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83107873.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83107873.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83107873.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Avian Thunder Dragon",
+          "views": 451952,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13907,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

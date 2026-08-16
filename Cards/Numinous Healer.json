@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 2130625,
+      "name": "Numinous Healer",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when you take damage to your Life Points. Increase your Life Points by 1000 points. Also, increase your Life Points by 500 points for each \"Numinous Healer\" card in your Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/numinous-healer-191",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-023",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E023",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "7.07"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN023",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant (25th Anniversary Edition)",
+          "set_code": "PSV-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2130625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2130625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2130625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2130625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.65",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 158922,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4946,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

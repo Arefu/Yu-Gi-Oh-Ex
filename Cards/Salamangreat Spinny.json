@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 52277807,
+      "name": "Salamangreat Spinny",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Salamangreat\" card: You can discard this card, then target 1 face-up monster on the field; it gains 500 ATK until the end of this turn. If you control a \"Salamangreat\" monster other than \"Salamangreat Spinny\" and this card is in your GY: You can Special Summon this card, but banish it when it leaves the field. You can only use each effect of \"Salamangreat Spinny\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1500,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-spinny-9935",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52277807,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52277807.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52277807.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52277807.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.79",
+          "amazon_price": "2.46",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 480021,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14241,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

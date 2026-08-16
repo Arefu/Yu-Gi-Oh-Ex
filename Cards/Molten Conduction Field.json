@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 72142276,
+      "name": "Molten Conduction Field",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send 2 \"Laval\" monsters from your Deck to the Graveyard.",
+      "race": "Normal",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/molten-conduction-field-6052",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN043",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN025",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72142276,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72142276.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72142276.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72142276.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.39",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42587,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9827,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

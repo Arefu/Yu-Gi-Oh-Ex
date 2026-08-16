@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 18446701,
+      "name": "Gagagashield",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Spellcaster monster you control; equip this card to that target. Twice per turn, it cannot be destroyed by battle or card effects.",
+      "race": "Normal",
+      "archetype": "Gagaga",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gagagashield-1600",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18446701,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18446701.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18446701.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18446701.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62484,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2011-10-15",
+          "konami_id": 9856,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

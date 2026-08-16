@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 81566151,
+      "name": "Elemental HERO Flare Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Flare Scarab\"\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) This card gains 400 ATK for each Spell/Trap Card on the field. During the End Phase: Shuffle this card into the Extra Deck.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-flare-neos-6847",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.94"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN032",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81566151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81566151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81566151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81566151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.61",
+          "tcgplayer_price": "1.98",
+          "ebay_price": "3.46",
+          "amazon_price": "4.63",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 156078,
+          "viewsweek": 0,
+          "upvotes": 26,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6767,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

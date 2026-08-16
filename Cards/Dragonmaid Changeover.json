@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 40110009,
+      "name": "Dragonmaid Changeover",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Fusion Summon 1 Dragon Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material. While this card is in your GY: You can target 1 \"Dragonmaid\" monster you control; add this card to your hand, and if you do, return that monster to the hand. You can only use this effect of \"Dragonmaid Changeover\" once per turn.",
+      "race": "Normal",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonmaid-changeover-10538",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN088",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40110009,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40110009.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40110009.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40110009.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaids' Uniform-Change",
+          "views": 508278,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423025,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14768,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

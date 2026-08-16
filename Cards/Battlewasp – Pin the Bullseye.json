@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 65899613,
+      "name": "Battlewasp - Pin the Bullseye",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an Insect monster: You can Special Summon this card from your hand. During your Main Phase: You can inflict 200 damage to your opponent for each \"Battlewasp - Pin the Bullseye\" you control. You can only use each effect of \"Battlewasp - Pin the Bullseye\" once per turn.",
+      "race": "Insect",
+      "atk": 200,
+      "def": 300,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlewasp-pin-the-bullseye-10335",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65899613,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65899613.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65899613.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65899613.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "1.69",
+          "amazon_price": "2.48",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 147664,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248034,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14567,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

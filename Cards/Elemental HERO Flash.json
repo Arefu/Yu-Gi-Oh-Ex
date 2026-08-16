@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 69572169,
+      "name": "Elemental HERO Flash",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard: You can banish this card and 3 \"Elemental HERO\" Monster Cards with different names from your Graveyard to target 1 Normal Spell Card in your Graveyard; add that target to your hand.",
+      "race": "Warrior",
+      "atk": 1100,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-flash-5851",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69572169,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69572169.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69572169.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69572169.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "1.95",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73919,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2009-08-21",
+          "konami_id": 8543,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 27978707,
+      "name": "Superheavy Samurai Flutist",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; Special Summon 1 \"Superheavy Samurai\" monster from your hand. During either player's turn, when a card or effect is activated that targets a \"Superheavy Samurai\" monster you control: You can banish this card from your Graveyard; negate the activation, and if you do, destroy that card. You can only use each effect of \"Superheavy Samurai Flutist\" once per turn.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-flutist-2381",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN197",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS01",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "13.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27978707,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27978707.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27978707.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27978707.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.24",
+          "tcgplayer_price": "0.88",
+          "ebay_price": "4.99",
+          "amazon_price": "5.77",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66480,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11527,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

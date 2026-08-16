@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 64063868,
+      "name": "Kozmo Dark Eclipser",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be targeted by an opponent's card effects. During either player's turn, when a Trap Card is activated: You can banish 1 \"Kozmo\" monster from your Graveyard; negate the activation, and if you do, destroy that card. If this card is destroyed by battle or card effect and sent to the Graveyard: You can banish this card from your Graveyard; add 1 Level 8 or lower \"Kozmo\" monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2600,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-dark-eclipser-5407",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64063868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64063868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64063868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64063868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.47",
+          "tcgplayer_price": "9.03",
+          "ebay_price": "12.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96292,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12246,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

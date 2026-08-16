@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 39402797,
+      "name": "Trident Dragion",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Dragon-Type Tuner + 1 or more non-Tuner Dragon-Type monsters\nMust be Synchro Summoned, and cannot be Special Summoned by other ways. When this card is Synchro Summoned: You can target up to 2 other cards you control; destroy those targets, and if you do, for each destroyed card, this card gains 1 additional attack during each Battle Phase this turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2800,
+      "level": 10,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trident-dragion-3341",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN147",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN237",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN043",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39402797,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39402797.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39402797.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39402797.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "10.40",
+          "tcgplayer_price": "10.17",
+          "ebay_price": "3.49",
+          "amazon_price": "5.95",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 421025,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8195,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

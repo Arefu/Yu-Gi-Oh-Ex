@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 54520292,
+      "name": "Koa'ki Meiru Ice",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Continuous Spell Card in your hand. You can send 1 card from your hand to the Graveyard to destroy 1 Special Summoned monster on the field.",
+      "race": "Aqua",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-ice-4643",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54520292,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54520292.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54520292.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54520292.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.07",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31701,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8177,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

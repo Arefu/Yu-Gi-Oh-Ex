@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 16923472,
+      "name": "Wind-Up Hunter",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 face-up \"Wind-Up\" monster, except \"Wind-Up Hunter\"; send 1 random card from your opponent's hand to the Graveyard. This effect can only be used once while this card is face-up on the field.",
+      "race": "Beast-Warrior",
+      "atk": 1600,
+      "def": 500,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-hunter-1456",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 16923472,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16923472.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16923472.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16923472.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.59",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "2.70",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42137,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9742,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

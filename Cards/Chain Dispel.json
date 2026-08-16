@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 3171055,
+      "name": "Chain Dispel",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card is activated: Destroy all cards in the controller's Deck with the same name as the activated card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chain-dispel-291",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN118",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3171055,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3171055.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3171055.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3171055.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25526,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11285,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

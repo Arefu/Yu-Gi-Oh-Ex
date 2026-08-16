@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 62121,
+      "name": "Castle of Dark Illusions",
+      "typeline": [
+        "Fiend",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: All Zombie-Type monsters gain 200 ATK and DEF. During each of your next 4 Standby Phases, each of those Zombie-Type monsters gains 200 more ATK and DEF. These effects last as long as this card is face-up on the field.",
+      "race": "Fiend",
+      "atk": 920,
+      "def": 1930,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/castle-of-dark-illusions-6",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.01"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.14"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.99",
+          "amazon_price": "2.91",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 340647,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4089,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

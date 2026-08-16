@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 81896370,
+      "name": "Swift Birdman Joe",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Tribute Summon this card by Tributing a WIND monster, return all Spell and Trap Cards on the field to the owners' hands.",
+      "race": "Winged Beast",
+      "atk": 2300,
+      "def": 1400,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swift-birdman-joe-6874",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.29"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81896370,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81896370.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81896370.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81896370.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60044,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6704,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

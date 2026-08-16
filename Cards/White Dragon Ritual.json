@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 9786492,
+      "name": "White Dragon Ritual",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Paladin of White Dragon\". You must also Tribute monsters from your hand or field whose total Levels equal 4 or more.",
+      "race": "Ritual",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-dragon-ritual-827",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN189",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9786492,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9786492.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9786492.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9786492.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "0.99",
+          "amazon_price": "1.37",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146618,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5601,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 26236560,
+      "name": "Unchained Twins - Aruha",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 card you control; you cannot Special Summon monsters for the rest of this turn, except Fiend monsters, also destroy the targeted card, and if you do, Special Summon this card from your hand. If this card on the field is destroyed by card effect, except \"Unchained Twins - Aruha\", or by battle: You can Special Summon 1 \"Unchained\" monster from your hand or Deck, except \"Unchained Twins - Aruha\". You can only use each effect of \"Unchained Twins - Aruha\" once per turn.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Unchained",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unchained-twins-aruha-10401",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN152",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN008",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26236560,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26236560.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26236560.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26236560.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.94",
+          "tcgplayer_price": "0.85",
+          "ebay_price": "0.99",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakai Douji Arha",
+          "views": 570409,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010008,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14635,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

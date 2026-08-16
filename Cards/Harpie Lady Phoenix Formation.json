@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86308219,
+      "name": "Harpie Lady Phoenix Formation",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control 3 or more \"Harpie Lady\" and/or \"Harpie Lady Sisters\": Target as many monsters your opponent controls as possible, but not more than the total number of \"Harpie Lady\" and \"Harpie Lady Sisters\" you control; destroy those targets, and if you do, inflict damage to your opponent equal to the highest original ATK among those destroyed monsters (your choice, if tied). You cannot Special Summon monsters from the Main Deck or Extra Deck, nor conduct your Battle Phase, the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-lady-phoenix-formation-7231",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World",
+          "set_code": "LC04-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.46"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86308219,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86308219.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86308219.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86308219.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79255,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-10-11",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10865,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

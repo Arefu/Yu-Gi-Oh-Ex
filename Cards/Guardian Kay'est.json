@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 9633505,
+      "name": "Guardian Kay'est",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Summoned unless you control a face-up \"Rod of Silence - Kay'est\". This card is unaffected by Spell effects and cannot be targeted for attacks, but does not prevent your opponent from attacking you directly.",
+      "race": "Sea Serpent",
+      "atk": 1000,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardian-kay-est-814",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN171",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN133",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9633505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9633505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9633505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9633505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92537,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5710,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

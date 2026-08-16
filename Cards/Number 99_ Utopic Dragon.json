@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51543904,
+      "name": "Number 99: Utopic Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 10 monsters\nYou can also Xyz Summon this card by discarding 1 \"Rank-Up-Magic\" Spell Card and using a \"Utopia\" monster you control as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) Once per turn: You can target 1 \"Number\" monster in your Graveyard; Special Summon it in Defense Position, but its effects are negated. During either player's turn, when a monster effect is activated that targets this face-up card: You can detach 1 Xyz Material from this card; negate the activation, and if you do, destroy that card.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 2000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-99-utopic-dragon-4384",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN190",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51543904,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51543904.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51543904.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51543904.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.94",
+          "tcgplayer_price": "7.22",
+          "ebay_price": "4.99",
+          "amazon_price": "27.77",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 99",
+          "views": 180027,
+          "viewsweek": 21,
+          "upvotes": 20,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-05-02",
+          "konami_id": 11305,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

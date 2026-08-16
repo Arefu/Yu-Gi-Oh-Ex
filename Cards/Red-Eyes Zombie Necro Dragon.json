@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 28240337,
+      "name": "Red-Eyes Zombie Necro Dragon",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nGains 100 ATK/DEF for each Zombie monster on the field and in the GYs. When another Zombie monster is destroyed by battle: You can Special Summon 1 Zombie monster from either GY to your field. You can only use this effect of \"Red-Eyes Zombie Necro Dragon\" once per turn.",
+      "race": "Zombie",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-zombie-necro-dragon-9742",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN133",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28240337,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28240337.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28240337.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28240337.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.83",
+          "ebay_price": "1.50",
+          "amazon_price": "5.30",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 424711,
+          "viewsweek": 21,
+          "upvotes": 16,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-01",
+          "ocg_date": "2018-09-22",
+          "konami_id": 14062,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

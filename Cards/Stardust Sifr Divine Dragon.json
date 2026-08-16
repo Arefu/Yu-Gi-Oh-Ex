@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 26268488,
+      "name": "Stardust Sifr Divine Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 2 or more non-Tuner Synchro Monsters\nMust be Synchro Summoned and cannot be Special Summoned by other ways. The first time each card you control would be destroyed each turn, by battle or card effect, it is not destroyed. Once per turn, during either player's turn, when your opponent activates a monster effect: You can negate that effect, and if you do, destroy 1 card on the field. You can banish this card from your Graveyard, then target 1 Level 8 or lower \"Stardust\" monster in your Graveyard; Special Summon it.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 4000,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Stardust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-sifr-divine-dragon-2256",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN151",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26268488,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26268488.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26268488.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26268488.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.29",
+          "tcgplayer_price": "3.29",
+          "ebay_price": "2.29",
+          "amazon_price": "54.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 492672,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2015-05-28",
+          "konami_id": 11931,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

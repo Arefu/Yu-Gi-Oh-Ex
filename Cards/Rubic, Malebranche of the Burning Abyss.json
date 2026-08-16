@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 734741,
+      "name": "Rubic, Malebranche of the Burning Abyss",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a monster that is not a \"Burning Abyss\" monster, destroy this card. Cannot be used as a Synchro Material, except for the Synchro Summon of a \"Burning Abyss\" Synchro Monster. If you control no Spell/Trap Cards: You can Special Summon this card from your hand. You can only use this effect of \"Rubic, Malebranche of the Burning Abyss\" once per turn.",
+      "race": "Fiend",
+      "atk": 100,
+      "def": 2100,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rubic-malebranche-of-the-burning-abyss-69",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN046",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 734741,
+          "image_url": "https://images.ygoprodeck.com/images/cards/734741.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/734741.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/734741.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.98",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "1.79",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101387,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11505,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

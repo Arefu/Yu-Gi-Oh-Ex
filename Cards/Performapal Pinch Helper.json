@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 36415522,
+      "name": "Performapal Pinch Helper",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, when an opponent's monster declares a direct attack: You can negate the attack, and if you do, Special Summon 1 \"Performapal\" monster from your Deck, but its effects are negated. When an attack is declared involving a monster you control and an opponent's monster: You can send this card to the Graveyard; you take no battle damage from that battle.",
+      "race": "Continuous",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-pinch-helper-3079",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yuya",
+          "set_code": "YS16-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36415522,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36415522.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36415522.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36415522.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35954,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11741,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 13026402,
+      "name": "A-Team: Trap Disposal Unit",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This effect can be used during either player's turn. When your opponent activates a Trap Card, Tribute this face-up card to negate the activation of the Trap Card and destroy it.",
+      "race": "Machine",
+      "atk": 300,
+      "def": 400,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-team-trap-disposal-unit-1122",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN033",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13026402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13026402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13026402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13026402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "4.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79090,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6202,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

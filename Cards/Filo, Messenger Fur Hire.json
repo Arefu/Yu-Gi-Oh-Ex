@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 36205132,
+      "name": "Filo, Messenger Fur Hire",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can Special Summon 1 monster \"Fur Hire\" from your hand, except \"Filo, Messenger Fur Hire\". If a monster \"Fur Hire\" is Special Summoned to your field while you control this monster (except during the Damage Step): You can target 1 monster \"Fur Hire\" in your GY; Special Summon it in Defense Position, but place it on the bottom of the Deck if it leaves the field. You can only use each effect of \"Filo, Messenger Fur Hire\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Fur Hire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/filo-messenger-fur-hire-9970",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36205132,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36205132.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36205132.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36205132.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.41",
+          "tcgplayer_price": "2.15",
+          "ebay_price": "1.25",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Philo, Messenger Fur Hire",
+          "views": 180421,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14265,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

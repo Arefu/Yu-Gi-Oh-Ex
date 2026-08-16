@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 564541,
+      "name": "Totem Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be treated as 2 Tributes for the Tribute Summon of a Dragon-Type monster. If this card is in your Graveyard during your Standby Phase and you control no monsters, you can Special Summon this card in Attack Position. You cannot activate this effect if there are any monsters in your Graveyard that are not Dragon-Type. If this card is Special Summoned with this effect, remove it from play when it is removed from the field.",
+      "race": "Dragon",
+      "atk": 400,
+      "def": 200,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/totem-dragon-53",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN085",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENB12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 564541,
+          "image_url": "https://images.ygoprodeck.com/images/cards/564541.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/564541.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/564541.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "2.45",
+          "amazon_price": "59.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65503,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8143,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

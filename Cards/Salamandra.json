@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 32268901,
+      "name": "Salamandra",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a FIRE monster. It gains 700 ATK.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamandra-2739",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 15 participation cards",
+          "set_code": "DL15-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "11.11"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENH12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Dark Duel Stories promotional cards",
+          "set_code": "DDS-006",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "5.77"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel promotional cards",
+          "set_code": "SDD-E003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "7.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32268901,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32268901.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32268901.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32268901.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.99",
+          "amazon_price": "4.44",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161896,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-19",
+          "ocg_date": "1999-07-08",
+          "konami_id": 4660,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

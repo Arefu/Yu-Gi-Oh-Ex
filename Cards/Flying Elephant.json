@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 66765023,
+      "name": "Flying Elephant",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per opponent's turn, if this card would be destroyed by their card effect, it is not destroyed. Once per turn, during their End Phase, if that effect was applied this turn: Apply the following effect.\n● During your next turn, if this card inflicts battle damage to your opponent by a direct attack, you win the Duel.",
+      "race": "Beast",
+      "atk": 1850,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flying-elephant-9514",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "9.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66765023,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66765023.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66765023.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66765023.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "7.50",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129226,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 5289,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

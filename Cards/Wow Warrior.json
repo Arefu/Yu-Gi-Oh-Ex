@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 69750536,
+      "name": "Wow Warrior",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A fish with arms, legs, and some very sharp teeth.",
+      "race": "Fish",
+      "atk": 1250,
+      "def": 900,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wow-warrior-5863",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.06"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69750536,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69750536.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69750536.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69750536.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.89",
+          "tcgplayer_price": "4.54",
+          "ebay_price": "4.49",
+          "amazon_price": "13.01",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42796,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4552,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 84341431,
+      "name": "Archfiend Giant",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this face-up card on the field would be destroyed by a card effect, you can pay 500 LP instead. This effect can only be used once while this card is face-up on the field. If this card is destroyed by a card effect and sent to the Graveyard: You can Special Summon 1 \"Archfiend\" monster from your hand.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 1600,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-giant-7074",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN181",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84341431,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84341431.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84341431.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84341431.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45578,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10874,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 65749035,
+      "name": "Gungnir, Dragon of the Ice Barrier",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner WATER monsters\nOnce per turn: You can discard up to 2 cards to the Graveyard to target the same number of cards your opponent controls; destroy them.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 1700,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Ice Barrier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gungnir-dragon-of-the-ice-barrier-5537",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN040",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion: Special Edition",
+          "set_code": "H5SE-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.51"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN053",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Freezing Chains",
+          "set_code": "SDFC-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65749035,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65749035.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65749035.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65749035.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "3.95",
+          "amazon_price": "0.43",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145863,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8262,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

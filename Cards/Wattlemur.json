@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 45801022,
+      "name": "Wattlemur",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in its owner's possession is destroyed by your opponent's card (either by battle or by card effect): Your opponent cannot conduct their Battle Phase during their next turn.",
+      "race": "Thunder",
+      "atk": 800,
+      "def": 100,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattlemur-3899",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.15"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45801022,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45801022.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45801022.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45801022.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40492,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8956,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

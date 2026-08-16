@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 63251695,
+      "name": "Dinomist Rex",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce, while this card is in your Pendulum Zone, you can negate an activated card effect that targets another \"Dinomist\" card(s) you control, then destroy this card.\n\n[ Monster Effect ] \nIf this card attacks, at the end of the Damage Step: You can Tribute 1 other \"Dinomist\" monster, then activate 1 of these effects;\r\n● This card can attack an opponent's monster again in a row, and if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.\r\n● Shuffle 1 card from your opponent's hand (at random) or their side of the field into the Deck, then this card gains 100 ATK.",
+      "race": "Machine",
+      "pend_desc": "Once, while this card is in your Pendulum Zone, you can negate an activated card effect that targets another \"Dinomist\" card(s) you control, then destroy this card.",
+      "monster_desc": "If this card attacks, at the end of the Damage Step: You can Tribute 1 other \"Dinomist\" monster, then activate 1 of these effects;\r\n● This card can attack an opponent's monster again in a row, and if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.\r\n● Shuffle 1 card from your opponent's hand (at random) or their side of the field into the Deck, then this card gains 100 ATK.",
+      "atk": 2400,
+      "def": 2200,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Dinomist",
+      "scale": 6,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinomist-rex-5342",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN198",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63251695,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63251695.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63251695.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63251695.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61765,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12137,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

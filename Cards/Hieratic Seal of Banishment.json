@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 11975962,
+      "name": "Hieratic Seal of Banishment",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 \"Hieratic\" monster to target 1 card your opponent controls; banish that target.",
+      "race": "Normal",
+      "archetype": "Hieratic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieratic-seal-of-banishment-1035",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN056",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11975962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11975962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11975962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11975962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36993,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10094,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

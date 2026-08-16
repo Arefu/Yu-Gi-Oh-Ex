@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 24919805,
+      "name": "Ruffian Railcar",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can inflict 500 damage to your opponent. You cannot conduct your Battle Phase the turn you activate this effect. During the End Phase, if this card is in the GY because it was sent there this turn: You can add 1 Level 10 EARTH Machine monster from your Deck to your hand. You can only use this effect of \"Ruffian Railcar\" once per turn.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ruffian-railcar-2148",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24919805,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24919805.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24919805.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24919805.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146957,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2013-12-05",
+          "konami_id": 10863,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 3814632,
+      "name": "Skypalace Gangaridai",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 10 monsters\nYou can detach 1 Xyz Material from this card, then target 1 card your opponent controls; destroy that target, and if you do, inflict 1000 damage to your opponent. You can only use the effect of \"Skypalace Gangaridai\" once per turn. This card cannot attack the turn you activate this effect.",
+      "race": "Machine",
+      "atk": 3400,
+      "def": 3000,
+      "level": 10,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skypalace-gangaridai-342",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN133",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN045",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3814632,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3814632.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3814632.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3814632.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "2.15",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 266926,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10718,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

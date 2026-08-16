@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 44877690,
+      "name": "Sacred Spirit of the Ice Barrier",
+      "typeline": [
+        "Zombie",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to the hand during the End Phase of the turn it is Normal Summoned or flipped face-up, unless you control another face-up \"Ice Barrier\" monster. In that case, this card's effect changes to select 1 monster your opponent controls and return it to the hand, instead.",
+      "race": "Zombie",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Ice Barrier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sacred-spirit-of-the-ice-barrier-3822",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN034",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN045",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "2.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44877690,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44877690.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44877690.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44877690.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24752,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2009-10-01",
+          "konami_id": 8572,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

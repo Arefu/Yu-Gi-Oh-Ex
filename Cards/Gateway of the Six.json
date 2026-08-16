@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 27970830,
+      "name": "Gateway of the Six",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a \"Six Samurai\" monster(s) is Normal or Special Summoned, place 2 Bushido Counters on this card. You can remove Bushido Counters from your field to activate these effects.\r\n● 2 Counters: Target 1 \"Six Samurai\" or \"Shien\" Effect Monster; that target gains 500 ATK until the end of this turn.\r\n● 4 Counters: Add 1 \"Six Samurai\" monster from your Deck or GY to your hand.\r\n● 6 Counters: Target 1 \"Shien\" Effect Monster in your GY; Special Summon that target.",
+      "race": "Continuous",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gateway-of-the-six-2379",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN105",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN259",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN229",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN229",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.35"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN089",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 27970830,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27970830.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27970830.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27970830.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "3.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 254611,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8602,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 11868731,
+      "name": "Madolche Magileine",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in your possession is destroyed by an opponent's card and sent to your GY: Shuffle this card into the Deck. When this card is Normal or Flip Summoned: You can add 1 \"Madolche\" monster from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-magileine-1026",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN068",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.66"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN185",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN185",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11868731,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11868731.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11868731.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11868731.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "3.44",
+          "amazon_price": "3.45",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238412,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10154,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

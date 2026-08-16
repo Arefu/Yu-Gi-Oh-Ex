@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 54338958,
+      "name": "Steelswarm Cell",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Special Summon this card (from your hand). While this card is face-up on the field, it cannot be Tributed, except for the Tribute Summon of a \"Steelswarm\" monster, and cannot be used as a Synchro Material Monster.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-cell-4622",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN076",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54338958,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54338958.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54338958.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54338958.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31258,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9170,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

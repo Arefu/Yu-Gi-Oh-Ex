@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 8165596,
+      "name": "Number 90: Galaxy-Eyes Photon Lord",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nIf this card has a \"Photon\" card as material, it cannot be destroyed by card effects. You can only use each of the following effects of \"Number 90: Galaxy-Eyes Photon Lord\" once per turn.\n● When an opponent's monster activates its effect (Quick Effect): You can detach 1 material from this card; negate that monster's effect, and if the detached material was a \"Galaxy\" card, destroy that card.\n● During your opponent's turn (Quick Effect): You can take 1 \"Photon\" or \"Galaxy\" card from your Deck, and either add it to your hand or attach it to this card as material.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 3000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-90-galaxy-eyes-photon-lord-9357",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN033",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN033",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "41.15"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENM25",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8165596,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8165596.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8165596.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8165596.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "54.99",
+          "amazon_price": "47.99",
+          "coolstuffinc_price": "49.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 90",
+          "views": 1155019,
+          "viewsweek": 63,
+          "upvotes": 21,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13826,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

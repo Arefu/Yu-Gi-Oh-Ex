@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 65518099,
+      "name": "Qliphort Scout",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. Once per turn: You can pay 800 LP; add 1 \"Qli\" card from your Deck to your hand, except \"Qliphort Scout\".\n\n[ Monster Effect ] \n''Booting in Replica Mode...\r\nAn error has occurred while executing C:\\sophia\\zefra.exe\r\nUnknown publisher.\r\nAllow C:\\tierra\\qliphort.exe ? ...[Y]\r\nBooting in Autonomy Mode...''",
+      "race": "Machine",
+      "pend_desc": "You cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. Once per turn: You can pay 800 LP; add 1 \"Qli\" card from your Deck to your hand, except \"Qliphort Scout\".",
+      "monster_desc": "''Booting in Replica Mode...\r\nAn error has occurred while executing C:\\sophia\\zefra.exe\r\nUnknown publisher.\r\nAllow C:\\tierra\\qliphort.exe ? ...[Y]\r\nBooting in Autonomy Mode...''",
+      "atk": 1000,
+      "def": 2800,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "scale": 9,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-scout-5522",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN144",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN236",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN236",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65518099,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65518099.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65518099.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65518099.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.95",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96331,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11353,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 36668118,
+      "name": "Boot Sector Launch",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Rokket\" monsters on the field gain 300 ATK/DEF.\nYou can activate 1 of these effects;\n● Special Summon up to 2 \"Rokket\" monsters with different names from your hand in Defense Position.\n● If your opponent controls more monsters than you do: Special Summon \"Rokket\" monsters with different names from your GY in Defense Position, up to the difference.\nYou can only use this effect of \"Boot Sector Launch\" once per turn.",
+      "race": "Field",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/boot-sector-launch-9013",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN053",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36668118,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36668118.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36668118.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36668118.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "0.88",
+          "ebay_price": "3.00",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 557083,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13424,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

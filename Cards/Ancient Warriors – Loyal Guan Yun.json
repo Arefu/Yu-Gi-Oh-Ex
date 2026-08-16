@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 76416959,
+      "name": "Ancient Warriors - Loyal Guan Yun",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If only your opponent controls a monster: You can Special Summon this card from your hand. Your opponent cannot target other \"Ancient Warriors\" monsters you control with card effects. If your opponent controls more monsters than you do: You can target 1 monster your opponent controls; destroy it. You can only use this effect of \"Ancient Warriors - Loyal Guan Yun\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 2500,
+      "def": 1800,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Ancient Warriors",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-warriors-loyal-guan-yun-10617",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76416959,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76416959.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76416959.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76416959.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Senka Justice - Guan Yun",
+          "views": 134346,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011012,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14821,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

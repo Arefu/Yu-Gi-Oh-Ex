@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 27217742,
+      "name": "Brohunder",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can add 1 Level 4 LIGHT Thunder-Type monster from your Deck to your hand, except \"Brohunder\".",
+      "race": "Thunder",
+      "atk": 900,
+      "def": 400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brohunder-8307",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27217742,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27217742.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27217742.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27217742.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.25",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63374,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12889,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

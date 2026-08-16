@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 25727454,
+      "name": "Master Craftsman Gamil",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the Damage Step, when a face-up monster you control battles (Quick Effect): You can send this card from your hand to the GY; that monster gains 300 ATK until the end of this turn.",
+      "race": "Pyro",
+      "atk": 200,
+      "def": 200,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-craftsman-gamil-2213",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN115",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25727454,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25727454.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25727454.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25727454.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.97",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21044,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-31",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11424,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

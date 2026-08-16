@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 18940556,
+      "name": "Ultimate Conductor Tyranno",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 2 Dinosaur-Type monsters from your Graveyard. Once per turn, during either player's Main Phase: You can destroy 1 monster in your hand or field, and if you do, change all face-up monsters your opponent controls to face-down Defense Position. This card can attack all monsters your opponent controls, once each. At the start of the Damage Step, if this card attacks a Defense Position monster: You can inflict 1000 damage to your opponent, and if you do, send that Defense Position monster to the Graveyard.",
+      "race": "Dinosaur",
+      "atk": 3500,
+      "def": 3200,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-conductor-tyranno-8513",
+      "card_sets": [
+        {
+          "set_name": "Dinosmasher's Fury Structure Deck",
+          "set_code": "SR04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN014",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN287",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN287",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN009",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18940556,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18940556.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18940556.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18940556.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.95",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1021748,
+          "viewsweek": 42,
+          "upvotes": 65,
+          "downvotes": 13,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-13",
+          "ocg_date": "2017-02-25",
+          "konami_id": 13010,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

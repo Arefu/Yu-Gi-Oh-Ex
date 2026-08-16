@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 70344351,
+      "name": "Riryoku Field",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell Card that targets exactly 1 monster on the field (and no other cards) is activated: Negate the activation, and if you do, destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/riryoku-field-5918",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.03"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.79"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.44"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70344351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70344351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70344351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70344351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91283,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5263,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

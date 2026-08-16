@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 48202661,
+      "name": "Aitsu",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "He seems to be very unreliable, but he might have incredible potential.",
+      "race": "Fairy",
+      "atk": 100,
+      "def": 100,
+      "level": 5,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aitsu-4115",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48202661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48202661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48202661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48202661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "4.95",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85120,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5642,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 6631034,
+      "name": "Frostosaurus",
+      "typeline": [
+        "Dinosaur",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster's metabolism enables it to endure long periods of cold, harnessing the power to become a creature of solid ice! Nothing else can withstand such temperatures, especially victims of its glacial rampage.",
+      "race": "Dinosaur",
+      "atk": 2600,
+      "def": 1700,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frostosaurus-581",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN003",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        },
+        {
+          "set_name": "Starter Deck: Xyz Symphony",
+          "set_code": "YS12-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6631034,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6631034.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6631034.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6631034.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "59.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 177641,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6961,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

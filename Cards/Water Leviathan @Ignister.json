@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 37061511,
+      "name": "Water Leviathan @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"A.I.'s Ritual\". If this card is Ritual Summoned: You can return all monsters your opponent control with 2300 or less ATK to the hand. You can target 1 face-up monster your opponent controls; return all Link Monsters from your GY to the Extra Deck, and if you do, change that targeted monster's ATK to 0. You can only use this effect of \"Water Leviathan @Ignister\" once per turn. Once per battle, during damage calculation, if this card battles an opponent's monster (Quick Effect): You can halve the ATK of that opponent's monster, during that damage calculation only.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/water-leviathan-ignister-10590",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37061511,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37061511.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37061511.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37061511.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87734,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011034,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14843,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

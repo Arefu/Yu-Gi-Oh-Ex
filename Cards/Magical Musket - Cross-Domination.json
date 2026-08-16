@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 93356623,
+      "name": "Magical Musket - Cross-Domination",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If you control a \"Magical Musket\" monster: Target 1 face-up monster on the field; until the end of this turn, change its ATK/DEF to 0, also it has its effects negated. You can only activate 1 \"Magical Musket - Cross-Domination\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musket-cross-domination-8748",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93356623,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93356623.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93356623.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93356623.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.48",
+          "tcgplayer_price": "2.24",
+          "ebay_price": "4.19",
+          "amazon_price": "5.47",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet - Cross-Dominator",
+          "views": 147219,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13323,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

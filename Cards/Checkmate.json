@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 69313735,
+      "name": "Checkmate",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 Archfiend monster on your side of the field. During this turn, 1 \"Terrorking Archfiend\" on your side of the field can attack your opponent's Life Points directly.",
+      "race": "Normal",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/checkmate-5832",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN251",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENE15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69313735,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69313735.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69313735.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69313735.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.56",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93863,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5787,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

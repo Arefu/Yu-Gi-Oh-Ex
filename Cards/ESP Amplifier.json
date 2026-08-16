@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 84653834,
+      "name": "ESP Amplifier",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "All face-up Psychic-Type monsters you controlled when this card was activated gain 300 ATK for each of your Psychic-Type monsters that is removed from play when this card resolves. During the End Phase, remove from play all monsters that were affected by this effect.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/esp-amplifier-7100",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84653834,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84653834.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84653834.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84653834.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12544,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9526,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

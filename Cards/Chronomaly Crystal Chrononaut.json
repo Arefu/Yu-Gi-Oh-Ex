@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 93730230,
+      "name": "Chronomaly Crystal Chrononaut",
+      "typeline": [
+        "Psychic",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nOnce per turn, when this card is targeted for an attack: You can detach 1 Xyz Material from this card; this turn, this card cannot be destroyed by battle or by card effects, also your opponent takes any Battle Damage you would have taken from battles involving this card.",
+      "race": "Psychic",
+      "atk": 2100,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chronomaly-crystal-chrononaut-7800",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93730230,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93730230.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93730230.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93730230.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.70",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "3.49",
+          "amazon_price": "7.70",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68803,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10172,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

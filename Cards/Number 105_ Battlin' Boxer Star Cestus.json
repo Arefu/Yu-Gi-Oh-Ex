@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 59627393,
+      "name": "Number 105: Battlin' Boxer Star Cestus",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nDuring either player's Battle Step, if a \"Battlin' Boxer\" monster you control battles an opponent's monster: You can detach 1 Xyz Material from this card; negate the effects of the opponent's monster until the end of the turn, that monster you control cannot be destroyed by that battle, also your opponent takes any battle damage you would have taken from that battle.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 1600,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-105-battlin-boxer-star-cestus-5065",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN028",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59627393,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59627393.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59627393.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59627393.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "3.00",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 105",
+          "views": 160838,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10532,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

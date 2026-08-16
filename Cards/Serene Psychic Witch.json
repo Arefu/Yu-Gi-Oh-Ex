@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 98358303,
+      "name": "Serene Psychic Witch",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card on the field is destroyed and sent to the Graveyard: You can banish 1 Psychic-Type monster with 2000 or less ATK from your Deck. During the next Standby Phase, if this card stays in the Graveyard: Special Summon the monster banished by this card's effect.",
+      "race": "Psychic",
+      "atk": 1400,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/serene-psychic-witch-8173",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98358303,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98358303.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98358303.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98358303.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.45",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82096,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9497,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

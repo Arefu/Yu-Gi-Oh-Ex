@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 73452089,
+      "name": "Dark Cavalry",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Dark Magician\" + 1 Warrior monster\r\nGains 100 ATK for each Spell/Trap on the field and in the GYs. If this card attacks a Defense Position monster, inflict piercing battle damage. When a card or effect is activated that targets a card on the field (Quick Effect): You can discard 1 card; negate the activation, and if you do, destroy it.",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-cavalry-9953",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73452089,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73452089.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73452089.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73452089.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.14",
+          "tcgplayer_price": "9.88",
+          "ebay_price": "10.95",
+          "amazon_price": "9.32",
+          "coolstuffinc_price": "6.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 467230,
+          "viewsweek": 0,
+          "upvotes": 25,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14214,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

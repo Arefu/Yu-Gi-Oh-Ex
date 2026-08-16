@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 73872164,
+      "name": "Eliminating the League",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Discard 1 Spell, then target 1 face-up monster your opponent controls; destroy that target, then look at your opponent's hand and send all cards in their hand with the same name as that destroyed card to the GY.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eliminating-the-league-6204",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA30",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.2"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN052",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73872164,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73872164.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73872164.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73872164.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "21.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29467,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 7008,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

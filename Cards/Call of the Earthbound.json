@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 65743242,
+      "name": "Call of the Earthbound",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack: You choose the target of the attack.",
+      "race": "Normal",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/call-of-the-earthbound-5536",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN174",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.91"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65743242,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65743242.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65743242.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65743242.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79313,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2004-09-28",
+          "konami_id": 6010,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

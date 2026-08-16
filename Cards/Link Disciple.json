@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 32995276,
+      "name": "Link Disciple",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower Cyberse monster\r\nYou can Tribute 1 monster this card points to; draw 1 card, then place 1 card from your hand on the bottom of the Deck. You can only use this effect of \"Link Disciple\" once per turn.",
+      "race": "Cyberse",
+      "atk": 500,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-disciple-8732",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN098",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32995276,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32995276.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32995276.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32995276.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 303849,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2017-05-20",
+          "konami_id": 13206,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

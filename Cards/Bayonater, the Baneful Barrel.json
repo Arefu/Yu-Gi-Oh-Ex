@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 47474172,
+      "name": "Bayonater, the Baneful Barrel",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 face-up monster your opponent controls; it loses 1000 ATK for each monster your opponent controls.",
+      "race": "Zombie",
+      "atk": 500,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bayonater-the-baneful-barrel-10477",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47474172,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47474172.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47474172.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47474172.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Bayoneter the Magical Scope",
+          "views": 21749,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010030,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14657,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

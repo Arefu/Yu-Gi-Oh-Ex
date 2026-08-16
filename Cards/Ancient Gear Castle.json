@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 92001300,
+      "name": "Ancient Gear Castle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "All \"Ancient Gear\" monsters gain 300 ATK. Each time a monster is Normal Summoned/Set, place 1 counter on this card. If you Tribute Summon an \"Ancient Gear\" monster face-up, you can Tribute this card instead, if the number of its counters is equal to or greater than the number of required Tribute(s).",
+      "race": "Continuous",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-castle-7674",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN167",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "16.33"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN047",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92001300,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92001300.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92001300.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92001300.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.50",
+          "amazon_price": "3.41",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 125799,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6578,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 14001430,
+      "name": "Madolche Chateau",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Shuffle all \"Madolche\" monsters in your Graveyard into the Deck. All \"Madolche\" monsters on the field gain 500 ATK and DEF. If a monster(s) in your Graveyard would be returned to the Deck by the effect of a \"Madolche\" monster, you can add it to your hand instead.",
+      "race": "Field",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-chateau-1199",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN117",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14001430,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14001430.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14001430.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14001430.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 169622,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10191,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

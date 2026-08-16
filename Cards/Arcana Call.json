@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "id": 99189322,
+      "name": "Arcana Call",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 \"Arcana Force\" monster you control. Remove from play 1 \"Arcana Force\" monster from either player's Graveyard. Until the End Phase, the selected monster's effect becomes the removed monster's effect for the same coin toss result.",
+      "race": "Normal",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-call-8237",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99189322,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99189322.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99189322.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99189322.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54395,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7642,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

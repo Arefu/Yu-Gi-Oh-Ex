@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 81919143,
+      "name": "Brain Crusher",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during the End Phase, if this card destroyed an opponent's monster by battle and sent it to the Graveyard this turn while you controlled it: You can target 1 of those destroyed monsters in the Graveyard; Special Summon that target.",
+      "race": "Insect",
+      "atk": 2400,
+      "def": 1500,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brain-crusher-6878",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN047",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Spirit Caller promotional cards",
+          "set_code": "GX03-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81919143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81919143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81919143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81919143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34081,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-01-02",
+          "ocg_date": "2006-11-30",
+          "konami_id": 5926,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 52145422,
+      "name": "Graydle Dragon",
+      "typeline": [
+        "Aqua",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Aqua-Type Tuner + 1 or more non-Tuner monsters\nWhen this card is Synchro Summoned: You can target cards your opponent controls, up to the number of WATER monsters used for the Synchro Summon of this card; destroy them. If this card is destroyed by battle or card effect and sent to the Graveyard: You can target 1 other WATER monster in your Graveyard; Special Summon it, but its effects are negated. You can only use each effect of \"Graydle Dragon\" once per turn.",
+      "race": "Aqua",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Graydle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/graydle-dragon-4444",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52145422,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52145422.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52145422.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52145422.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "15.60",
+          "tcgplayer_price": "27.03",
+          "ebay_price": "6.50",
+          "amazon_price": "9.94",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 120059,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11992,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

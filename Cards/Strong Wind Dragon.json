@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 23770284,
+      "name": "Strong Wind Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by battle with a monster that has the same ATK. If this card is Tribute Summoned by Tributing a Dragon-Type monster: It gains ATK equal to half the original ATK of the Tributed monster. If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/strong-wind-dragon-2048",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN003",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23770284,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23770284.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23770284.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23770284.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.03",
+          "tcgplayer_price": "2.04",
+          "ebay_price": "7.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66229,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8156,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

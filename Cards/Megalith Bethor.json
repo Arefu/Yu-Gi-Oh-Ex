@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 99628747,
+      "name": "Megalith Bethor",
+      "typeline": [
+        "Rock",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with a \"Megalith\" card. You can discard this card; Ritual Summon 1 \"Megalith\" Ritual Monster from your hand, by Tributing monsters from your hand or field whose total Levels equal or exceed its Level. If this card is Ritual Summoned: You can target cards your opponent controls, up to the number of Ritual Monsters with different names in your GY; destroy them. You can only use each effect of \"Megalith Bethor\" once per turn.",
+      "race": "Rock",
+      "atk": 1500,
+      "def": 2600,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-bethor-10624",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99628747,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99628747.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99628747.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99628747.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 198926,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011039,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14848,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

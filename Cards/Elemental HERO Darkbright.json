@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 41517968,
+      "name": "Elemental HERO Darkbright",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Sparkman\" + \"Elemental HERO Necroshade\"\nMust be Fusion Summoned and cannot be Special Summoned by other ways. If this card attacks a Defense Position monster, inflict piercing Battle Damage to your opponent. If this card attacks, change it to Defense Position at the end of the Damage Step. If this card is destroyed: Target 1 monster your opponent controls; destroy that target.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-darkbright-3553",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN036",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.66"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENA25",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41517968,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41517968.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41517968.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41517968.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100442,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7176,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

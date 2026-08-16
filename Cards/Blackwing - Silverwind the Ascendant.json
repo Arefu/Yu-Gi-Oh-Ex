@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 33236860,
+      "name": "Blackwing - Silverwind the Ascendant",
+      "typeline": [
+        "Winged Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Blackwing\" Tuner + 2 or more non-Tuner monsters\nWhen this card is Synchro Summoned: You can target up to 2 face-up monsters on the field with DEF lower than this card's ATK; destroy those targets. You cannot conduct your Battle Phase the turn you activate this effect. During each of your opponent's turns, the first \"Blackwing\" monster you control that would be destroyed by battle, is not destroyed.",
+      "race": "Winged Beast",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-silverwind-the-ascendant-2822",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENC29",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN134",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33236860,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33236860.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33236860.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33236860.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "4.95",
+          "amazon_price": "2.09",
+          "coolstuffinc_price": "6.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 185087,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8476,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

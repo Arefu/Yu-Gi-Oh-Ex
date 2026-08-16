@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 27780618,
+      "name": "Vision HERO Vyon",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 \"HERO\" monster from your Deck to the GY. You can only use this effect of \"Vision HERO Vyon\" once per turn. Once per turn: You can banish 1 \"HERO\" monster from your GY; add 1 \"Polymerization\" from your Deck to your hand.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Vision HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vision-hero-vyon-8312",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN059",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN053",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.77"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.61"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27780618,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27780618.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27780618.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27780618.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.67",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1007362,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 9229,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

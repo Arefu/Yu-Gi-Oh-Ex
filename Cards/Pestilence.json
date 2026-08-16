@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 62472614,
+      "name": "Pestilence",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Warrior-Type, Beast-Warrior-Type, or Spellcaster-Type monster. Its ATK becomes 0. During each of your Standby Phases, inflict 500 damage to the controller of the equipped monster.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pestilence-5281",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62472614,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62472614.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62472614.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62472614.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30728,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8989,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

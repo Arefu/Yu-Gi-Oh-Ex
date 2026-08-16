@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 79155167,
+      "name": "Armor Blast",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up \"Inzektor\" card you control and 2 face-up cards your opponent controls; destroy them.",
+      "race": "Normal",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armor-blast-6643",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79155167,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79155167.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79155167.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79155167.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.35",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18116,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9927,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

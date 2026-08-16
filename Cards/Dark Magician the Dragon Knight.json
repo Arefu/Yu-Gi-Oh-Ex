@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 41721210,
+      "name": "Dark Magician the Dragon Knight",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Dark Magician\" + 1 Dragon monster\r\nThis card's name becomes \"Dark Magician\" while on the field or in the GY. Your opponent cannot target Spells/Traps you control with card effects, also they cannot be destroyed by your opponent's card effects.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-magician-the-dragon-knight-8973",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN125",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA00",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.96"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN268",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN268",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41721210,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41721210.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41721210.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41721210.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "1.07",
+          "ebay_price": "2.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1063157,
+          "viewsweek": 0,
+          "upvotes": 43,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-05",
+          "ocg_date": "2018-02-10",
+          "konami_id": 13357,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

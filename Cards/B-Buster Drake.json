@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 77411244,
+      "name": "B-Buster Drake",
+      "typeline": [
+        "Machine",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. A monster equipped with this card is unaffected by your opponent's Spell effects, also if the equipped monster would be destroyed by battle or card effect, destroy this card instead. If this card is sent from the field to the GY: You can add 1 Union monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "ABC",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/b-buster-drake-6509",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77411244,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77411244.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77411244.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77411244.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "1.99",
+          "amazon_price": "3.23",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 323726,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12583,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

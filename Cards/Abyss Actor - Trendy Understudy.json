@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 39024589,
+      "name": "Abyss Actor - Trendy Understudy",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen you Pendulum Summon a monster: You can add 1 face-up Level 1 or 8 \"Abyss Actor\" Pendulum Monster from your Extra Deck to your hand.\n\n[ Monster Effect ] \nIf you have 2 \"Abyss Actor\" cards in your Pendulum Zones: You can Tribute this card; Special Summon 1 Level 1 or 8 \"Abyss Actor\" Pendulum Monster from your hand or face-up from your Extra Deck. You can only use this effect of \"Abyss Actor - Trendy Understudy\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "When you Pendulum Summon a monster: You can add 1 face-up Level 1 or 8 \"Abyss Actor\" Pendulum Monster from your Extra Deck to your hand.",
+      "monster_desc": "If you have 2 \"Abyss Actor\" cards in your Pendulum Zones: You can Tribute this card; Special Summon 1 Level 1 or 8 \"Abyss Actor\" Pendulum Monster from your hand or face-up from your Extra Deck. You can only use this effect of \"Abyss Actor - Trendy Understudy\" once per turn.",
+      "atk": 700,
+      "def": 700,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-trendy-understudy-3309",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN101",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39024589,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39024589.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39024589.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39024589.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Abyss Actor - Dandy Supporting Actor",
+          "views": 47458,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2016-07-21",
+          "konami_id": 12697,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 71692913,
+      "name": "Xiangke Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up Xyz Monster you control; this turn, you can use it as an Xyz Material for an Xyz Summon using its Rank as if it were a Level (even if this card leaves the field).\n\n[ Monster Effect ] \nOnce per turn, during either player's turn: You can target 1 LIGHT monster on the field; that face-up monster has its effects negated until the end of this turn.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn: You can target 1 face-up Xyz Monster you control; this turn, you can use it as an Xyz Material for an Xyz Summon using its Rank as if it were a Level (even if this card leaves the field).",
+      "monster_desc": "Once per turn, during either player's turn: You can target 1 LIGHT monster on the field; that face-up monster has its effects negated until the end of this turn.",
+      "atk": 2500,
+      "def": 500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xiangke-magician-6023",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN017",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71692913,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71692913.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71692913.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71692913.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "2.79",
+          "amazon_price": "4.75",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 270066,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11787,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

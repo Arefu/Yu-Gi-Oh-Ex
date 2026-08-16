@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 60519422,
+      "name": "Kishido Spirit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Monsters on your side of the field cannot be destroyed in a battle if the monsters' ATK are equal.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kishido-spirit-5135",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60519422,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60519422.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60519422.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60519422.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "2.50",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81923,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5612,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

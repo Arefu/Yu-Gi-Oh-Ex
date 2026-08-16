@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 95132338,
+      "name": "Aqua Chorus",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If there are monsters with the same name on the field, increase the ATK and DEF of all of those monsters with the same name by 500 points.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aqua-chorus-7918",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI34",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI34",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.71"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Power of Chaos: Kaiba the Revenge promotional cards",
+          "set_code": "PCK-002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "9.67"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Power of Chaos: Kaiba the Revenge promotional cards",
+          "set_code": "PCK-E002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "19.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95132338,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95132338.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95132338.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95132338.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.99",
+          "amazon_price": "9.27",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31606,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-04-06",
+          "ocg_date": "2000-12-07",
+          "konami_id": 5006,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

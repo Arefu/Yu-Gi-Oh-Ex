@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 69058960,
+      "name": "Number 13: Embodiment of Crime",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 1 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card; change all monsters your opponent controls to face-up Attack Position, also all monsters your opponent currently controls must attack this card this turn, if able. While you control \"Number 31: Embodiment of Punishment\", this card gains these effects.\n● This card cannot be destroyed by battle or by card effects while it has Xyz Material.\n● Your opponent takes any battle damage you would have taken from attacks on this card.",
+      "race": "Fiend",
+      "atk": 500,
+      "def": 500,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-13-embodiment-of-crime-5803",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN023",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.6"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69058960,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69058960.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69058960.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69058960.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.15",
+          "tcgplayer_price": "3.68",
+          "ebay_price": "1.99",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 13",
+          "views": 153281,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11018,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 41147577,
+      "name": "CXyz Simon the Great Moral Leader",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 7 monsters\nThis card is unaffected by other monster effects. If this card has \"Norito the Moral Leader\" as an Xyz Material, it gains this effect.\n● Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 monster your opponent controls; change its battle position, and if you do, negate its effects until the end of this turn.",
+      "race": "Spellcaster",
+      "atk": 3000,
+      "def": 2500,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "CXyz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cxyz-simon-the-great-moral-leader-3505",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN040",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41147577,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41147577.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41147577.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41147577.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.30",
+          "amazon_price": "0.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43068,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10713,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

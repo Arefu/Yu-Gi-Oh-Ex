@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 25484449,
+      "name": "Wind-Up Shark",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Wind-Up\" monster is Normal or Special Summoned to your side of the field: You can Special Summon this card from your hand. Once per turn: You can activate 1 of these effects.\n● Increase this card's Level by 1, until the End Phase.\n● Reduce this card's Level by 1, until the End Phase.",
+      "race": "Fish",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-shark-2192",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer: Special Edition",
+          "set_code": "CBLZ-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.67"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN180",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN180",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25484449,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25484449.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25484449.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25484449.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "10.00",
+          "amazon_price": "1.63",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70209,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2012-10-13",
+          "konami_id": 10019,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

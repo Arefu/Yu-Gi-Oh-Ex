@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 22835145,
+      "name": "Blackwing - Blizzard the Far North",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. When this card is Normal Summoned: You can target 1 Level 4 or lower \"Blackwing\" monster in your Graveyard; Special Summon that target in Defense Position.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-blizzard-the-far-north-1962",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN113",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22835145,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22835145.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22835145.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22835145.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "0.99",
+          "amazon_price": "3.90",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 317361,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8162,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

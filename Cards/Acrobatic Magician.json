@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 33656832,
+      "name": "Acrobatic Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen a monster(s) you control is destroyed by a card effect (except during the Damage Step): You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Acrobatic Magician\" once per turn.\n\n[ Monster Effect ] \nIf the activation of a Spell/Trap Card is negated (except during the Damage Step): You can Special Summon this card from your hand. When this card is destroyed by battle: You can place this card in your Pendulum Zone.",
+      "race": "Spellcaster",
+      "pend_desc": "When a monster(s) you control is destroyed by a card effect (except during the Damage Step): You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Acrobatic Magician\" once per turn.",
+      "monster_desc": "If the activation of a Spell/Trap Card is negated (except during the Damage Step): You can Special Summon this card from your hand. When this card is destroyed by battle: You can place this card in your Pendulum Zone.",
+      "atk": 800,
+      "def": 2300,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/acrobatic-magician-2854",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33656832,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33656832.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33656832.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33656832.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50927,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12408,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

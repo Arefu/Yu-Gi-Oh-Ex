@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 64280356,
+      "name": "Kozmo Tincan",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 2 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmo Tincan\" once per turn. Once per turn, during the End Phase: You can pay 500 LP; reveal 3 \"Kozmo\" cards with different names from your Deck, your opponent randomly picks 1 for you to add to your hand, and you send the rest to the Graveyard.",
+      "race": "Psychic",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-tincan-5424",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64280356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64280356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64280356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64280356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "1.29",
+          "amazon_price": "1.58",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121076,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12243,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

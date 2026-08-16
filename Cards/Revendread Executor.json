@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 34093683,
+      "name": "Revendread Executor",
+      "typeline": [
+        "Zombie",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Vendread\" Ritual Spell. This card's name becomes \"Revendread Slayer\" while on the field. While this Ritual Summoned card is on the field, your opponent cannot target cards you control with card effects, except this card. If this Ritual Summoned card is destroyed by battle, or is destroyed by an opponent's card effect while in its owner's Monster Zone: You can add 1 \"Vendread\" card from your Deck to your hand. You can only use this effect of \"Revendread Executor\" once per turn.",
+      "race": "Zombie",
+      "atk": 3000,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/revendread-executor-9494",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34093683,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34093683.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34093683.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34093683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97681,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13704,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

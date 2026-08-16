@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 79418153,
+      "name": "Lancer Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, when your monster declares an attack on your opponent's Defense Position monster: You can activate this effect; during that battle, if that monster attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Fiend",
+      "atk": 1600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lancer-archfiend-6661",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENA16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79418153,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79418153.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79418153.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79418153.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.99",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44675,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9086,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

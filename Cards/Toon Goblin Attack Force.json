@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 15270885,
+      "name": "Toon Goblin Attack Force",
+      "typeline": [
+        "Warrior",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot attack the turn it is Summoned. If \"Toon World\" on the field is destroyed, destroy this card. While you control \"Toon World\" and your opponent controls no Toon Monsters, this card can attack your opponent directly. If this card attacks, it is changed to Defense Position at the end of the Battle Phase, and its battle position cannot be changed until the End Phase of your next turn.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-goblin-attack-force-1310",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN117",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League Series 7 participation card",
+          "set_code": "DL7-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.64"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN108",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15270885,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15270885.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15270885.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15270885.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "2.95",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 198407,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-04-01",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5478,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

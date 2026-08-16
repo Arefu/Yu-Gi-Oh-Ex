@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 30778711,
+      "name": "Shadow Ghoul",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 100 ATK for each monster in your Graveyard.",
+      "race": "Zombie",
+      "atk": 1600,
+      "def": 1300,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shadow-ghoul-2614",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN228",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.53"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "14.92"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-END06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30778711,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30778711.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30778711.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30778711.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 319236,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4374,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

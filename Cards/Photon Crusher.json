@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 1362589,
+      "name": "Photon Crusher",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks, it is changed to Defense Position at the end of the Damage Step.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-crusher-117",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN008",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1362589,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1362589.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1362589.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1362589.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65865,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9883,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

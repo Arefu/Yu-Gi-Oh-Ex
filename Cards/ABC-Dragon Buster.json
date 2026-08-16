@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 1561110,
+      "name": "ABC-Dragon Buster",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"A-Assault Core\" + \"B-Buster Drake\" + \"C-Crush Wyvern\"\r\nMust first be Special Summoned (from your Extra Deck) by banishing the above cards you control and/or from your GY. (You do not use \"Polymerization\".) Once per turn (Quick Effect): You can discard 1 card, then target 1 card on the field; banish it. During your opponent's turn (Quick Effect): You can Tribute this card, then target 3 of your banished LIGHT Machine Union monsters with different names; Special Summon them.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "ABC",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abc-dragon-buster-137",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN059",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN271",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN271",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1561110,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1561110.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1561110.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1561110.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "4.95",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 428912,
+          "viewsweek": 0,
+          "upvotes": 50,
+          "downvotes": 28,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12590,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

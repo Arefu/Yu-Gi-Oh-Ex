@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 77864539,
+      "name": "Meklord Factory",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a \"Meklord\" monster on the field is targeted for an attack: Target 1 \"Meklord Army\" monster in your Graveyard; add that target to your hand, then destroy the attack target.",
+      "race": "Normal",
+      "archetype": "Meklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meklord-factory-6552",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN176",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77864539,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77864539.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77864539.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77864539.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23756,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9538,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

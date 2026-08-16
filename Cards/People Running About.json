@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 12143771,
+      "name": "People Running About",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Although they always suffer in silence, they swear an oath to inevitably revolt.",
+      "race": "Pyro",
+      "atk": 600,
+      "def": 600,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/people-running-about-1043",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.6"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12143771,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12143771.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12143771.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12143771.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "9.95",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66193,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5578,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

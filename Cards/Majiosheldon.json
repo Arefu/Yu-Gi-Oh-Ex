@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 59951714,
+      "name": "Majiosheldon",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned, except by its own effect. If this card is Tributed for a Tribute Summon, during your next Standby Phase: You can Special Summon this card from your Graveyard. You cannot Special Summon monsters from the Extra Deck during the turn you activate this effect.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 2000,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majiosheldon-5093",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN044",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59951714,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59951714.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59951714.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59951714.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13705,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10930,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

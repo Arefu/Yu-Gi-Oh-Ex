@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 91279700,
+      "name": "Evilswarm Ophion",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"lswarm\" monsters\nWhile this card has Xyz Material, Level 5 or higher monsters cannot be Special Summoned. Once per turn: You can detach 1 Xyz Material from this card; add 1 \"Infestation\" Spell/Trap Card from your Deck to your hand.",
+      "race": "Dragon",
+      "atk": 2550,
+      "def": 1650,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Lswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evilswarm-ophion-7617",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN091",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.81"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN064",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN179",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN179",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91279700,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91279700.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91279700.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91279700.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.79",
+          "tcgplayer_price": "1.22",
+          "ebay_price": "3.35",
+          "amazon_price": "6.22",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122455,
+          "viewsweek": 129,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 10006,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

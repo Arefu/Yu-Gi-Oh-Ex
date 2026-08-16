@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 16556849,
+      "name": "Freed the Brave Wanderer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can banish 2 LIGHT monsters from your Graveyard to target 1 face-up monster on the field with higher ATK than this face-up card; destroy that target.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/freed-the-brave-wanderer-1426",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Four",
+          "set_code": "CP04-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN006",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.84"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16556849,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16556849.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16556849.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16556849.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "1.43",
+          "ebay_price": "3.99",
+          "amazon_price": "2.52",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 216398,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5824,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

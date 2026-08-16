@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 22373487,
+      "name": "Get Out!",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 2 monsters your opponent controls that were Special Summoned from the Extra Deck; shuffle them into the Deck. You can only activate 1 \"Get Out!\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/get-out-10277",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN137",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN076",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22373487,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22373487.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22373487.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22373487.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.88",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55881,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 22373487,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14526,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

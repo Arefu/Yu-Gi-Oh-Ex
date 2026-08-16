@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 3810071,
+      "name": "Monk Fighter",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Battle Damage to this card's controller from a battle involving this card becomes 0.",
+      "race": "Rock",
+      "atk": 1300,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/monk-fighter-341",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN199",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3810071,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3810071.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3810071.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3810071.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "4.95",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75741,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6328,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

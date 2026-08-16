@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 56342351,
+      "name": "M-Warrior #1",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Specializing in combination attacks, this warrior uses magnetism to block an enemy's escape.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/m-warrior-1-4796",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "15.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56342351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56342351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56342351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56342351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.05",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "M-Warrior 1",
+          "views": 211197,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4166,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

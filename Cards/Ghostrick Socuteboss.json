@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 32224143,
+      "name": "Ghostrick Socuteboss",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters\nWhile you control another \"Ghostrick\" monster, your opponent cannot target this card for attacks. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster on the field, with ATK less than or equal to the combined ATK of all \"Ghostrick\" monsters on the field; destroy it, and if you do, that Monster Card Zone cannot be used as long as you control a \"Ghostrick\" monster.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": 1200,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-socuteboss-2735",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN140",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32224143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32224143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32224143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32224143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.50",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162407,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11080,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

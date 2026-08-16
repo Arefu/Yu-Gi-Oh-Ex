@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 54484652,
+      "name": "Black Luster Soldier - Super Soldier",
+      "typeline": [
+        "Warrior",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Super Soldier Ritual\". If this card destroys an opponent's monster by battle and sends it to the Graveyard: Inflict damage to your opponent equal to its ATK in the Graveyard. If this card is destroyed by battle and sent to the Graveyard, or if this card in your possession is destroyed by an opponent's card effect and sent to your Graveyard: You can Special Summon 1 \"Gaia The Fierce Knight\" monster from your hand, Deck, or Graveyard. You can only Special Summon \"Black Luster Soldier - Super Soldier(s)\" once per turn.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Black Luster Soldier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/black-luster-soldier-super-soldier-4636",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN136",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54484652,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54484652.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54484652.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54484652.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.87",
+          "tcgplayer_price": "6.86",
+          "ebay_price": "7.77",
+          "amazon_price": "19.99",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 392057,
+          "viewsweek": 0,
+          "upvotes": 1269,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11986,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

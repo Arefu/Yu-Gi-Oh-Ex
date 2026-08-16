@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 76103675,
+      "name": "Sparks",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Inflict 200 points of damage to your opponent's Life Points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sparks-6407",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.34"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.75"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76103675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76103675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76103675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76103675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 307373,
+          "viewsweek": 22,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4349,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

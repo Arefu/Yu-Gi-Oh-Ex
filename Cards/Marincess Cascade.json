@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27012990,
+      "name": "Marincess Cascade",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish any number of \"Marincess\" Link Monsters you control (until your next Standby Phase), then target 1 face-up monster on the field; it gains ATK equal to the total Link Rating of the monsters banished to activate this card x 300, until the end of this turn. If you control a Link-3 or higher \"Marincess\" monster, you can activate this card from your hand.",
+      "race": "Normal",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-cascade-10400",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN190",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27012990,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27012990.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27012990.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27012990.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30462,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010068,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14695,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

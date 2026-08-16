@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32013448,
+      "name": "Evening Twilight Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "A \"Black Luster Soldier\" monster Ritual Summoned using this card gains these effects. You can only use this effect of \"Evening Twilight Knight\" once per turn.\r\n● Once per turn: You can target 1 monster your opponent controls; banish it.\r\n● Once per turn: You can banish 1 random card from your opponent's hand face-down, until your opponent's next End Phase.\r\nIf this card is banished from your Graveyard: You can add 1 Ritual Monster from your Deck to your hand. You can only use this effect of \"Evening Twilight Knight\" once per turn.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Black Luster Soldier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evening-twilight-knight-2722",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN124",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32013448,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32013448.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32013448.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32013448.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.99",
+          "tcgplayer_price": "6.11",
+          "ebay_price": "12.00",
+          "amazon_price": "8.98",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 290188,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11967,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

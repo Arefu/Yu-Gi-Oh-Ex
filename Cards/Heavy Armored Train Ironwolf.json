@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 49121795,
+      "name": "Heavy Armored Train Ironwolf",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Machine-Type monsters\r\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 Machine-Type monster you control; this turn, it can attack your opponent directly, also other monsters cannot attack. If this card in your possession is destroyed by an opponent's card (by battle or card effect) and sent to your Graveyard: You can add 1 Level 4 Machine-Type monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 2200,
+      "def": 2200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heavy-armored-train-ironwolf-4190",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49121795,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49121795.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49121795.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49121795.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "2.50",
+          "amazon_price": "2.94",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 156255,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12785,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

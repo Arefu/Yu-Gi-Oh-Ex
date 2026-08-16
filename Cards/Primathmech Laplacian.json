@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 88021907,
+      "name": "Primathmech Laplacian",
+      "typeline": [
+        "Cyberse",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\r\nIf a \"Mathmech\" card(s) you control would be destroyed by card effect, you can detach 1 material from this card instead. If this card is Xyz Summoned: You can detach up to 3 materials from it, then choose that many effects (you cannot choose the same effect twice, and you resolve them in the listed order, skipping any that were not chosen);\r\n● Send 1 random card from your opponent's hand to the GY. ● Send 1 monster your opponent controls to the GY. ● Send 1 Spell/Trap your opponent controls to the GY.\r\nYou can only use this effect of \"Primathmech Laplacian\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/primathmech-laplacian-10419",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN146",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "14.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88021907,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88021907.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88021907.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88021907.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.57",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Editor Laplacian",
+          "views": 258959,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423009,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14752,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

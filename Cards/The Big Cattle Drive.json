@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 82386016,
+      "name": "The Big Cattle Drive",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a Beast, Beast-Warrior, or Winged Beast-Type monster: Draw 1 card for each of those Monster Types you control. You cannot activate other Spell/Trap Cards or effects during the turn you activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-big-cattle-drive-6927",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82386016,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82386016.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82386016.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82386016.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39724,
+          "viewsweek": 84,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10422,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

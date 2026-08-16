@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 80701178,
+      "name": "Impcantation Talismandra",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal 1 Ritual Monster in your hand; Special Summon both this card from your hand and 1 \"Impcantation\" monster from your Deck, except \"Impcantation Talismandra\". If this card is Special Summoned from the Deck: You can add 1 Ritual Monster from your Deck to your hand. You can only use 1 \"Impcantation Talismandra\" effect per turn, and only once that turn. You cannot Special Summon monsters from the Extra Deck.",
+      "race": "Plant",
+      "atk": 0,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Impcantation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/impcantation-talismandra-9372",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN084",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18",
+          "set_code": "OP18-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80701178,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80701178.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80701178.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80701178.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.99",
+          "amazon_price": "1.80",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Deviritual Talismandra",
+          "views": 835395,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13733,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 52900000,
+      "name": "Shinobaron Peacock",
+      "typeline": [
+        "Winged Beast",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Shinobird's Calling\". Must be Ritual Summoned, and cannot be Special Summoned by other ways. If this card is Ritual Summoned: You can return up to 3 monsters your opponent controls to the hand, then you can Special Summon 1 Level 4 or lower Spirit monster from your hand, ignoring its Summoning conditions. Once per turn, during the End Phase, if this card was Special Summoned this turn: Return it to the hand, and if you do, Special Summon 2 \"Shinobird Tokens\" (Winged Beast-Type/WIND/Level 4/ATK 1500/DEF 1500).",
+      "race": "Winged Beast",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Shinobird",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shinobaron-peacock-4506",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN201",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52900000,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52900000.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52900000.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52900000.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 125915,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12773,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

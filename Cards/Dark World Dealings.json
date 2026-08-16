@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 74117290,
+      "name": "Dark World Dealings",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Each player draws 1 card, then each player discards 1 card.",
+      "race": "Normal",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-world-dealings-6232",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Seven",
+          "set_code": "CP07-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.54"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN251",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.88"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74117290,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74117290.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74117290.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74117290.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.34",
+          "amazon_price": "2.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 942933,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 7002,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 53262004,
+      "name": "Odd-Eyes Vortex Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Odd-Eyes\" monster + 1 Pendulum Monster\r\nWhen this card is Special Summoned: You can target 1 opponent's face-up Attack Position monster; return it to the hand. When a Spell/Trap Card or another monster's effect is activated (Quick Effect): You can shuffle 1 face-up Pendulum Monster from your Extra Deck into the Deck, negate the activation, and if you do, destroy that card. You can only use each effect of \"Odd-Eyes Vortex Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 3000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-vortex-dragon-4539",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN139",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN045",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN045",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO24",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.43"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53262004,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53262004.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53262004.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53262004.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "34.99",
+          "amazon_price": "4.42",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 788958,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11989,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

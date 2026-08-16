@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 84769941,
+      "name": "Super Anti-Kaiju War Machine Mecha-Dogoran",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) while your opponent controls a \"Kaiju\" monster. You can only control 1 \"Kaiju\" monster. Once per turn: You can remove 2 Kaiju Counters from anywhere on the field; equip 1 \"Kaiju\" monster from your hand or Graveyard to this card. This card gains ATK equal to the combined original ATK of the \"Kaiju\" monsters equipped to it by this effect.",
+      "race": "Machine",
+      "atk": -1,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-anti-kaiju-war-machine-mecha-dogoran-7110",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84769941,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84769941.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84769941.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84769941.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.79",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118331,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12391,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

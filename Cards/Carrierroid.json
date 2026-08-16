@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 46848859,
+      "name": "Carrierroid",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent activates a card's effect that targets and destroys a Spell or Trap Card(s) you control, you can discard 1 card to negate its activation and destroy the card.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/carrierroid-3991",
+      "card_sets": [
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN015",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46848859,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46848859.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46848859.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46848859.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "1.49",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27987,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "2007-12-22",
+          "konami_id": 7056,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

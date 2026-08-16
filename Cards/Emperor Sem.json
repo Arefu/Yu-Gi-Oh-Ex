@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 21672573,
+      "name": "Emperor Sem",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time you Tribute Summon a monster, each player can select 1 card from their Graveyard and return it to the top of their Deck.",
+      "race": "Fiend",
+      "atk": 1300,
+      "def": 2200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/emperor-sem-1866",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN061",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN099",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21672573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21672573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21672573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21672573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "4.00",
+          "amazon_price": "0.85",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25772,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2007-12-17",
+          "konami_id": 7658,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

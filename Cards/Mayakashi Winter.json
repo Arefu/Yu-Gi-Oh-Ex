@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 51225407,
+      "name": "Mayakashi Winter",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Monsters your opponent controls lose 100 ATK/DEF for each \"Mayakashi\" monster with a different name in your GY. You can only use 1 of the following effects of \"Mayakashi Winter\" per turn, and only once that turn.\r\n● Send this card and 1 \"Mayakashi\" monster you control to the GY; draw 1 card.\r\n● Banish this card and 1 Zombie monster from your GY, then target 1 \"Mayakashi\" monster in your GY; Special Summon it.",
+      "race": "Continuous",
+      "archetype": "Mayakashi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mayakashi-winter-10021",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51225407,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51225407.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51225407.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51225407.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.20",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mayakashi Cycle",
+          "views": 86549,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14307,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

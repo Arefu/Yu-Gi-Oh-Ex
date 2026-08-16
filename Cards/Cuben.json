@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 17530001,
+      "name": "Cuben",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can roll a six-sided die, and while this monster is face-up on the field, neither player can Normal or Special Summon monsters with the same Level as the result.",
+      "race": "Thunder",
+      "atk": 600,
+      "def": 1900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cuben-1522",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17530001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17530001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17530001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17530001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.30",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25660,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11665,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

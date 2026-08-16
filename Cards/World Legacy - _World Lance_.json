@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 46647144,
+      "name": "World Legacy - \"World Lance\"",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters your opponent controls cannot attack \"World Legacy\" monsters you control, except this one. You can only use each of the following effects of \"World Legacy - \"World Lance\"\" once per turn.\r\n● During damage calculation, if a Link Monster battles a monster (Quick Effect): You can discard this card; the opponent's battling monster loses 3000 ATK.\r\n● If a monster(s) is Special Summoned from the Extra Deck: Special Summon 1 \"World Legacy Token\" (Machine/DARK/Level 1/ATK 0/DEF 0) to both players' fields in Defense Position.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-world-lance-9230",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN018",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46647144,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46647144.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46647144.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46647144.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy - World Lance",
+          "views": 106763,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13572,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

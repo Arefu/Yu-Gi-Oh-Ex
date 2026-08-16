@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 49645921,
+      "name": "Saber Beetle",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.",
+      "race": "Insect",
+      "atk": 2400,
+      "def": 600,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/saber-beetle-4229",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN143",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "34.89"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's 2009",
+          "set_code": "5DS2-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49645921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49645921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49645921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49645921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62884,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6601,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

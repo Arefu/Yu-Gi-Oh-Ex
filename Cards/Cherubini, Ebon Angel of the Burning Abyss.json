@@ -1,0 +1,130 @@
+{
+  "data": [
+    {
+      "id": 58699500,
+      "name": "Cherubini, Ebon Angel of the Burning Abyss",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Level 3 monsters\r\nMonsters this card points to cannot be destroyed by card effects. If this card would be destroyed by battle or an opponent's card effect, you can send 1 other card you control to the GY instead. You can send 1 Level 3 monster from your Deck to the GY, then target 1 \"Burning Abyss\" monster on the field; it gains ATK/DEF equal to the ATK/DEF of the monster sent to the GY, until the end of this turn. You can only use this effect of \"Cherubini, Ebon Angel of the Burning Abyss\" once per turn.",
+      "race": "Fairy",
+      "atk": 500,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Burning Abyss",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cherubini-ebon-angel-of-the-burning-abyss-9061",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.41"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN095",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58699500,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58699500.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58699500.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58699500.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "19.90",
+          "amazon_price": "15.49",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cherubini, Black Angel of the Burning Abyss",
+          "views": 648902,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13506,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 7562372,
+      "name": "Megasonic Eye",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Made of mysterious metal, this monster is a doomsday machine from the edge of the universe.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1800,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megasonic-eye-645",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN224",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7562372,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7562372.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7562372.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7562372.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.67",
+          "tcgplayer_price": "1.10",
+          "ebay_price": "1.55",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64382,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-06-01",
+          "konami_id": 4361,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

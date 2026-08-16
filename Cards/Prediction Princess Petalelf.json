@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 68625727,
+      "name": "Prediction Princess Petalelf",
+      "typeline": [
+        "Fairy",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can change all face-up Attack Position monsters your opponent controls to face-up Defense Position. Monsters changed to Defense Position by this effect cannot change their battle positions.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": 700,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Prediction Princess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prediction-princess-petalelf-5767",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.85"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68625727,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68625727.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68625727.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68625727.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29931,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11908,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

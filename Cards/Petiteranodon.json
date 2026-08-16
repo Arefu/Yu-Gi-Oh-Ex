@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 82946847,
+      "name": "Petiteranodon",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by a card effect and sent to the Graveyard: Special Summon 1 Level 4 or higher Dinosaur-Type monster from your Deck, but it cannot attack this turn.",
+      "race": "Dinosaur",
+      "atk": 500,
+      "def": 500,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/petiteranodon-8510",
+      "card_sets": [
+        {
+          "set_name": "Dinosmasher's Fury Structure Deck",
+          "set_code": "SR04-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82946847,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82946847.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82946847.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82946847.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.95",
+          "amazon_price": "1.51",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 539531,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-13",
+          "ocg_date": "2017-02-25",
+          "konami_id": 13009,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

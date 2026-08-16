@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 87259077,
+      "name": "Lightning Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card destroys an opponent's monster by battle and sends it to the Graveyard: Inflict 300 damage to your opponent for each card in your opponent's hand.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 1200,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightning-warrior-7300",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump December 2010 subscription bonus",
+          "set_code": "JUMP-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.82"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Seven",
+          "set_code": "TU07-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87259077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87259077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87259077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87259077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "3.52",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75211,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-12-01",
+          "ocg_date": "2009-10-21",
+          "konami_id": 8736,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

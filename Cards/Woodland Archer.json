@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 9848939,
+      "name": "Woodland Archer",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by having 2 or more Normal Monsters in your Graveyard. You can Tribute this card to add 1 Gemini monster from your Deck to your hand.",
+      "race": "Beast-Warrior",
+      "atk": 1400,
+      "def": 1300,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/woodland-archer-833",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9848939,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9848939.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9848939.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9848939.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24955,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8466,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

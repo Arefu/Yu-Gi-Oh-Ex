@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 62107981,
+      "name": "Elemental HERO Knospe",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time this card inflicts Battle Damage to your opponent: It gains 100 ATK and loses 100 DEF. While you control another face-up \"Elemental HERO\" monster, your opponent cannot target this card for an attack, and this card can attack your opponent directly.",
+      "race": "Plant",
+      "atk": 600,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-knospe-5254",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.05"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.28"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62107981,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62107981.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62107981.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62107981.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "1.16",
+          "ebay_price": "3.99",
+          "amazon_price": "3.80",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44474,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "2007-03-08",
+          "konami_id": 6863,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

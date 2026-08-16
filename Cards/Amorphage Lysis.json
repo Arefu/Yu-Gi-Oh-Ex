@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 47598941,
+      "name": "Amorphage Lysis",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "All monsters on the field, except \"Amorphage\" monsters, lose 100 ATK and DEF for each \"Amorphage\" card on the field. If a card(s) in your Pendulum Zone is destroyed (except during the Damage Step): You can place 1 \"Amorphage\" Pendulum Monster from your Deck in your Pendulum Zone. You can only use this effect of \"Amorphage Lysis\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Amorphage",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amorphage-lysis-4064",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47598941,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47598941.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47598941.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47598941.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29431,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12344,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

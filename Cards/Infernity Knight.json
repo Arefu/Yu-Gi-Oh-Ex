@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71341529,
+      "name": "Infernity Knight",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card on the field is destroyed and sent to the Graveyard: You can discard 2 cards; Special Summon this card from the Graveyard.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 400,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-knight-5990",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN099",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71341529,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71341529.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71341529.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71341529.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.09",
+          "amazon_price": "2.15",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25765,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-03-21",
+          "konami_id": 9710,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

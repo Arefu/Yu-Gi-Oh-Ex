@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 33574806,
+      "name": "Elemental HERO Escuridao",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Elemental HERO\" monster + 1 DARK monster\nMust be Fusion Summoned and cannot be Special Summoned by other ways. This card gains 100 ATK for each \"Elemental HERO\" monster in your Graveyard.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-escuridao-2848",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN056",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN141",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN046",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Volume 9 promotional card",
+          "set_code": "YG09-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33574806,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33574806.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33574806.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33574806.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "6.99",
+          "amazon_price": "11.18",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 257329,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-07",
+          "ocg_date": "2011-06-03",
+          "konami_id": 9838,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

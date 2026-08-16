@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 12493482,
+      "name": "Dunames Dark Witch",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Even when all odds are against this brave fairy, she will press onwards in battle and never retreat.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1050,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dunames-dark-witch-1081",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN168",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Tournament Pack 8",
+          "set_code": "TP8-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "536.38"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Four",
+          "set_code": "TU04-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12493482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12493482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12493482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12493482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "1.38",
+          "ebay_price": "0.99",
+          "amazon_price": "1.72",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 183357,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-04-28",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4786,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

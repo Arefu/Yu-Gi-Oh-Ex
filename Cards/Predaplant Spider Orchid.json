@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 30537973,
+      "name": "Predaplant Spider Orchid",
+      "typeline": [
+        "Plant",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nDuring your Main Phase, if this card was activated this turn: You can target 1 other face-up card in the Spell & Trap Zone; destroy it. You can only use this effect of \"Predaplant Spider Orchid\" once per turn.\n\n[ Monster Effect ] \nDuring the End Phase, if this card was Normal or Special Summoned this turn: You can discard 1 Plant monster; add 1 Level 4 or lower Plant monster from your Deck to your hand. You can only use this effect of \"Predaplant Spider Orchid\" once per turn.",
+      "race": "Plant",
+      "pend_desc": "During your Main Phase, if this card was activated this turn: You can target 1 other face-up card in the Spell & Trap Zone; destroy it. You can only use this effect of \"Predaplant Spider Orchid\" once per turn.",
+      "monster_desc": "During the End Phase, if this card was Normal or Special Summoned this turn: You can discard 1 Plant monster; add 1 Level 4 or lower Plant monster from your Deck to your hand. You can only use this effect of \"Predaplant Spider Orchid\" once per turn.",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Predap",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-spider-orchid-9535",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30537973,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30537973.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30537973.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30537973.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.61",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "2.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104613,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-09-21",
+          "konami_id": 13990,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

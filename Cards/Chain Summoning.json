@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 9952083,
+      "name": "Chain Summoning",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Activate as Chain Link 3 or higher: You can conduct up to 3 Normal Summons/Sets this turn, not just 1. You cannot activate this card if multiple cards with the same name, or the effects of such cards, are already activated in that Chain.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chain-summoning-842",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9952083,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9952083.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9952083.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9952083.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.85",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 125389,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7456,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

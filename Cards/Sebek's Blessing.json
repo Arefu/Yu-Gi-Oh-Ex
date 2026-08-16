@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 22537443,
+      "name": "Sebek's Blessing",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If your monster inflicts battle damage to your opponent by a direct attack: Gain the same amount of LP.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sebek-s-blessing-1938",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Power of Chaos: Joey the Passion promotional cards",
+          "set_code": "PCJ-EN002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "15.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22537443,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22537443.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22537443.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22537443.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "7.50",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36690,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-29",
+          "ocg_date": "2000-12-07",
+          "konami_id": 5007,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

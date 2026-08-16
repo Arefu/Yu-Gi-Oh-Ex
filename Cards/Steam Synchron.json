@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 83295594,
+      "name": "Steam Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's Main Phase, you can: Immediately after this effect resolves, Synchro Summon using this card you control (this is a Quick Effect).",
+      "race": "Machine",
+      "atk": 600,
+      "def": 800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steam-synchron-6996",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN064",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83295594,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83295594.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83295594.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83295594.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.64",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112130,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-10-23",
+          "ocg_date": "2012-08-11",
+          "konami_id": 10310,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

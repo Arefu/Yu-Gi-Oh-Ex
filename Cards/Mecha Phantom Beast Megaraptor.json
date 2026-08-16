@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 31533704,
+      "name": "Mecha Phantom Beast Megaraptor",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Token(s) is Special Summoned to your side of the field: Special Summon 1 \"Mecha Phantom Beast Token\" (Machine-Type/WIND/Level 3/ATK 0/DEF 0). You can only use this effect of \"Mecha Phantom Beast Megaraptor\" once per turn. This card's Level is increased by the total Levels of all \"Mecha Phantom Beast Tokens\" you control. While you control a Token, this card cannot be destroyed by battle or card effects. Once per turn: You can Tribute 1 Token; add 1 \"Mecha Phantom Beast\" monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 1900,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-megaraptor-2676",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31533704,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31533704.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31533704.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31533704.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "2.19",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50810,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10502,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

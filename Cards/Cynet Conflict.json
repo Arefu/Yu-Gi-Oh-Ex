@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 7403341,
+      "name": "Cynet Conflict",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated while you control a \"Code Talker\" monster: Negate the activation, and if you do, banish that card, and if you do, your opponent cannot activate cards, or effects of cards, with the same original name as that card that was banished, until the end of the next turn. You can only activate 1 \"Cynet Conflict\" per turn.",
+      "race": "Counter",
+      "archetype": "Code Talker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cynet-conflict-9572",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.14"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN173",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7403341,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7403341.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7403341.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7403341.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.54",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170199,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13878,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

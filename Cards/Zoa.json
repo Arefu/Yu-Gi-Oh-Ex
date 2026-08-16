@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 24311372,
+      "name": "Zoa",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A monster whose full potential can be achieved when outfitted with \"Metalmorph\".",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 1900,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoa-2099",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN173",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh Tour 2005 promotional cards",
+          "set_code": "PT1-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "19.3"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN011",
+          "set_rarity": "Oceanian debut",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Falsebound Kingdom promotional cards",
+          "set_code": "TFK-001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "15.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24311372,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24311372.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24311372.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24311372.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.57",
+          "tcgplayer_price": "5.53",
+          "ebay_price": "0.99",
+          "amazon_price": "6.21",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83582,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-11-04",
+          "ocg_date": "1999-12-09",
+          "konami_id": 4397,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

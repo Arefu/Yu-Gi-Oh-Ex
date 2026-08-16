@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 3431737,
+      "name": "Assault Beast",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card to the GY; add 1 \"Assault Mode Activate\" from your Deck to your hand.",
+      "race": "Beast-Warrior",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-beast-307",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3431737,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3431737.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3431737.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3431737.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.50",
+          "amazon_price": "4.74",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 233538,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8022,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

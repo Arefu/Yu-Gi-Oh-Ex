@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 47737087,
+      "name": "Elemental HERO Rampart Blaster",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Clayman\" + \"Elemental HERO Burstinatrix\"\r\nMust be Fusion Summoned and cannot be Special Summoned by other ways. This card can attack while in face-up Defense Position, but only if your opponent controls no monsters, and if it does, this card's ATK is halved during damage calculation only.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2500,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-rampart-blaster-4078",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "33.76"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki",
+          "set_code": "DP1-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.81"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENA23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47737087,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47737087.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47737087.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47737087.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 169393,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6486,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

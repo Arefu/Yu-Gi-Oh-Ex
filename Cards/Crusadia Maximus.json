@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 81524756,
+      "name": "Crusadia Maximus",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) in Defense Position to your zone a Link Monster points to. You can only Special Summon \"Crusadia Maximus\" once per turn this way. You can target 1 \"Crusadia\" Link Monster you control; this turn, if it battles an opponent's monster, any battle damage it inflicts to your opponent is doubled, also other monsters you control cannot attack. You can only use this effect of \"Crusadia Maximus\" once per turn.",
+      "race": "Psychic",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Crusadia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crusadia-maximus-9437",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN081",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81524756,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81524756.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81524756.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81524756.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Palladion of the Vast Sky",
+          "views": 329507,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13730,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

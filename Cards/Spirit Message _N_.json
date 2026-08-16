@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 67287533,
+      "name": "Spirit Message \"N\"",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "This card can only be placed on the field by the effect of \"Destiny Board\".",
+      "race": "Continuous",
+      "archetype": "Spirit Message",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-message-n-5659",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.59"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67287533,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67287533.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67287533.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67287533.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "8.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 177078,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5272,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

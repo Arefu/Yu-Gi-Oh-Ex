@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 47017574,
+      "name": "Number C92: Heart-eartH Chaos Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 10 monsters\nCannot be destroyed by battle. When a monster you control inflicts battle damage to your opponent: You gain Life Points equal to the damage they took. If this card has \"Number 92: Heart-eartH Dragon\" as an Xyz Material, it gains this effect.\n● Once per turn: You can detach 1 Xyz Material from this card; negate the effects of all face-up cards your opponent currently controls, until the end of this turn. This activation and effect cannot be negated.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c92-heart-earth-chaos-dragon-4011",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN069",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN149",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47017574,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47017574.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47017574.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47017574.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C92",
+          "views": 117197,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10936,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

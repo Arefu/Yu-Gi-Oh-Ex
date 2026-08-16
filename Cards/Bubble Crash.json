@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 61622107,
+      "name": "Bubble Crash",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "This card can only be activated when any player has 6 or more cards on the field and/or in their hand. The player(s) then select and send cards to their respective Graveyards until the amount remaining on the field and in their hand is 5.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bubble-crash-5217",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN199",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61622107,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61622107.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61622107.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61622107.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96666,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5398,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

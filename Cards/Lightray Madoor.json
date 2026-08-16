@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 82579942,
+      "name": "Lightray Madoor",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If 3 or more of your LIGHT monsters are banished, you can Special Summon this card (from your hand). Once per turn, this card cannot be destroyed by battle.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 3000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Madoor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightray-madoor-6940",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82579942,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82579942.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82579942.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82579942.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26846,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10313,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

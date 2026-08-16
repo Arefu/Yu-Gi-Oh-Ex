@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 34351849,
+      "name": "Froggy Forcefield",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when a face-up \"Frog\" monster you control, except \"Frog the Jam\", is selected as an attack target. Destroy all Attack Position monsters your opponent controls.",
+      "race": "Normal",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/froggy-forcefield-2918",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34351849,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34351849.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34351849.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34351849.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.54",
+          "ebay_price": "2.02",
+          "amazon_price": "4.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55253,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7646,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

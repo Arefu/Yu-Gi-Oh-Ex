@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 89226534,
+      "name": "Revival Swarm",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Battlewasp\" monster in your GY; Special Summon it. You can banish this card from your GY, then target 1 Insect monster you control; it cannot be destroyed by battle or card effects, until the end of the next turn. You can only use this effect of \"Revival Swarm\" once per turn.",
+      "race": "Normal",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/revival-swarm-10332",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89226534,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89226534.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89226534.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89226534.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50626,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248044,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14577,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

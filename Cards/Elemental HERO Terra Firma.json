@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 74711057,
+      "name": "Elemental HERO Terra Firma",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Ocean\" + \"Elemental HERO Woodsman\"\nMust be Fusion Summoned and cannot be Special Summoned by other ways. You can Tribute 1 face-up \"Elemental HERO\" monster; this card gains ATK equal to the Tributed monster's ATK, until the End Phase.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-terra-firma-6284",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN087",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN087",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "14.22"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN075",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.73"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74711057,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74711057.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74711057.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74711057.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.95",
+          "tcgplayer_price": "7.78",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95900,
+          "viewsweek": 22,
+          "upvotes": 60,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "2007-03-08",
+          "konami_id": 6731,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

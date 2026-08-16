@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 56132807,
+      "name": "Apple Magician Girl",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if this card is targeted for an attack: You can Special Summon 1 Level 5 or lower Spellcaster-Type monster from your hand, then change the attack target to it, and if you do, the attacking monster's ATK becomes half its current ATK. If this card is destroyed by battle or card effect: You can target up to 3 other \"Magician Girl\" monsters with different names in your Graveyard; add them to your hand.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Magician Girl",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/apple-magician-girl-4783",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.42"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS15",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG15",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "3.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56132807,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56132807.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56132807.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56132807.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "1.37",
+          "ebay_price": "19.99",
+          "amazon_price": "3.96",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 233476,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12498,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

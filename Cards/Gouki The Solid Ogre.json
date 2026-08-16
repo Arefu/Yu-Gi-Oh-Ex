@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 22510667,
+      "name": "Gouki The Solid Ogre",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Gouki\" monsters\r\nCannot be destroyed by battle or card effects while it points to a \"Gouki\" monster. Once per turn (Quick Effect): You can target 1 \"Gouki\" monster in your Main Monster Zone, except \"Gouki The Solid Ogre\"; move that monster you control to your Main Monster Zone this card points to.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-the-solid-ogre-10032",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22510667,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22510667.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22510667.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22510667.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47304,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14294,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 39019325,
+      "name": "Order to Smash",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Level 2 or lower non-Token Normal Monster you control; Tribute that Normal Monster, and if you do, destroy up to 2 Spells/Traps your opponent controls.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/order-to-smash-3308",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-110",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN223",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB29",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39019325,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39019325.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39019325.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39019325.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62882,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6072,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 34796454,
+      "name": "Triple Star Trion",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase, if this card is in the Graveyard because it was sent there this turn as a Tribute for a successful Tribute Summon: You can Special Summon this card from your Graveyard.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triple-star-trion-2955",
+      "card_sets": [
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34796454,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34796454.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34796454.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34796454.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14846,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2011-05-21",
+          "konami_id": 9835,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

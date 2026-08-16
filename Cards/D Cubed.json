@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 99357565,
+      "name": "D Cubed",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: It is also treated as a \"Destiny HERO\" monster while face-up on the field. You can only use each of the following effects of \"D Cubed\" once per turn.\n● You can discard up to 2 cards; Special Summon \"D Cubed\" from your hand, Deck, and/or GY, equal to the number discarded, also for the rest of this turn, you cannot Normal or Special Summon other monsters, except \"Destiny HERO\" monsters.\n● If this card is destroyed by battle or card effect: You can send 1 \"Destiny HERO\" monster from your Deck to the GY.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-cubed-8251",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99357565,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99357565.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99357565.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99357565.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.95",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62298,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 8,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12708,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

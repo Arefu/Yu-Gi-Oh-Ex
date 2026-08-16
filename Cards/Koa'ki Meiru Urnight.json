@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 30936186,
+      "name": "Koa'ki Meiru Urnight",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Beast-Warrior-Type monster in your hand. Once per turn, you can reveal 1 \"Iron Core of Koa'ki Meiru\" in your hand to Special Summon 1 Level 4 or lower \"Koa'ki Meiru\" monster from your Deck, except \"Koa'ki Meiru Urnight\".",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-urnight-2627",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN025",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30936186,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30936186.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30936186.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30936186.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.95",
+          "tcgplayer_price": "4.28",
+          "ebay_price": "3.75",
+          "amazon_price": "9.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46908,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8636,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

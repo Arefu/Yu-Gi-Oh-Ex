@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 34109611,
+      "name": "Daigusto Falcos",
+      "typeline": [
+        "Psychic",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner \"Gusto\" monsters\nWhen this card is Synchro Summoned: All \"Gusto\" monsters currently on the field gain 600 ATK.",
+      "race": "Psychic",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/daigusto-falcos-2898",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN085",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN049",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34109611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34109611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34109611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34109611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25996,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9600,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

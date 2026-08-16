@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 55875323,
+      "name": "Electric Lizard",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "A non Zombie-Type monster attacking \"Electric Lizard\" cannot attack on its following turn.",
+      "race": "Thunder",
+      "atk": 850,
+      "def": 800,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/electric-lizard-4758",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55875323,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55875323.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55875323.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55875323.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.00",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170670,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4616,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

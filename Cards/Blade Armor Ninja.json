@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 82944432,
+      "name": "Blade Armor Ninja",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Warrior-Type monsters\nOnce per turn: You can detach 1 Xyz Material from this card to target 1 \"Ninja\" monster you control; it can make a second attack during each Battle Phase this turn.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blade-armor-ninja-6962",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer: Special Edition",
+          "set_code": "CBLZ-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.2"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82944432,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82944432.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82944432.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82944432.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.49",
+          "tcgplayer_price": "1.79",
+          "ebay_price": "9.99",
+          "amazon_price": "2.23",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138067,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9915,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

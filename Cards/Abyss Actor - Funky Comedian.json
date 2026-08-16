@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 99634927,
+      "name": "Abyss Actor - Funky Comedian",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can Tribute 1 \"Abyss Actor\" monster, then target 1 \"Abyss Actor\" monster you control; it gains ATK equal to the original ATK of the Tributed monster, until the end of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can make this card gain 300 ATK for each \"Abyss Actor\" monster you currently control, until the end of this turn. You can target 1 other \"Abyss Actor\" monster you control; it gains ATK equal to this card's current ATK, until the end of this turn. This card cannot attack the turn this effect is activated. You can only use this effect of \"Abyss Actor - Funky Comedian\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn: You can Tribute 1 \"Abyss Actor\" monster, then target 1 \"Abyss Actor\" monster you control; it gains ATK equal to the original ATK of the Tributed monster, until the end of this turn (even if this card leaves the field).",
+      "monster_desc": "If this card is Normal or Special Summoned: You can make this card gain 300 ATK for each \"Abyss Actor\" monster you currently control, until the end of this turn. You can target 1 other \"Abyss Actor\" monster you control; it gains ATK equal to this card's current ATK, until the end of this turn. This card cannot attack the turn this effect is activated. You can only use this effect of \"Abyss Actor - Funky Comedian\" once per turn.",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-funky-comedian-8271",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.91"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99634927,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99634927.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99634927.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99634927.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.29",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41461,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12711,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 85646474,
+      "name": "Gravekeeper's Nobleman",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed by battle with an opponent's attacking monster and sent to your Graveyard: You can Special Summon 1 \"Gravekeeper's\" monster from your Deck in face-down Defense Position, except \"Gravekeeper's Nobleman\".",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-nobleman-7177",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN212",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85646474,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85646474.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85646474.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85646474.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.32",
+          "tcgplayer_price": "1.64",
+          "ebay_price": "4.80",
+          "amazon_price": "10.00",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73524,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10917,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

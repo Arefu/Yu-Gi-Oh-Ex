@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 90330453,
+      "name": "Last Day of Witch",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy all face-up Spellcaster-Type monsters on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/last-day-of-witch-7542",
+      "card_sets": [
+        {
+          "set_name": "Duelist League Series 9 participation card",
+          "set_code": "DL9-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "13.54"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90330453,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90330453.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90330453.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90330453.jpg"
+        },
+        {
+          "id": 90330454,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90330454.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90330454.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90330454.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.95",
+          "amazon_price": "10.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26223,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Last Day of Witch",
+          "tcg_date": "2006-01-03",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4868,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

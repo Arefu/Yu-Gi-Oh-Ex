@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 18967507,
+      "name": "Cyberdarkness Dragon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "5 \"Cyberdark\" Effect Monsters\r\nMust first be Fusion Summoned. If this card is Special Summoned: You can equip 1 Dragon or Machine monster from your GY to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. When your opponent activates a card or effect (Quick Effect): You can send 1 Equip Card you control to the GY; negate the activation, and if you do, destroy that card.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 2000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberdarkness-dragon-8543",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.37"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18967507,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18967507.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18967507.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18967507.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "9.99",
+          "amazon_price": "0.71",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 248773,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13182,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 93543806,
+      "name": "Chronomaly Sol Monolith",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 \"Chronomaly\" monster you control; its Level becomes 6. You cannot Special Summon any monsters during the turn you activate this effect, except \"Chronomaly\" monsters.",
+      "race": "Rock",
+      "atk": 600,
+      "def": 600,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chronomaly-sol-monolith-7786",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93543806,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93543806.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93543806.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93543806.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28824,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10690,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

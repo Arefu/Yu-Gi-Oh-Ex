@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 36407615,
+      "name": "Chaos King Archfiend",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Fiend-Type Tuner + 1 or more non-Tuner monsters\nWhen this card declares an attack: You can switch the current ATK and DEF of all face-up monsters your opponent controls, until the end of the Battle Phase.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 2600,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chaos-king-archfiend-3078",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN072",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36407615,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36407615.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36407615.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36407615.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.22",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "12.79",
+          "amazon_price": "3.10",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87226,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8816,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

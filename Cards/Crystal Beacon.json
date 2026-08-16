@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 95326659,
+      "name": "Crystal Beacon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Crystal Beast\" monster from your Deck. You must have 2 or more \"Crystal Beast\" cards in your Spell & Trap Card Zone to activate and to resolve this effect.",
+      "race": "Normal",
+      "archetype": "Crystal Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystal-beacon-7937",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jesse Anderson",
+          "set_code": "DP07-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hobby League 5 participation card C",
+          "set_code": "HL05-EN003",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "12.8"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN163",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95326659,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95326659.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95326659.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95326659.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "3.95",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 209474,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7073,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

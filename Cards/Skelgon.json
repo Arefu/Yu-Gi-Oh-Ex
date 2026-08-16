@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32355828,
+      "name": "Skelgon",
+      "typeline": [
+        "Zombie",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"The Snake Hair\" + \"Blackland Fire Dragon\"",
+      "race": "Zombie",
+      "atk": 1700,
+      "def": 1900,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skelgon-2749",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Five",
+          "set_code": "AP05-EN018",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "11.31"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32355828,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32355828.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32355828.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32355828.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "10.00",
+          "amazon_price": "10.17",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78927,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-25",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4551,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

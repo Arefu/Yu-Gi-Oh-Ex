@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 313513,
+      "name": "Spell Gear",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send 3 \"Ancient Gear\" cards you control to the Graveyard. You can Special Summon up to 1 \"Ancient Gear Golem\" from your hand and 1 from your Deck, ignoring the Summoning conditions. Then, destroy all monsters you control except \"Ancient Gear Golems\". You cannot Normal Summon or Set until the end of your next turn.",
+      "race": "Normal",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-gear-34",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 313513,
+          "image_url": "https://images.ygoprodeck.com/images/cards/313513.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/313513.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/313513.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "2.00",
+          "amazon_price": "2.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52898,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7622,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

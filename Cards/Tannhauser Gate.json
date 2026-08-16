@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 9831539,
+      "name": "Tannhauser Gate",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 2 monsters you control of the same Type with 1000 or less ATK; both monsters' Levels become the combined Levels of those 2 monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tannhauser-gate-830",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9831539,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9831539.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9831539.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9831539.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29615,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10275,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

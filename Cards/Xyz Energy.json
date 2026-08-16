@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 85839825,
+      "name": "Xyz Energy",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Detach 1 Xyz Material you control to target 1 face-up monster your opponent controls; destroy that target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-energy-7195",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Dawn of the Xyz",
+          "set_code": "YS11-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Xyz Symphony",
+          "set_code": "YS12-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85839825,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85839825.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85839825.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85839825.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32612,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-07-08",
+          "ocg_date": "2011-03-19",
+          "konami_id": 9572,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 88438982,
+      "name": "Worm Dimikles",
+      "typeline": [
+        "Reptile",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: This card gains 300 ATK and DEF.",
+      "race": "Reptile",
+      "atk": 1700,
+      "def": 1400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-dimikles-7398",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN029",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88438982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88438982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88438982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88438982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.25",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24584,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7546,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

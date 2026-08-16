@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 89567993,
+      "name": "Amazoness Trainee",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters destroyed by battle with this card are returned to the bottom of the Deck instead of going to the GY. If this card destroys an opponent's monster by battle: It gains 200 ATK.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-trainee-7481",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN213",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN213",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-END07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89567993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89567993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89567993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89567993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.99",
+          "amazon_price": "1.55",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73239,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8962,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

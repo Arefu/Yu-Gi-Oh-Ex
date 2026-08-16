@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 33282498,
+      "name": "Arkbrave Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned from the Graveyard: You can banish as many face-up Spell/Trap Cards your opponent controls as possible, and if you do, this card gains 200 ATK and DEF for each card banished. Once per turn, during the Standby Phase, if this card is in the Graveyard because it was sent there last turn: You can target 1 Level 7 or 8 Dragon-Type monster in your Graveyard, except \"Arkbrave Dragon\"; Special Summon it.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arkbrave-dragon-2828",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33282498,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33282498.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33282498.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33282498.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.67",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 410792,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-07",
+          "ocg_date": "2016-02-06",
+          "konami_id": 12359,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

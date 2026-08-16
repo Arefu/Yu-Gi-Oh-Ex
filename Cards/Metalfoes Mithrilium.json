@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 4688231,
+      "name": "Metalfoes Mithrilium",
+      "typeline": [
+        "Psychic",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Metalfoes\" monster + 1 Pendulum Monster\r\nYou can target 2 \"Metalfoes\" cards in your GY and 1 card on the field; shuffle the targets from your GY into the Deck, and if you do, return the target on the field to the hand. You can only use this effect of \"Metalfoes Mithrilium\" once per turn. If this card is sent from the field to the GY: You can Special Summon 1 \"Metalfoes\" Pendulum Monster from your GY or face-up Extra Deck.",
+      "race": "Psychic",
+      "atk": 2600,
+      "def": 1000,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Metalfoes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metalfoes-mithrilium-8347",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN148",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN082",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN095",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.98"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4688231,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4688231.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4688231.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4688231.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88660,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12630,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

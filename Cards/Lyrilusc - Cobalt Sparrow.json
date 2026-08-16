@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 34550857,
+      "name": "Lyrilusc - Cobalt Sparrow",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can add 1 Level 1 Winged Beast-Type monster from your Deck to your hand. You can only use this effect of \"Lyrilusc - Cobalt Sparrow\" once per turn. A WIND Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\r\n● Your opponent cannot target this card with card effects.",
+      "race": "Winged Beast",
+      "atk": 0,
+      "def": 100,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Lyrilusc",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lyrilusc-cobalt-sparrow-8328",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34550857,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34550857.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34550857.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34550857.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lyrical Luscinia - Cobalt Sparrow",
+          "views": 239652,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12926,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 76587747,
+      "name": "Time Thief Retrograde",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card is activated while you control a \"Time Thief\" Xyz Monster: Negate the activation, and if you do, attach that card to a \"Time Thief\" Xyz Monster you control as material. You can only activate 1 \"Time Thief Retrograde\" per turn.",
+      "race": "Counter",
+      "archetype": "Time Thief",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-thief-retrograde-10576",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN069",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76587747,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76587747.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76587747.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76587747.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 141815,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011075,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14884,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

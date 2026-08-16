@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 16825874,
+      "name": "Eccentric Boy",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When using this card as a Synchro Material Monster, the other Synchro Material Monster is 1 monster in your hand. The Synchro Monster that used this card as a Synchro Material Monster cannot activate its effect, its effect(s) is negated, and it is removed from play when removed from the field.",
+      "race": "Spellcaster",
+      "atk": 800,
+      "def": 200,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eccentric-boy-1447",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16825874,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16825874.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16825874.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16825874.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "3.36",
+          "ebay_price": "1.32",
+          "amazon_price": "1.33",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35380,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-15",
+          "ocg_date": "2009-10-17",
+          "konami_id": 8580,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 45178472,
+      "name": "Full House",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 2 other face-up Spell/Trap Cards and 3 Set Spell/Trap Cards, on the field; destroy them.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/full-house-3852",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Five",
+          "set_code": "AP05-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN256",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45178472,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45178472.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45178472.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45178472.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.45",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26667,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9706,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

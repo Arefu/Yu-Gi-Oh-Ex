@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 1995985,
+      "name": "Silent Swordsman LV3",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Negate your opponent's Spell effects that target this card. During your Standby Phase: You can send this face-up card to the Graveyard; Special Summon 1 \"Silent Swordsman LV5\" from your hand or Deck. You cannot activate this effect the turn this card is Summoned or flipped face-up.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Silent Swordsman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silent-swordsman-lv3-176",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN069",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN009",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN009",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.52"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1995985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1995985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1995985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1995985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "4.97",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171502,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6162,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

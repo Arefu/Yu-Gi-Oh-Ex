@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 20838380,
+      "name": "Shark Stickers",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Fish, Sea Serpent, or Aqua-Type monster is Normal or Special Summoned to your side of the field: You can Special Summon this card from your hand. This card cannot be used as a Synchro Material Monster.",
+      "race": "Fish",
+      "atk": 200,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Shark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shark-stickers-1792",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20838380,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20838380.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20838380.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20838380.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.75",
+          "amazon_price": "2.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70668,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9727,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

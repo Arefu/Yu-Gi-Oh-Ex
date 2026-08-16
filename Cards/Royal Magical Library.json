@@ -1,0 +1,126 @@
+{
+  "data": [
+    {
+      "id": 70791313,
+      "name": "Royal Magical Library",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves (max. 3). You can remove 3 Spell Counters from this card; draw 1 card.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/royal-magical-library-5945",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16",
+          "set_code": "OP16-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Structure Deck: Spellcaster's Judgment",
+          "set_code": "SD6-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70791313,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70791313.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70791313.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70791313.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.15",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 630085,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5658,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

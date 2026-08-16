@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": 12482652,
+      "name": "Ojama Green",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "He's one of the Ojama Trio. It's said that he butts in by any means necessary. It's also said that when the three are together, something happens.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 1000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Ojama",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ojama-green-1080",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN218",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Chazz Princeton",
+          "set_code": "DP2-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENC02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12482652,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12482652.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12482652.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12482652.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 216129,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5761,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

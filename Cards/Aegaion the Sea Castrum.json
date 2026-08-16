@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 10678778,
+      "name": "Aegaion the Sea Castrum",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nDuring either player's turn: You can banish 1 random face-down monster from your opponent's Extra Deck, face-up, and if you do, this card's ATK becomes equal to the banished monster's. During either player's turn: You can detach 1 Xyz Material from this card, then target 1 of your opponent's banished Fusion, Synchro, or Xyz Monsters; return it to the Extra Deck, and if you do, destroy 1 monster your opponent controls with the same monster card type (Fusion, Synchro, or Xyz). You can only use each effect of \"Aegaion the Sea Castrum\" once per turn.",
+      "race": "Machine",
+      "atk": -1,
+      "def": 3000,
+      "level": 8,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aegaion-the-sea-castrum-922",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN213",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10678778,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10678778.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10678778.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10678778.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.40",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119362,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12163,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

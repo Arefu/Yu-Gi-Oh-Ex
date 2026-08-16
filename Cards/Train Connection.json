@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 60879050,
+      "name": "Train Connection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Must be equipped to an EARTH Machine-Type monster, by banishing 2 Level 10 or higher Machine-Type monsters from your Graveyard, and cannot be equipped by other ways. The equipped monster's ATK becomes double its original ATK, also if it attacks a Defense Position monster, inflict piercing battle damage to your opponent. Other monsters you control cannot attack.",
+      "race": "Equip",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/train-connection-5166",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60879050,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60879050.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60879050.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60879050.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46620,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11184,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

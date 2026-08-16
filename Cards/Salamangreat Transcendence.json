@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 54529134,
+      "name": "Salamangreat Transcendence",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Salamangreat\" Link Monster you control; Special Summon 1 \"Salamangreat\" Link Monster with the same name from your Extra Deck, using that monster you control as the entire material. (This is treated as a Link Summon.) You can only activate 1 \"Salamangreat Transcendence\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-transcendence-10462",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN180",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54529134,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54529134.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54529134.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54529134.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39189,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010052,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14679,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

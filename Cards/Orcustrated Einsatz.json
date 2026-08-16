@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 62834295,
+      "name": "Orcustrated Einsatz",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If your opponent Normal or Special Summons a monster(s) (except during the Damage Step): You can take 1 \"Orcust\" or \"World Legacy\" monster from your hand or Deck, and either send it to the GY or banish it. You can only use this effect of \"Orcustrated Einsatz\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcustrated-einsatz-9670",
+      "card_sets": [
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62834295,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62834295.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62834295.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62834295.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Einsatz",
+          "views": 70151,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13946,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

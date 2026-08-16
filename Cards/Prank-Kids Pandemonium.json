@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 79059098,
+      "name": "Prank-Kids Pandemonium",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "During the Main Phase: Fusion Summon 1 \"Prank-Kids\" Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material. For the rest of this turn after this card resolves, you cannot Normal or Special Summon monsters, except \"Prank-Kids\" monsters.",
+      "race": "Quick-Play",
+      "archetype": "Prank-Kids",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-pandemonium-9715",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN118",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79059098,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79059098.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79059098.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79059098.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.50",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Runaway Prankids",
+          "views": 215550,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14031,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

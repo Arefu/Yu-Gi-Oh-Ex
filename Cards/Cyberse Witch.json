@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 11674673,
+      "name": "Cyberse Witch",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Cyberse monsters\r\nIf a monster is Special Summoned to a zone this card points to (except during the Damage Step): You can banish 1 Spell from your GY; add 1 Cyberse Ritual Monster and 1 \"Cynet Ritual\" from your Deck to your hand. During your Main Phase, if this effect was activated this turn: You can target 1 Level 4 or lower Cyberse monster in your GY; Special Summon it. You can only use each effect of \"Cyberse Witch\" once per turn.",
+      "race": "Cyberse",
+      "atk": 800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-witch-9379",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN098",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11674673,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11674673.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11674673.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11674673.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118090,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13751,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

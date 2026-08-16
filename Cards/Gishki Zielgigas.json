@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 66729231,
+      "name": "Gishki Zielgigas",
+      "typeline": [
+        "Aqua",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Gishki\" Ritual Spell Card. Once per turn: You can pay 1000 Life Points; draw 1 card, and if you do, reveal it, then, if it was a \"Gishki\" monster, shuffle 1 card from the field into the Deck.",
+      "race": "Aqua",
+      "atk": 3200,
+      "def": 0,
+      "level": 10,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gishki-zielgigas-5605",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN081",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN057",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66729231,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66729231.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66729231.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66729231.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.58",
+          "tcgplayer_price": "1.87",
+          "ebay_price": "2.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73532,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-11-06",
+          "konami_id": 9999,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

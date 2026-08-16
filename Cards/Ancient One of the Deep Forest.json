@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 14015067,
+      "name": "Ancient One of the Deep Forest",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This creature adopts the form of a white goat living in the forest, but is actually a Forest Elder.",
+      "race": "Beast",
+      "atk": 1800,
+      "def": 1900,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-one-of-the-deep-forest-1201",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.68"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14015067,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14015067.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14015067.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14015067.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115026,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4581,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

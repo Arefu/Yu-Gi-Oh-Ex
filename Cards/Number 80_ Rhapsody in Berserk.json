@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 93568288,
+      "name": "Number 80: Rhapsody in Berserk",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nYou can target 1 face-up Xyz Monster you control; equip this monster you control to that target. It gains 1200 ATK. You can detach 1 Xyz Material from this card, then target 1 card in your opponent's Graveyard; banish that target. You can use this effect of \"Number 80: Rhapsody in Berserk\" up to twice per turn.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-80-rhapsody-in-berserk-7789",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93568288,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93568288.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93568288.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93568288.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.01",
+          "tcgplayer_price": "2.05",
+          "ebay_price": "1.49",
+          "amazon_price": "2.70",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 80",
+          "views": 149881,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11074,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

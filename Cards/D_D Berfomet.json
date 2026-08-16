@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 19808608,
+      "name": "D/D Berfomet",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 \"D/D\" monster you control that has a Level, except \"D/D Berfomet\", and declare a Level from 1 to 8; it becomes that Level until the end of this turn, also you cannot Special Summon monsters for the rest of this turn, except \"D/D\" monsters.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-berfomet-1704",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN113",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19",
+          "set_code": "OP19-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19808608,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19808608.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19808608.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19808608.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.49",
+          "amazon_price": "1.37",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81575,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11954,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

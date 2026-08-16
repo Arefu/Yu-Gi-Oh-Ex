@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 49094491,
+      "name": "Salamangreat Fennec",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Cyberse monster(s) you control that was Special Summoned from the Extra Deck is destroyed by battle or an opponent's card effect: You can Special Summon this card from the GY (if it was there when the monster was destroyed) or hand (even if not), but banish it when it leaves the field. If this card is sent to the GY as material for the Link Summon of a Link-2 or higher Cyberse Link Monster: You can add 1 \"Salamangreat\" Normal Spell from your Deck to your hand. You can only use each effect of \"Salamangreat Fennec\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1600,
+      "def": 200,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-fennec-10018",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49094491,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49094491.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49094491.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49094491.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51191,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14253,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

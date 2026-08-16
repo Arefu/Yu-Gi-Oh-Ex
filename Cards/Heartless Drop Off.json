@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 47439573,
+      "name": "Heartless Drop Off",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a face-up card(s) on the field and/or in the GY is added to your opponent's hand by an effect: Look at their hand, also banish the added card(s) and all cards with the same name, if any.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heartless-drop-off-9250",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47439573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47439573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47439573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47439573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ruthless Drop Off",
+          "views": 12986,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13632,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

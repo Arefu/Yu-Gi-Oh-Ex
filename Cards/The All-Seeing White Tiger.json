@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 32269855,
+      "name": "The All-Seeing White Tiger",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A proud ruler of the jungle that some fear and others respect.",
+      "race": "Beast",
+      "atk": 1300,
+      "def": 500,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-all-seeing-white-tiger-2740",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.83"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32269855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32269855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32269855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32269855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76717,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5144,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 76403456,
+      "name": "Power Wall",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During damage calculation, when you would take battle damage from an opponent's attacking monster: Send 1 card from the top of your Deck to the Graveyard for every 500 damage (round up) you are about to take, also you take no battle damage from that battle.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/power-wall-8304",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.91"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76403456,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76403456.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76403456.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76403456.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.99",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49622,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2016-12-17",
+          "konami_id": 6834,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

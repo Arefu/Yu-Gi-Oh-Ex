@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 48737767,
+      "name": "Marmiting Captain",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can shuffle 1 card from your hand into the Deck, then draw 1 card, then you can Special Summon it if it is a monster.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 400,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marmiting-captain-4163",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN043",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48737767,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48737767.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48737767.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48737767.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.50",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36981,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11563,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

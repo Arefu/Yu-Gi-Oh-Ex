@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 33551032,
+      "name": "Umbral Horror Unform",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard while attacking a monster: You can Special Summon 2 \"Umbral Horror\" monsters from your Deck. You can only use the effect of \"Umbral Horror Unform\" once per turn.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Umbral Horror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/umbral-horror-unform-2847",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33551032,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33551032.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33551032.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33551032.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38067,
+          "viewsweek": 84,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10616,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

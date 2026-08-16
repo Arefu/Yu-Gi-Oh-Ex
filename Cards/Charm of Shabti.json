@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 50412166,
+      "name": "Charm of Shabti",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can discard this card; until the End Phase, \"Gravekeeper's\" monsters you control cannot be destroyed by battle.",
+      "race": "Rock",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/charm-of-shabti-4294",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN190",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50412166,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50412166.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50412166.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50412166.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107882,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5524,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

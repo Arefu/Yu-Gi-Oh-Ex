@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 66526672,
+      "name": "Labyrinth of Nightmare",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during each player's End Phase: Change the battle positions of all face-up monsters the turn player controls.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/labyrinth-of-nightmare-5587",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN183",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN183",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN221",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-END20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66526672,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66526672.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66526672.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66526672.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.09",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96495,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6070,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

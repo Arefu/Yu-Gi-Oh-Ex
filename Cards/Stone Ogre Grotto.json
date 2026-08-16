@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 15023985,
+      "name": "Stone Ogre Grotto",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A behemoth shaped by giant boulders.",
+      "race": "Rock",
+      "atk": 1600,
+      "def": 1500,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stone-ogre-grotto-1288",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.31"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15023985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15023985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15023985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15023985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91795,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4638,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

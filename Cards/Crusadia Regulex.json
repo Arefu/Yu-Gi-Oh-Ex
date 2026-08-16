@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 9617996,
+      "name": "Crusadia Regulex",
+      "typeline": [
+        "Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Effect Monsters, including a \"Crusadia\" monster\r\nGains ATK equal to the combined original ATK of all monsters this card points to. Monsters this card points to cannot attack. If an Effect Monster(s) is Special Summoned to a zone(s) this card points to (except during the Damage Step): You can add 1 \"Crusadia\" Spell/Trap from your Deck to your hand. You can only use this effect of \"Crusadia Regulex\" once per turn.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Crusadia",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crusadia-regulex-9443",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9617996,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9617996.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9617996.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9617996.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Regulex Palladion",
+          "views": 171507,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13760,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

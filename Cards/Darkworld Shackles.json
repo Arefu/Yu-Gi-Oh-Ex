@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 83584898,
+      "name": "Darkworld Shackles",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The equipped monster cannot attack, also its ATK and DEF become 100. During each of your Standby Phases: Inflict 500 damage to the controller of the equipped monster.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkworld-shackles-7015",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN083",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83584898,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83584898.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83584898.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83584898.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.99",
+          "amazon_price": "1.74",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66948,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9134,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

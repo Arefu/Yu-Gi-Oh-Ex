@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 17045014,
+      "name": "Evolsaur Diplo",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of an \"Evoltile\" monster: Target 1 Spell/Trap Card your opponent controls; destroy that target.",
+      "race": "Dinosaur",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Evolsaur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evolsaur-diplo-1472",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17045014,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17045014.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17045014.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17045014.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40124,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9739,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

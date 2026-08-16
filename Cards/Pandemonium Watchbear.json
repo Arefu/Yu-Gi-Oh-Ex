@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 75375465,
+      "name": "Pandemonium Watchbear",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains face-up on your side of the field, \"Pandemonium\" on your side of the field is not destroyed by your opponent's card effects.",
+      "race": "Beast",
+      "atk": 1300,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pandemonium-watchbear-6342",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN220",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75375465,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75375465.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75375465.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75375465.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73919,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5763,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

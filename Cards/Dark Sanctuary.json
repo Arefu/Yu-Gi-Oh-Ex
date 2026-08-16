@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 16625614,
+      "name": "Dark Sanctuary",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If a \"Spirit Message\" card would be placed on your field with \"Destiny Board\", you can Special Summon it as a Normal Monster (Fiend/DARK/Level 1/ATK 0/DEF 0) instead, and if you do, it is unaffected by card effects, except \"Destiny Board\", and cannot be targeted for attacks, but does not prevent your opponent from attacking you directly. When an opponent's monster declares an attack: Toss a coin and if the result is heads, negate the attack, and if you do, inflict damage to your opponent equal to half the current ATK of that opponent's monster.",
+      "race": "Field",
+      "archetype": "Spirit Message",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-sanctuary-1431",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.64"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16625614,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16625614.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16625614.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16625614.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 321450,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-15",
+          "ocg_date": "2016-06-04",
+          "konami_id": 12572,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

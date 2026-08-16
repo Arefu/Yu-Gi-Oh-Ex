@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 3211439,
+      "name": "Forbidden Apocrypha",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Declare 1 monster card type (Fusion, Synchro, or Xyz); if 2 or more monsters of the declared type are on the field, make each player send all monsters of that type from their field to the GY.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/forbidden-apocrypha-293",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN230",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3211439,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3211439.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3211439.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3211439.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.19",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45035,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12186,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "data": [
+    {
+      "id": 91842653,
+      "name": "Toon Summoned Skull",
+      "typeline": [
+        "Fiend",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "(This card is always treated as an \"Archfiend\" card.)\nCannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 monster, while you control \"Toon World\". Cannot attack the turn it is Special Summoned. You must pay 500 LP to declare an attack with this monster. If \"Toon World\" on the field is destroyed, destroy this card. Can attack your opponent directly, unless they control a Toon monster, in which case this card must target a Toon monster for its attacks.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-summoned-skull-7659",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN106",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN237",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "35.6"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "118.3"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.1"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.57"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "18.2"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91842653,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91842653.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91842653.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91842653.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "13.99",
+          "amazon_price": "169.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 224419,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4735,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

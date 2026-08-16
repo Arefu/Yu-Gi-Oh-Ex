@@ -1,0 +1,180 @@
+{
+  "data": [
+    {
+      "id": 33508719,
+      "name": "Morphing Jar",
+      "typeline": [
+        "Rock",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Both players discard as many cards as possible from their hands, then each player draws 5 cards.",
+      "race": "Rock",
+      "atk": 700,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphing-jar-2843",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN173",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN173",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game Two",
+          "set_code": "CP02-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN104",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 2 participation cards",
+          "set_code": "DL11-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.36"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN007",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN121",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9",
+          "set_code": "OP09-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN081",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "5.64"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN098",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN098",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.03"
+        },
+        {
+          "set_name": "Tournament Pack 4",
+          "set_code": "TP4-002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "302.91"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4907.39"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 33508719,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33508719.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33508719.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33508719.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "3.52",
+          "ebay_price": "3.65",
+          "amazon_price": "8.95",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 826822,
+          "viewsweek": 63,
+          "upvotes": 28,
+          "downvotes": 8,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4597,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

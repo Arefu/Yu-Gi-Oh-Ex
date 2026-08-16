@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 13313278,
+      "name": "Battlin' Boxer Veil",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you take battle damage: You can Special Summon this card from your hand, and if you do, gain Life Points equal to the damage you took.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 1800,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlin-boxer-veil-1143",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13313278,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13313278.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13313278.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13313278.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "1.05",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69900,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11038,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

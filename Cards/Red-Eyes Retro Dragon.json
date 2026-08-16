@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 53485634,
+      "name": "Red-Eyes Retro Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Level 7 or lower \"Red-Eyes\" monster(s) you control is destroyed by your opponent's attack or card effect and sent to your GY, while this card is in your hand: You can Special Summon this card in Defense Position, and if you do, Special Summon as many of those destroyed monsters as possible in the same position they were in when destroyed. You can Tribute this card; you can Normal Summon 1 \"Red-Eyes\" monster during your Main Phase this turn in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)",
+      "race": "Dragon",
+      "atk": 1700,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-retro-dragon-4555",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53485634,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53485634.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53485634.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53485634.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "4.00",
+          "amazon_price": "2.90",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 380315,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-05-28",
+          "konami_id": 11929,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

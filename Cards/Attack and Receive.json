@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 63689843,
+      "name": "Attack and Receive",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when you take damage to your Life Points. Inflict 700 points of damage to your opponent's Life Points. Also, inflict 300 points of damage to your opponent's Life Points for each \"Attack and Receive\" card in your Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/attack-and-receive-5378",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN173",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.65"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63689843,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63689843.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63689843.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63689843.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.50",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171615,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4954,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

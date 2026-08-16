@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 90434926,
+      "name": "Veil of Darkness",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "During your Draw Phase, if you draw a DARK monster(s): You can reveal any number of them; send them to the GY, then you can draw 1 more card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/veil-of-darkness-7554",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN088",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN043",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN071",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENG12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENA25",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90434926,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90434926.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90434926.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90434926.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115108,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7488,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

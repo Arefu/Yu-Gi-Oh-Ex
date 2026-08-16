@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 8400623,
+      "name": "Evil Dragon Ananta",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by removing from play all Reptile-Type monsters from your side of the field and Graveyard. This card's ATK and DEF are each equal to the number of monsters you removed x 600. During each of your End Phases, destroy 1 card on the field.",
+      "race": "Reptile",
+      "atk": -1,
+      "def": -1,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-dragon-ananta-713",
+      "card_sets": [
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8400623,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8400623.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8400623.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8400623.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.00",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80550,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "2007-12-22",
+          "konami_id": 7522,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

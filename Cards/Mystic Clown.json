@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 47060154,
+      "name": "Mystic Clown",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Nothing can stop the mad attack of this powerful creature.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystic-clown-4014",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.64"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.96"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.12"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47060154,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47060154.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47060154.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47060154.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48025,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4287,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

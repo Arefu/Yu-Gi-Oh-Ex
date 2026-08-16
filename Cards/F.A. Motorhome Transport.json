@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 75676192,
+      "name": "F.A. Motorhome Transport",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nGains ATK equal to its Level x 300. Each time a \"F.A.\" Spell/Trap Card or effect is activated: You can increase the Level of this card by 1. This card gains the following effect(s), based on its current Level.\r\n● Level 11 or higher: Cannot be destroyed by battle or card effects.\r\n● Level 13 or higher: Once per turn: You can target 1 \"F.A.\" monster in your GY; Special Summon it.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 3000,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-motorhome-transport-9222",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN226",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75676192,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75676192.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75676192.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75676192.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "7.71",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54854,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13539,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

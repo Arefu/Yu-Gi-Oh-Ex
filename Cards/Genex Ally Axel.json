@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 66165755,
+      "name": "Genex Ally Axel",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Genex\" Tuner + 1 or more non-Tuner monsters\nOnce per turn, you can discard 1 card to select 1 Level 4 or lower Machine-Type monster from your Graveyard, and Special Summon it. The ATK of that monster is doubled until the End Phase, but it cannot attack your opponent directly. Remove that monster from play during your End Phase.",
+      "race": "Machine",
+      "atk": 2600,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-ally-axel-5561",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN088",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66165755,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66165755.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66165755.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66165755.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "8.31",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33169,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-01-21",
+          "konami_id": 8763,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

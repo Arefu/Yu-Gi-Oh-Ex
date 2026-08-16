@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 1948619,
+      "name": "Xtra HERO Wonder Driver",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"HERO\" monsters\r\nIf a \"HERO\" monster is Normal or Special Summoned to your zone this card points to: Target 1 \"Polymerization\" Spell Card, 1 \"Fusion\" Spell Card, or 1 \"Change\" Quick-Play Spell Card in your GY; Set that target. You can only activate this effect of \"Xtra HERO Wonder Driver\" once per turn. If this card is destroyed by battle and sent to the GY, or if this card in your possession is destroyed by an opponent's card effect and sent to your GY: Special Summon 1 \"HERO\" monster from your hand.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xtra-hero-wonder-driver-9143",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA37",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1948619,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1948619.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1948619.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1948619.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "4.48",
+          "amazon_price": "4.00",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 461749,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-04",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13543,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

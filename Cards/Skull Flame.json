@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 99899504,
+      "name": "Skull Flame",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can Special Summon 1 \"Burning Skull Head\" from your hand. You cannot conduct your Battle Phase the turn you activate this effect. You can add 1 \"Burning Skull Head\" from your Graveyard to your hand instead of conducting a normal draw in your Draw Phase.",
+      "race": "Zombie",
+      "atk": 2600,
+      "def": 2000,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-flame-8291",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards",
+          "set_code": "WB01-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "17.03"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards",
+          "set_code": "WB01-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99899504,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99899504.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99899504.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99899504.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.32",
+          "tcgplayer_price": "28.30",
+          "ebay_price": "16.99",
+          "amazon_price": "36.00",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27478,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-19",
+          "ocg_date": "2009-03-26",
+          "konami_id": 8269,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

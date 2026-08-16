@@ -1,0 +1,134 @@
+{
+  "data": [
+    {
+      "id": 80344569,
+      "name": "Neo-Spacian Grand Mole",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the start of the Damage Step, if this card battles an opponent's monster: You can return both the opponent's monster and this card to the hand.",
+      "race": "Rock",
+      "atk": 900,
+      "def": 300,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Neo-Spacian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-spacian-grand-mole-6739",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN006",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 3",
+          "set_code": "DP06-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN061",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.31"
+        },
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hobby League 7 participation card B",
+          "set_code": "HL07-EN002",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "11.3"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN005",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80344569,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80344569.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80344569.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80344569.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "2.39",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 515131,
+          "viewsweek": 42,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6770,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

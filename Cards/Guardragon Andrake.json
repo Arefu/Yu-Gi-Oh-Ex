@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 6990577,
+      "name": "Guardragon Andrake",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect. If this card is Special Summoned from the hand or Deck: You can double this card's original ATK/DEF, until the end of the next turn. If this card is Special Summoned from the GY, or if this banished card is Special Summoned: You can target 1 monster your opponent controls; destroy it. You can only use each effect of \"Guardragon Andrake\" once per turn.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 600,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Guardragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-andrake-9841",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6990577,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6990577.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6990577.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6990577.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Andrake the Guardragon",
+          "views": 42271,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14092,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 39188539,
+      "name": "Storm Shooter",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can select and activate 1 of these effects: ● Move this card to an adjacent (horizontal) unoccupied Monster Card Zone. ● Return 1 Spell, Trap or Monster Card on your opponent's side of the field in the same column as this card to its owner's hand.",
+      "race": "Winged Beast",
+      "atk": 2300,
+      "def": 500,
+      "level": 7,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/storm-shooter-3323",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN032",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39188539,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39188539.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39188539.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39188539.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "4.25",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25958,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6896,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

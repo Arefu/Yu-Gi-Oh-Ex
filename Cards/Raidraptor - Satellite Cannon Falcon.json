@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 23603403,
+      "name": "Raidraptor - Satellite Cannon Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 Winged Beast monsters\r\nIf this card is Xyz Summoned by using a \"Raidraptor\" monster as material: You can destroy all Spells and Traps your opponent controls. Your opponent cannot activate cards or effects in response to this effect's activation. Quick Effect: You can detach 1 material from this card, then target 1 face-up monster your opponent controls; it loses 800 ATK for each \"Raidraptor\" monster in your GY.",
+      "race": "Winged Beast",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-satellite-cannon-falcon-2035",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23603403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23603403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23603403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23603403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.88",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 173047,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12211,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 38670435,
+      "name": "Black Tyranno",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If the only cards your opponent controls are Defense Position monsters, this card can attack directly.",
+      "race": "Dinosaur",
+      "atk": 2600,
+      "def": 1800,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/black-tyranno-3277",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN076",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.47"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN152",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38670435,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38670435.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38670435.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38670435.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "4.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116592,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5889,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

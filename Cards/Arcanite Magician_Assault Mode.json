@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 14553285,
+      "name": "Arcanite Magician/Assault Mode",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Assault Mode Activate\". When this card is Special Summoned, place 2 Spell Counters on it. This card gains 1000 ATK for each Spell Counter on it. You can remove 2 Spell Counters from this card to destroy all cards your opponent controls. When this card on the field is destroyed, you can Special Summon 1 \"Arcanite Magician\" from your Graveyard.",
+      "race": "Spellcaster",
+      "atk": 900,
+      "def": 2300,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcanite-magician-assault-mode-1247",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN021",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14553285,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14553285.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14553285.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14553285.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.59",
+          "tcgplayer_price": "9.23",
+          "ebay_price": "7.99",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66445,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8019,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

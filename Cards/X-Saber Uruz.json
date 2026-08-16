@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 26993374,
+      "name": "X-Saber Uruz",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys an opponent's monster by battle and sends it to the Graveyard, you can Tribute this card to return the destroyed card to the top of its owner's Deck.",
+      "race": "Beast-Warrior",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/x-saber-uruz-2311",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN021",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26993374,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26993374.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26993374.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26993374.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30997,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2012-06-01",
+          "konami_id": 7538,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

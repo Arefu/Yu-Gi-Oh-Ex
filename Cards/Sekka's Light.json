@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 24940422,
+      "name": "Sekka's Light",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you have no Spells/Traps in your GY: Draw 2 cards, also, for the rest of this Duel after you activate this card, you cannot activate Spell/Trap Cards or effects, except \"Sekka's Light\". You can banish this card from your GY; reveal 1 monster in your hand, shuffle it into the Deck, then, draw 1 card. You can only use each effect of \"Sekka's Light\" once per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sekka-s-light-9251",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN041",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN062",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9",
+          "set_code": "OP09-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 24940422,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24940422.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24940422.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24940422.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.95",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Light of Sekka",
+          "views": 221108,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13616,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

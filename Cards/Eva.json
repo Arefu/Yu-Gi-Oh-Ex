@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 40177746,
+      "name": "Eva",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY: You can banish up to 2 other LIGHT Fairy monsters from your field and/or GY; add the same number of Level 2 or lower LIGHT Fairy monsters with different names from your Deck to your hand, except \"Eva\". You can only use this effect of \"Eva\" once per turn.",
+      "race": "Fairy",
+      "atk": 500,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eva-8826",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN136",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40177746,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40177746.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40177746.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40177746.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.88",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 334968,
+          "viewsweek": 42,
+          "upvotes": 10,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-01-18",
+          "ocg_date": "2017-09-23",
+          "konami_id": 13349,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

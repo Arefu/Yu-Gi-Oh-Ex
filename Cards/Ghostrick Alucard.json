@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 75367227,
+      "name": "Ghostrick Alucard",
+      "typeline": [
+        "Zombie",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nMonsters your opponent controls cannot target face-up \"Ghostrick\" monsters, or any face-down Defense Position monsters, for attacks, except this one. You can detach 1 Xyz Material from this card, then target 1 Set card your opponent controls; destroy that target. You can only use this effect of \"Ghostrick Alucard\" once per turn. If this card is sent to the Graveyard: You can target 1 other \"Ghostrick\" card in your Graveyard; add that target to your hand.",
+      "race": "Zombie",
+      "atk": 1800,
+      "def": 1600,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-alucard-6340",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN162",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN131",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN052",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75367227,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75367227.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75367227.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75367227.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.93",
+          "tcgplayer_price": "4.50",
+          "ebay_price": "4.95",
+          "amazon_price": "31.94",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 262911,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10783,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

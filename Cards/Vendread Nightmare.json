@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 33971095,
+      "name": "Vendread Nightmare",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can Tribute 1 or more \"Vendread\" monsters from your hand and/or field, then target 1 face-up monster you control; increase its Level by the number of monsters Tributed, until the end of this turn. When your attacking \"Vendread\" Ritual Monster destroys an opponent's monster by battle: You can have your monster gain 1000 ATK. You can only use this effect of \"Vendread Nightmare\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vendread-nightmare-9496",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33971095,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33971095.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33971095.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33971095.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30808,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13707,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

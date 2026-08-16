@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58131925,
+      "name": "Blackwing - Damascus the Polar Night",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can discard this card to target 1 \"Blackwing\" monster you control; it gains 500 ATK until the End Phase.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 700,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-damascus-the-polar-night-4945",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58131925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58131925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58131925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58131925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.76",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26915,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10303,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

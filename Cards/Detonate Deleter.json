@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 24487411,
+      "name": "Detonate Deleter",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Cyberse monsters\r\nOnce per turn, at the start of the Damage Step, when this card battles a face-up monster that is not a Link-3 or higher Link Monster: You can destroy that monster. Once per turn: You can Tribute 1 monster this card points to, then target 1 monster your opponent controls; destroy it.",
+      "race": "Cyberse",
+      "atk": 2100,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 3,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/detonate-deleter-9870",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24487411,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24487411.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24487411.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24487411.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26827,
+          "viewsweek": 22,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14123,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

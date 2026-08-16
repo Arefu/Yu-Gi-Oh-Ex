@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 91895091,
+      "name": "Soul of Silvermountain",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 EARTH monsters\r\nOnce per turn: You can detach 1 Xyz Material from this card to target 1 Set card in your opponent's Spell & Trap Card Zone; it cannot be activated while this card is face-up on the field. If this card destroys an opponent's monster by battle while it has Xyz Material: You can target 1 EARTH monster in your Graveyard; Special Summon that target in face-up Defense Position.",
+      "race": "Rock",
+      "atk": 1800,
+      "def": 2200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-of-silvermountain-7662",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91895091,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91895091.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91895091.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91895091.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.63",
+          "tcgplayer_price": "5.12",
+          "ebay_price": "2.44",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55057,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10178,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

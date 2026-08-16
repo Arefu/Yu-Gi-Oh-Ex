@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 51402908,
+      "name": "The Supremacy Sun",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned, except by its own effect. After this face-up card on the field is destroyed and sent to the Graveyard, during the Standby Phase of the next turn: You can discard 1 card; Special Summon this card from the Graveyard.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-supremacy-sun-4374",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.63"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 10, Issue 1 promotional card",
+          "set_code": "JUMP-EN057",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51402908,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51402908.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51402908.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51402908.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "1.49",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24893,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-01",
+          "ocg_date": "2011-01-21",
+          "konami_id": 9562,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

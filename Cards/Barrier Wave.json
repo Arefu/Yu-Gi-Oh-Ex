@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 96700602,
+      "name": "Barrier Wave",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate by Tributing 1 Synchro Monster when an opponent's monster declares an attack. Change all Attack Position monsters your opponent controls to Defense Position. Then, inflict damage to your opponent equal to the attacking monster's DEF.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barrier-wave-8046",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96700602,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96700602.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96700602.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96700602.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18185,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8999,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 4266839,
+      "name": "Kiseitai",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent's monster attacks this card in face-down Defense Position, this card becomes an Equip Spell Card equipped to the attacking monster (No damage calculation is conducted). During each of your opponent's Standby Phases, increase your Life Points by half of the ATK of the monster equipped with this card.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 800,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kiseitai-387",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-046",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.84"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E046",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN046",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4266839,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4266839.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4266839.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4266839.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.90",
+          "amazon_price": "4.30",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 268173,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4976,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

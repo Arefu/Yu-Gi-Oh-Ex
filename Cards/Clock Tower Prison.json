@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 75041269,
+      "name": "Clock Tower Prison",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, during your opponent's Standby Phase: Place 1 Clock Counter on this card. While there are 4 or more Clock Counters on this card, you do not take any battle damage. If this card with 4 or more Clock Counters is destroyed and sent to the GY: Special Summon 1 \"Destiny HERO - Dreadmaster\" from your hand or Deck.",
+      "race": "Field",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clock-tower-prison-6311",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN228",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "13.19"
+        },
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN048",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN141",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75041269,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75041269.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75041269.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75041269.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100276,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6668,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

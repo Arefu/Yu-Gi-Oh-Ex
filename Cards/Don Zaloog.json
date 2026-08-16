@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "id": 76922029,
+      "name": "Don Zaloog",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts battle damage to your opponent: You can activate 1 of these effects;\r\n● Discard 1 random card from their hand.\r\n● Send the top 2 cards of their Deck to the GY.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Dark Scorpion",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/don-zaloog-6474",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN228",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "9.38"
+        },
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN012",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "22.87"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN068",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI04",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.87"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2022",
+          "set_code": "LART-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76922029,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76922029.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76922029.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76922029.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 274960,
+          "viewsweek": 21,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5426,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

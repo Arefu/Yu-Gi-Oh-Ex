@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 43642620,
+      "name": "Zombie Mammoth",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Destroy this card if you do not have a Zombie-Type monster in your Graveyard. When this face-up card is destroyed, inflict damage to its controller equal to its original ATK.",
+      "race": "Zombie",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zombie-mammoth-3721",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43642620,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43642620.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43642620.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43642620.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48929,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7846,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

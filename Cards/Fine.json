@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 92595643,
+      "name": "Fine",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Discard 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fine-7710",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92595643,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92595643.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92595643.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92595643.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26392,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7479,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 34710660,
+      "name": "Electromagnetic Turtle",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's Battle Phase (Quick Effect): You can banish this card from your GY; end the Battle Phase. You can only use this effect of \"Electromagnetic Turtle\" once per Duel.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/electromagnetic-turtle-2950",
+      "card_sets": [
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA00",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34710660,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34710660.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34710660.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34710660.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.74",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 302978,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-12",
+          "ocg_date": "2014-03-08",
+          "konami_id": 11120,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

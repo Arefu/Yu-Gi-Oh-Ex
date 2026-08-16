@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 61948106,
+      "name": "Gottoms' Second Call",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control an \"X-Saber\" Synchro Monster: You can target 2 \"X-Saber\" monsters in your Graveyard; Special Summon both targets, ignoring their Summoning conditions, but change their ATK to 0, also destroy them during the End Phase of this turn. You can only activate 1 \"Gottoms' Second Call\" per turn. You cannot conduct your Battle Phase the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gottoms-second-call-5242",
+      "card_sets": [
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX19",
+          "set_rarity": "2",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX19",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61948106,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61948106.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61948106.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61948106.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49185,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11576,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

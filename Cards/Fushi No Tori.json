@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 38538445,
+      "name": "Fushi No Tori",
+      "typeline": [
+        "Winged Beast",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to the owner's hand during the End Phase of the turn that this card is Normal Summoned or flipped face-up. When this card inflicts Battle Damage to your opponent's Life Points, increase your Life Points by an amount equal to the Battle Damage.",
+      "race": "Winged Beast",
+      "atk": 1200,
+      "def": 0,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fushi-no-tori-3268",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.12"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38538445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38538445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38538445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38538445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.49",
+          "amazon_price": "0.86",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117266,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5382,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 18597560,
+      "name": "Cybernetic Revolution",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 \"Cyber Dragon\"; Special Summon 1 Fusion Monster from your Extra Deck that lists a \"Cyber Dragon\" monster as material, but it cannot attack directly, and is destroyed during the End Phase of the next turn. You can only activate 1 \"Cybernetic Revolution\" per turn.",
+      "race": "Normal",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cybernetic-revolution-9546",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.33"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18597560,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18597560.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18597560.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18597560.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cybernetic Revolution (card)",
+          "views": 99867,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13851,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 25200959,
+      "name": "Cyberse Integrator",
+      "typeline": [
+        "Cyberse",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card is Synchro Summoned, you can: Special Summon 1 Cyberse Tuner from your hand or GY in Defense Position, also you cannot Special Summon monsters for the rest of this turn, except Cyberse monsters. If this Synchro Summoned card is sent to the GY: You can draw 1 card. You can only use each effect of \"Cyberse Integrator\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-integrator-9861",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25200959,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25200959.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25200959.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25200959.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94541,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14120,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

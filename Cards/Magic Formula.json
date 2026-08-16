@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 67227834,
+      "name": "Magic Formula",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to \"Dark Magician\" or \"Dark Magician Girl\". It gains 700 ATK. If this card is sent from the field to the GY: Gain 1000 LP.",
+      "race": "Equip",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magic-formula-5649",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN093",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.33"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN188",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67227834,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67227834.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67227834.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67227834.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 212521,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 5,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2003-04-08",
+          "konami_id": 5223,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 61888819,
+      "name": "Steelswarm Origin",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"lswarm\" monsters\r\nWhile this card is in the Extra Monster Zone, if a monster would be Special Summoned from the Extra Deck to the Main Monster Zone, it must be Summoned in the zone this card points to. While this card points to a monster, neither player can target it with card effects, also it cannot be destroyed by battle or card effects. Once per turn, when a monster(s) on the field is destroyed by battle or by card effect: You can Special Summon Level 4 or lower \"lswarm\" monsters from your Deck in Defense Position, up to the number destroyed.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Steelswarm",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-origin-9161",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61888819,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61888819.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61888819.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61888819.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.07",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56421,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13494,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

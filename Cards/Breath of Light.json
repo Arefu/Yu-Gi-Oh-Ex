@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 20101223,
+      "name": "Breath of Light",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy all face-up Rock-Type monsters on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/breath-of-light-1726",
+      "card_sets": [
+        {
+          "set_name": "Duelist League Series 10 participation card",
+          "set_code": "DL10-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "97.8"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20101223,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20101223.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20101223.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20101223.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.54",
+          "tcgplayer_price": "99.99",
+          "ebay_price": "5.00",
+          "amazon_price": "699.99",
+          "coolstuffinc_price": "79.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66723,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-04-28",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4669,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

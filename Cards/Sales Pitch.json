@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 2971446,
+      "name": "Sales Pitch",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If your opponent adds a card(s) from the Deck to their hand, except by drawing them, by their card effect: Reveal 1 card from your Deck, and add it to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only activate 1 \"Sales Pitch\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sales-pitch-10613",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN076",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2971446,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2971446.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2971446.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2971446.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Catch Copy",
+          "views": 46350,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011076,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14885,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 69514125,
+      "name": "Avenging Knight Parshath",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner LIGHT monsters\nOnce per turn: You can target 1 face-up monster your opponent controls; change that target's battle position. If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Fairy",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Parshath",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/avenging-knight-parshath-5845",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN230",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.19"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis Sneak Peek Participation Card",
+          "set_code": "TDGS-ENSP1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "16.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69514125,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69514125.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69514125.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69514125.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "10.95",
+          "tcgplayer_price": "12.56",
+          "ebay_price": "4.00",
+          "amazon_price": "24.99",
+          "coolstuffinc_price": "6.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 340280,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7864,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

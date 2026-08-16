@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 96915510,
+      "name": "Crealtar, the Impcantation Originator",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Impcantation Inception\". During the Main Phase (Quick Effect): You can reveal this card in your hand; discard 1 card, then Special Summon \"Impcantation\" monsters from your GY whose total Levels equal 10, but shuffle them into the Deck during the End Phase. You can only use this effect of \"Crealtar, the Impcantation Originator\" once per turn. Non-Ritual \"Impcantation\" monsters you control gain 2000 ATK, but their effects are negated.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Impcantation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crealtar-the-impcantation-originator-10031",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96915510,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96915510.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96915510.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96915510.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Impcantation Creator - Crealtar",
+          "views": 82697,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14279,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

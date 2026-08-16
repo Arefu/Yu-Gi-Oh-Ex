@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 4141820,
+      "name": "Djinn Prognosticator of Rituals",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Ritual Summon a monster, you can banish this card from your GY as 1 of the monsters required for the Ritual Summon. If you Ritual Summon using this card, if that Ritual Summoned monster inflicts battle damage to your opponent, they discard 1 card.",
+      "race": "Fiend",
+      "atk": 400,
+      "def": 300,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/djinn-prognosticator-of-rituals-370",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4141820,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4141820.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4141820.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4141820.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41962,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8649,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

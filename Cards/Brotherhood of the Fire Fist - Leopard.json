@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 39699564,
+      "name": "Brotherhood of the Fire Fist - Leopard",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, if this card was Normal or Special Summoned this turn: You can Tribute 1 \"Fire Fist\" monster; Set 1 \"Fire Formation\" Spell/Trap Card directly from your Deck. You can only use the effect of \"Brotherhood of the Fire Fist - Leopard\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 0,
+      "def": 200,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-leopard-3362",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39699564,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39699564.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39699564.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39699564.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.95",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60057,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10508,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

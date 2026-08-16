@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 72926163,
+      "name": "Elemental HERO Neos Knight",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + 1 Warrior monster\r\nMust be Fusion Summoned. Gains ATK equal to half the original ATK of the Warrior Fusion Material used for its Fusion Summon, except \"Elemental HERO Neos\". Can make a second attack during each Battle Phase. Your opponent takes no battle damage from attacks involving this card.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 1000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-neos-knight-6121",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN101",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN064",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN093",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72926163,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72926163.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72926163.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72926163.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.99",
+          "amazon_price": "5.39",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 123202,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8866,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 44097050,
+      "name": "Mecha Phantom Beast Auroradon",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Machine monsters\r\nIf this card is Link Summoned: You can activate this effect; Special Summon 3 \"Mecha Phantom Beast Tokens\" (Machine/WIND/Level 3/ATK 0/DEF 0), also you cannot Link Summon for the rest of this turn. Once per turn: You can Tribute up to 3 monsters, then apply 1 of these effects, based on the number Tributed;\r\n● 1: Destroy 1 card on the field.\r\n● 2: Special Summon 1 \"Mecha Phantom Beast\" monster from your Deck.\r\n● 3: Add 1 Trap from your GY to your hand.",
+      "race": "Machine",
+      "atk": 2100,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "linkval": 3,
+      "linkmarkers": [
+        "Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-auroradon-10738",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.4"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 44097050,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44097050.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44097050.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44097050.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.55",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "3.44",
+          "amazon_price": "7.00",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 406330,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257051,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14940,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 99171160,
+      "name": "Kozaky",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A workaholic fiend who devotes everything to his research into the languages of Dark World. His mind has collapsed because of working too hard.",
+      "race": "Fiend",
+      "atk": 400,
+      "def": 400,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozaky-8232",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-058",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.94"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN171",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99171160,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99171160.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99171160.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99171160.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "3.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54471,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6020,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

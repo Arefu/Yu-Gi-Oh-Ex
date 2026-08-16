@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 99937842,
+      "name": "T.G. Star Guardian",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner \"T.G.\" monsters\r\nOnce per Chain, during your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Synchro Summon using this card you control. You can only use each of the following effects of \"T.G. Star Guardian\" once per turn.\r\n● If this card is Special Summoned: You can target 1 \"T.G.\" monster in your GY; add it to your hand.\r\n● During your Main Phase: You can Special Summon 1 \"T.G.\" monster from your hand.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 2200,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-star-guardian-9813",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99937842,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99937842.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99937842.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99937842.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.62",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69767,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14116,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

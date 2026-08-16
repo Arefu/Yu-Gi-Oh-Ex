@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 77087109,
+      "name": "Clock Resonator",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, this face-up Defense Position card cannot be destroyed by battle or by card effects.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Resonator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clock-resonator-6487",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77087109,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77087109.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77087109.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77087109.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "4.95",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96349,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9478,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

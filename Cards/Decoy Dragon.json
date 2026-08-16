@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 2732323,
+      "name": "Decoy Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is targeted for an attack: Target 1 Level 7 or higher Dragon-Type monster in your Graveyard; Special Summon it, and if you do, change the attack target to it and perform damage calculation.",
+      "race": "Dragon",
+      "atk": 300,
+      "def": 200,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/decoy-dragon-243",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2732323,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2732323.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2732323.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2732323.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60875,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-10-24",
+          "ocg_date": "2007-06-23",
+          "konami_id": 7247,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

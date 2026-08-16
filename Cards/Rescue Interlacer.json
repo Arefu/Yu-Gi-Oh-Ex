@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 63009228,
+      "name": "Rescue Interlacer",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your Cyberse monster is attacked (Quick Effect): You can discard this card; you take no battle damage from that battle. You can only use this effect of \"Rescue Interlacer\" once per turn. Once per turn, during the End Phase, if this card is in the GY because it was discarded there to activate this effect this turn: Special Summon this card.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1200,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rescue-interlacer-10182",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63009228,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63009228.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63009228.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63009228.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15188,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009001,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14449,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 29155212,
+      "name": "Pumpking the King of Ghosts",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains 100 ATK/DEF while \"Castle of Dark Illusions\" is on the field. Also, during your Standby Phase, if \"Castle of Dark Illusions\" is on the field: This card gains 100 ATK/DEF. This effect activates once per turn, for four of your Standby Phases (counting this as the first). \"Castle of Dark Illusions\" must be on the field to activate and to resolve this effect. If \"Castle of Dark Illusions\" is not on the field, this ATK/DEF gain disappears and this effect resets.",
+      "race": "Zombie",
+      "atk": 1800,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pumpking-the-king-of-ghosts-2473",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN061",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.26"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.46"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29155212,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29155212.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29155212.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29155212.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "4.72",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 278522,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-12-01",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4105,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 51282878,
+      "name": "Fishborg Planter",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once, while this card is in the GY: You can send the top card of your Deck to the GY, then, if it is a WATER monster, Special Summon this card from the GY. You can only use this effect of \"Fishborg Planter\" once per turn.",
+      "race": "Fish",
+      "atk": 200,
+      "def": 200,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Fishborg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fishborg-planter-4363",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51282878,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51282878.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51282878.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51282878.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41351,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10252,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

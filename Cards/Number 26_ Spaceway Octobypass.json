@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 39622156,
+      "name": "Number 26: Spaceway Octobypass",
+      "typeline": [
+        "Psychic",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\r\nAt the start of the Battle Phase: You can detach 1 material from this card; during this Battle Phase, a player can only attack with 1 monster, and its attack(s) becomes a direct attack. You can only use this effect of \"Number 26: Spaceway Octobypass\" once per turn. At the end of the Damage Step, if a monster inflicted battle damage by a direct attack: Give control of the monster that attacked to the turn player's opponent.",
+      "race": "Psychic",
+      "atk": 800,
+      "def": 2400,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-26-spaceway-octobypass-10352",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN027",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39622156,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39622156.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39622156.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39622156.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.43",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "3.50",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 26: Octobypass the Dimensional Pathway",
+          "views": 50029,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248030,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14563,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 21051146,
+      "name": "Blast Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell Card resolves. You can remove any number of Spell Counters from this card, then target 1 face-up monster on the field with ATK less than or equal to the number of counters you removed x 700; destroy that target.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": 1700,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blast-magician-1807",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN140",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN020",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENY18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENA04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Structure Deck: Spellcaster's Judgment",
+          "set_code": "SD6-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21051146,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21051146.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21051146.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21051146.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.00",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 98762,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6250,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

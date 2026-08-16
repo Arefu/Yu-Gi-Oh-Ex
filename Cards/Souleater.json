@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 31242786,
+      "name": "Souleater",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A living wonder of mystery.",
+      "race": "Fish",
+      "atk": 1200,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/souleater-2648",
+      "card_sets": [
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31242786,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31242786.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31242786.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31242786.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50738,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5036,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

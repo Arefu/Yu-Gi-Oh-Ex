@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 34620088,
+      "name": "Gimmick Puppet Shadow Feeler",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by battle. When you take battle damage from an opponent's direct attack while this card is in your Graveyard: You can Special Summon this card from your Graveyard in face-up Attack Position, and if you do, take 1000 damage. You can only use this effect of \"Gimmick Puppet Shadow Feeler\" once per turn. If this card is an Xyz Material and would be sent to the Graveyard, banish it instead.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gimmick-puppet-shadow-feeler-2940",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN012",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.84"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34620088,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34620088.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34620088.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34620088.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.79",
+          "amazon_price": "1.32",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49508,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11008,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

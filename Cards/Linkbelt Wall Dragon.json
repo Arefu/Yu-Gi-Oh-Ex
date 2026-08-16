@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 63092423,
+      "name": "Linkbelt Wall Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect. When you Link Summon: You can Special Summon this card from your hand, and if you do, place 2 counters on it. If a monster is Link Summoned: Remove 2 of these counters from this card (or all, if less than 2). Once per turn, during each Standby Phase: Place 1 of these counters on this card. No monster can be Link Summoned unless this card has at least as many of these counters as that monster's Link Rating. Monsters cannot attack, except Link Monsters.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 2100,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/linkbelt-wall-dragon-8821",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN174",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN027",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN027",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63092423,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63092423.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63092423.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63092423.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45707,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13376,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

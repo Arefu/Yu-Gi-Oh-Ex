@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 88234365,
+      "name": "Darklord Tezcatlipoca",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Darklord\" monster(s) you control would be destroyed by battle or card effect, you can discard this card instead. During either player's turn: You can pay 1000 LP, then target 1 \"Darklord\" Spell/Trap Card in your Graveyard; apply that target's effect, then shuffle that target into the Deck. You can only use this effect of \"Darklord Tezcatlipoca\" once per turn. You can only Special Summon \"Darklord Tezcatlipoca(s)\" once per turn.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2100,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-tezcatlipoca-7377",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88234365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88234365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88234365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88234365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.83",
+          "tcgplayer_price": "6.15",
+          "ebay_price": "0.99",
+          "amazon_price": "2.92",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 147655,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12725,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

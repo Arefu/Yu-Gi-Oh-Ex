@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 95504778,
+      "name": "Triggering Wurm",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY as Link Material for the Link Summon of a DARK monster: You can Special Summon this card from your GY in Attack Position, to your zone that Link Monster points to, but it cannot be used as Link Material. If this card is destroyed or banished by an effect activated by a Link Monster: Draw 1 card. You can only use each effect of \"Triggering Wurm\" once per turn.",
+      "race": "Dragon",
+      "atk": 600,
+      "def": 600,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triggering-wurm-9511",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN042",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95504778,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95504778.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95504778.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95504778.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.50",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Triggering Wurm",
+          "views": 20545,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13835,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

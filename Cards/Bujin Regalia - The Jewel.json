@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 63049052,
+      "name": "Bujin Regalia - The Jewel",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Rank 4 Xyz Monster you control; equip this card to that target. It gains 300 ATK for each Xyz Material attached to it. Once per turn, while this card is equipped to a monster by this effect: You can attach 1 \"Bujin\" monster from your hand to the equipped monster as an Xyz Material.",
+      "race": "Normal",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujin-regalia-the-jewel-5325",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN234",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63049052,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63049052.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63049052.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63049052.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20980,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10961,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

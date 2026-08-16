@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 16960120,
+      "name": "Kitchen Dragonmaid",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"Dragonmaid\" monster from your Deck to your hand, except \"Kitchen Dragonmaid\", then send 1 \"Dragonmaid\" monster from your hand to the GY. At the start of the Battle Phase: You can return this card to the hand, and if you do, Special Summon 1 Level 8 \"Dragonmaid\" monster from your hand or GY. You can only use each effect of \"Kitchen Dragonmaid\" once per turn.",
+      "race": "Dragon",
+      "atk": 500,
+      "def": 1700,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kitchen-dragonmaid-10534",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN022",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN018",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "32.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16960120,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16960120.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16960120.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16960120.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.75",
+          "tcgplayer_price": "3.48",
+          "ebay_price": "5.49",
+          "amazon_price": "23.52",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaid Tillroo",
+          "views": 585916,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423018,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14761,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

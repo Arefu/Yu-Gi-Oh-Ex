@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 64014615,
+      "name": "Pot of Acquisitiveness",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 3 banished monsters; shuffle all 3 into the Deck, then draw 1 card. You can only activate 1 \"Pot of Acquisitiveness\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pot-of-acquisitiveness-5402",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN065",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Pot Collection",
+          "set_code": "TBC1-EN006",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64014615,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64014615.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64014615.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64014615.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.10",
+          "tcgplayer_price": "2.05",
+          "ebay_price": "3.95",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 390613,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12655,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

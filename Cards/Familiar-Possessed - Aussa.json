@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 31887905,
+      "name": "Familiar-Possessed - Aussa",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand or Deck) by sending 1 face-up \"Aussa the Earth Charmer\" and 1 face-up EARTH monster you control to the GY. If this card Special Summoned by its own effect attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Spellcaster",
+      "atk": 1850,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Charmer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/familiar-possessed-aussa-2706",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.61"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.16"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.24"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31887905,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31887905.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31887905.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31887905.jpg"
+        },
+        {
+          "id": 31887906,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31887906.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31887906.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31887906.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.98",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 169696,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Familiar-Possessed - Aussa",
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6507,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

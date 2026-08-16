@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 89238128,
+      "name": "Cyberse Accelerator",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, except Tokens\nDuring the Battle Phase (Quick Effect): You can target 1 Cyberse monster this card points to and activate 1 of these effects;\n● It gains 2000 ATK until the end of this turn.\n● It can make up to 2 attacks on monsters during each Battle Phase this turn.\nThis card cannot attack the turn this effect is activated. You can only use this effect of \"Cyberse Accelerator\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "linkval": 3,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-accelerator-8720",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN241",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.99"
+        },
+        {
+          "set_name": "Ignition Assault Special Edition",
+          "set_code": "IGAS-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89238128,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89238128.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89238128.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89238128.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32605,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-05",
+          "ocg_date": "2017-07-21",
+          "konami_id": 13341,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

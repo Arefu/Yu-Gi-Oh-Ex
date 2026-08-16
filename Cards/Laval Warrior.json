@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 52786469,
+      "name": "Laval Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys an opponent's monster by battle: Inflict damage to your opponent equal to the original ATK of the destroyed monster. You must have 4 or more \"Laval\" monsters with different names in your Graveyard to activate and to resolve this effect.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 500,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-warrior-4493",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5",
+          "set_code": "DT05-EN024",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN024",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "3.85"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52786469,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52786469.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52786469.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52786469.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18102,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8901,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

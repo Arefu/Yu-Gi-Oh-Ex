@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 81254059,
+      "name": "Worm Queen",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card in face-up Attack Position by Tributing 1 Reptile-Type \"Worm\" monster. Once per turn, you can Tribute 1 Reptile-Type \"Worm\" monster to Special Summon 1 Reptile-Type \"Worm\" monster from your Deck with a Level less than or equal to the Tributed monster.",
+      "race": "Reptile",
+      "atk": 2700,
+      "def": 1100,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-queen-6820",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN084",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN054",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81254059,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81254059.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81254059.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81254059.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.70",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "3.50",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27218,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8115,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

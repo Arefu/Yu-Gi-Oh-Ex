@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 81587028,
+      "name": "Box of Friends",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed and sent to the GY: You can Special Summon from your Deck, 2 Normal Monsters with different names whose ATK or DEF is 0, in face-up Defense Position, but they cannot be used as Synchro Material, also they are destroyed during your next End Phase. You can only use this effect of \"Box of Friends\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/box-of-friends-6849",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN104",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN013",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81587028,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81587028.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81587028.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81587028.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64430,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10699,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

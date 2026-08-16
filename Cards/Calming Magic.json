@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 51773900,
+      "name": "Calming Magic",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "This card can only be activated at the start of Main Phase 1. During the Main Phases and Battle Phase of this turn, neither player can Summon monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/calming-magic-4403",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN062",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51773900,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51773900.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51773900.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51773900.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18168,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8214,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

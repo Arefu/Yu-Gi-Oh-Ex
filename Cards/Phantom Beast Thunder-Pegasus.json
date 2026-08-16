@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 34961968,
+      "name": "Phantom Beast Thunder-Pegasus",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent's monster declares an attack, you can remove from play this card from your Graveyard to make the Battle Damage taken by 1 \"Gazelle the King of Mythical Beasts\" or \"Phantom Beast\" monster 0. When this happens, that monster is not destroyed by battle.",
+      "race": "Beast-Warrior",
+      "atk": 700,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantom-beast-thunder-pegasus-2966",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.99"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force promotional cards",
+          "set_code": "GX02-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34961968,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34961968.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34961968.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34961968.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29359,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-16",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6956,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

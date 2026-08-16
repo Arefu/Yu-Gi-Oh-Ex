@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 69170557,
+      "name": "Number C40: Gimmick Puppet of Dark Strings",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 9 monsters\nWhen this card is Special Summoned: Destroy the monsters with String Counters, and if you do, draw 1 card, then inflict damage to your opponent equal to the highest original ATK among those destroyed monsters in the Graveyard (your choice, if tied). Once per turn: You can detach 1 Xyz Material from this card; place 1 String Counter on each face-up monster your opponent controls.",
+      "race": "Machine",
+      "atk": 3300,
+      "def": 2000,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c40-gimmick-puppet-of-dark-strings-5815",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN020",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "5.56"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 69170557,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69170557.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69170557.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69170557.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.64",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.18",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C40",
+          "views": 184138,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11015,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

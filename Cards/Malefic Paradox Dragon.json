@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 8310162,
+      "name": "Malefic Paradox Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Malefic Parallel Gear\" + 1 non-Tuner \"Malefic\" monster\nWhen this card is Synchro Summoned, you can select 1 Synchro Monster in either player's Graveyard, and Special Summon it. There can only be 1 face-up \"Malefic Paradox Dragon\" on the field. If \"Malefic World\" is not face-up on the field, destroy this card.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-paradox-dragon-703",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time Movie Pack",
+          "set_code": "YMP1-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8310162,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8310162.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8310162.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8310162.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.19",
+          "tcgplayer_price": "6.31",
+          "ebay_price": "7.94",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106458,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-22",
+          "ocg_date": "2011-02-26",
+          "konami_id": 8867,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 89810518,
+      "name": "Reptilianne Medusa",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Send 1 card from your hand to the Graveyard and select 1 face-up monster your opponent controls. The ATK of the selected monster becomes 0, and it cannot change its battle position.",
+      "race": "Reptile",
+      "atk": 2200,
+      "def": 800,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Reptilianne",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reptilianne-medusa-7505",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89810518,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89810518.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89810518.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89810518.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.40",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48240,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8456,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

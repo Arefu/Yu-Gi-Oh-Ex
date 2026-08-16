@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 69408987,
+      "name": "Spider Web",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If a monster declares an attack, it is changed to Defense Position at the end of the Damage Step. It cannot change its battle position until the End Phase of its controller's next turn, while this card remains on the field.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spider-web-5838",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69408987,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69408987.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69408987.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69408987.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.19",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56633,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8480,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 99284890,
+      "name": "Avatar of The Pot",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "By sending 1 \"Pot of Greed\" from your hand to the Graveyard, draw 3 cards from your Deck.",
+      "race": "Rock",
+      "atk": 1200,
+      "def": 1300,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/avatar-of-the-pot-8244",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.49"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99284890,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99284890.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99284890.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99284890.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.50",
+          "amazon_price": "0.51",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76991,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5960,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

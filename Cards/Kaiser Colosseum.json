@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 35059553,
+      "name": "Kaiser Colosseum",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If there is 1 or more monster(s) on the field of the controller of this card, his/her opponent cannot place a monster on the field if his/her number of monsters would exceed the number of monsters that are on the field of this card's controller. The cards that are already on the field before this card's activation are unaffected by this effect.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kaiser-colosseum-2977",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.38"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 35059553,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35059553.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35059553.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35059553.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "1.50",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 233637,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5605,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

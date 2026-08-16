@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 54965929,
+      "name": "Mythical Beast Medusa",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have no card in your other Pendulum Zone: You can target 1 monster in your GY that you can place a Spell Counter on; destroy this card, and if you do, Special Summon that monster, and if you do that, place 1 Spell Counter on it. You can only use this effect of \"Mythical Beast Medusa\" once per turn.\n\n[ Monster Effect ] \nEach time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. Once per turn, during the Battle Phase (Quick Effect): You can remove 2 Spell Counters from your field, then target 1 face-up monster on the field; its ATK/DEF become half its current ATK/DEF until the end of this turn.",
+      "race": "Spellcaster",
+      "pend_desc": "If you have no card in your other Pendulum Zone: You can target 1 monster in your GY that you can place a Spell Counter on; destroy this card, and if you do, Special Summon that monster, and if you do that, place 1 Spell Counter on it. You can only use this effect of \"Mythical Beast Medusa\" once per turn.",
+      "monster_desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. Once per turn, during the Battle Phase (Quick Effect): You can remove 2 Spell Counters from your field, then target 1 face-up monster on the field; its ATK/DEF become half its current ATK/DEF until the end of this turn.",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Mythical Beast",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-beast-medusa-9028",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54965929,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54965929.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54965929.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54965929.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38534,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13394,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

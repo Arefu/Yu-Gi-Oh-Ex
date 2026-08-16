@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 85967160,
+      "name": "Aromage Bergamot",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While your LP is higher than your opponent's, if a Plant-Type monster you control attacks a Defense Position monster, inflict piercing battle damage to your opponent. Once per turn, if you gain LP: This card gains 1000 ATK and DEF until the end of your opponent's turn.",
+      "race": "Plant",
+      "atk": 2400,
+      "def": 1800,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aromage-bergamot-7203",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85967160,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85967160.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85967160.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85967160.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.06",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "2.25",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121946,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11821,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

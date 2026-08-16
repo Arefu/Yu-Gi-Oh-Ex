@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 48150362,
+      "name": "Destiny HERO - Drawhand",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned by the effect of a \"HERO\" monster: You can make each player draw 1 card. During the next Standby Phase after this card was sent to the GY: You can Special Summon this card from your GY, but banish it when it leaves the field. You can only use each effect of \"Destiny HERO - Drawhand\" once per turn.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-drawhand-9968",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48150362,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48150362.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48150362.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48150362.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Destiny HERO - Drawguy",
+          "views": 194148,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14259,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

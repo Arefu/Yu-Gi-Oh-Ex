@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 73240432,
+      "name": "Edge Imp Cotton Eater",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAll Fusion Monsters you control gain 300 ATK. Once per turn, if a \"Frightfur\" Fusion Monster(s) is Fusion Summoned to your field (except during the Damage Step): You can draw 1 card.\n\n[ Monster Effect ] \nIf this card is Special Summoned: You can inflict 200 damage to your opponent for each \"Frightfur\" monster in your GY. You can only use this effect of \"Edge Imp Cotton Eater\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "All Fusion Monsters you control gain 300 ATK. Once per turn, if a \"Frightfur\" Fusion Monster(s) is Fusion Summoned to your field (except during the Damage Step): You can draw 1 card.",
+      "monster_desc": "If this card is Special Summoned: You can inflict 200 damage to your opponent for each \"Frightfur\" monster in your GY. You can only use this effect of \"Edge Imp Cotton Eater\" once per turn.",
+      "atk": 2400,
+      "def": 1600,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/edge-imp-cotton-eater-8451",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN227",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73240432,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73240432.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73240432.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73240432.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85762,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2017-03-21",
+          "konami_id": 13038,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

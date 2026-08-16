@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "id": 17266660,
+      "name": "Herald of Orange Light",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a monster effect (Quick Effect): You can send this card and 1 other Fairy monster from your hand to the GY; negate the activation, and if you do, destroy it.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 500,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Herald",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/herald-of-orange-light-1496",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN050",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN103",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN103",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN068",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Seven",
+          "set_code": "TU07-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 17266660,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17266660.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17266660.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17266660.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "2.99",
+          "amazon_price": "10.00",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1122835,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7673,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 43359262,
+      "name": "Sergeant Electro",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 Set card in your opponent's Spell & Trap Zone; while this card is face-up on the field, its target(s) cannot be activated.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 1300,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sergeant-electro-3694",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN090",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.13"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43359262,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43359262.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43359262.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43359262.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39160,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2010-03-20",
+          "konami_id": 9022,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

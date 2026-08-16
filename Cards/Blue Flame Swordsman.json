@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50903514,
+      "name": "Blue Flame Swordsman",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during either player's Battle Phase: You can target 1 other Warrior-Type monster you control; this card loses exactly 600 ATK, and if it does, that monster gains 600 ATK. When this card you control is destroyed by your opponent's card (by battle or card effect) and sent to your Graveyard: You can banish this card from your Graveyard, then target 1 FIRE Warrior-Type monster in your Graveyard; Special Summon that target.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-flame-swordsman-4332",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World",
+          "set_code": "LC04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.03"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50903514,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50903514.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50903514.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50903514.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "4.95",
+          "amazon_price": "1.51",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134483,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-10-11",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10864,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 49684352,
+      "name": "Double Iris Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 DARK Spellcaster-Type monster you control; apply this effect to it, then destroy this card. Once applied, double any battle damage that monster inflicts to your opponent this turn if it battles an opponent's monster.\n\n[ Monster Effect ] \n(This card is always treated as a \"Pendulum Dragon\" card.)\r\nIf this card is destroyed by battle or card effect: You can add 1 \"Pendulumgraph\" card from your Deck to your hand.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn: You can target 1 DARK Spellcaster-Type monster you control; apply this effect to it, then destroy this card. Once applied, double any battle damage that monster inflicts to your opponent this turn if it battles an opponent's monster.",
+      "monster_desc": "(This card is always treated as a \"Pendulum Dragon\" card.)\r\nIf this card is destroyed by battle or card effect: You can add 1 \"Pendulumgraph\" card from your Deck to your hand.",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-iris-magician-8318",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49684352,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49684352.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49684352.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49684352.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.10",
+          "tcgplayer_price": "0.87",
+          "ebay_price": "1.38",
+          "amazon_price": "1.80",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Iris Magician",
+          "views": 277097,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-06-22",
+          "ocg_date": "2016-12-23",
+          "konami_id": 12908,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

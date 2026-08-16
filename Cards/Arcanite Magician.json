@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 31924889,
+      "name": "Arcanite Magician",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner Spellcaster monsters\r\nIf this card is Synchro Summoned: Place 2 Spell Counters on it. This card gains 1000 ATK for each Spell Counter on it. You can remove 1 Spell Counter from your field, then target 1 card your opponent controls; destroy that target.",
+      "race": "Spellcaster",
+      "atk": 400,
+      "def": 1800,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcanite-magician-2711",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 14 participation cards",
+          "set_code": "DL14-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "12.26"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN060",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31924889,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31924889.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31924889.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31924889.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.38",
+          "tcgplayer_price": "2.80",
+          "ebay_price": "2.94",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 272644,
+          "viewsweek": 42,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8038,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

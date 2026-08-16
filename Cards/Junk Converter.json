@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 11069680,
+      "name": "Junk Converter",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card and 1 Tuner; add 1 \"Synchron\" monster from your Deck to your hand. If this card is sent to the GY as Synchro Material: You can target 1 Tuner in your GY; Special Summon it in Defense Position, but it cannot activate its effects this turn. You can only use each effect of \"Junk Converter\" once per turn.",
+      "race": "Warrior",
+      "atk": 400,
+      "def": 200,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-converter-10702",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENY14",
+          "set_rarity": "3",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.6"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN118",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11069680,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11069680.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11069680.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11069680.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 565973,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413024,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14916,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

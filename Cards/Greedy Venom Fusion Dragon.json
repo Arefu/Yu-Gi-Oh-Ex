@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 51570882,
+      "name": "Greedy Venom Fusion Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Predaplant\" monster + 1 DARK monster whose original Level is 8 or higher\r\nMust first be Fusion Summoned. Once per turn: You can target 1 face-up monster on the field; until the end of this turn, change that target's ATK to 0, also that target has its effects negated. If this card is destroyed and sent to the Graveyard: Destroy as many monsters on the field as possible, then you can banish 1 Level 8 or higher DARK monster from your Graveyard and Special Summon this card from the Graveyard.",
+      "race": "Dragon",
+      "atk": 3300,
+      "def": 2500,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/greedy-venom-fusion-dragon-4390",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51570882,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51570882.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51570882.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51570882.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.11",
+          "tcgplayer_price": "3.97",
+          "ebay_price": "1.98",
+          "amazon_price": "8.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 251762,
+          "viewsweek": 21,
+          "upvotes": 24,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12836,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

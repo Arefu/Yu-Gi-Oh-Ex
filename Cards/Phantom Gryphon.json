@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 74852097,
+      "name": "Phantom Gryphon",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A legendary monster that dwells secretly in the mountains, fighting with the harpies over hunting grounds. A single wingbeat is said to cause the fiercest of storms.",
+      "race": "Winged Beast",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantom-gryphon-6297",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN001",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74852097,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74852097.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74852097.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74852097.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.99",
+          "amazon_price": "3.74",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57336,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11676,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

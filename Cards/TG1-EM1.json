@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 76641981,
+      "name": "TG1-EM1",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 monster your opponent controls and 1 \"T.G.\" monster you control; switch control of both monsters.",
+      "race": "Normal",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tg1-em1-6449",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN221",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76641981,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76641981.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76641981.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76641981.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37270,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9541,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29719112,
+      "name": "Cyber Pharos",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by Tributing 1 Machine monster. Once per turn, during your Main Phase: You can Fusion Summon 1 Machine Fusion Monster from your Extra Deck, using monsters from your hand and/or field as material. When a Fusion Monster you control is destroyed by battle: You can banish this card from your GY; add 1 \"Power Bond\" from your Deck to your hand. You can only use this effect of \"Cyber Pharos\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 2100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-pharos-9541",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29719112,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29719112.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29719112.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29719112.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220677,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13848,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

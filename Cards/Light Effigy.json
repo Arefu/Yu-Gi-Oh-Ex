@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 54766667,
+      "name": "Light Effigy",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Tribute Summon a LIGHT Normal Monster, you can treat this 1 monster as 2 Tributes.",
+      "race": "Fairy",
+      "atk": 1500,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/light-effigy-4668",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54766667,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54766667.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54766667.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54766667.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.95",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27361,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7213,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

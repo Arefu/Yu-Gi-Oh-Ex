@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 95239444,
+      "name": "Orea, the Sylvan High Arbiter",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\nOnce per turn: You can send 1 Plant-Type monster from your hand or face-up from your side of the field to the Graveyard; look at a number of cards from the top of your Deck equal to the Level that the sent monster had in the hand or on the field, then place them on the top of the Deck in any order. Once per turn: You can detach 1 Xyz Material from this card; choose a number from 1 to 3, then excavate that many cards from the top of your Deck, send any excavated Plant-Type monsters to the Graveyard, and if you do, return up to that many cards on the field to the hand (min.1), except this card. Also, place the other cards on the bottom of your Deck in any order.",
+      "race": "Plant",
+      "atk": 2800,
+      "def": 2500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orea-the-sylvan-high-arbiter-7929",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95239444,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95239444.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95239444.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95239444.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.20",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "1.95",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88438,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11079,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

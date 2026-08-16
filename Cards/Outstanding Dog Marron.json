@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 11548522,
+      "name": "Outstanding Dog Marron",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent to your Graveyard, add it to your Deck and shuffle it.",
+      "race": "Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/outstanding-dog-marron-999",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-062",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.46"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN062",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.72"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN224",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17",
+          "set_code": "OP17-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11548522,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11548522.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11548522.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11548522.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.45",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105286,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5767,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 7526150,
+      "name": "Golgoil",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An iron giant that appears from a dimensional rift.",
+      "race": "Machine",
+      "atk": 900,
+      "def": 1600,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/golgoil-643",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENE10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7526150,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7526150.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7526150.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7526150.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "10.68",
+          "amazon_price": "0.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13309,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2023-08-24",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4424,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 29515122,
+      "name": "Digvorzhak, King of Heavy Industry",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\r\nOnce per turn: You can detach 1 material from this card; send the top 3 cards of your opponent's Deck to the GY, then, if any monsters were sent to the GY by this effect, destroy cards your opponent controls, up to the number of monsters sent.",
+      "race": "Machine",
+      "atk": 3200,
+      "def": 2000,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/digvorzhak-king-of-heavy-industry-2502",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN064",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.89"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2012 Prize Card",
+          "set_code": "YCSW-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1931.93"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2012 Prize Card",
+          "set_code": "YCSW-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2242.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29515122,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29515122.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29515122.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29515122.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63379,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-01",
+          "ocg_date": "2011-10-21",
+          "konami_id": 9962,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

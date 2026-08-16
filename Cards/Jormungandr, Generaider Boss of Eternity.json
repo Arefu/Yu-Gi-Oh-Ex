@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 2665273,
+      "name": "Jormungandr, Generaider Boss of Eternity",
+      "typeline": [
+        "Reptile",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 9 monsters\r\nYou can only control 1 \"Jormungandr, Generaider Boss of Eternity\". This card's original ATK/DEF become 1000 x its number of materials. (Quick Effect): You can detach 1 material from this card; each player draws 1 card, then each player that drew attaches 1 card from their hand or field to this card. You can only use this effect of \"Jormungandr, Generaider Boss of Eternity\" once per turn.",
+      "race": "Reptile",
+      "atk": -1,
+      "def": -1,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jormungandr-generaider-boss-of-eternity-10489",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN147",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN033",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2665273,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2665273.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2665273.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2665273.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "2.18",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ormungandr, Generaider Boss of Eternity",
+          "views": 238099,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423033,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14776,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

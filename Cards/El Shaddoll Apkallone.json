@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 50907446,
+      "name": "El Shaddoll Apkallone",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"Shaddoll\" monsters with different Attributes\r\nMust first be Fusion Summoned. Cannot be destroyed by battle. You can only use each of the following effects of \"El Shaddoll Apkallone\" once per turn.\r\n● If this card is Special Summoned: You can target 1 face-up card on the field; negate its effects.\r\n● If this card is sent to the GY: You can add 1 \"Shaddoll\" card from your Deck or GY to your hand, then discard 1 card.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/el-shaddoll-apkallone-10698",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN246",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50907446,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50907446.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50907446.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50907446.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.68",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "El Shaddoll Apkalone",
+          "views": 860554,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100337051,
+          "tcg_date": "2020-02-13",
+          "ocg_date": "2019-12-07",
+          "konami_id": 14968,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

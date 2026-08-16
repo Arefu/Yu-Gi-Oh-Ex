@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": 20409757,
+      "name": "Timegazer Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou must control no monsters to activate this card. If a Pendulum Monster you control battles, your opponent cannot activate Trap Cards until the end of the Damage Step. Unless you have a \"Magician\" card or \"Odd-Eyes\" card in your other Pendulum Zone, this card's Pendulum Scale becomes 4.\n\n[ Monster Effect ] \nEach turn, the first card(s) in your Pendulum Zone that would be destroyed by an opponent's card effect, is not destroyed.",
+      "race": "Spellcaster",
+      "pend_desc": "You must control no monsters to activate this card. If a Pendulum Monster you control battles, your opponent cannot activate Trap Cards until the end of the Damage Step. Unless you have a \"Magician\" card or \"Odd-Eyes\" card in your other Pendulum Zone, this card's Pendulum Scale becomes 4.",
+      "monster_desc": "Each turn, the first card(s) in your Pendulum Zone that would be destroyed by an opponent's card effect, is not destroyed.",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/timegazer-magician-1753",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN011",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yuya",
+          "set_code": "YS16-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20409757,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20409757.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20409757.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20409757.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 397530,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-10",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11135,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 84397023,
+      "name": "Level Conversion Lab",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 monster in your hand and show it to your opponent, then roll a six-sided die. If the result is 1, send the selected monster to the Graveyard. If the result is 2-6, the Level of the selected monster becomes equal to the result until the end of this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/level-conversion-lab-7079",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN234",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84397023,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84397023.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84397023.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84397023.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66529,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6361,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 81167171,
+      "name": "Hero Spirit",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During the Battle Phase, if an \"Elemental HERO\" monster you controlled was destroyed by battle this turn: Make the Battle Damage from 1 of your opponent's monsters 0.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hero-spirit-6811",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Special Edition",
+          "set_code": "DPK-ENSE3",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.47"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN117",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81167171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81167171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81167171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81167171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "3.99",
+          "amazon_price": "1.32",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29268,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-03-09",
+          "ocg_date": "2005-12-01",
+          "konami_id": 6584,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

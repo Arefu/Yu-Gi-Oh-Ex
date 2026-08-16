@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 48381268,
+      "name": "Morphtronic Boarden",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "● While in Attack Position: \"Morphtronic\" monsters you control can attack your opponent directly.\n● While in Defense Position: Other \"Morphtronic\" monsters you control cannot be destroyed by battle.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 1800,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-boarden-4130",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48381268,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48381268.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48381268.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48381268.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.45",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56976,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8015,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

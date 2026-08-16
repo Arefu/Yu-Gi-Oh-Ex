@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 39910367,
+      "name": "Magical Citadel of Endymion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. If a card with a Spell Counter(s) is destroyed, place its Spell Counters on this card. Once per turn, if you would activate a card effect by removing a Spell Counter(s) from a card you control, you can remove that many Spell Counters from this card instead. If this card would be destroyed, you can remove 1 Spell Counter from this card instead.",
+      "race": "Field",
+      "archetype": "Endymion",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-citadel-of-endymion-3385",
+      "card_sets": [
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN055",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.81"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39910367,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39910367.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39910367.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39910367.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 329479,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-03-31",
+          "ocg_date": "2008-12-13",
+          "konami_id": 8135,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

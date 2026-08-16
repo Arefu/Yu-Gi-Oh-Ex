@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 69931927,
+      "name": "Earthbound Immortal Chacu Challhua",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "There can only be 1 \"Earthbound Immortal\" monster on the field. If there is no face-up Field Spell Card on the field, destroy this card. Your opponent cannot target this card for attacks. This card can attack your opponent directly. Once per turn: You can inflict damage to your opponent equal to half this card's DEF on the field. This card cannot attack during the turn you activate this effect. While this card is in Defense Position, your opponent cannot conduct their Battle Phase.",
+      "race": "Fish",
+      "atk": 2900,
+      "def": 2400,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthbound-immortal-chacu-challhua-5880",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN017",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins Exclusive 2009",
+          "set_code": "CT06-ENS03",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "33.34"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN149",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69931927,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69931927.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69931927.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69931927.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "9.18",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101855,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8308,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

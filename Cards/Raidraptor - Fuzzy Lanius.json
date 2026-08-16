@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 5929801,
+      "name": "Raidraptor - Fuzzy Lanius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Raidraptor\" monster other than \"Raidraptor - Fuzzy Lanius\": You can Special Summon this card from your hand. If this card is sent to the Graveyard: You can add 1 \"Raidraptor - Fuzzy Lanius\" from your Deck to your hand. You can only use each effect of \"Raidraptor - Fuzzy Lanius\" once per turn. You cannot Special Summon monsters the turn you activate either of this card's effects, except \"Raidraptor\" monsters.",
+      "race": "Winged Beast",
+      "atk": 500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-fuzzy-lanius-521",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5929801,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5929801.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5929801.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5929801.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 172603,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11797,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 90512490,
+      "name": "Greatfly",
+      "typeline": [
+        "Insect",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 WIND monsters\r\nAll WIND monsters on the field gain 500 ATK/DEF, also all EARTH monsters on the field lose 400 ATK/DEF. If this card is destroyed by battle or card effect: You can target 1 WIND monster in your GY; add it to your hand. You can only use this effect of \"Greatfly\" once per turn.",
+      "race": "Insect",
+      "atk": 1400,
+      "def": null,
+      "level": 0,
+      "attribute": "WIND",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/greatfly-9221",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90512490,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90512490.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90512490.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90512490.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 196117,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13606,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

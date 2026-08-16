@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 8602351,
+      "name": "Reptilianne Echidna",
+      "typeline": [
+        "Reptile",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters, including a Reptile monster\r\nIf this card is Link Summoned: You can target 1 face-up monster your opponent controls; change its ATK to 0. During your Main Phase, if your opponent controls a monster(s) with 0 ATK: You can add Reptile monsters with different names from your Deck to your hand, up to the number of monsters your opponent controls with 0 ATK, also, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Reptile monsters. You can only use each effect of \"Reptilianne Echidna\" once per turn.",
+      "race": "Reptile",
+      "atk": 200,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Reptilianne",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reptilianne-echidna-10712",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8602351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8602351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8602351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8602351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171418,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257046,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14939,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

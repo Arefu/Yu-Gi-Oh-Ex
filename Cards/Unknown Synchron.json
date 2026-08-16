@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 15310033,
+      "name": "Unknown Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a monster and you control no monsters, you can Special Summon this card (from your hand). You can only Special Summon \"Unknown Synchron\" once per Duel this way.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unknown-synchron-1315",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15310033,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15310033.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15310033.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15310033.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 181092,
+          "viewsweek": 42,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9473,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

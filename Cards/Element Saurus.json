@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 92755808,
+      "name": "Element Saurus",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains the following effect(s) while there is a monster(s) with the following Attribute(s) on the field.\r\n● FIRE: This card gains 500 ATK.\r\n● EARTH: Negate the effects of Effect Monsters destroyed by battle with this card.",
+      "race": "Dinosaur",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/element-saurus-7723",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92755808,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92755808.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92755808.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92755808.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99411,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6183,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

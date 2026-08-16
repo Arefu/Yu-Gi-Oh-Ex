@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 53581214,
+      "name": "Fire Reaper",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A reaper with a flaming arrow that burns an enemy to a crisp.",
+      "race": "Zombie",
+      "atk": 700,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-reaper-4566",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53581214,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53581214.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53581214.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53581214.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19978,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-01",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4160,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

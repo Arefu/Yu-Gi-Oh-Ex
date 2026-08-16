@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 14505685,
+      "name": "Cyberse Converter",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If all monsters you control are Cyberse monsters (min. 1), you can Special Summon this card (from your hand). You can only Special Summon \"Cyberse Converter\" once per turn this way. When this card is Normal Summoned: You can target 1 face-up monster you control; it becomes a Cyberse monster until the end of this turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-converter-8721",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14505685,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14505685.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14505685.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14505685.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 172186,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2017-07-21",
+          "konami_id": 13345,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

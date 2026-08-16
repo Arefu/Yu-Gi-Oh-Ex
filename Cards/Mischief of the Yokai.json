@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 29795530,
+      "name": "Mischief of the Yokai",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Each face-up monster on the field loses 2 Levels, until the End Phase. You can remove from play this card from your Graveyard to select 1 face-up monster, and reduce its Level by 1, until the End Phase. This effect cannot be activated the turn this card is sent to the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mischief-of-the-yokai-2521",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN089",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29795530,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29795530.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29795530.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29795530.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.20",
+          "tcgplayer_price": "1.50",
+          "ebay_price": "3.79",
+          "amazon_price": "49.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18403,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9286,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 46947713,
+      "name": "Transcode Talker",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\r\nWhile this card is co-linked, it and its co-linked monsters gain 500 ATK, also your opponent cannot target any of them with card effects. You can target 1 Link-3 or lower Cyberse Link Monster in your GY, except \"Transcode Talker\"; Special Summon it to your zone this card points to. You cannot Special Summon monsters the turn you activate this effect, except Cyberse monsters. You can only use this effect of \"Transcode Talker\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Code Talker",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/transcode-talker-9354",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN136",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46947713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46947713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46947713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46947713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.41",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "2.99",
+          "amazon_price": "0.48",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 752331,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-12",
+          "ocg_date": "2018-03-24",
+          "konami_id": 13698,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

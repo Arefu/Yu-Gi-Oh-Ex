@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 7394770,
+      "name": "Brilliant Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Fusion Summon 1 \"Gem-Knight\" Fusion Monster from your Extra Deck, using monsters from your Deck as Fusion Material, but change its ATK/DEF to 0. If this card leaves the field, destroy that monster. Once per turn: You can discard 1 Spell; the monster Special Summoned by this card's effect gains ATK/DEF equal to its original ATK/DEF, until the end of your opponent's turn. You can only activate 1 \"Brilliant Fusion\" per turn.",
+      "race": "Continuous",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brilliant-fusion-634",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN064",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN254",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN254",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 7394770,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7394770.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7394770.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7394770.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "6.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 350526,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11840,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

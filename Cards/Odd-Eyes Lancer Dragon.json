@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 83347294,
+      "name": "Odd-Eyes Lancer Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Pendulum Monster you control is destroyed by battle or card effect: You can Tribute 1 monster; Special Summon this card from your hand. If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step. If an \"Odd-Eyes\" card(s) you control would be destroyed by battle or card effect, you can destroy 1 \"Odd-Eyes\" card in your hand, Monster Zone, or Pendulum Zone instead.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-lancer-dragon-8666",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83347294,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83347294.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83347294.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83347294.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.50",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93330,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13126,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

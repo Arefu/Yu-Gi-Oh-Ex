@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 32723153,
+      "name": "Magical Explosion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only while you have no cards in your hand. Inflict 200 damage to your opponent for each Spell Card in your Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-explosion-2785",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN055",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.14"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 32723153,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32723153.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32723153.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32723153.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "7.32",
+          "amazon_price": "9.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86005,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6444,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

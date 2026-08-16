@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 60168186,
+      "name": "Dark Contract with the Entities",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When a \"D/D/D\" monster of the below card type is Special Summoned from the Extra Deck to your field: You can activate the appropriate effect once per turn;\r\n● Fusion: Gain 1000 LP.\r\n● Synchro: Your opponent cannot target that Special Summoned monster with card effects.\r\n● Xyz: Banish 1 card from the field or the Graveyard.\r\n● Pendulum: Draw 1 card, then discard 1 card.\r\nOnce per turn, during your Standby Phase: Take 2000 damage.",
+      "race": "Continuous",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-contract-with-the-entities-5104",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN239",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60168186,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60168186.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60168186.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60168186.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.45",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40263,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12867,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

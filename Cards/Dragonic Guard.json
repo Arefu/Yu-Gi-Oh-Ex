@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 78009994,
+      "name": "Dragonic Guard",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time a monster is Normal Summoned or Set, place 1 Dragonic Counter on this card. You can send this face-up card to the Graveyard to Special Summon 1 Dragon-Type monster from your Deck whose Level is less than or equal to the number of Dragonic Counters on this card.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonic-guard-6560",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN085",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78009994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78009994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78009994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78009994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.35",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18738,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8757,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

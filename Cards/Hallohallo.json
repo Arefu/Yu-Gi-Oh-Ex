@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 77994337,
+      "name": "Hallohallo",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Tuner",
+        "Normal"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up monster on the field; roll a six-sided die and that monster's Level becomes the same as the result until the end of this turn.\n\n[ Monster Effect ] \n''Hallo Hallo, brain of tallow,\r\nGuts are gone, noggin's hollow.\r\nSeeking sweets and marshing mallows,\r\nWatch your back, and your candy sack.''",
+      "race": "Fiend",
+      "pend_desc": "Once per turn: You can target 1 face-up monster on the field; roll a six-sided die and that monster's Level becomes the same as the result until the end of this turn.",
+      "monster_desc": "''Hallo Hallo, brain of tallow,\r\nGuts are gone, noggin's hollow.\r\nSeeking sweets and marshing mallows,\r\nWatch your back, and your candy sack.''",
+      "atk": 800,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hallohallo-8926",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break Sneak Peek Participation Card",
+          "set_code": "CIBR-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77994337,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77994337.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77994337.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77994337.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "4.98",
+          "amazon_price": "3.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54956,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-14",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13361,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

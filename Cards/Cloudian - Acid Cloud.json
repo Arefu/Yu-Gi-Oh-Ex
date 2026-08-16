@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 17810268,
+      "name": "Cloudian - Acid Cloud",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle. If this card is in face-up Defense Position, destroy it. When you Normal Summon this card, place 1 Fog Counter on it for each \"Cloudian\" monster on the field. You can remove 2 Fog Counters from this card to destroy 1 Spell or Trap Card.",
+      "race": "Fairy",
+      "atk": 500,
+      "def": 0,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Cloudian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cloudian-acid-cloud-1546",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENH03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17810268,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17810268.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17810268.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17810268.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.49",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56707,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7278,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

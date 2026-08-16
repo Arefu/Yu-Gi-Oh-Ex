@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 5821478,
+      "name": "Topologic Bomber Dragon",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\nIf another monster is Special Summoned to a zone a Link Monster points to, while this monster is on the field: Destroy all monsters in the Main Monster Zones, also your other monsters cannot attack for the rest of this turn. After damage calculation, if this card attacked an opponent's monster: Inflict damage to your opponent equal to that monster's original ATK.",
+      "race": "Cyberse",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/topologic-bomber-dragon-8734",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN065",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN030",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5821478,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5821478.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5821478.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5821478.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 741153,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13085,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

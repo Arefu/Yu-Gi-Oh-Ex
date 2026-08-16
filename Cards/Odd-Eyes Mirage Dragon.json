@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 67754901,
+      "name": "Odd-Eyes Mirage Dragon",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if a face-up \"Odd-Eyes\" Pendulum Monster(s) you control is destroyed by battle or card effect: You can destroy 1 card in your Pendulum Zone, and if you do, place 1 face-up \"Odd-Eyes\" Pendulum Monster in your Extra Deck in your Pendulum Zone, except \"Odd-Eyes Mirage Dragon\".\n\n[ Monster Effect ] \nWhile an \"Odd-Eyes\" card is in your Pendulum Zone (Quick Effect): You can target 1 \"Odd-Eyes\" monster you control; the first time it would be destroyed by battle or card effect this turn, it is not destroyed. You can only use this effect of \"Odd-Eyes Mirage Dragon\" once per turn.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, if a face-up \"Odd-Eyes\" Pendulum Monster(s) you control is destroyed by battle or card effect: You can destroy 1 card in your Pendulum Zone, and if you do, place 1 face-up \"Odd-Eyes\" Pendulum Monster in your Extra Deck in your Pendulum Zone, except \"Odd-Eyes Mirage Dragon\".",
+      "monster_desc": "While an \"Odd-Eyes\" card is in your Pendulum Zone (Quick Effect): You can target 1 \"Odd-Eyes\" monster you control; the first time it would be destroyed by battle or card effect this turn, it is not destroyed. You can only use this effect of \"Odd-Eyes Mirage Dragon\" once per turn.",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "-Eyes Dragon",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-mirage-dragon-5692",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.28"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO06",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67754901,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67754901.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67754901.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67754901.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.58",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 174948,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12481,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

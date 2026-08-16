@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 82385847,
+      "name": "Dinowrestler Pankratops",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls more monsters than you do, you can Special Summon this card (from your hand). You can only Special Summon \"Dinowrestler Pankratops\" once per turn this way. (Quick Effect): You can Tribute 1 \"Dinowrestler\" monster, then target 1 card your opponent controls; destroy it. You can only use this effect of \"Dinowrestler Pankratops\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 2600,
+      "def": 0,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-pankratops-9666",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN160",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN047",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN046",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN070",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.33"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82385847,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82385847.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82385847.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82385847.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "staple": "Yes",
+          "views": 1727586,
+          "viewsweek": 63,
+          "upvotes": 20,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13896,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

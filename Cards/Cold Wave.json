@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 60682203,
+      "name": "Cold Wave",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "This card can only be activated at the start of Main Phase 1. Until your next turn, you and your opponent cannot play or Set any Spell or Trap Cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cold-wave-5150",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Six",
+          "set_code": "CP06-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.76"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN104",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN104",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zombie World Structure Deck",
+          "set_code": "SDZW-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 60682203,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60682203.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60682203.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60682203.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "0.99",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 291855,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5127,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

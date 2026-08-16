@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 79016563,
+      "name": "Binary Sorceress",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters, except Tokens\r\nThis card gains these effects based on the number of monsters co-linked to this card.\r\n● 1+: When a monster co-linked to this card battles your opponent's monster and inflicts battle damage to them: You can gain that much LP.\r\n● 2: Once per turn (Quick Effect): You can target 2 face-up monsters you control; until the end of this turn, halve the ATK of 1 monster, and if you do, add that lost ATK to the other monster.",
+      "race": "Cyberse",
+      "atk": 1600,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/binary-sorceress-8727",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79016563,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79016563.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79016563.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79016563.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Binal Sorceress",
+          "views": 97921,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13204,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 9583383,
+      "name": "Gagaga Caesar",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot attack unless you control another face-up \"Gagaga\" monster. Once per turn: You can banish 1 monster from your Graveyard that has a Level; the Levels of all face-up \"Gagaga\" monsters you currently control become the Level of that monster. This card cannot be used as a Synchro Material Monster.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Gagaga",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gagaga-caesar-809",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9583383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9583383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9583383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9583383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.49",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45352,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10223,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

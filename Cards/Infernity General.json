@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 17502671,
+      "name": "Infernity General",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have no cards in your hand: You can banish this card from your Graveyard to target 2 Level 3 or lower \"Infernity\" monsters in your Graveyard; Special Summon them from the Graveyard, but their effects are negated.",
+      "race": "Fiend",
+      "atk": 2700,
+      "def": 1500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-general-1519",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Volume 3 promotional card",
+          "set_code": "YF03-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17502671,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17502671.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17502671.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17502671.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.99",
+          "amazon_price": "6.40",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43796,
+          "viewsweek": 23,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-10-02",
+          "ocg_date": "2011-09-03",
+          "konami_id": 9862,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

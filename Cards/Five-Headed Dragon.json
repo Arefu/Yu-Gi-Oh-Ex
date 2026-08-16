@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 99267150,
+      "name": "Five-Headed Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "5 Dragon monsters\r\nMust be Fusion Summoned. Cannot be destroyed by battle with a DARK, EARTH, WATER, FIRE, or WIND monster.",
+      "race": "Dragon",
+      "atk": 5000,
+      "def": 5000,
+      "level": 12,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/five-headed-dragon-8242",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.53"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN031",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World",
+          "set_code": "LC03-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.72"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.09"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN078",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage Special Set",
+          "set_code": "SD09-ENSS1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "46.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99267150,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99267150.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99267150.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99267150.jpg"
+        },
+        {
+          "id": 99267151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99267151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99267151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99267151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.60",
+          "tcgplayer_price": "2.07",
+          "ebay_price": "4.95",
+          "amazon_price": "14.98",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 500893,
+          "viewsweek": 21,
+          "upvotes": 69,
+          "downvotes": 26,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Five-Headed Dragon",
+          "tcg_date": "2006-10-25",
+          "ocg_date": "2002-07-04",
+          "konami_id": 5502,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

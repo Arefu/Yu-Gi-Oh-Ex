@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 82016179,
+      "name": "Sylvan Charity",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Draw 3 cards, then, if you have a \"Sylvan\" card in your hand, reveal 2 cards from your hand including at least 1 \"Sylvan\" card, then place them on the top of the Deck in any order. Otherwise, reveal your entire hand, then place it on the top of the Deck in any order. You can only activate 1 \"Sylvan Charity\" per turn.",
+      "race": "Normal",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sylvan-charity-6892",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN061",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN062",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82016179,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82016179.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82016179.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82016179.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.97",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "2.19",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52604,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11091,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

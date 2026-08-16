@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 95083785,
+      "name": "Premature Return",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish 1 card from your hand, then target 1 of your banished monsters; Special Summon it in face-down Defense Position.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/premature-return-7913",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95083785,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95083785.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95083785.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95083785.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25444,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12476,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 7733560,
+      "name": "Michion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. If you control no monsters, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. You take no battle damage from attacks involving this card. At the end of the Battle Phase, if this card battled: Halve your opponent's LP. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "FIRE",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/michion-the-timelord-9474",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7733560,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7733560.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7733560.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7733560.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.74",
+          "tcgplayer_price": "4.83",
+          "ebay_price": "6.10",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261215,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13815,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

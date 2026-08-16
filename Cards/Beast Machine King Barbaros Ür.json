@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 19028307,
+      "name": "Beast Machine King Barbaros Ür",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by banishing 1 Machine-Type monster and 1 Beast-Warrior-Type monster from your hand, field, and/or Graveyard. If this card attacks or is attacked, your opponent takes no battle damage.",
+      "race": "Beast-Warrior",
+      "atk": 3800,
+      "def": 1200,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Barbaros",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beast-machine-king-barbaros-ur-1644",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN084",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19028307,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19028307.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19028307.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19028307.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "3.00",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Beast Machine King Barbaros Ur",
+          "views": 53077,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2008-02-21",
+          "konami_id": 7790,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

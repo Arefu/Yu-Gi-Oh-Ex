@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51735257,
+      "name": "Number 50: Blackship of Corn",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls with ATK less than or equal to this card's; send it to the Graveyard, and if you do, inflict 1000 damage to your opponent. This card cannot attack the turn you activate this effect.",
+      "race": "Plant",
+      "atk": 2100,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-50-blackship-of-corn-4402",
+      "card_sets": [
+        {
+          "set_name": "2013 Collectible Tins Wave 2",
+          "set_code": "CT10-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.03"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 2 promotional card",
+          "set_code": "YZ02-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51735257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51735257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51735257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51735257.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.63",
+          "tcgplayer_price": "7.04",
+          "ebay_price": "4.49",
+          "amazon_price": "8.18",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 50",
+          "views": 175991,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-12-04",
+          "ocg_date": "2012-02-03",
+          "konami_id": 10129,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 66574418,
+      "name": "The Black Stone of Legend",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; Special Summon 1 Level 7 or lower \"Red-Eyes\" monster from your Deck, except \"Red-Eyes B. Chick\". If this card is in your Graveyard: You can target 1 Level 7 or lower \"Red-Eyes\" monster in your Graveyard, except \"Red-Eyes B. Chick\"; shuffle it into the Deck, and if you do, add this card to your hand. You can only use 1 \"The Black Stone of Legend\" effect per turn, and only once that turn.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-black-stone-of-legend-5590",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN021",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ05",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.1"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66574418,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66574418.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66574418.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66574418.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "1.34",
+          "ebay_price": "7.95",
+          "amazon_price": "3.14",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 813008,
+          "viewsweek": 42,
+          "upvotes": 16,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11805,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

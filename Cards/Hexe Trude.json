@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 46294982,
+      "name": "Hexe Trude",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If \"Golden Castle of Stromberg\" is in a Field Zone, you can Normal Summon this card without Tributing. Once per turn, if \"Golden Castle of Stromberg\" is in a Field Zone: You can target 1 card on the field, except this one; destroy it, and if you do, this card can make up to 2 attacks on monsters during each Battle Phase this turn. When this card destroys a monster by battle: You can target 1 face-up monster you control; it gains 400 ATK.",
+      "race": "Spellcaster",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hexe-trude-9523",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46294982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46294982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46294982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46294982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.88",
+          "tcgplayer_price": "4.09",
+          "ebay_price": "5.99",
+          "amazon_price": "5.55",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 183110,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13807,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

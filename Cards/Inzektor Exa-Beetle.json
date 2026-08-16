@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 44505297,
+      "name": "Inzektor Exa-Beetle",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nWhen this card is Xyz Summoned: You can target 1 monster in either player's Graveyard; equip that target to this card. This card gains ATK and DEF equal to half the original ATK and DEF of the monster equipped by this effect. Once per turn: You can detach 1 Xyz Material from this card to target 1 face-up card on each side of the field; send those targets to the Graveyard.",
+      "race": "Insect",
+      "atk": 1000,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-exa-beetle-3793",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.92"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44505297,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44505297.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44505297.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44505297.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.50",
+          "amazon_price": "0.35",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63855,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9920,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 62271284,
+      "name": "Justi-Break",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent declares an attack against a face-up Normal Monster you control. Destroy all monsters on the field, except face-up Attack Position Normal Monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/justi-break-5266",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact Sneak Peek Participation Card",
+          "set_code": "SP02-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.73"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI22",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Warriors' Strike Structure Deck",
+          "set_code": "SDWS-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62271284,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62271284.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62271284.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62271284.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102743,
+          "viewsweek": 147,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-04",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6912,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

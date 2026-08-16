@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 83461421,
+      "name": "Pendulum Storm",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy as many cards in the Pendulum Zones as possible, then you can destroy 1 Spell/Trap your opponent controls.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-storm-7005",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83461421,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83461421.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83461421.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83461421.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.25",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50716,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12165,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

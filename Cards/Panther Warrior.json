@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 42035044,
+      "name": "Panther Warrior",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot declare an attack unless you Tribute 1 monster.",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 1600,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/panther-warrior-3587",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2005",
+          "set_code": "CT2-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "13.43"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN055",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "11.77"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN036",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42035044,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42035044.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42035044.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42035044.jpg"
+        },
+        {
+          "id": 42035045,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42035045.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42035045.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42035045.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "7.10",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 159633,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Panther Warrior",
+          "tcg_date": "2005-09-01",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4751,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

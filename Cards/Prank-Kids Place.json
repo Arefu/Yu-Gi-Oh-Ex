@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 16269385,
+      "name": "Prank-Kids Place",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can add 1 \"Prank-Kids\" monster from your Deck to your hand. Once per turn, if you Fusion Summon a \"Prank-Kids\" Fusion Monster (except during the Damage Step): You can have all monsters you control gain 500 ATK (even if this card leaves the field). Once per turn, if you Link Summon a \"Prank-Kids\" Link Monster (except during the Damage Step): You can have all monsters your opponent controls lose 500 ATK (even if this card leaves the field). You can only activate 1 \"Prank-Kids Place\" per turn.",
+      "race": "Field",
+      "archetype": "Prank-Kids",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-place-9728",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN023",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN045",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16269385,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16269385.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16269385.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16269385.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.93",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids House",
+          "views": 223798,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14029,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

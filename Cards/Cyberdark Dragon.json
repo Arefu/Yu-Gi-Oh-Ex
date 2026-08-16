@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 40418351,
+      "name": "Cyberdark Dragon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Cyberdark Horn\" + \"Cyberdark Edge\" + \"Cyberdark Keel\"\r\nThis monster cannot be Special Summoned except by Fusion Summon. When this monster is Special Summoned, select 1 Dragon-Type monster in your Graveyard and equip it to this card. This card gains ATK equal to the equipped card's ATK. This card gains 100 ATK for each Monster Card in your Graveyard. If this card would be destroyed by battle, the equipped monster is destroyed instead.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberdark-dragon-3438",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN035",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN086",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENG23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40418351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40418351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40418351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40418351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "6.95",
+          "amazon_price": "23.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 267772,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6833,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

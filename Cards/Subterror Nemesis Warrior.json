@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 16719140,
+      "name": "Subterror Nemesis Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can send 1 \"Subterror\" monster from your Deck to the Graveyard; Tribute this card and at least 1 other monster so the total original Levels Tributed equal or exceed the Level of that \"Subterror\" monster in the Graveyard, and if you do, Special Summon that monster in face-up or face-down Defense Position. If a \"Subterror Behemoth\" monster is flipped face-up while this card is in your Graveyard: You can Special Summon this card. You can only use each effect of \"Subterror Nemesis Warrior\" once per turn.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-nemesis-warrior-1438",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion: Special Edition",
+          "set_code": "TDIL-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "23.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16719140,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16719140.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16719140.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16719140.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "9.94",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83491,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12684,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

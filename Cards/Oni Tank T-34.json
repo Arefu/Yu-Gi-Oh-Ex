@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 66927994,
+      "name": "Oni Tank T-34",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An armored tank possessed by a fiend that will pursue enemies until they're crushed.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1700,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oni-tank-t-34-5620",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.33"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66927994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66927994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66927994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66927994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95874,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4981,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 63101919,
+      "name": "Tempest Magician",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner Spellcaster-Type monsters\nWhen this card is Synchro Summoned, place 1 Spell Counter on it. Once per turn, you can discard any number of cards to place 1 Spell Counter on a monster(s) you control for each card you discarded. You can remove all Spell Counters on the field to inflict 500 damage to your opponent for each removed Spell Counter.",
+      "race": "Spellcaster",
+      "atk": 2200,
+      "def": 1400,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tempest-magician-5327",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN088",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive: Special Edition",
+          "set_code": "SOVR-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.85"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 63101919,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63101919.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63101919.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63101919.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.83",
+          "tcgplayer_price": "9.96",
+          "ebay_price": "1.99",
+          "amazon_price": "4.59",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129810,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8085,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

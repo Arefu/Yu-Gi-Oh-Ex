@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 40998517,
+      "name": "Frodi, Generaider Boss of Swords",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Frodi, Generaider Boss of Swords\". (Quick Effect): You can Tribute any number of \"Generaider\" monsters and/or Warrior monsters, then target that many monsters on the field; destroy them, then your opponent can draw cards equal to the number of monsters destroyed on their field. You can only use this effect of \"Frodi, Generaider Boss of Swords\" once per turn.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 9,
+      "attribute": "WIND",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frodi-generaider-boss-of-swords-10484",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN028",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40998517,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40998517.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40998517.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40998517.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hroddi, Generaider Boss of Swords",
+          "views": 82721,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423028,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14771,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

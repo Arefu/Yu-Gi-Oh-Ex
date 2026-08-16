@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 41639001,
+      "name": "Hieratic Dragon of Nuit",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during either player's turn, when this face-up card on the field is targeted by a Spell Card, Trap Card, or card effect: Special Summon 1 Dragon-Type Normal Monster from your hand, Deck, or Graveyard, and make its ATK and DEF 0.",
+      "race": "Dragon",
+      "atk": 1700,
+      "def": 900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Hieratic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieratic-dragon-of-nuit-3561",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41639001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41639001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41639001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41639001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.80",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65293,
+          "viewsweek": 84,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10041,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

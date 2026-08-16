@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 86962245,
+      "name": "Salamangreat Foxer",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 3 or more \"Salamangreat\" monsters in your GY: You can send this card from your hand to the GY, then target 1 \"Salamangreat\" Link Monster in your GY and 1 card in your opponent's Spell & Trap Zone; return that targeted monster from your GY to the Extra Deck, and if you do, destroy the targeted card on the field. If a card(s) in your opponent's Spell & Trap Zone is destroyed and sent to the GY, while this card is in your GY (except during the Damage Step): You can Special Summon this card in Defense Position. You can only use 1 \"Salamangreat Foxer\" effect per turn, and only once that turn.",
+      "race": "Cyberse",
+      "atk": 1200,
+      "def": 1000,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-foxer-9872",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86962245,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86962245.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86962245.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86962245.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63122,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14082,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

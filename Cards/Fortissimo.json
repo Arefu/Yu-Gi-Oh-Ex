@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 11493868,
+      "name": "Fortissimo",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can target 1 \"Melodious\" monster you control; it gains 800 ATK until your next Standby Phase (even if this card leaves the field). You can send this card to the Graveyard; Fusion Summon 1 \"Melodious\" Fusion Monster from your Extra Deck, using monsters you control as Fusion Materials.",
+      "race": "Continuous",
+      "archetype": "Melodious",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortissimo-993",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11493868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11493868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11493868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11493868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39991,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12329,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 3160805,
+      "name": "Exchange of Night and Day",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can only use 1 \"Exchange of Night and Day\" effect per turn, and only once that turn. You can activate 1 of these effects;\n● Send 1 LIGHT Warrior-Type monster from your hand to the Graveyard, then add 1 DARK Warrior-Type monster from your Deck to your hand, with the same Level the sent monster had in your hand.\n● Send 1 DARK Warrior-Type monster from your hand to the Graveyard, then add 1 LIGHT Warrior-Type monster from your Deck to your hand, with the same Level the sent monster had in your hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exchange-of-night-and-day-288",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3160805,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3160805.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3160805.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3160805.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.95",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32208,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2013-08-11",
+          "konami_id": 10827,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

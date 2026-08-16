@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 89181134,
+      "name": "Predaplant Chlamydosundew",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters with a Predator Counter that you use as Fusion Materials are treated as DARK. During your Main Phase: You can Fusion Summon 1 DARK Fusion Monster from your Extra Deck, using this card on the field and monsters from your hand, field, and/or monsters with a Predator Counter your opponent controls as Fusion Materials. You can only use this effect of \"Predaplant Chlamydosundew\" once per turn.",
+      "race": "Plant",
+      "atk": 600,
+      "def": 200,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-chlamydosundew-7445",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89181134,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89181134.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89181134.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89181134.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Predaplant Sundew Kingii",
+          "views": 248778,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12834,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

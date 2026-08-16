@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 39041729,
+      "name": "Spacetime Transcendence",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 2 or more Dinosaur monsters from your GY; Special Summon 1 Dinosaur monster from your hand or GY whose Level equals the total Levels of those banished monsters, but it cannot attack this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spacetime-transcendence-8526",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39041729,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39041729.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39041729.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39041729.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37993,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13155,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

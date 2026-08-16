@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 85520851,
+      "name": "Super Conductor Tyranno",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Tribute 1 monster; inflict 1000 damage to your opponent. This card cannot declare an attack the turn this effect is activated.",
+      "race": "Dinosaur",
+      "atk": 3300,
+      "def": 1400,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-conductor-tyranno-7168",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN046",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN013",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dinosmasher's Fury Structure Deck",
+          "set_code": "SR04-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.7"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "49.61"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN017",
+          "set_rarity": "Reprint",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85520851,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85520851.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85520851.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85520851.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "4.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88352,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-10-20",
+          "ocg_date": "2006-06-22",
+          "konami_id": 6816,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

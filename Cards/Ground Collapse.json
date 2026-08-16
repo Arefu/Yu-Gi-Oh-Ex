@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 90502999,
+      "name": "Ground Collapse",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Select 2 Main Monster Zones on the field. Neither player can use the selected zones. You cannot select a zone that is occupied by a Monster Card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ground-collapse-7560",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.94"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90502999,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90502999.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90502999.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90502999.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.00",
+          "amazon_price": "1.12",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 257953,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5170,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

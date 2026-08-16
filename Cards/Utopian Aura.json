@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 59070329,
+      "name": "Utopian Aura",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Detach 1 Xyz Material from a monster you control; the face-up Xyz Monsters you currently control cannot be destroyed by card effects until the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/utopian-aura-5028",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17",
+          "set_code": "OP17-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59070329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59070329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59070329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59070329.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.50",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44031,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9691,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

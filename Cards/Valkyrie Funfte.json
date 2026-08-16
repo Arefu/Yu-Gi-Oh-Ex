@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 46701379,
+      "name": "Valkyrie Funfte",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "\"Valkyrie\" monsters you control gain 200 ATK for each of your opponent's banished monsters. If you control a \"Valkyrie\" monster other than \"Valkyrie Funfte\": You can send 1 Spell/Trap from your Deck to the GY. You can only use this effect of \"Valkyrie Funfte\" once per turn.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": 1200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrie-funfte-10312",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46701379,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46701379.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46701379.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46701379.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52165,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101008086,
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14536,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

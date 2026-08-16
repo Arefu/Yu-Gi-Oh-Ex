@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 85431040,
+      "name": "Evil Thorn",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; inflict 300 damage to your opponent, and if you do, you can Special Summon up to 2 \"Evil Thorn\" from your Deck in Attack Position, but their effects cannot be activated.",
+      "race": "Plant",
+      "atk": 100,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-thorn-7159",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.56"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85431040,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85431040.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85431040.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85431040.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "1.53",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 337691,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8161,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

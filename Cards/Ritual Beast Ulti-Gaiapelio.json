@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 56655675,
+      "name": "Ritual Beast Ulti-Gaiapelio",
+      "typeline": [
+        "Psychic",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Ritual Beast Ulti\" monster + 1 \"Ritual Beast Tamer\" monster + 1 \"Spiritual Beast\" monster\nMust be Special Summoned (from your Extra Deck) by banishing the above cards you control, and cannot be Special Summoned by other ways. (You do not use \"Polymerization\".) If Summoned this way, this card gains this effect.\n● During either player's turn, when a Spell/Trap Card, or monster effect, is activated: You can banish 1 \"Ritual Beast\" card from your hand; negate the activation, and if you do, destroy it.",
+      "race": "Psychic",
+      "atk": 3200,
+      "def": 2100,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Ritual Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-beast-ulti-gaiapelio-4828",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN086",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN045",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56655675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56655675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56655675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56655675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "8.95",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 148102,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11720,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 54539105,
+      "name": "War-Lion Ritual",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Super War-Lion\". You must also Tribute monsters from your hand or field whose total Levels equal 7 or more.",
+      "race": "Ritual",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/war-lion-ritual-4646",
+      "card_sets": [
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN002",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.95"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54539105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54539105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54539105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54539105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "4.50",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15630,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "1999-12-18",
+          "konami_id": 4679,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

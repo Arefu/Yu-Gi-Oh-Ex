@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 9581215,
+      "name": "Chain Hole",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a monster effect in response to a card or effect activation: Negate that opponent's effect, then, your opponent can banish 1 card from their hand or Deck with the same original name as that negated card. If they did not, you can banish 1 random card from their hand.",
+      "race": "Normal",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chain-hole-9988",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN077",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9581215,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9581215.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9581215.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9581215.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78373,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14327,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 73887236,
+      "name": "Raidraptor - Rise Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 Winged Beast-Type monsters\nThis card can attack all Special Summoned monsters your opponent controls, once each. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up Special Summoned monster your opponent controls; this card gains ATK equal to that monster's current ATK.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-rise-falcon-6207",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN223",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN037",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73887236,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73887236.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73887236.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73887236.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.22",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84651,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11570,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 50593156,
+      "name": "Sand Gambler",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Toss a coin 3 times. If all 3 results are Heads, destroy all monsters on your opponent's side of the field. If all 3 results are Tails, destroy all monsters on your side of the field. You can only activate this effect once per turn, during your Main Phase.",
+      "race": "Spellcaster",
+      "atk": 300,
+      "def": 1600,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sand-gambler-4309",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN182",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50593156,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50593156.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50593156.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50593156.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89452,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6031,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

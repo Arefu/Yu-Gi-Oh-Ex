@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 17132130,
+      "name": "Destiny HERO - Dogma",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 3 monsters, including at least 1 \"Destiny HERO\" monster. Once per turn, if you still control this face-up card during your opponent's next Standby Phase after you Special Summoned it this way: Halve your opponent's LP.",
+      "race": "Warrior",
+      "atk": 3400,
+      "def": 2400,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-dogma-1479",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN128",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.74"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN014",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENB07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17132130,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17132130.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17132130.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17132130.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 268247,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6757,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 69455834,
+      "name": "King of Yamimakai",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Wields the power of darkness to destroy its enemies.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 1530,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/king-of-yamimakai-5840",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.57"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69455834,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69455834.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69455834.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69455834.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.49",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 225252,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4091,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

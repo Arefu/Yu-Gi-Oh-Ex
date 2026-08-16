@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 21858819,
+      "name": "Number XX: Utopic Dark Infinity",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 10 monsters\r\nWhen a monster is destroyed by battle and sent to the GY: You can detach 1 material from this card, then target that monster; Special Summon it to your field in Defense Position. You can target 1 other face-up Special Summoned monster you control; gain LP equal to its original ATK. You can only use each effect of \"Number XX: Utopic Dark Infinity\" once per turn.",
+      "race": "Warrior",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-xx-utopic-dark-infinity-9963",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN094",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21858819,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21858819.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21858819.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21858819.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "1.21",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number XX: Infinity Dark Utopic",
+          "views": 158866,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14346,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

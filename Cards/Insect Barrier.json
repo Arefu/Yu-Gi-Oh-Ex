@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 23615409,
+      "name": "Insect Barrier",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Insect-Type monsters your opponent controls cannot declare an attack.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/insect-barrier-2036",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN205",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 13 participation cards",
+          "set_code": "DL13-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.19"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.42"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-END14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23615409,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23615409.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23615409.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23615409.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 258297,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4832,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

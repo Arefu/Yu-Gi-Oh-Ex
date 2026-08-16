@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 47946130,
+      "name": "Gouki The Giant Ogre",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3+ \"Gouki\" monsters\r\nCannot be destroyed by battle, and is unaffected by the activated effects of your opponent's monsters with ATK less than or equal to this card. When your opponent activates a card or effect that targets this card, and/or a monster(s) this card points to (Quick Effect): You can make this card lose exactly 500 ATK, and if you do, negate the activation. Once per turn, if this card's current ATK is different from its original ATK (Quick Effect): You can make this card gain 1000 ATK until the end of this turn.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "linkval": 4,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-the-giant-ogre-9422",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47946130,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47946130.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47946130.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47946130.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69982,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13755,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

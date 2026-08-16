@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 77539547,
+      "name": "Ancient Warriors - Graceful Zhou Gong",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 Continuous Spell/Trap you control; send it to the GY, and if you do, add 1 \"Ancient Warriors\" Spell/Trap from your Deck to your hand. If your other \"Ancient Warriors\" monster's effect is activated (except during the Damage Step): You can target 1 Effect Monster your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Ancient Warriors - Graceful Zhou Gong\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 1600,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Ancient Warriors",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-warriors-graceful-zhou-gong-10614",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77539547,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77539547.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77539547.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77539547.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Senka Adonis - Zhou Gong",
+          "views": 62406,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011009,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14818,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

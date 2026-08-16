@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 73445448,
+      "name": "Number 22: Zombiestein",
+      "typeline": [
+        "Zombie",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 DARK monsters\nMust be Xyz Summoned and cannot be Special Summoned by other ways. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card and send 1 card from your hand to the Graveyard, then target 1 face-up card your opponent controls; change this card to Defense Position, and if you do, that face-up card has its effects negated until the end of this turn.",
+      "race": "Zombie",
+      "atk": 4500,
+      "def": 1000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-22-zombiestein-6167",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest: Special Edition",
+          "set_code": "RATE-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.66"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 3 promotional card",
+          "set_code": "YZ03-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73445448,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73445448.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73445448.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73445448.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.62",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.83",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 22",
+          "views": 278895,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-06-04",
+          "ocg_date": "2012-08-03",
+          "konami_id": 10331,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 11958188,
+      "name": "Bujingi Raven",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Bujin\" monster you control is destroyed by battle with an opponent's monster and sent to your Graveyard: You can send this card from your hand to the Graveyard; destroy that opponent's monster.",
+      "race": "Winged Beast",
+      "atk": 1600,
+      "def": 900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujingi-raven-1033",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN179",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11958188,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11958188.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11958188.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11958188.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19695,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10872,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

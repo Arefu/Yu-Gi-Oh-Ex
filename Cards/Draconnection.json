@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 90887783,
+      "name": "Draconnection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Reveal 1 Dragon-Type monster in your hand, add 1 Dragon-Type monster with the same Level from your Deck to your hand, then shuffle the revealed monster into the Deck.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draconnection-7591",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN086",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90887783,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90887783.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90887783.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90887783.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.57",
+          "tcgplayer_price": "3.80",
+          "ebay_price": "2.94",
+          "amazon_price": "11.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69376,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10121,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

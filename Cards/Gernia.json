@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 77936940,
+      "name": "Gernia",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your next Standby Phase, after this face-up card you control was destroyed and sent to your Graveyard by an opponent's card effect: Special Summon it.",
+      "race": "Zombie",
+      "atk": 1300,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gernia-6556",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Four",
+          "set_code": "CP04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "66.78"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zombie World Structure Deck",
+          "set_code": "SDZW-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77936940,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77936940.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77936940.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77936940.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.23",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118625,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-09-06",
+          "ocg_date": "2003-03-20",
+          "konami_id": 5483,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

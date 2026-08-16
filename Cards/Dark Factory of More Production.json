@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 9064354,
+      "name": "Dark Factory of More Production",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can send 1 monster from your hand or field to the GY; draw 1 card. You can only use this effect of \"Dark Factory of More Production\" once per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-factory-of-more-production-9775",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9064354,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9064354.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9064354.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9064354.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dark Factory of Increased Production",
+          "views": 186379,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14155,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

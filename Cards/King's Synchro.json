@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 27503418,
+      "name": "King's Synchro",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent's monster declares an attack on a Synchro Monster you control: Negate the attack, then you can apply the rest of this card's effect. Banish that Synchro Monster you control and 1 Tuner from your Graveyard, and if you do, Special Summon from your Extra Deck 1 Synchro Monster whose Level equals the total Levels the banished monsters had. (This Special Summon is treated as a Synchro Summon.)",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/king-s-synchro-2346",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN067",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27503418,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27503418.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27503418.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27503418.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.55",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76920,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12657,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 70138455,
+      "name": "Blast Juggler",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only activate this effect during your Standby Phase. Tribute this face-up card to select and destroy 2 face-up monsters with an ATK 1000 or less.",
+      "race": "Machine",
+      "atk": 800,
+      "def": 900,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blast-juggler-5903",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN161",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.06"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70138455,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70138455.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70138455.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70138455.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 179914,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4423,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 45014450,
+      "name": "Odd-Eyes Venom Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Fusion Monster",
+      "humanReadableCardType": "Fusion Pendulum Effect Monster",
+      "frameType": "fusion_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 Fusion Monster you control; it gains 1000 ATK for each monster your opponent controls, until the end of this turn.\n\n[ Monster Effect ] \n1 \"Starving Venom\" monster + 1 \"Odd-Eyes\" monster\r\nMust be Fusion Summoned, and can then be Pendulum Summoned. Once per turn: You can target 1 face-up monster your opponent controls; until the End Phase, this card gains ATK equal to its ATK, and if it does, this card's name becomes that monster's original name, and replace this effect with that monster's original effects. If this card in the Monster Zone is destroyed: You can Special Summon 1 monster from your Pendulum Zone, and if you do, place this card in your Pendulum Zone.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn: You can target 1 Fusion Monster you control; it gains 1000 ATK for each monster your opponent controls, until the end of this turn.",
+      "monster_desc": "1 \"Starving Venom\" monster + 1 \"Odd-Eyes\" monster\r\nMust be Fusion Summoned, and can then be Pendulum Summoned. Once per turn: You can target 1 face-up monster your opponent controls; until the End Phase, this card gains ATK equal to its ATK, and if it does, this card's name becomes that monster's original name, and replace this effect with that monster's original effects. If this card in the Monster Zone is destroyed: You can Special Summon 1 monster from your Pendulum Zone, and if you do, place this card in your Pendulum Zone.",
+      "atk": 3300,
+      "def": 2500,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "-Eyes Dragon",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-venom-dragon-8477",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45014450,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45014450.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45014450.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45014450.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.96",
+          "tcgplayer_price": "2.03",
+          "ebay_price": "3.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 210157,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13131,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

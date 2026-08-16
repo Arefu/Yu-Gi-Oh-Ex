@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 20529766,
+      "name": "Super-Electromagnetic Voltech Dragon",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Tribute Summon this card by Tributing 1 of the following monsters, it gains the appropriate effect:\n● Batteryman D: Negate the effect of a Spell or Trap Card that targets this 1 card.\n● Batteryman C: During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.\n● Batteryman AA: This card gains 1000 ATK.",
+      "race": "Thunder",
+      "atk": 2400,
+      "def": 1000,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-electromagnetic-voltech-dragon-1764",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Six",
+          "set_code": "CP06-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN211",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "43.83"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20529766,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20529766.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20529766.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20529766.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.69",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.84",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57742,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6685,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

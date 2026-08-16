@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 19036557,
+      "name": "Elementsaber Makani",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can send 1 \"Elementsaber\" monster from your hand to the GY; add 1 \"Elementsaber\" or \"Elemental Lord\" monster from your Deck to your hand, except \"Elementsaber Makani\". Once per turn, if this card is in the GY: You can declare 1 Attribute; this card in the GY becomes that Attribute until the end of this turn.",
+      "race": "Warrior",
+      "atk": 1300,
+      "def": 1200,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Elementsaber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elementsaber-makani-9192",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19036557,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19036557.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19036557.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19036557.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.50",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55593,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13574,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

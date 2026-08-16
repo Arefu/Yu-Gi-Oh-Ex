@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 56804361,
+      "name": "Aether, the Empowering Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Pendulum Summoned: You can target 1 card on the field; return it to the hand. You can only use this effect of \"Aether, the Empowering Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2300,
+      "def": 1600,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Aether",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aether-the-empowering-dragon-4839",
+      "card_sets": [
+        {
+          "set_name": "Demo Deck 2016",
+          "set_code": "DEM3-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56804361,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56804361.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56804361.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56804361.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31942,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-10",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11136,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

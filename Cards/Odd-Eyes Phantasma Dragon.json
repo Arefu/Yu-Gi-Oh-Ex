@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 21770839,
+      "name": "Odd-Eyes Phantasma Dragon",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can discard 1 card; add 1 face-up Dragon Pendulum Monster from your Extra Deck to your hand. You can only use this effect of \"Odd-Eyes Phantasma Dragon\" once per turn.\n\n[ Monster Effect ] \nIf you have 2 cards in your Pendulum Zones and a face-up \"Odd-Eyes\" Pendulum Monster in your Extra Deck: You can Special Summon this card from your hand. You cannot Pendulum Summon the turn you activate this effect. During damage calculation, if this card attacks an opponent's monster: You can make that opponent's monster lose 1000 ATK for each face-up Pendulum Monster in your Extra Deck, during damage calculation only. You can only use each effect of \"Odd-Eyes Phantasma Dragon\" once per turn.",
+      "race": "Dragon",
+      "pend_desc": "You can discard 1 card; add 1 face-up Dragon Pendulum Monster from your Extra Deck to your hand. You can only use this effect of \"Odd-Eyes Phantasma Dragon\" once per turn.",
+      "monster_desc": "If you have 2 cards in your Pendulum Zones and a face-up \"Odd-Eyes\" Pendulum Monster in your Extra Deck: You can Special Summon this card from your hand. You cannot Pendulum Summon the turn you activate this effect. During damage calculation, if this card attacks an opponent's monster: You can make that opponent's monster lose 1000 ATK for each face-up Pendulum Monster in your Extra Deck, during damage calculation only. You can only use each effect of \"Odd-Eyes Phantasma Dragon\" once per turn.",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "-Eyes Dragon",
+      "scale": 0,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-phantasma-dragon-9399",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN075",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ARC-V Volume 5 promotional card",
+          "set_code": "YA05-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21770839,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21770839.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21770839.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21770839.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "0.99",
+          "amazon_price": "2.30",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 179768,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-03-05",
+          "ocg_date": "2018-04-04",
+          "konami_id": 13839,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

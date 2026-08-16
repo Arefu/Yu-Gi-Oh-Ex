@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 85638822,
+      "name": "Gouki Cage Match",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Place 3 counters on this card. If your \"Gouki\" monster destroys an opponent's monster by battle: Remove 1 counter from this card. Once per turn, at the end of the Battle Phase, if the last of these counters has been removed this way: You can Special Summon as many \"Gouki\" monsters as possible with different names from your hand and/or Deck, then place 3 counters on this card.",
+      "race": "Field",
+      "archetype": "Gouki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-cage-match-9179",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85638822,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85638822.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85638822.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85638822.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.15",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gouki Deathmatch",
+          "views": 38870,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-12-23",
+          "konami_id": 13515,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

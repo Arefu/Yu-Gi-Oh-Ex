@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 36492575,
+      "name": "Marincess Sea Horse",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) to your zone a \"Marincess\" Link Monster points to. You can only Special Summon \"Marincess Sea Horse\" once per turn this way. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY; Special Summon 1 WATER monster from your hand to your zone a \"Marincess\" Link Monster points to. You can only use this effect of \"Marincess Sea Horse\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1400,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-sea-horse-10190",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN102",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.87"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.86"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN003",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36492575,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36492575.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36492575.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36492575.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 259184,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009003,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14451,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

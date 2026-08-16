@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 53819808,
+      "name": "Temple of the Six",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a \"Six Samurai\" monster(s) is Normal or Special Summoned, place 1 Bushido Counter on this card. Monsters your opponent controls lose 100 ATK for each Bushido Counter on this card.",
+      "race": "Field",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/temple-of-the-six-4584",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN146",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.12"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53819808,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53819808.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53819808.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53819808.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 169894,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9342,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

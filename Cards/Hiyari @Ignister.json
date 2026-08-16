@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 41306080,
+      "name": "Hiyari @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an \"@Ignister\" monster: You can Special Summon this card from your hand. You can Tribute 1 other Cyberse monster; add 1 Level 5 or higher \"@Ignister\" monster from your Deck to your hand, and if you do, this card becomes Level 4 until the end of this turn. Then, if you Tributed a Link Monster to activate this effect, you can add 1 \"A.I.'s Ritual\" from your Deck to your hand. You can only use each effect of \"Hiyari @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 300,
+      "def": 400,
+      "level": 1,
+      "attribute": "WATER",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hiyari-ignister-10588",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41306080,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41306080.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41306080.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41306080.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122196,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011005,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14814,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

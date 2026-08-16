@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 63789924,
+      "name": "Smoke Grenade of the Thief",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "When this card is destroyed by a card effect while equipped to a monster: Look at your opponent's hand and discard 1 card from their hand.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/smoke-grenade-of-the-thief-5387",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN189",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.93"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "3.96"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 63789924,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63789924.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63789924.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63789924.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "1.06",
+          "ebay_price": "2.95",
+          "amazon_price": "3.03",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162099,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5389,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

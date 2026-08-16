@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 15893860,
+      "name": "Snowman Creator",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned: You can create a number of Ice Counters equal to the number of WATER monsters you control, place them on a face-up monster(s) your opponent controls, then, if you placed 3 or more Ice Counters by this effect, you can destroy 1 card your opponent controls.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/snowman-creator-1365",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15893860,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15893860.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15893860.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15893860.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.97",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31462,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10251,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

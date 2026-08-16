@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 31292357,
+      "name": "Performage Hat Tricker",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If 2 or more monsters are on the field, you can Special Summon this card (from your hand). During either player's turn, when a card or effect is activated that would inflict damage to you: You can place 1 Performage Counter on this card (max. 3), then make that effect damage to you 0. When the 3rd Performage Counter is placed on this card, it's ATK and DEF become 3300.",
+      "race": "Spellcaster",
+      "atk": 1100,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Performage",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performage-hat-tricker-2652",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31292357,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31292357.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31292357.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31292357.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 573567,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11801,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

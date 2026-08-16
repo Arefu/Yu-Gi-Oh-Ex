@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 14577226,
+      "name": "Windwitch - Winter Bell",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner WIND monsters\nYou can target 1 \"Windwitch\" monster in your GY; inflict damage to your opponent equal to that target's Level x 200. During the Battle Phase (Quick Effect): You can target 1 \"Windwitch\" monster you control; Special Summon 1 monster from your hand with a Level less than or equal to that monster, but it cannot attack this turn. You can only use each effect of \"Windwitch - Winter Bell\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Windwitch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windwitch-winter-bell-1249",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14577226,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14577226.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14577226.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14577226.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.00",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Wind Witch - Winter Bell",
+          "views": 149055,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12778,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

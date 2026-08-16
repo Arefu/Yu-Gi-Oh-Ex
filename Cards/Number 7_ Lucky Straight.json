@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 82308875,
+      "name": "Number 7: Lucky Straight",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 7 monsters\nYou can detach 1 Xyz Material from this card; roll a six-sided die twice and this card's ATK becomes the larger number rolled x 700 until your opponent's next End Phase, then if the total roll was exactly 7, apply 1 of these effects.\n● Send all other cards on the field to the Graveyard.\n● Special Summon 1 monster from your hand or from either Graveyard.\n● Draw 3 cards, then discard 2 cards.",
+      "race": "Fairy",
+      "atk": 700,
+      "def": 700,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-7-lucky-straight-6916",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN091",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN027",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82308875,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82308875.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82308875.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82308875.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "4.98",
+          "ebay_price": "15.00",
+          "amazon_price": "18.66",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 7",
+          "views": 83278,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2011-10-21",
+          "konami_id": 9964,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

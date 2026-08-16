@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 90726340,
+      "name": "Queen Dragun Djinn",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nDragon-Type monsters you control cannot be destroyed by battle, except \"Queen Dragun Djinn\". Once per turn: You can detach 1 Xyz Material from this card to target 1 Level 5 or higher Dragon-Type monster in your Graveyard; Special Summon that target. It cannot attack this turn, and its effects are negated.",
+      "race": "Dragon",
+      "atk": 2200,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/queen-dragun-djinn-7576",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN097",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90726340,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90726340.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90726340.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90726340.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "7.59",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96954,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10072,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

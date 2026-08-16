@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 68171737,
+      "name": "Stone Dragon",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A dragon formed by huge boulders that are also used to attack the enemy.",
+      "race": "Rock",
+      "atk": 2000,
+      "def": 2300,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stone-dragon-5731",
+      "card_sets": [
+        {
+          "set_name": "McDonald's Promotional Cards 2",
+          "set_code": "MDP2-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68171737,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68171737.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68171737.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68171737.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.42",
+          "tcgplayer_price": "0.89",
+          "ebay_price": "8.95",
+          "amazon_price": "1.45",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18840,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-12-22",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4432,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 89662401,
+      "name": "Salamangreat Fowl",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Salamangreat\" monster(s), except \"Salamangreat Fowl\" is Normal or Special Summoned to your field (except during the Damage Step): You can Special Summon this card from your hand. You can only use this effect of \"Salamangreat Fowl\" once per turn. You can send 1 \"Salamangreat\" card from your hand or face-up field to the GY, then target 1 Set Spell/Trap your opponent controls; that Set card cannot be activated this turn.",
+      "race": "Cyberse",
+      "atk": 1800,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-fowl-9934",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89662401,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89662401.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89662401.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89662401.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 196064,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14242,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

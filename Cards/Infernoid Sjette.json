@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 96055137,
+      "name": "Infernoid Sjette",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand or Graveyard) by banishing 2 \"Infernoid\" monsters from your hand or Graveyard while the total Levels and Ranks of all Effect Monsters you control are 8 or lower, and cannot be Special Summoned by other ways. When this card declares an attack: You can banish 1 monster from your opponent's Extra Deck (their choice). Once per turn, during either player's turn: You can Tribute 1 monster, then target 1 card in your opponent's Graveyard; banish it.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 0,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernoid-sjette-7999",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN068",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96055137,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96055137.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96055137.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96055137.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.70",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100451,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11706,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

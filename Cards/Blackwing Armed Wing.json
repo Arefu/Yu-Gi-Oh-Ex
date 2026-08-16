@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "id": 76913983,
+      "name": "Blackwing Armed Wing",
+      "typeline": [
+        "Winged Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Blackwing\" Tuner + 1 or more non-Tuner monsters\nIf this card attacks a Defense Position monster, it gains 500 ATK during the Damage Step only, also inflict piercing battle damage to your opponent.",
+      "race": "Winged Beast",
+      "atk": 2300,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-armed-wing-6473",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN039",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENC28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN133",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN078",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "3.8"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2025 C",
+          "set_code": "LART-EN078",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76913983,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76913983.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76913983.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76913983.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.75",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 201623,
+          "viewsweek": 84,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8193,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

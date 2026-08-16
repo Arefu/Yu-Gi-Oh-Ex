@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 27769400,
+      "name": "Tualatin",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If it is your opponent's Battle Phase, a monster you controlled at the start of this Battle Phase was just destroyed, and all monsters you controlled at the start of this Battle Phase (min. 2) have now been destroyed by battle and sent to the GY: You can Special Summon this card from your hand. If Summoned this way: Choose an Attribute, and if you do, destroy all face-up monsters with that Attribute. Your opponent cannot Normal or Special Summon monsters with that Attribute.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2500,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tualatin-2362",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN015",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN090",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27769400,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27769400.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27769400.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27769400.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "8.00",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35590,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2005-06-30",
+          "konami_id": 6525,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 2978414,
+      "name": "Number 46: Dragluon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 Dragon-Type monsters\nOnce per turn, if you control no other monsters: You can detach 1 Xyz Material from this card, then activate 1 of these effects.\n● Special Summon 1 Dragon-Type monster from your hand.\n● Target 1 Dragon-Type monster your opponent controls; take control of that target.\n● Dragon-Type monsters your opponent controls cannot activate their effects until the end of your opponent's turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-46-dragluon-267",
+      "card_sets": [
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN050",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2978414,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2978414.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2978414.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2978414.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "10.20",
+          "tcgplayer_price": "11.69",
+          "ebay_price": "24.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 46",
+          "views": 257775,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10781,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

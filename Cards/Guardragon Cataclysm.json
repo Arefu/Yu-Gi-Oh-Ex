@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 47393199,
+      "name": "Guardragon Cataclysm",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 Dragon monster, then target 2 cards on the field; destroy them. You can only activate 1 \"Guardragon Cataclysm\" per turn.",
+      "race": "Normal",
+      "archetype": "Guardragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-cataclysm-9848",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47393199,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47393199.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47393199.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47393199.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.23",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Guardragon of Corruption",
+          "views": 124844,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14150,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

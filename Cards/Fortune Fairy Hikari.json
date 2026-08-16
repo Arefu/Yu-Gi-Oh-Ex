@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 6311717,
+      "name": "Fortune Fairy Hikari",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you draw this card: You can reveal it; Special Summon it from your hand. If this card is Special Summoned from the hand: You can target 1 monster you control; send it to the GY, and if you do, Special Summon 1 Level 1 Spellcaster monster from your Deck. You can only use each effect of \"Fortune Fairy Hikari\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-fairy-hikari-10202",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN014",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6311717,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6311717.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6311717.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6311717.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "1.49",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76978,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248017,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14550,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

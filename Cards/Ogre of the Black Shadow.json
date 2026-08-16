@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 45121025,
+      "name": "Ogre of the Black Shadow",
+      "typeline": [
+        "Beast-Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An ogre possessed by the powers of the dark. Few can withstand its rapid charge.",
+      "race": "Beast-Warrior",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ogre-of-the-black-shadow-3846",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45121025,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45121025.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45121025.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45121025.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "4.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22469,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4293,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

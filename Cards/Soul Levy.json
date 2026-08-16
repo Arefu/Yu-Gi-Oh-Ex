@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 87844926,
+      "name": "Soul Levy",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can only control 1 \"Soul Levy\". Each time your opponent Special Summons a monster(s), send the top 3 cards of your opponent's Deck to the GY.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-levy-10465",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87844926,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87844926.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87844926.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87844926.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71718,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010079,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14706,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

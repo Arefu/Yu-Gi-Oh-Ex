@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 91188343,
+      "name": "The Agent of Mystery - Earth",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, you can add 1 \"The Agent\" monster from your Deck to your hand, except \"The Agent of Mystery - Earth\". While \"The Sanctuary in the Sky\" is face-up on the field, you can add 1 \"Master Hyperion\" from your Deck to your hand instead.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 800,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "The Agent",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-agent-of-mystery-earth-7613",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.96"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN146",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN146",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91188343,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91188343.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91188343.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91188343.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 186284,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-06-10",
+          "ocg_date": "2010-12-11",
+          "konami_id": 9288,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

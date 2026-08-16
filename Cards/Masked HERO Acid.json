@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 29095552,
+      "name": "Masked HERO Acid",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"Mask Change\". When this card is Special Summoned: Destroy as many Spells and Traps your opponent controls as possible, and if you do, all monsters they control lose 300 ATK.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Masked HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-hero-acid-2468",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN018",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.62"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29095552,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29095552.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29095552.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29095552.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "2.19",
+          "amazon_price": "64.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 396181,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2012-03-17",
+          "konami_id": 9272,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

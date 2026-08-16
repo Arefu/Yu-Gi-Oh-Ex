@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 34492631,
+      "name": "Junk Giant",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a Level 5 or higher monster, you can Special Summon this card (from your hand). A Synchro Summon using this card as a Material cannot be negated. If a player Synchro Summons using this card as a Material, the other player cannot activate cards or effects when that monster is Synchro Summoned.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 2400,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-giant-2930",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN001",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34492631,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34492631.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34492631.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34492631.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.50",
+          "amazon_price": "1.31",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83819,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11641,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

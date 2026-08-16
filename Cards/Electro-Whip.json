@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 37820550,
+      "name": "Electro-Whip",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Increase the ATK and DEF of a Thunder-Type monster equipped with this card by 300 points.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/electro-whip-3205",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.63"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.81"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN093",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37820550,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37820550.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37820550.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37820550.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 302213,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4322,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

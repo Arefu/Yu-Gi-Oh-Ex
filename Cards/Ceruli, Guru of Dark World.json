@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 7623640,
+      "name": "Ceruli, Guru of Dark World",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is discarded to the Graveyard by a card effect: Special Summon this card from the Graveyard to your opponent's side of the field in face-up Defense Position. When this card is Special Summoned by the effect of a \"Dark World\" card: Your opponent must discard 1 card.",
+      "race": "Fiend",
+      "atk": 100,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ceruli-guru-of-dark-world-655",
+      "card_sets": [
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.24"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7623640,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7623640.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7623640.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7623640.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 193797,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-13",
+          "ocg_date": "2011-06-18",
+          "konami_id": 9714,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 96930127,
+      "name": "Chain Dog",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as a Synchro Material, except for the Synchro Summon of a Beast-Type monster. If this card is in the Graveyard: You can Special Summon this card, and if you do, banish it when it leaves the field. You must control exactly 2 Beast-Type monsters to activate and to resolve this effect.",
+      "race": "Beast",
+      "atk": 1600,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chain-dog-8062",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN080",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96930127,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96930127.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96930127.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96930127.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32784,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9111,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

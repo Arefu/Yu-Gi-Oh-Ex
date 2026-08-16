@@ -1,0 +1,133 @@
+{
+  "data": [
+    {
+      "id": 95178994,
+      "name": "Giant Germ",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard: Inflict 500 damage to your opponent, then you can Special Summon any number of \"Giant Germs\" from your Deck in face-up Attack Position.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 100,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-germ-7923",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Five",
+          "set_code": "CP05-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.45"
+        },
+        {
+          "set_name": "Duelist League 3 participation cards",
+          "set_code": "DL12-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.94"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN234",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.05"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.34"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.02"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.85"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.65"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95178994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95178994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95178994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95178994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "2.95",
+          "amazon_price": "6.82",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 380491,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4921,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

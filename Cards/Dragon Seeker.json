@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 28563545,
+      "name": "Dragon Seeker",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned or Flip Summoned, destroy 1 face-up Dragon-Type monster on the field.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 2100,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-seeker-2429",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN101",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 4",
+          "set_code": "TP4-006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.26"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "323.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28563545,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28563545.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28563545.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28563545.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "2.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103991,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4506,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

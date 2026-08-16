@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 52350806,
+      "name": "Danger! Mothman!",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand; your opponent randomly chooses 1 card from your entire hand, then you discard the chosen card. Then, if the discarded card was not \"Danger! Mothman!\", Special Summon 1 \"Danger! Mothman!\" from your hand, and if you do, draw 1 card. If this card is discarded: You can have both players draw 1 card, then both players discard 1 card. You can only use this effect of \"Danger! Mothman!\" once per turn.",
+      "race": "Insect",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-mothman-9815",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN219",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN084",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52350806,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52350806.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52350806.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52350806.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "2.59",
+          "amazon_price": "5.94",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Danger! Mothman",
+          "views": 1036170,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14069,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

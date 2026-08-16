@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 8842266,
+      "name": "Poison of the Old Man",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Activate 1 of these effects;\n● Gain 1200 LP.\n● Inflict 800 damage to your opponent.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/poison-of-the-old-man-751",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.11"
+        },
+        {
+          "set_name": "Saber Force Starter Deck",
+          "set_code": "YS15-ENF18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "Starter Deck: Dawn of the Xyz",
+          "set_code": "YS11-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8842266,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8842266.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8842266.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8842266.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.25",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 195897,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5607,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

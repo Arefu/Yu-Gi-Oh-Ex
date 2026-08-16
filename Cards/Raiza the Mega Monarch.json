@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 69327790,
+      "name": "Raiza the Mega Monarch",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card by Tributing 1 Tribute Summoned monster. If this card is Tribute Summoned: Target 1 card on the field and 1 card in either player's Graveyard, also if this card was Tribute Summoned by Tributing a WIND monster, you can target an additional card on the field; place the first target(s) on the top of the Deck in any order, also, after that, return the additional target (if any) to the hand.",
+      "race": "Winged Beast",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raiza-the-mega-monarch-5834",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN091",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN106",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69327790,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69327790.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69327790.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69327790.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.12",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 297890,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11250,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

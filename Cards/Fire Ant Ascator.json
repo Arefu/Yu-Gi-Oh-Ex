@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 78275321,
+      "name": "Fire Ant Ascator",
+      "typeline": [
+        "Insect",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the GY: You can target 1 Level 5 monster in your GY; Special Summon that target, but its effects are negated, also send it to the GY during the End Phase of this turn.",
+      "race": "Insect",
+      "atk": 700,
+      "def": 1300,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-ant-ascator-6578",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN224",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78275321,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78275321.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78275321.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78275321.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 190474,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8631,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 62706865,
+      "name": "Draconnet",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 Level 2 or lower Normal Monster from your hand or Deck in Defense Position.",
+      "race": "Cyberse",
+      "atk": 1400,
+      "def": 1200,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draconnet-8485",
+      "card_sets": [
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN006",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN006",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "2.27"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62706865,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62706865.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62706865.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62706865.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Draconet",
+          "views": 329940,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-20",
+          "ocg_date": "2017-03-25",
+          "konami_id": 13030,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 1969506,
+      "name": "Puppet Ritual",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your opponent's Life Points are at least 2000 higher than yours: You can target 2 Level 8 \"Gimmick Puppet\" monsters in your Graveyard; Special Summon those targets. You can only activate 1 \"Puppet Ritual\" per turn. You cannot conduct your Battle Phase the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/puppet-ritual-174",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1969506,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1969506.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1969506.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1969506.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41749,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10724,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

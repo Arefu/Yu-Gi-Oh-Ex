@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 59644128,
+      "name": "Gouki Jet Ogre",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Gouki\" monsters\r\nOnce per turn: You can target 1 \"Gouki\" card you control; destroy it, and if you do, change all monsters on the field to face-up Attack Position. If this card is sent from the field to the GY: You can make all \"Gouki\" monsters you currently control gain 500 ATK until the end of this turn. You can only use this effect of \"Gouki Jet Ogre\" once per turn.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-jet-ogre-9209",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "OTS Tournament Pack 29",
+          "set_code": "OP29-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59644128,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59644128.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59644128.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59644128.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.46",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56449,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-12-23",
+          "konami_id": 13514,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

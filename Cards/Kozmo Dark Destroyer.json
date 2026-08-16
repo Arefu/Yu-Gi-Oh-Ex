@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 55885348,
+      "name": "Kozmo Dark Destroyer",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 monster on the field; destroy it. Cannot be targeted by an opponent's card effects. If this card is destroyed by battle or card effect and sent to the Graveyard: You can banish this card from your Graveyard; Special Summon 1 Level 7 or lower \"Kozmo\" monster from your Deck.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 1800,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-dark-destroyer-4759",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN014",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN031",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55885348,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55885348.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55885348.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55885348.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.09",
+          "amazon_price": "2.94",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 167345,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12103,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 6830480,
+      "name": "Twilight Ninja Kagen",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Ninja\" monsters. This effect cannot be negated. Once per turn, when your \"Ninja\" monster declares an attack: You can make that monster gain 1000 ATK until the end of the Damage Step (even if this card leaves the field).\n\n[ Monster Effect ] \nYou can Tribute this card, then target 1 \"Ninja\" monster you control; it gains 800 ATK until the end of this turn.",
+      "race": "Warrior",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Ninja\" monsters. This effect cannot be negated. Once per turn, when your \"Ninja\" monster declares an attack: You can make that monster gain 1000 ATK until the end of the Damage Step (even if this card leaves the field).",
+      "monster_desc": "You can Tribute this card, then target 1 \"Ninja\" monster you control; it gains 800 ATK until the end of this turn.",
+      "atk": 0,
+      "def": 2000,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Ninja",
+      "scale": 10,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twilight-ninja-kagen-8663",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6830480,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6830480.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6830480.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6830480.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.45",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55957,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13142,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

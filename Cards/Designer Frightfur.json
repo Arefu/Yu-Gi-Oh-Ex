@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 36693940,
+      "name": "Designer Frightfur",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Edge Imp\" or \"Fluffal\" monster in your Graveyard; Special Summon it, and if you do, it can be treated as a \"Frightfur\" monster for a Fusion Summon.",
+      "race": "Normal",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/designer-frightfur-3103",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36693940,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36693940.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36693940.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36693940.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41601,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11744,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 10000090,
+      "name": "The Winged Dragon of Ra - Immortal Phoenix",
+      "typeline": [
+        "Divine-Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect. If \"The Winged Dragon of Ra\" is sent from the field to your GY while this card is in your GY: Special Summon this card. Cards and effects cannot be activated in response to this effect's activation. This card is unaffected by other cards' effects. You can pay 1000 LP; send 1 monster on the field to the GY. Once per turn, during the End Phase: Send this card to the GY, and if you do, Special Summon 1 \"The Winged Dragon of Ra - Sphere Mode\" from your hand, Deck, or GY, ignoring its Summoning conditions.",
+      "race": "Divine-Beast",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DIVINE",
+      "archetype": "Egyptian God",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-winged-dragon-of-ra-immortal-phoenix-863",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.65"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN074",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10000090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10000090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10000090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10000090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "11.99",
+          "amazon_price": "5.25",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 493670,
+          "viewsweek": 21,
+          "upvotes": 39,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-04-14",
+          "ocg_date": "2015-12-19",
+          "konami_id": 12234,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

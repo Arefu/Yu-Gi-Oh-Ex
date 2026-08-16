@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 73866096,
+      "name": "Dodododraw",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send 1 \"Dododo\" monster from your hand or face-up from your side of the field to the Graveyard; draw 2 cards. You can only activate 1 \"Dodododraw\" per turn.",
+      "race": "Normal",
+      "archetype": "Dododo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dodododraw-6203",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73866096,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73866096.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73866096.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73866096.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31781,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11112,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

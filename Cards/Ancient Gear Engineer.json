@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 1953925,
+      "name": "Ancient Gear Engineer",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Negate any Trap effects that target this card, and if you do, destroy that Trap Card. If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step. At the end of the Damage Step, if this card attacked: Target 1 Spell/Trap Card your opponent controls; destroy that target.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-engineer-172",
+      "card_sets": [
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1953925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1953925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1953925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1953925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73233,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-01-17",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6841,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

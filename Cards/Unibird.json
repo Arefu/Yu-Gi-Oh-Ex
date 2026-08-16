@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 21296383,
+      "name": "Unibird",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can remove from play this face-up card, and 1 face-up monster you control, to select 1 Synchro Monster in your Graveyard with a Level less than or equal to the combined original Levels of the other 2 monsters. Special Summon that Synchro Monster.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 600,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unibird-1830",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21296383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21296383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21296383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21296383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.95",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17361,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8943,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

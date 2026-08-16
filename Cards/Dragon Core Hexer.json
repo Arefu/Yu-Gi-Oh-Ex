@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 38955728,
+      "name": "Dragon Core Hexer",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Normal"
+      ],
+      "type": "Normal Tuner Monster",
+      "humanReadableCardType": "Tuner Normal Monster",
+      "frameType": "normal",
+      "desc": "Many years of dragonslaying have bathed this huntress in countless amounts of blood. Each drop gave her more power, but at a terrible price, as her cursed body now spreads the dragontaint like an epidemic. No village will take her in, and she no longer even remembers what inspired her crusade in the first place.",
+      "race": "Dragon",
+      "atk": 2300,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-core-hexer-3299",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN127",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38955728,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38955728.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38955728.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38955728.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "3.00",
+          "amazon_price": "1.22",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101904,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12591,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

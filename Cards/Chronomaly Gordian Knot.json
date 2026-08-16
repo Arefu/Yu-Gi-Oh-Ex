@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 72837335,
+      "name": "Chronomaly Gordian Knot",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 \"Chronomaly\" monster from your hand, and if you do, this card's Level becomes the current Level of that Special Summoned monster.",
+      "race": "Rock",
+      "atk": 300,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chronomaly-gordian-knot-6110",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN010",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72837335,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72837335.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72837335.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72837335.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "2.50",
+          "amazon_price": "1.33",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36515,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11006,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

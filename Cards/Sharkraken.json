@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71923655,
+      "name": "Sharkraken",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by Tributing 1 WATER monster.",
+      "race": "Fish",
+      "atk": 2400,
+      "def": 2100,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sharkraken-6038",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71923655,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71923655.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71923655.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71923655.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41540,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10488,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

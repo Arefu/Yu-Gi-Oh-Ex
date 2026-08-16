@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 95204084,
+      "name": "Koa'ki Meiru Tornado",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can return 1 \"Iron Core of Koa'ki Meiru\" from your hand to the top of the Deck to destroy all Special Summoned monsters your opponent controls.",
+      "race": "Winged Beast",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-tornado-7925",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95204084,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95204084.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95204084.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95204084.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.00",
+          "amazon_price": "1.23",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28613,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8312,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

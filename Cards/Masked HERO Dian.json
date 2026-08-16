@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62624486,
+      "name": "Masked HERO Dian",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"Mask Change\". When this card destroys an opponent's monster by battle and sends it to the GY: You can Special Summon 1 Level 4 or lower \"HERO\" monster from your Deck.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 3000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Masked HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-hero-dian-5291",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.73"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62624486,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62624486.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62624486.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62624486.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "3.74",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238089,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2012-03-17",
+          "konami_id": 9559,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

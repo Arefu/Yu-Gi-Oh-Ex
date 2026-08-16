@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 73511233,
+      "name": "Performapal U Go Golem",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if a monster is Fusion Summoned to your field (except during the Damage Step): You can add 1 \"Performapal\", \"Odd-Eyes\", or \"Magician\" Pendulum Monster from your GY or face-up in your Extra Deck to your hand.\n\n[ Monster Effect ] \nOnce per turn, during your Main Phase, if this card was Pendulum Summoned this turn: You can Fusion Summon 1 Fusion Monster from your Extra Deck, using this card you control and Dragon monsters you control as Fusion Materials.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn, if a monster is Fusion Summoned to your field (except during the Damage Step): You can add 1 \"Performapal\", \"Odd-Eyes\", or \"Magician\" Pendulum Monster from your GY or face-up in your Extra Deck to your hand.",
+      "monster_desc": "Once per turn, during your Main Phase, if this card was Pendulum Summoned this turn: You can Fusion Summon 1 Fusion Monster from your Extra Deck, using this card you control and Dragon monsters you control as Fusion Materials.",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Performapal",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-u-go-golem-8359",
+      "card_sets": [
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73511233,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73511233.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73511233.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73511233.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.10",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Fugolem",
+          "views": 90979,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12918,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 81122844,
+      "name": "Wind-Up Carrier Zenmaity",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; Special Summon 1 \"Wind-Up\" monster from your hand or Deck. When a face-up \"Wind-Up\" monster on the field is destroyed and sent to your Graveyard (except during the Damage Step): You can detach 1 Xyz Material from this card to target that monster; return that target to the hand.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-carrier-zenmaity-6808",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN175",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN175",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 81122844,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81122844.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81122844.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81122844.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "10.95",
+          "amazon_price": "6.05",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63685,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9918,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

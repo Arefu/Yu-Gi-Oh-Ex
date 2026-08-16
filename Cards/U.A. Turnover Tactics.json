@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 61613388,
+      "name": "U.A. Turnover Tactics",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If you control 2 or more \"U.A.\" monsters with different names: Shuffle as many monsters on the field as possible into the Deck, then Special Summon \"U.A.\" monsters from your Deck that have different names from each other, up to the number of cards shuffled into your Main Deck, but those monsters cannot attack this turn. Then your opponent can Special Summon monsters from their Deck, up to the number of cards shuffled into their Main Deck. You can only activate 1 \"U.A. Turnover Tactics\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "U.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/u-a-turnover-tactics-5216",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61613388,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61613388.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61613388.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61613388.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "3.30",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24893,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11639,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

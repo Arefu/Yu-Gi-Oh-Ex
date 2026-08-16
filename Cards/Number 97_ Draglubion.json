@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 28400508,
+      "name": "Number 97: Draglubion",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\r\nYour opponent cannot target this card with card effects. You can detach 1 material from this card; take 2 Dragon \"Number\" monsters with different names from your Extra Deck and/or GY, except \"Number 97: Draglubion\", Special Summon 1 of them and attach the other to it as material, also for the rest of this turn you cannot Special Summon other monsters, or declare an attack, except with that Special Summoned monster. You can only use this effect of \"Number 97: Draglubion\" once per turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-97-draglubion-10214",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "11.16"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN145",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28400508,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28400508.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28400508.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28400508.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.99",
+          "amazon_price": "0.40",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 97: Dragravion",
+          "views": 1104211,
+          "viewsweek": 0,
+          "upvotes": 33,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248033,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14566,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

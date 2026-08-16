@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 92394653,
+      "name": "Spirit's Invitation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time your Spirit monster returns to your hand, select 1 monster on your opponent's side of the field and return it to its owner's hand. Pay 500 Life Points during each of your Standby Phases. If you do not, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-s-invitation-7698",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN204",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.6"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92394653,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92394653.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92394653.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92394653.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108181,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5402,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

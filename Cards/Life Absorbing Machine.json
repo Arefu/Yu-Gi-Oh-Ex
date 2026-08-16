@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 14318794,
+      "name": "Life Absorbing Machine",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "During your Standby Phase, gain Life Points equal to half of the total Life Points you paid during your last turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/life-absorbing-machine-1228",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Seven",
+          "set_code": "CP07-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14318794,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14318794.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14318794.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14318794.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138568,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5312,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

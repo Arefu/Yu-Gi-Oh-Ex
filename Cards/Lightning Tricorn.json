@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 49389523,
+      "name": "Lightning Tricorn",
+      "typeline": [
+        "Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner Beast-Type monsters\nIf this card is destroyed by your opponent's card (either by battle or by card effect), you can select 1 \"Thunder Unicorn\" or \"Voltic Bicorn\" in your Graveyard and Special Summon it.",
+      "race": "Beast",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightning-tricorn-4211",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49389523,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49389523.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49389523.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49389523.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.20",
+          "tcgplayer_price": "0.80",
+          "ebay_price": "9.89",
+          "amazon_price": "3.75",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33248,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8973,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

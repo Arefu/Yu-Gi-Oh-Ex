@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 88307361,
+      "name": "Superancient Deepsea King Coelacanth",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can discard 1 card; Special Summon as many Level 4 or lower Fish-Type monsters as possible from your Deck, but they cannot declare an attack and their effects are negated. During either player's turn, when this face-up card on the field is targeted by a card effect: You can Tribute 1 other Fish-Type monster; negate the activation, and if you do, destroy that card.",
+      "race": "Fish",
+      "atk": 2800,
+      "def": 2200,
+      "level": 7,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superancient-deepsea-king-coelacanth-7390",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack Tournament Prize Cards",
+          "set_code": "BATT-EN007",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "160.99"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN034",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Three",
+          "set_code": "TU03-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88307361,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88307361.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88307361.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88307361.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.99",
+          "amazon_price": "28.74",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261814,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7434,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 43426903,
+      "name": "Reptilianne Gorgon",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks a monster, after damage calculation: The ATK of that monster becomes 0, also it cannot change its battle position.",
+      "race": "Reptile",
+      "atk": 1400,
+      "def": 1400,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Reptilianne",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reptilianne-gorgon-3704",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN067",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43426903,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43426903.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43426903.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43426903.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46656,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8455,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

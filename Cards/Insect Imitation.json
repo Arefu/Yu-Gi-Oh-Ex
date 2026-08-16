@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 96965364,
+      "name": "Insect Imitation",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 monster. Special Summon 1 Insect-Type monster from your Deck whose Level is 1 higher than the Tributed monster's.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/insect-imitation-8066",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.44"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96965364,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96965364.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96965364.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96965364.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238355,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5131,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

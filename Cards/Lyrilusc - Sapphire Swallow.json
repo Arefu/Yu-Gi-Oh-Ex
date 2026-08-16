@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 60954556,
+      "name": "Lyrilusc - Sapphire Swallow",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a Winged Beast-Type monster: You can Special Summon both this card and 1 Level 1 Winged Beast-Type monster from your hand. You can only use this effect of \"Lyrilusc - Sapphire Swallow\" once per turn. A WIND Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\r\n● If it is Xyz Summoned: You can target 1 \"Lyrilusc\" monster in your Graveyard; attach it to this card as Xyz Material.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 0,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Lyrilusc",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lyrilusc-sapphire-swallow-8329",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.86"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60954556,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60954556.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60954556.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60954556.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lyrical Luscinia - Sapphire Swallow",
+          "views": 216992,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12927,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

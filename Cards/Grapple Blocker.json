@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 32907538,
+      "name": "Grapple Blocker",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, you can select 1 monster your opponent controls. The selected monster cannot attack or be Tributed, while this card remains face-up on the field. During each of your End Phases, pay 500 Life Points or destroy this card.",
+      "race": "Psychic",
+      "atk": 1200,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grapple-blocker-2799",
+      "card_sets": [
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32907538,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32907538.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32907538.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32907538.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "14.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45753,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7866,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

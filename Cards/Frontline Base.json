@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 46181000,
+      "name": "Frontline Base",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can Special Summon 1 Level 4 or lower Union monster from your hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frontline-base-3938",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46181000,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46181000.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46181000.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46181000.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178182,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5602,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

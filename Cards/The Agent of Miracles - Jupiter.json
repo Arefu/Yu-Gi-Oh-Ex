@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 28573958,
+      "name": "The Agent of Miracles - Jupiter",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can remove from play 1 \"The Agent\" monster in your Graveyard to select 1 face-up LIGHT Fairy-Type monster you control. The selected monster gains 800 ATK until the End Phase. While \"The Sanctuary in the Sky\" is face-up on the field, once per turn, you can discard 1 Fairy-Type monster to select 1 of your removed from play LIGHT Fairy-Type monster, and Special Summon it.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "The Agent",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-agent-of-miracles-jupiter-2432",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.94"
+        },
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28573958,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28573958.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28573958.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28573958.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77607,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-06-10",
+          "ocg_date": "2010-12-11",
+          "konami_id": 9289,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

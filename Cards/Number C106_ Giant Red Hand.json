@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 55888045,
+      "name": "Number C106: Giant Red Hand",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\nIf this card has a \"Number\" monster as an Xyz Material, it gains this effect.\n● Once per turn, during either player's turn, when a card or effect is activated on the field: Detach 1 Xyz Material from this card, and if you do, negate the effects of all other face-up cards currently on the field until the end of this turn.",
+      "race": "Rock",
+      "atk": 2600,
+      "def": 2000,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c106-giant-red-hand-4760",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.54"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55888045,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55888045.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55888045.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55888045.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C106",
+          "views": 68860,
+          "viewsweek": 21,
+          "upvotes": 104,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2013-04-04",
+          "konami_id": 10684,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

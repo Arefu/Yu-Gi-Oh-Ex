@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 44676200,
+      "name": "Hero Barrier",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Negate 1 attack from an opponent's monster. You must control a face-up \"Elemental HERO\" monster to resolve this effect.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hero-barrier-3803",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.92"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN049",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44676200,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44676200.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44676200.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44676200.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "2.25",
+          "amazon_price": "3.69",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128690,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6495,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

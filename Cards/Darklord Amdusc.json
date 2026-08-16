@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 51728779,
+      "name": "Darklord Amdusc",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card and 1 \"Darklord\" card, then target 1 \"Darklord\" card in your GY; add it to your hand. (Quick Effect): You can pay 1000 LP, then target 1 \"Darklord\" Spell/Trap in your GY; apply that target's activation effect, then shuffle that target into the Deck. You can only use each effect of \"Darklord Amdusc\" once per turn. You can only Special Summon \"Darklord Amdusc(s)\" once per turn.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 2800,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-amdusc-4401",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN033",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.32"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51728779,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51728779.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51728779.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51728779.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "6.99",
+          "amazon_price": "5.14",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170726,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12727,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

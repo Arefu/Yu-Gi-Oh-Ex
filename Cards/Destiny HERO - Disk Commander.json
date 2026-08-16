@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 56570271,
+      "name": "Destiny HERO - Disk Commander",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the GY the turn this card was sent to the GY. If this card is Special Summoned from the GY: You can draw 2 cards. You can only use this effect of \"Destiny HERO - Disk Commander\" once per Duel.",
+      "race": "Warrior",
+      "atk": 300,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-disk-commander-4815",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN133",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.81"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA08",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.84"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN176",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN176",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship 2007 promotional cards",
+          "set_code": "WC07-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56570271,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56570271.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56570271.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56570271.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "2.00",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 167058,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-03-20",
+          "ocg_date": "2007-03-15",
+          "konami_id": 7095,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

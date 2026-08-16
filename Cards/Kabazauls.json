@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 51934376,
+      "name": "Kabazauls",
+      "typeline": [
+        "Dinosaur",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A huge monster in the shape of a hippopotamus. The sneezing from his gigantic body is so fierce that people mistake it for a hurricane.",
+      "race": "Dinosaur",
+      "atk": 1700,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kabazauls-4420",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 14 participation cards",
+          "set_code": "DL14-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.67"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN142",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 2",
+          "set_code": "STP2-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51934376,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51934376.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51934376.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51934376.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.94",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116390,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5507,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

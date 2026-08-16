@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 18828179,
+      "name": "Cranium Fish",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card by Tributing 1 \"Ocean's Keeper\". You can discard 1 WATER monster to the Graveyard to destroy 1 face-down card.",
+      "race": "Fish",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cranium-fish-1628",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "23.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18828179,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18828179.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18828179.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18828179.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "16.12",
+          "tcgplayer_price": "11.99",
+          "ebay_price": "28.99",
+          "amazon_price": "34.99",
+          "coolstuffinc_price": "39.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18370,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7335,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

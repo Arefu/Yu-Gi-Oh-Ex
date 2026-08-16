@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 29417188,
+      "name": "Psi-Blocker",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can declare 1 card name; cards with that name, and their effects, cannot be used until the end of your opponent's next turn.",
+      "race": "Psychic",
+      "atk": 1200,
+      "def": 300,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psi-blocker-2495",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN220",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN220",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN086",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29417188,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29417188.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29417188.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29417188.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.75",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46211,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9283,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

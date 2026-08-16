@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 31353051,
+      "name": "Exploderokket Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Link Monster's effect is activated that targets this face-up card on the field (Quick Effect): You can destroy this card, then each player takes 2000 damage. During the End Phase, if this card is in the GY because it was destroyed on the field by battle or card effect and sent there this turn: You can Special Summon 1 \"Rokket\" monster from your Deck, except \"Exploderokket Dragon\". You can only use each effect of \"Exploderokket Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exploderokket-dragon-10386",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31353051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31353051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31353051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31353051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110259,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100336004,
+          "tcg_date": "2019-08-15",
+          "ocg_date": "2019-06-22",
+          "konami_id": 14617,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

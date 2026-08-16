@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 57043117,
+      "name": "Giant Soldier of Steel",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 Rock-Type monsters\nThis card is unaffected by other monsters' effects. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card; it gains 1000 DEF until the end of this turn, and if it does, you take no effect damage from your opponent's card effects this turn.",
+      "race": "Rock",
+      "atk": 1300,
+      "def": 2000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-soldier-of-steel-4861",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN126",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57043117,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57043117.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57043117.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57043117.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.16",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "4.49",
+          "amazon_price": "3.15",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79569,
+          "viewsweek": 22,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10355,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 65500515,
+      "name": "Squirt Squid",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, when this card is targeted for an attack by an opponent's monster: You can move this card you control to another of your Main Monster Zones, then, Special Summon 1 \"Squid Ink Token\" (Aqua/WATER/Level 2/ATK ?/DEF 0). This Token's ATK becomes that opponent's monster's ATK. While this card is in your leftmost or rightmost Main Monster Zone, your opponent's monsters with ATK less than or equal to this card's DEF cannot target it for attacks.",
+      "race": "Aqua",
+      "atk": 0,
+      "def": 1800,
+      "level": 2,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/squirt-squid-9857",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65500515,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65500515.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65500515.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65500515.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Squint Squid",
+          "views": 23128,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14106,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

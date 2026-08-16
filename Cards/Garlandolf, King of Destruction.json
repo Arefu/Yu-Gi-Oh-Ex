@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 30646525,
+      "name": "Garlandolf, King of Destruction",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Ritual of Destruction\". When this card is Ritual Summoned, destroy all other face-up monsters on the field with DEF less than or equal to this card's ATK. This card gains 100 ATK for each monster destroyed by this effect.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1400,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/garlandolf-king-of-destruction-2605",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN039",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30646525,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30646525.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30646525.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30646525.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.85",
+          "tcgplayer_price": "5.39",
+          "ebay_price": "30.00",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45736,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8650,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

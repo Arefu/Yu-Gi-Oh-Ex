@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 57610714,
+      "name": "Cloudian - Eye of the Typhoon",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle. If this card is in face-up Defense Position, destroy it. When this card declares an attack, change the battle positions of all face-up monsters, except \"Cloudian\" monsters.",
+      "race": "Aqua",
+      "atk": 3000,
+      "def": 1000,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Cloudian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cloudian-eye-of-the-typhoon-4905",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN005",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENH02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57610714,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57610714.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57610714.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57610714.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "4.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57779,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7264,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

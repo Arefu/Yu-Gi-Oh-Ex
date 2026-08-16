@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 29612557,
+      "name": "Cyclone Boomerang",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to \"Elemental HERO Wildheart\". It gains 500 ATK. When the equipped monster is destroyed by a card effect and sent to the Graveyard: Destroy all Spell and Trap Cards on the field, then inflict 100 damage to your opponent for each Spell/Trap Card destroyed by this effect.",
+      "race": "Equip",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyclone-boomerang-2508",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN162",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.75"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29612557,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29612557.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29612557.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29612557.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "4.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64134,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6576,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

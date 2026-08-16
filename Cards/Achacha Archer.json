@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 98865920,
+      "name": "Achacha Archer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Flip Summoned: Inflict 500 damage to your opponent.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/achacha-archer-8211",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN004",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98865920,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98865920.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98865920.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98865920.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69548,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9620,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

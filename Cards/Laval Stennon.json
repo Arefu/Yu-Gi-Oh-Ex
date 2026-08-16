@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 20374351,
+      "name": "Laval Stennon",
+      "typeline": [
+        "Pyro",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner FIRE monsters\nWhen this card is Synchro Summoned: Send 1 card from your hand to the Graveyard. During either player's turn, when this card is targeted by a card effect: You can banish 1 \"Laval\" monster from your Graveyard; negate the activation, and if you do, destroy the targeting card.",
+      "race": "Pyro",
+      "atk": 2700,
+      "def": 1800,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-stennon-1749",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN037",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN021",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20374351,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20374351.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20374351.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20374351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.90",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29475,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9392,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

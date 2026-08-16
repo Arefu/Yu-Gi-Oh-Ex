@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 63633694,
+      "name": "Gizmek Kaku, the Supreme Shining Sky Stag",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a monster is in the Extra Monster Zone: You can Special Summon this card from your hand. You can target 1 face-up monster in the Extra Monster Zone; equip that face-up monster to this card (max. 1). When this card destroys an opponent's monster by battle: You can Special Summon 1 of your Monster Cards equipped to this card. You can only use each effect of \"Gizmek Kaku, the Supreme Shining Sky Stag\" once per turn.",
+      "race": "Machine",
+      "atk": 2750,
+      "def": 2750,
+      "level": 9,
+      "attribute": "FIRE",
+      "archetype": "Gizmek",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gizmek-kaku-the-supreme-shining-sky-stag-10656",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63633694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63633694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63633694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63633694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.25",
+          "amazon_price": "3.90",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gizmek Mikazuchi, the Nuclear Emperor",
+          "views": 274208,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011024,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14833,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 19680539,
+      "name": "Noble Knight Gawayn",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a LIGHT Normal Monster, you can Special Summon this card (from your hand) in Defense Position.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-gawayn-1695",
+      "card_sets": [
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN004",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "4.43"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist Sneak Peek Participation Card",
+          "set_code": "REDU-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19680539,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19680539.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19680539.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19680539.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "1.95",
+          "amazon_price": "2.46",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112119,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10311,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

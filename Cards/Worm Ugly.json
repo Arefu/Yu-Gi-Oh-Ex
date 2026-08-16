@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 76683171,
+      "name": "Worm Ugly",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Tribute Summon a Reptile-Type \"Worm\" monster by Tributing this card, you can Special Summon this card from your Graveyard to your opponent's side of the field, in face-up Attack Position.",
+      "race": "Reptile",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-ugly-6452",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN031",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76683171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76683171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76683171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76683171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16327,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8256,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

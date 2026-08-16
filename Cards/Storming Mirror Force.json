@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 5650082,
+      "name": "Storming Mirror Force",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack: Return all your opponent's Attack Position monsters to the hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/storming-mirror-force-502",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN076",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB22",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.37"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN099",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5650082,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5650082.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5650082.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5650082.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "8.95",
+          "amazon_price": "24.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 878053,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11860,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

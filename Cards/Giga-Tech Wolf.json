@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 8471389,
+      "name": "Giga-Tech Wolf",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An iron wolf with razor-sharp fangs that can penetrate any armor.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giga-tech-wolf-717",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8471389,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8471389.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8471389.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8471389.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129313,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4418,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

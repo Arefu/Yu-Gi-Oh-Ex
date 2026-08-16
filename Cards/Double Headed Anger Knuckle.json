@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 146746,
+      "name": "Double Headed Anger Knuckle",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Machine monsters\r\nCannot be used as Link Material. You can only use 1 of the following effects of \"Double Headed Anger Knuckle\" per turn, and only once that turn.\r\n● During the Main Phase (Quick Effect): You can send 1 monster from your hand or field to the GY, then target 1 Level 10 Machine monster in your GY; Special Summon it in Defense Position, but negate its effects.\r\n● If this card is in your GY: You can send 1 card from your hand or field to the GY; Special Summon this card.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-headed-anger-knuckle-9915",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 146746,
+          "image_url": "https://images.ygoprodeck.com/images/cards/146746.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/146746.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/146746.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.12",
+          "tcgplayer_price": "3.61",
+          "ebay_price": "2.99",
+          "amazon_price": "4.42",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Double Header Anger Knuckle",
+          "views": 264091,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14201,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

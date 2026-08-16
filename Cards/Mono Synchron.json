@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 56897896,
+      "name": "Mono Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When using this card as Synchro Material, the other Synchro Material(s) must be Level 4 or lower Warrior or Machine-Type monsters, and they are treated as Level 1.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mono-synchron-4846",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56897896,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56897896.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56897896.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56897896.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.26",
+          "tcgplayer_price": "3.26",
+          "ebay_price": "3.19",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25460,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-10-23",
+          "ocg_date": "2012-08-11",
+          "konami_id": 10309,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

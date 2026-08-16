@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 9161357,
+      "name": "Number 6: Chronomaly Atlandis",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nWhen this card is Xyz Summoned: You can target 1 \"Number\" monster in your Graveyard; equip that target to this card. This card gains ATK equal to half the ATK of that equipped monster. Once per turn: You can detach 1 Xyz Material from this card, then send the monster equipped by this effect to the Graveyard; halve your opponent's Life Points. You cannot conduct your Battle Phase the turn you activate this effect.",
+      "race": "Machine",
+      "atk": 2600,
+      "def": 3000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-6-chronomaly-atlandis-778",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN092",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter Power-Up Pack",
+          "set_code": "YS13-ENV11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9161357,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9161357.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9161357.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9161357.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "1.19",
+          "ebay_price": "4.95",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 6",
+          "views": 81526,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-21",
+          "konami_id": 10212,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 4939890,
+      "name": "Shaddoll Hedgehog",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can add 1 \"Shaddoll\" Spell/Trap from your Deck to your hand.\r\nIf this card is sent to the GY by a card effect: You can add 1 \"Shaddoll\" monster from your Deck to your hand, except \"Shaddoll Hedgehog\". You can only use 1 \"Shaddoll Hedgehog\" effect per turn, and only once that turn.",
+      "race": "Spellcaster",
+      "atk": 800,
+      "def": 200,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shaddoll-hedgehog-442",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4939890,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4939890.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4939890.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4939890.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.43",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 648833,
+          "viewsweek": 42,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11233,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 25280974,
+      "name": "Legion the Fiend Jester",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, you can Tribute Summon 1 Spellcaster monster in face-up Attack Position, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) If this card is sent from the field to the GY: You can add 1 Spellcaster Normal Monster from your Deck or GY to your hand. You can only use this effect of \"Legion the Fiend Jester\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1300,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Jester",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legion-the-fiend-jester-2173",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.43"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENA05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENG07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25280974,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25280974.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25280974.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25280974.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "4.49",
+          "amazon_price": "2.65",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 221674,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-06-19",
+          "ocg_date": "2015-06-06",
+          "konami_id": 4745,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

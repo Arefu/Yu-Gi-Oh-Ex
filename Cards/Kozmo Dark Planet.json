@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 85991529,
+      "name": "Kozmo Dark Planet",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing \"Kozmo\" monsters from your hand whose total Levels equal 10 or more, and cannot be Special Summoned by other ways. Cannot be targeted by an opponent's card effects. During either player's turn, when a Spell Card is activated: You can banish 1 \"Kozmo\" monster from your Graveyard; negate the activation, and if you do, destroy that card. If this card is destroyed by battle or card effect and sent to the Graveyard: You can banish this card from your Graveyard; add 1 Level 9 or lower \"Kozmo\" monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-dark-planet-7204",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85991529,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85991529.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85991529.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85991529.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.83",
+          "tcgplayer_price": "4.84",
+          "ebay_price": "3.79",
+          "amazon_price": "5.27",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57197,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12388,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 38495396,
+      "name": "Constellar Ptolemy M7",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nYou can also Xyz Summon this card by using a \"Constellar\" Xyz Monster you control as the Xyz Material, other than \"Constellar Ptolemy M7\". (Xyz Materials attached to that monster also become Xyz Materials on this card.) If Summoned this way, the following effect cannot be activated this turn. Once per turn: You can detach 1 Xyz Material from this card, then target 1 monster on the field or in either player's Graveyard; return that target to the hand.",
+      "race": "Machine",
+      "atk": 2700,
+      "def": 2000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-ptolemy-m7-3262",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN009",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN089",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.59"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN062",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN139",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN071",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38495396,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38495396.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38495396.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38495396.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 574578,
+          "viewsweek": 84,
+          "upvotes": 17,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 10004,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 59364406,
+      "name": "Burning Beast",
+      "typeline": [
+        "Pyro",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase, if you control this monster on the field, you can equip it to your \"Freezing Beast\" as an Equip Spell Card, OR unequip the Union equipment and Special Summon this card in face-up Attack Position. While equipped to a monster by this card's effect, each time the equipped monster inflicts Battle Damage to your opponent, destroy 1 face-up Spell or Trap Card on the field. (1 monster can only be equipped with 1 Union Monster at a time. If the equipped monster is destroyed as a result of battle, destroy this card instead.)",
+      "race": "Pyro",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/burning-beast-5044",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59364406,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59364406.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59364406.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59364406.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78558,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5590,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

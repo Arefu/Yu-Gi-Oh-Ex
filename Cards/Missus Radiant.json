@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 3987233,
+      "name": "Missus Radiant",
+      "typeline": [
+        "Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 EARTH monsters\r\nAll EARTH monsters on the field gain 500 ATK and DEF, also all WIND monsters on the field lose 400 ATK and DEF. If this card is destroyed by battle or card effect: You can target 1 EARTH monster in your GY; add it to your hand. You can only use this effect of \"Missus Radiant\" once per turn.",
+      "race": "Beast",
+      "atk": 1400,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/missus-radiant-8435",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3987233,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3987233.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3987233.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3987233.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "1.58",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 399283,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13091,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

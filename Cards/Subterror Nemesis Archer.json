@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 39581190,
+      "name": "Subterror Nemesis Archer",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the start of the Damage Step, if this card attacks an opponent's face-down Defense Position monster, and you control another \"Subterror\" monster: You can shuffle that opponent's monster into the Deck. If this card on the field is destroyed by battle or card effect and sent to the GY: You can Special Summon 1 \"Subterror\" monster from your Deck in face-up or face-down Defense Position. You can only use each effect of \"Subterror Nemesis Archer\" once per turn.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": 1400,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-nemesis-archer-3356",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN082",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39581190,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39581190.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39581190.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39581190.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.29",
+          "amazon_price": "8.93",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 173118,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12820,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

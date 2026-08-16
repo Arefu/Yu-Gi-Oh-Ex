@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 99348756,
+      "name": "Valkyrian Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters your opponent controls cannot target face-up Warrior-Type monsters for attacks, except \"Valkyrian Knight\". When this card is destroyed by battle and sent to the Graveyard: You can banish 1 Warrior-Type monster and this card from your Graveyard, then target 1 Level 5 or higher Warrior-Type monster in your Graveyard; Special Summon that target.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrian-knight-8249",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ21",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99348756,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99348756.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99348756.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99348756.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "4.49",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58496,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10398,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

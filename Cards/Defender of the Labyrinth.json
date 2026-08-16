@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 31897444,
+      "name": "Defender of the Labyrinth",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Normal Monsters\r\nNon-Effect Monsters you control gain 500 ATK, also all Effect Monsters your opponent controls lose 500 ATK. If this card in its owner's possession is destroyed by your opponent's card: You can target 1 non-Effect Monster in your GY; Special Summon it. You can only use this effect of \"Defender of the Labyrinth\" once per turn.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/defender-of-the-labyrinth-10246",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN127",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31897444,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31897444.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31897444.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31897444.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Defender of the Netherworld Labyrinth",
+          "views": 99385,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009049,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14494,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

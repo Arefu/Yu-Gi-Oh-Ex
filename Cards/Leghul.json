@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 12472242,
+      "name": "Leghul",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This monster may attack your opponent's Life Points directly.",
+      "race": "Insect",
+      "atk": 300,
+      "def": 350,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leghul-1079",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-031",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "3.78"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E031",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.59"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN031",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Metal Raiders (25th Anniversary Edition)",
+          "set_code": "MRD-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12472242,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12472242.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12472242.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12472242.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "3.19",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 216385,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4403,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

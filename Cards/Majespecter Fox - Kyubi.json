@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 94784213,
+      "name": "Majespecter Fox - Kyubi",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "When this card is Normal or Special Summoned: You can add 1 \"Majespecter\" Trap Card from your Deck to your hand. You can only use this effect of \"Majespecter Fox - Kyubi\" once per turn. Cannot be targeted or destroyed by your opponent's card effects.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Majespecter",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-fox-kyubi-7887",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94784213,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94784213.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94784213.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94784213.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69259,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11972,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

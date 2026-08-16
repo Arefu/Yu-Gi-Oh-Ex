@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 70681994,
+      "name": "Dragoness the Wicked Knight",
+      "typeline": [
+        "Warrior",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Armaill\" + \"One-Eyed Shield Dragon\"",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 900,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragoness-the-wicked-knight-5939",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.12"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70681994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70681994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70681994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70681994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "1.89",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 379611,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4300,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

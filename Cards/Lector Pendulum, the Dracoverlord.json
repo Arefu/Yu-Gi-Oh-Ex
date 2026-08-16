@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 7127502,
+      "name": "Lector Pendulum, the Dracoverlord",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nNegate the effects of face-up Pendulum Monsters while your opponent controls them.\n\n[ Monster Effect ] \nAt the start of the Damage Step, if this card battles a Pendulum Monster: Destroy both that monster and this card.",
+      "race": "Dragon",
+      "pend_desc": "Negate the effects of face-up Pendulum Monsters while your opponent controls them.",
+      "monster_desc": "At the start of the Damage Step, if this card battles a Pendulum Monster: Destroy both that monster and this card.",
+      "atk": 1950,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Dracoverlord",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lector-pendulum-the-dracoverlord-611",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7127502,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7127502.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7127502.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7127502.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74381,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12295,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

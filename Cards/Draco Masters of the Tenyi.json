@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 23935886,
+      "name": "Draco Masters of the Tenyi",
+      "typeline": [
+        "Wyrm",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, including a Link Monster\r\nCannot be destroyed by battle with an Effect Monster. If you control no other Effect Monsters: You can destroy Effect Monsters your opponent controls, up to the number of non-Effect Monsters you control and/or in your GY. You can only use this effect of \"Draco Masters of the Tenyi\" once per turn.",
+      "race": "Wyrm",
+      "atk": 2600,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Tenyi",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draco-masters-of-the-tenyi-10448",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN205",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2.17"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23935886,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23935886.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23935886.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23935886.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.55",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tenyi Master of the Dragon Fist",
+          "views": 241938,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100200169,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-20",
+          "konami_id": 14795,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

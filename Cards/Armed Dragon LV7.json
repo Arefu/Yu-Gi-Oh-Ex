@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "id": 73879377,
+      "name": "Armed Dragon LV7",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Armed Dragon LV5\". You can send 1 monster from your hand to the GY; destroy all monsters your opponent controls with ATK less than or equal to that sent monster's ATK.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 1000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Armed Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armed-dragon-lv7-6205",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Chazz Princeton",
+          "set_code": "DP2-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN205",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.24"
+        },
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN015",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENC08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENC08",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Deluxe Edition",
+          "set_code": "SD1-ENDE1",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "67.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73879377,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73879377.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73879377.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73879377.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "4.95",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 226003,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6107,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

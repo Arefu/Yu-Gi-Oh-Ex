@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 72714461,
+      "name": "Wisdom-Eye Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have a \"Magician\" or \"Performapal\" card in your other Pendulum Zone: You can destroy this card, and if you do, place 1 \"Magician\" Pendulum Monster from your Deck in your Pendulum Zone, except \"Wisdom-Eye Magician\".\n\n[ Monster Effect ] \nYou can discard this card, then target 1 card in your Pendulum Zone, whose current Pendulum Scale is different from its original Pendulum Scale; its Pendulum Scale becomes its original Pendulum Scale until the end of this turn.",
+      "race": "Spellcaster",
+      "pend_desc": "If you have a \"Magician\" or \"Performapal\" card in your other Pendulum Zone: You can destroy this card, and if you do, place 1 \"Magician\" Pendulum Monster from your Deck in your Pendulum Zone, except \"Wisdom-Eye Magician\".",
+      "monster_desc": "You can discard this card, then target 1 card in your Pendulum Zone, whose current Pendulum Scale is different from its original Pendulum Scale; its Pendulum Scale becomes its original Pendulum Scale until the end of this turn.",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Magician",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wisdom-eye-magician-6107",
+      "card_sets": [
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19",
+          "set_code": "OP19-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72714461,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72714461.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72714461.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72714461.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.95",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 385103,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-12-03",
+          "ocg_date": "2015-04-21",
+          "konami_id": 11784,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

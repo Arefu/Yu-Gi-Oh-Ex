@@ -1,0 +1,122 @@
+{
+  "data": [
+    {
+      "id": 39751094,
+      "name": "Otohime",
+      "typeline": [
+        "Spellcaster",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. During the End Phase of the turn this card is Normal Summoned or flipped face-up: Return it to the hand. When this card is Normal Summoned or flipped face-up: You can target 1 face-up monster your opponent controls; change that target's battle position.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 100,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/otohime-3368",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN181",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-069",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "1.94"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN069",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2025 A",
+          "set_code": "LART-EN076",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.15"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39751094,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39751094.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39751094.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39751094.jpg"
+        },
+        {
+          "id": 39751093,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39751093.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39751093.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39751093.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161942,
+          "viewsweek": 42,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Otohime",
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5379,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

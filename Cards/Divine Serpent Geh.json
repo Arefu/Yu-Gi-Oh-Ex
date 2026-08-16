@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 82103466,
+      "name": "Divine Serpent Geh",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect. If a monster(s) you control is destroyed by an opponent's attack or card effect: You can pay half your LP; Special Summon this card from your hand. Cannot be targeted by card effects. If this card attacks an opponent's monster, during the Damage Step only, negate the effects of that monster while it is face-up on the field (but its effects can still be activated), also its ATK becomes half its original ATK. Once per battle, if this card battles, during damage calculation (Quick Effect): You can make this card's ATK become equal to the highest original ATK on the field (your choice, if tied).",
+      "race": "Reptile",
+      "atk": -1,
+      "def": 0,
+      "level": 12,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-serpent-geh-6901",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN142",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.1"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82103466,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82103466.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82103466.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82103466.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150378,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2016-06-24",
+          "konami_id": 12671,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 62868900,
+      "name": "D - Shield",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an Attack Position \"Destiny HERO\" monster you control is targeted for an attack: Target it; change it to Defense Position and equip it with this card. The equipped monster cannot be destroyed by battle.",
+      "race": "Normal",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-shield-5307",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN234",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.38"
+        },
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN150",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62868900,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62868900.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62868900.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62868900.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "6.99",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63721,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6680,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

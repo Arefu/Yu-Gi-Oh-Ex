@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 67284107,
+      "name": "Scapeghost",
+      "typeline": [
+        "Zombie",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can Special Summon any number of \"Black Sheep Tokens\" (Zombie/DARK/Level 1/ATK 0/DEF 0).",
+      "race": "Zombie",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scapeghost-5656",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        },
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories: Special Edition",
+          "set_code": "SHVI-ENSE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.64"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ultimate Tournament Pack 1",
+          "set_code": "UP01-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67284107,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67284107.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67284107.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67284107.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 494880,
+          "viewsweek": 42,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-06-16",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12432,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

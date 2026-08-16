@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 15502037,
+      "name": "Gamma The Electromagnet Warrior",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 Level 4 or lower \"Magnet Warrior\" monster from your hand, except \"Gamma The Electromagnet Warrior\". You can only use this effect of \"Gamma The Electromagnet Warrior\" once per turn. During your opponent's turn (Quick Effect): You can Tribute this card; Special Summon 1 Level 4 \"Magnet Warrior\" monster from your Deck.",
+      "race": "Rock",
+      "atk": 800,
+      "def": 2000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Magnet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gamma-the-electromagnet-warrior-1334",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15502037,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15502037.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15502037.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15502037.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.49",
+          "amazon_price": "5.34",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131745,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12575,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

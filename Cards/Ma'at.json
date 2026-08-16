@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 18631392,
+      "name": "Ma'at",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by sending 1 LIGHT Dragon-Type monster and 1 LIGHT Fairy-Type monster you control to the Graveyard, and cannot be Special Summoned by other ways. Once per turn: You can declare 3 card names; excavate the top 3 cards of your Deck, add any of them that you named to your hand, also send the remaining cards to the Graveyard. This card's ATK and DEF each become equal to the number of cards added to your hand by this effect x 1000.",
+      "race": "Fairy",
+      "atk": -1,
+      "def": -1,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ma-at-1611",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Four",
+          "set_code": "AP04-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.69"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN042",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18631392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18631392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18631392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18631392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.88",
+          "amazon_price": "1.31",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32263,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2012-03-17",
+          "konami_id": 9968,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 86137485,
+      "name": "Stygian Sergeants",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Fiend-Type Tuner + 1 or more non-Tuner monsters\nWhen this card destroys an opponent's monster by battle and sends it to the Graveyard: You can have this card gain 800 ATK until the end of the Battle Phase, also this card can make a second attack in a row.",
+      "race": "Fiend",
+      "atk": 2200,
+      "def": 1800,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stygian-sergeants-7214",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN243",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+          "set_code": "WC10-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.27"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+          "set_code": "WC10-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86137485,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86137485.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86137485.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86137485.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.99",
+          "amazon_price": "0.52",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39585,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-23",
+          "ocg_date": "2010-02-18",
+          "konami_id": 8739,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

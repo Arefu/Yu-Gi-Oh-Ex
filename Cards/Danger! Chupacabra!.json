@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 16209941,
+      "name": "Danger! Chupacabra!",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand; your opponent randomly chooses 1 card from your entire hand, then you discard the chosen card. Then, if the discarded card was not \"Danger! Chupacabra!\", Special Summon 1 \"Danger! Chupacabra!\" from your hand, and if you do, draw 1 card. If this card is discarded: You can target 1 \"Danger!\" monster in your GY, except \"Danger! Chupacabra!\"; Special Summon it. You can only use this effect of \"Danger! Chupacabra!\" once per turn.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-chupacabra-9631",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN138",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN447",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.29"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16209941,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16209941.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16209941.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16209941.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.80",
+          "amazon_price": "2.94",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 628000,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13980,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

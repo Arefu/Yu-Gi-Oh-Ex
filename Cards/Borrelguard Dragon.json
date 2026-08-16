@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 68987122,
+      "name": "Borrelguard Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3+ Effect Monsters\r\nCannot be destroyed by card effects. Once per turn: You can send 1 card from your Spell & Trap Zone to the GY; Special Summon from either GY to your field, 1 monster that was destroyed and sent there this turn, but negate its effects. Once per turn (Quick Effect): You can target 1 monster on the field; change it to face-up Defense Position. Your opponent cannot activate cards or effects in response to this effect's activation.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Borrel",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Right",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/borrelguard-dragon-9481",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN044",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "9.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68987122,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68987122.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68987122.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68987122.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "7.49",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 353743,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13837,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 85876417,
+      "name": "Ally of Justice Thousand Arms",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack all face-up LIGHT monsters your opponent controls once each. If this card battles a non-LIGHT monster, destroy this card before damage calculation.",
+      "race": "Machine",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Ally of Justice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ally-of-justice-thousand-arms-7198",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN078",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85876417,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85876417.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85876417.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85876417.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28154,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7826,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

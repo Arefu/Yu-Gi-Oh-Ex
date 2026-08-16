@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 6903857,
+      "name": "Power Breaker",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in your possession is destroyed by your opponent's attack or card effect and sent to your Graveyard: Target 1 face-up Spell/Trap Card your opponent controls; destroy that target. If this card attacks, it is changed to Defense Position at the end of the Damage Step.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/power-breaker-595",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN063",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.15"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6903857,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6903857.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6903857.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6903857.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36779,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9087,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

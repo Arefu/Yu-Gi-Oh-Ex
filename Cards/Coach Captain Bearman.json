@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 67136033,
+      "name": "Coach Captain Bearman",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Normal Summon this card without Tributing, but its original ATK becomes 1300. Once per turn: You can make all Level 4 Beast-Warrior-Type monsters you currently control become Level 8 until the end of this turn. This card cannot be used as an Xyz Material for an Xyz Summon, except for the Xyz Summon of a FIRE Warrior-Type monster.",
+      "race": "Beast-Warrior",
+      "atk": 2600,
+      "def": 2700,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/coach-captain-bearman-5642",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN118",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67136033,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67136033.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67136033.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67136033.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.25",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31808,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-01-11",
+          "konami_id": 10443,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

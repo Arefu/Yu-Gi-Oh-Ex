@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 36256625,
+      "name": "Super Vehicroid Jumbo Drill",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Steamroid\" + \"Drillroid\" + \"Submarineroid\"\nA Fusion Summon of this card can only be conducted with the above Fusion Material Monsters. During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-vehicroid-jumbo-drill-3062",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN036",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENB22",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENB22",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36256625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36256625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36256625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36256625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "34.99",
+          "amazon_price": "24.35",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85571,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6739,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

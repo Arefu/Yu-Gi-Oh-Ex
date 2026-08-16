@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 28348939,
+      "name": "White Tiger Summoner",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 Level 4 or lower Normal Monster from your hand. All monsters you control gain 100 ATK and DEF.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1700,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-tiger-summoner-2411",
+      "card_sets": [
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28348939,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28348939.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28348939.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28348939.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17466,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-10",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11144,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

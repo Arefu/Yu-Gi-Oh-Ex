@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 24128274,
+      "name": "Deepsea Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as \"Umi\" is face-up on the field, this card is unaffected by any Spell Cards.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1800,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deepsea-warrior-2084",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN193",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.95"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.18"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24128274,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24128274.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24128274.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24128274.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 208517,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4776,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

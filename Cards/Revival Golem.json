@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 87347365,
+      "name": "Revival Golem",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The effect of \"Revival Golem\" can only be used once per turn. When this card is sent from your Deck to the Graveyard: Activate 1 of these effects.\n● Special Summon this card from the Graveyard.\n● Add this card from the Graveyard to your hand.",
+      "race": "Rock",
+      "atk": 100,
+      "def": 2100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/revival-golem-7311",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87347365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87347365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87347365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87347365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "2.11",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114011,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10316,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

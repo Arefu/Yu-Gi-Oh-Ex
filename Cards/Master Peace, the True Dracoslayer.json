@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 34079868,
+      "name": "Master Peace, the True Dracoslayer",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Dracoslayer\" monster and 1 \"Dracoverlord\" monster, and cannot be Special Summoned by other ways. Once per turn, during either player's turn, when a card or effect is activated: You can negate the activation, and if you do, destroy that card. If this card in its owner's control is destroyed by an opponent's card (by battle or card effect): You can Special Summon 1 \"Dracoslayer\" monster and 1 \"Dracoverlord\" monster from your Deck.",
+      "race": "Dragon",
+      "atk": 2950,
+      "def": 2950,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Dracoslayer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-peace-the-true-dracoslayer-2893",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34079868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34079868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34079868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34079868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.70",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75041,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 5,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12419,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

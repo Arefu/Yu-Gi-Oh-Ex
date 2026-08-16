@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 1184620,
+      "name": "Kojikocy",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A man-hunter with powerful arms that can crush boulders.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kojikocy-104",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN147",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.82"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.31"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.82"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1184620,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1184620.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1184620.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1184620.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 212320,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4072,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

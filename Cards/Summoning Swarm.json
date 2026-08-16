@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 52838896,
+      "name": "Summoning Swarm",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target Level 4 or lower \"Battlewasp\" monsters in your GY, up to the number of monsters your opponent controls; Special Summon them. You can only activate 1 \"Summoning Swarm\" per turn. You cannot Special Summon monsters from the Extra Deck the turn you activate this card, except Insect monsters.",
+      "race": "Normal",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/summoning-swarm-10205",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52838896,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52838896.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52838896.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52838896.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.25",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50883,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248043,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14576,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

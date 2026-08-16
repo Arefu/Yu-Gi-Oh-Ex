@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 28677304,
+      "name": "Elemental HERO Dark Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Dark Panther\"\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) If this card is not already targeting a monster with its effect: You can target 1 face-up Effect Monster on the field; while you control this face-up card, that target's effect on the field is negated. During the End Phase: Shuffle this card into the Extra Deck.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-dark-neos-2445",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN059",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "14.38"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28677304,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28677304.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28677304.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28677304.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.21",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "450.00",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "13.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 180040,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6765,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

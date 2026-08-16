@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 80887952,
+      "name": "Helios Duo Megistus",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card by Tributing 1 \"Helios - The Primordial Sun\". This card's ATK and DEF are equal to the number of removed from play monsters x 200. If this card is destroyed by battle and sent to the Graveyard, Special Summon it during the End Phase, and it gains 300 ATK and DEF.",
+      "race": "Pyro",
+      "atk": -1,
+      "def": -1,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/helios-duo-megistus-6787",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Six",
+          "set_code": "CP06-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI22",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Ultimate Masters: World Championship Tournament 2006 promotional cards",
+          "set_code": "WC6-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80887952,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80887952.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80887952.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80887952.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.90",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64127,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-03-14",
+          "ocg_date": "2006-02-23",
+          "konami_id": 6647,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 93671934,
+      "name": "Morale Boost",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a player equips an Equip Spell Card, increase the Life Points of the controller of that Equip Spell Card by 1000 points. Each time an Equip Spell Card is removed from the field, the controller of that Equip Spell Card takes 1000 points of damage.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morale-boost-7794",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN204",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93671934,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93671934.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93671934.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93671934.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68502,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2004-09-23",
+          "konami_id": 5734,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

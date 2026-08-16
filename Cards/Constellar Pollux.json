@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 78364470,
+      "name": "Constellar Pollux",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the turn this card was Normal Summoned, you can Normal Summon 1 \"Constellar\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-pollux-6584",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN021",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78364470,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78364470.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78364470.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78364470.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.21",
+          "tcgplayer_price": "1.28",
+          "ebay_price": "2.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69824,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9810,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

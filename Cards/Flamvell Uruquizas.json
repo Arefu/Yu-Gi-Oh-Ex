@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 53714009,
+      "name": "Flamvell Uruquizas",
+      "typeline": [
+        "Pyro",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nDuring battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent. This card gains 300 ATK each time it inflicts Battle Damage to your opponent.",
+      "race": "Pyro",
+      "atk": 2100,
+      "def": 400,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Flamvell",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flamvell-uruquizas-4577",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN033",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN074",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53714009,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53714009.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53714009.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53714009.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.80",
+          "tcgplayer_price": "2.86",
+          "ebay_price": "0.99",
+          "amazon_price": "0.91",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166164,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7550,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

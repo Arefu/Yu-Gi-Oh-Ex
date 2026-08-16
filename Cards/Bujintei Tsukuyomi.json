@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 73289035,
+      "name": "Bujintei Tsukuyomi",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 LIGHT monsters\r\nOnce per turn: You can detach 1 material from this card; send your entire hand to the GY (min. 1), and if you do, draw 2 cards. When this card you controlled while face-up leaves the field because of an opponent's card effect: You can target Level 4 Beast-Warrior \"Bujin\" monsters in your GY, up to the number of Xyz Materials this card had on the field; Special Summon those targets. You can only control 1 \"Bujintei Tsukuyomi\".",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 2300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujintei-tsukuyomi-6155",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN223",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN069",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN054",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73289035,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73289035.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73289035.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73289035.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "9.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 140241,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10940,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

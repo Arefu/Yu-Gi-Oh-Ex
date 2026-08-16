@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 2084239,
+      "name": "Wetlands",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Aqua-Type/WATER/Level 2 or lower monsters gain 1200 ATK.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wetlands-182",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2084239,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2084239.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2084239.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2084239.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "5.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101051,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7627,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

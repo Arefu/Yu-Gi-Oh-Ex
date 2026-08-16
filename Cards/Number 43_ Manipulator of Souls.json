@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 56051086,
+      "name": "Number 43: Manipulator of Souls",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 2 DARK monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 \"Number\" monster in your Graveyard; equip that target to this card. While equipped with a \"Number\" card, this card cannot be destroyed by battle or card effects. Once per turn, when you gain LP (except during the Damage Step): You can make this card gain an equal amount of ATK, also inflict that much damage to your opponent if this card is still face-up on the field.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-43-manipulator-of-souls-4772",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56051086,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56051086.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56051086.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56051086.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "3.70",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 43",
+          "views": 80976,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11076,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

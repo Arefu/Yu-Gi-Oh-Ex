@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 53180020,
+      "name": "Exa, Enforcer of the Nekroz",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Tributed by a card effect: You can add 1 Dragon-Type \"Nekroz\" Ritual Monster from your Deck to your hand. If this card is banished: You can target 1 of your banished \"Nekroz\" monsters, except this card; Special Summon that monster. You can only use 1 \"Exa, Enforcer of the Nekroz\" effect per turn, and only once that turn.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 1000,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exa-enforcer-of-the-nekroz-4530",
+      "card_sets": [
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53180020,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53180020.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53180020.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53180020.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37530,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11482,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

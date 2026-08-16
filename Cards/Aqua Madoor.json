@@ -1,0 +1,122 @@
+{
+  "data": [
+    {
+      "id": 85639257,
+      "name": "Aqua Madoor",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A wizard of the waters that conjures a liquid wall to crush any enemies that oppose him.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Madoor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aqua-madoor-7176",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.98"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.58"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN221",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Reloaded",
+          "set_code": "YSKR-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85639257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85639257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85639257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85639257.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "4.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 434299,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4219,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

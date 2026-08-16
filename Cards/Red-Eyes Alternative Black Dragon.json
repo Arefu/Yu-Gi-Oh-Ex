@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 18491580,
+      "name": "Red-Eyes Alternative Black Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 \"Red-Eyes\" monster from your hand or field. You can only Special Summon \"Red-Eyes Alternative Black Dragon\" once per turn this way. If this card is destroyed by battle, or if this card in its owner's possession is destroyed by an opponent's card effect: You can target 1 Level 7 or lower \"Red-Eyes\" monster in your GY, except \"Red-Eyes Alternative Black Dragon\"; Special Summon it, and if it was a \"Red-Eyes B. Dragon\" that was Special Summoned, its original ATK becomes doubled.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-alternative-black-dragon-10079",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin",
+          "set_code": "TN19-EN005",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "4.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18491580,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18491580.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18491580.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18491580.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.89",
+          "tcgplayer_price": "3.72",
+          "ebay_price": "4.19",
+          "amazon_price": "2.69",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 515377,
+          "viewsweek": 0,
+          "upvotes": 45,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2019-08-29",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14369,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

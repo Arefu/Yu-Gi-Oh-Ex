@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 76446915,
+      "name": "Disk Magician",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster hides in a saucer and only appears when executing an attack.",
+      "race": "Machine",
+      "atk": 1350,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/disk-magician-6433",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.96"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.47"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76446915,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76446915.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76446915.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76446915.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.99",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111351,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4649,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 31061682,
+      "name": "Kozmo Farmgirl",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 4 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmo Farmgirl\" once per turn. When this card inflicts battle damage to your opponent: You can pay 500 LP; add 1 \"Kozmo\" card from your Deck to your hand.",
+      "race": "Psychic",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-farmgirl-2635",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN024",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31061682,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31061682.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31061682.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31061682.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.46",
+          "tcgplayer_price": "5.52",
+          "ebay_price": "4.94",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114410,
+          "viewsweek": 23,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12033,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

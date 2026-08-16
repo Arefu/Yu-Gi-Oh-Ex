@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 14541657,
+      "name": "Twilight Ninja Shingetsu",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters your opponent controls cannot target face-up \"Ninja\" monsters for attacks, except this one. Your opponent cannot target face-up \"Ninja\" monsters with card effects, except this one. If this card is destroyed by battle and sent to the Graveyard, or if this card in your possession is destroyed by an opponent's card effect and sent to your Graveyard: You can add 1 \"Ninja\" monster from your Deck to your hand, except \"Twilight Ninja Shingetsu\". You can only use this effect of \"Twilight Ninja Shingetsu\" once per turn.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 100,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twilight-ninja-shingetsu-1245",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14541657,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14541657.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14541657.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14541657.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58768,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12123,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

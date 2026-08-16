@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 94046012,
+      "name": "Orcust Brass Bombard",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your GY; Special Summon 1 \"Orcust\" monster from your hand, except \"Orcust Brass Bombard\", also you cannot Special Summon monsters for the rest of this turn, except DARK monsters. You can only use this effect of \"Orcust Brass Bombard\" once per turn.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 1900,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcust-brass-bombard-9658",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94046012,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94046012.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94046012.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94046012.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.00",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Canon Cannon",
+          "views": 212195,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13901,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

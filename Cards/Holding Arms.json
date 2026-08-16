@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 43730887,
+      "name": "Holding Arms",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: Target 1 face-up monster your opponent controls; while this card is face-up on the field, that face-up monster cannot attack, also its effects are negated. While that face-up monster is on the field, this card cannot be destroyed by battle or card effects.",
+      "race": "Fiend",
+      "atk": 500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/holding-arms-3735",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43730887,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43730887.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43730887.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43730887.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "2.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 135682,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-04-14",
+          "ocg_date": "2015-12-19",
+          "konami_id": 12236,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

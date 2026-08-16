@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 36995273,
+      "name": "Degenerate Circuit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "The controller of this card pays 500 Life Points during each of their Standby Phases (this is not optional). Monster Cards that would be returned from the field to the hand are removed from play instead.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/degenerate-circuit-3128",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN047",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36995273,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36995273.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36995273.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36995273.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "4.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41406,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6908,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

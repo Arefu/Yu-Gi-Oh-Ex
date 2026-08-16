@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 60709218,
+      "name": "Bond Between Teacher and Student",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control \"Dark Magician\": Special Summon 1 \"Dark Magician Girl\" from your hand, Deck, or GY, then, you can Set 1 \"Dark Magic Attack\", \"Dark Burning Attack\", \"Dark Burning Magic\", or \"Dark Magic Twin Burst\" directly from your Deck. You can only activate 1 \"Bond Between Teacher and Student\" per turn.",
+      "race": "Normal",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bond-between-teacher-and-student-10130",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN109",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.38"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN061",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60709218,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60709218.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60709218.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60709218.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "12.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 423597,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2019-02-09",
+          "konami_id": 11121,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

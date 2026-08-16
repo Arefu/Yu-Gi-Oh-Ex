@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 99733359,
+      "name": "Stegocyber",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your opponent's monster attacks while this card is in your Graveyard: You can pay 1000 LP; Special Summon this card, and if you do, you take no battle damage from that battle, but banish this card when it leaves the field (this is a Quick Effect). You can only use this effect of \"Stegocyber\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 1200,
+      "def": 2400,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stegocyber-8281",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN114",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN114",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dinosmasher's Fury Structure Deck",
+          "set_code": "SR04-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99733359,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99733359.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99733359.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99733359.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42984,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-31",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11423,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

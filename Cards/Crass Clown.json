@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 93889755,
+      "name": "Crass Clown",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is changed from Defense Position to Attack Position, return 1 monster on your opponent's side of the field to the owner's hand.",
+      "race": "Fiend",
+      "atk": 1350,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crass-clown-7810",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-078",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.81"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E078",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.88"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN078",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Metal Raiders (25th Anniversary Edition)",
+          "set_code": "MRD-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-END03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93889755,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93889755.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93889755.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93889755.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.46",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 414789,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4101,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

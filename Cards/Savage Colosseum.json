@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 32391631,
+      "name": "Savage Colosseum",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If a monster attacks, at the end of the Damage Step: Its controller gains 300 LP. All monsters must attack, if able. During each End Phase: Destroy all face-up Attack Position monsters the turn player controls, that did not declare an attack.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/savage-colosseum-2753",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN252",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32391631,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32391631.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32391631.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32391631.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "3.24",
+          "amazon_price": "1.62",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105840,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8482,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 3072077,
+      "name": "Return Zombie",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Standby Phase: You can pay 500 Life Points; add this card from your Graveyard to your hand. You must have no cards in your hand to activate and to resolve this effect.",
+      "race": "Zombie",
+      "atk": 1000,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/return-zombie-277",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN201",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3072077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3072077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3072077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3072077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.49",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25875,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 5,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-07-26",
+          "ocg_date": "2004-03-11",
+          "konami_id": 6005,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

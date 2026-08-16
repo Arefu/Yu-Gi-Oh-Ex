@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 2407234,
+      "name": "Number 69: Heraldry Crest",
+      "typeline": [
+        "Psychic",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nWhen this card is Special Summoned: Negate the effects of all other face-up Xyz Monsters currently on the field. You can target 1 other face-up Xyz Monster on the field; until the End Phase, this card's name and original effect become the same as that monster. You can only use this effect of \"Number 69: Heraldry Crest\" once per turn.",
+      "race": "Psychic",
+      "atk": 2600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Heraldry",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-69-heraldry-crest-220",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN153",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2407234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2407234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2407234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2407234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.99",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 69",
+          "views": 115620,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2012-08-21",
+          "konami_id": 10323,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

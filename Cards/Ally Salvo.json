@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 59482302,
+      "name": "Ally Salvo",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle with a LIGHT monster and sent to the Graveyard, select 2 cards on the field and destroy them.",
+      "race": "Machine",
+      "atk": 400,
+      "def": 300,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ally-salvo-5055",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN077",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59482302,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59482302.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59482302.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59482302.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19727,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7825,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

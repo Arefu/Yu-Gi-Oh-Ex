@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 80321197,
+      "name": "Crimson Blader",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card destroys an opponent's monster by battle and sends it to the Graveyard: Your opponent cannot Normal or Special Summon Level 5 or higher monsters during their next turn.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crimson-blader-6737",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Four",
+          "set_code": "AP04-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN074",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN161",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN161",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80321197,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80321197.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80321197.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80321197.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.65",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "4.95",
+          "amazon_price": "9.28",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 294999,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2011-09-22",
+          "konami_id": 9801,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

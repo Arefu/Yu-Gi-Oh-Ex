@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 17956906,
+      "name": "Final Light",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay LP in multiples of 1000, then target 1 \"Valkyrie\" monster in your GY with a different name for every 1000 LP paid; Special Summon them, then your opponent can Special Summon monsters with 2000 or less ATK from their GY, up to the number of monsters you Special Summoned by this effect. You can only activate 1 \"Final Light\" per turn.",
+      "race": "Normal",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/final-light-10115",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17956906,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17956906.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17956906.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17956906.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.39",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58276,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14361,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

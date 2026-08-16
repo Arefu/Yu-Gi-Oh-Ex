@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 28692962,
+      "name": "Mekk-Knight Purple Nightfall",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If 2 or more cards are in the same column, you can Special Summon this card (from your hand) in that column. You can only Special Summon \"Mekk-Knight Purple Nightfall\" once per turn this way. (Quick Effect): You can target 1 \"Mekk-Knight\" monster you control; banish it (until the Standby Phase of your next turn), and if you do, add 1 \"Mekk-Knight\" monster from your Deck to your hand, except \"Mekk-Knight Purple Nightfall\". You can only use this effect of \"Mekk-Knight Purple Nightfall\" once per turn.",
+      "race": "Psychic",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mekk-knight-purple-nightfall-8949",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN183",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Beware of Traptrix",
+          "set_code": "SDBT-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28692962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28692962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28692962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28692962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "4.84",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mekk-Knight Purple Dusk",
+          "views": 375194,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13390,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 32240937,
+      "name": "Ultimate Obedient Fiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can only attack if this card is the only card on your side of the field and if you also have no cards in your hand. The effects of Effect Monsters that this card destroys are negated.",
+      "race": "Fiend",
+      "atk": 3500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-obedient-fiend-2738",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN137",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-082",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32240937,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32240937.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32240937.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32240937.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "1.69",
+          "amazon_price": "1.44",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134803,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5666,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

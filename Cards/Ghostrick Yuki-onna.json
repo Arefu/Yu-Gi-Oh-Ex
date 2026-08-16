@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 54490275,
+      "name": "Ghostrick Yuki-onna",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned, unless you control a \"Ghostrick\" monster. Once per turn: You can change this card to face-down Defense Position. When this card is destroyed by battle and sent to the Graveyard: You can change the monster that destroyed it to face-down Defense Position, and if you do, it cannot change its battle position.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 800,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-yuki-onna-4637",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN141",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54490275,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54490275.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54490275.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54490275.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "4.65",
+          "amazon_price": "1.52",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68234,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10750,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

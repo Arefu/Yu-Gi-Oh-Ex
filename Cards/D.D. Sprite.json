@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 16638212,
+      "name": "D.D. Sprite",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by banishing 1 face-up monster you control. If you Summon this way, during your next Standby Phase: Return the banished monster to the field.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-sprite-1432",
+      "card_sets": [
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16638212,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16638212.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16638212.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16638212.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "2.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66471,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9295,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

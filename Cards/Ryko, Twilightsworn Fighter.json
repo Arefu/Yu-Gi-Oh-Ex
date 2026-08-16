@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 83550869,
+      "name": "Ryko, Twilightsworn Fighter",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned or flipped face-up: You can banish 1 \"Lightsworn\" monster from your hand or GY; banish 1 card on the field. Once per turn, if your other \"Lightsworn\" monster's effect is activated: Send the top 3 cards of your Deck to the GY.",
+      "race": "Beast",
+      "atk": 200,
+      "def": 100,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ryko-twilightsworn-fighter-8469",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83550869,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83550869.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83550869.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83550869.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85175,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13066,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 40391316,
+      "name": "Ojama Knight",
+      "typeline": [
+        "Beast",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Ojama\" monster + 1 \"Ojama\" monster\r\nSelect up to 2 of your opponent's Monster Card Zones. The selected zones cannot be used.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 2500,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Ojama",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ojama-knight-3435",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENC23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40391316,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40391316.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40391316.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40391316.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.85",
+          "ebay_price": "0.99",
+          "amazon_price": "3.48",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 249954,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7179,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

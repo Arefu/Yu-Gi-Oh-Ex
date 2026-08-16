@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 26034577,
+      "name": "Infernoid Antra",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 1 \"Infernoid\" monster from your hand or Graveyard while the total Levels and Ranks of all Effect Monsters you control are 8 or lower, and cannot be Special Summoned by other ways. Once per turn: You can target 1 face-up card your opponent controls; return it to the hand. Once per turn, during your opponent's turn: You can Tribute 1 monster, then target 1 card in your opponent's Graveyard; banish it (this is a Quick Effect).",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 2000,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernoid-antra-2241",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN203",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS03",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26034577,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26034577.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26034577.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26034577.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.16",
+          "tcgplayer_price": "1.53",
+          "ebay_price": "1.99",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86603,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11533,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

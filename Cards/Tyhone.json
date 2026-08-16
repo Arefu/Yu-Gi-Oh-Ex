@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 72842870,
+      "name": "Tyhone",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Capable of firing cannonballs from its mouth for long-range attacks, this creature is particularly effective in mountain battles.",
+      "race": "Winged Beast",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tyhone-6111",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.32"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72842870,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72842870.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72842870.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72842870.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "5.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 337780,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4019,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

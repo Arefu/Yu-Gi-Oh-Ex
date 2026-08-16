@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 20537097,
+      "name": "Mekk-Knight Blue Sky",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If 2 or more cards are in the same column, you can Special Summon this card (from your hand) in that column. You can only Special Summon \"Mekk-Knight Blue Sky\" once per turn this way. If this card is Normal or Special Summoned from the hand: You can add \"Mekk-Knight\" monsters with different names, except \"Mekk-Knight Blue Sky\", from your Deck to your hand, equal to the number of your opponent's cards in this card's column. You can only use this effect of \"Mekk-Knight Blue Sky\" once per turn.",
+      "race": "Psychic",
+      "atk": 2000,
+      "def": 2500,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mekk-knight-blue-sky-8955",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN177",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN014",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Beware of Traptrix",
+          "set_code": "SDBT-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20537097,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20537097.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20537097.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20537097.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "19.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Jack Knight of the Blue Sky",
+          "views": 320483,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13384,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

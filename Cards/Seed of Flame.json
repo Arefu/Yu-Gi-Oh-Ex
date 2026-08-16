@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 38041940,
+      "name": "Seed of Flame",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed by a card effect and sent to your Graveyard: You can target 1 Level 4 or lower Plant-Type monster in your Graveyard, except \"Seed of Flame\"; Special Summon that target, and if you do, Special Summon 1 \"Seed Token\" (Plant-Type/EARTH/Level 1/ATK 0/DEF 0) to your opponent's side of the field in Defense Position. This Token cannot be Tributed for a Tribute Summon.",
+      "race": "Plant",
+      "atk": 1600,
+      "def": 1200,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/seed-of-flame-3225",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN052",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN081",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38041940,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38041940.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38041940.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38041940.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.35",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41758,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8078,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

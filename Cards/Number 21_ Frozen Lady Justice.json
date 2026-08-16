@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 57707471,
+      "name": "Number 21: Frozen Lady Justice",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nYou can also Xyz Summon this card by detaching 1 Xyz Material from a Rank 5 Xyz Monster you control, then using that Xyz Monster as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) This card gains 1000 ATK for each Xyz Material attached to it. Once per turn: You can detach 1 Xyz Material from this card; destroy all Defense Position monsters your opponent controls.",
+      "race": "Aqua",
+      "atk": 500,
+      "def": 500,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-21-frozen-lady-justice-4911",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN018",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57707471,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57707471.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57707471.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57707471.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.56",
+          "tcgplayer_price": "1.50",
+          "ebay_price": "1.74",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 21",
+          "views": 61521,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11654,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

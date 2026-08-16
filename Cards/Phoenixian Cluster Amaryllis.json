@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 23558733,
+      "name": "Phoenixian Cluster Amaryllis",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned except with its own effect or with \"Phoenixian Seed\". If this card attacks, it is destroyed after damage calculation. If this card you control is destroyed and sent to the Graveyard, inflict 800 damage to your opponent. During your End Phase, you can remove from play 1 Plant-Type monster from your Graveyard to Special Summon this card from your Graveyard in Defense Position.",
+      "race": "Plant",
+      "atk": 2200,
+      "def": 0,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phoenixian-cluster-amaryllis-2030",
+      "card_sets": [
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN136",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN136",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 23558733,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23558733.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23558733.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23558733.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.95",
+          "tcgplayer_price": "1.80",
+          "ebay_price": "14.95",
+          "amazon_price": "17.94",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111408,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8159,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

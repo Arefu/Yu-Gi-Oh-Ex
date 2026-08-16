@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 80368942,
+      "name": "Cocoon Party",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Chrysalis\" monster from your Deck for each \"Neo-Spacian\" monster with a different name in your Graveyard.",
+      "race": "Normal",
+      "archetype": "Chrysalis",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cocoon-party-6742",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80368942,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80368942.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80368942.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80368942.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.00",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23551,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7154,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

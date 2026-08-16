@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "id": 59383041,
+      "name": "Toon Alligator",
+      "typeline": [
+        "Reptile",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An alligator monster straight from the cartoons.",
+      "race": "Reptile",
+      "atk": 800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Alligator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-alligator-5048",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Demo Deck 2020",
+          "set_code": "DEM6-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59383041,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59383041.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59383041.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59383041.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "1.84",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111965,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-30",
+          "ocg_date": "2002-03-21",
+          "konami_id": 4387,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

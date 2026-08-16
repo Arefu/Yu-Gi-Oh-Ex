@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 74506079,
+      "name": "Worm Zero",
+      "typeline": [
+        "Reptile",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 or more Reptile-Type \"Worm\" monsters\nFor each Fusion Material Monster with a different name used to Fusion Summon this card, it gains 500 ATK, and also gains these effects: ● 2+: Once per turn, you can select 1 Reptile-Type monster in your Graveyard, and Special Summon it in face-down Defense Position. ● 4+: You can remove from play 1 Reptile-Type monster from your Graveyard to send 1 monster on the field to the Graveyard. ● 6+: Once per turn, you can draw 1 card.",
+      "race": "Reptile",
+      "atk": -1,
+      "def": 0,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-zero-6261",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN084",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN056",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74506079,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74506079.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74506079.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74506079.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.02",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "2.75",
+          "amazon_price": "1.86",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35046,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8413,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

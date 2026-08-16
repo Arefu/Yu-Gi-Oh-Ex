@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 18743376,
+      "name": "Metaphys Tyrant Dragon",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Special Summoned by the effect of a \"Metaphys\" monster, it is unaffected by Trap effects, also if it attacks a monster, it can make a second attack in a row. If this card is banished, during the Standby Phase of the next turn: You can shuffle this banished card into the Deck; Special Summon 1 \"Metaphys\" monster from your hand, but banish it during the End Phase of the next turn.",
+      "race": "Wyrm",
+      "atk": 2900,
+      "def": 2500,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Metaphys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metaphys-tyrant-dragon-8836",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18743376,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18743376.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18743376.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18743376.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94243,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13242,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

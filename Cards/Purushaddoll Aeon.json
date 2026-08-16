@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 78942513,
+      "name": "Purushaddoll Aeon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Shaddoll\" monster you control; send 1 \"Shaddoll\" card from your hand to the GY, and if you do, the targeted monster gains 1000 ATK/DEF, but is changed to face-down Defense Position during the End Phase.",
+      "race": "Normal",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/purushaddoll-aeon-6633",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN227",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78942513,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78942513.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78942513.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78942513.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39768,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12812,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

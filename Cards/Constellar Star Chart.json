@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 35631584,
+      "name": "Constellar Star Chart",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, when a \"Constellar\" Xyz Monster(s) is Special Summoned to your side of the field (except during the Damage Step): You can draw 1 card.",
+      "race": "Continuous",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-star-chart-3020",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN045",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35631584,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35631584.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35631584.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35631584.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.44",
+          "tcgplayer_price": "0.73",
+          "ebay_price": "2.25",
+          "amazon_price": "4.32",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42229,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9829,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

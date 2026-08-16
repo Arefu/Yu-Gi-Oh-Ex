@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 42082363,
+      "name": "Gusto Griffin",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the hand to your Graveyard: You can Special Summon 1 \"Gusto\" monster from your Deck. You can only use the effect of \"Gusto Griffin\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 800,
+      "def": 300,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gusto-griffin-3591",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN017",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42082363,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42082363.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42082363.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42082363.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "1.81",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50079,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9806,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

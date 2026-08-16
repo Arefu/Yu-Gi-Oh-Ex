@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 22996376,
+      "name": "Behemoth the King of All Animals",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be Normal Summoned or Set with 1 Tribute. In that case, the original ATK of this card becomes 2000. When this card is Tribute Summoned, you can return from your Graveyard to the owner's hand a number of Beast-Type monsters equal to the number of Tributed monsters.",
+      "race": "Beast",
+      "atk": 2700,
+      "def": 1500,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/behemoth-the-king-of-all-animals-1977",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN134",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN014",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22996376,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22996376.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22996376.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22996376.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "39.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84706,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6244,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "id": 74069667,
+      "name": "D/D/D Oblivion King Abyss Ragnarok",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you Special Summon a \"D/D\" monster(s), except during the Damage Step: You can target 1 \"D/D\" monster in your Graveyard; any battle damage your opponent takes becomes halved for the rest of this turn, also Special Summon that monster, and if you do, take 1000 damage. You can only use this effect of \"D/D/D Oblivion King Abyss Ragnarok\" once per turn.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can target 1 \"D/D/D\" monster in your Graveyard; Special Summon it. You can only use this effect of \"D/D/D Oblivion King Abyss Ragnarok\" once per turn. Once per turn: You can Tribute 1 other \"D/D\" monster, then target 1 monster your opponent controls; banish it.",
+      "race": "Fiend",
+      "pend_desc": "If you Special Summon a \"D/D\" monster(s), except during the Damage Step: You can target 1 \"D/D\" monster in your Graveyard; any battle damage your opponent takes becomes halved for the rest of this turn, also Special Summon that monster, and if you do, take 1000 damage. You can only use this effect of \"D/D/D Oblivion King Abyss Ragnarok\" once per turn.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can target 1 \"D/D/D\" monster in your Graveyard; Special Summon it. You can only use this effect of \"D/D/D Oblivion King Abyss Ragnarok\" once per turn. Once per turn: You can Tribute 1 other \"D/D\" monster, then target 1 monster your opponent controls; banish it.",
+      "atk": 2200,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-oblivion-king-abyss-ragnarok-6226",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN099",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN029",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74069667,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74069667.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74069667.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74069667.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.72",
+          "ebay_price": "1.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 414224,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2014-11-28",
+          "konami_id": 11616,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

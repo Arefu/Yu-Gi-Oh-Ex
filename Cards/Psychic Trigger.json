@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 55673611,
+      "name": "Psychic Trigger",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only while your Life Points are lower than your opponent's. Select 2 Psychic-Type monsters in your Graveyard. Remove them from play and draw 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-trigger-4739",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN073",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55673611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55673611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55673611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55673611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20797,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7928,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

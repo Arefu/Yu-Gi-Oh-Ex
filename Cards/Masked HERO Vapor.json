@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 10920352,
+      "name": "Masked HERO Vapor",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"Mask Change\". Cannot be destroyed by card effects.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Masked HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-hero-vapor-939",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10920352,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10920352.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10920352.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10920352.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "4.64",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57564,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-03-12",
+          "konami_id": 9069,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

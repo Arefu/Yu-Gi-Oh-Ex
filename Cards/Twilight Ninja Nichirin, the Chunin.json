@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 40945356,
+      "name": "Twilight Ninja Nichirin, the Chunin",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during either player's turn: You can discard 1 \"Ninja\" monster, then activate 1 of these effects;\n● This turn, \"Ninja\" monsters and \"Ninjitsu Art\" cards you control cannot be destroyed by battle or card effects.\n● 1 \"Ninja\" monster you control gains 1000 ATK until the end of this turn.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twilight-ninja-nichirin-the-chunin-3488",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN187",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40945356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40945356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40945356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40945356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42249,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12124,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

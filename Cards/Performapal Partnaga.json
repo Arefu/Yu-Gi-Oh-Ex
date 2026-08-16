@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 69211541,
+      "name": "Performapal Partnaga",
+      "typeline": [
+        "Reptile",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up monster you control; it gains 300 ATK for each \"Performapal\" card you currently control, until the end of this turn.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can target 1 monster you control; it gains 300 ATK for each \"Performapal\" monster you currently control. Level 5 or lower monsters cannot attack.",
+      "race": "Reptile",
+      "pend_desc": "Once per turn: You can target 1 face-up monster you control; it gains 300 ATK for each \"Performapal\" card you currently control, until the end of this turn.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can target 1 monster you control; it gains 300 ATK for each \"Performapal\" monster you currently control. Level 5 or lower monsters cannot attack.",
+      "atk": 500,
+      "def": 2100,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-partnaga-5819",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN025",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69211541,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69211541.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69211541.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69211541.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40313,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11522,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

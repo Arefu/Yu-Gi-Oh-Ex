@@ -1,0 +1,123 @@
+{
+  "data": [
+    {
+      "id": 65622692,
+      "name": "Y-Dragon Head",
+      "typeline": [
+        "Machine",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 \"X-Head Cannon\" you control; equip this card to that target, OR: Unequip this card and Special Summon it. A monster equipped with this card gains 400 ATK/DEF, also if the equipped monster would be destroyed by battle or card effect, destroy this card instead.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "ABC",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/y-dragon-head-5529",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Chazz Princeton",
+          "set_code": "DP2-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.99"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65622692,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65622692.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65622692.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65622692.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "19.99",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 280756,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5552,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

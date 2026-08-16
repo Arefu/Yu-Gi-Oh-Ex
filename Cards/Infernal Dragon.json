@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 47754278,
+      "name": "Infernal Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during the End Phase, if this card attacked this turn: Destroy this card. When this card on the field is destroyed and sent to the GY: You can Tribute 1 monster; Special Summon this card from the GY.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernal-dragon-4080",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN058",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "3.34"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN010",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.33"
+        },
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47754278,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47754278.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47754278.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47754278.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "7.51",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81164,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-03-07",
+          "ocg_date": "2006-10-26",
+          "konami_id": 6944,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

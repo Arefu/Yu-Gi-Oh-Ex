@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 19302550,
+      "name": "D/D Savant Newton",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"D/D\" monsters. This effect cannot be negated. Once, while this card is in your Pendulum Zone, you can negate an activated Trap effect that would inflict damage to you, then destroy this card.\n\n[ Monster Effect ] \nYou can discard this card, then target 1 \"D/D\" or \"Dark Contract\" card in your Graveyard, except \"D/D Savant Newton\"; add it to your hand. You can only use this effect of \"D/D Savant Newton\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"D/D\" monsters. This effect cannot be negated. Once, while this card is in your Pendulum Zone, you can negate an activated Trap effect that would inflict damage to you, then destroy this card.",
+      "monster_desc": "You can discard this card, then target 1 \"D/D\" or \"Dark Contract\" card in your Graveyard, except \"D/D Savant Newton\"; add it to your hand. You can only use this effect of \"D/D Savant Newton\" once per turn.",
+      "atk": 0,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 10,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-savant-newton-1663",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19302550,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19302550.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19302550.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19302550.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107918,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-19",
+          "ocg_date": "2015-12-12",
+          "konami_id": 12226,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

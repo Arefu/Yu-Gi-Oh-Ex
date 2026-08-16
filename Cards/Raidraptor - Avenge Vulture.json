@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 10194329,
+      "name": "Raidraptor - Avenge Vulture",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you take damage: You can Special Summon this card from your hand, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except \"Raidraptor\" monsters.",
+      "race": "Winged Beast",
+      "atk": 1700,
+      "def": 100,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-avenge-vulture-882",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10194329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10194329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10194329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10194329.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.48",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53730,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12286,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

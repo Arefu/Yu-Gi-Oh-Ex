@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 54493213,
+      "name": "Helios - The Primordial Sun",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's ATK and DEF are each equal to the number of removed from play monsters x 100.",
+      "race": "Pyro",
+      "atk": -1,
+      "def": -1,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/helios-the-primordial-sun-4638",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENF01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENF01",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Emperor Structure Deck",
+          "set_code": "SDDE-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.28"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Ultimate Masters: World Championship Tournament 2006 promotional cards",
+          "set_code": "WC6-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54493213,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54493213.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54493213.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54493213.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.75",
+          "amazon_price": "5.37",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92421,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-03-14",
+          "ocg_date": "2006-02-23",
+          "konami_id": 6646,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

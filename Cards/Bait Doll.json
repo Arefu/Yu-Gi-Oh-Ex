@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 7165085,
+      "name": "Bait Doll",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Set card in the Spell & Trap Card Zone; reveal that target, force its activation if it is a Trap Card, then negate its effect if the activation timing is incorrect, and if you do, destroy it. (If it is not a Trap Card, return it face-down.) When this card resolves, shuffle it into the Deck instead of sending it to the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bait-doll-614",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN071",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.27"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7165085,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7165085.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7165085.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7165085.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 205024,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5275,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

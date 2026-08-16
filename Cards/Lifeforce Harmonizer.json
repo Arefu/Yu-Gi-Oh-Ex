@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 76214441,
+      "name": "Lifeforce Harmonizer",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a card's effect that inflicts damage, you can discard this card to negate its activation and destroy it.",
+      "race": "Psychic",
+      "atk": 800,
+      "def": 400,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lifeforce-harmonizer-6415",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN026",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76214441,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76214441.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76214441.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76214441.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.90",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "99.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19350,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8024,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

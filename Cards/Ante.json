@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 34236961,
+      "name": "Ante",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Each Player reveals 1 card from their hand. If one card is higher Level than the other, the card with the lower Level is sent to the Graveyard, and the player who revealed it takes 1000 damage. (Non-Monster Cards are treated as Level 0.)",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ante-2908",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN074",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34236961,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34236961.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34236961.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34236961.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124226,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5608,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

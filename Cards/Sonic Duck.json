@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 84696266,
+      "name": "Sonic Duck",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A duck which can walk at a sonic speed. Sometimes, he cannot deal with his incredible pace and loses control.",
+      "race": "Winged Beast",
+      "atk": 1700,
+      "def": 700,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sonic-duck-7104",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN112",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Demo Deck 2015",
+          "set_code": "DEM2-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Starter Deck: Jaden Yuki",
+          "set_code": "YSDJ-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84696266,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84696266.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84696266.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84696266.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69422,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5643,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

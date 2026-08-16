@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 73778008,
+      "name": "Rage of the Deep Sea",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 500 ATK and DEF for each Fish, Sea Serpent, or Aqua-Type monster in your Graveyard.",
+      "race": "Fish",
+      "atk": 0,
+      "def": 0,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rage-of-the-deep-sea-6195",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73778008,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73778008.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73778008.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73778008.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43080,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2010-12-18",
+          "konami_id": 9581,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

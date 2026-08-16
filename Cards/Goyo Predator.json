@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 98637386,
+      "name": "Goyo Predator",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nWhen this card destroys an opponent's monster by battle and sends it to the Graveyard: You can Special Summon that monster to your side of the field, but any battle damage it inflicts to a player is halved. You can only use this effect of \"Goyo Predator\" once per turn.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 1200,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goyo-predator-8194",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98637386,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98637386.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98637386.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98637386.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.98",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "2.89",
+          "amazon_price": "3.24",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38642,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12081,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

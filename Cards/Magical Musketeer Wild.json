@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 94418111,
+      "name": "Magical Musketeer Wild",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, you can activate \"Magical Musket\" Spell/Trap Cards from your hand. If a Spell/Trap Card is activated in this card's column: You can target 3 \"Magical Musket\" cards in your GY; shuffle all 3 into the Deck, then draw 1 card. You can only use this effect of \"Magical Musketeer Wild\" once per turn.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musketeer-wild-8791",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94418111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94418111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94418111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94418111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "1.74",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet Shooter Wild",
+          "views": 61441,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13320,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

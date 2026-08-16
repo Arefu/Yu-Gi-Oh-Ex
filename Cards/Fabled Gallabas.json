@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 60434101,
+      "name": "Fabled Gallabas",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard 1 card to the GY, then target 1 monster your opponent controls with DEF less than or equal to this card's ATK; destroy that target.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Fabled",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fabled-gallabas-5128",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN063",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN033",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN126",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN126",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60434101,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60434101.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60434101.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60434101.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24830,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8094,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

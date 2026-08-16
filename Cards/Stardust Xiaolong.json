@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 68543408,
+      "name": "Stardust Xiaolong",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Synchro Summon \"Stardust Dragon\", you can Special Summon this card from your Graveyard in face-up Attack Position. Once per turn, if this card would be destroyed by battle, it is not destroyed.",
+      "race": "Dragon",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Stardust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-xiaolong-5763",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN033",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.93"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68543408,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68543408.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68543408.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68543408.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118793,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8437,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

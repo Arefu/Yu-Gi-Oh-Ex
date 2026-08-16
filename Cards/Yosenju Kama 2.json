@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 92246806,
+      "name": "Yosenju Kama 2",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned, you can: Immediately after this effect resolves, Normal Summon 1 \"Yosenju\" monster from your hand, except \"Yosenju Kama 2\". This card can attack your opponent directly, but when it does so using this effect, the battle damage inflicted to your opponent is halved. Once per turn, during the End Phase, if this card was Normal Summoned this turn: Return it to the hand.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 200,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yosenju-kama-2-7688",
+      "card_sets": [
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN005",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.85"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92246806,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92246806.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92246806.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92246806.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73871,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11474,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 50319138,
+      "name": "Crashbug Z",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 \"Crashbug Y\" from your Deck. You must control a face-up \"Crashbug X\" to activate and to resolve this effect.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crashbug-z-4288",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50319138,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50319138.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50319138.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50319138.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "2.50",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25335,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9628,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 44073668,
+      "name": "Takriminos",
+      "typeline": [
+        "Sea Serpent",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A member of a race of sea serpents that freely travels through the sea.",
+      "race": "Sea Serpent",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/takriminos-3762",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN223",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44073668,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44073668.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44073668.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44073668.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.07",
+          "tcgplayer_price": "0.81",
+          "ebay_price": "1.95",
+          "amazon_price": "1.88",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25836,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-06-01",
+          "konami_id": 4359,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 9365703,
+      "name": "Speed Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per Battle Phase, if this card was Normal Summoned this turn (except during the Damage Step): You can make its ATK become double its original ATK, until the end of the Battle Phase.",
+      "race": "Warrior",
+      "atk": 900,
+      "def": 400,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speed-warrior-795",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack Collection Tin 2010",
+          "set_code": "DPCT-ENY05",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.55"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei",
+          "set_code": "DP08-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Starter Deck: Duelist Toolbox",
+          "set_code": "5DS3-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.27"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's",
+          "set_code": "5DS1-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's 2009",
+          "set_code": "5DS2-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9365703,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9365703.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9365703.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9365703.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "4.99",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110224,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-05",
+          "ocg_date": "2008-03-15",
+          "konami_id": 7688,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

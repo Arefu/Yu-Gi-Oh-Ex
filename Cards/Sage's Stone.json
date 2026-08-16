@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 13604200,
+      "name": "Sage's Stone",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a face-up \"Dark Magician Girl\": Special Summon 1 \"Dark Magician\" from your hand or Deck.",
+      "race": "Normal",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sage-s-stone-1167",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENA10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.85"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Reshef of Destruction promotional cards",
+          "set_code": "ROD-EN003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "10.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13604200,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13604200.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13604200.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13604200.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.19",
+          "tcgplayer_price": "4.25",
+          "ebay_price": "5.00",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115476,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-29",
+          "ocg_date": "2003-03-20",
+          "konami_id": 5758,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

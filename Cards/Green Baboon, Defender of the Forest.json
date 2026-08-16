@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 46668237,
+      "name": "Green Baboon, Defender of the Forest",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or Graveyard when a face-up Beast-Type monster you control is destroyed and sent to the Graveyard (except during the Damage Step): You can pay 1000 Life Points; Special Summon this card.",
+      "race": "Beast",
+      "atk": 2600,
+      "def": 1800,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/green-baboon-defender-of-the-forest-3980",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 1",
+          "set_code": "CT07-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN104",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.09"
+        },
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN057",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN165",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump 2007 subscription bonus",
+          "set_code": "JUMP-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "25.1"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46668237,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46668237.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46668237.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46668237.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "10.49",
+          "amazon_price": "2.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55669,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-07-15",
+          "ocg_date": "2006-05-20",
+          "konami_id": 6380,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 50823978,
+      "name": "Piranha Army",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The Battle Damage this card inflicts by attacking your opponent's Life Points directly is doubled.",
+      "race": "Fish",
+      "atk": 800,
+      "def": 200,
+      "level": 2,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/piranha-army-4328",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN138",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50823978,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50823978.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50823978.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50823978.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52941,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5968,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

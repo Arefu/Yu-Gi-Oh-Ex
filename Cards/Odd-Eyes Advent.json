@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 16494704,
+      "name": "Odd-Eyes Advent",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card can be used to Ritual Summon any Dragon Ritual Monster from your hand or GY. You must also Tribute Pendulum Monsters from your hand or field whose total Levels equal or exceed the Level of the Ritual Monster you Ritual Summon. If your opponent controls 2 or more monsters and you control no monsters, you can also send \"Odd-Eyes\" monsters from your Extra Deck to the GY. You can only activate 1 \"Odd-Eyes Advent\" per turn.",
+      "race": "Ritual",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-advent-1420",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16494704,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16494704.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16494704.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16494704.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.95",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96425,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12174,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 12508268,
+      "name": "Future Drive",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Utopic Future\" Xyz Monster you control; apply the following effect(s) to that monster you control for the rest of this turn.\r\n● It can attack all monsters your opponent controls once each.\r\n● If it battles an opponent's monster, that monster's effects are negated during the Damage Step only.\r\n● Each time it destroys an opponent's monster by battle, inflict damage to your opponent equal to the destroyed monster's original ATK.\r\nYou can only activate 1 \"Future Drive\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/future-drive-10682",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12508268,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12508268.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12508268.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12508268.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25850,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413038,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14924,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

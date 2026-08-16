@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 43002864,
+      "name": "Reptilianne Gardna",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed and sent to the Graveyard, add 1 \"Reptilianne\" monster from your Deck to your hand.",
+      "race": "Reptile",
+      "atk": 0,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Reptilianne",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reptilianne-gardna-3669",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43002864,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43002864.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43002864.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43002864.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.35",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48876,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8627,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

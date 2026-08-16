@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 9791914,
+      "name": "Silver Sentinel",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Set this card from your hand to your Spell & Trap Card Zone as a Spell Card. During the End Phase of the turn this Set card in your Spell & Trap Card Zone was destroyed by an opponent's card effect and sent to the Graveyard: Target 1 card your opponent controls (if possible); Special Summon this card from the Graveyard, and if you do, destroy that target (if any).",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silver-sentinel-828",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9791914,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9791914.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9791914.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9791914.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23720,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10163,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

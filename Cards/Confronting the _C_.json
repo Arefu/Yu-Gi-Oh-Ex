@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 15721123,
+      "name": "Confronting the \"C\"",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent Special Summons a monster(s) from the Extra Deck (except during the Damage Step): You can Special Summon this card from your hand. If you do, this card is unaffected by monster effects that target this card.",
+      "race": "Insect",
+      "atk": 1100,
+      "def": 2500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "\"C\"",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/confronting-the-c-1356",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15721123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15721123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15721123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15721123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Confronting the",
+          "views": 36079,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2014-01-11",
+          "konami_id": 10818,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

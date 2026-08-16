@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 70355994,
+      "name": "Brotherhood of the Fire Fist - Gorilla",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, when this card destroys an opponent's monster by battle and sends it to the GY: You can Set 1 \"Fire Formation\" Spell directly from your Deck. Once per turn: You can send 1 face-up \"Fire Formation\" Spell/Trap you control to the GY, then target 1 Spell/Trap on the field; destroy that target.",
+      "race": "Beast-Warrior",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-gorilla-5920",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tins",
+          "set_code": "CT11-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70355994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70355994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70355994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70355994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66968,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10382,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

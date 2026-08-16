@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 33031674,
+      "name": "Incandescent Ordeal",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Legendary Flame Lord\". You must also Tribute monsters whose total Levels equal 7 or more from the field or your hand.",
+      "race": "Ritual",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/incandescent-ordeal-2807",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.42"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN247",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33031674,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33031674.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33031674.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33031674.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61584,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5783,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

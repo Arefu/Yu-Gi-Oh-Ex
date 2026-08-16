@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 720147,
+      "name": "Generaider Boss Bite",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute any number of \"Generaider\" monsters, then target 1 face-up Xyz Monster you control; attach exactly that many \"Generaider\" monsters from your hand, field, and/or GY to it, except the monsters Tributed to activate this effect. You can only activate 1 \"Generaider Boss Bite\" per turn.",
+      "race": "Normal",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/generaider-boss-bite-10495",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 720147,
+          "image_url": "https://images.ygoprodeck.com/images/cards/720147.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/720147.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/720147.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Generaider Bite",
+          "views": 32294,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423039,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14782,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

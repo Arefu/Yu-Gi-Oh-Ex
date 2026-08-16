@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 74593218,
+      "name": "Heroic Champion - Kusanagi",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 Warrior-Type monsters\nOnce per turn, during either player's turn, when a Trap Card is activated: You can detach 1 Xyz Material from this card; negate the activation, and if you do, destroy it, then this card gains 500 ATK.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heroic-champion-kusanagi-6270",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN125",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74593218,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74593218.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74593218.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74593218.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.50",
+          "tcgplayer_price": "0.81",
+          "ebay_price": "2.99",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80396,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10265,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 64332231,
+      "name": "Hieratic Sun Dragon Overlord of Heliopolis",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; Tribute any number of monsters from your hand and/or your side of the field (minimum 1), then destroy an equal number of cards on the field.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2400,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Hieratic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieratic-sun-dragon-overlord-of-heliopolis-5428",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2012 Wave 2",
+          "set_code": "CT09-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.91"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64332231,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64332231.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64332231.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64332231.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.82",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.00",
+          "amazon_price": "6.46",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 436896,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10071,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

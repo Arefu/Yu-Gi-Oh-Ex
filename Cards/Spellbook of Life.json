@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 52628687,
+      "name": "Spellbook of Life",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Banish 1 Spellcaster-Type monster from your Graveyard and reveal 1 other \"Spellbook\" Spell Card in your hand to target 1 Spellcaster-Type monster in your Graveyard; Special Summon that target in face-up Attack Position and equip it with this card. The equipped monster's Level is increased by the Level of the monster that was banished for this card's activation. You can only activate 1 \"Spellbook of Life\" per turn.",
+      "race": "Equip",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spellbook-of-life-4481",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52628687,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52628687.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52628687.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52628687.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.55",
+          "tcgplayer_price": "8.64",
+          "ebay_price": "3.90",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71884,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10189,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

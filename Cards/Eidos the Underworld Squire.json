@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 59463312,
+      "name": "Eidos the Underworld Squire",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: During your Main Phase this turn, you can Tribute Summon 1 monster, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) You can banish this card from your Graveyard, then target 1 monster with 800 ATK and 1000 DEF in your Graveyard, except \"Eidos the Underworld Squire\"; Special Summon it in Defense Position, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn. You can only use this effect of \"Eidos the Underworld Squire\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 800,
+      "def": 1000,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eidos-the-underworld-squire-5053",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Emperor of Darkness Structure Deck",
+          "set_code": "SR01-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59463312,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59463312.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59463312.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59463312.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 471681,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-28",
+          "ocg_date": "2015-09-19",
+          "konami_id": 12092,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

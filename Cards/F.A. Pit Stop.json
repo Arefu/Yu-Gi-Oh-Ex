@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 38532954,
+      "name": "F.A. Pit Stop",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"F.A.\" monster you control; reduce its Level by 2, and if you do, draw cards equal to the number of \"F.A. Pit Stop\" in your GY +1. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 \"F.A.\" monster in your GY; Special Summon it. You can only use each effect of \"F.A. Pit Stop\" once per turn.",
+      "race": "Quick-Play",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-pit-stop-8987",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN162",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38532954,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38532954.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38532954.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38532954.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39867,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13369,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

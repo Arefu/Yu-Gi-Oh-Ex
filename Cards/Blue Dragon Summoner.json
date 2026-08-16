@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 55969226,
+      "name": "Blue Dragon Summoner",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the field to the GY: You can add 1 Dragon, Warrior, or Spellcaster Normal Monster from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 600,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-dragon-summoner-4763",
+      "card_sets": [
+        {
+          "set_name": "Demo Deck 2016",
+          "set_code": "DEM3-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENA08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.38"
+        },
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55969226,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55969226.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55969226.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55969226.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.93",
+          "ebay_price": "4.99",
+          "amazon_price": "2.32",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161913,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-10",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11142,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

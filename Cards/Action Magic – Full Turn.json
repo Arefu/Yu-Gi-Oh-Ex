@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 99004583,
+      "name": "Action Magic - Full Turn",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "This turn, double any battle damage that a player takes from battles involving 2 monsters. During your Main Phase, if this card is in your GY, except the turn this card was sent to the GY: You can discard 1 Spell; Set this card.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/action-magic-full-turn-9204",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99004583,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99004583.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99004583.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99004583.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49676,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13549,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

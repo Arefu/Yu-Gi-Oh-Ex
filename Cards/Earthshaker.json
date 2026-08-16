@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 60866277,
+      "name": "Earthshaker",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 2 Monster Card Attributes. Your opponent then selects 1 of the 2 Attributes and destroys all face-up monsters with that Attribute on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthshaker-5164",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.6"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60866277,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60866277.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60866277.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60866277.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150694,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4991,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

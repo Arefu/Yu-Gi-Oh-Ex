@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "id": 73752131,
+      "name": "Skilled Dark Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves (max. 3). You can Tribute this card with 3 Spell Counters on it; Special Summon 1 \"Dark Magician\" from your hand, Deck, or GY.",
+      "race": "Spellcaster",
+      "atk": 1900,
+      "def": 1700,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skilled-dark-magician-6193",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN120",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 15 participation cards",
+          "set_code": "DL15-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.94"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-065",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.08"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENA02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Structure Deck: Spellcaster's Judgment",
+          "set_code": "SD6-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.74"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73752131,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73752131.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73752131.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73752131.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.55",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 500965,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5649,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

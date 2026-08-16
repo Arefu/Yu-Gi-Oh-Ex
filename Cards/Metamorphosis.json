@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 46411259,
+      "name": "Metamorphosis",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 monster. Special Summon 1 Fusion Monster from your Extra Deck with the same Level as the Tributed monster.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metamorphosis-3958",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN299",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game One",
+          "set_code": "CP01-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.09"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN123",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN123",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Semi-Limited"
+      },
+      "card_images": [
+        {
+          "id": 46411259,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46411259.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46411259.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46411259.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.22",
+          "tcgplayer_price": "4.61",
+          "ebay_price": "6.19",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 715260,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5539,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

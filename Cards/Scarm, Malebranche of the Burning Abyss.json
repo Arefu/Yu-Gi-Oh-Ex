@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 84764038,
+      "name": "Scarm, Malebranche of the Burning Abyss",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a monster that is not a \"Burning Abyss\" monster, destroy this card. You can only use 1 of these effects of \"Scarm, Malebranche of the Burning Abyss\" per turn, and only once that turn.\n● If you control no Spell/Trap Cards: You can Special Summon this card from your hand.\n● During the End Phase, if this card is in the Graveyard because it was sent there this turn: You can add 1 Level 3 DARK Fiend-Type monster from your Deck to your hand, except \"Scarm, Malebranche of the Burning Abyss\".",
+      "race": "Fiend",
+      "atk": 800,
+      "def": 2000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scarm-malebranche-of-the-burning-abyss-7108",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN062",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN043",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN233",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN233",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84764038,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84764038.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84764038.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84764038.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.59",
+          "amazon_price": "2.06",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 410709,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11317,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 66399675,
+      "name": "Gishki Chain",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Look at the top 3 cards of your Deck, you can reveal 1 Ritual Monster or 1 Ritual Spell Card among them and add it to your hand, also after that, place any remaining cards on the top of your Deck in any order.",
+      "race": "Sea Serpent",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gishki-chain-5575",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN067",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66399675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66399675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66399675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66399675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.50",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39623,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9161,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

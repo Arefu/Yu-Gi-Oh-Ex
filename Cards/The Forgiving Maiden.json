@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 84080939,
+      "name": "The Forgiving Maiden",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute this face-up card to return to your hand 1 of your monsters destroyed as a result of battle during this turn.",
+      "race": "Fairy",
+      "atk": 850,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-forgiving-maiden-7051",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN239",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.9"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "17.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84080939,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84080939.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84080939.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84080939.jpg"
+        },
+        {
+          "id": 84080938,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84080938.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84080938.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84080938.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.99",
+          "amazon_price": "1.52",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 191276,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "The Forgiving Maiden",
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5207,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

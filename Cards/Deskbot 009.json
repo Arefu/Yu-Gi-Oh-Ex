@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 25494711,
+      "name": "Deskbot 009",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase 1: You can make this card gain ATK equal to the combined ATK of all \"Deskbot\" monsters you currently control, except \"Deskbot 009\", until the end of your opponent's turn. Only this card can attack the turn this effect is activated. If this card battles, your opponent's cards and effects cannot be activated until the end of the Damage Step. If this card would be destroyed by battle or card effect, you can destroy 1 \"Deskbot\" card you control instead.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 500,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Deskbot",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deskbot-009-2193",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25494711,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25494711.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25494711.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25494711.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64099,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12314,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

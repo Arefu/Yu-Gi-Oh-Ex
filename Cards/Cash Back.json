@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 59957503,
+      "name": "Cash Back",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a Spell/Trap Card, or monster effect, by paying their Life Points: Negate the activation, and if you do, return it to the Deck.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cash-back-5094",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN078",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59957503,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59957503.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59957503.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59957503.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25594,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10300,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

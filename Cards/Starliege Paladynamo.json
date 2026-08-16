@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 61344030,
+      "name": "Starliege Paladynamo",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 LIGHT monsters\nOnce per turn: You can detach 2 Xyz Materials from this card, then target 1 face-up monster your opponent controls; change its ATK to 0, and if you do, it has its effects negated. If this card you control is destroyed by an opponent's card (by battle or card effect) and sent to your Graveyard: Draw 1 card.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/starliege-paladynamo-5200",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN193",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN193",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61344030,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61344030.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61344030.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61344030.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "3.50",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138645,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10340,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

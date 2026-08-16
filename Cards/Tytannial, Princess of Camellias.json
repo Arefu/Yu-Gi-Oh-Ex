@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 11819616,
+      "name": "Tytannial, Princess of Camellias",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a card or effect is activated that targets a card(s) on the field (Quick Effect): You can Tribute 1 face-up Plant monster; negate the activation, and if you do, destroy it.",
+      "race": "Plant",
+      "atk": 2800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tytannial-princess-of-camellias-1023",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Four",
+          "set_code": "AP04-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN029",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN026",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN088",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11819616,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11819616.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11819616.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11819616.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.78",
+          "tcgplayer_price": "0.92",
+          "ebay_price": "19.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 217972,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7893,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

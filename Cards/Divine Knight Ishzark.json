@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 57902462,
+      "name": "Divine Knight Ishzark",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "After damage calculation, when this card destroys a monster by battle: Banish that monster.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 1800,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-knight-ishzark-4930",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN091",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57902462,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57902462.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57902462.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57902462.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.99",
+          "amazon_price": "5.70",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37428,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2005-08-20",
+          "konami_id": 6374,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 97904474,
+      "name": "Handcuffs Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle with an attacking monster your opponent controls and is sent to the Graveyard, you can equip this card to that monster. The equipped monster loses 1800 ATK. When it is destroyed and this card is sent to the Graveyard, you can Special Summon this card.",
+      "race": "Dragon",
+      "atk": 1800,
+      "def": 1800,
+      "level": 5,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/handcuffs-dragon-8137",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal - Preview Wave 2",
+          "set_code": "DTP1-EN025",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "113.61"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN055",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97904474,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97904474.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97904474.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97904474.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38996,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7711,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 975299,
+      "name": "B.E.F. Zelos",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can add 1 \"Boss Rush\" from your Deck to your hand. \"B.E.S.\" monsters you control gain 500 ATK/DEF, your opponent cannot target them with card effects, also they cannot be destroyed by your opponent's card effects. Once per turn: You can Special Summon 1 \"B.E.S.\" monster from your hand. If a \"B.E.S.\" monster(s) is Normal or Special Summoned to your field: Place 1 counter on it.",
+      "race": "Field",
+      "archetype": "B.E.S.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/b-e-f-zelos-8396",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN114",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 975299,
+          "image_url": "https://images.ygoprodeck.com/images/cards/975299.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/975299.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/975299.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Great Fortress Zelos",
+          "views": 41813,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12976,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

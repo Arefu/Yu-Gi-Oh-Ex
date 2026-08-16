@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 20155904,
+      "name": "Zoodiac Kataroost",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle or card effect: You can target 1 \"Zoodiac\" card in your Graveyard, except \"Zoodiac Kataroost\"; shuffle it into the Deck. An Xyz Monster whose original Type is Beast-Warrior and has this card as Xyz Material gains this effect.\r\n● During either player's turn, when your opponent activates a monster effect that targets this card: You can detach 1 Xyz Material from this card; negate the activation.",
+      "race": "Beast-Warrior",
+      "atk": 800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-kataroost-8352",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest: Special Edition",
+          "set_code": "RATE-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20155904,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20155904.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20155904.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20155904.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zoodiac Cluckle",
+          "views": 74690,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-16",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12941,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

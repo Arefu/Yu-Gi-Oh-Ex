@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 32617464,
+      "name": "Tri-Gate Wizard",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, except Tokens\r\nThis card gains these effects based on the number of monsters co-linked to this card.\r\n● 1+: If a monster co-linked to this card battles your opponent's monster, any battle damage it inflicts to your opponent is doubled.\r\n● 2+: Once per turn: You can target 1 card on the field; banish it.\r\n● 3: Once per turn, when a card or effect is activated (Quick Effect): You can negate the activation, and if you do, banish that card.",
+      "race": "Cyberse",
+      "atk": 2200,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tri-gate-wizard-8737",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32617464,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32617464.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32617464.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32617464.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.49",
+          "amazon_price": "1.37",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tri-gate Wizard",
+          "views": 361425,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13203,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

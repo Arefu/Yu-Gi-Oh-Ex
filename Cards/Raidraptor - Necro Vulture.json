@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 51814159,
+      "name": "Raidraptor - Necro Vulture",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Tribute 1 \"Raidraptor\" monster, then target 1 \"Rank-Up-Magic\" Spell Card in your Graveyard; add it to your hand, also you cannot Xyz Summon for the rest of this turn, except with the effect of a \"Rank-Up-Magic\" Spell Card.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-necro-vulture-4408",
+      "card_sets": [
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51814159,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51814159.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51814159.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51814159.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "1.69",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67136,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12209,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

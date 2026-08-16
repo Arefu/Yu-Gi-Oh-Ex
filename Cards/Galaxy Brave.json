@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 55168550,
+      "name": "Galaxy Brave",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can reveal 1 \"Photon\" monster in your hand; Special Summon this card, and if you do, its Level becomes the Level of that \"Photon\" monster. If this card is Normal or Special Summoned: You can target 1 \"Galaxy\" monster in your GY; this card's ATK/DEF become that monster's ATK/DEF. You can only use each effect of \"Galaxy Brave\" once per turn.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-brave-9639",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN162",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55168550,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55168550.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55168550.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55168550.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Galaxy Braver",
+          "views": 261295,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13898,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

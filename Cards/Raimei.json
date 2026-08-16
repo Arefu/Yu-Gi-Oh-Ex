@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 56260110,
+      "name": "Raimei",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Decrease your opponent's Life Points by 300 points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raimei-4790",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "51.97"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "97.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56260110,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56260110.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56260110.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56260110.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.25",
+          "tcgplayer_price": "31.13",
+          "ebay_price": "18.33",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "35.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40397,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-03-01",
+          "konami_id": 4841,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

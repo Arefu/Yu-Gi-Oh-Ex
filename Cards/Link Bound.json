@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 51335426,
+      "name": "Link Bound",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Link Monster you control or in your GY; return it to the Extra Deck, and if you do, draw cards equal to its Link Rating, then place cards from your hand on the bottom of the Deck, in any order, equal to the number of cards you drew. You can only activate 1 \"Link Bound\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-bound-9207",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51335426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51335426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51335426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51335426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Bound Link",
+          "views": 47630,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13617,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

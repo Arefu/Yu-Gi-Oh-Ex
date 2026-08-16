@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 88392300,
+      "name": "Wattkinetic Puppeteer",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can send this card from your hand or field to the GY, then target 1 monster your opponent controls; move that target to another of their Main Monster Zones.",
+      "race": "Psychic",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattkinetic-puppeteer-8970",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88392300,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88392300.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88392300.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88392300.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34477,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13404,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

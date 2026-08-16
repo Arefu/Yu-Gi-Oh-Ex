@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 34294855,
+      "name": "Vampire's Curse",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard: You can pay 500 Life Points; Special Summon it during the Standby Phase of the next turn. When you do: It gains 500 ATK.",
+      "race": "Zombie",
+      "atk": 2000,
+      "def": 800,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-s-curse-2913",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.42"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN204",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN090",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENC08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34294855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34294855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34294855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34294855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.50",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69458,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2004-10-21",
+          "konami_id": 6287,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

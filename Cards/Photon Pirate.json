@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 36834155,
+      "name": "Photon Pirate",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish 1 \"Photon\" monster from your Graveyard; this card gains 1000 ATK until the End Phase. You can use the effect of \"Photon Pirate\" up to twice per turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-pirate-3116",
+      "card_sets": [
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36834155,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36834155.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36834155.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36834155.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25475,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10333,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

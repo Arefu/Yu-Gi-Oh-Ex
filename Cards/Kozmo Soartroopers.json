@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 1274455,
+      "name": "Kozmo Soartroopers",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 4 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmo Soartroopers\" once per turn. Once per turn: You can pay 1000 LP, then target 1 Psychic-Type \"Kozmo\" monster in your Graveyard; Special Summon it.",
+      "race": "Psychic",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-soartroopers-110",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1274455,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1274455.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1274455.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1274455.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.59",
+          "amazon_price": "0.94",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85078,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12244,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 64107820,
+      "name": "Future Glow",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by banishing 1 Psychic-Type monster from your Graveyard, and note its Level; all Psychic-Type monsters you control gain ATK equal to that Level x 200.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/future-glow-5408",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64107820,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64107820.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64107820.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64107820.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36862,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9673,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

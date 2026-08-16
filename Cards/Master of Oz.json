@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 27134689,
+      "name": "Master of Oz",
+      "typeline": [
+        "Beast",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Big Koala\" + \"Des Kangaroo\"",
+      "race": "Beast",
+      "atk": 4200,
+      "def": 3700,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Koala",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-of-oz-2322",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN035",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27134689,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27134689.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27134689.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27134689.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 357476,
+          "viewsweek": 42,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6127,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

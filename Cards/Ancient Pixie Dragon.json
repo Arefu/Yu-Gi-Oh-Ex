@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 4179255,
+      "name": "Ancient Pixie Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nAfter resolving a Field Spell Card that was activated during your turn: Draw 1 card. You can only use this effect of \"Ancient Pixie Dragon\" once per turn. Once per turn: You can target 1 face-up Attack Position monster on the field; destroy that target. There must be a face-up Field Spell Card on the field to activate and to resolve this effect.",
+      "race": "Dragon",
+      "atk": 2100,
+      "def": 3000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-pixie-dragon-376",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN006",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "6.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4179255,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4179255.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4179255.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4179255.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.20",
+          "tcgplayer_price": "4.05",
+          "ebay_price": "7.95",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 125106,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2013-03-16",
+          "konami_id": 10452,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

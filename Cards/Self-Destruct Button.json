@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 57585212,
+      "name": "Self-Destruct Button",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card while your Life Points are lower than your opponent's Life Points and the difference is 7000 points or more. Both players' Life Points become 0.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/self-destruct-button-4903",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-105",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.11"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN105",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 57585212,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57585212.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57585212.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57585212.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.99",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88629,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5916,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

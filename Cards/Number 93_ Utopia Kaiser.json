@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 23187256,
+      "name": "Number 93: Utopia Kaiser",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ \"Number\" Xyz Monsters, with the same Rank, that have material\r\nOnce per turn: You can Special Summon Rank 9 or lower \"Number\" monsters with 3000 or less ATK that have different Ranks from each other from your Extra Deck, up to the number of materials with different names attached to this card, but their effects are negated, then detach 1 material from this card. For the rest of this turn, unless this effect was negated, you cannot Special Summon, and any battle damage your opponent takes becomes halved. While you control another \"Number\" Xyz Monster, this card cannot be destroyed by battle or card effects.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-93-utopia-kaiser-1994",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN093",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2016 Prize Card",
+          "set_code": "YCSW-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4504.65"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2016 Prize Card",
+          "set_code": "YCSW-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2928.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23187256,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23187256.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23187256.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23187256.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.76",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.50",
+          "amazon_price": "16.40",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 93",
+          "views": 182835,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-28",
+          "ocg_date": "2015-08-12",
+          "konami_id": 12088,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

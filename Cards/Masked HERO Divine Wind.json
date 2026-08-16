@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 22093873,
+      "name": "Masked HERO Divine Wind",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"Mask Change\" and cannot be Special Summoned by other ways. Cannot be destroyed by battle. Your opponent can attack with only 1 monster during each Battle Phase. When this card destroys an opponent's monster by battle and sends it to the Graveyard: You can draw 1 card.",
+      "race": "Warrior",
+      "atk": 2700,
+      "def": 1900,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Masked HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-hero-divine-wind-1905",
+      "card_sets": [
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22093873,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22093873.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22093873.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22093873.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "4.99",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160736,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-29",
+          "ocg_date": "2014-06-21",
+          "konami_id": 11312,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

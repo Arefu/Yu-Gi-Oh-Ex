@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 60258960,
+      "name": "Legendary Flame Lord",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Incandescent Ordeal\". You must also Tribute monsters whose total Levels equal 7 or more from the field or your hand. Each time you or your opponent activates 1 Spell Card, put 1 Spell Counter on this card. Remove 3 Spell Counters from this card to destroy all monsters on the field except this card.",
+      "race": "Spellcaster",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legendary-flame-lord-5114",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.59"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN243",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60258960,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60258960.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60258960.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60258960.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.45",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84763,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5781,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

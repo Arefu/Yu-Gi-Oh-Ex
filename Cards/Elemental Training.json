@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 11167052,
+      "name": "Elemental Training",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Your opponent cannot target \"Palace of the Elemental Lords\" you control with card effects, also it cannot be destroyed by card effects. Once per turn: You can Tribute 1 monster; Special Summon 1 \"Elementsaber\" monster from your Deck with a different original Attribute than that monster's. You can send this face-up card from the field to the GY; discard your entire hand, then add \"Elemental Lord\" monsters from your GY to your hand, equal to the number of cards discarded.",
+      "race": "Continuous",
+      "archetype": "Elementsaber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-training-9189",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN074",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11167052,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11167052.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11167052.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11167052.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.50",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46919,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13628,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

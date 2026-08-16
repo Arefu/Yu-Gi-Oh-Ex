@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 84274024,
+      "name": "Pendulum Dimension",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If you Special Summon any of these monsters using a Pendulum Monster(s) as material, while this card is already face-up in your Spell & Trap Zone: You can activate the appropriate effect. You cannot apply that same effect of \"Pendulum Dimension\" for the rest of this turn (even if this card leaves the field).\r\n● Fusion: Special Summon 1 monster from your Deck with the same original Level as that Fusion Monster, in Defense Position, but negate its effects.\r\n● Synchro: Add 1 \"Polymerization\" from your Deck to your hand.\r\n● Xyz: Take 1 Tuner from your Deck with an equal or lower Level than that Xyz Monster's Rank, and add it to your hand or Special Summon it.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-dimension-10679",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN134",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84274024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84274024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84274024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84274024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46730,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413049,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14929,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

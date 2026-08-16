@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 3366982,
+      "name": "Alligator's Sword Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Baby Dragon\" + \"Alligator's Sword\"\nThis card can attack your opponent directly if the only face-up monsters they control are EARTH, WATER, or FIRE.",
+      "race": "Dragon",
+      "atk": 1700,
+      "def": 1500,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Alligator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alligator-s-sword-dragon-299",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN086",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ43",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENB22",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENB23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Eight",
+          "set_code": "TU08-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3366982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3366982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3366982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3366982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "3.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 430745,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-14",
+          "ocg_date": "2000-12-07",
+          "konami_id": 5003,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 62111090,
+      "name": "Earth Golem @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Cyberse monster + 1 Link Monster\r\nAfter this card is Fusion Summoned, you take no damage for the rest of this turn. If this card attacks a monster that was Special Summoned from the Extra Deck, this card gains ATK equal to its original ATK during the Damage Step only. When this card is destroyed by battle: You can target 1 Cyberse monster in your GY, except \"Earth Golem @Ignister\"; Special Summon it. You can only use this effect of \"Earth Golem @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": 2000,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earth-golem-ignister-10579",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62111090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62111090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62111090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62111090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.20",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "1.74",
+          "amazon_price": "2.12",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 383131,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011041,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14850,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

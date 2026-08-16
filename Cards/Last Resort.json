@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 97970833,
+      "name": "Last Resort",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent's monster declares an attack. You can select 1 \"Ancient City - Rainbow Ruins\" from your Deck and activate it. If your opponent had an active Field Spell Card when this card was activated, they can draw 1 card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/last-resort-8141",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jesse Anderson",
+          "set_code": "DP07-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97970833,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97970833.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97970833.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97970833.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48347,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-10-20",
+          "konami_id": 7081,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

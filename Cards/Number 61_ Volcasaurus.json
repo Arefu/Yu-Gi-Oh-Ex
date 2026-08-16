@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29669359,
+      "name": "Number 61: Volcasaurus",
+      "typeline": [
+        "Dinosaur",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; destroy that opponent's monster, and if you do, inflict damage to your opponent equal to the destroyed monster's original ATK. This card cannot attack your opponent directly during the turn you activate this effect.",
+      "race": "Dinosaur",
+      "atk": 2500,
+      "def": 1000,
+      "level": 5,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-61-volcasaurus-2513",
+      "card_sets": [
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN073",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29669359,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29669359.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29669359.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29669359.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.80",
+          "amazon_price": "5.89",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 61",
+          "views": 361542,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2011-10-15",
+          "konami_id": 9853,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

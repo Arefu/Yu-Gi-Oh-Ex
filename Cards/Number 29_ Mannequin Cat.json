@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 54191698,
+      "name": "Number 29: Mannequin Cat",
+      "typeline": [
+        "Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters\r\nOnce per turn: You can detach 1 material from this card, then target 1 monster in your opponent's GY; Special Summon it to your opponent's field. If a monster(s) is Special Summoned to your opponent's field, while you control this monster (except during the Damage Step): You can target 1 face-up monster your opponent controls; Special Summon 1 monster with the same Type or Attribute from your hand, Deck, or GY. You can only use this effect of \"Number 29: Mannequin Cat\" once per turn.",
+      "race": "Beast",
+      "atk": 2000,
+      "def": 900,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-29-mannequin-cat-8557",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 21",
+          "set_code": "OP21-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54191698,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54191698.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54191698.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54191698.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 29",
+          "views": 345722,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13162,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

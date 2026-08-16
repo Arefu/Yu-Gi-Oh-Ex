@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 95735217,
+      "name": "Ancient Gear Golem - Ultimate Pound",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. If this card attacks a Defense Position monster, inflict piercing battle damage. Up to twice per turn, when this attacking card destroys a monster by battle: You can discard 1 Machine monster; this card can attack again in a row. If this card on the field is destroyed by battle or card effect: You can add 1 \"Polymerization\" from your Deck to your hand, and if you do, add 1 other \"Ancient Gear\" monster from your GY to your hand.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-golem-ultimate-pound-8889",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN103",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95735217,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95735217.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95735217.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95735217.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 211975,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-01-21",
+          "konami_id": 12997,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

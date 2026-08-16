@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 93023479,
+      "name": "Gravekeeper's Recruiter",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card you control is sent to your GY: Add 1 \"Gravekeeper's\" monster with 1500 or less DEF from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-recruiter-7742",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN110",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN193",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.43"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93023479,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93023479.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93023479.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93023479.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.62",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "5.49",
+          "amazon_price": "15.99",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 210687,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9282,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

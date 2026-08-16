@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 77610772,
+      "name": "Ib the World Chalice Priestess",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different Types and Attributes\r\nThis linked card cannot be destroyed by battle or card effects. Your opponent cannot target this linked card with card effects. If a monster(s) this card points to would be destroyed by a card effect, you can send this card to the GY instead. If this card is sent from the field to the GY: You can Special Summon 1 \"World Chalice\" monster from your hand.",
+      "race": "Spellcaster",
+      "atk": 1800,
+      "def": null,
+      "level": null,
+      "attribute": "WATER",
+      "archetype": "World Chalice",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ib-the-world-chalice-priestess-8811",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN067",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77610772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77610772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77610772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77610772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.00",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Eve the World Chalice Shrine Maiden",
+          "views": 172075,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13087,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

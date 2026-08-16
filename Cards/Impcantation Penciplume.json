@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 82085295,
+      "name": "Impcantation Penciplume",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal 1 Ritual Monster in your hand; Special Summon both this card from your hand and 1 \"Impcantation\" monster from your Deck, except \"Impcantation Penciplume\". If this card is Special Summoned from the Deck: You can target 1 Ritual Monster in your GY; add it to your hand. You can only use 1 \"Impcantation Penciplume\" effect per turn, and only once that turn. You cannot Special Summon monsters from the Extra Deck.",
+      "race": "Psychic",
+      "atk": 0,
+      "def": 0,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Impcantation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/impcantation-penciplume-9671",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN171",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18",
+          "set_code": "OP18-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82085295,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82085295.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82085295.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82085295.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Impcantation Pencilval",
+          "views": 459142,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13910,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

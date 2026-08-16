@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 16886617,
+      "name": "Reptilianne Vaskii",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 2 face-up monsters with 0 ATK from anywhere on the field. Once per turn, you can select and destroy 1 face-up monster your opponent controls. There can only be 1 face-up \"Reptilianne Vaskii\" on the field.",
+      "race": "Reptile",
+      "atk": 2600,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Reptilianne",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reptilianne-vaskii-1450",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN018",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16886617,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16886617.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16886617.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16886617.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.74",
+          "tcgplayer_price": "4.28",
+          "ebay_price": "2.95",
+          "amazon_price": "3.44",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96687,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8629,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

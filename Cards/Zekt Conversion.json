@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 74854609,
+      "name": "Zekt Conversion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a face-up \"Inzektor\" monster you control is targeted for an attack: Target the attacking monster; equip the attack target to that attacking monster. Take control of the equipped monster while it is equipped with an \"Inzektor\" monster by this effect.",
+      "race": "Normal",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zekt-conversion-6299",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN073",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74854609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74854609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74854609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74854609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.88",
+          "amazon_price": "1.36",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13315,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10096,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

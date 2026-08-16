@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 42002073,
+      "name": "Performapal Trump Girl",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "Once per turn: You can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters you control as Fusion Materials, including this card. If this card in the Pendulum Zone is destroyed: You can target 1 Dragon-Type Fusion Monster in your Graveyard; Special Summon it, but destroy it during the End Phase.",
+      "race": "Spellcaster",
+      "atk": 200,
+      "def": 200,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Performapal",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-trump-girl-3581",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN178",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42002073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42002073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42002073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42002073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51752,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12115,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

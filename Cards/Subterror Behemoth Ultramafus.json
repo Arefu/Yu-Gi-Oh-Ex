@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 92970404,
+      "name": "Subterror Behemoth Ultramafus",
+      "typeline": [
+        "Pyro",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can change all other face-up monsters on the field to face-down Defense Position. You can only use this effect of \"Subterror Behemoth Ultramafus\" once per turn.\r\nWhen a face-up monster you control is flipped face-down, if you control no face-up monsters: You can Special Summon this card from your hand in Defense Position. Once per turn: You can change this card to face-down Defense Position.",
+      "race": "Pyro",
+      "atk": 3000,
+      "def": 1800,
+      "level": 12,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-behemoth-ultramafus-7739",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92970404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92970404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92970404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92970404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.61",
+          "tcgplayer_price": "1.59",
+          "ebay_price": "2.50",
+          "amazon_price": "6.00",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100734,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12822,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

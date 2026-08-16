@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 62560742,
+      "name": "T.G. Recipro Dragonfly",
+      "typeline": [
+        "Insect",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 non-Tuner monster\nOnce per turn: You can target 1 other \"T.G.\" Synchro Monster you control; send it to the Graveyard, then, if all the Synchro Monsters that were used for its Synchro Summon are in your Graveyard, you can Special Summon all of them.",
+      "race": "Insect",
+      "atk": 300,
+      "def": 300,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-recipro-dragonfly-5290",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN212",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62560742,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62560742.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62560742.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62560742.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.59",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68237,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9510,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

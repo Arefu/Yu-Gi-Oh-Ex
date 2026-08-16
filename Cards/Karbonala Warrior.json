@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 54541900,
+      "name": "Karbonala Warrior",
+      "typeline": [
+        "Warrior",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"M-Warrior #1\" + \"M-Warrior #2\"",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/karbonala-warrior-4647",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.61"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E121",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "13.76"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENB20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 3rd Season",
+          "set_code": "TP3-015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54541900,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54541900.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54541900.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54541900.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.35",
+          "amazon_price": "2.31",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 372679,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4049,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

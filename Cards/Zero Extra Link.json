@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 60162470,
+      "name": "Zero Extra Link",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by targeting 1 Link Monster you control that is co-linked to a Link Monster in the Extra Monster Zone. The targeted monster gains 800 ATK for each Link Monster on the field. If a Link Monster is Link Summoned using the targeted monster as material: That Link Monster gains the same ATK increase that the targeted monster had, until the end of this turn (even if this card leaves the field). After damage calculation, if the targeted monster attacked: Destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zero-extra-link-9448",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN114",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60162470,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60162470.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60162470.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60162470.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "0.99",
+          "amazon_price": "4.44",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26680,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13768,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

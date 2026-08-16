@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 59170782,
+      "name": "Mermail Abysstrite",
+      "typeline": [
+        "Sea Serpent",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 3 monsters\nDuring either player's turn, when your opponent targets exactly 1 face-up \"Mermail\" monster you control for an attack, or with a Spell/Trap effect that could have targeted this card (except during the Damage Step): You can detach 1 Xyz Material from this card; that attack/effect now targets this card. When this card is destroyed and sent to the Graveyard: You can target 1 \"Mermail\" monster in your Graveyard, except \"Mermail Abysstrite\"; Special Summon that target.",
+      "race": "Sea Serpent",
+      "atk": 1600,
+      "def": 2800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Mermail",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mermail-abysstrite-5031",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59170782,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59170782.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59170782.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59170782.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.46",
+          "tcgplayer_price": "5.79",
+          "ebay_price": "2.19",
+          "amazon_price": "5.88",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55054,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10409,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

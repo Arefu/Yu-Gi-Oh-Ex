@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 64756282,
+      "name": "Witchcrafter Genni",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the Main Phase (Quick Effect): You can Tribute this card and discard 1 Spell; Special Summon 1 \"Witchcrafter\" monster from your Deck, except \"Witchcrafter Genni\". You can banish this card and 1 \"Witchcrafter\" Spell from your GY; this effect becomes that Spell's effect when that card is activated. You can only use each effect of \"Witchcrafter Genni\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 300,
+      "def": 500,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-genni-10633",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64756282,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64756282.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64756282.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64756282.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcrafter Genie",
+          "views": 344642,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011021,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14830,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

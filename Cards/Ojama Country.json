@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 90011152,
+      "name": "Ojama Country",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, you can send 1 \"Ojama\" card from your hand to the Graveyard to Special Summon 1 \"Ojama\" monster from your Graveyard. While you control a face-up \"Ojama\" monster, switch the original ATK and DEF of all monsters on the field. (\"Ojama\" can include \"Ojamuscle\".)",
+      "race": "Field",
+      "archetype": "Ojama",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ojama-country-7520",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN110",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN098",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90011152,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90011152.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90011152.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90011152.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.90",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220722,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2008-12-20",
+          "konami_id": 8266,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

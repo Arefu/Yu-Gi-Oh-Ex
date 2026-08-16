@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 69109764,
+      "name": "Hibernation Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 Level 4 or lower Dragon monster in your GY; add it to your hand. While you control no Link Monsters, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 DARK Dragon Link Monster in your GY; Special Summon it. You can only use each effect of \"Hibernation Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 600,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hibernation-dragon-9512",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN113",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.74"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69109764,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69109764.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69109764.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69109764.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.49",
+          "amazon_price": "2.19",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64012,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13834,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

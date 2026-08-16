@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 69553552,
+      "name": "F.A. Winners",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If you control a \"F.A.\" monster, this card cannot be destroyed by your opponent's card effects. When your \"F.A.\" monster whose Level is at least 5 higher than its original Level battles an opponent's monster and inflicts battle damage to them: You can banish 1 card from your hand, field, or GY. You can only activate this effect of \"F.A. Winners\" once per turn. If 3 of your \"F.A.\" Field Spells with different names are currently banished, and were all banished by the effect of \"F.A. Winners\", you win the Duel.",
+      "race": "Continuous",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-winners-9429",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69553552,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69553552.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69553552.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69553552.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29124,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13711,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

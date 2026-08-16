@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 21441617,
+      "name": "Orcust Cymbal Skeleton",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your GY, then target 1 \"Orcust\" monster in your GY, except \"Orcust Cymbal Skeleton\"; Special Summon it, also you cannot Special Summon monsters for the rest of this turn, except DARK monsters. You can only use this effect of \"Orcust Cymbal Skeleton\" once per turn.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcust-cymbal-skeleton-9657",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21441617,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21441617.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21441617.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21441617.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "1.03",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Scherzo Skeleton",
+          "views": 578572,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13902,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

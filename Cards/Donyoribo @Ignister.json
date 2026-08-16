@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 14146794,
+      "name": "Donyoribo @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your \"@Ignister\" monster is attacked (Quick Effect): You can discard this card; you take no battle damage from that battle. When an \"@Ignister\" monster effect, or \"A.I.\" Spell/Trap Card or effect, is activated that inflicts damage to your opponent, even during the Damage Step (Quick Effect): You can banish this card from your GY; double that damage inflicted to your opponent. You can only use each effect of \"Donyoribo @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 300,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/donyoribo-ignister-10607",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14146794,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14146794.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14146794.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14146794.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41246,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011007,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14816,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

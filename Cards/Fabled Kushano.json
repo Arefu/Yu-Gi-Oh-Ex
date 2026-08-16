@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 97439806,
+      "name": "Fabled Kushano",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your GY: You can discard 1 \"Fabled\" monster to the GY, except \"Fabled Kushano\"; add this card to your hand.",
+      "race": "Fiend",
+      "atk": 1100,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Fabled",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fabled-kushano-8103",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN064",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "3.61"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN034",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN127",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN127",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97439806,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97439806.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97439806.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97439806.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55601,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8095,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

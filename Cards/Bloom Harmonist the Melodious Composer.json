@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 34974462,
+      "name": "Bloom Harmonist the Melodious Composer",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Fairy monsters\r\nIf this card is Link Summoned: You can discard 1 card; Special Summon 2 \"Melodious\" monsters with different Levels from your Deck to your zones this card points to, in Defense Position. You cannot Special Summon monsters the turn you activate this effect, except \"Melodious\" monsters. You can only use this effect of \"Bloom Harmonist the Melodious Composer\" once per turn. If a \"Melodious\" monster this card points to attacks, your opponent cannot activate cards or effects until the end of the Damage Step.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Melodious",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bloom-harmonist-the-melodious-composer-10713",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34974462,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34974462.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34974462.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34974462.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Bloom Harmonist the Melodious Virtuoso",
+          "views": 146627,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257066,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14943,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

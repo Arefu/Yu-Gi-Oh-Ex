@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 10669138,
+      "name": "Five-Headed Link Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "5 monsters\r\nMust be Link Summoned. If this card is Link Summoned using DARK, EARTH, WATER, FIRE, and WIND Attributes: You can destroy all cards your opponent controls. Cannot be destroyed by battle with a DARK, EARTH, WATER, FIRE, or WIND monster. Unaffected by other cards' effects. Once per turn, during your opponent's End Phase: You must banish 5 cards from your GY face-down (this is not optional), or send this card to the GY.",
+      "race": "Dragon",
+      "atk": 5000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 5,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/five-headed-link-dragon-10697",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10669138,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10669138.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10669138.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10669138.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.44",
+          "tcgplayer_price": "1.42",
+          "ebay_price": "4.75",
+          "amazon_price": "2.84",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Link God Dragon",
+          "views": 217199,
+          "viewsweek": 0,
+          "upvotes": 28,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257001,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14930,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

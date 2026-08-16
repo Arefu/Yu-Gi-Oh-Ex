@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 13474291,
+      "name": "Cloudian - Storm Dragon",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by removing from play 1 \"Cloudian\" monster from your Graveyard. This card cannot be destroyed by battle. If this card is in face-up Defense Position, destroy it. Once per turn, you can place 1 Fog Counter on 1 monster on the field.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 0,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Cloudian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cloudian-storm-dragon-1155",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENH10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13474291,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13474291.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13474291.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13474291.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "1.55",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63642,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7613,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

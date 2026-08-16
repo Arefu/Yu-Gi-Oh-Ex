@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 18891691,
+      "name": "Perfect Machine King",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 500 ATK for each other Machine-Type monster on the field.",
+      "race": "Machine",
+      "atk": 2700,
+      "def": 1500,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/perfect-machine-king-1631",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN012",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18891691,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18891691.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18891691.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18891691.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.53",
+          "tcgplayer_price": "5.00",
+          "ebay_price": "10.00",
+          "amazon_price": "96.42",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91296,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 5804,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

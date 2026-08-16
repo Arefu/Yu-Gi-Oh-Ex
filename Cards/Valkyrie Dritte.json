@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 3026686,
+      "name": "Valkyrie Dritte",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"Valkyrie\" card from your Deck to your hand, except \"Valkyrie Dritte\". You can only use this effect of \"Valkyrie Dritte\" once per turn. Gains 200 ATK for each of your opponent's banished monsters.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrie-dritte-9744",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3026686,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3026686.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3026686.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3026686.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96215,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13992,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

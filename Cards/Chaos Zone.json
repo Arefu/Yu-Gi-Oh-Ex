@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 94243005,
+      "name": "Chaos Zone",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a monster(s) is banished, place 1 Chaos Counter on this card for each of those monsters. Once per turn: You can remove 4 or more Chaos Counters from your field, then target 1 banished monster with a Level equal to the number removed; Special Summon that target. When this card on the field is sent to the GY by your opponent's card effect: You can add 1 LIGHT or DARK monster from your Deck to your hand, whose Level is less than or equal to the number of Chaos Counters that were on this card.",
+      "race": "Field",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chaos-zone-7842",
+      "card_sets": [
+        {
+          "set_name": "Dragons Collide Structure Deck",
+          "set_code": "SDDC-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94243005,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94243005.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94243005.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94243005.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118901,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2011-12-10",
+          "konami_id": 9958,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

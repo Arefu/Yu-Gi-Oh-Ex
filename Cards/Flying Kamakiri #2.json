@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 3134241,
+      "name": "Flying Kamakiri #2",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A flying mantis that feeds primarily on insects.",
+      "race": "Insect",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flying-kamakiri-2-284",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.19"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.44"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3134241,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3134241.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3134241.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3134241.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Flying Kamakiri 2",
+          "views": 158724,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4979,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

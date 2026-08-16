@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 95658967,
+      "name": "Ritual Sanctuary",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "You can discard 1 Spell; add 1 LIGHT Ritual Monster or 1 Ritual Spell from your Deck to your hand. You can shuffle any number of Spells from your GY into the Deck, then target 1 LIGHT Fairy monster in your GY whose Level equals the number of cards you shuffled into the Deck; Special Summon it. You can only use each effect of \"Ritual Sanctuary\" once per turn.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-sanctuary-15434",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN112",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.08"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.38"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95658967,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95658967.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95658967.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95658967.jpg"
+        },
+        {
+          "id": 20250830,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20250830.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20250830.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20250830.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 208389,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12539,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

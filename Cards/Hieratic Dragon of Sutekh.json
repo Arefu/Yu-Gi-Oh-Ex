@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 66789970,
+      "name": "Hieratic Dragon of Sutekh",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must first be Special Summoned (from your hand) by banishing 3 Dragon-Type Normal Monsters from your Graveyard. Once per turn: You can banish 1 Dragon-Type monster from your Graveyard to target 1 card on the field; destroy that target.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Hieratic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieratic-dragon-of-sutekh-5610",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN025",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66789970,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66789970.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66789970.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66789970.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.96",
+          "tcgplayer_price": "0.97",
+          "ebay_price": "2.79",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37888,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10048,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

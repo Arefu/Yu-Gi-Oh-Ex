@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 82260502,
+      "name": "Hieracosphinx",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot select a face-down Defense Position monster as an attack target.",
+      "race": "Rock",
+      "atk": 2400,
+      "def": 1200,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Sphinx",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieracosphinx-6911",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN192",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Invincible Fortress",
+          "set_code": "SD7-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN012",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82260502,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82260502.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82260502.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82260502.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "14.00",
+          "amazon_price": "0.76",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82016,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6321,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

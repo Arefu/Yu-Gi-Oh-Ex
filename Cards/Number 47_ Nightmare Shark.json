@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 31320433,
+      "name": "Number 47: Nightmare Shark",
+      "typeline": [
+        "Sea Serpent",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nWhen this card is Special Summoned: You can attach 1 Level 3 WATER monster from your hand or your side of the field to this card as an Xyz Material. Once per turn: You can detach 1 Xyz Material from this card, then target 1 WATER monster you control; this turn, that monster can attack your opponent directly, also other monsters cannot attack.",
+      "race": "Sea Serpent",
+      "atk": 2000,
+      "def": 2000,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-47-nightmare-shark-2656",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tins",
+          "set_code": "CT11-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.97"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 4 promotional card",
+          "set_code": "YZ04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31320433,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31320433.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31320433.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31320433.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.77",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "2.25",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 47",
+          "views": 178991,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-07",
+          "ocg_date": "2013-02-02",
+          "konami_id": 10562,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

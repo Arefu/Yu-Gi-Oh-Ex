@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 54631834,
+      "name": "Terminal World",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate only during Main Phase 1. While this card is on the field, both players skip their Main Phase 2.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/terminal-world-4657",
+      "card_sets": [
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN148",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN148",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN062",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54631834,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54631834.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54631834.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54631834.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.00",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108938,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9353,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

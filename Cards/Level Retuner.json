@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86223870,
+      "name": "Level Retuner",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Reduce the Level of 1 face-up monster you control by up to 2.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/level-retuner-7225",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack Collection Tin 2009",
+          "set_code": "RGBT-ENPP6",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.19"
+        },
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86223870,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86223870.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86223870.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86223870.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34303,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-03-10",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8221,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

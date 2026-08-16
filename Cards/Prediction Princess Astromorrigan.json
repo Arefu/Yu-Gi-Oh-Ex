@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 5010422,
+      "name": "Prediction Princess Astromorrigan",
+      "typeline": [
+        "Fairy",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: During the End Phase of this turn, destroy as many Defense Position monsters your opponent controls as possible, and if you do, inflict 500 damage to your opponent for each monster destroyed.",
+      "race": "Fairy",
+      "atk": 1300,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Prediction Princess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prediction-princess-astromorrigan-445",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.63"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5010422,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5010422.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5010422.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5010422.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24931,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11909,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

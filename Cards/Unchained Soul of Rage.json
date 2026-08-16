@@ -1,0 +1,131 @@
+{
+  "data": [
+    {
+      "id": 67680512,
+      "name": "Unchained Soul of Rage",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters including an \"Unchained Soul\" monster\r\nDuring your opponent's Main Phase (Quick Effect): You can target 1 face-up Special Summoned monster your opponent controls; immediately after this effect resolves, Link Summon 1 DARK Link Monster, except \"Unchained Soul of Rage\", by using only that opponent's monster and this card you control as material. If this card on the field is destroyed by battle or card effect: You can target 1 Fiend monster in your GY, except \"Unchained Soul of Rage\"; add it to your hand. You can only use each effect of \"Unchained Soul of Rage\" once per turn.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Unchained",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unchained-soul-of-rage-10404",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN173",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.79"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN043",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67680512,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67680512.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67680512.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67680512.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.45",
+          "amazon_price": "5.91",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakaishin Ragia",
+          "views": 575374,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010043,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14670,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

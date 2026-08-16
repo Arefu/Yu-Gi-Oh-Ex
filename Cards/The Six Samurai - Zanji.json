@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 95519486,
+      "name": "The Six Samurai - Zanji",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Damage Step, if this card attacked: Destroy the monster this card attacked. You must control a face-up \"Six Samurai\" monster with a different name to activate and to resolve this effect. If this card would be destroyed, you can destroy another face-up \"Six Samurai\" monster you control instead.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-six-samurai-zanji-7959",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hobby League 5 participation card E",
+          "set_code": "HL05-EN005",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "6.37"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN231",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95519486,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95519486.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95519486.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95519486.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "4.99",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155280,
+          "viewsweek": 63,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6964,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 14365823,
+      "name": "Trickstar Divaridis",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Level 3 or lower \"Trickstar\" monsters\r\nYou can only control 1 \"Trickstar Divaridis\". If this card is Special Summoned: You can inflict 200 damage to your opponent. If your opponent Normal or Special Summons a monster(s): Inflict 200 damage to your opponent.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-divaridis-9833",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14365823,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14365823.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14365823.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14365823.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.89",
+          "tcgplayer_price": "3.01",
+          "ebay_price": "2.39",
+          "amazon_price": "3.20",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86010,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14126,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

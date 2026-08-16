@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 56784842,
+      "name": "Angel O7",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned, it gains the following effect: ● The effects of Effect Monsters cannot be activated.",
+      "race": "Fairy",
+      "atk": 2500,
+      "def": 1500,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Fairy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/angel-o7-4837",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN092",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN135",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! R Volume 4 promotional card",
+          "set_code": "YR04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "12.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56784842,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56784842.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56784842.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56784842.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "14.01",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44722,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2007-04-04",
+          "konami_id": 7035,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

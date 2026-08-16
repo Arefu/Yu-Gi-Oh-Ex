@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 601193,
+      "name": "Virgil, Rock Star of the Burning Abyss",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nYou can only control 1 \"Virgil, Rock Star of the Burning Abyss\". Once per turn: You can discard 1 \"Burning Abyss\" card, then target 1 card your opponent controls or in their Graveyard; shuffle it into the Deck. If this card on the field is destroyed by battle or card effect and sent to the Graveyard: You can draw 1 card. You can only use this effect of \"Virgil, Rock Star of the Burning Abyss\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 1000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/virgil-rock-star-of-the-burning-abyss-58",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN187",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN061",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 601193,
+          "image_url": "https://images.ygoprodeck.com/images/cards/601193.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/601193.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/601193.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "4.49",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89922,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11508,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

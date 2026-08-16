@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 69700783,
+      "name": "Vampire's Desire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate 1 of these effects.\n● Target 1 face-up monster you control; send 1 \"Vampire\" monster from your Deck to the GY with a different Level from that monster, and if you do, the targeted monster becomes the Level of that sent monster in the GY, until the end of this turn.\n● Target 1 \"Vampire\" monster in your GY; send 1 monster you control to the GY, and if you do, Special Summon the targeted monster.\nYou can only activate 1 \"Vampire's Desire\" per turn.",
+      "race": "Normal",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-s-desire-9345",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN240",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENC18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69700783,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69700783.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69700783.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69700783.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Vampire Desire",
+          "views": 233111,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13651,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

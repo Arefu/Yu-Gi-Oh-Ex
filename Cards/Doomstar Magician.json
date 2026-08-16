@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 58369990,
+      "name": "Doomstar Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can discard 1 card, then target 1 card in either player's Pendulum Zone; destroy that card, and if you do, draw 1 card.",
+      "race": "Spellcaster",
+      "atk": 1800,
+      "def": 300,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doomstar-magician-4963",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN120",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Demo Deck 2016",
+          "set_code": "DEM3-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58369990,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58369990.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58369990.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58369990.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29602,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11316,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

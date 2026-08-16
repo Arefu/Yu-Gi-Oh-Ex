@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 66262416,
+      "name": "Destiny HERO - Dreamer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your \"Destiny HERO\" monster battles and this card is in your GY: You can Special Summon this card, and if you do, your monster cannot be destroyed by that battle, also you take no battle damage from that battle. If Summoned this way, banish this card when it leaves the field. You can only use this effect of \"Destiny HERO - Dreamer\" once per turn.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 600,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-dreamer-8470",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66262416,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66262416.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66262416.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66262416.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Destiny HERO - Dreamguy",
+          "views": 107278,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13153,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

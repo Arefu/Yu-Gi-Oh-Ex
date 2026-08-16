@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 73079365,
+      "name": "Gust",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can activate this card when 1 or more of your Spell Cards are destroyed and sent from the field to the Graveyard by a card effect your opponent controls. Destroy 1 Spell or Trap Card on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gust-6136",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.94"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73079365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73079365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73079365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73079365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.44",
+          "amazon_price": "65.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145201,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4940,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

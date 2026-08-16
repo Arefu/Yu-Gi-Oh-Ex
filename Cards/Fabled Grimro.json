@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 24040093,
+      "name": "Fabled Grimro",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Fabled\" monster: You can send this card from your hand to the GY; add 1 \"Fabled\" monster from your Deck to your hand, except \"Fabled Grimro\".",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Fabled",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fabled-grimro-2073",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN062",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN026",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN032",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN125",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24040093,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24040093.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24040093.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24040093.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "3.95",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85147,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8093,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

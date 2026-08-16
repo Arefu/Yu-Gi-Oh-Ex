@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 7573135,
+      "name": "Gladiator Beast Augustus",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of a \"Gladiator Beast\" monster: You can Special Summon 1 \"Gladiator Beast\" monster from your hand in Defense Position. Shuffle it into the Deck during the End Phase. At the end of the Battle Phase, if this card attacked or was attacked: You can shuffle it into the Deck; Special Summon 1 \"Gladiator Beast\" monster from your Deck, except \"Gladiator Beast Augustus\".",
+      "race": "Winged Beast",
+      "atk": 2600,
+      "def": 1000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-augustus-649",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN020",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7573135,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7573135.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7573135.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7573135.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.83",
+          "tcgplayer_price": "1.44",
+          "ebay_price": "4.75",
+          "amazon_price": "2.85",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166146,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11059,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

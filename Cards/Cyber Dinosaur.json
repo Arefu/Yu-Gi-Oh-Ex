@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 39439590,
+      "name": "Cyber Dinosaur",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent Special Summons a monster from their hand (except during the Damage Step): You can Special Summon this card from your hand.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 1900,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-dinosaur-3343",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 1",
+          "set_code": "CT07-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 6, Issue 5 promotional card",
+          "set_code": "JUMP-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39439590,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39439590.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39439590.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39439590.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74753,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-01",
+          "ocg_date": "2006-05-20",
+          "konami_id": 6727,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

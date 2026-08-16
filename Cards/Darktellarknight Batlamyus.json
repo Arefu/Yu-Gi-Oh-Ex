@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 64414267,
+      "name": "Darktellarknight Batlamyus",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"tellarknight\" monsters\nAll face-up monsters on the field become DARK. You can detach 1 Xyz Material from this card and discard 1 card; Special Summon from your Extra Deck, 1 LIGHT \"tellarknight\" Xyz Monster by using this face-up card you control as the Xyz Material, also you cannot Xyz Summon other monsters for the rest of this turn. (This is treated as an Xyz Summon. Xyz Materials attached to this card also become Xyz Materials on the Summoned monster.) This effect can be activated during either player's turn, if you have 7 or more \"tellarknight\" monsters with different names in your Graveyard.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 550,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Tellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darktellarknight-batlamyus-5439",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64414267,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64414267.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64414267.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64414267.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.34",
+          "tcgplayer_price": "4.86",
+          "ebay_price": "3.49",
+          "amazon_price": "2.75",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114625,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12641,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

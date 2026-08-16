@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 10178757,
+      "name": "R-Genex Oracle",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is added from your Deck to your hand by the effect of a \"Genex\" monster, you can Special Summon this card. This card cannot be used as a Synchro Material Monster, except for the Synchro Summon of a \"Genex\" monster.",
+      "race": "Spellcaster",
+      "atk": 300,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/r-genex-oracle-880",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN074",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10178757,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10178757.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10178757.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10178757.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21540,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8403,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

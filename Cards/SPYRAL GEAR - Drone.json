@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 4474060,
+      "name": "SPYRAL GEAR - Drone",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can look at the top 3 cards of your opponent's Deck, and if you do, place them on top of their Deck in any order. (Quick Effect): You can Tribute this card, then target 1 \"SPYRAL\" monster you control; it gains 500 ATK for each card your opponent controls. You can banish this card and 1 \"SPYRAL\" card from your GY, then target 1 \"SPYRAL Super Agent\" in your GY; add it to your hand.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-gear-drone-405",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4474060,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4474060.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4474060.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4474060.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.94",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91879,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12690,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

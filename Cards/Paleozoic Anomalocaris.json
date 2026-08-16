@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 61307542,
+      "name": "Paleozoic Anomalocaris",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 or more Level 2 monsters\nThis card is unaffected by other monsters' effects. Once per turn, if a Trap Card(s) is sent from your Spell & Trap Zone to the Graveyard (except during the Damage Step): You can excavate the top card of your Deck, and if it is a Trap Card, add it to your hand. Otherwise, send it to the Graveyard. Once per turn, during either player's turn, if this card has a Trap Card as Xyz Material: You can detach 1 Xyz Material from this card, then target 1 card on the field; destroy it.",
+      "race": "Aqua",
+      "atk": 2400,
+      "def": 0,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Paleozoic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paleozoic-anomalocaris-5197",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN126",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN137",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN099",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61307542,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61307542.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61307542.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61307542.jpg"
+        },
+        {
+          "id": 61307543,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61307543.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61307543.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61307543.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.74",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Burgesstoma Anomalocaris",
+          "views": 206986,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Paleozoic Anomalocaris",
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12086,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

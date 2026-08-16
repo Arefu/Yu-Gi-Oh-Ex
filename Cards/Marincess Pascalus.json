@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 99885917,
+      "name": "Marincess Pascalus",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 \"Marincess\" monster from your hand in Defense Position, except \"Marincess Pascalus\". During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 \"Marincess\" Spell/Trap in your GY; add it to your hand. You can only use each effect of \"Marincess Pascalus\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1200,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-pascalus-10511",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN093",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99885917,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99885917.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99885917.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99885917.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "4.19",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 217836,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100254006,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-08-31",
+          "konami_id": 14788,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

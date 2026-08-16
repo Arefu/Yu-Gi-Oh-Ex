@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 46613515,
+      "name": "Clear Kuriboh",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a monster effect that would inflict damage (Quick Effect): You can discard this card; negate the activation. When an opponent's monster declares a direct attack: You can banish this card from your GY; draw 1 card, and if it is a monster, you can Special Summon it, then change the attack target to it. You can only use this effect of \"Clear Kuriboh\" once per turn.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Kuriboh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clear-kuriboh-3975",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2019)",
+          "set_code": "AC19-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.46"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS47",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.13"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG47",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46613515,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46613515.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46613515.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46613515.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "3.00",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 168963,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-01",
+          "konami_id": 12399,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 15808381,
+      "name": "Achichi @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 Level 4 or lower \"@Ignister\" monster from your Deck to your hand, except \"Achichi @Ignister\". At the start of the Damage Step, when your Cyberse monster battles: You can banish this card from your GY; destroy that monster you control. You can only use each effect of \"Achichi @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 800,
+      "def": 800,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/achichi-ignister-10585",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 28",
+          "set_code": "OP28-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15808381,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15808381.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15808381.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15808381.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "5.16",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 214839,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011004,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14813,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

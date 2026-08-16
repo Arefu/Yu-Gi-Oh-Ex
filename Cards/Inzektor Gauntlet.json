@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 259314,
+      "name": "Inzektor Gauntlet",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up \"Inzektor\" monster you control; equip this card to that target. It gains 1000 DEF, and cannot be destroyed by your opponent's card effects.",
+      "race": "Normal",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-gauntlet-25",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 259314,
+          "image_url": "https://images.ygoprodeck.com/images/cards/259314.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/259314.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/259314.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20279,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10097,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

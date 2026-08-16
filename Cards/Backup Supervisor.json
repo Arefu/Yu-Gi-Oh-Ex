@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 97677329,
+      "name": "Backup Supervisor",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters\r\nIf this card was Link Summoned using \"Backup Secretary\" as material, and your monster this card points to battled an opponent's monster, at the end of the Damage Step: You can Special Summon 1 Cyberse monster from your hand. If this card is destroyed by battle, or if this card in its owner's possession is destroyed by an opponent's card effect: You can Special Summon 1 \"Backup Secretary\" from your hand, Deck, or GY. You can only use each effect of \"Backup Supervisor\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1200,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/backup-supervisor-9923",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97677329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97677329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97677329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97677329.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57724,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14227,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

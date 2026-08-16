@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 81434470,
+      "name": "Thousand-Eyes Jellyfish",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 1 \"Ocean's Keeper\". Your opponent must play with their hand revealed.",
+      "race": "Fish",
+      "atk": 300,
+      "def": 2100,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thousand-eyes-jellyfish-6836",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81434470,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81434470.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81434470.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81434470.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32682,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7334,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

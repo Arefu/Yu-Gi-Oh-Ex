@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 22386234,
+      "name": "Aurora Paragon",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Neither player can Special Summon monsters. When another monster is Normal Summoned to either player's side of the field, destroy this card.",
+      "race": "Fairy",
+      "atk": 1500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aurora-paragon-1925",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN036",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22386234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22386234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22386234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22386234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.14",
+          "tcgplayer_price": "2.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31040,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9507,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

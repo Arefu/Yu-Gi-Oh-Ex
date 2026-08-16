@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 92377303,
+      "name": "Dark Sage",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand or Deck) by Tributing 1 \"Dark Magician\" immediately after applying the effect of \"Time Wizard\" in which you called the coin toss right. When Special Summoned this way: Add 1 Spell Card from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 3200,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-sage-7696",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.86"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN004",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dawn of Destiny promotional cards",
+          "set_code": "DOD-002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "56.35"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dawn of Destiny promotional cards",
+          "set_code": "DOD-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "91.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92377303,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92377303.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92377303.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92377303.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.52",
+          "tcgplayer_price": "4.84",
+          "ebay_price": "49.99",
+          "amazon_price": "13.95",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116057,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-23",
+          "ocg_date": "2001-07-05",
+          "konami_id": 5230,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

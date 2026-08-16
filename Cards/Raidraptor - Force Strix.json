@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 73347079,
+      "name": "Raidraptor - Force Strix",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nThis card gains 500 ATK and DEF for each Winged Beast monster you control (other than this card). Once per turn: You can detach 1 material from this card; add 1 Level 4 DARK Winged Beast monster from your Deck to your hand.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-force-strix-6158",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN243",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN243",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73347079,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73347079.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73347079.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73347079.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "4.95",
+          "amazon_price": "4.17",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 461617,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2014-11-28",
+          "konami_id": 11619,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

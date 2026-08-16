@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 34010534,
+      "name": "Cynet Optimization",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If your \"Code Talker\" monster battles, your opponent cannot activate cards or effects until the end of the Damage Step. During your Main Phase, you can: Immediately after this effect resolves, Normal Summon 1 Cyberse monster, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Cyberse monsters (even if this card leaves the field). You can only use this effect of \"Cynet Optimization\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Code Talker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cynet-optimization-9574",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34010534,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34010534.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34010534.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34010534.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "1.45",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cynet Optimize",
+          "views": 161374,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13876,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

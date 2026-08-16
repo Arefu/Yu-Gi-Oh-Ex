@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 34475451,
+      "name": "Construction Train Signal Red",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares an attack: You can Special Summon this card from your hand, and if you do, change the attack target to this card and proceed to damage calculation. This card cannot be destroyed by that battle.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1300,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/construction-train-signal-red-2928",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34475451,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34475451.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34475451.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34475451.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65668,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11183,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

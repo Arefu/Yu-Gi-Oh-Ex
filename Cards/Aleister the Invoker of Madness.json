@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 97973962,
+      "name": "Aleister the Invoker of Madness",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different Types and different Attributes\r\nThis card's name becomes \"Aleister the Invoker\" while on the field or in the GY. If a monster is Fusion Summoned while you control this monster (except during the Damage Step): You can discard 1 card, and if you do, add 1 \"Invocation\" or \"The Book of the Law\" from your Deck to your hand. If this face-up card you control leaves the field because of an opponent's card effect: You can add 1 \"Omega Summon\" from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 1800,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Invoked",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aleister-the-invoker-of-madness-9152",
+      "card_sets": [
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN053",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "10.68"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN053",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97973962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97973962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97973962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97973962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.20",
+          "tcgplayer_price": "7.25",
+          "ebay_price": "1.97",
+          "amazon_price": "2.96",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Aleister the Meltdown Invoker",
+          "views": 427245,
+          "viewsweek": 42,
+          "upvotes": 18,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13509,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

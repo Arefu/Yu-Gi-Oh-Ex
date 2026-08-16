@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 56597272,
+      "name": "Cloudian - Sheep Cloud",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, Special Summon 2 \"Cloudian Tokens\" (Fairy-Type/WATER/Level 1/ATK 0/DEF 0) in Defense Position. These tokens cannot be Tributed for a Tribute Summon, unless it is for a \"Cloudian\" monster.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WATER",
+      "archetype": "Cloudian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cloudian-sheep-cloud-4819",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN008",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI24",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56597272,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56597272.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56597272.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56597272.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "9.99",
+          "amazon_price": "3.27",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40297,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7267,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

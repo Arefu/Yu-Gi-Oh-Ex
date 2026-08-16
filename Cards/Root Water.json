@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 39004808,
+      "name": "Root Water",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An amphibian capable of calling up a massive tidal wave from the dark seas to wipe out enemy monsters.",
+      "race": "Fish",
+      "atk": 900,
+      "def": 800,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/root-water-3307",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.14"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39004808,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39004808.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39004808.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39004808.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.00",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 173210,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4253,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

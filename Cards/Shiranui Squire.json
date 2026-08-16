@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 41562624,
+      "name": "Shiranui Squire",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, you can: Special Summon 1 \"Shiranui Spectralsword\" monster from your hand or Deck, also you cannot Special Summon monsters for the rest of this turn, except Zombie monsters. If this card is banished: You can draw 1 card, then discard 1 card. You can only use each effect of \"Shiranui Squire\" once per turn.",
+      "race": "Zombie",
+      "atk": 1500,
+      "def": 0,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-squire-9781",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41562624,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41562624.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41562624.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41562624.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.71",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "2.10",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shiranui Spearitualist",
+          "views": 198964,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14096,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

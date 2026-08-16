@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 69610326,
+      "name": "Supreme King Dragon Darkwurm",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if you control no monsters: You can place 1 \"Supreme King Gate\" Pendulum Monster from your Deck in your Pendulum Zone, also you cannot Pendulum Summon monsters for the rest of this turn, except DARK monsters.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can add 1 \"Supreme King Gate\" Pendulum Monster from your Deck to your hand. If this card is in your GY and you control no monsters: You can Special Summon this card. You can only use each monster effect of \"Supreme King Dragon Darkwurm\" once per turn.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, if you control no monsters: You can place 1 \"Supreme King Gate\" Pendulum Monster from your Deck in your Pendulum Zone, also you cannot Pendulum Summon monsters for the rest of this turn, except DARK monsters.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can add 1 \"Supreme King Gate\" Pendulum Monster from your Deck to your hand. If this card is in your GY and you control no monsters: You can Special Summon this card. You can only use each monster effect of \"Supreme King Dragon Darkwurm\" once per turn.",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Supreme King",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-dragon-darkwurm-8372",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN063",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69610326,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69610326.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69610326.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69610326.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "9.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Supreme King Servant Dragon Darkvrm",
+          "views": 960880,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12933,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

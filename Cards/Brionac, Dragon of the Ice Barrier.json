@@ -1,0 +1,133 @@
+{
+  "data": [
+    {
+      "id": 50321796,
+      "name": "Brionac, Dragon of the Ice Barrier",
+      "typeline": [
+        "Sea Serpent",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\nYou can discard any number of cards to the GY, then target the same number of cards your opponent controls; return those cards to the hand. You can only use this effect of \"Brionac, Dragon of the Ice Barrier\" once per turn.",
+      "race": "Sea Serpent",
+      "atk": 2300,
+      "def": 1400,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Ice Barrier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brionac-dragon-of-the-ice-barrier-4289",
+      "card_sets": [
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN031",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.52"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN031",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion: Special Edition",
+          "set_code": "H5SE-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.35"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN051",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN227",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN227",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Freezing Chains",
+          "set_code": "SDFC-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50321796,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50321796.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50321796.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50321796.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.96",
+          "tcgplayer_price": "1.05",
+          "ebay_price": "1.99",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 640113,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7548,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 27062594,
+      "name": "The Door of Destiny",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares a direct attack: Negate the attack, then Special Summon this card as an Effect Monster (Fiend-Type/LIGHT/Level 1/ATK 0/DEF 0). (This card is also still a Trap Card.) During your Standby Phase, while this card is treated as a monster: You can banish any number of \"Utopia\" monsters with different names from your Graveyard; inflict 500 damage to your opponent for each of those banished monsters, and if you do, this card gains ATK equal to the damage they took.",
+      "race": "Continuous",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-door-of-destiny-2315",
+      "card_sets": [
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN240",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN240",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN031",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27062594,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27062594.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27062594.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27062594.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.00",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32161,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11418,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

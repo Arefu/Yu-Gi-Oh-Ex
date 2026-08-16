@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 20426907,
+      "name": "Re-qliate",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If a monster is Normal or Flip Summoned, and it is a Level 4 or lower monster: Negate its effects until the end of this turn. If a monster(s) is Special Summoned, and it is a Level 5 or higher monster: Negate its effects until the end of this turn, also banish it when it leaves the field. If there is no \"Qli\" card on the field, except \"Re-qliate\", send this card to the Graveyard.",
+      "race": "Continuous",
+      "archetype": "Qli",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/re-qliate-1754",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN242",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20426907,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20426907.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20426907.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20426907.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40922,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11593,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

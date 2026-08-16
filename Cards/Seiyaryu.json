@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 6740720,
+      "name": "Seiyaryu",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mystical dragon that burns away the unworthy with its mystic flames.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2300,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/seiyaryu-585",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN170",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Seven",
+          "set_code": "TU07-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Dark Duel Stories promotional cards",
+          "set_code": "DDS-004",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "13.74"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel promotional cards",
+          "set_code": "SDD-E001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "15.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6740720,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6740720.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6740720.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6740720.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.41",
+          "amazon_price": "24.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128705,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-19",
+          "ocg_date": "1999-07-08",
+          "konami_id": 4364,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

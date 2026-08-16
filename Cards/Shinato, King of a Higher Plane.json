@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 86327225,
+      "name": "Shinato, King of a Higher Plane",
+      "typeline": [
+        "Fairy",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Shinato's Ark\". You must also Tribute monsters whose total Levels equal 8 or more from the field or your hand. When this card destroys a Defense Position monster and sends it to the Graveyard as a result of battle, inflict damage to your opponent's Life Points equal to the original ATK of the destroyed monster.",
+      "race": "Fairy",
+      "atk": 3300,
+      "def": 3000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shinato-king-of-a-higher-plane-7236",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "18.29"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN178",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86327225,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86327225.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86327225.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86327225.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.81",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "18.99",
+          "amazon_price": "24.98",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90971,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5697,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 94845226,
+      "name": "The Fabled Rubyruda",
+      "typeline": [
+        "Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this face-up card you control is selected as an attack target, you can discard 1 \"Fabled\" monster to negate the attack.",
+      "race": "Beast",
+      "atk": 1100,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Fabled",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-fabled-rubyruda-7893",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94845226,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94845226.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94845226.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94845226.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "9.98",
+          "ebay_price": "6.52",
+          "amazon_price": "10.99",
+          "coolstuffinc_price": "11.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18799,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2009-06-06",
+          "konami_id": 8547,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 32314730,
+      "name": "Koa'ki Meiru Crusader",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Beast-Warrior-Type monster in your hand. If this card destroys an opponent's monster by battle, you can add 1 \"Koa'ki Meiru\" card from your Graveyard to your hand.",
+      "race": "Beast-Warrior",
+      "atk": 1900,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-crusader-2745",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32314730,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32314730.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32314730.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32314730.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.90",
+          "tcgplayer_price": "5.25",
+          "ebay_price": "2.90",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30831,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8310,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 22593417,
+      "name": "Topologic Gumblar Dragon",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\r\nIf another monster is Special Summoned to a zone a Link Monster points to, while this monster is on the field: Discard 1 or 2 random cards, then your opponent discards the same number. During your Main Phase, if this card is Extra Linked and your opponent has at least 1 card in their hand: You can make your opponent discard 1 or 2 cards (whichever is higher), then, if they have no more cards in their hand, inflict 3000 damage to them. You can only use 1 \"Topologic Gumblar Dragon\" effect per turn, and only once that turn.",
+      "race": "Cyberse",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/topologic-gumblar-dragon-9361",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN043",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.57"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 22593417,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22593417.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22593417.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22593417.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.81",
+          "tcgplayer_price": "2.21",
+          "ebay_price": "2.00",
+          "amazon_price": "8.43",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Topologic Gamble Dragon",
+          "views": 150379,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13836,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 5361647,
+      "name": "Battlin' Boxer Glassjaw",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is targeted for an attack: Destroy this card. When this card is sent to the Graveyard by a card effect: You can target 1 \"Battlin' Boxer\" monster in your Graveyard, except \"Battlin' Boxer Glassjaw\"; add that target to your hand.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlin-boxer-glassjaw-473",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5361647,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5361647.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5361647.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5361647.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72576,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10498,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

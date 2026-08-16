@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 38395123,
+      "name": "Ojamatch",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Send 1 \"Ojama\" card from your hand or face-up from your field to the GY; add to your hand, 1 \"Ojama\" monster with a different name and 1 \"Armed Dragon\" monster from your Deck and/or GY, then, immediately after this effect resolves, you can Normal Summon 1 of those monsters. During your Main Phase: You can banish this card from your GY, then target 3 of your banished \"Ojama\" monsters; shuffle them into the Deck, then draw 1 card.",
+      "race": "Quick-Play",
+      "archetype": "Armed Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ojamatch-9056",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.97"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENC16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38395123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38395123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38395123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38395123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ojamatching",
+          "views": 192485,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13478,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

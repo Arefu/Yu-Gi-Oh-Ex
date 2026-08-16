@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 37931734,
+      "name": "Generaider Boss Fight",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate 1 \"Generaider\" Field Spell directly from your Deck or GY, then your opponent draws 1 card. You can only activate 1 \"Generaider Boss Fight\" per turn.",
+      "race": "Normal",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/generaider-boss-fight-10493",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37931734,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37931734.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37931734.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37931734.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "3.51",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Generaider Battle",
+          "views": 140258,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423037,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14780,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

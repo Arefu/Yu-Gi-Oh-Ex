@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 17285476,
+      "name": "Naturia Mosquito",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control another face-up \"Naturia\" monster(s), your opponent cannot select this card as an attack target. Your opponent takes any Battle Damage you would have taken from battles involving a face-up \"Naturia\" monster you control, except this card.",
+      "race": "Insect",
+      "atk": 200,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-mosquito-1497",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17285476,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17285476.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17285476.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17285476.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.00",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37580,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8958,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

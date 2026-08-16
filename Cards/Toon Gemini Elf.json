@@ -1,0 +1,151 @@
+{
+  "data": [
+    {
+      "id": 42386471,
+      "name": "Toon Gemini Elf",
+      "typeline": [
+        "Spellcaster",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot attack the turn it is Summoned. If \"Toon World\" on the field is destroyed, destroy this card. While you control \"Toon World\" and your opponent controls no Toon monsters, this card can attack your opponent directly. If this card inflicts battle damage to your opponent: Discard 1 random card from your opponent's hand.",
+      "race": "Spellcaster",
+      "atk": 1900,
+      "def": 900,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-gemini-elf-3615",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN033",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN014",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN128",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League Series 6 participation card",
+          "set_code": "DL6-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.26"
+        },
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN107",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42386471,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42386471.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42386471.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42386471.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "4.95",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 313332,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-12-01",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5476,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

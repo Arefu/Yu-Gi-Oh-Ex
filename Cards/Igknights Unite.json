@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 38848158,
+      "name": "Igknights Unite",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Igknight\" card you control; destroy it, and if you do, Special Summon 1 \"Igknight\" monster from your Deck. You can only activate 1 \"Igknights Unite\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Igknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/igknights-unite-3294",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN155",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38848158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38848158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38848158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38848158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27316,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12651,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

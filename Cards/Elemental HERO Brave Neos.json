@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 64655485,
+      "name": "Elemental HERO Brave Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + 1 Level 4 or lower Effect Monster\r\nMust be Fusion Summoned. Gains 100 ATK for each \"Neo-Spacian\" and \"HERO\" monster in your GY. When this card destroys an opponent's monster by battle: You can add 1 Spell/Trap from your Deck to your hand that specifically lists the card \"Elemental HERO Neos\" in its text.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-brave-neos-9794",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64655485,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64655485.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64655485.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64655485.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.18",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "2.73",
+          "amazon_price": "2.77",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 279876,
+          "viewsweek": 21,
+          "upvotes": 21,
+          "downvotes": 10,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14112,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

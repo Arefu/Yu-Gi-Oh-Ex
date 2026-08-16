@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 74974229,
+      "name": "Alien Shocktrooper M-Frame",
+      "typeline": [
+        "Reptile",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Reptile monsters\r\n(Quick Effect): You can discard 1 monster; place A-Counters equal to its original Level on face-up monster(s) on the field, distributed as you wish. If this card is destroyed by battle or card effect and sent to the GY: You can Special Summon non-Link Reptile monsters with different names from your GY, up to the number of monsters your opponent controls with A-Counters. You can only use each effect of \"Alien Shocktrooper M-Frame\" once per turn.",
+      "race": "Reptile",
+      "atk": 1900,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Alien",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alien-shocktrooper-m-frame-9887",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74974229,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74974229.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74974229.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74974229.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "2.18",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Alien Shocktrooper Mighty/Frame",
+          "views": 143597,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14197,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

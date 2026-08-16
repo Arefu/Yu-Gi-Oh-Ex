@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 22419772,
+      "name": "Fairy Guardian",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute this face-up card to return 1 Spell Card sent to your Graveyard by your opponent's card effect during this turn to the bottom of your Deck.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fairy-guardian-1928",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22419772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22419772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22419772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22419772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111108,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5202,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

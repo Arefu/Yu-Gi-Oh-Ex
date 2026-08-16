@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 13529466,
+      "name": "Invoked Caliga",
+      "typeline": [
+        "Beast",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Aleister the Invoker\" + 1 DARK monster\r\nIf a player's monster effect attempts to activate, none of that player's monsters can activate their effects for the rest of this turn while this card is face-up on the field. Each player can attack with only 1 monster during each Battle Phase.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Invoked",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/invoked-caliga-1162",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13529466,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13529466.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13529466.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13529466.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.74",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Caligula the Eidolon Beast",
+          "views": 561385,
+          "viewsweek": 42,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12844,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

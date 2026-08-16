@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 97165977,
+      "name": "Lunalight Panther Dancer",
+      "typeline": [
+        "Beast-Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Lunalight Cat Dancer\" + 1 \"Lunalight\" monster\nMust first be Fusion Summoned with the above Fusion Materials. Cannot be destroyed by your opponent's card effects. Once per turn, during your Main Phase 1: You can activate this effect; for the rest of this turn, the first time each monster your opponent controls would be destroyed by battle, it is not destroyed, also this card can attack all monsters your opponent controls, twice each, this turn. If this card destroys an opponent's monster by battle: This card gains 200 ATK until the end of the Battle Phase.",
+      "race": "Beast-Warrior",
+      "atk": 2800,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Lunalight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-panther-dancer-8082",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL31",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97165977,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97165977.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97165977.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97165977.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.70",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 250152,
+          "viewsweek": 42,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12319,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

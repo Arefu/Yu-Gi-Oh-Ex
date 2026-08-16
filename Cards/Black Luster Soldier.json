@@ -1,0 +1,122 @@
+{
+  "data": [
+    {
+      "id": 5405694,
+      "name": "Black Luster Soldier",
+      "typeline": [
+        "Warrior",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Black Luster Ritual\".",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Black Luster Soldier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/black-luster-soldier-479",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN030",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yugi",
+          "set_code": "DPYG-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.51"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.89"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.4"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5405694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5405694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5405694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5405694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "1.10",
+          "ebay_price": "0.99",
+          "amazon_price": "84.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 325716,
+          "viewsweek": 0,
+          "upvotes": 2608,
+          "downvotes": 11,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "1999-12-18",
+          "konami_id": 4370,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

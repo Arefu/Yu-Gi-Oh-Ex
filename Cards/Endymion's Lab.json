@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 65342096,
+      "name": "Endymion's Lab",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "This card's name becomes \"Magical Citadel of Endymion\" while in the Spell & Trap Zone. Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. Once per turn, after damage calculation, if your Spellcaster monster is destroyed by battle: You can remove 6 Spell Counters from your field; Special Summon 1 Level 7 or higher Spellcaster monster from your hand or Deck. You can only activate 1 \"Endymion's Lab\" per turn.",
+      "race": "Continuous",
+      "archetype": "Endymion",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/endymion-s-lab-10160",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65342096,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65342096.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65342096.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65342096.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Endymion Lab",
+          "views": 78621,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100308023,
+          "tcg_date": "2019-04-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14444,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

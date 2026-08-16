@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 43509019,
+      "name": "Toon Defense",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack targeting a face-up Level 4 or lower Toon Monster you control: You can make the attack a direct attack instead.",
+      "race": "Continuous",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-defense-3712",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN122",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.33"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN118",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43509019,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43509019.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43509019.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43509019.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "4.65",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94880,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-07-27",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5473,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

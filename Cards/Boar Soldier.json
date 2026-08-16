@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 21340051,
+      "name": "Boar Soldier",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned, destroy this card. If your opponent controls 1 or more monsters, decrease the ATK of this card by 1000 points.",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/boar-soldier-1835",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.31"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21340051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21340051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21340051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21340051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 240512,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4925,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

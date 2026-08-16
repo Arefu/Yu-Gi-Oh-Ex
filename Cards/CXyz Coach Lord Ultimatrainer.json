@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 88754763,
+      "name": "CXyz Coach Lord Ultimatrainer",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 9 monsters\nThis card cannot be targeted by card effects. If this card has an Xyz Monster as an Xyz Material, it gains this effect.\n● Once per turn: You can detach 1 Xyz Material from this card; draw 1 card and reveal it, then if it was a monster, inflict 800 damage to your opponent.",
+      "race": "Warrior",
+      "atk": 3800,
+      "def": 2300,
+      "level": 9,
+      "attribute": "FIRE",
+      "archetype": "CXyz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cxyz-coach-lord-ultimatrainer-7420",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88754763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88754763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88754763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88754763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.79",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "1.39",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37993,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10711,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 52792430,
+      "name": "Predaplant Spinodionaea",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 face-up monster your opponent controls; place 1 Predator Counter on it, and if it is Level 2 or higher, it becomes Level 1 as long as it has a Predator Counter. After damage calculation, if this card battled a monster with an equal or lower Level: You can Special Summon 1 \"Predaplant\" monster from your Deck, except \"Predaplant Spinodionaea\".",
+      "race": "Plant",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-spinodionaea-4494",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52792430,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52792430.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52792430.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52792430.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.70",
+          "tcgplayer_price": "5.26",
+          "ebay_price": "3.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Predaplant Spino Dionaea",
+          "views": 124325,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12833,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

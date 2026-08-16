@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 82321037,
+      "name": "True King Bahrastos, the Fathomer",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can destroy 2 other monsters in your hand and/or face-up on your field, including a WATER monster, and if you do, Special Summon this card, and if you do that, you can banish up to 2 Spell/Trap Cards from your opponent's field and/or Graveyard, if both the destroyed monsters were WATER. If this card is destroyed by card effect: You can Special Summon 1 non-WATER Wyrm-Type monster from your Deck in Defense Position. You can only use each effect of \"True King Bahrastos, the Fathomer\" once per turn.",
+      "race": "Wyrm",
+      "atk": 1800,
+      "def": 3000,
+      "level": 9,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/true-king-bahrastos-the-fathomer-6918",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN141",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82321037,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82321037.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82321037.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82321037.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "1.29",
+          "amazon_price": "1.89",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 257327,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12611,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

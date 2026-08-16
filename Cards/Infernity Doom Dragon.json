@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 72896720,
+      "name": "Infernity Doom Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 DARK Tuner + 1 or more non-Tuner monsters\nOnce per turn, if you have no cards in your hand, you can select 1 monster your opponent controls. Destroy that monster and inflict damage to your opponent equal to half its ATK. This card cannot attack during the same turn you activate this effect.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2400,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-doom-dragon-6118",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72896720,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72896720.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72896720.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72896720.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.17",
+          "tcgplayer_price": "14.36",
+          "ebay_price": "12.50",
+          "amazon_price": "52.50",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79225,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8817,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

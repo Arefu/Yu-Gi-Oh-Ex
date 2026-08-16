@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51196805,
+      "name": "Ghostrick Skeleton",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned, unless you control a \"Ghostrick\" monster. Once per turn: You can change this card to face-down Defense Position. When this card is flipped face-up: Banish cards from the top of your opponent's Deck face-down, up to the number of \"Ghostrick\" monsters you control. You can only use this effect of \"Ghostrick Skeleton\" once per turn.",
+      "race": "Zombie",
+      "atk": 1200,
+      "def": 1100,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-skeleton-4356",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN205",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51196805,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51196805.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51196805.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51196805.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "3.00",
+          "amazon_price": "1.36",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90110,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10910,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

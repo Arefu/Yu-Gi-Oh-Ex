@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 89493368,
+      "name": "Summon Reactor SK",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The first time a monster(s) is Summoned to your opponent's side of the field each turn, inflict 800 damage to your opponent. During the Battle Phase of the turn this effect is activated, you can negate the attack of 1 monster your opponent controls. You can send 1 face-up \"Trap Reactor・Y FI\", 1 face-up \"Spell Reactor・RE\" and this face-up card you control to the Graveyard to Special Summon 1 \"Flying Fortress SKY FIRE\" from your hand, Deck, or Graveyard.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 1400,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/summon-reactor-sk-7472",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89493368,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89493368.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89493368.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89493368.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.85",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Summon Reactor・SK",
+          "views": 54338,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 7998,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

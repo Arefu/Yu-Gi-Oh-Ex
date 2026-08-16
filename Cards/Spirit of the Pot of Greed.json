@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 4896788,
+      "name": "Spirit of the Pot of Greed",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is in face-up Attack Position on the field, if a player activates \"Pot of Greed\", they can draw 1 more card.",
+      "race": "Fairy",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-of-the-pot-of-greed-433",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-009",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "3.22"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN009",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "The Pot Collection",
+          "set_code": "TBC1-EN012",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4896788,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4896788.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4896788.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4896788.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "3.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 158151,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5819,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

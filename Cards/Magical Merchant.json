@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 32362575,
+      "name": "Magical Merchant",
+      "typeline": [
+        "Insect",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Excavate cards from the top of your Deck until you excavate a Spell/Trap, then add that card to your hand, also send the remaining cards to the GY.",
+      "race": "Insect",
+      "atk": 200,
+      "def": 700,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-merchant-2751",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Four",
+          "set_code": "AP04-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game Five",
+          "set_code": "CP05-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN134",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.17"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN040",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32362575,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32362575.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32362575.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32362575.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "0.99",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 394495,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5663,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

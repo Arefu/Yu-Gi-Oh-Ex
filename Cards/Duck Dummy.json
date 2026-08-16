@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 43803845,
+      "name": "Duck Dummy",
+      "typeline": [
+        "Winged Beast",
+        "Gemini",
+        "Effect"
+      ],
+      "type": "Gemini Monster",
+      "humanReadableCardType": "Gemini Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with these effects.\r\n● Cannot be destroyed by card effects. Neither player can target this card with card effects.\r\n● The attacks from your opponent's monsters become direct attacks.",
+      "race": "Winged Beast",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/duck-dummy-8596",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN122",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43803845,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43803845.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43803845.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43803845.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Duck Dropper",
+          "views": 25427,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13249,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "data": [
+    {
+      "id": 79606837,
+      "name": "Herald of the Arc Light",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nAny monster sent from the hand or Main Deck to the GY is banished instead. When a Spell/Trap Card, or monster effect, is activated (Quick Effect): You can Tribute this card; negate the activation, and if you do, destroy that card. If this card is sent to the GY: You can add 1 Ritual Monster or 1 Ritual Spell from your Deck to your hand.",
+      "race": "Fairy",
+      "atk": 600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Herald",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/herald-of-the-arc-light-6676",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN164",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection",
+          "set_code": "RA01-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN028",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS09",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "15.73"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 79606837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79606837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79606837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79606837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "7.49",
+          "amazon_price": "3.64",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1844077,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11384,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

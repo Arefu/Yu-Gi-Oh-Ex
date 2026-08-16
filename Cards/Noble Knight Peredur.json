@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 73359475,
+      "name": "Noble Knight Peredur",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While equipped with a \"Noble Arms\" Equip Spell Card, this card becomes DARK and its Level is increased by 1. If this card is sent to the Graveyard while equipped with a \"Noble Arms\" Equip Spell Card: Target 1 \"Noble Arms\" card in your Graveyard; add that target to your hand.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-peredur-6160",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN085",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN010",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "3.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73359475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73359475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73359475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73359475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.49",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33307,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10989,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

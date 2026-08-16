@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 28754338,
+      "name": "Legendary Atlantean Tridon",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card and 1 Sea Serpent-Type monster; Special Summon 1 \"Poseidra, the Atlantean Dragon\" from your hand or Deck, then all monsters your opponent currently controls lose 300 ATK.",
+      "race": "Sea Serpent",
+      "atk": 1600,
+      "def": 800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Atlantean",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legendary-atlantean-tridon-2448",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28754338,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28754338.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28754338.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28754338.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80070,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10514,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

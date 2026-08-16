@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 49398568,
+      "name": "Serial Spell",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Activate only when you activate one of your Normal Spell Cards. Discard all the cards in your hand to the Graveyard. The effect of this card becomes the same as the Normal Spell Card.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/serial-spell-4212",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN097",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN037",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49398568,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49398568.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49398568.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49398568.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.44",
+          "tcgplayer_price": "1.34",
+          "ebay_price": "3.60",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105224,
+          "viewsweek": 25,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6206,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

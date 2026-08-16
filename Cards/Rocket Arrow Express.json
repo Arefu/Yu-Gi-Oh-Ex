@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 79850798,
+      "name": "Rocket Arrow Express",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by controlling no cards, and cannot be Special Summoned by other ways. You cannot conduct your Battle Phase the turn you Special Summon this card. You cannot activate cards or effects, or Set any cards. During each of your Standby Phases, destroy this card unless you send your entire hand to the Graveyard (min.1).",
+      "race": "Machine",
+      "atk": 5000,
+      "def": 0,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rocket-arrow-express-6695",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN015",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79850798,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79850798.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79850798.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79850798.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.50",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61927,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10039,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

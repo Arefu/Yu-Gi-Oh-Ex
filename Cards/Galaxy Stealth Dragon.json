@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 54358015,
+      "name": "Galaxy Stealth Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Dragon-Type monsters\nOnce per turn: You can detach 1 Xyz Material from this card; Special Summon 1 Dragon-Type monster from your hand. Your opponent cannot target other \"Galaxy\" cards you control with card effects, also those cards cannot be destroyed by your opponent's card effects.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-stealth-dragon-4625",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN126",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54358015,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54358015.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54358015.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54358015.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "5.95",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70778,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12553,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

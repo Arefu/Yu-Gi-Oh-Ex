@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 27132350,
+      "name": "Fire Sorcerer",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Randomly select 2 cards from your hand and remove them from play to inflict 800 points of damage to your opponent's Life Points.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-sorcerer-2321",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.58"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "OTS Tournament Pack 26",
+          "set_code": "OP26-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27132350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27132350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27132350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27132350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "5.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 153081,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5199,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 50619462,
+      "name": "Cattle Call",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Send 1 face-up monster you control to the Graveyard, whose original Type is Beast, Beast-Warrior, or Winged Beast; Special Summon 1 monster from your Extra Deck with the same original Type, but it cannot attack, its effects are negated, also it is destroyed during the End Phase. You can only activate 1 \"Cattle Call\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cattle-call-4314",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50619462,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50619462.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50619462.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50619462.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.44",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76893,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12384,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

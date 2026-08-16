@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 93332803,
+      "name": "Dogoran, the Mad Flame Kaiju",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) to your opponent's field in Attack Position, by Tributing 1 monster they control. If your opponent controls a \"Kaiju\" monster, you can Special Summon this card (from your hand) in Attack Position. You can only control 1 \"Kaiju\" monster. Once per turn: You can remove 3 Kaiju Counters from anywhere on the field; destroy all monsters your opponent controls. This card cannot attack the turn this effect is activated.",
+      "race": "Dinosaur",
+      "atk": 3000,
+      "def": 1200,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dogoran-the-mad-flame-kaiju-7768",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN098",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENC08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENC08",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93332803,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93332803.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93332803.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93332803.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "2.44",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1102834,
+          "viewsweek": 21,
+          "upvotes": 16,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12038,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

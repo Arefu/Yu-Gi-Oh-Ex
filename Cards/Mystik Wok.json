@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 80161395,
+      "name": "Mystik Wok",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 monster. Select either its ATK or DEF and gain that many Life Points.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystik-wok-6720",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.69"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.91"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80161395,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80161395.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80161395.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80161395.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.94",
+          "tcgplayer_price": "4.86",
+          "ebay_price": "3.85",
+          "amazon_price": "1.66",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155493,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5978,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

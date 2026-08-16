@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 9659580,
+      "name": "Cubic Karma",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can target 1 \"Cubic\" monster you control, except \"Vijam the Cubic Seed\"; send any number of \"Vijam the Cubic Seed\" from your hand and/or Deck to the Graveyard, then that monster gains 800 ATK for each (even if this card leaves the field). During your opponent's turn, if \"Vijam the Cubic Seed\" is Special Summoned by the effect of a \"Cubic\" monster: Send this card to the Graveyard, and if you do, halve your opponent's LP. You can banish this card from your Graveyard; add 1 \"Cubic\" monster from your Deck to your hand.",
+      "race": "Continuous",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cubic-karma-817",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.63"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS41",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG41",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9659580,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9659580.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9659580.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9659580.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.20",
+          "amazon_price": "4.72",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 144291,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12524,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 88686573,
+      "name": "Nimble Angler",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the hand or Deck to the Graveyard: You can Special Summon up to 2 Level 3 or lower \"Nimble\" monsters from your Deck, except \"Nimble Angler\".",
+      "race": "Fish",
+      "atk": 600,
+      "def": 100,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Nimble",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nimble-angler-7413",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 22",
+          "set_code": "OP22-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88686573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88686573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88686573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88686573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "4.48",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 365763,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10253,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

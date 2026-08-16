@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 53388413,
+      "name": "Commander Gottoms, Swordmaster",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "All face-up \"Saber\" monsters you control gain 400 ATK.",
+      "race": "Beast-Warrior",
+      "atk": 2100,
+      "def": 1600,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/commander-gottoms-swordmaster-4549",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN022",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN013",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53388413,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53388413.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53388413.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53388413.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.39",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23457,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7539,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

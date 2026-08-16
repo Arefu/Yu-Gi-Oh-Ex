@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 981540,
+      "name": "Half Unbreak",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 monster on the field; this turn, that monster cannot be destroyed by battle, also any battle damage you take from attacks involving that monster is halved.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/half-unbreak-85",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 981540,
+          "image_url": "https://images.ygoprodeck.com/images/cards/981540.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/981540.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/981540.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61381,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2013-09-21",
+          "konami_id": 10839,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

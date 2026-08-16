@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 89907227,
+      "name": "White Aura Bihamut",
+      "typeline": [
+        "Fish",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 1+ non-Tuner monsters\r\nDuring your turn, when this card is Synchro Summoned: You can Special Summon 1 \"Divine Dragon Token\" (Fish/WATER/Level 10/ATK 3300/DEF 3000) in Defense Position. Once per opponent's turn, while you control no Tokens (Quick Effect): You can Special Summon 1 \"Divine Dragon Token\". If this card you control is destroyed by an opponent's card effect and sent to your GY, while you control a \"Divine Dragon Token\": You can Special Summon this card in Defense position.",
+      "race": "Fish",
+      "atk": 3300,
+      "def": 3000,
+      "level": 10,
+      "attribute": "WATER",
+      "archetype": "White",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-aura-bihamut-8976",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN162",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN056",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ARC-V Volume 4 promotional card",
+          "set_code": "YA04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.6"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89907227,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89907227.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89907227.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89907227.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.99",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "White Aura Biphamet",
+          "views": 143419,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-06",
+          "ocg_date": "2017-10-04",
+          "konami_id": 13461,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

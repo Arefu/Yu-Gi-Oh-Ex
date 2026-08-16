@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 92170894,
+      "name": "Performapal Longphone Bull",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can add 1 \"Performapal\" monster from your Deck to your hand, except a Pendulum Monster. You can only use this effect of \"Performapal Longphone Bull\" once per turn.",
+      "race": "Beast",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-longphone-bull-7684",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Yuya",
+          "set_code": "YS16-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92170894,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92170894.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92170894.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92170894.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.85",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24316,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-26",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12376,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

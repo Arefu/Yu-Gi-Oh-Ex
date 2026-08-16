@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 30086349,
+      "name": "Meteor Black Comet Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Level 7 \"Red-Eyes\" monster + 1 Level 6 Dragon-Type monster\nIf this card is Fusion Summoned: You can send 1 \"Red-Eyes\" monster from your hand or Deck to the Graveyard, and if you do, inflict damage to your opponent equal to half the original ATK of that monster. If this card is sent from the Monster Zone to the Graveyard: You can target 1 Normal Monster in your Graveyard; Special Summon it.",
+      "race": "Dragon",
+      "atk": 3500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meteor-black-comet-dragon-2548",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.98"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30086349,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30086349.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30086349.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30086349.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.54",
+          "tcgplayer_price": "8.91",
+          "ebay_price": "7.49",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 460301,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12631,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

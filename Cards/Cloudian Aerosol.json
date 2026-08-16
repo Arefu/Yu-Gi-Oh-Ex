@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 88210105,
+      "name": "Cloudian Aerosol",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 \"Cloudian\" monster, then target 1 face-up monster on the field; place Fog Counters on that target equal to its Level. You can banish this card and 1 \"Cloudian\" monster from your GY; Special Summon 1 \"Cloudian\" monster from your Deck. You can only use 1 \"Cloudian Aerosol\" effect per turn, and only once that turn.",
+      "race": "Normal",
+      "archetype": "Cloudian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cloudian-aerosol-10020",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENH13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88210105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88210105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88210105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88210105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42337,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14308,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

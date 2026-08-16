@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 71107816,
+      "name": "The Bistro Butcher",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts Battle Damage to your opponent, your opponent draws 2 cards.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-bistro-butcher-5976",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.1"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71107816,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71107816.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71107816.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71107816.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 264943,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4529,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

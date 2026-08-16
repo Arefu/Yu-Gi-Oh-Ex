@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 77600660,
+      "name": "Psychic Emperor",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned, gain 500 Life Points for each Psychic-Type monster in your Graveyard.",
+      "race": "Psychic",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-emperor-6530",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77600660,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77600660.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77600660.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77600660.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.49",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28934,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8525,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

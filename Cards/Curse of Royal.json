@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 2926176,
+      "name": "Curse of Royal",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Negate the activation and the effect of a Spell or Trap Card that includes the effect of destroying 1 Spell or Trap Card and destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/curse-of-royal-261",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN241",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.17"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2926176,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2926176.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2926176.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2926176.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.20",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126260,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5441,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

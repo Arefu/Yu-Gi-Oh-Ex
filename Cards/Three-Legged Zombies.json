@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 33734439,
+      "name": "Three-Legged Zombies",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A pair of friendly skeletons, lean and fat, that travel with extreme difficulty.",
+      "race": "Zombie",
+      "atk": 1100,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/three-legged-zombies-2862",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN226",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33734439,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33734439.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33734439.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33734439.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.00",
+          "tcgplayer_price": "1.16",
+          "ebay_price": "3.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30570,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-06-01",
+          "konami_id": 4365,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

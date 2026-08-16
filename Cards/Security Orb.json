@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 26533075,
+      "name": "Security Orb",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent's monster declares an attack: Target that attacking monster; change that target's battle position. If this Set card is destroyed by your opponent's Spell/Trap effect and sent to the GY: Destroy 1 monster on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/security-orb-2276",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN089",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26533075,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26533075.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26533075.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26533075.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "4.99",
+          "amazon_price": "2.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39553,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7489,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

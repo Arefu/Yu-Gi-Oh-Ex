@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 6133894,
+      "name": "Mazera DeVille",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 1 face-up \"Warrior of Zera\" on your side of the field while \"Pandemonium\" is on the field. If \"Pandemonium\" is on your side of the field when you Special Summon this card, your opponent discards 3 random cards from their hand. If \"Pandemonium\" is not on your side of the field, this effect is not applied.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mazera-deville-536",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-111",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.89"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN168",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium: Special Edition",
+          "set_code": "TLM-ENSE3",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6133894,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6133894.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6133894.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6133894.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.55",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.99",
+          "amazon_price": "3.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78474,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5996,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

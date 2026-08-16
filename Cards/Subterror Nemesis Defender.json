@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 68823957,
+      "name": "Subterror Nemesis Defender",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, when your opponent activates a card or effect that targets exactly 1 Set monster you control (and no other cards), or when a Set monster you control is targeted for an attack by an opponent's monster: You can send this card from your hand or face-up from your field to the Graveyard, then target another monster you control that would be an appropriate target; that card/effect/attack now targets the new target. While you control a Set monster, this card cannot be destroyed by battle or card effects.",
+      "race": "Beast-Warrior",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-nemesis-defender-8870",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68823957,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68823957.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68823957.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68823957.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.09",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30641,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12873,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

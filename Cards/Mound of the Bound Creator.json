@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 269012,
+      "name": "Mound of the Bound Creator",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Level 10 or higher monsters on the field cannot be targeted or destroyed by card effects. If a Level 10 or higher monster on the field destroys a monster by battle and sends it to the Graveyard: The player who controlled the destroyed monster takes 1000 damage. When this card on the field is destroyed by a card effect and sent to the Graveyard: You can add 1 DIVINE monster from your Deck to your hand.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mound-of-the-bound-creator-26",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN025",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.31"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.86"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN053",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 269012,
+          "image_url": "https://images.ygoprodeck.com/images/cards/269012.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/269012.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/269012.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 619965,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11170,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

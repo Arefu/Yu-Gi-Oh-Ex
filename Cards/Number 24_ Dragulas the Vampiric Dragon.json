@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 93713837,
+      "name": "Number 24: Dragulas the Vampiric Dragon",
+      "typeline": [
+        "Wyrm",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster on the field that was Special Summoned from the Extra Deck; change it to face-down Defense Position. If this face-up card in its owner's control is sent to your Graveyard or banished by your opponent's card effect: You can Special Summon this card in face-down Defense Position. If this card is flipped face-up: Send 1 card on the field to the Graveyard.",
+      "race": "Wyrm",
+      "atk": 2400,
+      "def": 2800,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-24-dragulas-the-vampiric-dragon-7796",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN118",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93713837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93713837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93713837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93713837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.89",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "6.95",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 24",
+          "views": 145983,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12545,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

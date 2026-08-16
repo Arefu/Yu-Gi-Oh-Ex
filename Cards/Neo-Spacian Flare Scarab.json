@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 89621922,
+      "name": "Neo-Spacian Flare Scarab",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains 400 ATK for each Spell/Trap your opponent controls.",
+      "race": "Insect",
+      "atk": 500,
+      "def": 500,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Neo-Spacian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-spacian-flare-scarab-7483",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN004",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89621922,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89621922.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89621922.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89621922.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.50",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 185414,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6773,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

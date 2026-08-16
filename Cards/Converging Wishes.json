@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 20007374,
+      "name": "Converging Wishes",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you have 5 or more Dragon-Type Synchro Monsters with different names in your Graveyard: Special Summon 1 \"Stardust Dragon\" from your Extra Deck (this is treated as a Synchro Summon), but banish it during the End Phase. Equip it with this card. While equipped, it gains ATK equal to the combined ATK of all Dragon-Type Synchro Monsters in your Graveyard. Also while equipped, when it destroys an opponent's monster by battle: You can banish 1 Dragon-Type Synchro Monster from your Graveyard; it can attack an opponent's monster again in a row.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/converging-wishes-9037",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20007374,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20007374.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20007374.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20007374.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38028,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-02-11",
+          "konami_id": 13001,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

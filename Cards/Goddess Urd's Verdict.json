@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 91969909,
+      "name": "Goddess Urd's Verdict",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Your opponent cannot target \"Valkyrie\" monsters you control with card effects, also they cannot be destroyed by your opponent's card effects. Once per turn: You can declare 1 card name, then target 1 Set card your opponent controls; reveal the Set card, and if it was the declared card, banish it. Otherwise, banish 1 card you control.",
+      "race": "Continuous",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goddess-urd-s-verdict-9753",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91969909,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91969909.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91969909.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91969909.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55899,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14001,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

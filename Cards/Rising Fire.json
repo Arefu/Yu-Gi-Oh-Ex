@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 66947913,
+      "name": "Rising Fire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "(This card is always treated as a \"Salamangreat\" card.)\r\nIf you control no monsters: Activate this card by targeting 1 FIRE monster in your GY; Special Summon it and equip it with this card. The equipped monster gains 500 ATK. When this card leaves the field, destroy that monster. If this card in your possession is destroyed by an opponent's card effect: You can banish 1 monster on the field. You can only use each effect of \"Rising Fire\" once per turn.",
+      "race": "Equip",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rising-fire-10196",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.99"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66947913,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66947913.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66947913.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66947913.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39710,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009053,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14501,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

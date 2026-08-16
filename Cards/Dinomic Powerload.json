@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 41128647,
+      "name": "Dinomic Powerload",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Dinomist\" monsters on the field gain 300 ATK and DEF. If a \"Dinomist\" monster you control battles, your opponent cannot activate cards or effects until the end of the Damage Step.",
+      "race": "Field",
+      "archetype": "Dinomist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinomic-powerload-3502",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN217",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41128647,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41128647.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41128647.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41128647.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39060,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12170,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

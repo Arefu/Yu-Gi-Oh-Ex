@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 62107612,
+      "name": "Dimension Wanderer",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a monster is banished by the effect of \"Galaxy-Eyes Photon Dragon\": You can send this card from your hand to the Graveyard; inflict 3000 damage to your opponent. You can only use the effect of \"Dimension Wanderer\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dimension-wanderer-5253",
+      "card_sets": [
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62107612,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62107612.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62107612.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62107612.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.32",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33972,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10337,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

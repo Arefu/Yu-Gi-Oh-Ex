@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 12275533,
+      "name": "Trifortressops",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, if your opponent Summoned 3 or more monsters this turn: You can Special Summon this card from your hand. If Summoned this way, it is unaffected by other cards' effects, but loses 500 DEF during each player's Standby Phase.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 2800,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trifortressops-1060",
+      "card_sets": [
+        {
+          "set_name": "Dinosmasher's Fury Structure Deck",
+          "set_code": "SR04-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12275533,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12275533.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12275533.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12275533.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30982,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10598,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

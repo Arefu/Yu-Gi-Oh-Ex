@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 58192742,
+      "name": "Petit Moth",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This small but deadly creature is better off avoided.",
+      "race": "Insect",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/petit-moth-4952",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN155",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.36"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.52"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN111",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN111",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58192742,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58192742.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58192742.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58192742.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.00",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 141326,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4284,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 21250202,
+      "name": "Odd-Eyes Persona Dragon",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, during the End Phase, if your opponent activated a card or effect this turn that targeted 1 \"Odd-Eyes\" Pendulum Monster you controlled (and no other cards) while this card was in your Pendulum Zone: Special Summon this card, and if you do, place 1 face-up \"Odd-Eyes\" Pendulum Monster from your Extra Deck in your Pendulum Zone, except \"Odd-Eyes Persona Dragon\".\n\n[ Monster Effect ] \nOnce per turn (Quick Effect): You can target 1 face-up monster on the field that was Special Summoned from the Extra Deck; it has its effects negated, until the end of this turn.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, during the End Phase, if your opponent activated a card or effect this turn that targeted 1 \"Odd-Eyes\" Pendulum Monster you controlled (and no other cards) while this card was in your Pendulum Zone: Special Summon this card, and if you do, place 1 face-up \"Odd-Eyes\" Pendulum Monster from your Extra Deck in your Pendulum Zone, except \"Odd-Eyes Persona Dragon\".",
+      "monster_desc": "Once per turn (Quick Effect): You can target 1 face-up monster on the field that was Special Summoned from the Extra Deck; it has its effects negated, until the end of this turn.",
+      "atk": 1200,
+      "def": 2400,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "-Eyes Dragon",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-persona-dragon-1828",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN074",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Weekly Shonen Jump January 2017 membership promotional card",
+          "set_code": "JUMP-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21250202,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21250202.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21250202.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21250202.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "4.75",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 279693,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-16",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12480,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 10389142,
+      "name": "Number 42: Galaxy Tomahawk",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\nOnce per turn: You can detach 2 Xyz Materials from this card; Special Summon as many \"Battle Eagle Tokens\" (Machine-Type/WIND/Level 6/ATK 2000/DEF 0) as possible, destroy them during the End Phase of this turn, also your opponent takes no further battle damage this turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 3000,
+      "level": 7,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-42-galaxy-tomahawk-898",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 10389142,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10389142.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10389142.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10389142.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.25",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 42",
+          "views": 172833,
+          "viewsweek": 84,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2013-01-21",
+          "konami_id": 10480,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 53244294,
+      "name": "Number 57: Tri-Head Dust Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nWhen this card is Special Summoned: You can target 1 monster your opponent controls; this card gains ATK equal to that monster's current ATK. If your opponent controls more cards than you do: You can detach 1 Xyz Material from this card, then choose 1 unused Main Monster Zone or Spell & Trap Zone; while this card is face-up on the field, that zone cannot be used.",
+      "race": "Dragon",
+      "atk": 100,
+      "def": 2600,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-57-tri-head-dust-dragon-4536",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53244294,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53244294.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53244294.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53244294.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.53",
+          "tcgplayer_price": "1.57",
+          "ebay_price": "2.49",
+          "amazon_price": "5.80",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 57",
+          "views": 50293,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10704,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

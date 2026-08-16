@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 46195773,
+      "name": "Turbo Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Turbo Synchron\" + 1 or more non-Tuner monsters\nWhen this card declares an attack on a Level 6 or higher Synchro Monster: Halve the ATK of the attack target until the end of the Damage Step. This card cannot be targeted by the effects of Level 6 or lower monsters.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 1500,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/turbo-warrior-3939",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2008 Wave 2",
+          "set_code": "CT05-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.3"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei",
+          "set_code": "DP08-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46195773,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46195773.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46195773.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46195773.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "1.99",
+          "amazon_price": "5.76",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 268730,
+          "viewsweek": 42,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7897,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

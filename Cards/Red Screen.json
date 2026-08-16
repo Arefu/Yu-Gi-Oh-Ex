@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 18634367,
+      "name": "Red Screen",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Your opponent's monsters cannot declare attacks. During each of your End Phases, you must pay 1000 LP (this is not optional), or this card is destroyed. You can target 1 Level 1 Tuner monster in your Graveyard; destroy this card, and if you do, Special Summon that target. \"Red Dragon Archfiend\" must be on the field to activate and to resolve this effect.",
+      "race": "Continuous",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-screen-1612",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.09"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18634367,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18634367.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18634367.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18634367.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "0.87",
+          "ebay_price": "1.63",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89856,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9141,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

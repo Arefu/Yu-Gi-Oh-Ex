@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 89928517,
+      "name": "Two-for-One Team",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can make both players show 1 card from their hands, and if both the shown cards are the same type of card, apply 1 of these effects, depending on the type.\r\n● Monster: Each player can Special Summon their monster.\r\n● Spell: Each player draws 2 cards.\r\n● Trap: Each player sends exactly 2 cards from their Deck to their GY.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 1200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/two-for-one-team-9677",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN178",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89928517,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89928517.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89928517.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89928517.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Two-man Salesmen",
+          "views": 26738,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13919,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

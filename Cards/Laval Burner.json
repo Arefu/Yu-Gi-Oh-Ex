@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 88958576,
+      "name": "Laval Burner",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 3 or more \"Laval\" monsters with different names in your Graveyard, you can Special Summon this card (from your hand).",
+      "race": "Pyro",
+      "atk": 2100,
+      "def": 1000,
+      "level": 5,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-burner-7432",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN028",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88958576,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88958576.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88958576.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88958576.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.99",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29662,
+          "viewsweek": 22,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8905,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

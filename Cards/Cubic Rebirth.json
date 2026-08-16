@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 71442223,
+      "name": "Cubic Rebirth",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares a direct attack: Target the attacking monster; your opponent Special Summons, in Attack Position, as many monsters as possible from their hand, Deck, and/or Graveyard with the same name as that monster, also, the ATK of the targeted monster and those Special Summoned monster(s) become 0 and place 1 Cubic Counter on each. (Monsters with a Cubic Counter cannot attack, also negate their effects.) Also, after that, if any Cubic Counters were placed by this effect, Special Summon 1 Level 4 or lower \"Cubic\" monster from your hand, ignoring its Summoning conditions.",
+      "race": "Normal",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cubic-rebirth-6002",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS43",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG43",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71442223,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71442223.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71442223.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71442223.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53746,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12526,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

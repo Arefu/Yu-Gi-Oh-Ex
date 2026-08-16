@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 70252926,
+      "name": "Fortune Lady Every",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner Spellcaster monsters\r\nThis card's ATK/DEF become its Level x 400. Once per turn, during your Standby Phase: Increase this card's Level by 1 (max. 12), then, you can banish 1 face-up monster your opponent controls. During your opponent's End Phase, if this card is in your GY: You can banish 1 other Spellcaster monster from your GY; Special Summon this card. You can only use this effect of \"Fortune Lady Every\" once per turn.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": -1,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-lady-every-10235",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70252926,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70252926.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70252926.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70252926.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "14.64",
+          "tcgplayer_price": "24.08",
+          "ebay_price": "19.95",
+          "amazon_price": "49.99",
+          "coolstuffinc_price": "13.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fortune Lady Ever",
+          "views": 141061,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009038,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14486,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

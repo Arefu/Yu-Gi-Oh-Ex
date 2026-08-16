@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 12470447,
+      "name": "Curse of Fiend",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Change the battle positions of all Attack Position monsters on the field to Defense Position and vice-versa. These positions cannot be changed during the turn this card is activated except by the effect of a Spell, Trap or Effect Monster Card. You can only activate this card during your Standby Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/curse-of-fiend-1078",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.09"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "3.1"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.49"
+        },
+        {
+          "set_name": "Spell Ruler (25th Anniversary Edition)",
+          "set_code": "SRL-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12470447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12470447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12470447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12470447.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "2.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 278509,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4894,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

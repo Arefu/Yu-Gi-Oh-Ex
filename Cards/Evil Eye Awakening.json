@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 17616743,
+      "name": "Evil Eye Awakening",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Evil Eye\" monster from your hand or GY, or, if \"Evil Eye of Selene\" is in your Spell & Trap Zone, you can Special Summon 1 \"Evil Eye\" monster from your Deck instead. You can only activate 1 \"Evil Eye Awakening\" per turn.",
+      "race": "Normal",
+      "archetype": "Evil Eye",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-eye-awakening-10094",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN239",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17616743,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17616743.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17616743.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17616743.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Forbidden Awakening of the Evil Eye",
+          "views": 78166,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412034,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14424,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

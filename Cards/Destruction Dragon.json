@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 44373896,
+      "name": "Destruction Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"The Fang of Critias\", using \"Ring of Destruction\". Once per turn: You can target 1 card your opponent controls; destroy it. Then, if it was a Monster Card, inflict damage to your opponent equal to its original ATK.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Legendary Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destruction-dragon-9352",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba",
+          "set_code": "LC06-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN108",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44373896,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44373896.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44373896.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44373896.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.59",
+          "amazon_price": "1.58",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115564,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-03-08",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13641,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

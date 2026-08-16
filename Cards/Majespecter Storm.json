@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 13972452,
+      "name": "Majespecter Storm",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 WIND Spellcaster-Type monster, then target 1 monster your opponent controls; shuffle it into the Deck.",
+      "race": "Normal",
+      "archetype": "Majespecter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-storm-1195",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN147",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13972452,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13972452.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13972452.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13972452.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35432,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12003,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

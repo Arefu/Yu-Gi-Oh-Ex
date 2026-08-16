@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 93553943,
+      "name": "Man Eater",
+      "typeline": [
+        "Plant",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Man-eating plant with poison feelers for attacking enemies.",
+      "race": "Plant",
+      "atk": 800,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/man-eater-7787",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.21"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93553943,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93553943.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93553943.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93553943.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.50",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 153591,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "2000-08-10",
+          "konami_id": 4164,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

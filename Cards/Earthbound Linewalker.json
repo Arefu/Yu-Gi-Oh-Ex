@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 67987302,
+      "name": "Earthbound Linewalker",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "\"Earthbound Immortal\" monsters cannot be destroyed by their own effects.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 1900,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthbound-linewalker-5713",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN088",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN153",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.91"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67987302,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67987302.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67987302.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67987302.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86274,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8760,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

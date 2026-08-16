@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 24433920,
+      "name": "Pendulum Machine",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A horrible torture machine with a large pendulum blade.",
+      "race": "Machine",
+      "atk": 1750,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-machine-2112",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.94"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24433920,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24433920.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24433920.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24433920.jpg"
+        },
+        {
+          "id": 24433921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24433921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24433921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24433921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.99",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42870,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Pendulum Machine",
+          "tcg_date": "2011-06-24",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4394,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

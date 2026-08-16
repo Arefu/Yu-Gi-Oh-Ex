@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 91420202,
+      "name": "Avendread Savior",
+      "typeline": [
+        "Zombie",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Zombie monsters\r\nThis card's name becomes \"Revendread Slayer\" while on the field. You can only use each of the following effects of \"Avendread Savior\" once per turn.\r\n● You can target 1 \"Vendread\" card in your GY; add it to your hand.\r\n● During damage calculation, if this card battles an opponent's monster (Quick Effect): You can send 1 Zombie monster from your Deck to the GY; that opponent's monster loses ATK equal to the Level of the monster sent to the GY x 200, until the end of this turn.",
+      "race": "Zombie",
+      "atk": 1600,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/avendread-savior-9739",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN091",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN045",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91420202,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91420202.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91420202.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91420202.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.99",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Advendread Savior",
+          "views": 343225,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2018-09-08",
+          "konami_id": 14050,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

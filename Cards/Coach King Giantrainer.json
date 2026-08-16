@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 30741334,
+      "name": "Coach King Giantrainer",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 8 monsters\nYou can detach 1 Xyz Material from this card; draw 1 card and show it, then if it was a monster, inflict 800 damage to your opponent. You cannot conduct your Battle Phase the turn you activate this effect. You can only use this effect of \"Coach King Giantrainer\" up to thrice per turn.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/coach-king-giantrainer-2610",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN034",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN037",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30741334,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30741334.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30741334.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30741334.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "14.95",
+          "amazon_price": "0.01",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261716,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-01-11",
+          "konami_id": 10442,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

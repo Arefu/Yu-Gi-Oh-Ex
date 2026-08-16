@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 87116928,
+      "name": "Chimeratech Megafleet Dragon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Cyber Dragon\" monster + 1+ monsters in the Extra Monster Zone\r\nCannot be used as Fusion Material. Must first be Special Summoned (from your Extra Deck) by sending the above cards from either field to the GY. (You do not use \"Polymerization\".) The original ATK of this card becomes 1200 x the number of Fusion Materials used for its Special Summon.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chimeratech-megafleet-dragon-8972",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN138",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN138",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN126",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB00",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87116928,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87116928.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87116928.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87116928.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1119977,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-05",
+          "ocg_date": "2018-02-10",
+          "konami_id": 13358,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

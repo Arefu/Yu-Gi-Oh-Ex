@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 10789972,
+      "name": "Cu Chulainn the Awakened",
+      "typeline": [
+        "Warrior",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, Emblem of the Awakening. Once per turn, you can remove from play 1 Normal Monster in your Graveyard. This card gains ATK equal to that Normal Monster's ATK, until the Standby Phase of your next turn.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cu-chulainn-the-awakened-931",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10789972,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10789972.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10789972.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10789972.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cú Chulainn the Awakened",
+          "views": 47269,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6992,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

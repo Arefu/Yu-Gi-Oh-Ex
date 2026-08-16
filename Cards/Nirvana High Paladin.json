@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 80896940,
+      "name": "Nirvana High Paladin",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Synchro Pendulum Effect Monster",
+      "humanReadableCardType": "Synchro Pendulum Effect Monster",
+      "frameType": "synchro_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a Pendulum Monster you control attacks, for that battle, it cannot be destroyed by battle, also you take no battle damage. At the end of the Damage Step, if a Pendulum Monster you control attacked: All monsters your opponent currently controls lose ATK equal to that attacking monster's ATK, until the end of this turn.\n\n[ Monster Effect ] \n1 Tuner + 1+ non-Tuner Synchro Monsters\r\nFor this card's Synchro Summon, you can treat 1 Pendulum Summoned Pendulum Monster you control as a Tuner. If this card is Synchro Summoned using a Pendulum Summoned Pendulum Monster Tuner: You can target 1 card in your GY; add it to your hand. When this card destroys an opponent's monster by battle: You can halve your opponent's LP. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "race": "Spellcaster",
+      "pend_desc": "If a Pendulum Monster you control attacks, for that battle, it cannot be destroyed by battle, also you take no battle damage. At the end of the Damage Step, if a Pendulum Monster you control attacked: All monsters your opponent currently controls lose ATK equal to that attacking monster's ATK, until the end of this turn.",
+      "monster_desc": "1 Tuner + 1+ non-Tuner Synchro Monsters\r\nFor this card's Synchro Summon, you can treat 1 Pendulum Summoned Pendulum Monster you control as a Tuner. If this card is Synchro Summoned using a Pendulum Summoned Pendulum Monster Tuner: You can target 1 card in your GY; add it to your hand. When this card destroys an opponent's monster by battle: You can halve your opponent's LP. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "atk": 3300,
+      "def": 2500,
+      "level": 10,
+      "attribute": "DARK",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nirvana-high-paladin-6789",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN132",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.94"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80896940,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80896940.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80896940.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80896940.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.50",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114900,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12445,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

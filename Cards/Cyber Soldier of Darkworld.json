@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 75559356,
+      "name": "Cyber Soldier of Darkworld",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mechanical soldier that won't stop attacking until all life readings have been extinguished from its sensors.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-soldier-of-darkworld-6361",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "19.44"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "21.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75559356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75559356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75559356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75559356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.95",
+          "tcgplayer_price": "15.78",
+          "ebay_price": "8.99",
+          "amazon_price": "12.93",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69951,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4303,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

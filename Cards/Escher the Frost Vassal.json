@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 24326617,
+      "name": "Escher the Frost Vassal",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls 2 or more cards in their Spell & Trap Zones, you can Special Summon this card (from your hand).",
+      "race": "Aqua",
+      "atk": 800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Vassal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/escher-the-frost-vassal-2102",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Emperor of Darkness Structure Deck",
+          "set_code": "SR01-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24326617,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24326617.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24326617.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24326617.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42217,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11307,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

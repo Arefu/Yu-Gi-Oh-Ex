@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 2122975,
+      "name": "Trap Reclamation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Discard 1 card and chain this card to a Trap Card you activated. Whenever that Trap Card is sent to the Graveyard, return it to its owner's hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trap-reclamation-189",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN077",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2122975,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2122975.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2122975.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2122975.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "15.98",
+          "amazon_price": "3.30",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24320,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7233,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 75732622,
+      "name": "Grinder Golem",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must first be Special Summoned (from your hand) to your opponent's side of the field by Special Summoning 2 \"Grinder Tokens\" (Fiend-Type/DARK/Level 1/ATK 0/DEF 0) in face-up Attack Position on your side of the field. If you Special Summon this monster, you cannot Normal Summon or Set a monster during the same turn.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 300,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grinder-golem-6373",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jesse Anderson",
+          "set_code": "DP07-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.08"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN196",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 75732622,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75732622.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75732622.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75732622.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.56",
+          "tcgplayer_price": "1.43",
+          "ebay_price": "2.99",
+          "amazon_price": "2.30",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 109336,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-10-20",
+          "konami_id": 7386,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

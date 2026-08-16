@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 47879985,
+      "name": "Guardian of the Throne Room",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A robot guard built to protect throne rooms, it is armed with homing missiles.",
+      "race": "Machine",
+      "atk": 1650,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardian-of-the-throne-room-4091",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.58"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47879985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47879985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47879985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47879985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 197648,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4519,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

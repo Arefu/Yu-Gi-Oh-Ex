@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27107590,
+      "name": "Time Maiden",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Special Summon this card (from your hand). This card can be treated as 2 Tributes for the Tribute Summon of a \"Timelord\" monster. You can Tribute this card; add 1 \"Timelord\" monster with 0 ATK from your Deck to your hand. You can banish this card from your GY; Special Summon 1 \"Timelord\" monster with 0 ATK from your Deck, ignoring its Summoning conditions. You cannot Special Summon other monsters during the turn you activate this effect.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-maiden-8545",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27107590,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27107590.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27107590.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27107590.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.94",
+          "tcgplayer_price": "1.56",
+          "ebay_price": "4.00",
+          "amazon_price": "29.98",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 227648,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13161,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

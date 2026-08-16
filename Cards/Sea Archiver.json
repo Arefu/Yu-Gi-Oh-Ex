@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 53309998,
+      "name": "Sea Archiver",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a monster is Normal or Special Summoned to a zone a Link Monster points to (except during the Damage Step): You can Special Summon this card from your GY (if it was there when the Summon resolved) or hand (even if not), but banish it when it leaves the field. You can only use this effect of \"Sea Archiver\" once per turn.",
+      "race": "Cyberse",
+      "atk": 300,
+      "def": 2100,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sea-archiver-9147",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53309998,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53309998.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53309998.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53309998.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.88",
+          "amazon_price": "1.22",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 240348,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-09",
+          "ocg_date": "2017-12-09",
+          "konami_id": 13520,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

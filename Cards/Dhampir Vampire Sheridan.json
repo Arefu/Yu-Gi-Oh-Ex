@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 32302078,
+      "name": "Dhampir Vampire Sheridan",
+      "typeline": [
+        "Zombie",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 6 monsters\r\nIf you use a monster(s), with a Level, that is owned by your opponent for the Xyz Summon of this card, treat it as Level 6. Once per turn: You can detach 1 material from this card, then target 1 card your opponent controls; send it to the GY. Once per turn, if a Monster Card(s) is sent from the field to your opponent's GY by card effect, or a monster is destroyed by battle and sent to your opponent's GY: You can detach 1 material from this card; Special Summon 1 of those monsters to your field in Defense Position.",
+      "race": "Zombie",
+      "atk": 2600,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dhampir-vampire-sheridan-9296",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN239",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN103",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32302078,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32302078.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32302078.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32302078.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.66",
+          "amazon_price": "4.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Al Dhampir - Vampire Sheridan",
+          "views": 377513,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13650,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

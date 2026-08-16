@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 50263751,
+      "name": "Greed Quasar",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's original ATK and DEF are each equal to its Level x 300. This monster's Level is increased by the Level of monsters it destroys by battle.",
+      "race": "Fiend",
+      "atk": -1,
+      "def": -1,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/greed-quasar-4281",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50263751,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50263751.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50263751.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50263751.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.73",
+          "tcgplayer_price": "5.97",
+          "ebay_price": "4.50",
+          "amazon_price": "10.63",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26790,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2006-08-19",
+          "konami_id": 6869,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

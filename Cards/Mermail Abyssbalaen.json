@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 75180828,
+      "name": "Mermail Abyssbalaen",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard 4 other \"Mermail\" monsters to the Graveyard; Special Summon this card from your hand. When you do: Target cards your opponent controls, up to the number of \"Mermail\" monsters in your Graveyard (if possible); this card gains 500 ATK, and if it does, destroy those targets (if any). You can Tribute 1 other face-up Attack Position \"Mermail\" monster; this card gains the following effect this turn.\n● At the start of the Damage Step, if this card battles a Defense Position monster: Destroy that monster.",
+      "race": "Aqua",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Mermail",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mermail-abyssbalaen-6322",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN083",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75180828,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75180828.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75180828.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75180828.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "2.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28137,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10597,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

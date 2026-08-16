@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 93542102,
+      "name": "Morphtronic Celfon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "● While in Attack Position: Once per turn, you can roll a six-sided die. Reveal cards from top of your Deck equal to the roll and Special Summon 1 Level 4 or lower \"Morphtronic\" monster from among them, ignoring the Summoning conditions. Shuffle the rest into the Deck.\n● While in Defense Position: Once per turn, you can roll a six-sided die. Look at cards from top of your Deck equal to the roll, then return them in the same order.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-celfon-7785",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN003",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "15.14"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Three",
+          "set_code": "TU03-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93542102,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93542102.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93542102.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93542102.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "4.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121877,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7874,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 7541475,
+      "name": "Kabuki Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, before damage calculation, if your monster attacked an opponent's monster: You can change the battle position of that monster your opponent controls. Once per turn, before damage calculation, if an opponent's monster attacked your monster: You can change the battle position of that monster you control.",
+      "race": "Dragon",
+      "atk": 2300,
+      "def": 2100,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kabuki-dragon-644",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7541475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7541475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7541475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7541475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13925,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11517,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

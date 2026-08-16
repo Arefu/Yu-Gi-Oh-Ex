@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": 55063751,
+      "name": "Gameciel, the Sea Turtle Kaiju",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) to your opponent's field in Attack Position, by Tributing 1 monster they control. If your opponent controls a \"Kaiju\" monster, you can Special Summon this card (from your hand) in Attack Position. You can only control 1 \"Kaiju\" monster. When your opponent activates a card or effect, except \"Gameciel, the Sea Turtle Kaiju\" (Quick Effect): You can remove 2 Kaiju Counters from anywhere on the field; negate the activation, and if you do, banish that card.",
+      "race": "Aqua",
+      "atk": 2200,
+      "def": 3000,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gameciel-the-sea-turtle-kaiju-4690",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN164",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN028",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN075",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.44"
+        },
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55063751,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55063751.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55063751.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55063751.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.22",
+          "tcgplayer_price": "2.01",
+          "ebay_price": "6.79",
+          "amazon_price": "2.20",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "staple": "Yes",
+          "views": 2167045,
+          "viewsweek": 21,
+          "upvotes": 34,
+          "downvotes": 11,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12106,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

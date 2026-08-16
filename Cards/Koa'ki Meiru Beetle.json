@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 39037517,
+      "name": "Koa'ki Meiru Beetle",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Insect-Type monster in your hand. If a LIGHT or DARK monster is Special Summoned in Attack Position: Change that monster to Defense Position.",
+      "race": "Insect",
+      "atk": 1900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-beetle-3311",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN066",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive Sneak Peek Participation Card",
+          "set_code": "SOVR-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39037517,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39037517.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39037517.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39037517.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33380,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-01",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8593,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

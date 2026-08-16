@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 30114823,
+      "name": "Code Generator",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Cyberse monster you control would be used as Link Material for a \"Code Talker\" monster, this card in your hand can also be used as material. If this card is sent from the hand or field to the GY as material for the Link Summon of a \"Code Talker\" monster: You can send 1 Cyberse monster with 1200 or less ATK from your Deck to the GY, or, if this card on the field was used as material, you can add that card to your hand instead. You can only use each effect of \"Code Generator\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1300,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Code Talker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/code-generator-9767",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30114823,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30114823.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30114823.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30114823.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 252043,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-06-18",
+          "ocg_date": "2018-09-21",
+          "konami_id": 14162,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

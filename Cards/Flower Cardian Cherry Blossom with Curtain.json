@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 5489987,
+      "name": "Flower Cardian Cherry Blossom with Curtain",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned by its own effect. You can reveal this card in your hand; draw 1 card, and if you do, show it, then Special Summon this card if the drawn card is a \"Flower Cardian\" monster. Otherwise, send it and this card to the Graveyard. During either player's Damage Step, when your \"Flower Cardian\" monster battles an opponent's monster: You can discard this card; your battling monster gains 1000 ATK until the end of this turn.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-cherry-blossom-with-curtain-484",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5489987,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5489987.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5489987.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5489987.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81401,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12747,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

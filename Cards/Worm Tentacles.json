@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 30299166,
+      "name": "Worm Tentacles",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can remove from play 1 Reptile-Type \"Worm\" monster in your Graveyard to allow this card to attack twice during the same Battle Phase.",
+      "race": "Reptile",
+      "atk": 1700,
+      "def": 700,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-tentacles-2566",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN030",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30299166,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30299166.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30299166.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30299166.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.75",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16759,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8255,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

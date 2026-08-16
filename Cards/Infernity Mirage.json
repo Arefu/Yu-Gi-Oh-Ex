@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86197239,
+      "name": "Infernity Mirage",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned from the Graveyard. If you have no cards in your hand, you can Tribute this card to select 2 \"Infernity\" monsters in your Graveyard. Special Summon those monsters.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-mirage-7221",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN005",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86197239,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86197239.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86197239.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86197239.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82249,
+          "viewsweek": 23,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8788,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

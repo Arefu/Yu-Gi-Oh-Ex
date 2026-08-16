@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 786906,
+      "name": "Fateful Hour",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 monster that cannot be Normal Summoned/Set in either GY; Special Summon it.",
+      "race": "Normal",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fateful-hour-9824",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN075",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 786906,
+          "image_url": "https://images.ygoprodeck.com/images/cards/786906.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/786906.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/786906.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witching Hour",
+          "views": 63995,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14152,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

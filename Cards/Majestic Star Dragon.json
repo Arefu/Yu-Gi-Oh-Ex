@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 7841112,
+      "name": "Majestic Star Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Majestic Dragon\" + \"Stardust Dragon\" + 1 non-Tuner monster\nDuring either player's turn, when your opponent activates a card or effect: You can Tribute this card; negate the activation, and if you do, destroy all cards your opponent controls. Once per turn: You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn, and you can activate 1 of its effects as this card's effect once this turn. During the End Phase: Target 1 \"Stardust Dragon\" in your Graveyard; return this card from the field to the Extra Deck, then Special Summon that target.",
+      "race": "Dragon",
+      "atk": 3800,
+      "def": 3000,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "Majestic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majestic-star-dragon-668",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2009 Wave 2",
+          "set_code": "CT06-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "11.91"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN040",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN040",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7841112,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7841112.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7841112.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7841112.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "1.31",
+          "ebay_price": "8.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 278901,
+          "viewsweek": 21,
+          "upvotes": 35,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-03",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8475,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

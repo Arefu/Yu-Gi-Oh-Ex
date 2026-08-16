@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 37169670,
+      "name": "Hyper Psychic Blaster/Assault Mode",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Assault Mode Activate\". If this card battles a monster, at the end of the Damage Step, inflict damage to your opponent equal to that monster's DEF and gain Life Points equal to its ATK. When this card on the field is destroyed, you can Special Summon 1 \"Hyper Psychic Blaster\" from your Graveyard.",
+      "race": "Psychic",
+      "atk": 3500,
+      "def": 3000,
+      "level": 11,
+      "attribute": "EARTH",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hyper-psychic-blaster-assault-mode-3146",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN020",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37169670,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37169670.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37169670.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37169670.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "2.55",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41258,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8018,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

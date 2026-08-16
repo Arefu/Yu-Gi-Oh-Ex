@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 37880706,
+      "name": "Duelittle Chimera",
+      "typeline": [
+        "Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 FIRE monsters\r\nAll FIRE monsters on the field gain 500 ATK/DEF, also all WATER monsters on the field lose 400 ATK/DEF. If this card is destroyed by battle or card effect: You can target 1 FIRE monster in your GY; add it to your hand. You can only use this effect of \"Duelittle Chimera\" once per turn.",
+      "race": "Beast",
+      "atk": 1400,
+      "def": null,
+      "level": 0,
+      "attribute": "FIRE",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/duelittle-chimera-9006",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN270",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37880706,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37880706.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37880706.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37880706.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 250979,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13421,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

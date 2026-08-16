@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 69230391,
+      "name": "Thestalos the Mega Monarch",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card by Tributing 1 Tribute Summoned monster. If this card is Tribute Summoned: Look at your opponent's hand and discard 1 card from their hand, then, if it was a Monster Card, inflict damage to your opponent equal to its original Level x 200. If this card was Tribute Summoned by Tributing a FIRE monster, add this additional effect.\n● Also, inflict 1000 damage to your opponent after that.",
+      "race": "Pyro",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thestalos-the-mega-monarch-5821",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN021",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.86"
+        },
+        {
+          "set_name": "OTS Tournament Pack 28",
+          "set_code": "OP28-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69230391,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69230391.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69230391.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69230391.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.80",
+          "amazon_price": "5.20",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 157586,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11064,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 68170903,
+      "name": "A Feint Plan",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "A player cannot attack face-down monsters during this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-feint-plan-5730",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68170903,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68170903.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68170903.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68170903.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.50",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165028,
+          "viewsweek": 0,
+          "upvotes": 30,
+          "downvotes": 8,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5332,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

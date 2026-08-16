@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 7392745,
+      "name": "Chewbone",
+      "typeline": [
+        "Zombie",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Special Summon 3 \"Chewbone Jr. Tokens\" (Zombie-Type/EARTH/Level 1/ATK 100/DEF 300) to your opponent's field in Defense Position.",
+      "race": "Zombie",
+      "atk": 300,
+      "def": 300,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chewbone-632",
+      "card_sets": [
+        {
+          "set_name": "Dinosmasher's Fury Structure Deck",
+          "set_code": "SR04-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN020",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7392745,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7392745.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7392745.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7392745.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32002,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2011-05-21",
+          "konami_id": 9834,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

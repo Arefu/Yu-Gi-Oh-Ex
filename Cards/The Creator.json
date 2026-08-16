@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 61505339,
+      "name": "The Creator",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Graveyard. Once per turn: You can target 1 monster in your Graveyard; send 1 card from your hand to the Graveyard, and if you do, Special Summon that target.",
+      "race": "Thunder",
+      "atk": 2300,
+      "def": 3000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-creator-5211",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy: Special Edition",
+          "set_code": "EEN-ENSE2",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "7.62"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN257",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN005",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61505339,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61505339.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61505339.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61505339.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.79",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.24",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170173,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2005-12-08",
+          "konami_id": 6176,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 76145142,
+      "name": "Longirsu, the Orcust Orchestrator",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters, including an \"Orcust\" monster\r\nThis linked card cannot be destroyed by card effects. You can target 2 of your banished Machine monsters; shuffle them into the Deck, then you can send 1 linked monster your opponent controls to the GY. This card cannot attack the turn you activate this effect. You can only use this effect of \"Longirsu, the Orcust Orchestrator\" once per turn.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Orcust",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top-Left",
+        "Top",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/longirsu-the-orcust-orchestrator-9659",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN094",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76145142,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76145142.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76145142.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76145142.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.99",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Longirus",
+          "views": 342151,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13931,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

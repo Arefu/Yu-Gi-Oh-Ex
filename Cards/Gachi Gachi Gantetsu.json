@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 10002346,
+      "name": "Gachi Gachi Gantetsu",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters \nIf this face-up card would be destroyed, you can detach 1 Xyz Material from this card instead. Face-up monsters you control gain 200 ATK and DEF for each Xyz Material attached to this card.",
+      "race": "Rock",
+      "atk": 500,
+      "def": 1800,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gachi-gachi-gantetsu-864",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN025",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Dawn of the Xyz",
+          "set_code": "YS11-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10002346,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10002346.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10002346.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10002346.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "1.48",
+          "amazon_price": "0.77",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108898,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-07-08",
+          "ocg_date": "2011-03-19",
+          "konami_id": 9576,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

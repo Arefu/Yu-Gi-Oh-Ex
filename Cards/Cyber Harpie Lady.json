@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 80316585,
+      "name": "Cyber Harpie Lady",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(This card's name is always treated as \"Harpie Lady\".)",
+      "race": "Winged Beast",
+      "atk": 1800,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-harpie-lady-6736",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack Tournament Prize Cards",
+          "set_code": "BATT-EN012",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "93.73"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "26.5"
+        },
+        {
+          "set_name": "Flaming Eternity Sneak Peek Participation Card",
+          "set_code": "SP1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "19.61"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4024.99"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN173",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80316585,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80316585.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80316585.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80316585.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "9.95",
+          "amazon_price": "4.05",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 191950,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Harpie Lady",
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2001-05-21",
+          "konami_id": 5239,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

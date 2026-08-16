@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 91336701,
+      "name": "Day-Breaker the Shining Magical Warrior",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Spellcaster monsters\r\nIf this card is Link Summoned: Place 1 Spell Counter on it. Gains 300 ATK for each Spell Counter on it. You can only activate each of the following effects of \"Day-Breaker the Shining Magical Warrior\" once per turn.\r\n● If a Spellcaster monster(s) is Special Summoned to a zone(s) this card points to: Place 1 Spell Counter on this card.\r\n● You can remove 2 Spell Counters from this card, then target 1 card on the field; destroy it.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/day-breaker-the-shining-magical-warrior-10082",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91336701,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91336701.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91336701.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91336701.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.73",
+          "ebay_price": "1.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Daybreaker the Splendid Magical Knight",
+          "views": 331818,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100308040,
+          "tcg_date": "2019-04-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14445,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 8339504,
+      "name": "Xyz Shift",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 Xyz Monster; Special Summon from your Extra Deck, 1 monster with the same Type, Attribute, and Rank as that Tributed monster had on the field, but with a different name, and if you do, attach this card to it as an Xyz Material. During the End Phase, send it to the Graveyard. You can only activate 1 \"Xyz Shift\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-shift-709",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8339504,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8339504.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8339504.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8339504.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36399,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10947,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

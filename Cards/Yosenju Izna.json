@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 85970321,
+      "name": "Yosenju Izna",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during the End Phase, if this card was Normal Summoned this turn: Return it to the hand. You can only use each of the following effects of \"Yosenju Izna\" once per turn.\r\n● You can discard this card; this turn, your opponent cannot activate cards or effects when a \"Yosenju\" monster(s) is Normal or Special Summoned.\r\n● If you control another \"Yosenju\" monster: You can draw 1 card.",
+      "race": "Beast-Warrior",
+      "atk": 800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yosenju-izna-10239",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85970321,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85970321.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85970321.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85970321.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Yosenju Izunamuchi",
+          "views": 49944,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009010,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14468,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

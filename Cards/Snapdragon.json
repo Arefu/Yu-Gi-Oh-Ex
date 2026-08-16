@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 75673220,
+      "name": "Snapdragon",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent to the Graveyard: Banish 1 random card from your opponent's hand, until the End Phase. You can only use the effect of \"Snapdragon\" once per turn.",
+      "race": "Plant",
+      "atk": 300,
+      "def": 100,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/snapdragon-6371",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75673220,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75673220.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75673220.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75673220.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.00",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14916,
+          "viewsweek": 42,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2010-10-21",
+          "konami_id": 9435,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

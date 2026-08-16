@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 44584775,
+      "name": "Damage = Reptile",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, when you take Battle Damage from a battle involving a Reptile-Type monster, you can Special Summon 1 Reptile-Type monster from your Deck with ATK less than or equal to the Battle Damage you took.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/damage-reptile-3797",
+      "card_sets": [
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44584775,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44584775.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44584775.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44584775.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.80",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63969,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7167,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

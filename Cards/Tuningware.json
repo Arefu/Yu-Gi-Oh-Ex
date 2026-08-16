@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 92676637,
+      "name": "Tuningware",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be treated as a Level 2 monster when used for a Synchro Summon. If this card is sent to the Graveyard for a Synchro Summon: Draw 1 card.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 300,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tuningware-7714",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 14 participation cards",
+          "set_code": "DL14-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "12.24"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei",
+          "set_code": "DP08-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92676637,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92676637.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92676637.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92676637.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "1.26",
+          "ebay_price": "0.99",
+          "amazon_price": "2.02",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155980,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-24",
+          "ocg_date": "2008-10-18",
+          "konami_id": 7986,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

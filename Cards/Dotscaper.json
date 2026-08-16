@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 18789533,
+      "name": "Dotscaper",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY: You can Special Summon this card. If this card is banished: You can Special Summon this card. You can only use 1 \"Dotscaper\" effect per turn, and only once that turn. You can only use each effect of \"Dotscaper\" once per Duel.",
+      "race": "Cyberse",
+      "atk": 0,
+      "def": 2100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dotscaper-8524",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN111",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN011",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN011",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "5.51"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18789533,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18789533.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18789533.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18789533.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dot Scraper",
+          "views": 494810,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13193,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

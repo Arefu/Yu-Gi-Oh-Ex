@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 27279764,
+      "name": "Apoqliphort Towers",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. Requires 3 \"Qli\" Tributes to Normal Summon/Set. If this card is Normal Summoned/Set, it is unaffected by Spell/Trap effects and by activated effects from any monster whose original Level/Rank is lower than this card's current Level. All Special Summoned monsters lose 500 ATK and DEF. Once per turn: You can make your opponent send 1 monster from their hand or their side of the field to the Graveyard (their choice).",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2600,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Apoqliphort",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/apoqliphort-towers-2331",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27279764,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27279764.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27279764.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27279764.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "2.50",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93494,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11358,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

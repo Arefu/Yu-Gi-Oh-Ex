@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 14812471,
+      "name": "Salamangreat Balelynx",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower Cyberse monster\r\nIf this card is Link Summoned: You can add 1 \"Salamangreat Sanctuary\" from your Deck to your hand. If a \"Salamangreat\" card(s) you control would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use each effect of \"Salamangreat Balelynx\" once per turn.",
+      "race": "Cyberse",
+      "atk": 500,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-balelynx-9889",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14812471,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14812471.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14812471.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14812471.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.50",
+          "amazon_price": "2.83",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Salamangreat Veilynx",
+          "views": 498188,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14249,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

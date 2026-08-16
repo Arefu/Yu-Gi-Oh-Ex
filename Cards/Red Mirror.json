@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 8706701,
+      "name": "Red Mirror",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares an attack: You can send this card from your hand to the Graveyard, then target 1 FIRE Fiend-Type monster in your Graveyard, except \"Red Mirror\"; add it to your hand. If you Synchro Summon while this card is in your Graveyard (except during the Damage Step, or the turn this card was sent to the Graveyard): You can add this card to your hand. You can only use each effect of \"Red Mirror\" once per turn.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-mirror-738",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8706701,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8706701.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8706701.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8706701.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.19",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97622,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12415,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

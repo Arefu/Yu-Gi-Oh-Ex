@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 70298454,
+      "name": "Leng Ling",
+      "typeline": [
+        "Dragon",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 face-up monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. The original ATK of a monster equipped with this card becomes 1000, it can make a second attack during each Battle Phase, also if the equipped monster would be destroyed by battle or card effect, destroy this card instead.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leng-ling-8839",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70298454,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70298454.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70298454.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70298454.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Conjoined Bird Renrin",
+          "views": 42592,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13250,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 85475641,
+      "name": "Infernity Avenger",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When a monster you control, except \"Infernity Avenger\", is destroyed by battle with an opponent's monster and sent to the Graveyard, while you have no cards in your hand, you can Special Summon this card from your Graveyard. In that case, the Level of this card is equal to the Level of your destroyed monster.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-avenger-7163",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85475641,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85475641.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85475641.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85475641.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "1.19",
+          "ebay_price": "1.99",
+          "amazon_price": "1.15",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69163,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8791,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

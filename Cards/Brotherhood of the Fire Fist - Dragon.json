@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 43748308,
+      "name": "Brotherhood of the Fire Fist - Dragon",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if you activate a \"Fire Formation\" Spell/Trap Card (except during the Damage Step): You can Set 1 \"Fire Formation\" Trap directly from your Deck. Once per turn: You can send 2 face-up \"Fire Formation\" Spells/Traps you control to the GY, then target 1 \"Fire Fist\" monster in your GY, except \"Brotherhood of the Fire Fist - Dragon\"; Special Summon that target.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-dragon-3736",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 18 participation cards",
+          "set_code": "DL18-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.92"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43748308,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43748308.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43748308.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43748308.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "3.19",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91932,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10384,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 67985943,
+      "name": "Gem-Knight Citrine",
+      "typeline": [
+        "Pyro",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Gem-Knight\" monster + 1 Pyro-Type monster\nMust first be Fusion Summoned. If this card attacks or is attacked, your opponent cannot activate cards or effects until the end of the Damage Step.",
+      "race": "Pyro",
+      "atk": 2200,
+      "def": 1950,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-citrine-5712",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN139",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN035",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67985943,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67985943.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67985943.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67985943.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.50",
+          "amazon_price": "3.35",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49499,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9390,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

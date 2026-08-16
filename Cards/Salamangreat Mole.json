@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 89484053,
+      "name": "Salamangreat Mole",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, if you Link Summoned this turn: You can Special Summon this card from your hand to your zone a Link Monster points to. If you control no monsters: You can banish this card from your GY, then target 5 \"Salamangreat\" cards in your GY; shuffle them into the Deck, then draw 2 cards. You can only use each effect of \"Salamangreat Mole\" once per turn.",
+      "race": "Cyberse",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-mole-9909",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89484053,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89484053.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89484053.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89484053.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85384,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14239,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

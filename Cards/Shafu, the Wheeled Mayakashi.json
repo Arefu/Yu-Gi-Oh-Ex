@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 78936551,
+      "name": "Shafu, the Wheeled Mayakashi",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 \"Mayakashi\" monster in your GY, except \"Shafu, the Wheeled Mayakashi\"; Special Summon it in Defense Position, but negate its effects. You can only use this effect of \"Shafu, the Wheeled Mayakashi\" once per turn. You cannot Special Summon monsters from the Extra Deck, except \"Mayakashi\" monsters.",
+      "race": "Zombie",
+      "atk": 1200,
+      "def": 400,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Mayakashi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shafu-the-wheeled-mayakashi-9717",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78936551,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78936551.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78936551.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78936551.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.97",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Rickshaw Mayakashi - Shafu",
+          "views": 78391,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14034,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

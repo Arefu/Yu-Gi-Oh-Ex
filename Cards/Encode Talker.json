@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 6622715,
+      "name": "Encode Talker",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Cyberse monsters\r\nOnce per turn, before damage calculation, if your monster this card points to battles an opponent's monster with higher ATK than it: You can make that monster unable to be destroyed by that battle, also you take no battle damage from that battle. After that damage calculation, have this card or 1 monster it points to gain ATK equal to the ATK of that battled opponent's monster, until the end of this turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Code Talker",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/encode-talker-8728",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6622715,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6622715.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6622715.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6622715.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151440,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13202,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

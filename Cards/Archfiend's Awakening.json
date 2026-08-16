@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 95825679,
+      "name": "Archfiend's Awakening",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Contract with the Abyss\". This card's name becomes \"Summoned Skull\" on the field, but is still treated as an \"Archfiend\" card. Cannot be destroyed by battle, except by battle with a Ritual Monster, and cannot be destroyed by monster effects, except those of Ritual Monsters. If this Ritual Summoned card you control is sent to your GY by an opponent's card: You can Special Summon 1 \"Summoned Skull\" from your hand, Deck, or GY.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-s-awakening-9381",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95825679,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95825679.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95825679.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95825679.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.08",
+          "tcgplayer_price": "1.72",
+          "ebay_price": "5.50",
+          "amazon_price": "0.54",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Advent Skull Archfiend",
+          "views": 133428,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-03-24",
+          "konami_id": 13715,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

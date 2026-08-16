@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 36100154,
+      "name": "Amazoness Fighting Spirit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If an \"Amazoness\" monster attacks a monster with higher ATK, the attacking monster gains 1000 ATK during damage calculation only.",
+      "race": "Continuous",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-fighting-spirit-3055",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-END14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36100154,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36100154.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36100154.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36100154.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.75",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55357,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8985,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 73507661,
+      "name": "Fairy Wind",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Destroy as many face-up Spell/Trap Cards on the field as possible (other than this card), and if you do, each player takes damage equal to the total number of cards destroyed by this effect x 300.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fairy-wind-6170",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN094",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73507661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73507661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73507661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73507661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89929,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8356,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

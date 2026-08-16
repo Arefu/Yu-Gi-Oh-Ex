@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 52035300,
+      "name": "The Immortal Bushi",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is face-up on the field, it cannot be Tributed, except for the Tribute Summon of a Warrior-Type monster. During your Standby Phase, if this card is in your Graveyard and all the monsters in your Graveyard are Warrior-Type: You can Special Summon this card. You must also control no monsters to activate and to resolve this effect.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-immortal-bushi-4429",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN036",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52035300,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52035300.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52035300.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52035300.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48373,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7430,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

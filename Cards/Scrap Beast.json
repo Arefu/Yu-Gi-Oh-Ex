@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 19139516,
+      "name": "Scrap Beast",
+      "typeline": [
+        "Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this face-up Defense Position card is targeted for an attack, at the end of the Battle Phase: Destroy this card. If this card is destroyed by the effect of a \"Scrap\" card and sent to the Graveyard: You can target 1 \"Scrap\" monster in your Graveyard, except \"Scrap Beast\"; add that target to your hand.",
+      "race": "Beast",
+      "atk": 1600,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-beast-1651",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Four",
+          "set_code": "AP04-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19139516,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19139516.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19139516.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19139516.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53896,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8952,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 28593329,
+      "name": "Dark Angel",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your Fairy monster is targeted for an attack: You can Tribute it and send this card from your hand to the GY, then target 1 face-up monster you control; change the attack target to your targeted monster, and if you do, it gains ATK equal to the original ATK of the Tributed monster, until the end of this turn.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-angel-8703",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN024",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN024",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28593329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28593329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28593329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28593329.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "10.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28050,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13221,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

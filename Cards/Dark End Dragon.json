@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 88643579,
+      "name": "Dark End Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner DARK monsters\nOnce per turn: You can target 1 monster your opponent controls; this card loses 500 ATK and DEF, and you send that target to the Graveyard.",
+      "race": "Dragon",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-end-dragon-7410",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN188",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN216",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN216",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN066",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump Championship 2009 Prize Card",
+          "set_code": "SJCS-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14693.33"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 8, Issue 11 promotional card",
+          "set_code": "JUMP-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88643579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88643579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88643579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88643579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "13.81",
+          "tcgplayer_price": "11.36",
+          "ebay_price": "6.45",
+          "amazon_price": "4.88",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 295032,
+          "viewsweek": 42,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-04-26",
+          "ocg_date": "2008-05-21",
+          "konami_id": 7371,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

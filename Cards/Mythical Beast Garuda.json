@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 28570310,
+      "name": "Mythical Beast Garuda",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have no card in your other Pendulum Zone: You can target 1 other Spell/Trap on the field; destroy both it and this card. You can only use this effect of \"Mythical Beast Garuda\" once per turn.\n\n[ Monster Effect ] \nEach time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. When your opponent Normal or Special Summons a monster(s) (except during the Damage Step): You can remove 3 Spell Counters from your field; Special Summon this card from your hand, then return that opponent's Summoned monster(s) to the hand. You can only use this effect of \"Mythical Beast Garuda\" once per turn.",
+      "race": "Spellcaster",
+      "pend_desc": "If you have no card in your other Pendulum Zone: You can target 1 other Spell/Trap on the field; destroy both it and this card. You can only use this effect of \"Mythical Beast Garuda\" once per turn.",
+      "monster_desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. When your opponent Normal or Special Summons a monster(s) (except during the Damage Step): You can remove 3 Spell Counters from your field; Special Summon this card from your hand, then return that opponent's Summoned monster(s) to the hand. You can only use this effect of \"Mythical Beast Garuda\" once per turn.",
+      "atk": 1200,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Mythical Beast",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-beast-garuda-8986",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28570310,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28570310.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28570310.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28570310.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.61",
+          "tcgplayer_price": "1.05",
+          "ebay_price": "3.76",
+          "amazon_price": "4.63",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 127413,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13393,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

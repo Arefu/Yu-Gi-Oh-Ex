@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 92559258,
+      "name": "Servant of Endymion",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nEach time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from this card; Special Summon both this card from your Pendulum Zone and 1 monster from your Deck with 1000 or more ATK that you can place a Spell Counter on, and if you do, place 1 Spell Counter on each.\n\n[ Monster Effect ] \nYou can only Special Summon \"Servant(s) of Endymion\" once per turn. This card with a Spell Counter can attack directly. Once per opponent's turn (Quick Effect): You can discard 1 card; place 1 Spell Counter on each card you control that you can place a Spell Counter on. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone, then place the same number of Spell Counters on it that it had as a monster.",
+      "race": "Spellcaster",
+      "pend_desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from this card; Special Summon both this card from your Pendulum Zone and 1 monster from your Deck with 1000 or more ATK that you can place a Spell Counter on, and if you do, place 1 Spell Counter on each.",
+      "monster_desc": "You can only Special Summon \"Servant(s) of Endymion\" once per turn. This card with a Spell Counter can attack directly. Once per opponent's turn (Quick Effect): You can discard 1 card; place 1 Spell Counter on each card you control that you can place a Spell Counter on. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone, then place the same number of Spell Counters on it that it had as a monster.",
+      "atk": 900,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Endymion",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/servant-of-endymion-10162",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92559258,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92559258.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92559258.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92559258.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "3.95",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 341041,
+          "viewsweek": 0,
+          "upvotes": 42,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100308004,
+          "tcg_date": "2019-04-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14442,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

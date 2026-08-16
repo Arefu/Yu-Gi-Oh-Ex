@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 80744121,
+      "name": "Destiny HERO - Fear Monger",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Standby Phase, if this card is in your Graveyard because it was destroyed by battle and sent there since your last Standby Phase: Target 1 \"Destiny HERO\" monster in your Graveyard, except a \"Destiny HERO - Fear Monger\"; Special Summon that target.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-fear-monger-6773",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Six",
+          "set_code": "CP06-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN130",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENB06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80744121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80744121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80744121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80744121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105891,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6756,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

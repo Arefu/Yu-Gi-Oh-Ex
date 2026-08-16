@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86926989,
+      "name": "Shiranui Skillsaga Supremacy",
+      "typeline": [
+        "Zombie",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Zombie monsters\r\nSynchro Monsters you control cannot be destroyed by card effects. FIRE monsters you control cannot be destroyed by battle. During your opponent's turn (Quick Effect): You can target 1 of your banished Zombie Synchro Monsters; Special Summon it to your zone this card points to. You can only use this effect of \"Shiranui Skillsaga Supremacy\" once per turn.",
+      "race": "Zombie",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-skillsaga-supremacy-9783",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86926989,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86926989.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86926989.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86926989.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "1.25",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shiranui Splendidsaga",
+          "views": 152167,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14131,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

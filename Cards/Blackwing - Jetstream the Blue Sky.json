@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 87390067,
+      "name": "Blackwing - Jetstream the Blue Sky",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, you can send this card from your hand to the Graveyard to prevent a \"Blackwing\" monster you control from being destroyed by this battle.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 800,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-jetstream-the-blue-sky-7313",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87390067,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87390067.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87390067.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87390067.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.04",
+          "tcgplayer_price": "4.17",
+          "ebay_price": "3.49",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30526,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-27",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9243,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

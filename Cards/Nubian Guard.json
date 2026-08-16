@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 51616747,
+      "name": "Nubian Guard",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card inflicts Battle Damage to your opponent's Life Points, you can return 1 Continuous Spell Card from your Graveyard to the top of your Deck.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 500,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nubian-guard-4393",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN179",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51616747,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51616747.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51616747.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51616747.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48460,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6028,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

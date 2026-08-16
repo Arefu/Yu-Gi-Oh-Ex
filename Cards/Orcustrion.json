@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 3134857,
+      "name": "Orcustrion",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters, including an \"Orcust\" monster\r\nThis linked card cannot be destroyed by battle or card effects. You can target 3 of your banished Machine monsters; shuffle them into the Deck, and if you do, the ATK/DEF of any linked monster(s) your opponent currently controls become 0, also their effects are negated. You can only use this effect of \"Orcustrion\" once per turn.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Orcust",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Top-Right",
+        "Bottom-Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcustrion-9650",
+      "card_sets": [
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3134857,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3134857.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3134857.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3134857.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.81",
+          "tcgplayer_price": "0.94",
+          "ebay_price": "1.78",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Orchestrion",
+          "views": 99209,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13932,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

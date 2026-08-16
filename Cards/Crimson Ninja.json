@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 14618326,
+      "name": "Crimson Ninja",
+      "typeline": [
+        "Warrior",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Target 1 Trap Card on the field; destroy that target. (If the target is Set, reveal it, and destroy it if it is a Trap Card. Otherwise, return it to its original position.)",
+      "race": "Warrior",
+      "atk": 300,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crimson-ninja-1251",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 13 participation cards",
+          "set_code": "DL13-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14618326,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14618326.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14618326.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14618326.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.50",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160667,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5816,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

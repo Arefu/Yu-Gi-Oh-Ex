@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 44125452,
+      "name": "Rose Fairy",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is added from your Deck to your hand by a card effect: You can Special Summon this card.",
+      "race": "Plant",
+      "atk": 600,
+      "def": 1200,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Rose Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rose-fairy-3765",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44125452,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44125452.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44125452.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44125452.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.56",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102619,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8624,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32965616,
+      "name": "Elemental Grace Doriado",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having 6 or more monsters with different Attributes in the GYs. Gains ATK/DEF equal to the number of different Attributes in the GYs x 500. When your opponent would Special Summon a monster(s) (Quick Effect): You can banish 3 monsters from your GY; negate the Summon, and if you do, destroy that monster(s).",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Doriado",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-grace-doriado-8702",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN128",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32965616,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32965616.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32965616.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32965616.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "9.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62294,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13255,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

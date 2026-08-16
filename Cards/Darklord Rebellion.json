@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 50501121,
+      "name": "Darklord Rebellion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 \"Darklord\" monster from your hand or face-up field to the GY; destroy 1 card on the field. You can only activate 1 \"Darklord Rebellion\" per turn.",
+      "race": "Normal",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-rebellion-4304",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN036",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.32"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN109",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN123",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50501121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50501121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50501121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50501121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 215895,
+          "viewsweek": 42,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12730,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

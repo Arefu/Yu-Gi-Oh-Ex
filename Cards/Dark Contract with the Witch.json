@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 9765723,
+      "name": "Dark Contract with the Witch",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can send 1 \"D/D\" or \"Dark Contract\" card from your hand to the Graveyard, then target 1 card on the field; destroy it. You can only use this effect of \"Dark Contract with the Witch\" once per turn. All Fiend-Type monsters you control gain 1000 ATK during your opponent's turn only. Once per turn, during your Standby Phase: Take 1000 damage.",
+      "race": "Continuous",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-contract-with-the-witch-825",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN170",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9765723,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9765723.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9765723.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9765723.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.35",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114418,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2014-08-09",
+          "konami_id": 11448,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

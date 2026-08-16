@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 19943114,
+      "name": "Cynet Regression",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you Special Summon a Link Monster(s): Target 1 card on the field; destroy it, then draw 1 card. You can only activate 1 \"Cynet Regression\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cynet-regression-9394",
+      "card_sets": [
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19943114,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19943114.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19943114.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19943114.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "18.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54686,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-12",
+          "ocg_date": "2018-03-24",
+          "konami_id": 13697,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

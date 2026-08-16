@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 38973775,
+      "name": "Photon Lizard",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; add 1 Level 4 or lower \"Photon\" monster from your Deck to your hand. You can only use this effect of \"Photon Lizard\" once per turn.",
+      "race": "Dragon",
+      "atk": 900,
+      "def": 1200,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-lizard-3300",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN006",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38973775,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38973775.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38973775.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38973775.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.68",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57604,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9881,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 84488827,
+      "name": "Steelswarm Caucastag",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned by Tributing 2 \"Steelswarm\" monsters: Activate 1 of these effects.\n● Destroy all monsters on the field, except this card.\n● Destroy all Spell and Trap Cards on the field.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-caucastag-7088",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN083",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84488827,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84488827.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84488827.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84488827.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.20",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "4.99",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22200,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9177,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

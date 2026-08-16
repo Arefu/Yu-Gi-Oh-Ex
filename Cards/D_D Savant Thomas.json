@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 41546,
+      "name": "D/D Savant Thomas",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nDuring your Main Phase: You can add 1 face-up \"D/D\" Pendulum Monster from your Extra Deck to your hand. You can only use this effect of \"D/D Savant Thomas\" once per turn.\n\n[ Monster Effect ] \nYou can target 1 \"D/D\" card in your Pendulum Zone; destroy that card, and if you do, Special Summon 1 Level 8 \"D/D/D\" monster from your Deck in Defense Position, but for the rest of this turn, its effects (if any) are negated, also any battle damage your opponent takes becomes halved. You can only use this effect of \"D/D Savant Thomas\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "During your Main Phase: You can add 1 face-up \"D/D\" Pendulum Monster from your Extra Deck to your hand. You can only use this effect of \"D/D Savant Thomas\" once per turn.",
+      "monster_desc": "You can target 1 \"D/D\" card in your Pendulum Zone; destroy that card, and if you do, Special Summon 1 Level 8 \"D/D/D\" monster from your Deck in Defense Position, but for the rest of this turn, its effects (if any) are negated, also any battle damage your opponent takes becomes halved. You can only use this effect of \"D/D Savant Thomas\" once per turn.",
+      "atk": 1800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 6,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-savant-thomas-3",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN065",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN078",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41546,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41546.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41546.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41546.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 275086,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12409,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 77133792,
+      "name": "Magnet Conversion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target up to 3 Level 4 or lower \"Magnet Warrior\" monsters in your GY; add them to your hand. During either player's turn, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 of your banished Level 4 or lower \"Magnet Warrior\" monsters; Special Summon it.",
+      "race": "Normal",
+      "archetype": "Magnet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magnet-conversion-6491",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN122",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77133792,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77133792.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77133792.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77133792.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45915,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12580,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

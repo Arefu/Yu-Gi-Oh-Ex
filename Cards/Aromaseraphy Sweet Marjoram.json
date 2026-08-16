@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 79656239,
+      "name": "Aromaseraphy Sweet Marjoram",
+      "typeline": [
+        "Plant",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nWhile your LP are higher than your opponent's, your opponent cannot target Plant monsters you control with card effects. You can only use each of the following effects of \"Aromaseraphy Sweet Marjoram\" once per turn.\r\n● If this card is Synchro Summoned: You can add 1 \"Humid Winds\", \"Dried Winds\", or \"Blessed Winds\" from your Deck to your hand.\r\n● If you gain LP: Target 1 card your opponent controls; destroy it.",
+      "race": "Plant",
+      "atk": 2200,
+      "def": 2000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aromaseraphy-sweet-marjoram-10451",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN034",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79656239,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79656239.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79656239.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79656239.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.92",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 252953,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010034,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14661,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

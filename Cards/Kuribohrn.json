@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 78355370,
+      "name": "Kuribohrn",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Battle Phase: You can discard this card, then target 1 monster in your GY that was destroyed by battle and sent there this turn; Special Summon it. When an opponent's monster declares an attack: You can banish this card from your GY, then target any number of \"Kuriboh\" monsters in your GY; Special Summon them.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Kuriboh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kuribohrn-6582",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN063",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2019)",
+          "set_code": "AC19-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78355370,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78355370.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78355370.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78355370.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.50",
+          "amazon_price": "5.07",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 218092,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12577,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

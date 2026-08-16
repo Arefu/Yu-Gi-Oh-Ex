@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 29726552,
+      "name": "Kumongous, the Sticky String Kaiju",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) to your opponent's field in Attack Position, by Tributing 1 monster they control. If your opponent controls a \"Kaiju\" monster, you can Special Summon this card (from your hand) in Attack Position. You can only control 1 \"Kaiju\" monster. When your opponent Normal or Special Summons a monster(s): You can remove 2 Kaiju Counters from anywhere on the field; until the end of the next turn, that monster(s) cannot attack and it has its effects negated.",
+      "race": "Insect",
+      "atk": 2400,
+      "def": 2500,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kumongous-the-sticky-string-kaiju-2517",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN099",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Beware of Traptrix",
+          "set_code": "SDBT-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29726552,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29726552.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29726552.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29726552.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "6.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 686274,
+          "viewsweek": 42,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12039,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

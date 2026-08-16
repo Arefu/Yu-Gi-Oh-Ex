@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 50785356,
+      "name": "Feedback Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can target 1 face-up monster you control; it becomes Level 3.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 700,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/feedback-warrior-4326",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Dawn of the Xyz",
+          "set_code": "YS11-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Xyz Symphony",
+          "set_code": "YS12-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50785356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50785356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50785356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50785356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 10909,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-07-08",
+          "ocg_date": "2011-03-19",
+          "konami_id": 9565,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

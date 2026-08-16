@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 30845999,
+      "name": "Qlipper Launch",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Until the end of this turn, all Normal Summoned/Set \"Qli\" monsters currently on the field gain 300 ATK, but are unaffected by other Spell/Trap effects, also their effects are negated.",
+      "race": "Normal",
+      "archetype": "Qli",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qlipper-launch-2620",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN183",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30845999,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30845999.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30845999.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30845999.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20108,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11406,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 99330325,
+      "name": "Interrupted Kaiju Slumber",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy as many monsters on the field as possible, then Special Summon in Attack Position, 2 \"Kaiju\" monsters with different names from your Deck (1 on each side), but they cannot change their battle positions, and must attack, if able. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY; add 1 \"Kaiju\" monster from your Deck to your hand. You can only activate 1 \"Interrupted Kaiju Slumber\" per turn.",
+      "race": "Normal",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/interrupted-kaiju-slumber-8247",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN103",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN087",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN089",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99330325,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99330325.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99330325.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99330325.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "0.40",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 900469,
+          "viewsweek": 42,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12250,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

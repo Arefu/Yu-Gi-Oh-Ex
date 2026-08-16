@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 97783659,
+      "name": "Blood Sucker",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card inflicts battle damage to your opponent: Send the top card of their Deck to the GY.",
+      "race": "Zombie",
+      "atk": 1300,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blood-sucker-8128",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97783659,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97783659.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97783659.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97783659.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28960,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2004-12-18",
+          "konami_id": 6289,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

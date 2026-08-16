@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 49394035,
+      "name": "Vendread Core",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your GY: You can banish 1 other Zombie monster from your GY; Special Summon this card, but banish it when it leaves the field. A \"Vendread\" monster Ritual Summoned using this card on the field gains the following effect. You can only use each of the preceding effects of \"Vendread Core\" once per turn.\r\n● Your opponent cannot target this card with card effects.",
+      "race": "Zombie",
+      "atk": 0,
+      "def": 500,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vendread-core-9297",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49394035,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49394035.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49394035.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49394035.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "2.09",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78281,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13535,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

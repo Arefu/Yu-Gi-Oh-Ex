@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 8692301,
+      "name": "Gem-Knight Zirconia",
+      "typeline": [
+        "Rock",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Gem-Knight\" monster + 1 Rock-Type monster",
+      "race": "Rock",
+      "atk": 2900,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-zirconia-735",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN142",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN033",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8692301,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8692301.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8692301.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8692301.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.75",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87017,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9820,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

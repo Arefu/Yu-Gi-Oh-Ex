@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 88069597,
+      "name": "Predaponics",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can Special Summon 1 Level 4 or lower \"Predaplant\" monster from your hand or GY, but negate its effects (even if this card leaves the field). Once per turn, during your Standby Phase, pay 800 LP or destroy this card.",
+      "race": "Continuous",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaponics-7364",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN011",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88069597,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88069597.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88069597.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88069597.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.18",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118003,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12837,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

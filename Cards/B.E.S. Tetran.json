@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 44954628,
+      "name": "B.E.S. Tetran",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, put 3 counters on it. This card cannot be destroyed by battle. If this card attacks or is attacked, remove 1 counter from this card at the end of the Damage Step. If you cannot, destroy it. Once per turn, you can remove 1 counter on this card to destroy 1 Spell or Trap Card on the field.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 2300,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "B.E.S.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/b-e-s-tetran-3833",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN077",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "123"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN017",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44954628,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44954628.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44954628.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44954628.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "0.67",
+          "ebay_price": "10.99",
+          "amazon_price": "1.54",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52856,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6498,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

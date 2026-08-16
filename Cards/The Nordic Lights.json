@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 50433147,
+      "name": "The Nordic Lights",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "\"Nordic\" monsters on the field cannot be destroyed by battle. If this card on the field is destroyed: Destroy all \"Nordic\" monsters on the field.",
+      "race": "Field",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-nordic-lights-4297",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN195",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN087",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50433147,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50433147.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50433147.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50433147.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "6.75",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64655,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9456,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

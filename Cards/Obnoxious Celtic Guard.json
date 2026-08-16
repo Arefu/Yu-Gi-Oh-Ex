@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 52077741,
+      "name": "Obnoxious Celtic Guard",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by battle with a monster that has 1900 or more ATK.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Celtic Guard",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/obnoxious-celtic-guard-4433",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2004",
+          "set_code": "CT1-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "14.33"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN112",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.75"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Warrior's Triumph",
+          "set_code": "SD5-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.71"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52077741,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52077741.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52077741.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52077741.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.00",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 275961,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-09-01",
+          "ocg_date": "2001-06-28",
+          "konami_id": 5244,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

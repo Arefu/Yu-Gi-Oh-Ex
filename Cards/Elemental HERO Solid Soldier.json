@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 45195443,
+      "name": "Elemental HERO Solid Soldier",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 Level 4 or lower \"HERO\" monster from your hand. If this card is sent from the Monster Zone to the GY by a Spell effect: You can target 1 \"HERO\" monster in your GY, except \"Elemental HERO Solid Soldier\"; Special Summon it in Defense Position. You can only use this effect of \"Elemental HERO Solid Soldier\" once per turn.",
+      "race": "Warrior",
+      "atk": 1300,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-solid-soldier-9198",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.65"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45195443,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45195443.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45195443.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45195443.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.98",
+          "amazon_price": "1.43",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Elemental HERO Solidman",
+          "views": 644246,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2018-01-20",
+          "konami_id": 13638,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

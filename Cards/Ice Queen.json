@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 14462257,
+      "name": "Ice Queen",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the GY. When this face-up card you control is destroyed and sent to your GY: You can target 1 Spell in your GY; add that target to your hand. You must have 3 or more Spellcaster monsters in your GY to activate and to resolve this effect.",
+      "race": "Spellcaster",
+      "atk": 2900,
+      "def": 2100,
+      "level": 8,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ice-queen-1233",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN207",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN094",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14462257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14462257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14462257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14462257.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "29.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36329,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2008-10-21",
+          "konami_id": 7498,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

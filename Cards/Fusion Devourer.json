@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 98336111,
+      "name": "Fusion Devourer",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card battles a Fusion Monster, the ATK of the Fusion Monster becomes 0 during the Damage Step only.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusion-devourer-8172",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN020",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN020",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98336111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98336111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98336111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98336111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38563,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6976,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

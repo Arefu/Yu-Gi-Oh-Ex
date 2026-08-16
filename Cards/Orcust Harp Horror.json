@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 57835716,
+      "name": "Orcust Harp Horror",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your GY; Special Summon 1 \"Orcust\" monster from your Deck, except \"Orcust Harp Horror\", also you cannot Special Summon monsters for the rest of this turn, except DARK monsters. You can only use this effect of \"Orcust Harp Horror\" once per turn.",
+      "race": "Machine",
+      "atk": 1700,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcust-harp-horror-9656",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN071",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57835716,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57835716.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57835716.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57835716.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "4.95",
+          "amazon_price": "6.23",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Divertimento Devil",
+          "views": 550486,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13903,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

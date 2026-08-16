@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 75223115,
+      "name": "Malefic Territory",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can activate 1 \"Malefic World\" from your Deck. While that card is in the Field Zone, neither player can target a card(s) in the Field Zone with card effects. The \"Malefic\" monster effect, \"There can only be 1 face-up \"Malefic\" monster on the field\" becomes \"There can only be 1 face-up \"Malefic\" monster on the field with the same name\". During the Battle Phase, negate the effects of face-up \"Malefic\" monsters on the field.",
+      "race": "Continuous",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-territory-10108",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75223115,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75223115.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75223115.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75223115.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96358,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14380,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 63224564,
+      "name": "Cyber Shield",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to \"Harpie Lady\" or \"Harpie Lady Sisters\". It gains 500 ATK.",
+      "race": "Equip",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-shield-5340",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENC12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63224564,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63224564.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63224564.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63224564.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80411,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "1999-07-08",
+          "konami_id": 4323,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

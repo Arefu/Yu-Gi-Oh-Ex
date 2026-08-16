@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 68477598,
+      "name": "Pendulum Hole",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a monster(s) would be Pendulum Summoned: Negate the Pendulum Summon, and if you do, shuffle that monster(s) into the Deck.",
+      "race": "Counter",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-hole-5757",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68477598,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68477598.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68477598.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68477598.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19927,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12478,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

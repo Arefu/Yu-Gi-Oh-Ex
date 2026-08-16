@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 65196094,
+      "name": "Variety Comes Out",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Return 1 face-up Synchro Monster you control to the Extra Deck to select and Special Summon a Tuner monster(s) from your Graveyard, whose total Levels equal the Level of that Synchro Monster. You cannot Synchro Summon the turn you activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/variety-comes-out-5495",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65196094,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65196094.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65196094.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65196094.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19284,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8657,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

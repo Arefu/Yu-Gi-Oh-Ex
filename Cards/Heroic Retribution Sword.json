@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 49551909,
+      "name": "Heroic Retribution Sword",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up \"Heroic\" monster you control; equip this card to that target. All Battle Damage you take from battles involving the equipped monster is also inflicted to your opponent. After damage calculation: Destroy any opponent's monster that battles the equipped monster.",
+      "race": "Normal",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heroic-retribution-sword-4222",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49551909,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49551909.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49551909.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49551909.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26126,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10198,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

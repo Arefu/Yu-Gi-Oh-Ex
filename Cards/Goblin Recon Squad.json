@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 82324312,
+      "name": "Goblin Recon Squad",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card successfully attacks directly, you can look at 1 random card in your opponent's hand. If it is a Spell Card, send it to the Graveyard. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. This card's battle position cannot be changed until the end of your next turn, except with a card effect.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goblin-recon-squad-6921",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82324312,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82324312.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82324312.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82324312.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "1.13",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36609,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7606,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

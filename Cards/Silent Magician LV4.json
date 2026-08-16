@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 73665146,
+      "name": "Silent Magician LV4",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time your opponent draws a card(s), place 1 Spell Counter on this card (max. 5). This card gains 500 ATK for each Spell Counter on it. During the Standby Phase of your next turn after the 5th Spell Counter is placed on this card: You can send this face-up card with 5 Spell Counters on it to the Graveyard; Special Summon 1 \"Silent Magician LV8\" from your hand or Deck.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Silent Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silent-magician-lv4-6187",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Eight",
+          "set_code": "CP08-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENY14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Nightmare Troubadour promotional cards",
+          "set_code": "NTR-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "9.73"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73665146,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73665146.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73665146.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73665146.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 192794,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-30",
+          "ocg_date": "2005-07-27",
+          "konami_id": 6167,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

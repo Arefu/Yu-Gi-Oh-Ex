@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 84298614,
+      "name": "Powerful Rebirth",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 Level 4 or lower monster in your GY; Special Summon that target. Increase its Level by 1 and ATK and DEF by 100. When that monster is destroyed, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/powerful-rebirth-7070",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN093",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84298614,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84298614.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84298614.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84298614.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "1.23",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83051,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2014-01-11",
+          "konami_id": 10983,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

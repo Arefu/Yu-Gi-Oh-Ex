@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 17390179,
+      "name": "Flash Knight",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "''The power of the pendulum flashes forth from this shining knight.''",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flash-knight-1506",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Advanced Demo Deck Extra Pack",
+          "set_code": "DEM4-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Demo Deck 2016",
+          "set_code": "DEM3-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17390179,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17390179.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17390179.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17390179.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53843,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11210,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 17465972,
+      "name": "Blackwing - Auster the South Wind",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. When this card is Normal Summoned: You can target 1 of your banished Level 4 or lower \"Blackwing\" monsters; Special Summon it in Defense Position. You can banish this card from the GY to activate 1 of the following effects;\r\n● Place Black Feather Counter(s) on 1 \"Black-Winged Dragon\" you control, equal to the number of card(s) your opponent controls.\r\n● Place 1 Wedge Counter on each face-up monster your opponent controls that does not have one.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-auster-the-south-wind-9532",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17465972,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17465972.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17465972.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17465972.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.95",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Blackwing – Auster the South Wind",
+          "views": 262934,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13854,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

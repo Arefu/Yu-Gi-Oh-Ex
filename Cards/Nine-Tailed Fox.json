@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 27198001,
+      "name": "Nine-Tailed Fox",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or GY: You can Tribute 2 monsters; Special Summon this card. You can only use this effect of \"Nine-Tailed Fox\" once per turn. If this card that was Special Summoned from the GY attacks a Defense Position monster, inflict piercing battle damage. If this card is destroyed by battle or card effect and sent to the GY: You can Special Summon 2 \"Fox Tokens\" (Zombie/FIRE/Level 2/ATK 500/DEF 500).",
+      "race": "Zombie",
+      "atk": 2200,
+      "def": 2000,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nine-tailed-fox-9164",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27198001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27198001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27198001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27198001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99132,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-03-10",
+          "konami_id": 7363,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

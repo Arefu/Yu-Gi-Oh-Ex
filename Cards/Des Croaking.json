@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 44883830,
+      "name": "Des Croaking",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate only while you control 3 face-up \"Des Frogs\". Destroy all cards your opponent controls.",
+      "race": "Normal",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/des-croaking-3824",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN042",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "13.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44883830,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44883830.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44883830.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44883830.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86007,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6435,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

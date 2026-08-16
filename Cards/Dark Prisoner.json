@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 89558090,
+      "name": "Dark Prisoner",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster bends light to hide its image from the eyes of opponents.",
+      "race": "Fiend",
+      "atk": 600,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-prisoner-7479",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89558090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89558090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89558090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89558090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.40",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11956,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-05-14",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4179,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

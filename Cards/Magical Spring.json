@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 43455065,
+      "name": "Magical Spring",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Draw a number of cards equal to the number of face-up Spell/Trap Cards your opponent controls, then discard a number of cards equal to the number of face-up Spell/Trap Cards you control. Until the end of your opponent's next turn after this card resolves, Spell/Trap Cards your opponent controls cannot be destroyed (by battle or card effect), also their activation and effects cannot be negated. You can only activate 1 \"Magical Spring\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-spring-3708",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN108",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN065",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43455065,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43455065.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43455065.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43455065.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.61",
+          "tcgplayer_price": "0.99",
+          "ebay_price": "2.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56137,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11274,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

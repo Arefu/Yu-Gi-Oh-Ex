@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 89326990,
+      "name": "Speedroid Ohajikid",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 Tuner monster in either player's Graveyard; Special Summon it to your side of the field, and if you do, immediately after this effect resolves, Synchro Summon 1 WIND Synchro Monster, using that monster and this card only.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 200,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-ohajikid-7461",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89326990,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89326990.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89326990.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89326990.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "1.10",
+          "ebay_price": "4.00",
+          "amazon_price": "2.32",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41725,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12053,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

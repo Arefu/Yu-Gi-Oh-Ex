@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 67926903,
+      "name": "CXyz Barian Hope",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 or more Level 7 monsters\nYou can also Xyz Summon this card by using 1 monster you control with \"Number C101\" through \"Number C107\" in its name as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) This card gains 1000 ATK for each Xyz Material attached to it. You can target 1 \"Number\" monster in your Graveyard; until your opponent's next End Phase, this card's name becomes that monster's, and replace this effect with that monster's original effects. You can only use this effect of \"CXyz Barian Hope\" once per turn.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "CXyz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cxyz-barian-hope-5703",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN189",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN096",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS14",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67926903,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67926903.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67926903.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67926903.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "2.89",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88452,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-03-20",
+          "konami_id": 11133,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

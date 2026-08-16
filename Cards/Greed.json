@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 89405199,
+      "name": "Greed",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time a player draws cards because of a card effect, they take 500 damage during the End Phase for each card drawn by the card effect.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/greed-7467",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN055",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89405199,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89405199.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89405199.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89405199.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "0.99",
+          "amazon_price": "8.75",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67900,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6146,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

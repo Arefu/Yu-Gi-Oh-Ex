@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 45425051,
+      "name": "Fairy King Truesdale",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is in Defense Position, all Plant-Type monsters you control gain 500 ATK and DEF.",
+      "race": "Plant",
+      "atk": 2200,
+      "def": 1500,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fairy-king-truesdale-3870",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Seven",
+          "set_code": "CP07-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Falsebound Kingdom promotional cards",
+          "set_code": "TFK-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "35.18"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship Tournament 2004 promotional cards",
+          "set_code": "WC4-001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "7.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45425051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45425051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45425051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45425051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.81",
+          "ebay_price": "19.99",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30573,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-02-10",
+          "ocg_date": "2001-09-06",
+          "konami_id": 5024,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

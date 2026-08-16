@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 67270095,
+      "name": "Turbo Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card declares an attack: You can change the attack target to Defense Position. When you take battle damage while this card is attacking: You can Special Summon 1 monster from your hand with ATK less than or equal to the battle damage you took.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 500,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/turbo-synchron-5654",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN001",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "14.19"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei",
+          "set_code": "DP08-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67270095,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67270095.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67270095.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67270095.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "3.50",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178265,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7870,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

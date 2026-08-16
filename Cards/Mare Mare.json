@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 54537489,
+      "name": "Mare Mare",
+      "typeline": [
+        "Wyrm",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned, except by the effect of a Wyrm-Type monster. During your Main Phase: You can reduce this card's Level by 1, and if you do, Special Summon 1 \"Mini Mare Mare Token\" (Wyrm-Type/WATER/Level 1/ATK 300/DEF 200). You can only use this effect of \"Mare Mare\" up to thrice per turn.",
+      "race": "Wyrm",
+      "atk": 2100,
+      "def": 1400,
+      "level": 7,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mare-mare-4644",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN167",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Egyptian God Deck: Obelisk the Tormentor",
+          "set_code": "EGO1-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.96"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54537489,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54537489.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54537489.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54537489.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.44",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 239195,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11877,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

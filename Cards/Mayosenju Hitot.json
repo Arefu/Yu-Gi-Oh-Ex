@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 21364070,
+      "name": "Mayosenju Hitot",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can target 1 \"Yosenju\" card in your Pendulum Zone; for the rest of this turn, its Pendulum Scale becomes 11, also you cannot Special Summon monsters, except \"Yosenju\" monsters (even if this card leaves the field). During your End Phase: Return this card to the hand. You can only use each Pendulum Effect of \"Mayosenju Hitot\" once per turn.\n\n[ Monster Effect ] \nCannot be Special Summoned, except by Pendulum Summon. If this card is Normal or Special Summoned: You can target 1 card your opponent controls; return it to the hand. Each time a card(s) on the field is returned to the hand or Main Deck by your card effect, while this card is on the field: All \"Yosenju\" monsters you currently control gain 500 ATK. Once per turn, during the End Phase, if this card was Special Summoned this turn: Return it to the hand.",
+      "race": "Beast",
+      "pend_desc": "You can target 1 \"Yosenju\" card in your Pendulum Zone; for the rest of this turn, its Pendulum Scale becomes 11, also you cannot Special Summon monsters, except \"Yosenju\" monsters (even if this card leaves the field). During your End Phase: Return this card to the hand. You can only use each Pendulum Effect of \"Mayosenju Hitot\" once per turn.",
+      "monster_desc": "Cannot be Special Summoned, except by Pendulum Summon. If this card is Normal or Special Summoned: You can target 1 card your opponent controls; return it to the hand. Each time a card(s) on the field is returned to the hand or Main Deck by your card effect, while this card is on the field: All \"Yosenju\" monsters you currently control gain 500 ATK. Once per turn, during the End Phase, if this card was Special Summoned this turn: Return it to the hand.",
+      "atk": 2000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mayosenju-hitot-10238",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21364070,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21364070.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21364070.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21364070.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mayosenju Hitotsumenomuraji",
+          "views": 55037,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009011,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14469,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

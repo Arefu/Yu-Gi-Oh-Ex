@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 11411223,
+      "name": "Number 10: Illumiknight",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; send 1 card from your hand to the Graveyard, and if you do, draw 1 card.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 2400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-10-illumiknight-986",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN118",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2011 Wave 2",
+          "set_code": "CT08-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.53"
+        },
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN086",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN026",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11411223,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11411223.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11411223.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11411223.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "5.45",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 10",
+          "views": 127651,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-01",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9759,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

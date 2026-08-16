@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 40509732,
+      "name": "Samurai Destroyer",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card battles an opponent's monster, your opponent cannot activate cards or effects until the end of the Damage Step, also that opponent's monster has its effects negated during the Battle Phase only. If this face-up card in its owner's control leaves the field because of an opponent's card effect: You can target 1 Machine monster in your GY; Special Summon it.",
+      "race": "Machine",
+      "atk": 2600,
+      "def": 1400,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/samurai-destroyer-9007",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 26",
+          "set_code": "OP26-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40509732,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40509732.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40509732.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40509732.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.00",
+          "amazon_price": "2.58",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 306957,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13360,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

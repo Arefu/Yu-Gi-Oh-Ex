@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 2333365,
+      "name": "Tyr of the Nordic Champions",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent's monsters cannot target \"Nordic\" monsters for attacks, except \"Tyr of the Nordic Champions\". If there is no other \"Nordic\" monster on the field, destroy this card.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tyr-of-the-nordic-champions-209",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2333365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2333365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2333365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2333365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83545,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9310,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

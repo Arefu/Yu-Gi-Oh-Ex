@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 62242678,
+      "name": "Hot Red Dragon Archfiend King Calamity",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "2 Tuners + 1 non-Tuner DARK Dragon Synchro Monster\r\nWhen this card is Synchro Summoned: You can activate this effect; for the rest of this turn, your opponent cannot activate cards, also cards your opponent controls cannot activate their effects. Your opponent cannot activate cards or effects in response to this effect's activation. If this card destroys a monster by battle: Inflict damage to your opponent equal to that monster's original ATK. If this card in its owner's possession is destroyed by an opponent's card: You can target 1 Level 8 or lower DARK Dragon Synchro Monster in your GY; Special Summon it.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 3500,
+      "level": 12,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hot-red-dragon-archfiend-king-calamity-5264",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.82"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 62242678,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62242678.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62242678.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62242678.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "1.97",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 671809,
+          "viewsweek": 0,
+          "upvotes": 35,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2015-08-21",
+          "konami_id": 12080,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

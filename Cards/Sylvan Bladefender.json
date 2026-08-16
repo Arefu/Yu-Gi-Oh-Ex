@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 11682713,
+      "name": "Sylvan Bladefender",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys an opponent's monster by battle and sends it to the Graveyard: You can excavate the top card of your Deck, and if it is a Plant-Type monster, send it to the Graveyard. Otherwise, place it on the bottom of your Deck. If this card is excavated from the Deck and sent to the Graveyard by a card effect: You can add this card from your Graveyard to your hand.",
+      "race": "Plant",
+      "atk": 1900,
+      "def": 700,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sylvan-bladefender-1009",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN186",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant Sneak Peek Participation Card",
+          "set_code": "LVAL-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11682713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11682713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11682713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11682713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25039,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-18",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10984,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

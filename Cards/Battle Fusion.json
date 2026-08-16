@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 43225434,
+      "name": "Battle Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "When an attack is declared involving a Fusion Monster you control and an opponent's monster: That monster you control gains ATK equal to the ATK of the opponent's monster, until the end of the Damage Step. You can only activate 1 \"Battle Fusion\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battle-fusion-3682",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43225434,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43225434.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43225434.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43225434.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.36",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83060,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11162,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

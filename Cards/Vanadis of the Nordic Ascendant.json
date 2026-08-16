@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 61777313,
+      "name": "Vanadis of the Nordic Ascendant",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "For a Synchro Summon, you can substitute this card for any 1 \"Nordic\" Tuner. If this card is used as Synchro Material, all other Synchro Materials must be \"Nordic\" monsters. Once per turn: You can send 1 \"Nordic\" monster from your Deck to the GY; this card's Level becomes the Level of that monster, until the end of this turn.",
+      "race": "Fairy",
+      "atk": 1200,
+      "def": 400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vanadis-of-the-nordic-ascendant-5229",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN187",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61777313,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61777313.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61777313.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61777313.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "3.95",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 137756,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9450,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

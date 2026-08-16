@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 53239672,
+      "name": "Spirit Barrier",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "While you control a monster, you take no battle damage.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-barrier-4535",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Five",
+          "set_code": "CP05-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN296",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN051",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53239672,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53239672.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53239672.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53239672.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.30",
+          "tcgplayer_price": "1.90",
+          "ebay_price": "0.99",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 227433,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6142,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

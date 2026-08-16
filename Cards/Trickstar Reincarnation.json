@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 21076084,
+      "name": "Trickstar Reincarnation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish your opponent's entire hand, and if you do, they draw the same number of cards. You can banish this card from your GY, then target 1 \"Trickstar\" monster in your GY; Special Summon it.",
+      "race": "Normal",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-reincarnation-8493",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN105",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN068",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN161",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN108",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21076084,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21076084.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21076084.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21076084.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.49",
+          "amazon_price": "5.44",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trickster Reincarnation",
+          "views": 561698,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 8,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13107,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

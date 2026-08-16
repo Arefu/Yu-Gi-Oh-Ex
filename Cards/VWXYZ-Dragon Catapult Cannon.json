@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 84243274,
+      "name": "VWXYZ-Dragon Catapult Cannon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"VW-Tiger Catapult\" + \"XYZ-Dragon Cannon\"\r\nMust first be Special Summoned (from your Extra Deck) by banishing the above cards you control. (You do not use \"Polymerization\".) Once per turn: You can target 1 card your opponent controls; banish that target. When this card declares an attack on an opponent's monster: You can target the attack target; change that attack target's battle position. (Flip Effects are not activated.)",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "ABC",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vwxyz-dragon-catapult-cannon-7064",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "22.52"
+        },
+        {
+          "set_name": "Duelist Pack: Chazz Princeton",
+          "set_code": "DP2-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2021 B",
+          "set_code": "LART-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84243274,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84243274.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84243274.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84243274.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.00",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 212046,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6484,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

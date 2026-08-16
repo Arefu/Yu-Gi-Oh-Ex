@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 91027843,
+      "name": "Marincess Battle Ocean",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Marincess\" monsters you control gain 200 ATK, also each one gains 600 ATK for each \"Marincess\" card equipped to it. Monsters you control in the Extra Monster Zone that were Link Summoned using \"Marincess Crystal Heart\" as material are unaffected by your opponent's card effects. When you Link Summon a \"Marincess\" monster to the Extra Monster Zone (except during the Damage Step): You can equip up to 3 \"Marincess\" Link Monsters with different names from your GY to that Link Summoned monster.",
+      "race": "Field",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-battle-ocean-10398",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN181",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.91"
+        },
+        {
+          "set_name": "Rising Rampage Special Edition",
+          "set_code": "RIRA-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.85"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91027843,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91027843.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91027843.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91027843.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 167245,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010053,
+          "tcg_date": "2019-09-12",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14680,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

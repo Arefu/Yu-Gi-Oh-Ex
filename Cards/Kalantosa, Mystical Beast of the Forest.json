@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 97317530,
+      "name": "Kalantosa, Mystical Beast of the Forest",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned by the effect of a Beast-Type monster: You can target 1 card on the field; destroy that target.",
+      "race": "Beast",
+      "atk": 200,
+      "def": 1400,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Mystical Beast of the Forest",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kalantosa-mystical-beast-of-the-forest-8094",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN147",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97317530,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97317530.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97317530.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97317530.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.75",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 267349,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10922,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

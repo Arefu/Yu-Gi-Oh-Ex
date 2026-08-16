@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 85507811,
+      "name": "Elemental HERO Glow Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Glow Moss\"\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) During the End Phase: Shuffle this card into the Extra Deck. Once per turn, during your Main Phase 1: You can target 1 face-up card your opponent controls; destroy that target, then apply the effect based on its type. ● Monster: This card cannot attack this turn. ● Spell: This card can attack your opponent directly this turn. ● Trap: Change this card to Defense Position.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-glow-neos-7166",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.53"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN036",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85507811,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85507811.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85507811.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85507811.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.12",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "9.95",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96481,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6988,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

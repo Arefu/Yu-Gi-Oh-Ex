@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 48675364,
+      "name": "Archfiend General",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card to the Graveyard to add 1 \"Pandemonium\" from your Deck to your hand. If this card is on the field but \"Pandemonium\" is not on the field, destroy this card.",
+      "race": "Fiend",
+      "atk": 2100,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-general-4156",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN019",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENE12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48675364,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48675364.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48675364.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48675364.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.79",
+          "amazon_price": "3.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77911,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7110,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 22009013,
+      "name": "Steelswarm Moth",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned by Tributing a \"Steelswarm\" monster: You can pay 1000 Life Points to target up to 2 cards your opponent controls; return those targets to the hand.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-moth-1894",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN081",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22009013,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22009013.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22009013.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22009013.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26721,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9175,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

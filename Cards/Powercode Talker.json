@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 15844566,
+      "name": "Powercode Talker",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 monsters\r\nOnce per turn: You can target 1 face-up monster on the field; negate that target's effects until the end of this turn. Once per turn, if this card battles an opponent's monster, during damage calculation (Quick Effect): You can Tribute 1 monster this card points to; this card's ATK becomes double its original ATK during that damage calculation only.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": 0,
+      "attribute": "FIRE",
+      "archetype": "Code Talker",
+      "linkval": 3,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/powercode-talker-9067",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15844566,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15844566.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15844566.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15844566.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "2.45",
+          "amazon_price": "3.56",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 204686,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-09",
+          "ocg_date": "2017-12-09",
+          "konami_id": 13528,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

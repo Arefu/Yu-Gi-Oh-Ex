@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 75886890,
+      "name": "Vylon Sphere",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the Monster Card Zone to the Graveyard: You can pay 500 Life Points to target 1 face-up monster you control; equip this card to that target. You can send this Equip Card to the Graveyard to target 1 Equip Spell Card in your Graveyard; equip that target to the monster this card was equipped to.",
+      "race": "Machine",
+      "atk": 400,
+      "def": 400,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-sphere-6386",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN019",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75886890,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75886890.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75886890.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75886890.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45458,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9375,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

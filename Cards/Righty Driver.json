@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 60071928,
+      "name": "Righty Driver",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "For a Synchro Summon, you can substitute this card for any 1 \"Synchron\" Tuner. If this card is Normal Summoned: You can Special Summon 1 \"Lefty Driver\" from your hand, Deck, or GY. You can only use this effect of \"Righty Driver\" once per turn.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/righty-driver-9178",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60071928,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60071928.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60071928.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60071928.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "1.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 214104,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-03-10",
+          "konami_id": 8872,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 41705642,
+      "name": "Salvage Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned, you can Special Summon 1 Tuner monster from your hand or Graveyard.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1600,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salvage-warrior-3562",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41705642,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41705642.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41705642.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41705642.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26322,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9474,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

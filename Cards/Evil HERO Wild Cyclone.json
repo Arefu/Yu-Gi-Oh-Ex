@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 13293158,
+      "name": "Evil HERO Wild Cyclone",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Avian\" + \"Elemental HERO Wildheart\"\nMust be Special Summoned with \"Dark Fusion\" and cannot be Special Summoned by other ways. If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step. When this card inflicts Battle Damage to your opponent: Destroy all face-down Spell and Trap Cards your opponent controls.",
+      "race": "Fiend",
+      "atk": 1900,
+      "def": 2300,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Evil HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-hero-wild-cyclone-1142",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 3",
+          "set_code": "DP06-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.71"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN070",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.36"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN030",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENA23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13293158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13293158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13293158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13293158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101973,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-10-20",
+          "konami_id": 7378,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

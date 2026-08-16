@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 16222645,
+      "name": "Sasuke Samurai",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the start of the Damage Step, if this card attacks a face-down Defense Position monster: Destroy that face-down monster.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 800,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sasuke-samurai-1394",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN216",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.88"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's 2009",
+          "set_code": "5DS2-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16222645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16222645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16222645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16222645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.48",
+          "amazon_price": "5.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 168409,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5412,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

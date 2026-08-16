@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 4740489,
+      "name": "Magnetic Field",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If you control a Level 4 or lower EARTH Rock monster: You can target 1 Level 4 or lower \"Magnet Warrior\" monster in your GY; Special Summon it. You can only use this effect of \"Magnetic Field\" once per turn. Once per turn, at the end of the Damage Step, when an EARTH Rock monster you control battled an opponent's monster, but the opponent's monster was not destroyed by the battle: You can return that opponent's monster to the hand.",
+      "race": "Field",
+      "archetype": "Magnet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magnetic-field-420",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN111",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 4",
+          "set_code": "STP4-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.81"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4740489,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4740489.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4740489.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4740489.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.49",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112262,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12578,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

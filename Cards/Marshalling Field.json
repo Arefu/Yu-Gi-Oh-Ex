@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 63881033,
+      "name": "Marshalling Field",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You cannot Special Summon monsters, except Machine monsters. Once per turn: You can declare a Level from 5 to 9; all Level 5 or higher Machine monsters you control become that Level. If a Machine Xyz Monster(s) you control would be destroyed, you can send this card to the GY instead. If this card is sent from the field to the GY: You can add 1 \"Rank-Up-Magic Argent Chaos Force\" from your Deck or GY to your hand.",
+      "race": "Continuous",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marshalling-field-5394",
+      "card_sets": [
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN025",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63881033,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63881033.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63881033.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63881033.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37429,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11299,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

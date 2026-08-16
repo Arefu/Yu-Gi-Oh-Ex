@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 45974017,
+      "name": "Dark Contract with the Yamimakai",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, during your Standby Phase: Take 1000 damage.\nYou can only use 1 of the following effects of \"Dark Contract with the Yamimakai\" per turn, and only once that turn.\n● During your Main Phase: You can target 1 \"D/D\" Pendulum Monster in your Graveyard; place it in your Pendulum Zone.\n● During your Main Phase: You can place 1 face-up \"D/D\" Pendulum Monster from your Extra Deck in your Pendulum Zone.",
+      "race": "Continuous",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-contract-with-the-yamimakai-3916",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45974017,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45974017.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45974017.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45974017.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.75",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45380,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-19",
+          "ocg_date": "2015-12-12",
+          "konami_id": 12230,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

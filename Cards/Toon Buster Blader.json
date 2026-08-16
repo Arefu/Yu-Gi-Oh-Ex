@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 61190918,
+      "name": "Toon Buster Blader",
+      "typeline": [
+        "Warrior",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot attack the turn it is Summoned. Gains 500 ATK for each Dragon monster your opponent controls or is in their GY. While you control \"Toon World\" and your opponent controls no Toon monsters, this card can attack your opponent directly.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2300,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-buster-blader-5190",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN205",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61190918,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61190918.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61190918.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61190918.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.71",
+          "ebay_price": "4.95",
+          "amazon_price": "1.54",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 98276,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12146,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

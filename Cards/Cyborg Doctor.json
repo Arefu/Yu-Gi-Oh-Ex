@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 51020079,
+      "name": "Cyborg Doctor",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can Tribute 1 Tuner monster you control to Special Summon a monster from your Graveyard with the same Attribute and Level as the Tributed monster.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1700,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyborg-doctor-4342",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51020079,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51020079.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51020079.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51020079.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.32",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24435,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8323,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

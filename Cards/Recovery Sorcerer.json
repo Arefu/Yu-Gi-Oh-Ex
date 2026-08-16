@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 76232522,
+      "name": "Recovery Sorcerer",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Cyberse monsters\r\n(Quick Effect): You can target 1 Cyberse Link Monster in your GY that was destroyed this turn; Special Summon it, but it has its effects negated, also destroy it during the End Phase. You can only use this effect of \"Recovery Sorcerer\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/recovery-sorcerer-9010",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN198",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76232522,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76232522.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76232522.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76232522.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47263,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13413,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

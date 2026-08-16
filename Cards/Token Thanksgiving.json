@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 57182235,
+      "name": "Token Thanksgiving",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy all tokens on the field. Increase your Life Points by the number of tokens destroyed x 800 points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/token-thanksgiving-4873",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.16"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN203",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57182235,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57182235.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57182235.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57182235.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.65",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81149,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5733,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

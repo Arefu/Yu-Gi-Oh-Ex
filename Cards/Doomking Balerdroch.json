@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 39185163,
+      "name": "Doomking Balerdroch",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the Standby Phase, if a face-up card is in a Field Zone and this card is in your GY: You can Special Summon this card in Defense Position. You can only use this effect of \"Doomking Balerdroch\" once per turn. Once per Chain, when a Zombie monster, except \"Doomking Balerdroch\", activates its effect (except during the Damage Step) (Quick Effect): You can apply 1 of these effects (but you cannot apply that same effect of \"Doomking Balerdroch\" again this turn).\r\n● Negate that effect. ● Banish 1 monster from the field or GY.",
+      "race": "Zombie",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doomking-balerdroch-9695",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN113",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39185163,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39185163.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39185163.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39185163.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Drochshúile the Spirit King",
+          "views": 910394,
+          "viewsweek": 64,
+          "upvotes": 48,
+          "downvotes": 10,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-01",
+          "ocg_date": "2018-09-22",
+          "konami_id": 14056,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

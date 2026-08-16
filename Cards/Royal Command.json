@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 33950246,
+      "name": "Royal Command",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Flip monsters' effects cannot be activated, also their effects are negated.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/royal-command-2881",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.24"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Five",
+          "set_code": "TU05-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33950246,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33950246.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33950246.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33950246.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "19.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97024,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5262,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

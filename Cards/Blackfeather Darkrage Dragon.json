@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 60992105,
+      "name": "Blackfeather Darkrage Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn, when you take damage: You can send up to 5 cards from the top of your Deck to the Graveyard, then if any monsters were sent to the Graveyard by this effect, this card gains 400 ATK.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 1600,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackfeather-darkrage-dragon-5174",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN017",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60992105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60992105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60992105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60992105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.12",
+          "tcgplayer_price": "1.32",
+          "ebay_price": "0.99",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47439,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11012,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

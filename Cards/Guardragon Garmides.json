@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 43411769,
+      "name": "Guardragon Garmides",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Normal Monster(s) is sent to your GY (except during the Damage Step): You can Special Summon this card from your hand. If this card is in your GY: You can send 1 Dragon monster from your hand to the GY; add this card to your hand. You can only use each effect of \"Guardragon Garmides\" once per turn.",
+      "race": "Dragon",
+      "atk": 1600,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Guardragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-garmides-9839",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43411769,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43411769.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43411769.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43411769.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Garmides the Guardragon",
+          "views": 77331,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14090,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

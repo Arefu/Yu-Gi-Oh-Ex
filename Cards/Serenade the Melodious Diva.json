@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 42029847,
+      "name": "Serenade the Melodious Diva",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be treated as 2 Tributes for the Tribute Summon of a Fairy-Type monster. After this card is Special Summoned to your side of the field, you can Normal Summon 1 \"Melodious\" monster during your Main Phase this turn, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)",
+      "race": "Fairy",
+      "atk": 400,
+      "def": 1900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Melodious",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/serenade-the-melodious-diva-3586",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42029847,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42029847.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42029847.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42029847.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45639,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11337,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

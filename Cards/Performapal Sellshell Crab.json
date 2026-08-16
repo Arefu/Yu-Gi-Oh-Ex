@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 23377694,
+      "name": "Performapal Sellshell Crab",
+      "typeline": [
+        "Aqua",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when a \"Performapal\" monster you control is destroyed by battle: You can target 1 \"Performapal\" or \"Odd-Eyes\" card in your Pendulum Zone; Special Summon it.\n\n[ Monster Effect ] \nOnce per turn: You can target 1 Pendulum Monster you control; it gains 300 ATK for each \"Performapal\" monster you currently control, until the end of this turn.",
+      "race": "Aqua",
+      "pend_desc": "Once per turn, when a \"Performapal\" monster you control is destroyed by battle: You can target 1 \"Performapal\" or \"Odd-Eyes\" card in your Pendulum Zone; Special Summon it.",
+      "monster_desc": "Once per turn: You can target 1 Pendulum Monster you control; it gains 300 ATK for each \"Performapal\" monster you currently control, until the end of this turn.",
+      "atk": 500,
+      "def": 2500,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Performapal",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-sellshell-crab-2015",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23377694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23377694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23377694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23377694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27162,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12274,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 29353756,
+      "name": "ZW - Eagle Claw",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent's Life Points are at least 2000 higher than yours, you can Special Summon this card (from your hand). You can target 1 \"Utopia\" monster you control; equip this monster on the field to that target. It gains 2000 ATK. Once per turn, while this card is equipped to a monster, when a Trap Card or Trap effect that was activated on your opponent's side of the field resolves, negate the effects of that card. You can only control 1 \"ZW - Eagle Claw\".",
+      "race": "Winged Beast",
+      "atk": 2000,
+      "def": 1200,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zw-eagle-claw-2488",
+      "card_sets": [
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Super Starter Power-Up Pack",
+          "set_code": "YS13-ENV03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29353756,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29353756.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29353756.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29353756.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64397,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-06-14",
+          "ocg_date": "2013-03-16",
+          "konami_id": 10571,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

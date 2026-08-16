@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 87997872,
+      "name": "Theinen the Great Sphinx",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by paying 500 Life Points when both \"Andro Sphinx\" and \"Sphinx Teleia\" on your side of the field are destroyed at the same time; then you can Special Summon this monster from your hand or Deck. When this card is Special Summoned, by paying 500 Life Points, increase the ATK of this card by 3000 points until the end of the End Phase.",
+      "race": "Beast",
+      "atk": 3500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Sphinx",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/theinen-the-great-sphinx-7359",
+      "card_sets": [
+        {
+          "set_name": "Exclusive Pack",
+          "set_code": "EP1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master Collection Volume 2",
+          "set_code": "MC2-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "12.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87997872,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87997872.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87997872.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87997872.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "2.19",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52784,
+          "viewsweek": 0,
+          "upvotes": 40,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-07-25",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6089,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

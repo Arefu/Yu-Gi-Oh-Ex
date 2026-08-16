@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 8529136,
+      "name": "Scrap Fist",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Junk Warrior\" you control; if it battles an opponent's monster this turn while you control it, apply these effects.\n● Your opponent cannot activate cards or effects until the end of the Damage Step.\n● If it attacks a Defense Position monster, inflict piercing battle damage to your opponent.\n● Double any battle damage your opponent takes.\n● It cannot be destroyed by battle.\n● Destroy the opponent's monster that battled it at the end of the Damage Step.",
+      "race": "Quick-Play",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-fist-723",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENY24",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8529136,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8529136.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8529136.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8529136.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46326,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-27",
+          "ocg_date": "2014-12-06",
+          "konami_id": 11623,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

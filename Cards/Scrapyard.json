@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 1050684,
+      "name": "Scrapyard",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Scrap\" Tuner monster from your Deck to your hand.",
+      "race": "Normal",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrapyard-97",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENY26",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1050684,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1050684.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1050684.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1050684.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "11.59",
+          "amazon_price": "18.99",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99561,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8978,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

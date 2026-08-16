@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 19891310,
+      "name": "Geargiagear Gigant XG",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 3 monsters\nDuring either player's Battle Step, while an attack involving your Machine-Type monster is occurring: You can detach 1 Xyz Material from this card; negate the effects of all face-up cards your opponent currently controls, also your opponent cannot activate cards or effects. These effects last until the end of the Damage Step. When this face-up card leaves the field: You can target 1 other \"Geargia\" card in your Graveyard; add that target to your hand.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 1300,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Geargia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geargiagear-gigant-xg-1711",
+      "card_sets": [
+        {
+          "set_name": "Geargia Rampage Structure Deck",
+          "set_code": "SDGR-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19891310,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19891310.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19891310.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19891310.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.55",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36565,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-10-16",
+          "ocg_date": "2013-11-23",
+          "konami_id": 10881,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 65830223,
+      "name": "Coffin Seller",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time a monster(s) is sent to your opponent's GY: Inflict 300 damage to your opponent.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/coffin-seller-5542",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN132",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.21"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65830223,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65830223.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65830223.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65830223.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "1.88",
+          "amazon_price": "3.77",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165888,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5492,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

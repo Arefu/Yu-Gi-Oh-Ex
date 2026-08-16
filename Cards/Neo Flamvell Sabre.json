@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 91554542,
+      "name": "Neo Flamvell Sabre",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While your opponent has 4 or less cards in their Graveyard, this card gains 600 ATK. While your opponent has 8 or more cards in their Graveyard, this card loses 300 ATK.",
+      "race": "Pyro",
+      "atk": 1500,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Flamvell",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-flamvell-sabre-7632",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN065",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN073",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91554542,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91554542.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91554542.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91554542.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20038,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2010-01-21",
+          "konami_id": 8707,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

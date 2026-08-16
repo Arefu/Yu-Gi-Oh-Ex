@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 81066751,
+      "name": "Divine Punishment",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated, while \"The Sanctuary in the Sky\" is on the field: Negate the activation, and if you do, destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-punishment-6806",
+      "card_sets": [
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81066751,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81066751.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81066751.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81066751.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "2.70",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 159483,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-06-10",
+          "ocg_date": "2010-12-11",
+          "konami_id": 9291,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

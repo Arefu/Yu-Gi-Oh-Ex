@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 52481437,
+      "name": "Super Express Bullet Train",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot declare an attack unless you send 2 other cards you control to the GY. You can only use each of these effects of \"Super Express Bullet Train\" once per turn.\r\n● If all monsters you control are EARTH Machines (min. 1): You can Special Summon this card from your hand.\r\n● During the End Phase, if this card is in the GY because it was sent there this turn: You can target 1 Machine monster in your GY, except \"Super Express Bullet Train\"; add it to your hand.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 0,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-express-bullet-train-9881",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN121",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.91"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN062",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52481437,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52481437.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52481437.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52481437.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.52",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Speedy Express Bullet Liner",
+          "views": 512117,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14181,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

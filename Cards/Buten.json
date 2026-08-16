@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 83991690,
+      "name": "Buten",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can banish this card from the Graveyard to target 1 face-up Level 4 or lower LIGHT Fairy-Type monster you control; it is treated as a Tuner monster while face-up on the field.",
+      "race": "Fairy",
+      "atk": 200,
+      "def": 300,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/buten-7043",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83991690,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83991690.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83991690.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83991690.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "2.32",
+          "amazon_price": "3.95",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80526,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2010-12-18",
+          "konami_id": 9578,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

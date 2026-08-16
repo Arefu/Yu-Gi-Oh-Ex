@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 67218327,
+      "name": "SIMM Tablir",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand, then target 1 Level 4 Cyberse monster in your GY; Special Summon this card from your hand to your zone a linked Link Monster you control points to, and if you do, return the targeted monster to the hand. You can only use this effect of \"SIMM Tablir\" once per turn.",
+      "race": "Cyberse",
+      "atk": 0,
+      "def": 1800,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/simm-tablir-9397",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67218327,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67218327.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67218327.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67218327.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "SIMM Tablas",
+          "views": 67692,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13717,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

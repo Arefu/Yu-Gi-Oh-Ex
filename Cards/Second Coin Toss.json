@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 36562627,
+      "name": "Second Coin Toss",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When a coin toss is performed, you can choose to redo the coin toss. (If the toss involved multiple coin flips, redo all of them.) You can only use the effect of \"Second Coin Toss\" once per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/second-coin-toss-3090",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.84"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.17"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.75"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN268",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36562627,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36562627.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36562627.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36562627.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.17",
+          "tcgplayer_price": "2.21",
+          "ebay_price": "2.99",
+          "amazon_price": "7.19",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 240981,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5391,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

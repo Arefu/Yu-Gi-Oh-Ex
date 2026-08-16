@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 43694481,
+      "name": "Blizzard Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card's current ATK is higher than its original ATK: You can inflict 1500 damage to your opponent. This effect can only be used once while this card is face-up on the field. You can only use the effect of \"Blizzard Falcon\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blizzard-falcon-3726",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43694481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43694481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43694481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43694481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38082,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10493,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

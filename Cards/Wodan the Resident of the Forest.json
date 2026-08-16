@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 42883273,
+      "name": "Wodan the Resident of the Forest",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Increase this card's ATK by 100 points for every Plant-Type monster that is face-up on the field.",
+      "race": "Warrior",
+      "atk": 900,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wodan-the-resident-of-the-forest-3659",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "10.12"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42883273,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42883273.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42883273.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42883273.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.79",
+          "tcgplayer_price": "3.07",
+          "ebay_price": "3.50",
+          "amazon_price": "8.00",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53153,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4241,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

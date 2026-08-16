@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 28325165,
+      "name": "Aqua Story - Urashima",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you have an \"Aquaactress\" monster in your Graveyard: Target 1 monster on the field; until the end of this turn, its effects are negated, its ATK and DEF become 100, also it is unaffected by your opponent's card effects.",
+      "race": "Normal",
+      "archetype": "Aquaactress",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aqua-story-urashima-2408",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.52"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28325165,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28325165.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28325165.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28325165.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20337,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11922,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

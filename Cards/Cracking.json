@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 32835363,
+      "name": "Cracking",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, when a monster(s) is sent from the field to the Graveyard by a card effect: Inflict 800 damage to the owner of the monster(s).",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cracking-2796",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32835363,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32835363.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32835363.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32835363.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28758,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9669,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

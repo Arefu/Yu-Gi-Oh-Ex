@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 64400161,
+      "name": "Fandora, the Flying Furtress",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "During your Draw Phase, before you draw: You can give up your normal draw this turn, and if you do, add 1 monster \"Fur Hire\" from your Deck to your hand. If you control 5 or more monsters \"Fur Hire\" with different names: You can send this card from the Field Zone to the GY; destroy all cards your opponent controls, also, for the rest of this turn, your opponent takes no damage.",
+      "race": "Field",
+      "archetype": "Fur Hire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fandora-the-flying-furtress-9275",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN254",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64400161,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64400161.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64400161.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64400161.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragon Airship - Fandra",
+          "views": 59784,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13665,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

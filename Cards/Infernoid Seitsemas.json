@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 51316684,
+      "name": "Infernoid Seitsemas",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand or Graveyard) by banishing 2 \"Infernoid\" monsters from your hand or Graveyard while the total Levels and Ranks of all Effect Monsters you control are 8 or lower, and cannot be Special Summoned by other ways. If this card attacks an opponent's monster, this effect can be activated at the end of the Battle Phase: Banish 1 card on the field. Once per turn, during either player's turn: You can Tribute 1 monster, then target 1 card in your opponent's Graveyard; banish it.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 0,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernoid-seitsemas-4364",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN207",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN063",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51316684,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51316684.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51316684.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51316684.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.70",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122376,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11537,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

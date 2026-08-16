@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 82257940,
+      "name": "Gift Exchange",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Both players banish 1 card from their Decks, face-down, and if they do, during the End Phase of this turn, both players add to their hands the card their opponent banished by this effect.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gift-exchange-6910",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82257940,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82257940.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82257940.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82257940.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36839,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2014-12-20",
+          "konami_id": 11661,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

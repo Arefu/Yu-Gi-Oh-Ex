@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 3381441,
+      "name": "Gravekeeper's Priestess",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While there is no face-up Field Spell, the field is treated as \"Necrovalley\". All \"Gravekeeper's\" monsters on the field gain 200 ATK/DEF.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-priestess-301",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Absolute Powerforce Sneak Peek Participation Card",
+          "set_code": "ABPF-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.78"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN258",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 1",
+          "set_code": "STP1-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3381441,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3381441.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3381441.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3381441.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.05",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101486,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-06",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8761,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

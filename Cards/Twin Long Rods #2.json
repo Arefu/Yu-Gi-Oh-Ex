@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 29692206,
+      "name": "Twin Long Rods #2",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An amphibious creature with two whip-like tails.",
+      "race": "Aqua",
+      "atk": 850,
+      "def": 700,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twin-long-rods-2-2515",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.68"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29692206,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29692206.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29692206.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29692206.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.05",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Twin Long Rods 2",
+          "views": 70934,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4612,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 41916534,
+      "name": "Iron Hans",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can Special Summon 1 \"Iron Knight\" from your Deck, also if \"Golden Castle of Stromberg\" is not in a Field Zone when this effect resolves, you cannot Special Summon monsters from the Extra Deck for the rest of this turn. You can only use this effect of \"Iron Hans\" once per turn. Gains 1000 ATK for each \"Iron Knight\" you control, while \"Golden Castle of Stromberg\" is in a Field Zone.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/iron-hans-9517",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41916534,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41916534.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41916534.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41916534.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.40",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50708,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13804,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 60802233,
+      "name": "Kuwagata α",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A very vicious stag beetle that goes for the head.",
+      "race": "Insect",
+      "atk": 1250,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kuwagata-5161",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 19",
+          "set_code": "OP19-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60802233,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60802233.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60802233.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60802233.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "9.24",
+          "amazon_price": "5.28",
+          "coolstuffinc_price": "6.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Kuwagata Alpha",
+          "views": 31391,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4486,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

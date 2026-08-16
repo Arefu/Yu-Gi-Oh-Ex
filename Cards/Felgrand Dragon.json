@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 3954901,
+      "name": "Felgrand Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned except from the Graveyard, and only if it was sent there from the field. If this card is Special Summoned: Target 1 monster in your Graveyard; this card gains ATK equal to that monster's Level x 200.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/felgrand-dragon-353",
+      "card_sets": [
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3954901,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3954901.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3954901.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3954901.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.08",
+          "amazon_price": "2.22",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64665,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-10-24",
+          "ocg_date": "2007-06-23",
+          "konami_id": 7244,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

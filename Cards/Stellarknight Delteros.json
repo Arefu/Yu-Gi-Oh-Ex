@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 56638325,
+      "name": "Stellarknight Delteros",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nWhile this card has Xyz Material, your opponent cannot activate cards or effects when you Normal or Special Summon a monster(s). Once per turn: You can detach 1 Xyz Material from this card, then target 1 card on the field; destroy it. If this card is sent from the field to the Graveyard: You can Special Summon 1 \"tellarknight\" monster from your hand or Deck.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2100,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Stellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stellarknight-delteros-4825",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN010",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN053",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN053",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN053",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56638325,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56638325.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56638325.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56638325.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "7.50",
+          "amazon_price": "4.11",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 185802,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11262,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

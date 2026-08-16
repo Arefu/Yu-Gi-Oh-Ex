@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 81816475,
+      "name": "Overlay Eater",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your Graveyard; take 1 Xyz Material from a monster your opponent controls and attach it to an Xyz Monster you control as Xyz Material.",
+      "race": "Reptile",
+      "atk": 300,
+      "def": 800,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/overlay-eater-6867",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81816475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81816475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81816475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81816475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19052,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10030,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

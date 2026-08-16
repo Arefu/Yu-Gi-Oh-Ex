@@ -1,0 +1,131 @@
+{
+  "data": [
+    {
+      "id": 8131171,
+      "name": "Sinister Serpent",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Standby Phase, if this card is in your GY: You can add it to your hand, also banish 1 \"Sinister Serpent\" from your GY during your opponent's next End Phase. You can only use this effect of \"Sinister Serpent\" once per turn.",
+      "race": "Reptile",
+      "atk": 300,
+      "def": 250,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sinister-serpent-690",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN015",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN154",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN027",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.98"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 5",
+          "set_code": "STP5-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENH09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship Tournament 2004 promotional cards",
+          "set_code": "WC4-E002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "36.68"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel promotional cards",
+          "set_code": "SDD-002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "12.62"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 8131171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8131171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8131171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8131171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.34",
+          "tcgplayer_price": "1.95",
+          "ebay_price": "6.73",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 370467,
+          "viewsweek": 42,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-04-15",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4481,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

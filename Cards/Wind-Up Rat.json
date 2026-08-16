@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 57962537,
+      "name": "Wind-Up Rat",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can target 1 \"Wind-Up\" monster in your Graveyard; change this face-up Attack Position card you control to face-up Defense Position, and Special Summon that target in face-up Defense Position. This effect can only be used once while this card is face-up on the field.",
+      "race": "Beast",
+      "atk": 600,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-rat-4933",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57962537,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57962537.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57962537.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57962537.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "11.05",
+          "tcgplayer_price": "12.49",
+          "ebay_price": "4.25",
+          "amazon_price": "10.12",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54128,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9897,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

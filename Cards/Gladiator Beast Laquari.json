@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 78868776,
+      "name": "Gladiator Beast Laquari",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Special Summoned by the effect of a \"Gladiator Beast\" monster, its original ATK becomes 2100. At the end of the Battle Phase, if this card attacked or was attacked: You can shuffle it into the Deck; Special Summon 1 \"Gladiator Beast\" monster from your Deck, except \"Gladiator Beast Laquari\".",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-laquari-6628",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN238",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Five",
+          "set_code": "TU05-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster One",
+          "set_code": "TU01-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78868776,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78868776.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78868776.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78868776.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.99",
+          "amazon_price": "5.59",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 193613,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7286,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

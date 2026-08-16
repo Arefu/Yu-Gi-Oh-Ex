@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 19048328,
+      "name": "Chaofeng, Phantom of the Yang Zing",
+      "typeline": [
+        "Wyrm",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\r\nWhile this Synchro Summoned card is on the field, your opponent cannot activate effects of monsters with the same original Attribute(s) as the \"Yang Zing\" monster(s) used for the Synchro Summon of this card. When this Synchro Summoned card is destroyed by battle or card effect and sent to the Graveyard: You can add 1 Tuner monster from your Deck to your hand. Once per turn, when a monster(s) your opponent controls is destroyed by battle or card effect: You can Special Summon 1 Wyrm-Type monster from your Deck, in Defense Position, whose original Attribute matches the original Attribute that 1 of those destroyed monsters had on the field.",
+      "race": "Wyrm",
+      "atk": 2800,
+      "def": 2200,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Yang Zing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chaofeng-phantom-of-the-yang-zing-1646",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19048328,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19048328.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19048328.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19048328.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 339341,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11722,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

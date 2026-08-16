@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 12883044,
+      "name": "Flame Dancer",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster moves while swinging its burning rope.",
+      "race": "Pyro",
+      "atk": 550,
+      "def": 450,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flame-dancer-1108",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.95"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12883044,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12883044.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12883044.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12883044.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.52",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51169,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5048,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

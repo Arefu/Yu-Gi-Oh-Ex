@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 56111151,
+      "name": "Kyoutou Waterfront",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a card(s) is sent from the field to the GY, place 1 Kaiju Counter on this card for each sent card (max. 5). Once per turn, while 3 or more Kaiju Counters are on this card: You can add 1 \"Kaiju\" monster from your Deck to your hand. If this card would be destroyed by a card effect, you can remove 1 Kaiju Counter from this card instead.",
+      "race": "Field",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kyoutou-waterfront-4780",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN122",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56111151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56111151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56111151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56111151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.39",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 237169,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12040,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

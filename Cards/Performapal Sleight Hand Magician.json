@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 20403123,
+      "name": "Performapal Sleight Hand Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by Tributing 1 \"Performapal\" monster, except a Pendulum Monster. Once per turn: You can discard 1 card, then target 1 face-up card on the field; destroy it.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-sleight-hand-magician-1752",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Yuya",
+          "set_code": "YS16-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20403123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20403123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20403123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20403123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.95",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31542,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-26",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12371,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

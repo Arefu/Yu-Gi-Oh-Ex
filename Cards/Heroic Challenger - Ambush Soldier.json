@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 92609670,
+      "name": "Heroic Challenger - Ambush Soldier",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Standby Phase: You can Tribute this card; Special Summon up to 2 \"Heroic Challenger\" monsters from your hand and/or Graveyard, except \"Heroic Challenger - Ambush Soldier\". You can only use this effect of \"Heroic Challenger - Ambush Soldier\" once per turn. When you do: You can banish this card from your Graveyard; make all \"Heroic Challenger\" monsters you currently control become Level 1.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heroic-challenger-ambush-soldier-7711",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92609670,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92609670.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92609670.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92609670.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.00",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23771,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10696,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 14261867,
+      "name": "8-Claws Scorpion",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can flip this card into face-down Defense Position. When this card attacks an opponent's face-down Defense Position monster, this card's ATK becomes 2400 during damage calculation only.",
+      "race": "Insect",
+      "atk": 300,
+      "def": 200,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/8-claws-scorpion-1222",
+      "card_sets": [
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14261867,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14261867.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14261867.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14261867.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 195831,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 10,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5421,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

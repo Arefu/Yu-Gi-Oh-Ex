@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 31548814,
+      "name": "Void Feast",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 \"Void\" Spell/Trap Card from your hand or face-up from your field to the Graveyard; Special Summon up to 3 \"Infernoid\" monsters from your Deck, whose total Levels exactly equal 8, ignoring their Summoning conditions.",
+      "race": "Normal",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/void-feast-2678",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31548814,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31548814.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31548814.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31548814.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.47",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106520,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12811,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

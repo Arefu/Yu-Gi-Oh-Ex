@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 47810543,
+      "name": "Magical Musket - Crooked Crown",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can only control 1 \"Magical Musket - Crooked Crown\". During the Main Phase: You can Special Summon 1 \"Magical Musket\" monster from your hand, and if you do, if your opponent's Main Monster Zone in that monster's current column is unused, that zone cannot be used until the end of this turn (even if this card leaves the field). You can only use this effect of \"Magical Musket - Crooked Crown\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musket-crooked-crown-9986",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47810543,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47810543.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47810543.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47810543.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magical Musket - Bloody Crown",
+          "views": 62871,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14322,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

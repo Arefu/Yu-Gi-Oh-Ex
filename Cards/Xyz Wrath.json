@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 99064191,
+      "name": "Xyz Wrath",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, when a Level 5 or higher monster's effect is activated (except during the Damage Step), and you control an Xyz Monster: You can discard 1 card; negate the effect, and if you do, destroy that monster.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-wrath-8228",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99064191,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99064191.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99064191.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99064191.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21528,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10124,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

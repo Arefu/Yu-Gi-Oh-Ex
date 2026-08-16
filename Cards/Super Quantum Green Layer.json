@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 85374678,
+      "name": "Super Quantum Green Layer",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can Special Summon 1 \"Super Quant\" monster from your hand. If this card is sent to the Graveyard: You can discard 1 \"Super Quant\" card; draw 1 card. You can only use each effect of \"Super Quantum Green Layer\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Super Quant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-quantum-green-layer-7157",
+      "card_sets": [
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85374678,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85374678.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85374678.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85374678.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.72",
+          "tcgplayer_price": "2.66",
+          "ebay_price": "1.99",
+          "amazon_price": "2.80",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115212,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12216,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

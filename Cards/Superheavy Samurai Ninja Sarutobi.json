@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 76471944,
+      "name": "Superheavy Samurai Ninja Sarutobi",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Machine-Type Tuner + 1 or more non-Tuner \"Superheavy Samurai\" monsters\nThis card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. Once per turn, during either player's turn, if you have no Spell/Trap Cards in your Graveyard: You can target 1 Spell/Trap Card on the field; destroy it, and if you do, inflict 500 damage to your opponent.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-ninja-sarutobi-6435",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN149",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76471944,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76471944.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76471944.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76471944.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "2.75",
+          "amazon_price": "1.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112501,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12632,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

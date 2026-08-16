@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 65384188,
+      "name": "Stand-Off",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up Attack Position Effect Monster on each side of the field; if both monsters are still face-up on the field, negate their effects, then if both their effects were negated by this effect, as long as those monsters are in face-up Attack Position, they cannot be destroyed by battle, are unaffected by other card effects, also they cannot attack or change their battle positions.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stand-off-5510",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN069",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65384188,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65384188.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65384188.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65384188.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18686,
+          "viewsweek": 42,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10955,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

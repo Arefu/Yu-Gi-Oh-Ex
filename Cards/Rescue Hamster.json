@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 50485594,
+      "name": "Rescue Hamster",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can banish this card from your Pendulum Zone; add 2 face-up Pendulum Monster Cards with the same name from your Extra Deck to your hand. You can only use this effect of \"Rescue Hamster\" once per Duel.\n\n[ Monster Effect ] \nIf this card was Normal Summoned this turn and you have a face-up Level 5 or lower Pendulum Monster Card in your Extra Deck: You can Tribute this card; choose 1 face-up Level 5 or lower Pendulum Monster Card in your Extra Deck, and Special Summon 2 monsters from your Deck with the same name as that card, but they have their effects negated, also they are destroyed during the End Phase.",
+      "race": "Beast",
+      "pend_desc": "You can banish this card from your Pendulum Zone; add 2 face-up Pendulum Monster Cards with the same name from your Extra Deck to your hand. You can only use this effect of \"Rescue Hamster\" once per Duel.",
+      "monster_desc": "If this card was Normal Summoned this turn and you have a face-up Level 5 or lower Pendulum Monster Card in your Extra Deck: You can Tribute this card; choose 1 face-up Level 5 or lower Pendulum Monster Card in your Extra Deck, and Special Summon 2 monsters from your Deck with the same name as that card, but they have their effects negated, also they are destroyed during the End Phase.",
+      "atk": 300,
+      "def": 100,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Rescue Squad",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rescue-hamster-4302",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN028",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS07",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50485594,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50485594.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50485594.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50485594.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68208,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11371,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

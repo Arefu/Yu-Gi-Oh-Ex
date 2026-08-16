@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 53274132,
+      "name": "Iron Chain Repairman",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys a monster by battle and sends it to the Graveyard, inflict 300 damage to your opponent. Once per turn, you can Special Summon 1 Level 4 or lower \"Iron Chain\" monster from your Graveyard, except \"Iron Chain Repairman\". This card cannot attack the turn you activate this effect.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Iron Chain",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/iron-chain-repairman-4540",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53274132,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53274132.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53274132.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53274132.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "5.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43341,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7885,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

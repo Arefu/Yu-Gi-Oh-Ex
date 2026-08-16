@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 93709215,
+      "name": "Darkness Destroyer",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. This card can attack twice during each Battle Phase. If this card attacks a Defense Position monster, inflict piercing Battle Damage to your opponent.",
+      "race": "Fiend",
+      "atk": 2300,
+      "def": 1800,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkness-destroyer-7795",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN204",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.53"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force 3 promotional cards",
+          "set_code": "GX06-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93709215,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93709215.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93709215.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93709215.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.74",
+          "tcgplayer_price": "0.94",
+          "ebay_price": "4.00",
+          "amazon_price": "7.18",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29138,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-28",
+          "ocg_date": "2008-11-27",
+          "konami_id": 7983,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

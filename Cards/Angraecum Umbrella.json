@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 73979030,
+      "name": "Angraecum Umbrella",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can discard 1 card, then target 1 Level 4 or lower monster in your GY; Special Summon it in Defense Position, but negate its effects, also for the rest of this turn, you cannot Special Summon monsters from the Extra Deck, except Synchro Monsters.",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/angraecum-umbrella-10004",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN027",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73979030,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73979030.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73979030.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73979030.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Umbreacum Couple",
+          "views": 59887,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14386,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

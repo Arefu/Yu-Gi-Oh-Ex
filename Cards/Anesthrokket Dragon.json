@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 53266486,
+      "name": "Anesthrokket Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Link Monster's effect is activated that targets this face-up card on the field (Quick Effect): You can destroy this card, then make 1 face-up monster on the field unable to attack, also it has its effects negated. During the End Phase, if this card is in the GY because it was destroyed on the field by battle or card effect and sent there this turn: You can Special Summon 1 \"Rokket\" monster from your Deck, except \"Anesthrokket Dragon\". You can only use each effect of \"Anesthrokket Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 2200,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/anesthrokket-dragon-8763",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN110",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53266486,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53266486.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53266486.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53266486.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Anesvullet Dragon",
+          "views": 147844,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13225,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

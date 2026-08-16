@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 61405855,
+      "name": "Sword of Dragon's Soul",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Warrior monster. It gains 700 ATK. After damage calculation, if the equipped monster battled a Dragon monster: Destroy that monster at the end of that Battle Phase.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sword-of-dragon-s-soul-5203",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Tournament Pack 5",
+          "set_code": "STP5-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.53"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Power of Chaos: Joey the Passion promotional cards",
+          "set_code": "PCJ-EN003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "9.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61405855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61405855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61405855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61405855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "5.99",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39048,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-29",
+          "ocg_date": "2000-12-07",
+          "konami_id": 5010,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

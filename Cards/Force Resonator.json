@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 40583194,
+      "name": "Force Resonator",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send this face-up card you control to the Graveyard, then target 1 face-up monster you control; if it attacks this turn, your opponent cannot activate cards or effects that target a monster(s) until the end of the Damage Step.",
+      "race": "Fiend",
+      "atk": 500,
+      "def": 500,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Resonator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/force-resonator-3448",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40583194,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40583194.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40583194.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40583194.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "4.95",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107880,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9477,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

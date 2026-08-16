@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 50186558,
+      "name": "Guardragon Shield",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "You can target 1 Dragon monster you control; it gains ATK/DEF equal to the total Link Rating of the Link Monsters currently on the field x 100, until the end of the opponent's turn. You can only use this effect of \"Guardragon Shield\" once per turn. Once per turn, if exactly 1 Dragon monster you control would be destroyed by battle or card effect, you can send 1 Normal Monster from your hand or Deck to the GY instead.",
+      "race": "Field",
+      "archetype": "Guardragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-shield-9845",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50186558,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50186558.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50186558.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50186558.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.25",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Guardragon's Barrier",
+          "views": 33034,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14138,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 90885155,
+      "name": "Qliphort Shell",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All monsters your opponent controls lose 300 ATK.\n\n[ Monster Effect ] \nYou can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. If this card is Normal Summoned by Tributing a \"Qli\" monster(s), it can make a second attack during each Battle Phase, and if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Machine",
+      "pend_desc": "You cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All monsters your opponent controls lose 300 ATK.",
+      "monster_desc": "You can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. If this card is Normal Summoned by Tributing a \"Qli\" monster(s), it can make a second attack during each Battle Phase, and if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "scale": 9,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-shell-7590",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90885155,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90885155.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90885155.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90885155.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61894,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11357,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 53927679,
+      "name": "Fire Trooper",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, you can send it to the Graveyard to inflict 1000 damage to your opponent.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-trooper-4595",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53927679,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53927679.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53927679.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53927679.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.75",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54285,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7490,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

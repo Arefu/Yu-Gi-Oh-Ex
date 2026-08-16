@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 55735315,
+      "name": "Soul Drain Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by a Dragon-Type Xyz Monster's effect in your possession, and cannot be Special Summoned by other ways. When Special Summoned, if your Life Points are lower than your opponent's: This card gains ATK equal to your current Life Point deficit, and if it does, your opponent takes no further damage this turn. This card cannot attack your opponent directly.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 0,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-drain-dragon-4745",
+      "card_sets": [
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55735315,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55735315.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55735315.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55735315.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37978,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10744,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

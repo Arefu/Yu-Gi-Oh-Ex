@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 45871897,
+      "name": "Lost Guardian",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The original DEF of this card equals the number of your banished Rock-Type monsters × 700.",
+      "race": "Rock",
+      "atk": 100,
+      "def": -1,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lost-guardian-3905",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN191",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Eight",
+          "set_code": "TU08-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45871897,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45871897.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45871897.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45871897.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92228,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6320,
+          "has_effect": 1,
+          "question_def": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

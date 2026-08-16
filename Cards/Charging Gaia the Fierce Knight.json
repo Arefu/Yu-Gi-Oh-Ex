@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 7841921,
+      "name": "Charging Gaia the Fierce Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, its original ATK becomes 1900. If this card is Tributed: You can add 1 \"Black Luster Soldier\" monster from your Deck to your hand. You can only use this effect of \"Charging Gaia the Fierce Knight\" once per turn.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 2100,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Gaia The Fierce Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/charging-gaia-the-fierce-knight-669",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN120",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.35"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7841921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7841921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7841921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7841921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.33",
+          "tcgplayer_price": "1.17",
+          "ebay_price": "4.29",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178694,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11963,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

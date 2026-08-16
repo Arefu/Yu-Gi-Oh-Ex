@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 79176962,
+      "name": "Fantastic Striborg",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters Tributed for the face-up Tribute Summon of this card are returned to the hand instead of going to the GY. Once per turn: You can discard 1 card; return all cards your opponent controls in this card's column to the hand.",
+      "race": "Machine",
+      "atk": 2200,
+      "def": 2200,
+      "level": 5,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fantastic-striborg-8691",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79176962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79176962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79176962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79176962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Whirlwind Machine Striborg",
+          "views": 18285,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13253,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

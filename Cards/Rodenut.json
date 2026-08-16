@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 13478040,
+      "name": "Rodenut",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time your opponent Special Summons a monster(s), place 1 Nut Counter on this card. You can remove 1 Nut Counter from this card to target 1 monster your opponent controls; destroy that target.",
+      "race": "Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rodenut-1156",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13478040,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13478040.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13478040.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13478040.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.10",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27256,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9750,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 81927732,
+      "name": "Raidraptor - Revolution Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 6 Winged Beast-Type monsters\nYou can detach 1 Xyz Material from this card; this turn, this card can attack all monsters your opponent controls, once each. At the start of the Damage Step, if this card battles an opponent's face-up Special Summoned monster: That monster's ATK and DEF become 0. If this card has a \"Raidraptor\" Xyz Monster as Xyz Material, it gains this effect.\n● Once per turn: You can target 1 monster your opponent controls; destroy it, and if you do, inflict damage to your opponent equal to half the ATK that monster had on the field.",
+      "race": "Winged Beast",
+      "atk": 2000,
+      "def": 3000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-revolution-falcon-6879",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81927732,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81927732.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81927732.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81927732.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 188144,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11724,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

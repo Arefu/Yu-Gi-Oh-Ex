@@ -1,0 +1,177 @@
+{
+  "data": [
+    {
+      "id": 15025844,
+      "name": "Mystical Elf",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A delicate elf that lacks offense, but has a terrific defense backed by mystical power.",
+      "race": "Spellcaster",
+      "atk": 800,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystical-elf-1289",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Deck: Yuya & Declan",
+          "set_code": "YS15-ENY02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN120",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Demo Deck 2016",
+          "set_code": "DEM3-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-062",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "14.77"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "15.6"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN062",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Saber Force Starter Deck",
+          "set_code": "YS15-ENF02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.13"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.04"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15025844,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15025844.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15025844.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15025844.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.88",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 363604,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4008,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

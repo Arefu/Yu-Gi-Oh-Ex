@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 55997110,
+      "name": "Performapal Handsamuraiger",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys an opponent's monster by battle and sends it to the GY: You can add 1 Level 5 or higher Pendulum Monster from your Deck to your hand. You can only use this effect of \"Performapal Handsamuraiger\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-handsamuraiger-4767",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55997110,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55997110.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55997110.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55997110.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Handsome Liger",
+          "views": 46866,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2016-09-21",
+          "konami_id": 12673,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

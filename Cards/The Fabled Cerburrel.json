@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 82888408,
+      "name": "The Fabled Cerburrel",
+      "typeline": [
+        "Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is discarded to the GY: Special Summon it.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 400,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Fabled",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-fabled-cerburrel-6961",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN018",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN138",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN138",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82888408,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82888408.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82888408.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82888408.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.49",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 206493,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2009-10-01",
+          "konami_id": 8556,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

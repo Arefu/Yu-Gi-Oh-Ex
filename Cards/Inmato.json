@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 39703254,
+      "name": "Inmato",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When 1 other face-up Plant-Type monster is targeted by the effect of a Spell or Trap Card your opponent controls, you can Tribute this card to draw 2 cards.",
+      "race": "Plant",
+      "atk": 1400,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inmato-3364",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 2 participation cards",
+          "set_code": "DL11-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39703254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39703254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39703254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39703254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35702,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8026,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

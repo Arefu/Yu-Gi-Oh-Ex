@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 23587624,
+      "name": "A Wild Monster Appears!",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls a monster and you control no monsters: Special Summon from your hand, 1 monster with an original Level of 10 or lower that cannot be Normal Summoned/Set, ignoring its Summoning conditions. It is unaffected by the effects of your cards, except for its own effects and this card's, also shuffle it into the Deck during your opponent's next End Phase. For the rest of this turn, you cannot Normal Summon/Set or Special Summon monsters, and your opponent takes no damage.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-wild-monster-appears-2034",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN234",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN064",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23587624,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23587624.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23587624.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23587624.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62904,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11584,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 40771118,
+      "name": "Sentence of Doom",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can target any number of your Fiend monsters that are banished or in your GY, up to the number of \"Destiny Board\" and/or \"Spirit Message\" cards you control; add them to your hand. You can send this card from your Spell & Trap Zone to the GY; place 1 \"Spirit Message\" card from your hand, Deck, or GY in your Spell & Trap Zone. (This is treated as being placed by the effect of \"Destiny Board\".) You can only use 1 \"Sentence of Doom\" effect per turn, and only once that turn.",
+      "race": "Continuous",
+      "archetype": "Spirit Message",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sentence-of-doom-10302",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40771118,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40771118.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40771118.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40771118.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "4.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Death Sentence",
+          "views": 120593,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422005,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14585,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

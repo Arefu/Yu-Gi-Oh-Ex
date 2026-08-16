@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 35209994,
+      "name": "Evilswarm Hraesvelg",
+      "typeline": [
+        "Winged Beast",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Target 1 face-up card your opponent controls; return that target to the hand.",
+      "race": "Winged Beast",
+      "atk": 1150,
+      "def": 1850,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Lswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evilswarm-hraesvelg-2985",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN029",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35209994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35209994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35209994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35209994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27015,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9818,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

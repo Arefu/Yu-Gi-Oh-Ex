@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 72355441,
+      "name": "Xyz Gift",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control 2 or more face-up Xyz Monsters: Detach 2 Xyz Materials from a monster you control and draw 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-gift-6073",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN049",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72355441,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72355441.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72355441.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72355441.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.90",
+          "tcgplayer_price": "1.24",
+          "ebay_price": "8.95",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73675,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9767,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

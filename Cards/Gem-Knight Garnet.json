@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 91731841,
+      "name": "Gem-Knight Garnet",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The Gem-Knight Warrior who carries the Garnet Soul. His Flaming Iron Fist crushes all enemies.",
+      "race": "Pyro",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-garnet-7650",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN016",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91731841,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91731841.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91731841.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91731841.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "2.99",
+          "amazon_price": "2.45",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 200844,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8893,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 14568951,
+      "name": "Blue Dragon Ninja",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during either player's turn: You can discard 1 \"Ninja\" monster and 1 \"Ninjitsu Art\" card to target 1 face-up monster your opponent controls; this turn, that monster's effects are negated, also that monster cannot attack.",
+      "race": "Sea Serpent",
+      "atk": 2100,
+      "def": 1200,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-dragon-ninja-1248",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14568951,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14568951.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14568951.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14568951.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.78",
+          "ebay_price": "8.95",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37163,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10314,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

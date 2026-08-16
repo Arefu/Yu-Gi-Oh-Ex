@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 93377803,
+      "name": "Solitary Sword of Poison",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a monster you control. If the equipped monster battles an opponent's monster, the equipped monster's original ATK/DEF is doubled during damage calculation only. If you control a monster other than the equipped monster, send this card to the GY. You can only control 1 \"Solitary Sword of Poison\".",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/solitary-sword-of-poison-9423",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.97"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENA14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93377803,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93377803.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93377803.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93377803.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sword of Toxic Solitude",
+          "views": 57042,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13781,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

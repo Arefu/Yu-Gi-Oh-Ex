@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 53490455,
+      "name": "Salamangreat Raccoon",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your \"Salamangreat\" monster is targeted for an attack by an opponent's monster: You can send this card from your hand to the GY, then target those 2 monsters that would battle; gain LP equal to the ATK of that opponent's monster, also your targeted monster cannot be destroyed by battle this turn. When your \"Salamangreat\" monster destroys an opponent's monster by battle and sends it to the GY, while this card is in your GY: You can add this card to your hand. You can only use this effect of \"Salamangreat Raccoon\" once per turn.",
+      "race": "Cyberse",
+      "atk": 400,
+      "def": 800,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-raccoon-9937",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53490455,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53490455.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53490455.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53490455.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50815,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14238,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

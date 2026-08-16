@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 73899015,
+      "name": "Venom Snake",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can place 1 Venom Counter on 1 monster your opponent controls. If you activate this effect, this card cannot attack during this turn.",
+      "race": "Reptile",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Venom",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/venom-snake-6209",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73899015,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73899015.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73899015.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73899015.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "2.32",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66461,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7180,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

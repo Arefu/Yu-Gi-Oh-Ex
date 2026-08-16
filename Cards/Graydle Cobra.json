@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 93445074,
+      "name": "Graydle Cobra",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in your Monster Zone is destroyed by battle or Trap effect and sent to your Graveyard: You can target 1 face-up monster your opponent controls; equip this card to that target. While this card is equipped to a monster by this effect, take control of that monster. When this card leaves the field, destroy the equipped monster.",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Graydle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/graydle-cobra-7779",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93445074,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93445074.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93445074.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93445074.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80841,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11978,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

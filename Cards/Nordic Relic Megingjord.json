@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86827882,
+      "name": "Nordic Relic Megingjord",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Aesir\" or \"Nordic\" monster you control; its ATK/DEF become double its original ATK/DEF, until the end of this turn, but it cannot attack your opponent directly this turn.",
+      "race": "Normal",
+      "archetype": "Aesir",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nordic-relic-megingjord-7270",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN204",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN088",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86827882,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86827882.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86827882.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86827882.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54862,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9457,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

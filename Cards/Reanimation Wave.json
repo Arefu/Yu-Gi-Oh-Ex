@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 60312997,
+      "name": "Reanimation Wave",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent's monster declares a direct attack. Select 1 Synchro Monster in your Graveyard with a Level less than or equal to the attacking monster's. The Battle Damage you take from that attack is halved. At the end of the Damage Step, Special Summon the selected Synchro Monster from the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reanimation-wave-5116",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60312997,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60312997.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60312997.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60312997.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17246,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8998,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 93221206,
+      "name": "Ancient Elf",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This elf is rumored to have lived for thousands of years. He leads an army of spirits against his enemies.",
+      "race": "Spellcaster",
+      "atk": 1450,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-elf-7760",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.31"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.08"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93221206,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93221206.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93221206.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93221206.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166301,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4439,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

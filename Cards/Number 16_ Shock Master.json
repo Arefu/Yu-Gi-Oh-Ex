@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 54719828,
+      "name": "Number 16: Shock Master",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card to declare 1 card type (Monster, Spell, or Trap); that type of card (if Spell or Trap) cannot be activated, or (if Monster) cannot activate its effects, until the end of your opponent's next turn.",
+      "race": "Fairy",
+      "atk": 2300,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-16-shock-master-4663",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2012 Wave 2",
+          "set_code": "CT09-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.08"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN166",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN166",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Weekly Shonen Jump Alpha April 2012 membership promotional card",
+          "set_code": "JUMP-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "23.07"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 54719828,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54719828.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54719828.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54719828.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.17",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "17.99",
+          "amazon_price": "2.38",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 16",
+          "views": 54489,
+          "viewsweek": 0,
+          "upvotes": 51,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-30",
+          "ocg_date": "2011-08-19",
+          "konami_id": 9860,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

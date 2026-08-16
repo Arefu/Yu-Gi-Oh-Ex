@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 53944920,
+      "name": "Genex Furnace",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a face-up \"Genex Controller\", you can Normal Summon this card without Tributing.",
+      "race": "Pyro",
+      "atk": 2000,
+      "def": 1300,
+      "level": 5,
+      "attribute": "FIRE",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-furnace-4597",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN011",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53944920,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53944920.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53944920.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53944920.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13660,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-09-22",
+          "konami_id": 7948,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

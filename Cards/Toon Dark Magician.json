@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 21296502,
+      "name": "Toon Dark Magician",
+      "typeline": [
+        "Spellcaster",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot attack the turn it is Summoned. While you control \"Toon World\" and your opponent controls no Toon monsters, this card can attack your opponent directly. Once per turn: You can discard 1 \"Toon\" card, then activate 1 of these effects;\n● Special Summon 1 Toon monster from your Deck, except \"Toon Dark Magician\", ignoring its Summoning conditions.\n● Add 1 \"Toon\" Spell/Trap from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-dark-magician-1831",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.98"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21296502,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21296502.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21296502.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21296502.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.27",
+          "tcgplayer_price": "7.89",
+          "ebay_price": "6.49",
+          "amazon_price": "2.13",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 408657,
+          "viewsweek": 21,
+          "upvotes": 21,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12431,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

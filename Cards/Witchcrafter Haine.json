@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 84523092,
+      "name": "Witchcrafter Haine",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot target other Spellcaster monsters you control with card effects. (Quick Effect): You can discard 1 Spell, then target 1 face-up card your opponent controls; destroy it. You can only use this effect of \"Witchcrafter Haine\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2400,
+      "def": 1000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-haine-10149",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN223",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "4.83"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84523092,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84523092.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84523092.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84523092.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcraft Haine",
+          "views": 289467,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412018,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14408,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

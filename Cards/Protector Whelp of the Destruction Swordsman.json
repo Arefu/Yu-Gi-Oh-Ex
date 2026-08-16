@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 47158777,
+      "name": "Protector Whelp of the Destruction Swordsman",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters\r\nIf this card is Link Summoned: You can send 1 \"Destruction Sword\" card from your Deck to the GY, then, you can Special Summon 1 \"Buster Blader\" monster from your hand. At the end of your Battle Phase, if your opponent controls no monsters: You can target 1 \"Buster Blader\" monster you control that did not declare an attack this turn; inflict damage to your opponent equal to that monster's ATK. You can only use each effect of \"Protector Whelp of the Destruction Swordsman\" once per turn.",
+      "race": "Dragon",
+      "atk": 400,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Destruction Sword",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/protector-whelp-of-the-destruction-swordsman-10706",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47158777,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47158777.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47158777.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47158777.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.46",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Companion Whelp of the Destruction Swordsman",
+          "views": 264414,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257006,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14931,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 22653490,
+      "name": "Lightning Chidori",
+      "typeline": [
+        "Thunder",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 WIND monsters\nIf this card is Xyz Summoned: Target 1 Set card your opponent controls; return that target to the bottom of the Deck. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up card your opponent controls; return that target to the top of the Deck.",
+      "race": "Thunder",
+      "atk": 1900,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightning-chidori-1949",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN052",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN070",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22653490,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22653490.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22653490.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22653490.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.39",
+          "tcgplayer_price": "2.47",
+          "ebay_price": "3.99",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 251000,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10411,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

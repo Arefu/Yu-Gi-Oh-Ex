@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 74009824,
+      "name": "El Shaddoll Wendigo",
+      "typeline": [
+        "Psychic",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Shaddoll\" monster + 1 WIND monster\r\nMust first be Fusion Summoned. (Quick Effect): You can target 1 monster you control; this turn, it cannot be destroyed by battle with an opponent's Special Summoned monster. You can only use this effect of \"El Shaddoll Wendigo\" once per turn. If this card is sent to the GY: You can target 1 \"Shaddoll\" Spell/Trap in your GY; add it to your hand.",
+      "race": "Psychic",
+      "atk": 200,
+      "def": 2800,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/el-shaddoll-wendigo-6221",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN221",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS10",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.75"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74009824,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74009824.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74009824.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74009824.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "2.66",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149169,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11567,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 84361420,
+      "name": "Edge Hammer",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 \"Elemental HERO Bladedge\" to target 1 monster your opponent controls; destroy that target and inflict damage to your opponent equal to that target's original ATK.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/edge-hammer-7075",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.47"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN113",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84361420,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84361420.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84361420.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84361420.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.25",
+          "amazon_price": "1.33",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28057,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-07",
+          "ocg_date": "2006-10-26",
+          "konami_id": 6942,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

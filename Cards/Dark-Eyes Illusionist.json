@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 38247752,
+      "name": "Dark-Eyes Illusionist",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Target 1 monster on the field; it cannot attack while this card is face-up on the field.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 1400,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-eyes-illusionist-3240",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN112",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38247752,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38247752.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38247752.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38247752.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.43",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "3.00",
+          "amazon_price": "5.31",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96375,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4736,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

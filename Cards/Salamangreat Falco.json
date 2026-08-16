@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 20618081,
+      "name": "Salamangreat Falco",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY: You can target 1 \"Salamangreat\" Spell/Trap in your GY; Set that target to your field. If this card is in your GY: You can target 1 \"Salamangreat\" monster you control, except \"Salamangreat Falco\"; return that monster to the hand, and if you do, Special Summon this card. You can only use 1 \"Salamangreat Falco\" effect per turn, and only once that turn.",
+      "race": "Cyberse",
+      "atk": 1200,
+      "def": 1600,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-falco-9625",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN155",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20618081,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20618081.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20618081.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20618081.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 266127,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13891,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

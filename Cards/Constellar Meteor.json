@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 63545861,
+      "name": "Constellar Meteor",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During the turn this card is activated, if an opponent's monster battles a \"Constellar\" monster, and the opponent's monster is not destroyed, shuffle it into the Deck at the end of the Damage Step.",
+      "race": "Normal",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-meteor-5369",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN099",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN069",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63545861,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63545861.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63545861.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63545861.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "3.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29101,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-11-06",
+          "konami_id": 10011,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 26964762,
+      "name": "Destiny HERO - Dark Angel",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 3 or more \"Destiny HERO\" monsters in your GY: You can discard this card, then target 1 \"Destiny HERO\" monster in your GY; Special Summon it to your opponent's field in Defense Position. When a Spell Card or effect you activate resolves, negate that effect, and if you do, or if it did not have an effect, destroy that card. During your Standby Phase: You can banish this card and 1 \"Destiny HERO\" monster from your GY; each player chooses 1 Normal Spell from their Deck, and places it on top of their Deck.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-dark-angel-2309",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.94"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26964762,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26964762.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26964762.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26964762.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "10.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155168,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12706,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

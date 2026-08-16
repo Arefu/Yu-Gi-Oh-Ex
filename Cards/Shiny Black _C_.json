@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 94081496,
+      "name": "Shiny Black \"C\"",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, when exactly 1 Synchro Monster is Special Summoned to your opponent's side of the field: You can banish this card from your Graveyard to target that face-up Synchro Monster; destroy that target.",
+      "race": "Insect",
+      "atk": 200,
+      "def": 500,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "\"C\"",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiny-black-c-7827",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN024",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 14 participation cards",
+          "set_code": "DL14-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "11.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94081496,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94081496.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94081496.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94081496.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shiny Black",
+          "views": 42701,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8315,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

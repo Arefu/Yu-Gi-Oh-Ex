@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 31000575,
+      "name": "Conscription",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Excavate the top card of your opponent's Deck, and if it is a monster that can be Normal Summoned/Set, Special Summon it to your field. Otherwise, add that card to your opponent's hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/conscription-2629",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.03"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.14"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31000575,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31000575.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31000575.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31000575.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90517,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6447,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 15574615,
+      "name": "D.D. Jet Iron",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by sending 1 \"D.D. Esper Star Sparrow\", \"Beast-Warrior Puma\", \"Phoenix Beast Gairuda\", and \"Ironhammer the Giant\" from your hand and/or face-up from your side of the field to the Graveyard. You can Tribute this card to target 1 \"D.D. Esper Star Sparrow\", \"Beast-Warrior Puma\", \"Phoenix Beast Gairuda\" and \"Ironhammer the Giant\" in your Graveyard; Special Summon those targets.",
+      "race": "Machine",
+      "atk": 4000,
+      "def": 0,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-jet-iron-1342",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN055",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15574615,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15574615.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15574615.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15574615.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24316,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9977,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

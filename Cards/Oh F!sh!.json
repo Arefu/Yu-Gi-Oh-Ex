@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 87313164,
+      "name": "Oh F!sh!",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When an Effect Monster's effect activates: Shuffle 1 of your banished Fish, Sea Serpent, or Aqua-Type monsters into the Main Deck; negate the activation and destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oh-f-sh-7306",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 28",
+          "set_code": "OP28-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87313164,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87313164.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87313164.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87313164.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.74",
+          "amazon_price": "3.56",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39190,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9686,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

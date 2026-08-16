@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 3642509,
+      "name": "Elemental HERO Great Tornado",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Elemental HERO\" monster + 1 WIND monster\nMust be Fusion Summoned and cannot be Special Summoned by other ways. If this card is Fusion Summoned: Halve the ATK and DEF of all face-up monsters your opponent currently controls.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-great-tornado-324",
+      "card_sets": [
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years",
+          "set_code": "LC02-EN010",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3642509,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3642509.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3642509.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3642509.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.19",
+          "amazon_price": "2.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 241010,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-04",
+          "ocg_date": "2010-03-20",
+          "konami_id": 8592,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 68934651,
+      "name": "Firewall Dragon Darkfluid",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3+ Effect Monsters\r\nIf this card is Link Summoned: You can place counters on this card equal to the number of different types of Cyberse monsters in your GY (Ritual, Fusion, Synchro, Xyz). This card gains 2500 ATK for each counter on it during the Battle Phase only. When your opponent activates a monster effect (Quick Effect): You can remove 1 counter from this card; negate the activation, also, if this effect was activated between this card's attack declaration and the end of the Damage Step, this card can make another attack in a row.",
+      "race": "Cyberse",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 5,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/firewall-dragon-darkfluid-10346",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN168",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN037",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68934651,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68934651.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68934651.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68934651.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "8.88",
+          "amazon_price": "4.62",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238761,
+          "viewsweek": 0,
+          "upvotes": 31,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010037,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14664,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

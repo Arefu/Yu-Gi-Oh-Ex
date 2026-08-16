@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 62379337,
+      "name": "Violet Witch",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle and sent to the Graveyard: Add 1 Plant-Type monster with 1500 or less DEF from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 1100,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/violet-witch-5274",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN097",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62379337,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62379337.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62379337.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62379337.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "4.46",
+          "amazon_price": "5.07",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52378,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-08-21",
+          "konami_id": 8088,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

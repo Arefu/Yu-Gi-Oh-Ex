@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 21663205,
+      "name": "Gravekeeper's Headman",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can target 1 Level 4 \"Gravekeeper's\" monster in your GY; Special Summon it in Attack Position or face-down Defense Position. You can only use this effect of \"Gravekeeper's Headman\" once per turn. This effect is unaffected by \"Necrovalley\".",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-headman-9662",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN163",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21663205,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21663205.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21663205.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21663205.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.25",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gravekeeper's Priest",
+          "views": 204752,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13899,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

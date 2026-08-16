@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 55608151,
+      "name": "Gryphon Wing",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates \"Harpie's Feather Duster\": Negate its effect, and if you do, destroy all Spell and Trap Cards your opponent controls.",
+      "race": "Normal",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gryphon-wing-4734",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN110",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55608151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55608151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55608151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55608151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24168,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-30",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4892,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

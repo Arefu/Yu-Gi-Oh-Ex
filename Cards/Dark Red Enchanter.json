@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 45462639,
+      "name": "Dark Red Enchanter",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Place 2 Spell Counters on it. Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. Gains 300 ATK for each Spell Counter on it. Once per turn: You can remove 2 Spell Counters from this card; discard 1 random card from your opponent's hand.",
+      "race": "Spellcaster",
+      "atk": 1700,
+      "def": 2200,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-red-enchanter-3875",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN097",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 5",
+          "set_code": "STP5-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.15"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENF05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45462639,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45462639.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45462639.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45462639.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "13.99",
+          "amazon_price": "3.90",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61585,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 5,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2006-08-19",
+          "konami_id": 6555,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

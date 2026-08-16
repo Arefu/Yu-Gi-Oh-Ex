@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 31226177,
+      "name": "Imduk the World Chalice Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Normal Monster, except a Token\r\nDuring your Main Phase, you can Normal Summon 1 \"World Chalice\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) At the start of the Damage Step, if this card battles an opponent's monster this card points to: You can destroy that opponent's monster. If this card is sent from the field to the GY: You can Special Summon 1 \"World Chalice\" monster from your hand.",
+      "race": "Dragon",
+      "atk": 800,
+      "def": null,
+      "level": 0,
+      "attribute": "WIND",
+      "archetype": "World Chalice",
+      "linkval": 1,
+      "linkmarkers": [
+        "Top"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/imduk-the-world-chalice-dragon-8714",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31226177,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31226177.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31226177.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31226177.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.76",
+          "ebay_price": "3.99",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Stargrail Dragon Imduk",
+          "views": 376394,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13086,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

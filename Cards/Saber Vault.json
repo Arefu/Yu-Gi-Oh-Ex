@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 73787254,
+      "name": "Saber Vault",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each face-up \"X-Saber\" monster on the field gains 100 ATK x its Level, and loses 100 DEF x its Level.",
+      "race": "Field",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/saber-vault-6198",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN086",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73787254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73787254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73787254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73787254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.98",
+          "tcgplayer_price": "9.20",
+          "ebay_price": "1.99",
+          "amazon_price": "15.00",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17561,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9032,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

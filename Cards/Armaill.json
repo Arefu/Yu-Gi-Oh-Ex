@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 53153481,
+      "name": "Armaill",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A strange warrior who manipulates three deadly blades with both hands and his tail.",
+      "race": "Warrior",
+      "atk": 700,
+      "def": 1300,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armaill-4528",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.86"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.04"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53153481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53153481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53153481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53153481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 223037,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4178,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

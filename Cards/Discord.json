@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 46480475,
+      "name": "Discord",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Neither player can Synchro Summon. Send this card to the Graveyard during your 3rd End Phase after activation.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/discord-3964",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN068",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN047",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46480475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46480475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46480475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46480475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.15",
+          "tcgplayer_price": "7.30",
+          "ebay_price": "1.95",
+          "amazon_price": "2.70",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33235,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 6,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8358,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

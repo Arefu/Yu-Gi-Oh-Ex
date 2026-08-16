@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 90555947,
+      "name": "Naturia Gaiastrio",
+      "typeline": [
+        "Rock",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 EARTH Synchro Monsters\nDuring either player's turn, when a card or effect is activated that targets exactly 1 card on the field (and no other cards): You can send 1 card from your hand to the Graveyard; negate the activation, and if you do, destroy that card.",
+      "race": "Rock",
+      "atk": 3200,
+      "def": 2100,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-gaiastrio-7563",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90555947,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90555947.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90555947.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90555947.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57617,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11420,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

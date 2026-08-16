@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 33833230,
+      "name": "Performapal Seal Eel",
+      "typeline": [
+        "Fish",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up monster your opponent controls; that face-up monster has its effects negated until the end of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \nWhen this card is Normal or Special Summoned: You can target 1 Set Spell/Trap Card your opponent controls; that Set card cannot be activated this turn. Neither player can activate cards or effects in response to this effect's activation.",
+      "race": "Fish",
+      "pend_desc": "Once per turn: You can target 1 face-up monster your opponent controls; that face-up monster has its effects negated until the end of this turn (even if this card leaves the field).",
+      "monster_desc": "When this card is Normal or Special Summoned: You can target 1 Set Spell/Trap Card your opponent controls; that Set card cannot be activated this turn. Neither player can activate cards or effects in response to this effect's activation.",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "WATER",
+      "archetype": "Performapal",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-seal-eel-2871",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33833230,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33833230.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33833230.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33833230.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27068,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12594,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

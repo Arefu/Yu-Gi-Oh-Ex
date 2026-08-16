@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 92345028,
+      "name": "Fury of Fire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "(This card is always treated as a \"Salamangreat\" card.)\r\nSpecial Summon up to 2 \"Salamangreat\" monsters with different names from your hand and/or GY in Defense Position, but their effects are negated, also, for the rest of this turn after this card resolves, you can only Special Summon from the Extra Deck once. You can only activate 1 \"Fury of Fire\" per turn.",
+      "race": "Normal",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fury-of-fire-10262",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Dark Neostorm Special Edition",
+          "set_code": "DANE-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.64"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92345028,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92345028.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92345028.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92345028.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34003,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009054,
+          "tcg_date": "2019-06-13",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14502,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

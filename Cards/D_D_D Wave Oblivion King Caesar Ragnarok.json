@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 27873305,
+      "name": "D/D/D Wave Oblivion King Caesar Ragnarok",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"D/D/D\" monsters\nOnce per turn, when an attack is declared involving this card: You can target 1 other \"D/D\" or \"Dark Contract\" card you control; return it to the hand, and if you do, equip 1 face-up monster your opponent controls to this card, except the battling monster. This card gains ATK equal to the combined original ATK of the monsters equipped to it by this effect.",
+      "race": "Fiend",
+      "atk": 3200,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-wave-oblivion-king-caesar-ragnarok-2373",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN138",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27873305,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27873305.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27873305.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27873305.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.56",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.43",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131431,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11988,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

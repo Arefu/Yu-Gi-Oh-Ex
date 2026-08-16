@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 49905576,
+      "name": "Meltiel, Sage of the Sky",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time a Counter Trap Card is activated, immediately after it resolves, gain 1000 LP, and if you do, if \"The Sanctuary in the Sky\" is on the field, destroy 1 card your opponent controls.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meltiel-sage-of-the-sky-4253",
+      "card_sets": [
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN110",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.34"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN062",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49905576,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49905576.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49905576.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49905576.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105272,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-12-14",
+          "konami_id": 7047,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

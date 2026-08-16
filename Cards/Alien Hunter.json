@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 62315111,
+      "name": "Alien Hunter",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card destroys a monster with an A-Counter by battle, it can attack once again in a row.",
+      "race": "Reptile",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alien-hunter-5269",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62315111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62315111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62315111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62315111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.50",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71049,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6803,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

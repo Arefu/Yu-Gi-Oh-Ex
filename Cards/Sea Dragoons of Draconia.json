@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 82114013,
+      "name": "Sea Dragoons of Draconia",
+      "typeline": [
+        "Sea Serpent",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen a monster is destroyed by battle: You can Special Summon 1 Normal Monster from your hand. You can only use this effect of \"Sea Dragoons of Draconia\" once per turn.\n\n[ Monster Effect ] \n''Silently creeping in from the deep sea, elite black ops marine troops of the Draconia Empire wage an endless battle against the hated Principality of Dinon on the sea's opposite shores.''",
+      "race": "Sea Serpent",
+      "pend_desc": "When a monster is destroyed by battle: You can Special Summon 1 Normal Monster from your hand. You can only use this effect of \"Sea Dragoons of Draconia\" once per turn.",
+      "monster_desc": "''Silently creeping in from the deep sea, elite black ops marine troops of the Draconia Empire wage an endless battle against the hated Principality of Dinon on the sea's opposite shores.''",
+      "atk": 200,
+      "def": 2100,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Draconia",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sea-dragoons-of-draconia-6904",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls Sneak Peek Participation Card",
+          "set_code": "CROS-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82114013,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82114013.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82114013.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82114013.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78708,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-09",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11770,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

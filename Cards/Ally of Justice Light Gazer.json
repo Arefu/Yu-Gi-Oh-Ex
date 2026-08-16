@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 19204398,
+      "name": "Ally of Justice Light Gazer",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nThis card gains 200 ATK for each LIGHT monster in your opponent's Graveyard.",
+      "race": "Machine",
+      "atk": 2400,
+      "def": 1600,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Ally of Justice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ally-of-justice-light-gazer-1656",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN090",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN096",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19204398,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19204398.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19204398.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19204398.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "4.49",
+          "amazon_price": "1.63",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33080,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7836,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

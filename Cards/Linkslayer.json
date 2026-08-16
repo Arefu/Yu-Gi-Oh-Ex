@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 35595518,
+      "name": "Linkslayer",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Special Summon this card (from your hand). Once per turn: You can discard up to 2 cards, then target that many Spells/Traps on the field; destroy them.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": 600,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/linkslayer-8900",
+      "card_sets": [
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN009",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN009",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35595518,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35595518.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35595518.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35595518.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 214252,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-20",
+          "ocg_date": "2017-03-25",
+          "konami_id": 13032,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 61587183,
+      "name": "Dark Scorpion - Chick the Yellow",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts Battle Damage to your opponent, you can activate 1 of these effects:\n● Target 1 card on the field; return that target to the hand.\n● Look at the top card of their Deck, then return it to the top or bottom of the Deck.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Dark Scorpion",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-scorpion-chick-the-yellow-5214",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN188",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Semi-Limited"
+      },
+      "card_images": [
+        {
+          "id": 61587183,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61587183.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61587183.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61587183.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95362,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5718,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

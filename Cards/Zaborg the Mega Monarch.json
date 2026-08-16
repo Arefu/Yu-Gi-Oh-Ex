@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 87602890,
+      "name": "Zaborg the Mega Monarch",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card by Tributing 1 Tribute Summoned monster. If this card is Tribute Summoned: Target 1 monster on the field; destroy it, then, if it was a LIGHT monster, both players send as many cards as possible from their Extra Deck to the GY, but not more than the original Level/Rank of that destroyed monster. If this card was Tribute Summoned by Tributing a LIGHT monster, add this additional effect.\r\n● You choose the cards your opponent sends to the GY.",
+      "race": "Thunder",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zaborg-the-mega-monarch-7331",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN154",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.4"
+        },
+        {
+          "set_name": "OTS Tournament Pack 28",
+          "set_code": "OP28-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87602890,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87602890.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87602890.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87602890.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "2.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 354306,
+          "viewsweek": 1092,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11369,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

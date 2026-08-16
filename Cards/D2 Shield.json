@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 71249758,
+      "name": "D2 Shield",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 face-up Defense Position monster you control. Its DEF becomes double its original DEF.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d2-shield-5984",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71249758,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71249758.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71249758.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71249758.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.15",
+          "tcgplayer_price": "6.73",
+          "ebay_price": "3.25",
+          "amazon_price": "5.19",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32470,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9140,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

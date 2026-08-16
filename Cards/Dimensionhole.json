@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 22959079,
+      "name": "Dimensionhole",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 monster on your side of the field and remove it from play until your next Standby Phase. While the monster is removed from play, the Monster Card Zone of the selected monster cannot be used.",
+      "race": "Normal",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dimensionhole-1974",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN183",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.1"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.76"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22959079,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22959079.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22959079.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22959079.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.50",
+          "amazon_price": "2.32",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 154377,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5132,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

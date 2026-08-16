@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 25165047,
+      "name": "Life Stream Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + \"Power Tool Dragon\"\nWhen this card is Synchro Summoned: You can make your LP become 4000. You take no effect damage. If this face-up card on the field would be destroyed, you can banish 1 Equip Spell Card from your Graveyard instead.",
+      "race": "Dragon",
+      "atk": 2900,
+      "def": 2400,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Power Tool",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/life-stream-dragon-2163",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN246",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25165047,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25165047.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25165047.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25165047.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.44",
+          "tcgplayer_price": "8.08",
+          "ebay_price": "13.99",
+          "amazon_price": "7.23",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83733,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9509,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

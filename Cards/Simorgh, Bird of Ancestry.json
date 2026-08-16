@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 86489182,
+      "name": "Simorgh, Bird of Ancestry",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Both players Tribute Summon WIND monsters with 1 less Tribute than required. If you Tribute Summon this card by Tributing only WIND monsters, return up to 2 cards your opponent controls to their owner's hand. This card is treated as a Normal Monster while in your hand.",
+      "race": "Winged Beast",
+      "atk": 2900,
+      "def": 2000,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Simorgh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/simorgh-bird-of-ancestry-7245",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86489182,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86489182.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86489182.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86489182.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "1.43",
+          "amazon_price": "5.48",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66338,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7612,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

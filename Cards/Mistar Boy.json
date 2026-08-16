@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 65170459,
+      "name": "Mistar Boy",
+      "typeline": [
+        "Aqua",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 WATER monsters\r\nAll WATER monsters on the field gain 500 ATK and DEF, also all FIRE monsters on the field lose 400 ATK and DEF. If this card is destroyed by battle or card effect: You can target 1 WATER monster in your GY; add it to your hand. You can only use this effect of \"Mistar Boy\" once per turn.",
+      "race": "Aqua",
+      "atk": 1400,
+      "def": null,
+      "level": 0,
+      "attribute": "WATER",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mistar-boy-8636",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist Special Edition",
+          "set_code": "COTD-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65170459,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65170459.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65170459.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65170459.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.86",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mastar Boy",
+          "views": 282659,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-21",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13268,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

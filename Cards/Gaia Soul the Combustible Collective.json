@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 51355346,
+      "name": "Gaia Soul the Combustible Collective",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Tribute up to 2 Pyro-Type monsters; this card gains 1000 ATK for each. If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent. During the End Phase: Destroy this card.",
+      "race": "Pyro",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gaia-soul-the-combustible-collective-4368",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 15 participation cards",
+          "set_code": "DL15-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.37"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN028",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Blaze of Destruction",
+          "set_code": "SD3-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51355346,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51355346.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51355346.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51355346.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.29",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131540,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6197,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

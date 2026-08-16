@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 77363314,
+      "name": "Krystal Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Battle Step, if this card battled this turn: You can add 1 Level 8 Dragon-Type monster from your Deck to your hand.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 1000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/krystal-dragon-6505",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENSV2",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.27"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Special Edition",
+          "set_code": "MVP1-ENSE2",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.87"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENGV2",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "5.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77363314,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77363314.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77363314.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77363314.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.35",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68290,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-12",
+          "ocg_date": "2016-07-21",
+          "konami_id": 12692,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 54813225,
+      "name": "Duck Fighter",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or Graveyard: You can Tribute Tokens whose total Levels equal 3 or more; Special Summon this card. You can only use the effect of \"Duck Fighter\" once per turn.",
+      "race": "Machine",
+      "atk": 1300,
+      "def": 1400,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/duck-fighter-4670",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN099",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54813225,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54813225.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54813225.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54813225.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "1.40",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11426,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-15",
+          "konami_id": 10578,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

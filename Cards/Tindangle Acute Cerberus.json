@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 75119040,
+      "name": "Tindangle Acute Cerberus",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 \"Tindangle\" monsters\r\nGains 3000 ATK if you have 3 or more \"Tindangle\" monsters with different names in your GY, including \"Tindangle Base Gardna\". Gains 500 ATK for each \"Tindangle\" monster it points to. At the end of the Battle Phase, if this card declared an attack: You can Special Summon 1 \"Tindangle Token\" (Fiend/DARK/Level 1/ATK 0/DEF 0).",
+      "race": "Fiend",
+      "atk": 0,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Tindangle",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tindangle-acute-cerberus-8963",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75119040,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75119040.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75119040.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75119040.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55657,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13416,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

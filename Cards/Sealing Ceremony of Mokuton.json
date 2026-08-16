@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 1802450,
+      "name": "Sealing Ceremony of Mokuton",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, you can Tribute 1 face-up EARTH monster to select up to 2 cards in the opponent's Graveyard, and remove them from play.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sealing-ceremony-of-mokuton-159",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1802450,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1802450.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1802450.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1802450.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18003,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9548,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

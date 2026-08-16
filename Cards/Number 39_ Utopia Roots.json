@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 84124261,
+      "name": "Number 39: Utopia Roots",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 1 monsters\nWhen any player's monster declares an attack: You can detach 1 Xyz Material from this card; negate the attack, and if you negated an Xyz Monster's attack, this card gains ATK equal to that monster's Rank x 500.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-39-utopia-roots-7055",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN048",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84124261,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84124261.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84124261.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84124261.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "2.49",
+          "amazon_price": "15.14",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 39",
+          "views": 177431,
+          "viewsweek": 0,
+          "upvotes": 104,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10934,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

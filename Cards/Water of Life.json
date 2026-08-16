@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 7133305,
+      "name": "Water of Life",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters: Target 1 monster in your GY; Special Summon that target in Attack Position, also, for the rest of this turn after this card resolves, you cannot activate monster effects, except the effects of that Special Summoned monster on the field. You can only activate 1 \"Water of Life\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/water-of-life-10350",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7133305,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7133305.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7133305.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7133305.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.49",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41020,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248002,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14547,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

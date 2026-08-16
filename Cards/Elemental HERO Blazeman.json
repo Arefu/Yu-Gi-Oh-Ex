@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 63060238,
+      "name": "Elemental HERO Blazeman",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"Polymerization\" from your Deck to your hand. During your Main Phase: You can activate this effect; you cannot Special Summon monsters for the rest of this turn, except Fusion Monsters, also send 1 \"Elemental HERO\" monster from your Deck to the GY, except \"Elemental HERO Blazeman\", and if you do, this card's Attribute and ATK/DEF become the same as the monster sent to the GY, until the end of this turn. You can only use 1 \"Elemental HERO Blazeman\" effect per turn, and only once that turn.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-blazeman-5326",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.68"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENA11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN032",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63060238,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63060238.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63060238.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63060238.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "0.99",
+          "amazon_price": "5.93",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 354185,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11419,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

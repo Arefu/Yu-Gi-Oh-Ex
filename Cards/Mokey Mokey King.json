@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 13803864,
+      "name": "Mokey Mokey King",
+      "typeline": [
+        "Fairy",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Mokey Mokey\" + \"Mokey Mokey\" + \"Mokey Mokey\"\nWhen this card is removed from the field, you can Special Summon as many \"Mokey Mokey\" as possible from your Graveyard.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 100,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mokey-mokey-king-1183",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13803864,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13803864.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13803864.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13803864.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.71",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118689,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2005-12-08",
+          "konami_id": 6205,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

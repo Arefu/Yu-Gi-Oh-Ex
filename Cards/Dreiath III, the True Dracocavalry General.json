@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 94982447,
+      "name": "Dreiath III, the True Dracocavalry General",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "To Tribute Summon this card face-up, you can Tribute a Continuous Spell/Trap Card you control, instead of a monster. Your opponent cannot target face-up \"True Draco\" or \"True King\" monsters on the field with card effects, except this one, also they cannot be destroyed by your opponent's card effects. If this face-up Tribute Summoned monster leaves the field: You can Special Summon 1 \"True Draco\" or \"True King\" monster from your Deck in Defense Position.",
+      "race": "Wyrm",
+      "atk": 2100,
+      "def": 2800,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "True Draco",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dreiath-iii-the-true-dracocavalry-general-8373",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94982447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94982447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94982447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94982447.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.43",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "1.89",
+          "amazon_price": "7.77",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Draius III, the True Dracoknight",
+          "views": 111394,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12937,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 71799173,
+      "name": "Guardian of Order",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control 2 or more LIGHT monsters, you can Special Summon this card (from your hand). You can only control 1 \"Guardian of Order\".",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 1200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardian-of-order-6032",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction Sneak Peek Participation Card",
+          "set_code": "LODT-ENSP1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71799173,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71799173.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71799173.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71799173.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "19.84",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80929,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7795,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

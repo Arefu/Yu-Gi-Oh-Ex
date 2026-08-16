@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 2061963,
+      "name": "Number 104: Masquerade",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nDuring either player's Battle Phase, when an opponent's monster effect is activated: You can detach 1 Xyz Material from this card; negate the activation, and if you do, inflict 800 damage to your opponent. Once per turn: You can send the top card of your opponent's Deck to the Graveyard.",
+      "race": "Spellcaster",
+      "atk": 2700,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-104-masquerade-180",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 27",
+          "set_code": "OP27-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2061963,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2061963.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2061963.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2061963.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.54",
+          "tcgplayer_price": "3.63",
+          "ebay_price": "3.20",
+          "amazon_price": "3.02",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 104",
+          "views": 638308,
+          "viewsweek": 42,
+          "upvotes": 11,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10658,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 96733134,
+      "name": "Supreme King Dragon Odd-Eyes",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can Tribute 1 \"Supreme King Dragon\" monster; destroy this card, and if you do, add 1 Pendulum Monster with 1500 or less ATK from your Deck to your hand.\n\n[ Monster Effect ] \nYou can Tribute 2 \"Supreme King Dragon\" monsters; Special Summon this card from your hand. If your Pendulum Monster battles an opponent's monster, any battle damage it inflicts to your opponent is doubled. During the Battle Phase (Quick Effect): You can Tribute this card; Special Summon up to 2 face-up \"Supreme King Dragon\" and/or \"Supreme King Gate\" Pendulum Monsters from your Extra Deck in Defense Position, except \"Supreme King Dragon Odd-Eyes\".",
+      "race": "Dragon",
+      "pend_desc": "You can Tribute 1 \"Supreme King Dragon\" monster; destroy this card, and if you do, add 1 Pendulum Monster with 1500 or less ATK from your Deck to your hand.",
+      "monster_desc": "You can Tribute 2 \"Supreme King Dragon\" monsters; Special Summon this card from your hand. If your Pendulum Monster battles an opponent's monster, any battle damage it inflicts to your opponent is doubled. During the Battle Phase (Quick Effect): You can Tribute this card; Special Summon up to 2 face-up \"Supreme King Dragon\" and/or \"Supreme King Gate\" Pendulum Monsters from your Extra Deck in Defense Position, except \"Supreme King Dragon Odd-Eyes\".",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-dragon-odd-eyes-8667",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96733134,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96733134.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96733134.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96733134.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.20",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Supreme King Servant Dragon Odd-Eyes",
+          "views": 173893,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13054,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 44928016,
+      "name": "World Carrotweight Champion",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your Graveyard: You can send 1 Plant-Type monster from your hand or face-up from your field to the Graveyard, except \"World Carrotweight Champion\"; Special Summon this card. You can only use this effect of \"World Carrotweight Champion\" once per turn.",
+      "race": "Plant",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-carrotweight-champion-3830",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44928016,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44928016.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44928016.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44928016.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.25",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166434,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11666,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

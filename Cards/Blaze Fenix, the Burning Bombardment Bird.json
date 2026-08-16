@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 6602300,
+      "name": "Blaze Fenix, the Burning Bombardment Bird",
+      "typeline": [
+        "Pyro",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Machine-Type monster + 1 Pyro-Type monster\nOnce per turn, during your Main Phase: You can inflict 300 damage to your opponent for each card on the field. This card cannot attack during the turn you activate this effect.",
+      "race": "Pyro",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blaze-fenix-the-burning-bombardment-bird-577",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.89"
+        }
+      ],
+      "banlist_info": {
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 6602300,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6602300.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6602300.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6602300.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.93",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "2.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110509,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2011-03-12",
+          "konami_id": 9256,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

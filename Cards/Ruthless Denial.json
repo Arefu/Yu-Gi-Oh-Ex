@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 73148972,
+      "name": "Ruthless Denial",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 monster you control and send it to the Graveyard, and send 1 random card in your opponent's hand to the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ruthless-denial-6144",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73148972,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73148972.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73148972.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73148972.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.97",
+          "ebay_price": "3.89",
+          "amazon_price": "2.97",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30919,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-03-07",
+          "ocg_date": "2006-10-26",
+          "konami_id": 6945,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

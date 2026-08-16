@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 76075810,
+      "name": "Throwstone Unit",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute 1 Warrior-Type monster on your side of the field to destroy 1 face-up monster on the field whose DEF is equal to or less than the ATK of this card.",
+      "race": "Warrior",
+      "atk": 900,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/throwstone-unit-6404",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76075810,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76075810.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76075810.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76075810.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 187236,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5317,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

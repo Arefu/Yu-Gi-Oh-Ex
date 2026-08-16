@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 37083210,
+      "name": "Cross Counter",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If the DEF of an attacked Defense Position monster is higher than the ATK of your opponent's attacking monster, the Battle Damage inflicted to your opponent is doubled. Destroy the attacking monster after damage calculation.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cross-counter-3136",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN169",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN049",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37083210,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37083210.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37083210.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37083210.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "4.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119181,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6275,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

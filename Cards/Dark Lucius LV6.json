@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 12817939,
+      "name": "Dark Lucius LV6",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Special Summoned by the effect of \"Dark Lucius LV4\", negate the effects of your opponent's monsters destroyed by battle with this card. Once per turn, during the Standby Phase of your next turn after this card negated your opponent's monster effect by this effect: You can send this card to the GY; Special Summon 1 \"Dark Lucius LV8\" from your hand or Deck.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 600,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-lucius-lv6-1103",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN010",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12817939,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12817939.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12817939.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12817939.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "25.00",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40211,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6877,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

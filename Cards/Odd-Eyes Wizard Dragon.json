@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 85497611,
+      "name": "Odd-Eyes Wizard Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can Tribute 1 DARK monster; send 1 \"Odd-Eyes Dragon\" from your hand, Deck, or face-up field to the GY, and if you do, Special Summon this card. If this card in your possession is destroyed by an opponent's card and sent to your GY: You can Special Summon 1 \"Odd-Eyes\" monster from your Deck or GY, except \"Odd-Eyes Wizard Dragon\", then you can add 1 \"Spiral Flame Strike\" from your Deck to your hand.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-wizard-dragon-10700",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN131",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.91"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85497611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85497611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85497611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85497611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100595,
+          "viewsweek": 22,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413046,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14926,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

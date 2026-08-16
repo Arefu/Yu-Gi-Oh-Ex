@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "id": 90432163,
+      "name": "The Phantom Knights of Ancient Cloak",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in Attack Position: You can target 1 DARK monster on the field; change this card to Defense Position, and if you do, that monster gains 800 ATK/DEF until the end of your opponent's turn. You can banish this card from your GY; add 1 \"The Phantom Knights\" card from your Deck to your hand, except \"The Phantom Knights of Ancient Cloak\". You can only use each effect of \"The Phantom Knights of Ancient Cloak\" once per turn.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Phantom Knights",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-phantom-knights-of-ancient-cloak-7552",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN061",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN263",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN263",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90432163,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90432163.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90432163.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90432163.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 692589,
+          "viewsweek": 43,
+          "upvotes": 15,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12198,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

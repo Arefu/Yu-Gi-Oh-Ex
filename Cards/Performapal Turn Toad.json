@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 4239451,
+      "name": "Performapal Turn Toad",
+      "typeline": [
+        "Aqua",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up monster on the field; switch its current ATK and DEF until the end of this turn.\n\n[ Monster Effect ] \nOnce per turn, during your Battle Phase (except during the Damage Step): You can target 1 monster you control; change its battle position, and if you do, switch its current ATK and DEF until the end of this turn.",
+      "race": "Aqua",
+      "pend_desc": "Once per turn: You can target 1 face-up monster on the field; switch its current ATK and DEF until the end of this turn.",
+      "monster_desc": "Once per turn, during your Battle Phase (except during the Damage Step): You can target 1 monster you control; change its battle position, and if you do, switch its current ATK and DEF until the end of this turn.",
+      "atk": 0,
+      "def": 800,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Performapal",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-turn-toad-383",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4239451,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4239451.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4239451.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4239451.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33197,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11219,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

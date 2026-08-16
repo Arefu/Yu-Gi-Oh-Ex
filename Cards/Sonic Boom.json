@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 93211810,
+      "name": "Sonic Boom",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During your turn: Target 1 \"Mecha Phantom Beast\" monster on the field; this turn, its ATK becomes double its original ATK, it is unaffected by other Spell/Trap effects, also if it attacks a Defense Position monster, inflict piercing battle damage to your opponent. If this effect is applied to that monster, destroy all Machine-Type monsters you control during the End Phase of this turn. Other monsters cannot attack during the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sonic-boom-7756",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93211810,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93211810.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93211810.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93211810.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22822,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10679,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

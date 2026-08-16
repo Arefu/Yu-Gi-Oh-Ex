@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 13429800,
+      "name": "Great White",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A giant white shark with razor-sharp teeth.",
+      "race": "Fish",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Shark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/great-white-1151",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13429800,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13429800.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13429800.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13429800.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118444,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4066,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

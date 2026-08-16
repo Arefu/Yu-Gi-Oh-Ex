@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 336369,
+      "name": "Gusto Squirro",
+      "typeline": [
+        "Thunder",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by a card effect and sent to the Graveyard: You can Special Summon 1 Level 5 or higher \"Gusto\" monster from your Deck.",
+      "race": "Thunder",
+      "atk": 0,
+      "def": 1800,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gusto-squirro-35",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN026",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 336369,
+          "image_url": "https://images.ygoprodeck.com/images/cards/336369.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/336369.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/336369.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "4.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22732,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9382,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

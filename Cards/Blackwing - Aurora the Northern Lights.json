@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 4068622,
+      "name": "Blackwing - Aurora the Northern Lights",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 2 face-up monsters you control (1 \"Blackwing\" Tuner and 1 non-Tuner), and cannot be Special Summoned by other ways. Once per turn: You can banish 1 \"Blackwing\" Synchro Monster from your Extra Deck; until the End Phase, this card's name and original ATK become that monster's, and replace this effect with that monster's original effects.",
+      "race": "Winged Beast",
+      "atk": -1,
+      "def": 0,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-aurora-the-northern-lights-365",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN124",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4068622,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4068622.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4068622.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4068622.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42335,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9093,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

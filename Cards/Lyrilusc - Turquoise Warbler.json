@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 97949165,
+      "name": "Lyrilusc - Turquoise Warbler",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Special Summon this card (from your hand). If this card is Special Summoned from the hand: You can Special Summon 1 \"Lyrilusc\" monster from your hand or Graveyard. You can only use this effect of \"Lyrilusc - Turquoise Warbler\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Lyrilusc",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lyrilusc-turquoise-warbler-8330",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97949165,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97949165.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97949165.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97949165.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lyrical Luscinia - Turquoise Warbler",
+          "views": 288011,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12928,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

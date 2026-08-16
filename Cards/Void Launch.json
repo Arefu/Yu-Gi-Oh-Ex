@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 94432298,
+      "name": "Void Launch",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "During each of your Standby Phases: You can send up to 2 \"Infernoid\" monsters from your Deck to the Graveyard. If you control a monster that is not an \"Infernoid\" monster, send this card to the Graveyard.",
+      "race": "Continuous",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/void-launch-7857",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN241",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN072",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS13",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94432298,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94432298.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94432298.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94432298.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19479,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11592,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

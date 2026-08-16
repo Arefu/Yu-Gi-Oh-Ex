@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 67038874,
+      "name": "Scrap Mind Reader",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, while this card is in your Graveyard during your Main Phase 2, you can select 1 face-up \"Scrap\" monster you control, except \"Scrap Mind Reader\". Destroy that monster and Special Summon this card from the Graveyard. If you do, remove this card from play when it is removed from the field. If this card is used as a Synchro Material Monster, all other Synchro Material Monsters must be \"Scrap\" monsters.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-mind-reader-5631",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN084",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67038874,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67038874.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67038874.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67038874.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.63",
+          "tcgplayer_price": "6.31",
+          "ebay_price": "5.95",
+          "amazon_price": "9.35",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26173,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9281,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

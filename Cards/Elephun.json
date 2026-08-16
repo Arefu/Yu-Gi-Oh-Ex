@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 88845345,
+      "name": "Elephun",
+      "typeline": [
+        "Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, you can select 1 of your Level 3 or lower Beast-Type, Beast-Warrior-Type or Winged Beast-Type monsters that is removed from play, and add it to your hand.",
+      "race": "Beast",
+      "atk": 500,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elephun-7426",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88845345,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88845345.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88845345.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88845345.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.15",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46184,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8965,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

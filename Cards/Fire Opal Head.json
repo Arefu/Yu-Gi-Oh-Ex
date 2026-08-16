@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 28363749,
+      "name": "Fire Opal Head",
+      "typeline": [
+        "Dinosaur",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "''This dinosaur pack leader with a burning head of stone is named after his finishing move.''",
+      "race": "Dinosaur",
+      "atk": 2500,
+      "def": 1000,
+      "level": 6,
+      "attribute": "FIRE",
+      "scale": 0,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-opal-head-8993",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Heroes Mega Pack",
+          "set_code": "MP23-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle of Chaos",
+          "set_code": "BACH-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28363749,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28363749.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28363749.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28363749.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.43",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fire Opalhead",
+          "views": 36587,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2022-02-10",
+          "ocg_date": "2017-10-07",
+          "konami_id": 13453,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

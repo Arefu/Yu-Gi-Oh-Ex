@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 22198672,
+      "name": "Castle Link",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can target 1 Link Monster on the field; move it to a Main Monster Zone it points to on its controller's field. Once per turn: You can switch the locations of 2 Link Monsters in your Main Monster Zones or 2 Link Monsters in your opponent's Main Monster Zones.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/castle-link-8439",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22198672,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22198672.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22198672.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22198672.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "3.29",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20353,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13104,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

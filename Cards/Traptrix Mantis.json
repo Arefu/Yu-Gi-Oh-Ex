@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 82738277,
+      "name": "Traptrix Mantis",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can add 1 \"Traptrix\" monster from your Deck to your hand. Unaffected by the effects of \"Hole\" Normal Traps. Once per turn (Quick Effect): You can target 1 Set Spell/Trap you control; return that target to the hand, then you can Set 1 Spell/Trap from your hand.",
+      "race": "Insect",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Traptrix",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/traptrix-mantis-8768",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN076",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Beware of Traptrix",
+          "set_code": "SDBT-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82738277,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82738277.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82738277.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82738277.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Traptrix Coronatus",
+          "views": 471984,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13069,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

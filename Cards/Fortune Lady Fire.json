@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 71870152,
+      "name": "Fortune Lady Fire",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's ATK/DEF become its Level x 200. Once per turn, during your Standby Phase: Increase this card's Level by 1 (max. 12). When this card is Special Summoned in Attack Position by the effect of a \"Fortune Lady\" card: Target 1 face-up monster your opponent controls; destroy that target, and if you do, inflict damage to your opponent equal to the destroyed monster's ATK on the field.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": -1,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-lady-fire-6035",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71870152,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71870152.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71870152.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71870152.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "5.68",
+          "amazon_price": "0.64",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85725,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8302,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

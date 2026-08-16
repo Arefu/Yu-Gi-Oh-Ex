@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 74841885,
+      "name": "Sky Scourge Invicil",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. If you Tribute Summon this card by Tributing 1 of the following monsters, this card gets the appropriate effect:\n● LIGHT Fairy-Type monster: Negate the effects of all Spell Cards.\n● DARK Fiend-Type monster: Negate the effects of all Trap Cards.",
+      "race": "Fairy",
+      "atk": 2200,
+      "def": 1600,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-scourge-invicil-6294",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN023",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74841885,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74841885.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74841885.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74841885.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.89",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "3.95",
+          "amazon_price": "1.64",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46424,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7114,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

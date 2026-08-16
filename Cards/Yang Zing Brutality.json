@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 67249508,
+      "name": "Yang Zing Brutality",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a \"Yang Zing\" monster you control battles an opponent's monster, during damage calculation: Your battling monster's ATK and DEF each become double its original ATK and DEF during that damage calculation only, but it is destroyed at the end of this Damage Step.",
+      "race": "Normal",
+      "archetype": "Yang Zing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yang-zing-brutality-5653",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN169",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.91"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67249508,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67249508.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67249508.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67249508.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.19",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22387,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11407,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 45885288,
+      "name": "Neo Kaiser Glider",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card and 1 monster, then target 1 Dragon Normal Monster in your GY; Special Summon it. If this card is sent to the GY: You can make all monsters your opponent currently controls lose 500 ATK until the end of this turn. You can only use each effect of \"Neo Kaiser Glider\" once per turn.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-kaiser-glider-10073",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin",
+          "set_code": "TN19-EN006",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "1.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45885288,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45885288.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45885288.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45885288.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 109727,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2019-08-29",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14370,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

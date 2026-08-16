@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 1142880,
+      "name": "Cyber Dragon Nachster",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Cyber Dragon\" while on the field or in the GY. You can discard 1 other monster; Special Summon this card from your hand. If this card is Normal or Special Summoned: You can target 1 Machine monster with 2100 ATK or DEF in your GY; Special Summon it, also, you cannot Special Summon monsters for the rest of this turn, except Machine monsters. You can only use each effect of \"Cyber Dragon Nachster\" once per turn.",
+      "race": "Machine",
+      "atk": 200,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-dragon-nachster-9645",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.89"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1142880,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1142880.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1142880.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1142880.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.70",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cyber Dragon Nächster",
+          "views": 847774,
+          "viewsweek": 0,
+          "upvotes": 30,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-07-21",
+          "konami_id": 14047,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

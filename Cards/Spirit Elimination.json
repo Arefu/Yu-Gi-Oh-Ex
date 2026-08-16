@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 69832741,
+      "name": "Spirit Elimination",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "When monsters in the Graveyard are removed from play, remove monsters on your side of the field from play as substitutes. This card remains active until the end of the turn that it is activated. The substitutes remain removed from play.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-elimination-5869",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69832741,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69832741.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69832741.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69832741.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115397,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5280,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

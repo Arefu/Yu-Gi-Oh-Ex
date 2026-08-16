@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 91819979,
+      "name": "Magical Blast",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Inflict 200 damage to your opponent for each Spellcaster monster you control. During your Draw Phase, if this card is in your GY, before you draw: You can give up your normal draw this turn, and if you do, add this card to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-blast-7656",
+      "card_sets": [
+        {
+          "set_name": "Spellcaster's Command Structure Deck",
+          "set_code": "SDSC-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spellcaster's Judgment",
+          "set_code": "SD6-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91819979,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91819979.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91819979.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91819979.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "3.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36041,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-01-18",
+          "ocg_date": "2005-09-22",
+          "konami_id": 6532,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

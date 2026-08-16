@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 4920010,
+      "name": "Souls of the Forgotten",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A wicked spirit created by the hateful souls of those who fell in battle. It grows by assimilating the souls of its enemies.",
+      "race": "Fiend",
+      "atk": 900,
+      "def": 200,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/souls-of-the-forgotten-437",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.5"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4920010,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4920010.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4920010.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4920010.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131292,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5149,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

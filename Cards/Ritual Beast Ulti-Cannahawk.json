@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 48063985,
+      "name": "Ritual Beast Ulti-Cannahawk",
+      "typeline": [
+        "Thunder",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Ritual Beast Tamer\" monster + 1 \"Spiritual Beast\" monster\nMust be Special Summoned (from your Extra Deck) by banishing the above cards you control, and cannot be Special Summoned by other ways. (You do not use \"Polymerization\".) Once per turn: You can target 2 of your banished \"Ritual Beast\" cards; return them to the Graveyard, and if you do, add 1 \"Ritual Beast\" card from your Deck to your hand. During either player's turn: You can return this card you control to the Extra Deck, then target 2 of your banished monsters (1 \"Ritual Beast Tamer\" monster and 1 \"Spiritual Beast\" monster); Special Summon them in Defense Position.",
+      "race": "Thunder",
+      "atk": 1400,
+      "def": 1600,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Ritual Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-beast-ulti-cannahawk-4102",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48063985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48063985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48063985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48063985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.59",
+          "amazon_price": "0.80",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 173999,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11500,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

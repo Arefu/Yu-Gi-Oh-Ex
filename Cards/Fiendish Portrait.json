@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 1759808,
+      "name": "Fiendish Portrait",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster your opponent controls; Special Summon 1 monster with that name from your Deck or Extra Deck, but shuffle it into the Deck during the End Phase of the next turn, also you cannot Special Summon monsters from the Deck or Extra Deck for the rest of this turn after this card resolves. You can only activate 1 \"Fiendish Portrait\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiendish-portrait-10663",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN079",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1759808,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1759808.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1759808.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1759808.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Devil's Portrait",
+          "views": 10915,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011079,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14888,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

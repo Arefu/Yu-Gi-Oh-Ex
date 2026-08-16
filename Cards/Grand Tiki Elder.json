@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 13676474,
+      "name": "Grand Tiki Elder",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A masked monster that wields the most deadly of curses.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Mask",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grand-tiki-elder-1173",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Four",
+          "set_code": "CP04-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN213",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.28"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.04"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13676474,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13676474.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13676474.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13676474.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 174723,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5093,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

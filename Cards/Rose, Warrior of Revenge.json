@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 1557341,
+      "name": "Rose, Warrior of Revenge",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts battle damage to your opponent: Inflict 300 damage to your opponent.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 600,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Rose Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rose-warrior-of-revenge-135",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN000",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos Sneak Peek Participation Card",
+          "set_code": "CSOC-ENSP1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.18"
+        },
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1557341,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1557341.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1557341.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1557341.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.15",
+          "tcgplayer_price": "1.24",
+          "ebay_price": "4.49",
+          "amazon_price": "9.59",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101110,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8077,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 22888900,
+      "name": "Grisaille Prison",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control a face-up monster that was Tribute, Ritual, or Fusion Summoned: Until the end of your opponent's next turn, neither player can Synchro or Xyz Summon, Synchro and Xyz Monsters cannot attack, also their effects are negated.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grisaille-prison-1970",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.38"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22888900,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22888900.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22888900.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22888900.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.68",
+          "tcgplayer_price": "2.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64936,
+          "viewsweek": 42,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10809,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

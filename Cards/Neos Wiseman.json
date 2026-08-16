@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 5126490,
+      "name": "Neos Wiseman",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must be Special Summoned (from your hand) by sending 1 face-up \"Elemental HERO Neos\" and 1 face-up \"Yubel\" you control to the Graveyard, and cannot be Special Summoned by other ways. This card cannot be destroyed by card effects. At the end of the Damage Step, if this card battled an opponent's monster: Inflict damage to your opponent equal to the ATK of the monster it battled, and you gain Life Points equal to that monster's DEF.",
+      "race": "Spellcaster",
+      "atk": 3000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neos-wiseman-453",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN097",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5126490,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5126490.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5126490.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5126490.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.96",
+          "tcgplayer_price": "1.80",
+          "ebay_price": "36.99",
+          "amazon_price": "79.99",
+          "coolstuffinc_price": "29.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 113651,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-03-28",
+          "konami_id": 7805,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 92534075,
+      "name": "Magical Musket - Fiendish Deal",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "\"Magical Musket\" monsters you control cannot be destroyed by card effects. If this card in your possession is sent to your GY by an opponent's card effect: You can add 1 \"Magical Musket\" card from your Deck or GY to your hand, except \"Magical Musket - Fiendish Deal\". You can only activate 1 \"Magical Musket - Fiendish Deal\" per turn.",
+      "race": "Continuous",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musket-fiendish-deal-8754",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92534075,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92534075.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92534075.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92534075.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.33",
+          "amazon_price": "0.64",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet - Devil's Deal",
+          "views": 49583,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13326,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

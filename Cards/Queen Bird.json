@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 73081602,
+      "name": "Queen Bird",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster attacks enemies using its huge beak.",
+      "race": "Winged Beast",
+      "atk": 1200,
+      "def": 2000,
+      "level": 5,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/queen-bird-6137",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.09"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73081602,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73081602.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73081602.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73081602.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94046,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4474,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

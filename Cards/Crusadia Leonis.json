@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 28031913,
+      "name": "Crusadia Leonis",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) in Defense Position to your zone a Link Monster points to. You can only Special Summon \"Crusadia Leonis\" once per turn this way. You can target 1 \"Crusadia\" Link Monster you control; if it attacks a Defense Position monster this turn, inflict piercing battle damage to your opponent. You can only use this effect of \"Crusadia Leonis\" once per turn.",
+      "race": "Beast",
+      "atk": 1200,
+      "def": 1600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Crusadia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crusadia-leonis-9440",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28031913,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28031913.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28031913.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28031913.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.94",
+          "amazon_price": "2.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Palladion of the Hundred Beasts",
+          "views": 239709,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13728,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

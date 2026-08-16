@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 35800511,
+      "name": "Superheavy Samurai Soulbuster Gauntlet",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Superheavy Samurai\" monster you control; equip this monster from your hand or field to that target. It gains 400 DEF. During either player's Damage Step, when a Defense Position \"Superheavy Samurai\" monster you control battles an opponent's monster, and you have no Spell/Trap Cards in your Graveyard: You can send this card from your hand to the Graveyard; your battling monster's DEF becomes double its original DEF until the end of this turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 400,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-soulbuster-gauntlet-3031",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN012",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35800511,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35800511.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35800511.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35800511.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.40",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77227,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11684,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

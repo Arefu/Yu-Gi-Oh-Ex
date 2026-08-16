@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 39505816,
+      "name": "Cataclysmic Scorching Sunburner",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up FIRE monster(s) you control is destroyed by battle or an opponent's card effect: You can Special Summon this card from your hand, then, you can inflict damage to your opponent equal to half the ATK of 1 of those destroyed FIRE monsters in your GY. You can only use this effect of \"Cataclysmic Scorching Sunburner\" once per turn.",
+      "race": "Fairy",
+      "atk": 2600,
+      "def": 200,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cataclysmic-scorching-sunburner-9827",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39505816,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39505816.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39505816.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39505816.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sunburn the Sweltering Solar Calamity",
+          "views": 89604,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14105,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

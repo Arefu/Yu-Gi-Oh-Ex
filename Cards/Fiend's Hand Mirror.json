@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 58607704,
+      "name": "Fiend's Hand Mirror",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Switch the opponent's Spell Card effect that targets 1 Spell or Trap Card to another correct target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiend-s-hand-mirror-4986",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN103",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58607704,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58607704.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58607704.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58607704.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82095,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5913,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

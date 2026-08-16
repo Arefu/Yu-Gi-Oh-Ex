@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 78144171,
+      "name": "Dark Armed, the Dragon of Annihilation",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 7 monsters\r\nOnce per turn, if you have exactly 5 DARK monsters in your GY, you can also Xyz Summon \"Dark Armed, the Dragon of Annihilation\" by using 1 Level 5 or higher DARK Dragon monster you control as material. You can detach 1 material from this card, then target 1 card your opponent controls; destroy it, then banish 1 card from your GY, also, this card cannot attack for the rest of this turn.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 1000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-armed-the-dragon-of-annihilation-9499",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN036",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Weekly Shonen Jump December 2018 membership promotional cards",
+          "set_code": "JUMP-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78144171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78144171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78144171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78144171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "9.99",
+          "amazon_price": "7.49",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dark Armed, the Annihilation Dragon",
+          "views": 653824,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-12-01",
+          "ocg_date": "2018-05-21",
+          "konami_id": 13974,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

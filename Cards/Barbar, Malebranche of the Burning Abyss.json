@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 81992475,
+      "name": "Barbar, Malebranche of the Burning Abyss",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a monster that is not a \"Burning Abyss\" monster, destroy this card. You can only use 1 of these effects of \"Barbar, Malebranche of the Burning Abyss\" per turn, and only once that turn.\n● If you control no Spell/Trap Cards: You can Special Summon this card from your hand.\n● If this card is sent to the Graveyard: You can target up to 3 \"Burning Abyss\" cards in your Graveyard, except \"Barbar, Malebranche of the Burning Abyss\"; banish them, and if you do, inflict 300 damage to your opponent for each.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barbar-malebranche-of-the-burning-abyss-6887",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN054",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81992475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81992475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81992475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81992475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.20",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 143162,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11773,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

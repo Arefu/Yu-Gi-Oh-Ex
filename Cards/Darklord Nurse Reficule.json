@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 67316075,
+      "name": "Darklord Nurse Reficule",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Any effect that would make your opponent gain LP inflicts the same amount of damage to them, instead.",
+      "race": "Fairy",
+      "atk": 1400,
+      "def": 600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-nurse-reficule-5662",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force Evolution promotional cards",
+          "set_code": "GX05-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.82"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67316075,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67316075.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67316075.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67316075.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "1.15",
+          "ebay_price": "2.79",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Nurse Reficule the Fallen One",
+          "views": 226406,
+          "viewsweek": 42,
+          "upvotes": 16,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-12-07",
+          "ocg_date": "2007-12-06",
+          "konami_id": 7352,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

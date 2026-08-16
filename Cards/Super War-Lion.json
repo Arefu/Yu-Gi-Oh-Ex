@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 33951077,
+      "name": "Super War-Lion",
+      "typeline": [
+        "Beast",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"War-Lion Ritual\".",
+      "race": "Beast",
+      "atk": 2300,
+      "def": 2100,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-war-lion-2882",
+      "card_sets": [
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33951077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33951077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33951077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33951077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22290,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "1999-12-18",
+          "konami_id": 4362,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

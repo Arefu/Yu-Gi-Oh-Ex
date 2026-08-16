@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 90156158,
+      "name": "Constellar Star Cradle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 2 \"Constellar\" monsters in your Graveyard; add those targets to your hand. You cannot conduct your Battle Phase the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-star-cradle-7530",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN095",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN067",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90156158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90156158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90156158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90156158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "2.50",
+          "amazon_price": "1.37",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34421,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 10009,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

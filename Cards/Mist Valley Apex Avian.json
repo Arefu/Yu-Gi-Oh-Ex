@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 29587993,
+      "name": "Mist Valley Apex Avian",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per chain, when a card or effect is activated (Quick Effect): You can target 1 \"Mist Valley\" card you control; return that target to the hand, and if you do, negate the activation, and if you do that, destroy it.",
+      "race": "Winged Beast",
+      "atk": 2700,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Mist Valley",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-valley-apex-avian-2505",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN079",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN049",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN062",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29587993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29587993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29587993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29587993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.48",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 562701,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8110,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

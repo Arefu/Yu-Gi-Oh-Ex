@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 81028112,
+      "name": "Wattsychic Fighter",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can target 1 card in your opponent's Graveyard; place it on either the top or bottom of their Deck. You can only use this effect of \"Wattsychic Fighter\" once per turn.",
+      "race": "Psychic",
+      "atk": 1500,
+      "def": 300,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattsychic-fighter-6800",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81028112,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81028112.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81028112.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81028112.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16760,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11206,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

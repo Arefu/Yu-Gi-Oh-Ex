@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 56308388,
+      "name": "Time Thief Winder",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can detach 1 material from an Xyz Monster you control; Special Summon this card from your hand. If this card is Normal or Special Summoned: You can add 1 \"Time Thief\" card from your Deck to your hand, except \"Time Thief Winder\". You can only use each effect of \"Time Thief Winder\" once per turn.",
+      "race": "Psychic",
+      "atk": 1800,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Time Thief",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-thief-winder-10122",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56308388,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56308388.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56308388.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56308388.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.59",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 265656,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14353,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 3055837,
+      "name": "Trap of Board Eraser",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when an effect that inflicts damage to your Life Points is activated (except Battle Damage). Negate the Effect Damage you receive and your opponent then selects 1 card from his/her hand and discards it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trap-of-board-eraser-273",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-099",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.47"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3055837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3055837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3055837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3055837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "3.49",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65052,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5547,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

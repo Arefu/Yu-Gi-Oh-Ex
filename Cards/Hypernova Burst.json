@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 90384300,
+      "name": "Hypernova Burst",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish, face-down, from your hand and/or face-up field, 2 monsters that cannot be Normal Summoned; draw 2 cards. You can only activate 1 \"Hypernova Burst\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hypernova-burst-10263",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90384300,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90384300.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90384300.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90384300.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Extreme Nova Burst",
+          "views": 18030,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009063,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14511,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

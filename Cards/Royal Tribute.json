@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 72405967,
+      "name": "Royal Tribute",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control \"Necrovalley\": Both players discard any monsters in their hands.",
+      "race": "Normal",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/royal-tribute-6077",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 2 participation cards",
+          "set_code": "DL11-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "16.58"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN195",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72405967,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72405967.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72405967.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72405967.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.62",
+          "tcgplayer_price": "1.66",
+          "ebay_price": "10.00",
+          "amazon_price": "3.37",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 275127,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5540,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

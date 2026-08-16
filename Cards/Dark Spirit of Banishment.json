@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51993760,
+      "name": "Dark Spirit of Banishment",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent's monster attacks, at the start of the Damage Step: You can send this card from your hand or field to the GY, then target 1 Level 8 Fiend monster in your GY; Special Summon it, but its effects are negated, and if you do, change the attack target to it and perform damage calculation. If a Level 8 Fiend monster(s) is sent to your GY while this card is in your GY (except during the Damage Step): You can add this card to your hand. You can only use each effect of \"Dark Spirit of Banishment\" once per turn.",
+      "race": "Fiend",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-spirit-of-banishment-10298",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.99"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51993760,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51993760.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51993760.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51993760.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.93",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dark Spirit of the Denial",
+          "views": 245964,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422002,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14582,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

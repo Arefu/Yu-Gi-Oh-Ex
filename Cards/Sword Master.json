@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 81336148,
+      "name": "Sword Master",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Warrior-Type monster you control attacks your opponent's monster, and the opponent's monster is not destroyed by battle, at the end of the Damage Step you can Special Summon this card from your hand. During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 0,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sword-master-6829",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81336148,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81336148.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81336148.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81336148.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29298,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8622,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

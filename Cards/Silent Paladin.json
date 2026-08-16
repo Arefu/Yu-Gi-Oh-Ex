@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 19502505,
+      "name": "Silent Paladin",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can add 1 \"Silent Swordsman LV3\" or \"Silent Magician LV4\" from your Deck to your hand. During either player's turn, when a Spell Card is activated that targets exactly 1 monster you control (and no other cards): You can negate the activation. This effect can only be used once while this card is face-up on the field. If this card is destroyed by battle, or if this card in its owner's control is destroyed by an opponent's card effect: You can target 1 LIGHT \"LV\" monster in your Graveyard; add it to your hand.",
+      "race": "Fairy",
+      "atk": 500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Silent Swordsman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silent-paladin-1680",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19502505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19502505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19502505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19502505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.74",
+          "tcgplayer_price": "6.72",
+          "ebay_price": "7.00",
+          "amazon_price": "11.98",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87858,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-15",
+          "ocg_date": "2016-06-21",
+          "konami_id": 12672,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

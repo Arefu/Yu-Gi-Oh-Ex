@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 85551711,
+      "name": "Ebon High Magician",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 Spellcaster-Type monsters\nWhile this card has Xyz Material, you can activate a Quick-Play Spell Card or a Trap Card from your hand during your opponent's turn by detaching 1 Xyz Material from this card at activation. If this Xyz Summoned card is destroyed by battle and sent to the Graveyard, or if this Xyz Summoned card you control is sent to your Graveyard by an opponent's card effect: You can Special Summon 1 DARK Spellcaster-Type monster from your hand or Deck, then you can destroy 1 card on the field.",
+      "race": "Spellcaster",
+      "atk": 2300,
+      "def": 2800,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ebon-high-magician-7172",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tins",
+          "set_code": "CT13-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.73"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.93"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85551711,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85551711.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85551711.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85551711.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ebon Void Magician",
+          "views": 607034,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12451,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

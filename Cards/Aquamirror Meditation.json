@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 46337945,
+      "name": "Aquamirror Meditation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Reveal 1 Ritual Spell Card in your hand to target 2 \"Gishki\" monsters in your Graveyard; return them to the hand.",
+      "race": "Normal",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aquamirror-meditation-3951",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN096",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46337945,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46337945.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46337945.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46337945.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21379,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9185,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

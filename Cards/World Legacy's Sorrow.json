@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 85763457,
+      "name": "World Legacy's Sorrow",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a Spell/Trap Card, or monster effect, while you control a co-linked monster(s): Negate the activation, and if you do, destroy that card. You can only activate 1 \"World Legacy's Sorrow\" per turn.",
+      "race": "Counter",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-s-sorrow-9267",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN073",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85763457,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85763457.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85763457.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85763457.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.19",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy Echo",
+          "views": 55945,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13627,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

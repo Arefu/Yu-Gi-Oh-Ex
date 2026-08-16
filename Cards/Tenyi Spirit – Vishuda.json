@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 23431858,
+      "name": "Tenyi Spirit - Vishuda",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. If you control a face-up non-Effect Monster: You can banish this card from your hand or GY, then target 1 card your opponent controls; return it to the hand. You can only use each effect of \"Tenyi Spirit - Vishuda\" once per turn.",
+      "race": "Wyrm",
+      "atk": 1500,
+      "def": 2500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Tenyi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tenyi-spirit-vishuda-10209",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN110",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN054",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23431858,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23431858.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23431858.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23431858.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "3.25",
+          "amazon_price": "1.46",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tenyi Dragon Vishudda",
+          "views": 714156,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009016,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14460,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

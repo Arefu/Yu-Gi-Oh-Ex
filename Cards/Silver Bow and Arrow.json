@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 1557499,
+      "name": "Silver Bow and Arrow",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "A Fairy-Type monster equipped with this card increases its ATK and DEF by 300 points.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silver-bow-and-arrow-136",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-091",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.92"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E071",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "15.72"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN091",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon (25th Anniversary Edition)",
+          "set_code": "LOB-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1557499,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1557499.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1557499.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1557499.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "1.62",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 291405,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4318,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

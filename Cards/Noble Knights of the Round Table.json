@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 55742055,
+      "name": "Noble Knights of the Round Table",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "During your End Phase: You can activate each of these effects up to once per turn, depending on the total number of \"Noble Knight\" cards with different names in your Graveyard and/or you control;\n● 3 or more: Send 1 \"Noble Knight\" card from your Deck to the Graveyard.\n● 6 or more: Special Summon 1 \"Noble Knight\" monster from your hand, then you can equip 1 \"Noble Arms\" Equip Spell Card from your hand to that monster.\n● 9 or more: Target 1 \"Noble Knight\" monster in your Graveyard; add that target to your hand.\n● 12: Draw 1 card.",
+      "race": "Field",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knights-of-the-round-table-4747",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN018",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "5.54"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55742055,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55742055.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55742055.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55742055.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "5.56",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41436,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11202,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 50426119,
+      "name": "Degrade Buster",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 2 Cyberse monsters from your GY. You can target 1 monster your opponent controls with higher ATK than this card (Quick Effect); banish it until the End Phase. You can only use this effect of \"Degrade Buster\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": 2500,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/degrade-buster-9254",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50426119,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50426119.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50426119.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50426119.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Degrenade Buster",
+          "views": 96950,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13560,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

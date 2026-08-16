@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 20138923,
+      "name": "Anti-Magic Prism",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent activates a Quick-Play Spell Card. Select 1 card on the field and destroy it.",
+      "race": "Normal",
+      "archetype": "Anti",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/anti-magic-prism-1729",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20138923,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20138923.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20138923.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20138923.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31669,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 9009,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

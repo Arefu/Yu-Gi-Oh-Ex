@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 9999961,
+      "name": "Beast Rage",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "All monsters you control gain 200 ATK for each of your removed from play Beast-Type and Winged Beast-Type monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beast-rage-845",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9999961,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9999961.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9999961.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9999961.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34147,
+          "viewsweek": 42,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8987,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

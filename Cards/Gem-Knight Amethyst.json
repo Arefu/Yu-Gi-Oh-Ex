@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 71616908,
+      "name": "Gem-Knight Amethyst",
+      "typeline": [
+        "Aqua",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Gem-Knight\" monster + 1 Aqua-Type monster\nMust first be Fusion Summoned. When this card is sent from the field to the Graveyard: Return all Set Spell and Trap Cards on the field to the hand.",
+      "race": "Aqua",
+      "atk": 1950,
+      "def": 2450,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-amethyst-6016",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN141",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN083",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN047",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71616908,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71616908.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71616908.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71616908.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.06",
+          "amazon_price": "3.41",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58484,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9598,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 78859567,
+      "name": "Packet Link",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During Main Phase 2: Special Summon any number of Level 2 or lower monsters with different names from your hand, Deck, and/or GY to your zone(s) a Link Monster(s) points to. You can only activate 1 \"Packet Link\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/packet-link-9065",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78859567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78859567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78859567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78859567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.26",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30887,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-09",
+          "ocg_date": "2017-12-09",
+          "konami_id": 13527,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

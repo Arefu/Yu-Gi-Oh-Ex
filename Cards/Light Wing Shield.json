@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 83880087,
+      "name": "Light Wing Shield",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "When a monster's attack is negated: Activate 1 of these effects;\r\n● It becomes the End Phase of this turn.\r\n● Target 1 \"Utopia\" Xyz Monster you control; its ATK becomes double its original ATK until the end of this turn.\r\nIf a \"Utopia\" Xyz Monster you control would detach exactly 1 Xyz Material to activate its effect, you can banish this card from your Graveyard instead.",
+      "race": "Quick-Play",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/light-wing-shield-9049",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83880087,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83880087.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83880087.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83880087.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27017,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-02-11",
+          "konami_id": 13003,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

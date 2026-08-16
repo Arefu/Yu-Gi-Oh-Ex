@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 30399511,
+      "name": "Genex Power Planner",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, you can add 1 Level 3 \"Genex\" Effect Monster from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-power-planner-2577",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN061",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30399511,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30399511.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30399511.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30399511.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38274,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7809,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 47111934,
+      "name": "Worm Yagan",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If the only monster you control is \"Worm Xex\", you can Special Summon this card from your Graveyard in face-down Defense Position. If you do, remove it from play when it is removed from the field. When this card is flipped face-up, select 1 face-up monster your opponent controls, and return it to it's owner's hand.",
+      "race": "Reptile",
+      "atk": 1000,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-yagan-4020",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN083",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47111934,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47111934.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47111934.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47111934.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.69",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "4.98",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39917,
+          "viewsweek": 84,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8412,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

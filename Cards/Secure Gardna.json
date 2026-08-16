@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 2220237,
+      "name": "Secure Gardna",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Cyberse Link Monster\r\nAfter this card is Special Summoned, you take no effect damage for the rest of this turn. Once per turn, if you would take battle or effect damage, you take no damage. Cannot be used as Link Material. You can only control 1 \"Secure Gardna\".",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "linkval": 1,
+      "linkmarkers": [
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/secure-gardna-9011",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN199",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2220237,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2220237.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2220237.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2220237.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.99",
+          "amazon_price": "2.53",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Security Gardna",
+          "views": 562951,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13414,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

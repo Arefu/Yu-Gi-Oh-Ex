@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 52601736,
+      "name": "Inzektor Hopper",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can equip 1 \"Inzektor\" monster from your hand or Graveyard to this card. While this card is equipped to a monster, that monster's Level is increased by 4. While this card is equipped to a monster: You can send this Equip Card to the Graveyard; the monster it was equipped to can attack your opponent directly this turn. Other monsters cannot attack the turn you activate this effect.",
+      "race": "Insect",
+      "atk": 1700,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-hopper-4479",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52601736,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52601736.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52601736.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52601736.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47389,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2012-10-13",
+          "konami_id": 10017,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

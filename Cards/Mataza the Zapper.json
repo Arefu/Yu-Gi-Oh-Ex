@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 22609617,
+      "name": "Mataza the Zapper",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can make a second attack during each Battle Phase. Control of this face-up card on the field cannot switch.",
+      "race": "Warrior",
+      "atk": 1300,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mataza-the-zapper-1943",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN025",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Jaden Yuki",
+          "set_code": "YSDJ-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.57"
+        },
+        {
+          "set_name": "Structure Deck: Warrior's Triumph",
+          "set_code": "SD5-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22609617,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22609617.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22609617.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22609617.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.00",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184111,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5898,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

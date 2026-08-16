@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 85605684,
+      "name": "Berserk Dragon",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with \"A Deal with Dark Ruler\" and cannot be Special Summoned by other ways. This card can attack all monsters your opponent controls once each. During each of your End Phases, this card loses 500 ATK.",
+      "race": "Zombie",
+      "atk": 3500,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/berserk-dragon-7175",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.86"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN181",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN281",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85605684,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85605684.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85605684.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85605684.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.00",
+          "tcgplayer_price": "2.92",
+          "ebay_price": "5.94",
+          "amazon_price": "4.63",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111912,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5700,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 87475570,
+      "name": "Crystal Master",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYour opponent cannot target \"Ultimate Crystal\" monsters or \"Crystal Beast\" cards you control with card effects.\n\n[ Monster Effect ] \nYou can Tribute this card; add 1 \"Ultimate Crystal\" monster, \"Crystal Beast\" monster, or \"Crystal\" Spell/Trap from your Deck to your hand.",
+      "race": "Spellcaster",
+      "pend_desc": "Your opponent cannot target \"Ultimate Crystal\" monsters or \"Crystal Beast\" cards you control with card effects.",
+      "monster_desc": "You can Tribute this card; add 1 \"Ultimate Crystal\" monster, \"Crystal Beast\" monster, or \"Crystal\" Spell/Trap from your Deck to your hand.",
+      "atk": 1300,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Crystal Beast",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystal-master-7319",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87475570,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87475570.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87475570.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87475570.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Crystal Vanguard",
+          "views": 170060,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11601,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

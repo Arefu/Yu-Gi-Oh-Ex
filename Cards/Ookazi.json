@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 19523799,
+      "name": "Ookazi",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Inflict 800 damage to your opponent.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ookazi-1683",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.54"
+        },
+        {
+          "set_name": "Starter Deck 2006",
+          "set_code": "YSD-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.85"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.09"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's 2009",
+          "set_code": "5DS2-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19523799,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19523799.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19523799.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19523799.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "3.00",
+          "amazon_price": "1.34",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 120132,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4352,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

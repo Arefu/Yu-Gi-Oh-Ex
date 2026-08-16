@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 8483333,
+      "name": "Mosaic Manticore",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the Standby Phase of your next turn after you Tribute Summoned this face-up card on the field: Special Summon, from the Graveyard, as many monster(s) as possible that were used for its Tribute Summon. They cannot declare an attack, and their effects are negated.",
+      "race": "Beast",
+      "atk": 2800,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mosaic-manticore-718",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN073",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8483333,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8483333.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8483333.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8483333.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.29",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46632,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2006-12-11",
+          "konami_id": 7064,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

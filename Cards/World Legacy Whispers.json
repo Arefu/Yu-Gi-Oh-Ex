@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 62530723,
+      "name": "World Legacy Whispers",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When this card is activated: You can target 1 Level 5 or higher monster on the field; it gains 1000 ATK/DEF until the end of this turn. Negate any opponent's Spell effect that activates in the same column as a \"Mekk-Knight\" monster you control.",
+      "race": "Continuous",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-whispers-8954",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN217",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62530723,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62530723.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62530723.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62530723.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "2.49",
+          "amazon_price": "2.70",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Whisper of the World Legacy",
+          "views": 95416,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13442,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

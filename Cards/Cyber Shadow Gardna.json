@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 90440725,
+      "name": "Cyber Shadow Gardna",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "During your opponent's Main Phase: Special Summon this card as an Effect Monster (Machine/EARTH/Level 4/ATK ?/DEF ?). (This card is also still a Trap.) When an opponent's monster declares an attack that targets this card: The ATK/DEF of this card become the ATK/DEF of the attacking monster. Once per turn, during your opponent's End Phase: Set this card in its Spell & Trap Zone.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-shadow-gardna-7555",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN058",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB21",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENG17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90440725,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90440725.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90440725.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90440725.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.94",
+          "amazon_price": "0.85",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91498,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6858,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

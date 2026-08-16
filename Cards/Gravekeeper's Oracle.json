@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 25524823,
+      "name": "Gravekeeper's Oracle",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 3 monsters or 1 \"Gravekeeper's\" monster to Tribute Summon (but not Set) this card. When this card is Tribute Summoned: You can activate any of these effects, and resolve in sequence, up to the number of \"Gravekeeper's\" monsters Tributed for its Summon;\n● This card gains ATK equal to the combined Levels that all monsters Tributed for its Tribute Summon had on the field x 100.\n● Destroy all Set monsters your opponent controls.\n● All monsters your opponent currently controls lose 2000 ATK/DEF.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 1500,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-oracle-2195",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN215",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.06"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 1",
+          "set_code": "STP1-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25524823,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25524823.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25524823.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25524823.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.95",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "6.05",
+          "amazon_price": "9.59",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85552,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10920,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

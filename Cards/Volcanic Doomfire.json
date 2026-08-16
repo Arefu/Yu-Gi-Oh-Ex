@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 32543380,
+      "name": "Volcanic Doomfire",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by sending a face-up \"Tri-Blaze Accelerator\" you control to the Graveyard. During your opponent's Battle Phase, your opponent must attack this monster with any Attack Position monsters they control. When this card destroys a monster and sends it to the Graveyard, destroy all monsters your opponent controls and inflict 500 damage to your opponent for each monster destroyed by this effect.",
+      "race": "Pyro",
+      "atk": 3000,
+      "def": 1800,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Volcanic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/volcanic-doomfire-2768",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2007 Wave 2",
+          "set_code": "CT04-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "9.01"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN008",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENH01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENH01",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32543380,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32543380.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32543380.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32543380.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.48",
+          "amazon_price": "1.74",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102178,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7085,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

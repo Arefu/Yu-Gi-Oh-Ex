@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 26845680,
+      "name": "Orcustrated Return",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send 1 \"Orcust\" or \"World Legacy\" monster from your hand or face-up field to the GY; draw 2 cards. You can only activate 1 \"Orcustrated Return\" per turn.",
+      "race": "Normal",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcustrated-return-9668",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN096",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN119",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.07"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN058",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26845680,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26845680.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26845680.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26845680.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.34",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Prime",
+          "views": 343068,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13945,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

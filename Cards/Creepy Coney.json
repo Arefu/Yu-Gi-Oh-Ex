@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 49144107,
+      "name": "Creepy Coney",
+      "typeline": [
+        "Beast",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Inflict 1000 damage to your opponent for each face-up Normal Monster you control, except Tokens.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 1900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/creepy-coney-4193",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49144107,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49144107.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49144107.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49144107.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23900,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9754,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

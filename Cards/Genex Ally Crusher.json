@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 27827903,
+      "name": "Genex Ally Crusher",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, when a monster with the same Attribute as this card is Normal Summoned to your side of the field, you can select 1 card your opponent controls, and destroy it.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-ally-crusher-2369",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN069",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27827903,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27827903.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27827903.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27827903.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36828,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2010-01-21",
+          "konami_id": 8711,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

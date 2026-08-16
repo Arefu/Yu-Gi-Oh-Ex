@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 58270977,
+      "name": "Magistery Alchemist",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish 4 \"HERO\" monsters from your GY and/or face-up field, then target 1 \"HERO\" monster in your GY; Special Summon it, ignoring its Summoning conditions. If you banished EARTH, WATER, FIRE, and WIND Attributes to activate this effect, the monster's original ATK becomes doubled, also negate the effects of all face-up cards your opponent currently controls. You can only activate 1 \"Magistery Alchemist\" per turn.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magistery-alchemist-10688",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58270977,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58270977.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58270977.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58270977.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.44",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magistry Alchemist",
+          "views": 36145,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413016,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14914,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

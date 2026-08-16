@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 49267971,
+      "name": "Blind Spot Strike",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up Defense Position monster your opponent controls and 1 face-up Attack Position monster you control. The monster you control gains ATK equal to the opponent's monster's DEF, until the End Phase.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blind-spot-strike-4204",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49267971,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49267971.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49267971.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49267971.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30370,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8976,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 77622396,
+      "name": "Reverse Trap",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Until the End Phase, all effects that add or subtract ATK or DEF are reversed. (Additions now subtract, and subtractions now add, instead. Multiplications and divisions, including halving/doubling, are not affected.)",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reverse-trap-6533",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN169",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN169",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.92"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77622396,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77622396.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77622396.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77622396.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55273,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4695,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

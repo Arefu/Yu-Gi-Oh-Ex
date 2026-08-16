@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 56074358,
+      "name": "Morphtronic Map",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a monster's battle position is changed, place 1 Morph Counter on this card. All \"Morphtronic\" monsters gain 300 ATK for each Morph Counter on this card. When this card is destroyed and sent from the field to the Graveyard, you can Special Summon 1 \"Morphtronic\" monster from your Graveyard.",
+      "race": "Field",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-map-4777",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56074358,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56074358.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56074358.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56074358.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.47",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42786,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8045,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

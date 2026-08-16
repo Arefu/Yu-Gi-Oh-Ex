@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 34334692,
+      "name": "Ritual Raven",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Ritual Summon a DARK Ritual Monster, this 1 card can be used as the entire Tribute.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-raven-2917",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34334692,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34334692.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34334692.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34334692.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72125,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7188,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

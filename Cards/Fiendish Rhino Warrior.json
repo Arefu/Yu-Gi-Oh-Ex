@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 81035362,
+      "name": "Fiendish Rhino Warrior",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Fiend monsters you control, except \"Fiendish Rhino Warrior\", cannot be destroyed by battle or card effects. If this card is sent to the GY: You can send 1 Fiend monster from your Deck to the GY, except \"Fiendish Rhino Warrior\". You can only use this effect of \"Fiendish Rhino Warrior\" once per turn.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiendish-rhino-warrior-6801",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81035362,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81035362.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81035362.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81035362.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.62",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.39",
+          "amazon_price": "1.90",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 456224,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11664,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

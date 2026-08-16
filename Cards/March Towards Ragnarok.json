@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 28643791,
+      "name": "March Towards Ragnarok",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Aesir\" monster you control; until the end of this turn, its effects are negated, also that face-up monster is unaffected by the effects of other Spells/Traps.",
+      "race": "Quick-Play",
+      "archetype": "Aesir",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/march-towards-ragnarok-2440",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN194",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28643791,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28643791.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28643791.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28643791.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34726,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9338,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

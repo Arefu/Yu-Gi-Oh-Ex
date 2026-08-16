@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 51369889,
+      "name": "Barrage Blast",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, you can detach any number of materials from Machine Xyz Monsters you control, then target that many cards on the field; destroy them. If a Machine Xyz Monster(s) you control is destroyed by battle or an opponent's card effect while this card is in your GY: You can banish this card and 1 Machine Xyz Monster from your GY; inflict damage to your opponent equal to the banished monster's Rank x 200.",
+      "race": "Continuous",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barrage-blast-9893",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN126",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51369889,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51369889.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51369889.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51369889.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Blitzkrieg Bombardment",
+          "views": 87229,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14184,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

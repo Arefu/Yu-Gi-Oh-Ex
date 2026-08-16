@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 41782653,
+      "name": "Overtex Qoatlus",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by shuffling 5 of your banished Dinosaur monsters into the Main Deck. Once per turn, when your opponent activates a Spell/Trap Card (Quick Effect): You can destroy 1 Dinosaur monster in your hand or face-up on your field, and if you do, negate the activation, and if you do that, destroy that card. If this card is sent to the GY by a card effect: You can add 1 \"Evolution Pill\" Spell from your Deck to your hand. You can only use this effect of \"Overtex Qoatlus\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 2700,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/overtex-qoatlus-9027",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN194",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41782653,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41782653.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41782653.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41782653.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.99",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 405253,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13406,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

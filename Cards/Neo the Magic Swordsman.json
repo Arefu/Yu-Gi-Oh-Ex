@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 50930991,
+      "name": "Neo the Magic Swordsman",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A dimensional drifter who not only practices sorcery, but is also a sword and martial arts master.",
+      "race": "Spellcaster",
+      "atk": 1700,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-the-magic-swordsman-4336",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "27.09"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.67"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50930991,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50930991.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50930991.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50930991.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "5.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94321,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4881,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

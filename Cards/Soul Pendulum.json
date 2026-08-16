@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 34884015,
+      "name": "Soul Pendulum",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You can target 2 cards in your Pendulum Zones; change each target's Pendulum Scale by 1 (min. 1). You can only use this effect of \"Soul Pendulum\" once per turn. Each time your Pendulum Monster(s) is Pendulum Summoned, place 1 counter on this card. Pendulum Monsters on the field gain 300 ATK for each counter on this card. You can remove 3 counters from this card; during your Main Phase this turn, you can conduct 1 Pendulum Summon of a monster(s) in addition to your Pendulum Summon. (You can only gain this effect once per turn.)",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-pendulum-9993",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34884015,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34884015.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34884015.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34884015.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pendulum of Souls",
+          "views": 97854,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14225,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

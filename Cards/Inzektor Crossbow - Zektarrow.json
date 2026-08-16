@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 87047074,
+      "name": "Inzektor Crossbow - Zektarrow",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to an \"Inzektor\" monster. It gains 500 ATK. Your opponent cannot activate cards or effects in response to the activation of the equipped monster's effects.",
+      "race": "Equip",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-crossbow-zektarrow-7287",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87047074,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87047074.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87047074.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87047074.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18128,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10084,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

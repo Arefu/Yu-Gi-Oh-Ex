@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 76103404,
+      "name": "Cyber Petit Angel",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can add 1 \"Cyber Angel\" monster or \"Machine Angel Ritual\" from your Deck to your hand. You can only use this effect of \"Cyber Petit Angel\" once per turn.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Angel",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-petit-angel-6406",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN107",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76103404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76103404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76103404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76103404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 153206,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 6848,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

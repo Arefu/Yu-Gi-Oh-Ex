@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "id": 47480070,
+      "name": "Amazoness Paladin",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 100 ATK for each \"Amazoness\" monster you control.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 300,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-paladin-4054",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN114",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN087",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-END04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47480070,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47480070.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47480070.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47480070.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.50",
+          "amazon_price": "49.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 172013,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5645,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

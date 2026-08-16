@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 91123920,
+      "name": "The Agent of Force - Mars",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is unaffected by any Spell Cards. While you control a face-up \"The Sanctuary in the Sky\" and your Life Points are higher than your opponent's, this card gains ATK and DEF by the difference between your and your opponent's Life Points.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "The Agent",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-agent-of-force-mars-7607",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.45"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN121",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.89"
+        },
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91123920,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91123920.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91123920.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91123920.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "4.80",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89808,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5954,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

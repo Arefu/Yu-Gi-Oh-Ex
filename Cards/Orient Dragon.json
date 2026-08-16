@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 68124775,
+      "name": "Orient Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card is Synchro Summoned: Target 1 Synchro Monster your opponent controls; banish that target.",
+      "race": "Dragon",
+      "atk": 2300,
+      "def": 1000,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orient-dragon-5726",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN247",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68124775,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68124775.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68124775.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68124775.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.78",
+          "tcgplayer_price": "4.47",
+          "ebay_price": "4.25",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38870,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9845,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

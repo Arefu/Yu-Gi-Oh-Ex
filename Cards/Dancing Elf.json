@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 59983499,
+      "name": "Dancing Elf",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An elf that dances across the sky with wings of razor-sharp blades.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dancing-elf-5098",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "21.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59983499,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59983499.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59983499.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59983499.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "20.75",
+          "tcgplayer_price": "9.31",
+          "ebay_price": "10.00",
+          "amazon_price": "26.00",
+          "coolstuffinc_price": "13.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35161,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4401,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

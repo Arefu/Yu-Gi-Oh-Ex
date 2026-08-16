@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 26773909,
+      "name": "Psychic Fervor",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "During the Battle Phase: Target 1 face-up monster you control; you lose LP equal to its ATK, and if you do, that monster's ATK is doubled until the end of this turn. It cannot attack directly during the turn you activate this card. You can only activate 1 \"Psychic Fervor\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-fervor-10264",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26773909,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26773909.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26773909.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26773909.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Psychic Implosion",
+          "views": 36110,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009064,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14512,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

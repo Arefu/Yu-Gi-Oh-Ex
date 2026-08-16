@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 60222213,
+      "name": "Raphion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. If you control no monsters, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. You take no battle damage from attacks involving this card. At the end of the Battle Phase, if this card battled: Inflict damage to your opponent equal to the ATK of 1 monster your opponent controls that battled this card this turn. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raphion-the-timelord-9476",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60222213,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60222213.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60222213.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60222213.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.72",
+          "tcgplayer_price": "1.54",
+          "ebay_price": "2.66",
+          "amazon_price": "2.53",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 147527,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13817,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 20470500,
+      "name": "Armed Sea Hunter",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "After damage calculation, if this card battles an Effect Monster: Negate the effects of that monster (including in the Graveyard). You must control another face-up WATER monster to activate and to resolve this effect. If this card would be destroyed, you can destroy 1 face-up Level 3 or lower WATER monster you control instead.",
+      "race": "Sea Serpent",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armed-sea-hunter-1760",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of the Sea Emperor Structure Deck",
+          "set_code": "SDRE-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20470500,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20470500.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20470500.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20470500.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117714,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8316,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 39271553,
+      "name": "F.A. Auto Navigator",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or GY: You can target 1 \"F.A.\" monster you control whose current Level is higher than its original Level; Special Summon this card, and if you do, reduce that target's Level by the difference between its current and original Level, and if you do that, this card's Level become equal to the amount reduced. If this card is Normal or Special Summoned: You can add 1 \"F.A.\" Field Spell from your Deck to your hand. You can only use each effect of \"F.A. Auto Navigator\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-auto-navigator-9223",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN225",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39271553,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39271553.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39271553.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39271553.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67601,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13538,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 9553721,
+      "name": "Shinobird Power Spot",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Spirit monsters you control gain 500 ATK and DEF. If a face-up WIND monster(s) you control returns to your hand (except during the Damage Step): You can add 1 Spirit monster or Ritual Spell Card from your Deck to your hand. You can only use this effect of \"Shinobird Power Spot\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Shinobird",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shinobird-power-spot-806",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN214",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9553721,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9553721.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9553721.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9553721.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43267,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12796,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

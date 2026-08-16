@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 76547525,
+      "name": "Red Wyvern",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nDuring either player's turn, if a monster with higher ATK than this Synchro Summoned card is on the field: You can destroy the 1 face-up monster on the field that has the highest ATK (your choice, if tied). This effect can only be used once while this card is face-up on the field.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2000,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-wyvern-6443",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76547525,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76547525.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76547525.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76547525.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "4.95",
+          "amazon_price": "1.32",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103125,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12065,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

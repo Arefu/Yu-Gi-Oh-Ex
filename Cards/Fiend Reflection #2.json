@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 2863439,
+      "name": "Fiend Reflection #2",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A bird-beast that summons reinforcements with a hand mirror.",
+      "race": "Winged Beast",
+      "atk": 1100,
+      "def": 1400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiend-reflection-2-257",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.73"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2863439,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2863439.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2863439.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2863439.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "20.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fiend Reflection 2",
+          "views": 273096,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4192,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

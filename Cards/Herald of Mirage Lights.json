@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 46935289,
+      "name": "Herald of Mirage Lights",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with the same Type and Attribute, except Tokens\r\nWhen a Spell/Trap Card or effect is activated (Quick Effect): You can send 1 Fairy monster from your hand to the GY; negate the activation, and if you do, destroy it. If this card in your possession is sent to your GY by an opponent's card: You can add up to 2 Ritual Monsters and/or Ritual Spells with different names from your GY to your hand. You can only use each effect of \"Herald of Mirage Lights\" once per turn.",
+      "race": "Fairy",
+      "atk": 600,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Herald",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/herald-of-mirage-lights-10740",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46935289,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46935289.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46935289.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46935289.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.83",
+          "tcgplayer_price": "0.91",
+          "ebay_price": "1.89",
+          "amazon_price": "0.64",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Herald of Mirages",
+          "views": 349855,
+          "viewsweek": 1848,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257021,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14934,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

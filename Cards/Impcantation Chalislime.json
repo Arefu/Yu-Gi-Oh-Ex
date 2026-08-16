@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 65877963,
+      "name": "Impcantation Chalislime",
+      "typeline": [
+        "Aqua",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Impcantation Inception\". You can reveal this card in your hand; discard 1 card, and if you do, Special Summon 1 \"Impcantation\" monster from your Deck, also, during the End Phase, lose 2500 LP if you did not Special Summon a Ritual Monster this turn after you resolved this effect. You can send 1 \"Impcantation\" card from your hand or face-up field to the GY, then target 1 monster your opponent controls; destroy it. You can only use 1 \"Impcantation Chalislime\" effect per turn, and only once that turn.",
+      "race": "Aqua",
+      "atk": 2500,
+      "def": 1800,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Impcantation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/impcantation-chalislime-9863",
+      "card_sets": [
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN032",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65877963,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65877963.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65877963.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65877963.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 527823,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14109,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

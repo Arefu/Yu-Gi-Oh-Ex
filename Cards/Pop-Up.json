@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 15248873,
+      "name": "Pop-Up",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls a card in their Field Zone and you do not: Activate 1 Field Spell Card from your Deck. You can only activate 1 \"Pop-Up\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pop-up-1307",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN067",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15248873,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15248873.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15248873.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15248873.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.49",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34086,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11276,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

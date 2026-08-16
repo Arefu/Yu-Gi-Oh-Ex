@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 14625090,
+      "name": "Dragonmaid Welcome",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "All monsters you control gain 100 ATK/DEF for each \"Dragonmaid\" monster you control. If you control 2 or more \"Dragonmaid\" monsters: You can target 1 \"Dragonmaid\" card in your GY, except \"Dragonmaid Welcome\"; add it to your hand. You can only use this effect of \"Dragonmaid Welcome\" once per turn. If this card is sent to the GY: Your opponent cannot target \"Dragonmaid\" monsters you control with card effects this turn.",
+      "race": "Continuous",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonmaid-welcome-10537",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14625090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14625090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14625090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14625090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "6.50",
+          "amazon_price": "7.79",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaid Reception",
+          "views": 258336,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423024,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14767,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

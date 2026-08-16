@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 2118022,
+      "name": "Hyosube",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This amphibian is strong on the attack, but leaves much to be desired when defending.",
+      "race": "Aqua",
+      "atk": 1500,
+      "def": 900,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hyosube-188",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.53"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2118022,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2118022.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2118022.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2118022.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 142188,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4653,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

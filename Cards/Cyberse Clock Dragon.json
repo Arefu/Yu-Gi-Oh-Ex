@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 42717221,
+      "name": "Cyberse Clock Dragon",
+      "typeline": [
+        "Cyberse",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Clock Wyvern\" + 1+ Link Monsters\r\nWhen this card is Fusion Summoned: You can send cards from the top of your Deck to the GY, equal to the total Link Rating of the materials used for this card's Fusion Summon, and if you do, until the end of the next turn, other monsters you control cannot attack, also this card gains 1000 ATK for each card sent to the GY by this effect. While you control a Link Monster(s), your opponent's monsters cannot target other monsters you control for attacks, also your opponent cannot target other monsters you control with card effects. If this Fusion Summoned card you control is sent to your GY by an opponent's card effect: You can add 1 Spell from your Deck to your hand.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-clock-dragon-9579",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN180",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42717221,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42717221.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42717221.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42717221.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.35",
+          "amazon_price": "1.67",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155871,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13921,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

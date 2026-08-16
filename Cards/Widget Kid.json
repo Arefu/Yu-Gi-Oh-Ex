@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 10705656,
+      "name": "Widget Kid",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 Cyberse monster from your hand in Defense Position. You can only use this effect of \"Widget Kid\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/widget-kid-9336",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10705656,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10705656.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10705656.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10705656.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.20",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 156627,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-12",
+          "ocg_date": "2018-03-24",
+          "konami_id": 13694,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

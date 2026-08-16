@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 68815401,
+      "name": "Wild Fire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Pay 500 Life Points. Destroy a face-up \"Blaze Accelerator\" card you control and destroy all monsters on the field. Then, Special Summon 1 \"Wild Fire Token\" (Pyro-Type/FIRE/Level 3/ATK 1000/DEF 1000) in Attack Position. Also, you cannot declare an attack this turn.",
+      "race": "Quick-Play",
+      "archetype": "Blaze Accelerator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wild-fire-5782",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENH16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68815401,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68815401.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68815401.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68815401.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71322,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7089,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

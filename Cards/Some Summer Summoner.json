@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 38406364,
+      "name": "Some Summer Summoner",
+      "typeline": [
+        "Thunder",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Thunder monsters\r\nOnce per opponent's turn (Quick Effect): You can discard 1 card, then target 1 Thunder monster in your GY, except a Link Monster; Special Summon it to your zone this card points to.",
+      "race": "Thunder",
+      "atk": 1600,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/some-summer-summoner-9643",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN192",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38406364,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38406364.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38406364.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38406364.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.25",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Kaminari Summer Vacation",
+          "views": 191444,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13936,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

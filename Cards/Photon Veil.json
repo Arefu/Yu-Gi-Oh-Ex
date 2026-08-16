@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 9354555,
+      "name": "Photon Veil",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Shuffle 3 LIGHT monsters from your hand into the Deck, then add 1 to 3 Level 4 or lower LIGHT monsters from your Deck to your hand. If you add 2 or more monsters, they must have the same name.",
+      "race": "Normal",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-veil-794",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Two",
+          "set_code": "AP02-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN050",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9354555,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9354555.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9354555.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9354555.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51508,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9768,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 93507434,
+      "name": "Dinowrestler Capaptera",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls more monsters than you do: You can target 1 monster your opponent controls; send it to the GY. You can only use this effect of \"Dinowrestler Capaptera\" once per turn. If this card is sent to the GY as Link Material for the Link Summon of a \"Dinowrestler\" monster: You can activate this effect; the Link Monster that used this card as material gains 1000 ATK until the end of this turn.",
+      "race": "Dinosaur",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-capaptera-9607",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN158",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93507434,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93507434.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93507434.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93507434.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74032,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13893,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 64342551,
+      "name": "Amphibious Bugroth MK-3",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While \"Umi\" is face-up on the field, this card can attack your opponent's Life Points directly.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amphibious-bugroth-mk-3-5431",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.95"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fury from the Deep",
+          "set_code": "SD4-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64342551,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64342551.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64342551.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64342551.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "8.85",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122984,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5893,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

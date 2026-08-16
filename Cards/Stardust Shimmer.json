@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 89181369,
+      "name": "Stardust Shimmer",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 Dragon-Type Synchro Monster in your Graveyard. Remove from play other monsters in your Graveyard whose total Levels equal the Level of the selected monster and Special Summon it from the Graveyard.",
+      "race": "Normal",
+      "archetype": "Stardust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-shimmer-7446",
+      "card_sets": [
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89181369,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89181369.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89181369.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89181369.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.29",
+          "tcgplayer_price": "0.93",
+          "ebay_price": "2.59",
+          "amazon_price": "0.42",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91972,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9346,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

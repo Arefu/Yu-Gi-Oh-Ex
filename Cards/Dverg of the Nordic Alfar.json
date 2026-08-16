@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 13455953,
+      "name": "Dverg of the Nordic Alfar",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "After you Normal Summon this card, you can Normal Summon 1 \"Nordic\" monster during your Main Phase this turn, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) If this face-up card on the field is sent to the GY: Target 1 \"Nordic Relic\" card in your GY; add that target to your hand.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 1000,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dverg-of-the-nordic-alfar-1154",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN183",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18",
+          "set_code": "OP18-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13455953,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13455953.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13455953.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13455953.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97799,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9307,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

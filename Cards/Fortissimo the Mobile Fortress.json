@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 86997073,
+      "name": "Fortissimo the Mobile Fortress",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can Special Summon 1 \"Meklord Army\" monster from your hand.",
+      "race": "Field",
+      "archetype": "Meklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortissimo-the-mobile-fortress-7281",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN169",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86997073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86997073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86997073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86997073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33611,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9520,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

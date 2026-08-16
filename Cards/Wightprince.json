@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 57473560,
+      "name": "Wightprince",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard: You can send 1\"Skull Servant\" and 1 \"The Lady in Wight\" from your hand and/or Deck to the Graveyard. You can banish 2 \"Skull Servants\" and this card from your Graveyard; Special Summon 1 \"King of the Skull Servants\" from your Deck. This card's name becomes \"Skull Servant\" while it is in the Graveyard.",
+      "race": "Zombie",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Skull Servant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wightprince-4895",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN047",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN124",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57473560,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57473560.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57473560.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57473560.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 251638,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11256,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

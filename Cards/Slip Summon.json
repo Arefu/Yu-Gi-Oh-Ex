@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 94484482,
+      "name": "Slip Summon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent Summons a monster. Special Summon 1 Level 4 or lower monster from your hand in face-up Defense Position. Return it to the owner's hand during the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/slip-summon-7860",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94484482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94484482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94484482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94484482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26873,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8498,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

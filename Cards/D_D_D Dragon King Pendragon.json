@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 56619314,
+      "name": "D/D/D Dragon King Pendragon",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can Tribute 1 Dragon-Type monster and 1 other Fiend-Type monster from your hand and/or your side of the field; Special Summon this card. Once per turn: You can discard 1 card; this card gains 500 ATK, then you can destroy 1 Spell/Trap Card on the field. This ATK increase lasts until the end of this turn.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 2400,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-dragon-king-pendragon-4824",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Deck: Yuya & Declan",
+          "set_code": "YS15-END00",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.81"
+        },
+        {
+          "set_name": "Dark Legion Starter Deck",
+          "set_code": "YS15-ENL00",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56619314,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56619314.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56619314.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56619314.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.37",
+          "tcgplayer_price": "0.87",
+          "ebay_price": "6.65",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52184,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-28",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11769,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

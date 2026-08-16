@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 64749612,
+      "name": "Yellow Ninja",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned or flipped face-up: You can Special Summon 1 Level 4 or lower \"Ninja\" monster from your hand in Attack Position or face-down Defense Position, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except \"Ninja\" monsters. You can only use this effect of \"Yellow Ninja\" once per turn.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yellow-ninja-9755",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN449",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64749612,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64749612.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64749612.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64749612.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "3.90",
+          "amazon_price": "4.27",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75431,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14003,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

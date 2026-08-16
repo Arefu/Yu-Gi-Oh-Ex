@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 69757518,
+      "name": "Number C5: Chaos Chimera Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 or more Level 6 monsters\nThis card gains 1000 ATK for each Xyz Material attached to it. If this card attacks, at the end of the Damage Step: You can detach 1 Xyz Material from this card; this card can attack an opponent's monster again in a row. At the end of the Battle Phase: You can pay half your Life Points, then target 2 cards in any Graveyard(s); place 1 of them on the top of the Deck, and if you do, attach the other to this card as an Xyz Material.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c5-chaos-chimera-dragon-5865",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.62"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69757518,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69757518.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69757518.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69757518.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C5",
+          "views": 53256,
+          "viewsweek": 21,
+          "upvotes": 51,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11187,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

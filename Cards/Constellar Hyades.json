@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 47579719,
+      "name": "Constellar Hyades",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 LIGHT monsters\nOnce per turn: You can detach 1 Xyz Material from this card; change all monsters your opponent controls to face-up Defense Position.",
+      "race": "Beast-Warrior",
+      "atk": 1900,
+      "def": 1100,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-hyades-4060",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN037",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN021",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47579719,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47579719.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47579719.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47579719.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.94",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "1.40",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51254,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9823,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

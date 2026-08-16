@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 4404099,
+      "name": "The Dragon Dwelling in the Deep",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Place 1 Ocean Counter on this card during each player's Standby Phase. When this card is removed from the field, all Fish-Type and Sea Serpent-Type monsters you control gain 200 ATK for each Ocean Counter on this card, until the End Phase.",
+      "race": "Sea Serpent",
+      "atk": 1700,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-dragon-dwelling-in-the-deep-397",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN086",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4404099,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4404099.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4404099.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4404099.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "3.00",
+          "amazon_price": "1.54",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20378,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8758,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

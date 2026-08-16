@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 86784733,
+      "name": "Cyberse Synchron",
+      "typeline": [
+        "Cyberse",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 Level 4 or lower monster you control; increase its Level by its original Level until the end of this turn. If your monster(s) in the Extra Monster Zone would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use this effect of \"Cyberse Synchron\" once per turn.",
+      "race": "Cyberse",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-synchron-9867",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86784733,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86784733.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86784733.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86784733.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "4.95",
+          "amazon_price": "3.38",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 297784,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14079,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

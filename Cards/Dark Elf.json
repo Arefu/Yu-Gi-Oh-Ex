@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 21417692,
+      "name": "Dark Elf",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card requires a cost of 1000 of your own Life Points to attack.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-elf-1841",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-113",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.31"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E113",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.47"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN113",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 3rd Season",
+          "set_code": "TP3-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21417692,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21417692.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21417692.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21417692.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "1.49",
+          "amazon_price": "1.71",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 396569,
+          "viewsweek": 42,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4557,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 27552504,
+      "name": "Beatrice, Lady of the Eternal",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters / You can also Xyz Summon this card by sending 1 \"Burning Abyss\" monster from your hand to the Graveyard, then using 1 \"Dante\" monster you control as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) If Summoned this way, the following effect cannot be activated this turn. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card; send 1 card from your Deck to the Graveyard. If this card in your possession is destroyed by your opponent's card (by battle or card effect) and sent to your Graveyard: You can Special Summon 1 \"Burning Abyss\" monster from your Extra Deck, ignoring its Summoning conditions.",
+      "race": "Fairy",
+      "atk": 2500,
+      "def": 2800,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beatrice-lady-of-the-eternal-2349",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN035",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN021",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "5.36"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 27552504,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27552504.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27552504.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27552504.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.24",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 732607,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-03-17",
+          "ocg_date": "2015-09-19",
+          "konami_id": 12108,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

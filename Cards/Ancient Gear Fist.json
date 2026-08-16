@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 40830387,
+      "name": "Ancient Gear Fist",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to an \"Ancient Gear\" monster. At the end of the Damage Step, if the equipped monster battled a monster and is still on the field: Destroy the monster it battled.",
+      "race": "Equip",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-fist-3471",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40830387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40830387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40830387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40830387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "3.20",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47158,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-01-17",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6844,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

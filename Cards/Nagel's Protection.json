@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 63053267,
+      "name": "Nagel's Protection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "\"Tindangle\" monsters in your Main Monster Zones cannot be destroyed by battle or your opponent's card effects. Once per turn, if your \"Tindangle\" monster inflicts battle damage to your opponent, the damage is doubled. You can banish this card from your GY and discard 1 \"Tindangle\" card; add 1 \"Nagel's Protection\" from your Deck to your hand. You can only use this effect of \"Nagel's Protection\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Tindangle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nagel-s-protection-8957",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63053267,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63053267.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63053267.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63053267.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Protected Sky of Nagel",
+          "views": 41235,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13425,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

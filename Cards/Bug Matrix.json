@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 86643777,
+      "name": "Bug Matrix",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Insect-Type monsters you control gain 300 ATK and DEF. You can target 1 Insect-Type Xyz Monster you control; attach 1 Insect-Type monster from your hand to that monster as Xyz Material. You can only use this effect of \"Bug Matrix\" once per turn.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bug-matrix-7255",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86643777,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86643777.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86643777.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86643777.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "1.10",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38728,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12336,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 8951260,
+      "name": "Respect Play",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "During their respective turns, each player must show their opponent their hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/respect-play-758",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.25"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8951260,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8951260.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8951260.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8951260.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150091,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4958,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

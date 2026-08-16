@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 32476434,
+      "name": "Shogi Lance",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 other Level 3 Beast-Warrior-Type monster you control; the Levels of that monster and this card become the combined Levels of those monsters.",
+      "race": "Beast-Warrior",
+      "atk": 500,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shogi-lance-2761",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32476434,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32476434.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32476434.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32476434.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12957,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11126,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

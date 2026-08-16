@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 61764082,
+      "name": "Dinowrestler Rambrachio",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your \"Dinowrestler\" monster inflicts battle damage to your opponent: You can Special Summon this card from your hand in Defense Position. You can only use this effect of \"Dinowrestler Rambrachio\" once per turn. Your opponent cannot target other \"Dinowrestler\" monsters you control with card effects.",
+      "race": "Dinosaur",
+      "atk": 1600,
+      "def": 0,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-rambrachio-10260",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61764082,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61764082.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61764082.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61764082.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37782,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009007,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14455,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "data": [
+    {
+      "id": 4335645,
+      "name": "Newdoria",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle and sent to the GY: Target 1 monster on the field; destroy that target.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/newdoria-392",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Demo Deck 2015",
+          "set_code": "DEM2-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.5"
+        },
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN005",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.86"
+        },
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.27"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 4",
+          "set_code": "STP4-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4335645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4335645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4335645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4335645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "5.00",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 377949,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5484,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

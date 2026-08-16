@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 28053763,
+      "name": "Dragonoid Generator",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by paying 1000 LP. During your Main Phase: You can Special Summon 1 \"Dragonoid Token\" (Machine/EARTH/Level 1/ATK 300/DEF 300) in Attack Position, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, also during the End Phase your opponent Special Summons 1 \"Dragonoid Token\" to their field in Attack Position (even if this card leaves the field). You can use this effect of \"Dragonoid Generator\" up to twice per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonoid-generator-8598",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN137",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN054",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN041",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN041",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28053763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28053763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28053763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28053763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80980,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13270,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

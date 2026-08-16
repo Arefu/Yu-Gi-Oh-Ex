@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 5309481,
+      "name": "Revived King Ha Des",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Plaguespreader Zombie\" + 1 or more non-Tuner Zombie-Type monsters\nNegate the effects of Effect Monsters destroyed by battle with Zombie-Type monsters you control.",
+      "race": "Zombie",
+      "atk": 2450,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/revived-king-ha-des-469",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN082",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5309481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5309481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5309481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5309481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.35",
+          "tcgplayer_price": "2.70",
+          "ebay_price": "1.94",
+          "amazon_price": "14.45",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 366393,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7851,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

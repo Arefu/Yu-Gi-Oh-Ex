@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 56907986,
+      "name": "Kozmo Strawman",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 3 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmo Strawman\" once per turn. Once per turn: You can pay 500 LP, then target 1 of your banished \"Kozmo\" monsters; Special Summon it, but its effects are negated, also destroy it during the End Phase.",
+      "race": "Psychic",
+      "atk": 500,
+      "def": 1800,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-strawman-4848",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN028",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56907986,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56907986.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56907986.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56907986.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.87",
+          "tcgplayer_price": "2.29",
+          "ebay_price": "2.02",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101475,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12100,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

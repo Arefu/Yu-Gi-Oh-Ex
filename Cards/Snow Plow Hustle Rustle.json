@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 24731453,
+      "name": "Snow Plow Hustle Rustle",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent's monster declares a direct attack, while you control a card(s) in your Spell & Trap Zone: You can Special Summon this card from your hand, then destroy as many cards in your Spell & Trap Zone as possible, and if you do, inflict 200 damage to your opponent for each destroyed card. You cannot Special Summon any monsters, except Machine monsters.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Train",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/snow-plow-hustle-rustle-2139",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN138",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL World Duel Carnival promotional cards",
+          "set_code": "ZDC1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "42.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24731453,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24731453.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24731453.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24731453.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66246,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-06-26",
+          "ocg_date": "2013-12-05",
+          "konami_id": 10860,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

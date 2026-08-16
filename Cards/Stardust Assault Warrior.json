@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 97792247,
+      "name": "Stardust Assault Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nWhen this card is Synchro Summoned while you control no other monsters: You can target 1 \"Junk\" monster in your GY; Special Summon it. You can only use this effect of \"Stardust Assault Warrior\" once per turn. If this card attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1200,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-assault-warrior-8129",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97792247,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97792247.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97792247.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97792247.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 136431,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2015-08-12",
+          "konami_id": 12087,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

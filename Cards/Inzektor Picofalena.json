@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 97273514,
+      "name": "Inzektor Picofalena",
+      "typeline": [
+        "Insect",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Insect monsters\r\nIf this card is Link Summoned: You can discard 1 card, then target 1 other Insect monster you control; equip 1 Insect monster from your Deck to it as an Equip Spell that gains this effect.\r\n● The equipped monster gains 500 ATK/DEF.\r\nYou can target 3 Insect monsters in your GY; shuffle them into the Deck, then draw 1 card. You can only use each effect of \"Inzektor Picofalena\" once per turn.",
+      "race": "Insect",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-picofalena-9104",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18",
+          "set_code": "OP18-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97273514,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97273514.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97273514.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97273514.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Inzektor Picofarena",
+          "views": 173002,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13495,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

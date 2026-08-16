@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 65331686,
+      "name": "Fluffal Owl",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned from the hand: You can add 1 \"Polymerization\" from your Deck to your hand. You can pay 500 LP; Fusion Summon 1 \"Frightfur\" Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Materials. You can only use 1 \"Fluffal Owl\" effect per turn, and only once that turn.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 1000,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Fluffal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fluffal-owl-5506",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN141",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN018",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65331686,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65331686.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65331686.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65331686.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.70",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145348,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11350,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

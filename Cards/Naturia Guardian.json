@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 80555116,
+      "name": "Naturia Guardian",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent Normal Summons a monster, this card gains 300 ATK until the End Phase.",
+      "race": "Plant",
+      "atk": 1600,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-guardian-6756",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN009",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN095",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80555116,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80555116.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80555116.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80555116.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18653,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-09-22",
+          "konami_id": 7946,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

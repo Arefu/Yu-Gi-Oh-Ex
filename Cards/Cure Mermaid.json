@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 85802526,
+      "name": "Cure Mermaid",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains face-up on your side of the field, increase your Life Points by 800 points during each of your Standby Phases.",
+      "race": "Fish",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cure-mermaid-7192",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN237",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85802526,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85802526.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85802526.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85802526.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "6.00",
+          "amazon_price": "0.51",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 168964,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5204,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

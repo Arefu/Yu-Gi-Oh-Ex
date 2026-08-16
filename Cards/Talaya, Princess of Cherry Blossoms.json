@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 80190753,
+      "name": "Talaya, Princess of Cherry Blossoms",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains 100 ATK for each Plant monster you control. Other Plant monsters on the field cannot be destroyed by card effects.",
+      "race": "Plant",
+      "atk": 2800,
+      "def": 1200,
+      "level": 8,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/talaya-princess-of-cherry-blossoms-6724",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN089",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80190753,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80190753.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80190753.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80190753.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 120486,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10639,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

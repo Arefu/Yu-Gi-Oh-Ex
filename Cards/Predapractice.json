@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 31643613,
+      "name": "Predapractice",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Predaplant\" monster from your hand, then add 1 \"Predap\" card from your Deck to your hand, except \"Predapractice\", also for the rest of this turn after this card resolves, you cannot Special Summon monsters from the Extra Deck, except Fusion Monsters. You can only activate 1 \"Predapractice\" per turn.",
+      "race": "Normal",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predapractice-10363",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.95"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31643613,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31643613.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31643613.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31643613.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.26",
+          "amazon_price": "8.04",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178403,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422047,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14603,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

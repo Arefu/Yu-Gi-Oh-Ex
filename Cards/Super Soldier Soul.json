@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 79234734,
+      "name": "Super Soldier Soul",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 1 \"Black Luster Soldier\" monster from your hand to the Graveyard; until your opponent's next End Phase, this card's ATK becomes 3000, and this card's name becomes \"Black Luster Soldier\". You can banish this card from your Graveyard; add 1 \"Beginning Knight\" or \"Evening Twilight Knight\" from your Deck to your hand. You can only use each effect of \"Super Soldier Soul\" once per turn.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Black Luster Soldier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-soldier-soul-6651",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN122",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79234734,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79234734.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79234734.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79234734.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117978,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11965,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

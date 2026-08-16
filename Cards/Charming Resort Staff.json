@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 64753157,
+      "name": "Charming Resort Staff",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an attack is declared involving a \"SPYRAL Super Agent\" you control and an opponent's face-up monster: You can change the ATK of the opponent's monster to 0. If this card is destroyed by battle or card effect: You can Special Summon 1 \"SPYRAL Super Agent\" from your Deck. If a \"SPYRAL Super Agent\" you control is destroyed by battle or sent to the Graveyard while this card is in your Graveyard: You can banish this card from your Graveyard; return 1 \"SPYRAL Super Agent\" from your Graveyard to your hand.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 200,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/charming-resort-staff-5466",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64753157,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64753157.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64753157.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64753157.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.29",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25661,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12824,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

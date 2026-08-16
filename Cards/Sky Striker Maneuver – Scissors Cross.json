@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 46271408,
+      "name": "Sky Striker Maneuver - Scissors Cross",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters in your Main Monster Zone: Target 1 Level 4 \"Sky Striker Ace\" monster in your GY; add it to your hand, or if you have 3 or more Spells in your GY, you can Special Summon it instead.",
+      "race": "Normal",
+      "archetype": "Sky Striker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-striker-maneuver-scissors-cross-10666",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN062",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault Sneak Peek Participation Card",
+          "set_code": "IGAS-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46271408,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46271408.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46271408.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46271408.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "2.49",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92500,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011062,
+          "tcg_date": "2020-01-25",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14871,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

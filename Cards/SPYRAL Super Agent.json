@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 41091257,
+      "name": "SPYRAL Super Agent",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can declare 1 card type (Monster, Spell, or Trap); reveal the top card of your opponent's Deck, and if you do, Special Summon this card if it is a card of that type. If this card is Special Summoned by the effect of a \"SPYRAL\" card: You can target 1 Spell/Trap your opponent controls; destroy it. You can only use each effect of \"SPYRAL Super Agent\" once per turn.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-super-agent-3497",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon Special Edition",
+          "set_code": "CYHO-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41091257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41091257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41091257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41091257.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139651,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12688,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

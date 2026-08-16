@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 41356845,
+      "name": "Acid Trap Hole",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-down Defense Position monster on the field; flip it face-up, then destroy it if its DEF is 2000 or less, or return it face-down if its DEF is more than 2000.",
+      "race": "Normal",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/acid-trap-hole-3528",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN283",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity: Special Edition",
+          "set_code": "SOI-ENSE1",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.52"
+        },
+        {
+          "set_name": "Shadow of Infinity: Special Edition",
+          "set_code": "SOI-ENSE1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.74"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Dark Duel Stories promotional cards",
+          "set_code": "DDS-005",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "3.47"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel promotional cards",
+          "set_code": "SDD-E002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "9.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41356845,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41356845.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41356845.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41356845.jpg"
+        },
+        {
+          "id": 41356846,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41356846.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41356846.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41356846.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 168402,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Acid Trap Hole",
+          "tcg_date": "2002-03-19",
+          "ocg_date": "1999-07-08",
+          "konami_id": 4691,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

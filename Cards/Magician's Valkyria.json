@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 80304126,
+      "name": "Magician's Valkyria",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Monsters your opponent controls cannot target face-up Spellcaster-Type monsters for attacks, except this one.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-s-valkyria-6735",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Eight",
+          "set_code": "CP08-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2010 Wave 2",
+          "set_code": "CT07-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.61"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENY17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 4, Issue 11 promotional card",
+          "set_code": "JUMP-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "20.99"
+        },
+        {
+          "set_name": "Spellcaster's Command Structure Deck: Special Edition",
+          "set_code": "SDSC-ENSE1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Reloaded",
+          "set_code": "YSYR-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80304126,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80304126.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80304126.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80304126.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "6.95",
+          "amazon_price": "15.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182785,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-01",
+          "ocg_date": "2003-04-08",
+          "konami_id": 5869,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

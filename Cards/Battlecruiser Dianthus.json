@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40424929,
+      "name": "Battlecruiser Dianthus",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 3 monsters\nYou can detach 1 Xyz Material from this card; inflict 200 damage to your opponent for each card in their hand. You can only use the effect of \"Battlecruiser Dianthus\" once per turn.",
+      "race": "Plant",
+      "atk": 2100,
+      "def": 1800,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlecruiser-dianthus-3439",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40424929,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40424929.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40424929.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40424929.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41997,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10716,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

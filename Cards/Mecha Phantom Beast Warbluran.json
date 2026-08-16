@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 31480215,
+      "name": "Mecha Phantom Beast Warbluran",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard for the Synchro Summon of a Machine-Type monster: Special Summon 1 \"Mecha Phantom Beast Token\" (Machine-Type/WIND/Level 3/ATK 0/DEF 0), also, for the rest of this turn, you cannot Special Summon any other monsters, except WIND monsters. While you control a Token, this card cannot be destroyed by battle or card effects. You can Tribute 1 other \"Mecha Phantom Beast\" monster; increase this card's Level by 1. You can only use 1 \"Mecha Phantom Beast Warbluran\" effect per turn, and only once that turn.",
+      "race": "Machine",
+      "atk": 300,
+      "def": 300,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-warbluran-2672",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN075",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31480215,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31480215.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31480215.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31480215.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.00",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56697,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10625,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

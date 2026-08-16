@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 32875265,
+      "name": "Puppet Parade",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If your opponent controls more monsters than you do: Special Summon \"Gimmick Puppet\" monsters with different names from your Deck, up to the difference, then, if your opponent's LP are at least 2000 higher than yours, you can Set 1 \"Rank-Up-Magic\" Normal Spell directly from your Deck. For the rest of this turn after this card resolves, you cannot Special Summon monsters, except \"Gimmick Puppet\" monsters. You can only activate 1 \"Puppet Parade\" per turn.",
+      "race": "Normal",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/puppet-parade-10374",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32875265,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32875265.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32875265.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32875265.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61322,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14600,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

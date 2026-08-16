@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 1474910,
+      "name": "Bee List Soldier",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card and 1 face-up Insect monster, except \"Bee List Soldier\"; draw 2 cards.",
+      "race": "Insect",
+      "atk": 500,
+      "def": 400,
+      "level": 1,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bee-list-soldier-126",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1474910,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1474910.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1474910.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1474910.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39231,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8031,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 67378104,
+      "name": "Celestial Observatory",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Place 1 Level 6 monster from your hand or face-up field on the bottom of the Deck; draw 2 cards. You can only activate 1 \"Celestial Observatory\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/celestial-observatory-9421",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN122",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN064",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67378104,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67378104.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67378104.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67378104.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "2.19",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Celestial Sextant",
+          "views": 99076,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13780,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

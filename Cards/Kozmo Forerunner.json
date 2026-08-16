@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 20849090,
+      "name": "Kozmo Forerunner",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be targeted by an opponent's card effects. During your Standby Phase: Gain 1000 LP. If this card is destroyed by battle or card effect and sent to the Graveyard: You can banish this card from your Graveyard; Special Summon 1 Level 6 or lower \"Kozmo\" monster from your Deck.",
+      "race": "Machine",
+      "atk": 2800,
+      "def": 1400,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-forerunner-1794",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN027",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20849090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20849090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20849090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20849090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.49",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106573,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12036,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

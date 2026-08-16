@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 38975369,
+      "name": "Gundari",
+      "typeline": [
+        "Pyro",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to its owner's hand during the End Phase of the turn it is Normal Summoned or flipped face-up. If this card battles a Synchro Monster, return both monsters to their owners' hands at the start of the Damage Step (without damage calculation).",
+      "race": "Pyro",
+      "atk": 1000,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gundari-3301",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38975369,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38975369.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38975369.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38975369.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29004,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8645,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

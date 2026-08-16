@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 31890399,
+      "name": "Fiend's Mirror",
+      "typeline": [
+        "Fiend",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Beastly Mirror Ritual\".",
+      "race": "Fiend",
+      "atk": 2100,
+      "def": 1800,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiend-s-mirror-2707",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31890399,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31890399.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31890399.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31890399.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.50",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18271,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "1999-12-18",
+          "konami_id": 4371,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

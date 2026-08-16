@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 44088292,
+      "name": "Poly-Chemicritter Dioxogre",
+      "typeline": [
+        "Fiend",
+        "Gemini",
+        "Effect"
+      ],
+      "type": "Gemini Monster",
+      "humanReadableCardType": "Gemini Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field or in the Graveyard. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with these effects.\n● The Normal Summon of a Gemini monster cannot be negated.\n● Once per turn: You can banish 1 Gemini monster from your Graveyard, then target 1 card your opponent controls; destroy it.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 200,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Chemicritter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/poly-chemicritter-dioxogre-3763",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44088292,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44088292.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44088292.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44088292.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48290,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12616,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

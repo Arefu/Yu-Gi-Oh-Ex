@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 27971137,
+      "name": "Zombowwow",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card declares an attack, it gains 500 ATK. If this card on the field is destroyed and sent to the Graveyard: You can Special Summon 1 Level 1 monster with 0 ATK and DEF from your Deck. Its effects are negated, also it is destroyed during your next End Phase.",
+      "race": "Zombie",
+      "atk": 1000,
+      "def": 1000,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zombowwow-2380",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27971137,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27971137.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27971137.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27971137.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21867,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10700,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

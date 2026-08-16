@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 94878265,
+      "name": "Moja",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, you can add 1 Level 4 Beast-Type monster from your Graveyard to your hand.",
+      "race": "Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/moja-7896",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack Collection Tin 2009",
+          "set_code": "RGBT-ENPP4",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.6"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94878265,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94878265.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94878265.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94878265.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.00",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43909,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-03-10",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8375,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

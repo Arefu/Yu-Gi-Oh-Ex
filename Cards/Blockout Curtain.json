@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 53167658,
+      "name": "Blockout Curtain",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If a card(s) you control would be destroyed by battle or an opponent's card effect, you can destroy this card instead of 1 of those cards. If a card(s) your opponent controls would be destroyed by battle or card effect, you can banish this card from your GY instead of 1 of those cards. You can only use each effect of \"Blockout Curtain\" once per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blockout-curtain-10265",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53167658,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53167658.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53167658.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53167658.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Obstructive Curtain",
+          "views": 32919,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009065,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14513,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

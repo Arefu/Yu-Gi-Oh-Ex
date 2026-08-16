@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 61592395,
+      "name": "Spellbook of Eternity",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 of your banished \"Spellbook\" Spell Cards, except \"Spellbook of Eternity\"; add that target to your hand. You can only activate 1 \"Spellbook of Eternity\" per turn.",
+      "race": "Normal",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spellbook-of-eternity-5215",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN058",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack Four",
+          "set_code": "AP04-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61592395,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61592395.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61592395.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61592395.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.67",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "6.59",
+          "amazon_price": "0.71",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89814,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10280,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

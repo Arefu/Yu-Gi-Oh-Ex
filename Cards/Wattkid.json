@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 27324313,
+      "name": "Wattkid",
+      "typeline": [
+        "Thunder",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A creature that electrocutes opponents with bolts of lightning.",
+      "race": "Thunder",
+      "atk": 1000,
+      "def": 500,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattkid-2334",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.37"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.66"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Four",
+          "set_code": "TU04-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27324313,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27324313.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27324313.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27324313.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.10",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Oscillo Hero #2",
+          "views": 53487,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-03-01",
+          "konami_id": 4051,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

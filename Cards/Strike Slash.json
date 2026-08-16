@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 30643162,
+      "name": "Strike Slash",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a monster you control declares an attack: Until the End Phase, that monster gains 700 ATK, also, if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/strike-slash-2604",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN189",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN189",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30643162,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30643162.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30643162.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30643162.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37913,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7231,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

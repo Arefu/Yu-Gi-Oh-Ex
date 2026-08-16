@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 17663375,
+      "name": "Ancient Gear Wyvern",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"Ancient Gear\" card from your Deck to your hand, except \"Ancient Gear Wyvern\", also you cannot Set cards for the rest of this turn. You can only use this effect of \"Ancient Gear Wyvern\" once per turn. If this card attacks, your opponent's monsters cannot activate their effects until the end of the Damage Step.",
+      "race": "Machine",
+      "atk": 1700,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-wyvern-1539",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17663375,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17663375.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17663375.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17663375.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.22",
+          "tcgplayer_price": "4.08",
+          "ebay_price": "3.00",
+          "amazon_price": "3.62",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 385611,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-13",
+          "ocg_date": "2016-09-24",
+          "konami_id": 12678,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

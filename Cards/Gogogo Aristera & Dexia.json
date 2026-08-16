@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 91718579,
+      "name": "Gogogo Aristera & Dexia",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While another \"Gogogo\" monster is on the field, your opponent's monsters cannot target \"Gogogo\" monsters for attacks, also your opponent cannot target \"Gogogo\" monsters on the field with card effects. An Xyz Monster that was Summoned using only this card and other \"Gogogo\" monsters as material gains this effect.\r\n● When it is Xyz Summoned: You can target 1 face-up Attack Position monster your opponent controls; change it to Defense Position, and if you do, change its DEF to 0.",
+      "race": "Rock",
+      "atk": 0,
+      "def": 2200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gogogo-aristera-dexia-7649",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91718579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91718579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91718579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91718579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gogogo Aristera",
+          "views": 36266,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11924,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

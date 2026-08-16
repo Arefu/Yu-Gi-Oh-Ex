@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 72529749,
+      "name": "Topologic Trisbaena",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\r\nIf a monster(s) is Special Summoned to a zone(s) this card points to: Banish as many of those monster(s) as possible, also as many Spells/Traps on the field as possible, and if you do, inflict 500 damage to your opponent for each of their cards banished by this effect.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/topologic-trisbaena-9187",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN036",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72529749,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72529749.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72529749.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72529749.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.95",
+          "amazon_price": "1.65",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Topologic Tulisbaena",
+          "views": 581196,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13590,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

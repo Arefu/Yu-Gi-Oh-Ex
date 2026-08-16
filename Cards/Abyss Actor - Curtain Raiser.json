@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 44179224,
+      "name": "Abyss Actor - Curtain Raiser",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you control no monsters: You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Abyss Actor - Curtain Raiser\" once per Duel.\n\n[ Monster Effect ] \nGains 1100 ATK if you control no other monsters. Once per turn: You can send 1 \"Abyss Script\" Spell from your Deck to the GY; add 1 face-up \"Abyss Actor\" Pendulum Monster from your Extra Deck to your hand.",
+      "race": "Fiend",
+      "pend_desc": "If you control no monsters: You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Abyss Actor - Curtain Raiser\" once per Duel.",
+      "monster_desc": "Gains 1100 ATK if you control no other monsters. Once per turn: You can send 1 \"Abyss Script\" Spell from your Deck to the GY; add 1 face-up \"Abyss Actor\" Pendulum Monster from your Extra Deck to your hand.",
+      "atk": 1100,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-curtain-raiser-8662",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.68"
+        },
+        {
+          "set_name": "OTS Tournament Pack 21",
+          "set_code": "OP21-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44179224,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44179224.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44179224.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44179224.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "4.49",
+          "amazon_price": "4.19",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 368652,
+          "viewsweek": 22,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13137,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

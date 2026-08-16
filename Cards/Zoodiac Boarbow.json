@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 74393852,
+      "name": "Zoodiac Boarbow",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "5 Level 4 monsters\r\nOnce per turn, you can also Xyz Summon \"Zoodiac Boarbow\" by using 1 \"Zoodiac\" monster you control with a different name as Xyz Material. (If you used an Xyz Monster, any Xyz Materials attached to it also become Xyz Materials on this card.) This card gains ATK and DEF equal to the ATK and DEF of all \"Zoodiac\" monsters attached to it as Materials. This card can attack your opponent directly. When this card inflicts battle damage to your opponent while it has 12 or more Xyz Materials: You can send as many cards as possible from your opponent's hand and field to the Graveyard, then change this card to Defense Position.",
+      "race": "Beast-Warrior",
+      "atk": -1,
+      "def": -1,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-boarbow-6253",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN209",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN054",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74393852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74393852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74393852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74393852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.74",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 272081,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12789,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 49460512,
+      "name": "Blackwing - Kogarashi the Wanderer",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When a face-up \"Blackwing\" monster you control is destroyed by a card effect and sent to the Graveyard (except during the Damage Step): You can Special Summon this card from your hand. When a monster is Synchro Summoned using this card as a Synchro Material, the opponent of this card's owner cannot activate cards or effects.",
+      "race": "Winged Beast",
+      "atk": 2300,
+      "def": 1600,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-kogarashi-the-wanderer-4216",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN009",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49460512,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49460512.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49460512.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49460512.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.78",
+          "tcgplayer_price": "1.65",
+          "ebay_price": "12.99",
+          "amazon_price": "4.44",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40304,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9480,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

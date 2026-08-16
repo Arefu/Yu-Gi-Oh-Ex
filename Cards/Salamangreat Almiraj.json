@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "id": 60303245,
+      "name": "Salamangreat Almiraj",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Normal Summoned monster with 1000 or less ATK\r\n(Quick Effect): You can Tribute this card, then target 1 monster you control; it cannot be destroyed by your opponent's card effects this turn. When a Normal Summoned monster you control is destroyed by battle, while this card is in your GY: You can Special Summon this card. You can only use this effect of \"Salamangreat Almiraj\" once per turn.",
+      "race": "Cyberse",
+      "atk": 0,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-almiraj-9927",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN054",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "12.88"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.63"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL39",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN144",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60303245,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60303245.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60303245.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60303245.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.09",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "staple": "Yes",
+          "views": 2258150,
+          "viewsweek": 63,
+          "upvotes": 24,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14338,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 57482479,
+      "name": "Luminous Soldier",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card battles a DARK monster, increase the ATK of this card by 500 points during the Damage Step only.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1400,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/luminous-soldier-4897",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN113",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "146.46"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57482479,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57482479.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57482479.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57482479.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "19.46",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37228,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-01",
+          "ocg_date": "2001-10-25",
+          "konami_id": 5015,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

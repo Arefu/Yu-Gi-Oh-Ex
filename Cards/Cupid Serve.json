@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 1566817,
+      "name": "Cupid Serve",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Unaffected by the activated effects of monsters, except monsters whose Level is equal or lower than this card. You can banish up to 3 cards from your GY; increase this card's Level by that number, until the end of this turn. You can only use this effect of \"Cupid Serve\" once per turn.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 600,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cupid-serve-10669",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1566817,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1566817.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1566817.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1566817.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19333,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011033,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14842,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

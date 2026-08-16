@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 65172015,
+      "name": "A-to-Z-Dragon Buster Cannon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"ABC-Dragon Buster\" + \"XYZ-Dragon Cannon\"\nMust be Special Summoned (from your Extra Deck) by banishing cards you control with the above original names, and cannot be Special Summoned by other ways. (You do not use \"Polymerization\".) During either player's turn, when your opponent activates a Spell/Trap Card, or monster effect: You can discard 1 card; negate the activation, and if you do, destroy that card. During either player's turn: You can banish this card, then target 1 each of your banished \"ABC-Dragon Buster\", and \"XYZ-Dragon Cannon\"; Special Summon them.",
+      "race": "Machine",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "ABC",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-to-z-dragon-buster-cannon-5491",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Seto Kaiba",
+          "set_code": "SDKS-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65172015,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65172015.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65172015.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65172015.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.78",
+          "ebay_price": "2.50",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 218143,
+          "viewsweek": 0,
+          "upvotes": 57,
+          "downvotes": 36,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12589,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

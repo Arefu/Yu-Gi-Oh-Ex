@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 53539634,
+      "name": "Sanwitch",
+      "typeline": [
+        "Spellcaster",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Sangan\" + \"Witch of the Black Forest\"",
+      "race": "Spellcaster",
+      "atk": 2100,
+      "def": 1800,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sanwitch-4560",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN122",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53539634,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53539634.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53539634.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53539634.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "0.99",
+          "amazon_price": "1.55",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 180157,
+          "viewsweek": 42,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6128,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

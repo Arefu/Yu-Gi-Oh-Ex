@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 99261403,
+      "name": "Dark Rabbit",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "He leaps up, down, and all around! Nobody can lay a hand on this funny bunny.",
+      "race": "Beast",
+      "atk": 1100,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-rabbit-8241",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Demo Deck",
+          "set_code": "DEM5-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.84"
+        },
+        {
+          "set_name": "Speed Duel Demo Deck 2020",
+          "set_code": "DEM6-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99261403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99261403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99261403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99261403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "14.99",
+          "amazon_price": "1.13",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87002,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4390,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

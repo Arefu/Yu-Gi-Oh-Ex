@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 65305468,
+      "name": "Number F0: Utopic Future",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Xyz Monsters with the same Rank, except \"Number\" monsters\n(This card's original Rank is always treated as 1.)\nCannot be destroyed by battle, and neither player takes any battle damage from attacks involving this card. At the end of the Damage Step, if this card battled an opponent's monster: You can take control of that opponent's monster until the end of the Battle Phase. If this face-up card on the field would be destroyed by a card effect, you can detach 1 material from this card instead.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 0,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-f0-utopic-future-5505",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN270",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.88"
+        },
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN026",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65305468,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65305468.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65305468.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65305468.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number F0",
+          "views": 978952,
+          "viewsweek": 42,
+          "upvotes": 49,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11413,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

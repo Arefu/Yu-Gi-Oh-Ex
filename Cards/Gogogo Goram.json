@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 59911557,
+      "name": "Gogogo Goram",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: Change the battle position of this card. If this card on the field is destroyed and sent to the Graveyard: Send 1 \"Gogogo\" monster from your Deck to the Graveyard.",
+      "race": "Rock",
+      "atk": 2300,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gogogo-goram-5092",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59911557,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59911557.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59911557.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59911557.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37826,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-01-11",
+          "konami_id": 10979,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

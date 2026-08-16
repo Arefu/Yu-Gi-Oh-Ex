@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 47387961,
+      "name": "Number 8: Heraldic King Genom-Heritage",
+      "typeline": [
+        "Psychic",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Heraldic Beast\" monsters\nOnce per turn: You can target 1 face-up Xyz Monster your opponent controls; this card's name and original ATK become that monster's name and current ATK, and this card's effect becomes that monster's original effect, then that monster's ATK becomes 0 and its effects are negated. These changes last until the End Phase.",
+      "race": "Psychic",
+      "atk": 2400,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Heraldic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-8-heraldic-king-genom-heritage-4042",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN152",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47387961,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47387961.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47387961.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47387961.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "3.19",
+          "amazon_price": "3.50",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 8",
+          "views": 42200,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10267,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

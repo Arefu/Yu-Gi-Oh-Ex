@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 72929454,
+      "name": "Turtle Bird",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An unusual turtle that not only swims at tremendous speeds, but can also sail across the skies.",
+      "race": "Aqua",
+      "atk": 1900,
+      "def": 1700,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/turtle-bird-6122",
+      "card_sets": [
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72929454,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72929454.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72929454.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72929454.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.11",
+          "tcgplayer_price": "2.00",
+          "ebay_price": "3.99",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24756,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 10,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4526,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

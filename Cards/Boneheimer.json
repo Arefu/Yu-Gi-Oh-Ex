@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 98456117,
+      "name": "Boneheimer",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster wanders the seas, sucking dry any creatures it may encounter.",
+      "race": "Aqua",
+      "atk": 850,
+      "def": 400,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/boneheimer-8183",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.19"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98456117,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98456117.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98456117.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98456117.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59978,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5046,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

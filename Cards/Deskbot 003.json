@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 75944053,
+      "name": "Deskbot 003",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 \"Deskbot\" monster from your Deck, except \"Deskbot 003\". Once per turn (Quick Effect): You can target 1 \"Deskbot\" monster you control; it gains 500 ATK/DEF for each \"Deskbot\" card you currently control, until the end of this turn.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Deskbot",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deskbot-003-6392",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN218",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75944053,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75944053.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75944053.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75944053.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.70",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 179100,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11561,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

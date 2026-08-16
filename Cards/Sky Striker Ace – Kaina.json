@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 12421694,
+      "name": "Sky Striker Ace - Kaina",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 non-EARTH \"Sky Striker Ace\" monster\r\nIf this card is Special Summoned: You can target 1 face-up monster your opponent controls; it cannot attack until the end of your opponent's turn. Each time you activate a \"Sky Striker\" Spell Card, or its effect, gain 100 LP immediately after the card or effect resolves. You can only Special Summon \"Sky Striker Ace - Kaina(s)\" once per turn.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Sky Striker",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-striker-ace-kaina-9832",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN023",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2.02"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENS28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12421694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12421694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12421694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12421694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.89",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 449632,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14132,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

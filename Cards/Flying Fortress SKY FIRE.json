@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 16898077,
+      "name": "Flying Fortress SKY FIRE",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with the effect of \"Summon Reactor・SK\". Once per turn, you can send 1 card from your hand to the Graveyard to destroy 1 card your opponent controls. Once during each of your opponent's turns, you can activate 1 of the following effects:\n● When your opponent Normal Summons or Special Summons a monster, destroy it and inflict 800 damage to your opponent.\n● When your opponent Sets a card, destroy it and inflict 800 damage to your opponent.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flying-fortress-sky-fire-1452",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16898077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16898077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16898077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16898077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "4.50",
+          "amazon_price": "2.78",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52984,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 7999,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

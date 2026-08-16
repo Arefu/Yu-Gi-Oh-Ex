@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 51960178,
+      "name": "Fairy Cheer Girl",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Fairy-Type monsters\nYou can detach 1 Xyz Material from this card; draw 1 card. You can only use this effect of \"Fairy Cheer Girl\" once per turn.",
+      "race": "Fairy",
+      "atk": 1900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fairy-cheer-girl-4422",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN129",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51960178,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51960178.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51960178.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51960178.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111282,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10527,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

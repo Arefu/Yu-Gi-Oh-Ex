@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 24484270,
+      "name": "Gem-Knight Phantom Quartz",
+      "typeline": [
+        "Rock",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Gem-\" monsters\r\nIf this card is Link Summoned: You can add 1 \"Gem-Knight\" card from your Deck to your hand. You can pay 1000 LP; Fusion Summon 1 \"Gem-Knight\" Fusion Monster from your Extra Deck, by shuffling Fusion Materials in your possession listed on it into your Deck, that are banished or in the GY, but it cannot attack directly this turn. You can only use each effect of \"Gem-Knight Phantom Quartz\" once per turn.",
+      "race": "Rock",
+      "atk": 1450,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-phantom-quartz-9149",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN156",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN092",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24484270,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24484270.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24484270.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24484270.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "2.79",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gem-Knight Phantom Core",
+          "views": 163758,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13493,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

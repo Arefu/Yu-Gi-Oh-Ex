@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 60606759,
+      "name": "Renge, Gatekeeper of Dark World",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "His renowned athletic physique has made him famous with the populace of Dark World. They call him \"Iron Wall Renge\" because no one can break through his incredible defenses.",
+      "race": "Fiend",
+      "atk": 100,
+      "def": 2100,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/renge-gatekeeper-of-dark-world-5142",
+      "card_sets": [
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's",
+          "set_code": "5DS1-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60606759,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60606759.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60606759.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60606759.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67219,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7192,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

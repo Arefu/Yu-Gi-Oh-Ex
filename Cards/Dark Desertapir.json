@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 70187958,
+      "name": "Dark Desertapir",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is removed from play, you can select 1 Level 4 or lower Beast-Type monster in your Graveyard and Special Summon it.",
+      "race": "Beast",
+      "atk": 1100,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-desertapir-5906",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70187958,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70187958.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70187958.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70187958.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.85",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18655,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9206,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

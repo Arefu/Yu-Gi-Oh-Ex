@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 53577438,
+      "name": "Mathmech Nabla",
+      "typeline": [
+        "Cyberse",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 Cyberse monster; Special Summon 1 \"Mathmech\" monster from your Deck. If this card is sent to the GY: You can target 1 Cyberse monster you control in the Extra Monster Zone; it can make up to 2 attacks on monsters during each Battle Phase this turn. You can only use each effect of \"Mathmech Nabla\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mathmech-nabla-10412",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53577438,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53577438.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53577438.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53577438.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.76",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Processlayer Nabla",
+          "views": 183266,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423002,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14745,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

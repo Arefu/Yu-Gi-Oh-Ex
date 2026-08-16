@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 11502550,
+      "name": "Elemental HERO Air Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental Hero Neos\" + \"Neo-Spacian Air Hummingbird\"\nThis card can only be Special Summoned from your Extra Deck by returning the above cards you control to the Deck. (You do not use \"Polymerization\".) While your Life Points are lower than your opponent's, this card gains ATK equal to the difference. This card returns to the Extra Deck during the End Phase.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-air-neos-995",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN034",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11502550,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11502550.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11502550.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11502550.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "72.21",
+          "tcgplayer_price": "182.16",
+          "ebay_price": "349.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 199200,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2007-03-15",
+          "konami_id": 6989,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

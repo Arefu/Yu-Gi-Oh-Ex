@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 26674724,
+      "name": "Nekroz of Brionac",
+      "typeline": [
+        "Warrior",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Nekroz\" Ritual Spell. Must be Ritual Summoned, without using \"Nekroz of Brionac\". You can only use each of these effects of \"Nekroz of Brionac\" once per turn.\r\n● You can discard this card; add 1 \"Nekroz\" monster from your Deck to your hand, except \"Nekroz of Brionac\".\r\n● You can target up to 2 face-up monsters on the field that were Special Summoned from the Extra Deck; shuffle them into the Deck.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 1400,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nekroz-of-brionac-2287",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.61"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN260",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN260",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN014",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "26.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26674724,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26674724.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26674724.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26674724.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.17",
+          "tcgplayer_price": "2.08",
+          "ebay_price": "19.00",
+          "amazon_price": "3.14",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 350130,
+          "viewsweek": 21,
+          "upvotes": 14,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11484,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

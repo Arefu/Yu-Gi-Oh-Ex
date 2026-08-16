@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 93749093,
+      "name": "Marshmacaron",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle or card effect: You can Special Summon up to 2 other \"Marshmacaron\" from your hand, Deck, and/or Graveyard. You can only use this effect of \"Marshmacaron\" once per turn.",
+      "race": "Fairy",
+      "atk": 200,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marshmacaron-7803",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS13",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG13",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93749093,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93749093.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93749093.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93749093.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261212,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12496,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

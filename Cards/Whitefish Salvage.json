@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 63509474,
+      "name": "Whitefish Salvage",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You can target 1 Fish monster in your GY; add it to your hand. You can only use this effect of \"Whitefish Salvage\" once per turn. If this card in your possession is destroyed by an opponent's card effect and sent to your GY: Take 1 Fish monster from your Deck, and either add it to your hand or Special Summon it.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/whitefish-salvage-9146",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN099",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN098",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63509474,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63509474.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63509474.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63509474.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "White Salvation",
+          "views": 88310,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13548,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

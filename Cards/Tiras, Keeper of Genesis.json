@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 31386180,
+      "name": "Tiras, Keeper of Genesis",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 monsters\nThis card's effects can only be applied/resolved while it has Xyz Material. This card cannot be destroyed by card effects. At the end of the Battle Phase, if this card attacked or was attacked: Target 1 card your opponent controls; destroy that target. During each of your End Phases: Detach 1 Xyz Material from this card.",
+      "race": "Fairy",
+      "atk": 2600,
+      "def": 1700,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tiras-keeper-of-genesis-2661",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN029",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN094",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN094",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN044",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31386180,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31386180.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31386180.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31386180.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "1.95",
+          "amazon_price": "4.78",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 230610,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9661,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 88757791,
+      "name": "Dharma-Eye Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can reveal 1 Pendulum Monster in your hand, then target 1 \"Magician\" card in your Pendulum Zone; that target's Pendulum Scale becomes the same as the revealed Pendulum Monster's, until the end of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \nWhile this Pendulum Summoned card is on the field, \"Magician\" Pendulum Monsters you control cannot be destroyed by your opponent's card effects during the turn this card was Pendulum Summoned.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn: You can reveal 1 Pendulum Monster in your hand, then target 1 \"Magician\" card in your Pendulum Zone; that target's Pendulum Scale becomes the same as the revealed Pendulum Monster's, until the end of this turn (even if this card leaves the field).",
+      "monster_desc": "While this Pendulum Summoned card is on the field, \"Magician\" Pendulum Monsters you control cannot be destroyed by your opponent's card effects during the turn this card was Pendulum Summoned.",
+      "atk": 2000,
+      "def": 2500,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Magician",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dharma-eye-magician-7421",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN096",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88757791,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88757791.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88757791.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88757791.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53690,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-05-28",
+          "konami_id": 11933,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

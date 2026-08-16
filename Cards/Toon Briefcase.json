@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 5832914,
+      "name": "Toon Briefcase",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent Summons a monster(s) while you control a Toon monster: Shuffle that monster(s) into the Deck.",
+      "race": "Normal",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-briefcase-514",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.45"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5832914,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5832914.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5832914.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5832914.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "1.61",
+          "ebay_price": "2.94",
+          "amazon_price": "1.83",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 213516,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11906,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

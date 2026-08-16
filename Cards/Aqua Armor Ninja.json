@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 96427353,
+      "name": "Aqua Armor Ninja",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent's monster declares a direct attack, if you have another \"Ninja\" monster in your Graveyard: You can banish this card from your Graveyard to target the attacking monster; negate that attack.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aqua-armor-ninja-8024",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN017",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96427353,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96427353.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96427353.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96427353.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48340,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9889,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 92536468,
+      "name": "D/D/D Rebel King Leonidas",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen you take effect damage (except during the Damage Step): You can destroy this card, and if you do, any effect that would inflict damage to a player this turn increases their LP by the same amount, instead.\n\n[ Monster Effect ] \nWhen you take effect damage (except during the Damage Step): You can Special Summon this card from your hand, and if you do, gain LP equal to the damage you took. You take no effect damage.",
+      "race": "Fiend",
+      "pend_desc": "When you take effect damage (except during the Damage Step): You can destroy this card, and if you do, any effect that would inflict damage to a player this turn increases their LP by the same amount, instead.",
+      "monster_desc": "When you take effect damage (except during the Damage Step): You can Special Summon this card from your hand, and if you do, gain LP equal to the damage you took. You take no effect damage.",
+      "atk": 2600,
+      "def": 1200,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-rebel-king-leonidas-7707",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN173",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Tin: Dueling Heroes Mega Pack",
+          "set_code": "MP23-EN277",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN098",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92536468,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92536468.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92536468.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92536468.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.39",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103099,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2014-08-21",
+          "konami_id": 11460,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

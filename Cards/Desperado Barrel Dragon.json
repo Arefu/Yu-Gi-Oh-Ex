@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 76728962,
+      "name": "Desperado Barrel Dragon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up DARK Machine monster(s) you control is destroyed by battle or card effect: You can Special Summon this card from your hand. Once per turn, during the Battle Phase (Quick Effect): You can toss a coin 3 times; destroy face-up monsters on the field, up to the number of heads, then if the result was 3 heads, draw 1 card. This card cannot attack the turn this effect is activated. If this card is sent to the GY: You can add 1 Level 7 or lower monster that has a coin tossing effect, from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/desperado-barrel-dragon-8939",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.71"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN076",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76728962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76728962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76728962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76728962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "3.95",
+          "amazon_price": "5.84",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 208105,
+          "viewsweek": 0,
+          "upvotes": 32,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13473,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

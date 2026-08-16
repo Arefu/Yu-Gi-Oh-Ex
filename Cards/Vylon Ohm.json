@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 5237827,
+      "name": "Vylon Ohm",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Target 1 Equip Spell Card in your Graveyard; banish that target, and if you do, add it to your hand during your next Standby Phase.",
+      "race": "Fairy",
+      "atk": 1500,
+      "def": 200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-ohm-460",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN091",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5237827,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5237827.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5237827.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5237827.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43039,
+          "viewsweek": 63,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2010-06-21",
+          "konami_id": 9213,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

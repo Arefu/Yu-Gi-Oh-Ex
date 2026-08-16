@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 63223260,
+      "name": "Photon Satellite",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 other \"Photon\" monster you control; the Levels of both that monster and this card become the combined current Levels of those 2 monsters.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-satellite-5338",
+      "card_sets": [
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63223260,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63223260.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63223260.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63223260.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.00",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31219,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10334,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

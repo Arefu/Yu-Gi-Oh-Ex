@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 19159413,
+      "name": "De-Spell",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up Spell, or 1 Set Spell/Trap, on the field; destroy that target if it is a Spell. (If the target is Set, reveal it.)",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/de-spell-1653",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.05"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.94"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.96"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.97"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19159413,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19159413.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19159413.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19159413.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "2.70",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 268293,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4843,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

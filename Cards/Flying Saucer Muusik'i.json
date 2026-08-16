@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 97697678,
+      "name": "Flying Saucer Muusik'i",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is face-up on the field, you can select and add 1 \"Alien\" card from your Deck to your hand instead of conducting your normal draw during your Draw Phase.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 2000,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flying-saucer-muusik-i-8124",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97697678,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97697678.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97697678.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97697678.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48370,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6807,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

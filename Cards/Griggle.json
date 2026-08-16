@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 95744531,
+      "name": "Griggle",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When the control of this face-up card on the field shifts to your opponent, increase your Life Points by 3000 points. This effect can only be used once as long as this card remains face-up on the field.",
+      "race": "Plant",
+      "atk": 350,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/griggle-7974",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.57"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95744531,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95744531.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95744531.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95744531.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165817,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4553,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

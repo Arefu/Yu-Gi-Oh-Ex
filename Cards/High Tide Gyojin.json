@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 54579801,
+      "name": "High Tide Gyojin",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A very agile half-fish warrior known for its relentless attacks.",
+      "race": "Aqua",
+      "atk": 1650,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/high-tide-gyojin-4649",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.92"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54579801,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54579801.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54579801.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54579801.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 154021,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4630,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

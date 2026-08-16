@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 33782437,
+      "name": "One Day of Peace",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Each player draws 1 card, and neither player takes damage until the end of the opponent's next turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/one-day-of-peace-2868",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 33782437,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33782437.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33782437.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33782437.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.13",
+          "tcgplayer_price": "1.16",
+          "ebay_price": "2.69",
+          "amazon_price": "3.10",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1058978,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9778,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

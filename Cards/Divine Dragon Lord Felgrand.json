@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 60681103,
+      "name": "Divine Dragon Lord Felgrand",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned from the Graveyard: You can target 1 monster your opponent controls or in their Graveyard; banish it, and if you do, this card gains ATK and DEF equal to the banished monster's original Level/Rank x 100. If this card destroys an opponent's monster by battle: You can target 1 Level 7 or 8 Dragon-Type monster in the Graveyard, except \"Divine Dragon Lord Felgrand\"; Special Summon it to your field.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-dragon-lord-felgrand-5149",
+      "card_sets": [
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60681103,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60681103.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60681103.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60681103.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.58",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 232310,
+          "viewsweek": 0,
+          "upvotes": 35,
+          "downvotes": 9,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-07",
+          "ocg_date": "2016-02-06",
+          "konami_id": 12360,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

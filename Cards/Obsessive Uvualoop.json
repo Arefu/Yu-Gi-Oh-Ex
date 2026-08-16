@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 98806751,
+      "name": "Obsessive Uvualoop",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can target 1 Synchro Monster you control or in your GY; banish it, and if you do, Special Summon this card. If this card is in your GY: You can target 1 Synchro Monster you control or in your GY; banish it, and if you do, add this card to your hand. You can only use each effect of \"Obsessive Uvualoop\" once per turn.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/obsessive-uvualoop-10674",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.83"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98806751,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98806751.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98806751.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98806751.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "54.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Uvaloop of Obsession",
+          "views": 136057,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011028,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14837,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

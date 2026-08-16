@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 87990236,
+      "name": "Darklord Enchantment",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 \"Darklord\" monster from your hand or face-up field to the GY; take control of 1 face-up monster your opponent controls until the End Phase. You can only activate 1 \"Darklord Enchantment\" per turn.",
+      "race": "Normal",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-enchantment-7358",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN103",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN037",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.97"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN124",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87990236,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87990236.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87990236.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87990236.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.44",
+          "amazon_price": "1.32",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145674,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12731,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

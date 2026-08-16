@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 1357146,
+      "name": "Ronintoadin",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as a Synchro Material. This card's name becomes \"Des Frog\" while it is on the field. If this card is in your Graveyard: You can banish 1 \"Frog\" monster from your Graveyard; Special Summon this card.",
+      "race": "Aqua",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ronintoadin-116",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN236",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN236",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Freezing Chains",
+          "set_code": "SDFC-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.38"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 1357146,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1357146.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1357146.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1357146.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.95",
+          "amazon_price": "34.95",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 420106,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8809,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

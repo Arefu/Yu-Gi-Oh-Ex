@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 35629124,
+      "name": "Kidmodo Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard: You can Special Summon 1 Dragon-Type monster from your hand. You cannot Special Summon monsters, except Dragon-Type monsters, nor conduct your Battle Phase, the turn you activate this effect. You can only use this effect of \"Kidmodo Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 100,
+      "def": 200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kidmodo-dragon-3019",
+      "card_sets": [
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENK16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.73"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN094",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35629124,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35629124.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35629124.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35629124.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86323,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2012-12-22",
+          "konami_id": 10459,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

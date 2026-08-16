@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 56410040,
+      "name": "Junk Forward",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Special Summon this card (from your hand).",
+      "race": "Warrior",
+      "atk": 900,
+      "def": 1500,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-forward-4802",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.71"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.28"
+        },
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.29"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.06"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56410040,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56410040.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56410040.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56410040.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "0.99",
+          "amazon_price": "2.95",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 519210,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2011-03-12",
+          "konami_id": 9013,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 46132282,
+      "name": "Powered Inzektron",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nWhen this card is Synchro Summoned: This turn, this card cannot be destroyed by battle or by card effects, also you take no damage.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 1600,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/powered-inzektron-3932",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN087",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46132282,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46132282.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46132282.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46132282.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.30",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "2.48",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63759,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10991,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

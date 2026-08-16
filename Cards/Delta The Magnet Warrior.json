@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 12262393,
+      "name": "Delta The Magnet Warrior",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 Level 4 or lower \"Magnet Warrior\" monster from your Deck to the GY. If this card is sent to the GY: You can banish 3 Level 4 or lower \"Magnet Warrior\" monsters from your GY, except \"Delta The Magnet Warrior\"; Special Summon 1 \"Valkyrion the Magna Warrior\" from your hand or Deck, ignoring its Summoning conditions. You can only use each effect of \"Delta The Magnet Warrior\" once per turn.",
+      "race": "Rock",
+      "atk": 1600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Magnet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/delta-the-magnet-warrior-1059",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12262393,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12262393.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12262393.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12262393.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 147874,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-08-20",
+          "konami_id": 12735,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

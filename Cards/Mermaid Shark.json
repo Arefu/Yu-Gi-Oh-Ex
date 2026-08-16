@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 87047161,
+      "name": "Mermaid Shark",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can add 1 Level 3, 4 or 5 Fish-Type monster from your Deck to your hand.",
+      "race": "Fish",
+      "atk": 100,
+      "def": 300,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mermaid-shark-7288",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87047161,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87047161.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87047161.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87047161.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "1.35",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61415,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11034,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

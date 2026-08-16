@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 20785975,
+      "name": "Number C103: Ragnafinity",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; inflict damage to your opponent equal to the difference between that monster's original ATK and current ATK, and if you do, banish it. When this card is destroyed and sent to the Graveyard while it has Xyz Material: You can Special Summon this card from your Graveyard. \"Number 103: Ragnazero\" must be in your Graveyard to activate and to resolve this effect.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2400,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c103-ragnafinity-1787",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20785975,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20785975.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20785975.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20785975.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.76",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "1.29",
+          "amazon_price": "3.01",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C103",
+          "views": 131383,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11072,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

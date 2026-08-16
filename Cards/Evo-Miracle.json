@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 34026662,
+      "name": "Evo-Miracle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 monster that was Special Summoned by the effect of an \"Evoltile\" monster; this turn, it cannot be destroyed by battle or by card effects.",
+      "race": "Quick-Play",
+      "archetype": "Evoltile",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evo-miracle-2891",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34026662,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34026662.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34026662.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34026662.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24919,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9772,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

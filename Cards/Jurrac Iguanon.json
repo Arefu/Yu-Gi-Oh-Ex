@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 71106375,
+      "name": "Jurrac Iguanon",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card destroys an opponent's monster by battle, you can select 1 Set card your opponent controls, and return it to the hand.",
+      "race": "Dinosaur",
+      "atk": 1700,
+      "def": 700,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-iguanon-5975",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN014",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENC06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71106375,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71106375.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71106375.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71106375.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32264,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8239,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

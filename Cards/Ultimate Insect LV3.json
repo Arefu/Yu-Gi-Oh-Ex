@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 34088136,
+      "name": "Ultimate Insect LV3",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Special Summoned by the effect of \"Ultimate Insect LV1\", while it remains on the field all of your opponent's monsters lose 300 ATK. During your Standby Phase, by sending this face-up card to the Graveyard, Special Summon 1 \"Ultimate Insect LV5\" from your hand or Deck. (You cannot activate this effect the turn this card is Normal Summoned, Special Summoned, or flipped face-up.)",
+      "race": "Insect",
+      "atk": 1400,
+      "def": 900,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-insect-lv3-2895",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN007",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34088136,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34088136.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34088136.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34088136.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.89",
+          "amazon_price": "11.98",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68104,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6178,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

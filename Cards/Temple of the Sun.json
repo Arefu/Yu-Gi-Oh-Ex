@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 91468551,
+      "name": "Temple of the Sun",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Face-up monsters you control that were Special Summoned from the Graveyard gain 300 ATK.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/temple-of-the-sun-7627",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91468551,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91468551.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91468551.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91468551.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26601,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8661,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 28776350,
+      "name": "Akashic Magician",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with the same Type, except Tokens\r\nYou can only Link Summon \"Akashic Magician(s)\" once per turn. If this card is Link Summoned: Return all monsters this card points to to the hand. Once per turn: You can declare 1 card name; excavate cards from the top of your Deck, equal to the total Link Rating of the Link Monsters co-linked to this card, then if you excavated any copies of the declared card, add them to your hand, also send the remaining cards to the GY.",
+      "race": "Spellcaster",
+      "atk": 1700,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/akashic-magician-8726",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28776350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28776350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28776350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28776350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "3.99",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 431604,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13267,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

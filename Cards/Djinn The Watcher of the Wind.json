@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 97843505,
+      "name": "Djinn the Watcher of the Wind",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''This creature generates gale-force winds and tornadoes to blow its enemies away.''",
+      "race": "Spellcaster",
+      "atk": 700,
+      "def": 900,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/djinn-the-watcher-of-the-wind-8134",
+      "card_images": [
+        {
+          "id": 97843505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97843505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97843505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97843505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.00",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "10.68",
+          "amazon_price": "7.60",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14339,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "1999-03-01",
+          "konami_id": 4150,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

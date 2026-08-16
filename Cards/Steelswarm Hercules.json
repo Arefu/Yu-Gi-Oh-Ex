@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 94092230,
+      "name": "Steelswarm Hercules",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. Requires 3 \"Steelswarm\" Tributes to Normal Summon (cannot be Normal Set). Once per turn: You can pay half your Life Points; destroy all other cards on the field.",
+      "race": "Fiend",
+      "atk": 3200,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-hercules-7828",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN032",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94092230,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94092230.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94092230.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94092230.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.13",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.50",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25088,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9388,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

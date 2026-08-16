@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 63731062,
+      "name": "White Aura Monoceros",
+      "typeline": [
+        "Fish",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 WATER Tuner + 1+ non-Tuner monsters\r\nWhen this card is Synchro Summoned: You can target 1 Fish monster in your GY; Special Summon it, but it cannot attack this turn. You can only use this effect of \"White Aura Monoceros\" once per turn. If this card you control is destroyed by your opponent's card and sent to your GY: You can banish 1 other WATER monster from your GY; Special Summon this card, and if you do, it is treated as a Tuner.",
+      "race": "Fish",
+      "atk": 2500,
+      "def": 1500,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "White",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-aura-monoceros-9144",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN142",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63731062,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63731062.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63731062.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63731062.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "White Aura Monokeros",
+          "views": 162532,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13545,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

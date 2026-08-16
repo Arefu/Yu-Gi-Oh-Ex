@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 63233638,
+      "name": "Megalith Phaleg",
+      "typeline": [
+        "Rock",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with a \"Megalith\" card. You can discard this card; Ritual Summon 1 \"Megalith\" Ritual Monster from your hand, by Tributing monsters from your hand or field whose total Levels equal or exceed its Level. You can only use this effect of \"Megalith Phaleg\" once per turn. Monsters you control gain 300 ATK/DEF for each Ritual Monster in your GY.",
+      "race": "Rock",
+      "atk": 2500,
+      "def": 1200,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-phaleg-10628",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63233638,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63233638.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63233638.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63233638.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131606,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011038,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14847,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

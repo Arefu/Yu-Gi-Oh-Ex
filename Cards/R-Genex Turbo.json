@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6256844,
+      "name": "R-Genex Turbo",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, you can add 1 Level 1 \"Genex\" monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/r-genex-turbo-548",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN021",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6256844,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6256844.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6256844.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6256844.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "1.09",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34141,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8246,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

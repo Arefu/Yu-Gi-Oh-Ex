@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 54895237,
+      "name": "The Weather Painter Sun",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your GY: You can send 1 face-up Continuous Spell/Trap you control to the GY; Special Summon this card in Defense Position, and if you do, place 1 \"The Weather\" Spell/Trap from your hand face-up in your Spell & Trap Zone. You can only use this effect of \"The Weather Painter Sun\" once per turn. Once per turn, during the Standby Phase of the turn after this card was banished from the field to activate a \"The Weather\" card's effect: You can Special Summon this banished card.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": 400,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "The Weather",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-painter-sun-8801",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN032",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54895237,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54895237.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54895237.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54895237.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.81",
+          "tcgplayer_price": "1.46",
+          "ebay_price": "3.09",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sunny Weathery Bengala",
+          "views": 74394,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13331,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

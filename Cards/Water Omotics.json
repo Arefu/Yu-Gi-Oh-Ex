@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 2483611,
+      "name": "Water Omotics",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Transforms the water overflowing from a jar into attacking dragons.",
+      "race": "Aqua",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/water-omotics-225",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.41"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2483611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2483611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2483611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2483611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "9.60",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 183266,
+          "viewsweek": 0,
+          "upvotes": 26,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4255,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 71829750,
+      "name": "Serpentine Princess",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this face-up card is returned from the field to your Deck, select and Special Summon 1 Level 3 or lower monster from your Deck to your side of the field. Then shuffle your Deck.",
+      "race": "Reptile",
+      "atk": 1400,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/serpentine-princess-6033",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN167",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71829750,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71829750.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71829750.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71829750.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138058,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5025,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 92890308,
+      "name": "Morphtransition",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when a face-up \"Morphtronic\" monster you control is selected as an attack target. Negate the attack, and change the battle position of the selected \"Morphtronic\" monster.",
+      "race": "Normal",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtransition-7732",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN043",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "2.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92890308,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92890308.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92890308.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92890308.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35390,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7926,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

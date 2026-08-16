@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 42874792,
+      "name": "Wind-Up Rabbit",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can target 1 \"Wind-Up\" monster you control; banish it until your next Standby Phase. This effect can be used only once while this card is face-up on the field.",
+      "race": "Beast-Warrior",
+      "atk": 1400,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-rabbit-3656",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2012 Wave 1",
+          "set_code": "CT09-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.71"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42874792,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42874792.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42874792.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42874792.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45627,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9866,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

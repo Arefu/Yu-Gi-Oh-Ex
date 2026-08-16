@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 95040215,
+      "name": "Blackwing - Nothung the Starlight",
+      "typeline": [
+        "Winged Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\r\nIf this card is Special Summoned: Inflict 800 damage to your opponent, then 1 face-up monster your opponent controls loses 800 ATK and DEF. You can only use this effect of \"Blackwing - Nothung the Starlight\" once per turn. During your Main Phase, you can Normal Summon 1 \"Blackwing\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": 1600,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-nothung-the-starlight-7911",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENC31",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.98"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN013",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "3.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95040215,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95040215.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95040215.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95040215.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "3.74",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 260088,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11649,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

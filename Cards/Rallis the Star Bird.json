@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 41382147,
+      "name": "Rallis the Star Bird",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains ATK equal to the Level of the monster that it battles x 200 during the Damage Step only. If this card attacks, it is removed from play at the end of the Damage Step and returned to your side of the field in face-up Attack Position at the beginning of your next turn's Battle Phase.",
+      "race": "Winged Beast",
+      "atk": 800,
+      "def": 800,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rallis-the-star-bird-3531",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41382147,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41382147.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41382147.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41382147.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38423,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6778,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

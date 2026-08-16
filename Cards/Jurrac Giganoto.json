@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 80032567,
+      "name": "Jurrac Giganoto",
+      "typeline": [
+        "Dinosaur",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner Dinosaur-Type monsters\nAll face-up \"Jurrac\" monsters you control gain 200 ATK for each \"Jurrac\" monster in your Graveyard.",
+      "race": "Dinosaur",
+      "atk": 2100,
+      "def": 1800,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-giganoto-6709",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN148",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN087",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN057",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80032567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80032567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80032567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80032567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "10.00",
+          "amazon_price": "13.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56498,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8118,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

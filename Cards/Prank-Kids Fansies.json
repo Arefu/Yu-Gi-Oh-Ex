@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 81119816,
+      "name": "Prank-Kids Fansies",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY as material for the Fusion or Link Summon of a \"Prank-Kids\" monster: You can send 1 \"Prank-Kids\" card from your Deck to the GY, except \"Prank-Kids Fansies\", then you can Special Summon 1 \"Prank-Kids\" monster from your hand or Deck in Defense Position, except \"Prank-Kids Fansies\". You can only use this effect of \"Prank-Kids Fansies\" once per turn.",
+      "race": "Thunder",
+      "atk": 0,
+      "def": 2000,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Prank-Kids",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-fansies-9709",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN109",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81119816,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81119816.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81119816.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81119816.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.70",
+          "amazon_price": "0.58",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids Pulse",
+          "views": 223844,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14022,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

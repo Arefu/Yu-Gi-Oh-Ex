@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 38280762,
+      "name": "Enishi, Shien's Chancellor",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 2 \"Six Samurai\" monsters from your GY. Once per turn: You can target 1 face-up monster; destroy that target. This card cannot attack the turn this effect is activated.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 1200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/enishi-shien-s-chancellor-3245",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 3 participation cards",
+          "set_code": "DL12-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.44"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN032",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN241",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38280762,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38280762.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38280762.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38280762.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "8.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84036,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7297,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

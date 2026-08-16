@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 65357623,
+      "name": "Zombie Power Struggle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Zombie monster on the field; until the end of this turn, it gains 1000 ATK or loses 1000 ATK. During your Main Phase, if this card is in your GY: You can shuffle 1 of your banished Zombie monsters into the Deck, and if you do, Set this card, but banish it when it leaves the field. You can only use this effect of \"Zombie Power Struggle\" once per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zombie-power-struggle-9826",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65357623,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65357623.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65357623.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65357623.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zombie Struggle",
+          "views": 76309,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-01",
+          "ocg_date": "2018-09-22",
+          "konami_id": 14060,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 23424603,
+      "name": "Wasteland",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Dinosaur, Zombie, and Rock monsters on the field gain 200 ATK/DEF.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wasteland-2020",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.27"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23424603,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23424603.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23424603.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23424603.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 421646,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4337,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

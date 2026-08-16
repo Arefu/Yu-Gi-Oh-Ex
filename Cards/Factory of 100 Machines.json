@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 7030340,
+      "name": "Factory of 100 Machines",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Remove from play all \"Morphtronic\" monsters from your Graveyard. Target face-up Machine-Type monster you control gains 200 ATK for each card removed, until the End Phase.",
+      "race": "Quick-Play",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/factory-of-100-machines-603",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7030340,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7030340.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7030340.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7030340.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44368,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7905,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

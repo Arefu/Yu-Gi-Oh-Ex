@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 15083304,
+      "name": "Danger! Zone",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Draw 3 cards, then discard 2 cards including at least 1 \"Danger!\" card, or, if you have no \"Danger!\" cards in your hand, show your entire hand and shuffle it into the Deck. You can only activate 1 \"Danger! Zone\" per turn.",
+      "race": "Normal",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-zone-9633",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15083304,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15083304.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15083304.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15083304.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.82",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "2.95",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66287,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13983,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

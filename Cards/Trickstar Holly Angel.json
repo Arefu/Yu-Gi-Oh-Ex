@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 32448765,
+      "name": "Trickstar Holly Angel",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Trickstar\" monsters\r\nEach time a \"Trickstar\" monster(s) is Normal or Special Summoned to a zone(s) this card points to, inflict 200 damage to your opponent. \"Trickstar\" monsters this card points to cannot be destroyed by battle or card effects. If your opponent takes damage by a \"Trickstar\" monster's effect: This card gains ATK equal to the damage they took, until the end of this turn.",
+      "race": "Fairy",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-holly-angel-8736",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN063",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32448765,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32448765.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32448765.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32448765.jpg"
+        },
+        {
+          "id": 32448766,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32448766.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32448766.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32448766.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 208261,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Trickstar Holly Angel",
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13083,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

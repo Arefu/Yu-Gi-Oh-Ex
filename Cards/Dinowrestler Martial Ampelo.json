@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 54446813,
+      "name": "Dinowrestler Martial Ampelo",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your other \"Dinowrestler\" monster battles an opponent's monster with an equal or higher ATK (Quick Effect): You can send this card from your hand or field to the GY; for that battle, your monster cannot be destroyed and the battle damage you take is halved. When an opponent's monster declares an attack: You can banish this card from your GY; add 1 \"Dinowrestler\" monster from your Deck to your hand, except \"Dinowrestler Martial Ampelo\". You can only use this effect of \"Dinowrestler Martial Ampelo\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 600,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-martial-ampelo-10482",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN150",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54446813,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54446813.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54446813.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54446813.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53079,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010006,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14633,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

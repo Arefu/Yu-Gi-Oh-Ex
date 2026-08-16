@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 65623423,
+      "name": "Gruesome Goo",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A slime boss that is definitely tougher than it looks.",
+      "race": "Aqua",
+      "atk": 1300,
+      "def": 700,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Slime",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gruesome-goo-5530",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN015",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "7.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65623423,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65623423.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65623423.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65623423.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.35",
+          "tcgplayer_price": "12.58",
+          "ebay_price": "11.00",
+          "amazon_price": "8.38",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17046,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-12-05",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4652,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

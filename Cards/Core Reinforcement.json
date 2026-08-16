@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 8057630,
+      "name": "Core Reinforcement",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Select and Special Summon 1 \"Koa'ki Meiru\" monster from your Graveyard in Attack Position. When that monster is destroyed during your End Phase, the controller of this card takes damage equal to that monster's ATK. When this card is removed from the field, destroy that monster. When that monster is destroyed, destroy this card.",
+      "race": "Continuous",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/core-reinforcement-683",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8057630,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8057630.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8057630.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8057630.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28425,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8363,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

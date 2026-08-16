@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 80949182,
+      "name": "Battlewasp - Hama the Conquering Bow",
+      "typeline": [
+        "Insect",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card was Synchro Summoned using a Synchro Monster as material, it can make a second attack during each Battle Phase. You can only use each of the following effects of \"Battlewasp - Hama the Conquering Bow\" once per turn.\r\n● When this card inflicts battle damage to your opponent: You can make all monsters your opponent currently controls lose 1000 ATK/DEF.\r\n● At the end of your Battle Phase, if your opponent has not taken any battle damage this Phase: You can inflict 300 damage to your opponent for each \"Battlewasp\" monster in your GY.",
+      "race": "Insect",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlewasp-hama-the-conquering-bow-10204",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80949182,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80949182.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80949182.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80949182.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "1.29",
+          "amazon_price": "0.81",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73795,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248041,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14574,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

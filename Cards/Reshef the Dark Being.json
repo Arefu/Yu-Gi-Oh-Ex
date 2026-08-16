@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 62420419,
+      "name": "Reshef the Dark Being",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Final Ritual of the Ancients\". Once per turn, by discarding 1 Spell Card from your hand, take control of 1 monster on your opponent's side of the field until the end of this turn.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1500,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reshef-the-dark-being-5277",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN213",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62420419,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62420419.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62420419.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62420419.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.54",
+          "tcgplayer_price": "13.81",
+          "ebay_price": "15.99",
+          "amazon_price": "12.00",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80930,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6342,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

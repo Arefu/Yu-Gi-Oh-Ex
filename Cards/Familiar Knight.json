@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 89731911,
+      "name": "Familiar Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard: Each player can Special Summon 1 Level 4 monster from their hand.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 1400,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/familiar-knight-7498",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Exclusive Pack",
+          "set_code": "EP1-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89731911,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89731911.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89731911.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89731911.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.35",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44833,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-07-25",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6083,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 31755044,
+      "name": "Zoodiac Whiptail",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can target 1 Beast-Warrior Xyz Monster you control; attach this card from your hand or field to it as material. An Xyz Monster whose original Type is Beast-Warrior and has this card as material gains this effect.\r\n● If this card battles an opponent's monster, after damage calculation: Banish that opponent's monster.",
+      "race": "Beast-Warrior",
+      "atk": 1200,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-whiptail-2692",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN183",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31755044,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31755044.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31755044.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31755044.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "1.44",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zoodiac Viper",
+          "views": 248152,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12751,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

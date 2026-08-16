@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 41722932,
+      "name": "Dark Mambele",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control 3 or more DARK monsters: Target 1 face-up card on the field; banish that target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-mambele-3563",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41722932,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41722932.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41722932.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41722932.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31033,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9932,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

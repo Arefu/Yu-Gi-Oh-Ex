@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 56119752,
+      "name": "Present Card",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Your opponent discards their entire hand, then draws 5 cards. You can only activate 1 \"Present Card\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/present-card-4781",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56119752,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56119752.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56119752.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56119752.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "1.95",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 202315,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12670,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

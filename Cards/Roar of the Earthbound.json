@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 56339050,
+      "name": "Roar of the Earthbound Immortal",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, if an opponent's monster declares an attack: Target the attacking monster; destroy that target, and if you do, inflict damage to your opponent equal to half the destroyed monster's ATK. You must control an \"Earthbound Immortal\" monster with ATK higher than the ATK of the attacking monster to activate and to resolve this effect.",
+      "race": "Continuous",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/roar-of-the-earthbound-immortal-4795",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN159",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56339050,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56339050.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56339050.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56339050.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Roar of the Earthbound",
+          "views": 50922,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8506,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

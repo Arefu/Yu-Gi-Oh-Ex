@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 83602069,
+      "name": "Comrade Swordsman of Landstar",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "All Warrior-Type monsters you control gain 400 ATK.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/comrade-swordsman-of-landstar-7016",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83602069,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83602069.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83602069.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83602069.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.99",
+          "amazon_price": "1.35",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90866,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7895,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

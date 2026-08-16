@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 9418534,
+      "name": "Jinzo - Returner",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack your opponent directly. When this card is sent to the Graveyard, you can Special Summon 1 \"Jinzo\" from your Graveyard. Destroy it during your End Phase.",
+      "race": "Machine",
+      "atk": 600,
+      "def": 1400,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Jinzo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jinzo-returner-801",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENE03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9418534,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9418534.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9418534.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9418534.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101542,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7579,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

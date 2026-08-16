@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 59197169,
+      "name": "Yami",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Fiend and Spellcaster monsters on the field gain 200 ATK/DEF, also all Fairy monsters on the field lose 200 ATK/DEF.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yami-5032",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.07"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENC13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59197169,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59197169.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59197169.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59197169.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "4.99",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 485929,
+          "viewsweek": 42,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4341,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

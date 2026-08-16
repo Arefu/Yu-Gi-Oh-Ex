@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 92667214,
+      "name": "Clown Zombie",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A clown revived by the powers of darkness. Its deadly dance has sent many monsters to their graves.",
+      "race": "Zombie",
+      "atk": 1350,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clown-zombie-7713",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Tournament Pack 6",
+          "set_code": "TP6-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92667214,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92667214.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92667214.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92667214.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "2.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75312,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-06-01",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4104,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

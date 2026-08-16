@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 92781606,
+      "name": "X-Krawler Qualiark",
+      "typeline": [
+        "Insect",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Krawler\" monsters\r\nIf this face-up card is destroyed by battle, or leaves the field because of an opponent's card effect while its owner controls it: You can target 2 \"Krawler\" monsters with different names in your GY; Special Summon them in face-down Defense Position. Apply these effects based on the number of \"Krawler\" monsters you control.\r\n● 2+: All monsters you control gain 300 ATK/DEF.\r\n● 4+: Your opponent's cards and effects cannot be activated during the Battle Phase.\r\n● 6+: Your monsters can attack directly.",
+      "race": "Insect",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Krawler",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/x-krawler-qualiark-8630",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92781606,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92781606.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92781606.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92781606.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.39",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Excrawler Qualiark",
+          "views": 73869,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13266,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

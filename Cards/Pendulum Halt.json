@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 36111775,
+      "name": "Pendulum Halt",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you have 3 or more face-up Pendulum Monsters with different names in your Extra Deck: Draw 2 cards. You cannot add cards from the Deck to your hand for the rest of this turn after this card resolves.",
+      "race": "Normal",
+      "archetype": "Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-halt-9176",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN098",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36111775,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36111775.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36111775.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36111775.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96131,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13547,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

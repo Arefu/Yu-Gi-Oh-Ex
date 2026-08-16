@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 12307878,
+      "name": "Invoked Purgatrio",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Aleister the Invoker\" + 1 FIRE monster\r\nThis card gains 200 ATK for each card your opponent controls. This card can attack all monsters your opponent controls, once each. If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Fiend",
+      "atk": 2300,
+      "def": 2000,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Invoked",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/invoked-purgatrio-1064",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12307878,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12307878.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12307878.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12307878.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.99",
+          "amazon_price": "2.40",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Purgatorio the Eidolon Beast",
+          "views": 564996,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12847,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

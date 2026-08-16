@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 19974580,
+      "name": "Iron Chain Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nYou can remove from play all \"Iron Chain\" monsters from your Graveyard to have this card gain 200 ATK for each card removed, until the End Phase. When this card inflicts Battle Damage to your opponent, send the top 3 cards of your opponent's Deck to the Graveyard.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 1300,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Iron Chain",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/iron-chain-dragon-1714",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19974580,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19974580.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19974580.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19974580.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.71",
+          "tcgplayer_price": "6.88",
+          "ebay_price": "6.50",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 343216,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7899,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

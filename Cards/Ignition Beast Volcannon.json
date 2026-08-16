@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 10365322,
+      "name": "Ignition Beast Volcannon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Machine-Type monster + 1 Pyro-Type monster\nWhen this card is Fusion Summoned: You can target 1 monster your opponent controls; destroy that target, also destroy this card, then if both monsters were destroyed, inflict damage to your opponent equal to the ATK of the monster in the Graveyard that was targeted by this effect.",
+      "race": "Machine",
+      "atk": 2300,
+      "def": 1600,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ignition-beast-volcannon-895",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10365322,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10365322.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10365322.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10365322.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42680,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2010-05-21",
+          "konami_id": 9195,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 72129804,
+      "name": "Predaplast",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Reveal any number of \"Predap\" cards in your hand, then target that number of face-up monsters your opponent controls; place 1 Predator Counter on each one, and if you do, any of those monsters that are Level 2 or higher become Level 1 as long as they have a Predator Counter. If your \"Predaplant\" monster would be destroyed by battle, you can banish this card from your GY instead.",
+      "race": "Quick-Play",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplast-6051",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN231",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN069",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.93"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72129804,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72129804.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72129804.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72129804.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Predator Blast",
+          "views": 129306,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12858,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

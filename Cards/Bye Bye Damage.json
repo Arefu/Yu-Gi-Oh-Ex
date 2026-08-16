@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 20735371,
+      "name": "Bye Bye Damage",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During damage calculation, if your monster is attacked: Your battling monster cannot be destroyed by that battle, also if you take battle damage from that battle, your opponent takes effect damage equal to double that amount. You can only apply this effect of \"Bye Bye Damage\" once per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bye-bye-damage-10007",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN202",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20735371,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20735371.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20735371.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20735371.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65875,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14349,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

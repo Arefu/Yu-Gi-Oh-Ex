@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 88753594,
+      "name": "Lunalight Sabre Dancer",
+      "typeline": [
+        "Beast-Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 \"Lunalight\" monsters\r\nMust be Fusion Summoned. Gains 200 ATK for each Beast-Warrior monster that is banished or in the GYs. Your opponent cannot target this card with card effects. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 Fusion Monster you control; it gains 3000 ATK until the end of this turn. You can only use this effect of \"Lunalight Sabre Dancer\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 3000,
+      "def": 2600,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Lunalight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-sabre-dancer-9903",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL33",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.53"
+        },
+        {
+          "set_name": "OTS Tournament Pack 28",
+          "set_code": "OP28-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88753594,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88753594.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88753594.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88753594.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "4.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 202540,
+          "viewsweek": 63,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14185,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

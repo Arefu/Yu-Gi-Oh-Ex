@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 66403530,
+      "name": "Topologic Zeroboros",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\r\nYou cannot Summon/Set monsters to any Extra Monster Zone this card points to. Gains 200 ATK for each banished card. If another monster is Special Summoned to a zone a Link Monster points to, while this monster is on the field: Banish all cards on the field. Once per turn, during the Standby Phase of the next turn after this card was banished by its own effect: Special Summon this banished card.",
+      "race": "Cyberse",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top-Left",
+        "Top-Right",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/topologic-zeroboros-10318",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN091",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66403530,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66403530.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66403530.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66403530.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.59",
+          "amazon_price": "0.77",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Topologic Zerovoros",
+          "views": 574639,
+          "viewsweek": 21,
+          "upvotes": 26,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100336041,
+          "tcg_date": "2019-08-15",
+          "ocg_date": "2019-06-22",
+          "konami_id": 14624,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

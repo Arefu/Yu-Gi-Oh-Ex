@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 31557782,
+      "name": "Ancient Gear",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an \"Ancient Gear\", you can Special Summon this card (from your hand) in face-up Attack Position.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 800,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-2682",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.27"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31557782,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31557782.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31557782.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31557782.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "3.99",
+          "amazon_price": "49.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117928,
+          "viewsweek": 42,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6570,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

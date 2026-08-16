@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 79126789,
+      "name": "Broww, Huntsman of Dark World",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is discarded to the Graveyard by a card effect: Draw 1 card, plus another card if this card was discarded from your hand to your Graveyard by an opponent's card effect.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/broww-huntsman-of-dark-world-6642",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "30"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN021",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN021",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.46"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN243",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79126789,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79126789.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79126789.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79126789.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "33.99",
+          "amazon_price": "5.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 593738,
+          "viewsweek": 23,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6502,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

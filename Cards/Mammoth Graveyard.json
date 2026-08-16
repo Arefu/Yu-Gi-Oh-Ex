@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 40374923,
+      "name": "Mammoth Graveyard",
+      "typeline": [
+        "Dinosaur",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mammoth that protects the graves of its pack and is absolutely merciless when facing grave-robbers.",
+      "race": "Dinosaur",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mammoth-graveyard-3430",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.94"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E104",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "11.25"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.34"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40374923,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40374923.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40374923.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40374923.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 329154,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4065,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

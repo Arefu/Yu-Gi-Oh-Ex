@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 9409625,
+      "name": "Empty Machine",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "The first time this face-up card on the field would be destroyed by an opponent's card effect, it is not destroyed. Once per turn, you can activate 1 of these effects.\n● Discard 1 Level 10 monster; draw 1 card.\n● If this is the only card in your Spell & Trap Zone: Target 1 \"Timelord\" monster in your GY; shuffle it into the Deck, then, you can Set 1 \"Infinite Machine\" directly from your hand or Deck.",
+      "race": "Continuous",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/empty-machine-9478",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9409625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9409625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9409625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9409625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.42",
+          "tcgplayer_price": "2.36",
+          "ebay_price": "12.00",
+          "amazon_price": "6.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Nonexistence",
+          "views": 124349,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13820,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

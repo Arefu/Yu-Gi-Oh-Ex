@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 87557188,
+      "name": "The Stern Mystic",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Reveal all face-down cards on the field (Flip Effects are not activated), then return them to their original positions.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-stern-mystic-7326",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENA06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87557188,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87557188.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87557188.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87557188.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.93",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34709,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4879,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

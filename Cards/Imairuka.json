@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 41952656,
+      "name": "Imairuka",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card you control is destroyed by your opponent's card and sent to your GY: Send the top card of your Deck to the GY, then, if it is a WATER monster, draw 1 card.",
+      "race": "Sea Serpent",
+      "atk": 1000,
+      "def": 1000,
+      "level": 2,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/imairuka-3579",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41952656,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41952656.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41952656.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41952656.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.09",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22277,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10315,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 7194917,
+      "name": "Number 52: Diamond Crab King",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; change this card's DEF to 0, and if you do, change its ATK to 3000. These changes last until the end of this turn. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. If this card is attacked, change it to Attack Position at the end of the Damage Step if it has no Xyz Materials. You can only control 1 \"Number 52: Diamond Crab King\".",
+      "race": "Rock",
+      "atk": 0,
+      "def": 3000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-52-diamond-crab-king-618",
+      "card_sets": [
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 6 promotional card",
+          "set_code": "YZ06-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "22.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7194917,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7194917.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7194917.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7194917.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.30",
+          "tcgplayer_price": "7.13",
+          "ebay_price": "6.95",
+          "amazon_price": "4.68",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 52",
+          "views": 90738,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-03",
+          "ocg_date": "2014-02-04",
+          "konami_id": 11122,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

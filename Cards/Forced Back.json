@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 43340443,
+      "name": "Forced Back",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Negate the Normal Summon or Flip Summon of a monster and return it to its owner's hand.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/forced-back-3692",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN240",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.4"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN060",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43340443,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43340443.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43340443.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43340443.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.85",
+          "ebay_price": "9.99",
+          "amazon_price": "2.30",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77118,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6712,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

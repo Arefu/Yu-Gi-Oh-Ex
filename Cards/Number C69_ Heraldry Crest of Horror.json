@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 11522979,
+      "name": "Number C69: Heraldry Crest of Horror",
+      "typeline": [
+        "Psychic",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 5 monsters\nWhen an opponent's monster declares an attack: You can destroy all cards your opponent controls. If this card has \"Number 69: Heraldry Crest\" as an Xyz Material, it gains this effect.\n● Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up Xyz Monster your opponent controls; this card gains ATK equal to that face-up monster's original ATK, and if it gains ATK this way, this card's name becomes that monster's, and it gains that monster's original effect. These effects last until the End Phase.",
+      "race": "Psychic",
+      "atk": 4000,
+      "def": 1800,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Heraldry",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c69-heraldry-crest-of-horror-998",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11522979,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11522979.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11522979.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11522979.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.68",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "1.80",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C69",
+          "views": 68311,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10935,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 89355716,
+      "name": "The Weather Sunny Canvas",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "\"The Weather\" Effect Monsters in your Main Monster Zones of this card's column and its adjacent columns gain this effect.\r\n● You can banish this card, then target 1 monster you control (Quick Effect); Tribute that target, and if you do, Special Summon 1 \"The Weather\" monster from your hand or GY, but not with the same name the Tributed monster had on the field.\r\nYou can only control 1 \"The Weather Sunny Canvas\".",
+      "race": "Continuous",
+      "archetype": "The Weather",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-sunny-canvas-8795",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89355716,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89355716.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89355716.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89355716.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.25",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sunny Weathery Pattern",
+          "views": 29321,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13338,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

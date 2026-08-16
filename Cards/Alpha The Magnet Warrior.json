@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 99785935,
+      "name": "Alpha The Magnet Warrior",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''Alpha, Beta, and Gamma meld as one to form a powerful monster.''",
+      "race": "Rock",
+      "atk": 1400,
+      "def": 1700,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Magnet Warrior",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alpha-the-magnet-warrior-8284",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Duelists of the Roses promotional cards",
+          "set_code": "DOR-001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "8.32"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Duelists of the Roses promotional cards",
+          "set_code": "DOR-E001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "13.57"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99785935,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99785935.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99785935.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99785935.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.95",
+          "amazon_price": "9.93",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Alpha the Magnet Warrior",
+          "views": 235119,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-02-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4744,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

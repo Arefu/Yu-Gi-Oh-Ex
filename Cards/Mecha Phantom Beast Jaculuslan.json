@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 26949946,
+      "name": "Mecha Phantom Beast Jaculuslan",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Mecha Phantom Beast\" Tuner + 1 or more non-Tuner \"Mecha Phantom Beast\" monsters\nWhen this card is Synchro Summoned: You can Tribute \"Mecha Phantom Beast Tokens\" up to the number of cards in your opponent's hand; randomly discard cards from your opponent's hand, equal to the number of Tributed monsters. Other \"Mecha Phantom Beast\" monsters you control cannot be destroyed by battle or card effects. If this card in its owner's possession is destroyed by your opponent (by battle or card effect): You can Set 1 Quick-Play Spell Card directly from your Deck.",
+      "race": "Machine",
+      "atk": 2700,
+      "def": 2000,
+      "level": 9,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-jaculuslan-2307",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN034",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26949946,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26949946.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26949946.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26949946.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47226,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11421,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

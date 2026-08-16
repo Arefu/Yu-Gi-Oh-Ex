@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 53624265,
+      "name": "Unchained Twins - Rakea",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can target 1 card you control; destroy it, also you cannot Special Summon monsters for the rest of this turn, except Fiend monsters. If this card on the field is destroyed by card effect, except \"Unchained Twins - Rakea\", or by battle: You can Special Summon 1 \"Unchained\" monster from your hand or Deck, except \"Unchained Twins - Rakea\". You can only use each effect of \"Unchained Twins - Rakea\" once per turn.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Unchained",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unchained-twins-rakea-10402",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN153",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53624265,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53624265.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53624265.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53624265.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "0.99",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakai Douji Rakia",
+          "views": 383098,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010009,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14636,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

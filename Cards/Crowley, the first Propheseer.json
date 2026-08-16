@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 50756327,
+      "name": "Crowley, the First Propheseer",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Spellcaster monsters\r\nIf this card is Link Summoned: You can reveal 3 \"Spellbook\" cards with different names from your Deck, and your opponent randomly picks 1 for you to add to your hand, also shuffle the rest into your Deck. You can only use this effect of \"Crowley, the First Propheseer\" once per turn. Each turn, 1 Level 5 or higher Spellcaster monster you Normal Summon can be Summoned without Tributing.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Spellbook",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crowley-the-first-propheseer-9105",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50756327,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50756327.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50756327.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50756327.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.83",
+          "tcgplayer_price": "1.01",
+          "ebay_price": "2.75",
+          "amazon_price": "1.88",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Crowley the Origin of Prophecy",
+          "views": 238675,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13497,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

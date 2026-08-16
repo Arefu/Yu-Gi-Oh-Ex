@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 98446407,
+      "name": "Hand of Nephthys",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card and 1 other monster; Special Summon 1 \"Sacred Phoenix of Nephthys\" from your hand or Deck.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 600,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Nephthys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hand-of-nephthys-8182",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Four",
+          "set_code": "CP04-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN126",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN010",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN260",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98446407,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98446407.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98446407.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98446407.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 225074,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6237,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

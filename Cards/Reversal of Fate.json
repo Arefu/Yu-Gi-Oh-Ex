@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 36690018,
+      "name": "Reversal of Fate",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 \"Arcana Force\" monster you control. That monster's effect is now treated as the opposite coin toss result.",
+      "race": "Normal",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reversal-of-fate-3102",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36690018,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36690018.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36690018.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36690018.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51965,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7640,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

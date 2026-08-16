@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 89609515,
+      "name": "Laval Phlogis",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent to the Graveyard: All \"Laval\" monsters you currently control gain 300 ATK.",
+      "race": "Pyro",
+      "atk": 1700,
+      "def": 800,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-phlogis-7482",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN015",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89609515,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89609515.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89609515.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89609515.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15659,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9804,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

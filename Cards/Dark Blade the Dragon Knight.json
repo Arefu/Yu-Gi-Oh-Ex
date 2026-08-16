@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 86805855,
+      "name": "Dark Blade the Dragon Knight",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Dark Blade\" + \"Pitch-Dark Dragon\"\nEach time this card inflicts Battle Damage to your opponent, you can select up to 3 Monster Cards from your opponent's Graveyard and remove them from play.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 1500,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-blade-the-dragon-knight-7267",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN035",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86805855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86805855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86805855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86805855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.05",
+          "tcgplayer_price": "3.75",
+          "ebay_price": "9.99",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 370808,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6204,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

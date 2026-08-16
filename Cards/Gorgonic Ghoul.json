@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 90764875,
+      "name": "Gorgonic Ghoul",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Gorgonic Ghoul\": You can pay 300 LP; Special Summon this card from your hand. You can use the effect of \"Gorgonic Ghoul\" up to twice per turn.",
+      "race": "Rock",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Gorgonic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gorgonic-ghoul-7580",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN194",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90764875,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90764875.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90764875.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90764875.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29999,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10899,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

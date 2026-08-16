@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 17092736,
+      "name": "Ancient Telescope",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "See the top 5 cards of your opponent's Deck. Return the cards to the Deck in the same order.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-telescope-1476",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17092736,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17092736.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17092736.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17092736.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.00",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23957,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4852,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

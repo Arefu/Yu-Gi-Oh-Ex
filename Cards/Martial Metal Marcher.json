@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 81846453,
+      "name": "Martial Metal Marcher",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card is Synchro Summoned: You can target 1 Tuner in your GY; Special Summon it in Defense Position, but negate its effects. You can only use this effect of \"Martial Metal Marcher\" once per turn. A Synchro Monster that used this card as material is treated as a Tuner while face-up on the field.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 2200,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/martial-metal-marcher-8924",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN030",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81846453,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81846453.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81846453.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81846453.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tin Musical Battlemech",
+          "views": 685061,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2017-10-07",
+          "konami_id": 13455,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

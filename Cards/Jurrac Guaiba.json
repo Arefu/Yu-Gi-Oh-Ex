@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 11012887,
+      "name": "Jurrac Guaiba",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card destroys an opponent's monster by battle: You can Special Summon 1 \"Jurrac\" monster with 1700 or less ATK from your Deck, but it cannot declare an attack this turn.",
+      "race": "Dinosaur",
+      "atk": 1700,
+      "def": 400,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-guaiba-946",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack Tournament Prize Cards",
+          "set_code": "BATT-EN019",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN068",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN242",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN242",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11012887,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11012887.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11012887.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11012887.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.69",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "1.79",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53763,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8397,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

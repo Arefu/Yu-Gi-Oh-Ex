@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 68658728,
+      "name": "Little Chimera",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "All FIRE monsters on the field gain 500 ATK. All WATER monsters on the field lose 400 ATK.",
+      "race": "Beast",
+      "atk": 600,
+      "def": 550,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/little-chimera-5769",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-117",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.56"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E117",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.24"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN117",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Structure Deck: Blaze of Destruction",
+          "set_code": "SD3-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 3rd Season",
+          "set_code": "TP3-019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68658728,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68658728.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68658728.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68658728.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162632,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4604,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

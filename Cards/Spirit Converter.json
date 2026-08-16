@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 20802187,
+      "name": "Spirit Converter",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can target 1 Xyz Monster you control; attach 1 face-up Level 4 LIGHT monster you control to that target as an Xyz Material. When this card is sent from the field to the Graveyard: Target 2 Level 4 LIGHT Thunder-Type monsters with the same name in your Graveyard; add those targets to your hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-converter-1789",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20802187,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20802187.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20802187.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20802187.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.69",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14934,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-05-21",
+          "konami_id": 10308,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

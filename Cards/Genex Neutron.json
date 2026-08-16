@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 19182751,
+      "name": "Genex Neutron",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during the End Phase, if this card was Normal Summoned this turn: You can add 1 Machine-Type Tuner monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-neutron-1655",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2012 Wave 1",
+          "set_code": "CT09-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.33"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN097",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19182751,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19182751.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19182751.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19182751.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.56",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60180,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2008-06-21",
+          "konami_id": 7839,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

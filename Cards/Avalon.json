@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 82140600,
+      "name": "Avalon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 5 \"Noble Knight\" monsters in your Graveyard, including at least 1 \"Artorigus\" monster and at least 1 \"Laundsallyn\" monster; banish those targets, and if you do, destroy all cards on the field.",
+      "race": "Normal",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/avalon-6906",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN031",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "3.79"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN088",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82140600,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82140600.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82140600.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82140600.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.70",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18328,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11203,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

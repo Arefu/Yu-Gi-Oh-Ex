@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 48356796,
+      "name": "Mystical Cards of Light",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You cannot use 1 of your Spell & Trap Card Zones. During your Draw Phase, if you control another \"Mystical Cards of Light\", you can draw 2 cards instead of 1 for your normal draw.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystical-cards-of-light-4126",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48356796,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48356796.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48356796.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48356796.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.00",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44567,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7631,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

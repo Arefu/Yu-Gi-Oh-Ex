@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 43034264,
+      "name": "Laser Qlip",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "During your Main Phase, you can Normal Summon 1 \"Qli\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) Normal Summons of \"Qli\" monsters cannot be negated.",
+      "race": "Field",
+      "archetype": "Qli",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laser-qlip-3671",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN172",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43034264,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43034264.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43034264.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43034264.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55810,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11394,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

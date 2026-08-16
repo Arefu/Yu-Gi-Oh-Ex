@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 6766208,
+      "name": "D/D/D Gust High King Alexander",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf 3 or more \"D/D/D\" monsters are on the field, this card gains 3000 ATK. If another \"D/D\" monster(s) is Normal or Special Summoned to your field while this monster is on the field (except during the Damage Step): You can target 1 \"D/D\" monster in your GY; Special Summon it. You can only use this effect of \"D/D/D Gust High King Alexander\" once per turn.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-gust-high-king-alexander-8775",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6766208,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6766208.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6766208.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6766208.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "2.95",
+          "amazon_price": "2.58",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "D/D/D Gust Emperor Executive Alexander",
+          "views": 126278,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13079,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

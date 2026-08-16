@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 79922118,
+      "name": "Gingerbread House",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "During your opponent's Standby Phase: You can have as many monsters they control as possible gain 600 ATK, then destroy as many monsters they control as possible with 2500 or more ATK, and if you do, gain LP equal to the number of monsters destroyed x 500. (The ATK gain remains even if this card leaves the field.) You can only use this effect of \"Gingerbread House\" once per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gingerbread-house-10325",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79922118,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79922118.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79922118.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79922118.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.00",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67925,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248004,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14549,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

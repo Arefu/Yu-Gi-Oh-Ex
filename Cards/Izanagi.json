@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 6544078,
+      "name": "Izanagi",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card from your hand by removing from play 1 Spirit monster from your hand. Spirit monsters you control do not have to have their effects that return them to the hand activated.",
+      "race": "Fairy",
+      "atk": 2200,
+      "def": 1000,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/izanagi-574",
+      "card_sets": [
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6544078,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6544078.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6544078.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6544078.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.82",
+          "tcgplayer_price": "1.29",
+          "ebay_price": "1.32",
+          "amazon_price": "2.95",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39914,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7676,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

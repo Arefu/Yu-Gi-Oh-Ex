@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 49306994,
+      "name": "White Veil",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "While the equipped monster battles, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step. When an attack is declared involving the equipped monster: Face-up Spell/Trap Cards your opponent controls have their effects negated until the end of the Damage Step (even if this card leaves the field). When the equipped monster destroys an opponent's monster by battle: You can destroy all Spell and Trap Cards your opponent controls. When this face-up card in a player's Spell & Trap Zone leaves the field, that player takes 3000 damage.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-veil-9039",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49306994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49306994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49306994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49306994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "3.29",
+          "amazon_price": "2.25",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84747,
+          "viewsweek": 0,
+          "upvotes": 25,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2016-12-17",
+          "konami_id": 12905,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

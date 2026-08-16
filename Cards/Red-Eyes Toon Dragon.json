@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 31733941,
+      "name": "Red-Eyes Toon Dragon",
+      "typeline": [
+        "Dragon",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot attack the turn it is Summoned. While you control \"Toon World\" and your opponent controls no Toon monsters, this card can attack your opponent directly. Once per turn: You can Special Summon 1 Toon monster from your hand, except \"Red-Eyes Toon Dragon\", ignoring its Summoning conditions.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-toon-dragon-2691",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31733941,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31733941.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31733941.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31733941.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.42",
+          "tcgplayer_price": "6.50",
+          "ebay_price": "14.95",
+          "amazon_price": "5.88",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 385642,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12308,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

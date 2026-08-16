@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 65810489,
+      "name": "Statue of the Wicked",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When this face-down card is destroyed and sent to the Graveyard, Special Summon 1 \"Wicked Token\" (Fiend-Type/DARK/Level 4/ATK 1000/DEF 1000) on your side of the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/statue-of-the-wicked-5539",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN243",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.97"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.23"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65810489,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65810489.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65810489.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65810489.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "4.29",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75317,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5443,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

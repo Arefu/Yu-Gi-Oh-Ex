@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 17535764,
+      "name": "Gokipole",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY: You can add 1 Level 4 Insect monster from your Deck to your hand, then, if you added a Normal Monster, you can Special Summon it, then you can destroy 1 monster on the field with ATK greater than or equal to that Special Summoned monster's. You can only use this effect of \"Gokipole\" once per turn.",
+      "race": "Insect",
+      "atk": 1000,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gokipole-9586",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN176",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17535764,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17535764.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17535764.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17535764.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 234587,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13917,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

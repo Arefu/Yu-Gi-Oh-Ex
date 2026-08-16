@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 72520073,
+      "name": "Dark Artist",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is being attacked by a LIGHT monster, its DEF is halved during damage calculation only.",
+      "race": "Fiend",
+      "atk": 600,
+      "def": 1400,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-artist-6087",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72520073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72520073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72520073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72520073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18254,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4294,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

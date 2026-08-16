@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 2729285,
+      "name": "Fluffal Cat",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard as a Fusion Material for a Fusion Summon: You can target 1 \"Polymerization\" in your Graveyard; add it to your hand. You can only use this effect of \"Fluffal Cat\" once per turn.",
+      "race": "Fairy",
+      "atk": 700,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Fluffal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fluffal-cat-242",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN142",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2729285,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2729285.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2729285.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2729285.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.10",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 123990,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11351,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

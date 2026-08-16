@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 42472002,
+      "name": "Noble Knight Custennin",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Noble Arms\" Equip Spell, you can Special Summon this card (from your hand). You can only Special Summon \"Noble Knight Custennin\" once per turn this way. A \"Noble Knight\" monster that was Synchro, Xyz or Link Summoned using this card on the field as material gains this effect.\r\n● If this card is Special Summoned: You can Normal Summon 1 \"Noble Knight\" monster during your Main Phase this turn, in addition to your Normal Summon/Set (you can only gain this effect once per turn), also, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except \"Noble Knight\" monsters.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-custennin-9646",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN141",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Tin: Dueling Heroes Mega Pack",
+          "set_code": "MP23-EN275",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN088",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42472002,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42472002.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42472002.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42472002.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.35",
+          "amazon_price": "1.53",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119838,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13984,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

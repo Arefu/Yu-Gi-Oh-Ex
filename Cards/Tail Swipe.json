@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 83682725,
+      "name": "Tail Swipe",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Level 5 or higher Dinosaur monster you control; if that Dinosaur monster is still face-up on the field, choose up to 2 monsters your opponent controls that have a lower Level than it, or are face-down, and return the chosen monsters to the hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tail-swipe-7021",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN162",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Seven",
+          "set_code": "TU07-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83682725,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83682725.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83682725.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83682725.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.95",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33672,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-10-20",
+          "ocg_date": "2006-06-22",
+          "konami_id": 6822,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

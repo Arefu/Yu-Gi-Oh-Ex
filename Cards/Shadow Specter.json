@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 40575313,
+      "name": "Shadow Specter",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Powerful in groups, this animal spirit can be found in the wastelands.",
+      "race": "Zombie",
+      "atk": 500,
+      "def": 200,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shadow-specter-3447",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40575313,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40575313.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40575313.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40575313.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "5.00",
+          "amazon_price": "21.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17768,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-05-15",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4015,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

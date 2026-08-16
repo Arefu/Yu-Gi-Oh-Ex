@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 74095602,
+      "name": "Change of Hero - Reflector Ray",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an \"Elemental HERO\" Fusion Monster you control is destroyed by battle and sent to the Graveyard: Inflict damage to your opponent equal to its original Level x 300.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/change-of-hero-reflector-ray-6229",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74095602,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74095602.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74095602.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74095602.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.00",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58780,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 7005,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 94538053,
+      "name": "Max Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks an opponent's monster, this card gains 400 ATK during the Damage Step only. If this card destroys an opponent's monster by battle, until your next Standby Phase: this card becomes Level 2 and its original ATK and DEF are halved.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/max-warrior-7863",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94538053,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94538053.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94538053.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94538053.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "5.00",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73010,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8438,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 3027001,
+      "name": "Fake Trap",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent activates a Spell, Trap, or Effect Monster's effect that would destroy a Trap Card(s) you control. Destroy this card instead. (If the cards that would have been destroyed are face-down, you can look at them to confirm.)",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fake-trap-271",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN164",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.2"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.22"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3027001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3027001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3027001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3027001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "4.49",
+          "amazon_price": "4.88",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 208182,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4696,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

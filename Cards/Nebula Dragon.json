@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 51786039,
+      "name": "Nebula Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card and 1 other Level 8 Dragon monster in your hand; Special Summon both in Defense Position, but negate their effects, also you cannot Normal or Special Summon monsters for the rest of this turn, except LIGHT or DARK Dragon monsters. You can banish this card from your GY, then target 1 Level 4 LIGHT or DARK Dragon monster in your GY; add it to your hand. You can only use each effect of \"Nebula Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 0,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nebula-dragon-10454",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN159",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.17"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51786039,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51786039.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51786039.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51786039.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.88",
+          "amazon_price": "4.89",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Nebula, the Star Cloud Dragon",
+          "views": 439932,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010015,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14642,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

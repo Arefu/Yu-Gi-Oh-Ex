@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 70391588,
+      "name": "Star Siphon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a Synchro Monster(s) is Special Summoned: Target 1 of them; Special Summon 1 \"Siphon Token\" (Spellcaster-Type/DARK/Level 1/ATK 0/DEF 0). Its Level becomes that monster's current Level and that monster's Level becomes 1.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/star-siphon-5922",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70391588,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70391588.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70391588.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70391588.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21042,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9146,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

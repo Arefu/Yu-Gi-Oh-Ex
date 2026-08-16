@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 35561352,
+      "name": "Zefra Divine Strike",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated: Banish 1 face-up \"Zefra\" monster in your Extra Deck; negate the activation, and if you do, destroy it.",
+      "race": "Counter",
+      "archetype": "Zefra",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zefra-divine-strike-3013",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN072",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35561352,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35561352.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35561352.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35561352.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50507,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11747,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

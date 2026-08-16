@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 34257001,
+      "name": "Dash Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks, it gains 1200 ATK during the Damage Step only.",
+      "race": "Warrior",
+      "atk": 600,
+      "def": 1200,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dash-warrior-2910",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34257001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34257001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34257001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34257001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28406,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8934,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

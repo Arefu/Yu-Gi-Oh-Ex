@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 21420702,
+      "name": "Tri-Blaze Accelerator",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate only by sending 1 face-up \"Blaze Accelerator\" on your side of the field to the Graveyard. You can send 1 Pyro-Type monster from your hand to the Graveyard to destroy 1 monster your opponent controls and inflict 500 damage to your opponent, but you cannot declare an attack during this turn if you do.",
+      "race": "Continuous",
+      "archetype": "Blaze Accelerator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tri-blaze-accelerator-1842",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENH15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21420702,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21420702.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21420702.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21420702.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64403,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7088,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

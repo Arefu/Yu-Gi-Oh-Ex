@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 17548456,
+      "name": "Jurrac Meteor",
+      "typeline": [
+        "Dinosaur",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Jurrac\" Tuner + 2 or more non-Tuner Dinosaur-Type monsters\nWhen this card is Synchro Summoned, destroy all cards on the field. Then, you can Special Summon 1 Tuner monster from your Graveyard.",
+      "race": "Dinosaur",
+      "atk": 2800,
+      "def": 2000,
+      "level": 10,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-meteor-1526",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN150",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN150",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN041",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN139",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN139",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17548456,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17548456.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17548456.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17548456.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.59",
+          "tcgplayer_price": "2.25",
+          "ebay_price": "6.95",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261797,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2009-10-01",
+          "konami_id": 8577,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

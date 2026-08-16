@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 86938484,
+      "name": "Shaddoll Construct",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Flip monsters\r\nDuring your Main Phase: You can Fusion Summon 1 \"Shaddoll\" Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material. If this card is in your GY: You can send 1 \"Shaddoll\" card from your hand or face-up field to the GY, and if you do, Special Summon this card. You can only use each effect of \"Shaddoll Construct\" once per turn.",
+      "race": "Fairy",
+      "atk": 1200,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Shaddoll",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shaddoll-construct-9106",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN094",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86938484,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86938484.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86938484.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86938484.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.48",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 195526,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13501,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

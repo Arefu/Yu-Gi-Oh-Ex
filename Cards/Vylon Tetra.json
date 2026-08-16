@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 1281505,
+      "name": "Vylon Tetra",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the Monster Card Zone to the Graveyard: You can pay 500 Life Points, then target 1 face-up monster you control; equip this card to that target. If the equipped monster would be destroyed, you can destroy this Equip Card instead.",
+      "race": "Machine",
+      "atk": 900,
+      "def": 900,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-tetra-111",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN106",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN020",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1281505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1281505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1281505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1281505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.16",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37175,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9376,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

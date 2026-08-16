@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 36121917,
+      "name": "Monster Egg",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A warrior hidden within an egg that attacks enemies by flinging eggshells.",
+      "race": "Warrior",
+      "atk": 600,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/monster-egg-3058",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.87"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36121917,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36121917.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36121917.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36121917.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170838,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4153,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 25704359,
+      "name": "Unpossessed",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "\"Charmer\" monsters you control cannot be destroyed by battle. If a \"Familiar-Possessed\" monster you control attacks an opponent's monster, it gains 800 ATK during damage calculation only. If a monster(s) you control is destroyed by battle or card effect: You can Special Summon 1 Spellcaster-Type monster with 1500 DEF from your Deck, whose Attribute is different from at least 1 of those destroyed monsters' original Attributes on the field, in Attack Position or face-down Defense Position. You can only use this effect of \"Unpossessed\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Charmer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unpossessed-2211",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Eight",
+          "set_code": "AP08-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25704359,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25704359.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25704359.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25704359.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126978,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11596,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

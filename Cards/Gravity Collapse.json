@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 7811875,
+      "name": "Gravity Collapse",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Activate by sending 1 face-up Synchro Monster you control to the Graveyard when your opponent Summons a monster. Negate the Summon and destroy that card. Your opponent cannot Summon a monster until the End Phase of this turn.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravity-collapse-666",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7811875,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7811875.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7811875.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7811875.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.88",
+          "ebay_price": "4.99",
+          "amazon_price": "5.19",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 189521,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9144,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

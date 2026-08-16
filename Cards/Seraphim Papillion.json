@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 91140491,
+      "name": "Seraphim Papillion",
+      "typeline": [
+        "Insect",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters with different names\r\nGains 200 ATK for each counter on it. You can only use 1 of the following effects of \"Seraphim Papillion\" per turn, and only once that turn.\r\n● If this card is Link Summoned: Place 1 counter on this card for each Insect monster used as its Link Material.\r\n● (Quick Effect): You can remove 1 counter from this card; Special Summon 1 Level 4 or lower Insect monster from your GY in Defense Position.",
+      "race": "Insect",
+      "atk": 2100,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/seraphim-papillion-10354",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91140491,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91140491.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91140491.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91140491.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "3.95",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Seraphim Papillon",
+          "views": 139176,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010050,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14677,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

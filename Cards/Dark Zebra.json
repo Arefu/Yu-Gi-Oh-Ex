@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 59784896,
+      "name": "Dark Zebra",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this is the only Monster Card in your control during your Standby Phase, it is changed to Defense Position. You cannot change the position of this card during the same turn.",
+      "race": "Beast",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-zebra-5079",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.97"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59784896,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59784896.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59784896.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59784896.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 271962,
+          "viewsweek": 84,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4920,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

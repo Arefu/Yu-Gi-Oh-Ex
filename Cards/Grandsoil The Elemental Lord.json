@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 61468779,
+      "name": "Grandsoil the Elemental Lord",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having exactly 5 EARTH monsters in your GY. When this card is Special Summoned: You can target 1 monster in either player's GY; Special Summon that target. You can only use this effect of \"Grandsoil the Elemental Lord\" once per turn. If this face-up card leaves the field, skip the Battle Phase of your next turn.",
+      "race": "Beast-Warrior",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Elemental Lord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/grandsoil-the-elemental-lord-5209",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction Special Edition",
+          "set_code": "FLOD-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.95"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61468779,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61468779.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61468779.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61468779.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.49",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57054,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10168,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

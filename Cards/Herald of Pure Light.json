@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 1249315,
+      "name": "Herald of Pure Light",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters\nYou can detach 1 Xyz Material from this card, then target 1 monster in your Graveyard; add it to your hand, then shuffle 1 card from your hand into the Deck. You can only use the effect of \"Herald of Pure Light\" once per turn.",
+      "race": "Fairy",
+      "atk": 600,
+      "def": 1000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Herald",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/herald-of-pure-light-108",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN078",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1249315,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1249315.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1249315.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1249315.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "6.99",
+          "amazon_price": "11.26",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139860,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10661,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

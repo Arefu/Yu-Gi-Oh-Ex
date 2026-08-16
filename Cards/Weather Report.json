@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 72053645,
+      "name": "Weather Report",
+      "typeline": [
+        "Aqua",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Destroys all of your opponent's face-up \"Swords of Revealing Light\" on the field. If \"Swords of Revealing Light\" is destroyed, you can perform your Battle Phase twice this turn (or your next turn, if activated during your opponent's turn).",
+      "race": "Aqua",
+      "atk": 950,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/weather-report-6048",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72053645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72053645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72053645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72053645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 153707,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4589,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

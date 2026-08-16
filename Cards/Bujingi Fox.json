@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 23857661,
+      "name": "Bujingi Fox",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card from your Graveyard and send 1 \"Bujin\" monster from your hand to the Graveyard; you take no damage this turn.",
+      "race": "Beast",
+      "atk": 200,
+      "def": 2100,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujingi-fox-2056",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN210",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23857661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23857661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23857661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23857661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20100,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10915,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

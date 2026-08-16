@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 43061293,
+      "name": "Fire Darts",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only while you have no cards in your hand. Roll a six-sided die 3 times, and inflict damage to your opponent equal to the sum of the die rolls × 100.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-darts-3673",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN049",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43061293,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43061293.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43061293.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43061293.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "4.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56628,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6438,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

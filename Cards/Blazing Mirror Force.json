@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 75249652,
+      "name": "Blazing Mirror Force",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack: Destroy as many Attack Position monsters your opponent controls as possible, and if you do, take damage equal to half the combined original ATK of those destroyed monsters, then inflict damage to your opponent equal to the damage you took.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blazing-mirror-force-6328",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN076",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN100",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75249652,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75249652.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75249652.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75249652.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "1.65",
+          "amazon_price": "1.12",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 315558,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12022,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 46083380,
+      "name": "Attraffic Control",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls 3 or more monsters, they cannot declare an attack.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/attraffic-control-3928",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAX-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46083380,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46083380.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46083380.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46083380.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37327,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9763,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

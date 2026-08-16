@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 3356494,
+      "name": "Galaxy-Eyes Solflare Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 LIGHT monsters, including a monster with 2000 or more ATK\r\nIf this card is Link Summoned: You can target 1 \"Photon\" or \"Galaxy\" monster in your GY; add it to your hand. During your opponent's Main Phase (Quick Effect): You can discard 1 \"Photon\" card and 1 \"Galaxy\" card, OR discard 1 \"Galaxy-Eyes Photon Dragon\", then target 1 Special Summoned monster your opponent controls; destroy it. You can only use each effect of \"Galaxy-Eyes Solflare Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-eyes-solflare-dragon-9591",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN188",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3356494,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3356494.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3356494.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3356494.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.19",
+          "tcgplayer_price": "1.19",
+          "ebay_price": "3.45",
+          "amazon_price": "1.85",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Galaxy-Eyes Sol Flare Dragon",
+          "views": 340573,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13929,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

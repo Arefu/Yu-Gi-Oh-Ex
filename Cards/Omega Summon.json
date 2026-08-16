@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 47457347,
+      "name": "Omega Summon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target any number of your banished \"Invoked\" monsters with different names; Special Summon them in Defense Position.",
+      "race": "Normal",
+      "archetype": "Invoked",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/omega-summon-4051",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN037",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47457347,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47457347.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47457347.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47457347.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magical Name - \"Great Beast\"",
+          "views": 52689,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12854,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

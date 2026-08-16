@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 15935204,
+      "name": "Storm Caller",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can put your opponent's monsters that are destroyed by battle with other Psychic-Type monsters on top of their owner's Deck instead of sending them to the Graveyard. When this card is destroyed by a card effect, this card's controller takes damage equal to its original ATK.",
+      "race": "Psychic",
+      "atk": 2300,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/storm-caller-1368",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15935204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15935204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15935204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15935204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35092,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7890,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

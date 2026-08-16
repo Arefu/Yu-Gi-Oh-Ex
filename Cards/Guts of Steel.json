@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 33970665,
+      "name": "Guts of Steel",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 3 \"Scrap\" monsters in your Graveyard. Your opponent picks 1 of them, you Special Summon it to either player's side of the field, and remove the rest from play.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guts-of-steel-2883",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33970665,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33970665.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33970665.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33970665.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15461,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9208,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

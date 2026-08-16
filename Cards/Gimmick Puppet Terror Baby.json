@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 43598843,
+      "name": "Gimmick Puppet Terror Baby",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 \"Gimmick Puppet\" monster in your GY, except \"Gimmick Puppet Terror Baby\"; Special Summon it in Defense Position. You can banish this card from your GY; your opponent cannot activate cards or effects in response to the activation of your \"Gimmick Puppet\" monster effects this turn.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gimmick-puppet-terror-baby-10367",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43598843,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43598843.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43598843.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43598843.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160918,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14597,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

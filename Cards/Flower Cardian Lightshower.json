@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 42291297,
+      "name": "Flower Cardian Lightshower",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 3 non-Tuner monsters\nYour opponent cannot target \"Flower Cardian\" monsters you control with card effects, also those monsters cannot be destroyed by card effects. During your opponent's Draw Phase, if they draw a card(s) for their normal draw: Inflict 1500 damage to your opponent. Once per turn, during your opponent's End Phase: Activate 1 of these effects;\n● Skip the Draw Phase of your next turn.\n● This card has its other effects negated until your opponent's next Standby Phase.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-lightshower-3606",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN135",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN039",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42291297,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42291297.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42291297.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42291297.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "2.50",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78311,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12562,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

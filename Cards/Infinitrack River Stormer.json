@@ -1,0 +1,126 @@
+{
+  "data": [
+    {
+      "id": 24701066,
+      "name": "Infinitrack River Stormer",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 monsters\r\nWhen this card destroys an opponent's monster by battle: You can attach that monster to this card as material. You can only use each of the following effects of \"Infinitrack River Stormer\" once per turn.\r\n● You can detach 1 material from this card; take 1 EARTH Machine monster from your Deck, and either add it to your hand or send it to the GY.\r\n● If this card is in your GY: You can Tribute 1 Machine Link Monster; Special Summon this card in Defense Position.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-river-stormer-10099",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN212",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "PLatinum Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24701066,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24701066.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24701066.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24701066.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.31",
+          "amazon_price": "1.22",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Infinitrack Reverstorm",
+          "views": 341207,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412007,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14397,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

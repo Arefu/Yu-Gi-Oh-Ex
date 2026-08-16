@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 62000467,
+      "name": "Gladiator Beast Dragases",
+      "typeline": [
+        "Winged Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Gladiator Beast\" monsters\r\nIf a \"Gladiator Beast\" monster you control attacks, it cannot be destroyed by that battle, also your opponent cannot activate cards or effects until the end of the Damage Step. At the end of the Battle Phase, if this card battled: You can return this card to the Extra Deck; Special Summon 2 \"Gladiator Beast\" monsters with different names from your Deck. You can only use this effect of \"Gladiator Beast Dragases\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "WIND",
+      "archetype": "Gladiator Beast",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-dragases-9062",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN150",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN099",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62000467,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62000467.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62000467.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62000467.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gladiator Beast Dragacius",
+          "views": 97462,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13491,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

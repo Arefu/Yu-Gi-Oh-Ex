@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 5371656,
+      "name": "Sword of the Soul-Eater",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "You can only equip this card to a Level 3 or lower Normal Monster on your side of the field. When you activate this card, Tribute all Normal Monsters (except Tokens) on your side of the field, except the equipped monster. Increase the ATK of the equipped monster by 1000 points for each Normal Monster that you Tributed.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sword-of-the-soul-eater-475",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN199",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5371656,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5371656.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5371656.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5371656.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72001,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6048,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

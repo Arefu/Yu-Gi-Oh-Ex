@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 23232295,
+      "name": "Battlin' Boxer Lead Yoke",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Battlin' Boxer\" monsters\nIf a \"Battlin' Boxer\" monster(s) you control would be destroyed by battle or by a card effect, you can detach 1 Xyz Material from this card instead of destroying 1 of those monsters. When an Xyz Material(s) is detached from this card: This card gains 800 ATK.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 2000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlin-boxer-lead-yoke-1999",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23232295,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23232295.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23232295.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23232295.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "3.00",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88367,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10531,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

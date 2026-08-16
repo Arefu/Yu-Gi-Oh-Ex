@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 96501677,
+      "name": "Catnipped Kitty",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be attacked if there is another Beast-Type monster on your side of the field. Once per turn, you can make the DEF of 1 monster on your opponent's side of the field 0 until the end of this turn.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 500,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/catnipped-kitty-8031",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN133",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96501677,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96501677.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96501677.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96501677.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66254,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6243,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

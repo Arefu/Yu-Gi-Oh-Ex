@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "id": 59464593,
+      "name": "Armed Dragon LV10",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Armed Dragon LV7\". You can send 1 card from your hand to the GY; destroy all face-up monsters your opponent controls.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2000,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "Armed Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armed-dragon-lv10-5054",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN058",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Chazz Princeton",
+          "set_code": "DP2-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "26.89"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.67"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN065",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI27",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59464593,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59464593.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59464593.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59464593.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "1.99",
+          "amazon_price": "38.47",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161067,
+          "viewsweek": 21,
+          "upvotes": 23,
+          "downvotes": 10,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-08",
+          "ocg_date": "2005-10-20",
+          "konami_id": 6540,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

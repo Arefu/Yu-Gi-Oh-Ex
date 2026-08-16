@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 66722103,
+      "name": "Thunderclap Monk",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a monster effect while you control this Special Summoned monster (Quick Effect): You can Tribute this card; negate the activation, and if you do, destroy it. If this card is sent from the field to the GY: You can Special Summon 1 Thunder monster from your hand in Defense Position. You can only use each effect of \"Thunderclap Monk\" once per turn.",
+      "race": "Thunder",
+      "atk": 1900,
+      "def": 200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunderclap-monk-9855",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ultimate Tournament Pack 1",
+          "set_code": "UP01-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66722103,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66722103.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66722103.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66722103.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Skyward Sealing Sage",
+          "views": 62801,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14103,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

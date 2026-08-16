@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 46104361,
+      "name": "Cyberse White Hat",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control 2 or more monsters with the same Type, you can Special Summon this card (from your hand). You can only Special Summon \"Cyberse White Hat\" once per turn this way. If this card is sent to the GY as Link Material: You can make all monsters your opponent currently controls lose 1000 ATK until the end of this turn.",
+      "race": "Cyberse",
+      "atk": 1800,
+      "def": 2400,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-white-hat-9330",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46104361,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46104361.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46104361.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46104361.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cyberse Whitehat",
+          "views": 91013,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-12",
+          "ocg_date": "2018-03-24",
+          "konami_id": 13695,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

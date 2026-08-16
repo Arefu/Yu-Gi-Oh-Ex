@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 24010609,
+      "name": "Sky Striker Mecha Modules - Multirole",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can target 1 other card you control; send that card to the GY, also your opponent cannot activate cards or effects in response to your Spell Card activations for the rest of this turn (even if this card leaves the field). (You can only gain the previous effect once per turn.) Once per turn, during the End Phase: You can Set \"Sky Striker\" Spells with different names from your GY, up to the number of \"Sky Striker\" Spell Cards you activated this turn while this card was face-up on your field, but banish them when they leave the field.",
+      "race": "Continuous",
+      "archetype": "Sky Striker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-striker-mecha-modules-multirole-9313",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN268",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENS18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24010609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24010609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24010609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24010609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.59",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Brandish Mechanism Multi-Roll",
+          "views": 498641,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 8,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13679,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

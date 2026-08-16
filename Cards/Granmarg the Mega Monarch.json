@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 15545291,
+      "name": "Granmarg the Mega Monarch",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card by Tributing 1 Tribute Summoned monster. When this card is Tribute Summoned: Target up to 2 Set cards on the field; destroy those targets. If this card was Tribute Summoned by Tributing an EARTH monster, add this additional effect.\n● Also, draw 1 card after that.",
+      "race": "Rock",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/granmarg-the-mega-monarch-1338",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN158",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15545291,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15545291.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15545291.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15545291.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.50",
+          "tcgplayer_price": "1.54",
+          "ebay_price": "2.93",
+          "amazon_price": "4.22",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53247,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10772,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

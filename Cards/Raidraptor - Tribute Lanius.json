@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 83236601,
+      "name": "Raidraptor - Tribute Lanius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, if this card was Normal or Special Summoned this turn: You can send 1 \"Raidraptor\" card from your Deck to the Graveyard. During your Main Phase 2, if this card destroyed an opponent's monster by battle this turn: You can add 1 \"Rank-Up-Magic\" Quick-Play Spell Card from your Deck to your hand, also you cannot Special Summon monsters for the rest of this turn, except \"Raidraptor\" monsters. You can only use each effect of \"Raidraptor - Tribute Lanius\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 1800,
+      "def": 400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-tribute-lanius-6986",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.4"
+        },
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83236601,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83236601.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83236601.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83236601.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "5.00",
+          "amazon_price": "9.02",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 281969,
+          "viewsweek": 21,
+          "upvotes": 16,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-02-21",
+          "konami_id": 11767,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 48424886,
+      "name": "El Shaddoll Grysta",
+      "typeline": [
+        "Rock",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Shaddoll\" monster + 1 FIRE monster\r\nMust first be Fusion Summoned. When your opponent would Special Summon a monster(s) while you have a \"Shaddoll\" card in your hand (Quick Effect): You can negate the Summon, and if you do, destroy that monster, then send 1 \"Shaddoll\" card from your hand to the GY. You can only use this effect of \"El Shaddoll Grysta\" once per turn. If this card is sent to the GY: You can target 1 \"Shaddoll\" Spell/Trap in your GY; add it to your hand.",
+      "race": "Rock",
+      "atk": 2450,
+      "def": 1950,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/el-shaddoll-grysta-4134",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN160",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48424886,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48424886.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48424886.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48424886.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.65",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 249042,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11380,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

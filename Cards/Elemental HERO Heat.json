@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 98266377,
+      "name": "Elemental HERO Heat",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 200 ATK for each \"Elemental HERO\" monster you control.",
+      "race": "Pyro",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-heat-8166",
+      "card_sets": [
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.23"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98266377,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98266377.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98266377.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98266377.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94275,
+          "viewsweek": 84,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "2007-03-08",
+          "konami_id": 6927,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

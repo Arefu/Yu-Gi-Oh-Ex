@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 97584719,
+      "name": "Infinitrack Earth Slicer",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 9 monsters\r\nWhen this card destroys an opponent's monster by battle: You can attach that monster to this card as material. You can only use each of the following effects of \"Infinitrack Earth Slicer\" once per turn.\r\n● You can detach any number of materials from this card, then target that many cards on the field; destroy them.\r\n● If this card is in your GY: You can Tribute 1 Machine Link Monster; Special Summon this card in Defense Position.",
+      "race": "Machine",
+      "atk": 3100,
+      "def": 2100,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-earth-slicer-10135",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN214",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.64"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97584719,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97584719.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97584719.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97584719.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "2.79",
+          "amazon_price": "1.65",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Infinitrack Earthshaker",
+          "views": 294881,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412009,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14399,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

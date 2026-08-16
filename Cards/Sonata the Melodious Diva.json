@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 76990617,
+      "name": "Sonata the Melodious Diva",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Melodious\" monster, you can Special Summon this card (from your hand). While this Special Summoned card is on the field, all Fairy-Type monsters you control gain 500 ATK and DEF.",
+      "race": "Fairy",
+      "atk": 1200,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Melodious",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sonata-the-melodious-diva-6479",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76990617,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76990617.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76990617.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76990617.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "0.11",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 194968,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11224,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

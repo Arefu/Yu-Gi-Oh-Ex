@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 80230510,
+      "name": "Tribute Burial",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "You cannot Special Summon for the rest of this turn. Once during this turn, you can conduct a Tribute Summon that requires 2 Tributes by banishing 1 monster from each Graveyard instead of Tributing (it is still treated as a Tribute Summon).",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tribute-burial-6729",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.17"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2022 K",
+          "set_code": "LART-EN053",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80230510,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80230510.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80230510.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80230510.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.72",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "3.50",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69124,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-15",
+          "ocg_date": "2016-06-04",
+          "konami_id": 12571,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

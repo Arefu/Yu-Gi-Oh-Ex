@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 94253609,
+      "name": "Elemental Absorber",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Remove from play 1 Monster Card in your hand to activate this card. Your opponent's monsters that have the same Attribute as the monster removed by this effect cannot declare an attack.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-absorber-7843",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN236",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN056",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94253609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94253609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94253609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94253609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "3.15",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53492,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6681,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

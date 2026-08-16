@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 32485271,
+      "name": "Rose Spectre of Dunn",
+      "typeline": [
+        "Plant",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Feral Imp\" + \"Snakeyashi\"",
+      "race": "Plant",
+      "atk": 2000,
+      "def": 1800,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Rose Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rose-spectre-of-dunn-2762",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN121",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN022",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32485271,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32485271.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32485271.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32485271.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27988,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4600,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

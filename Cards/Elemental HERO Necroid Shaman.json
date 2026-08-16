@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 81003500,
+      "name": "Elemental HERO Necroid Shaman",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Wildheart\" + \"Elemental HERO Necroshade\"\nMust be Fusion Summoned and cannot be Special Summoned by other ways. When this card is Special Summoned: Target 1 monster your opponent controls; destroy that target, then Special Summon 1 monster from your opponent's Graveyard to their side of the field.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1800,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-necroid-shaman-6797",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN216",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "11.02"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENE11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81003500,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81003500.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81003500.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81003500.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146914,
+          "viewsweek": 24,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6644,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

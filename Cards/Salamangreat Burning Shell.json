@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 28534130,
+      "name": "Salamangreat Burning Shell",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Salamangreat\" monster from your hand, but negate its effects, then, immediately after this effect resolves, Link Summon 1 \"Salamangreat\" Link Monster using materials you control, including the Summoned monster. This turn, that Link Summoned monster cannot attack or activate its effects. During your Main Phase: You can banish this card from your GY, then target 1 \"Salamangreat\" Link Monster in your GY; return it to the Extra Deck. You can only activate 1 \"Salamangreat Burning Shell\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-burning-shell-10467",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN179",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28534130,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28534130.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28534130.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28534130.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29297,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010051,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14678,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

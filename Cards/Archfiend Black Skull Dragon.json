@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 45349196,
+      "name": "Archfiend Black Skull Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Level 6 \"Archfiend\" Normal Monster + 1 \"Red-Eyes\" Normal Monster\nYou can only Special Summon \"Archfiend Black Skull Dragon(s)\" once per turn. If this card battles, your opponent's cards and effects cannot be activated until the end of the Damage Step. If damage calculation is performed involving this Fusion Summoned card, at the end of the Battle Phase: You can target 1 \"Red-Eyes\" Normal Monster in your Graveyard; inflict damage to your opponent equal to its ATK in the Graveyard, then shuffle it into the Deck.",
+      "race": "Dragon",
+      "atk": 3200,
+      "def": 2500,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-black-skull-dragon-3865",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN048",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ42",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45349196,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45349196.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45349196.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45349196.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "7.95",
+          "amazon_price": "26.68",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 327136,
+          "viewsweek": 0,
+          "upvotes": 38,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11832,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

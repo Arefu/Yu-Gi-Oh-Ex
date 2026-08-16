@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 25345186,
+      "name": "After the Struggle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "This card can only be activated during Main Phase 1. All monsters on both sides of the field that have been involved in damage calculation are destroyed during the End Step of the turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/after-the-struggle-2180",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN195",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.96"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "32.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25345186,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25345186.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25345186.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25345186.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "After Genocide",
+          "views": 107344,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5394,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

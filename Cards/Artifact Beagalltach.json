@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 12697630,
+      "name": "Artifact Beagalltach",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Set this card from your hand to your Spell & Trap Zone as a Spell Card. During your opponent's turn, if this Set card in the Spell & Trap Zone is destroyed and sent to your Graveyard: Special Summon it. If this card is Special Summoned during your opponent's turn: Destroy up to 2 Set cards you control (min. 1). You can only use this effect of \"Artifact Beagalltach\" once per turn.",
+      "race": "Fairy",
+      "atk": 1400,
+      "def": 2100,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Artifact",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/artifact-beagalltach-1098",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12697630,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12697630.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12697630.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12697630.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74399,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11041,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 41949033,
+      "name": "Dark Assailant",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Armed with the Psycho Sword, this sinister assassin rules the bad land.",
+      "race": "Zombie",
+      "atk": 1200,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-assailant-3578",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41949033,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41949033.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41949033.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41949033.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "0.99",
+          "amazon_price": "4.11",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dark Assassin",
+          "views": 36394,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4247,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": 11549357,
+      "name": "Gamma the Magnet Warrior",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Alpha, Beta, and Gamma meld as one to form a powerful monster.",
+      "race": "Rock",
+      "atk": 1500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Magnet Warrior",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gamma-the-magnet-warrior-1000",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Duelists of the Roses promotional cards",
+          "set_code": "DOR-003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "8"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Duelists of the Roses promotional cards",
+          "set_code": "DOR-E003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "21.6"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11549357,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11549357.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11549357.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11549357.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "0.99",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 221725,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-02-16",
+          "ocg_date": "2000-12-07",
+          "konami_id": 4792,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

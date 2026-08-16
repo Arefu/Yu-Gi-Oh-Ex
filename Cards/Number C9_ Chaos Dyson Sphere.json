@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 32559361,
+      "name": "Number C9: Chaos Dyson Sphere",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 10 monsters\nAt the start of the Damage Step, if this card battles an opponent's monster: You can attach that monster to this card as a face-up Xyz Material. Once per turn: You can inflict 300 damage to your opponent for each Xyz Material attached to this card. If this card has \"Number 9: Dyson Sphere\" as an Xyz Material, it gains this effect.\n● Once per turn: You can detach any number of Xyz Materials from this card; inflict 800 damage to your opponent for each.",
+      "race": "Machine",
+      "atk": 3600,
+      "def": 3200,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c9-chaos-dyson-sphere-2770",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN022",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32559361,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32559361.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32559361.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32559361.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.67",
+          "tcgplayer_price": "2.64",
+          "ebay_price": "3.40",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C9",
+          "views": 102358,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11017,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

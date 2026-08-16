@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 56532353,
+      "name": "Neo Blue-Eyes Ultimate Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Blue-Eyes White Dragon\" + \"Blue-Eyes White Dragon\" + \"Blue-Eyes White Dragon\"\nAt the end of the Damage Step, if this is the only face-up card you control, and this Fusion Summoned card attacked: You can send 1 \"Blue-Eyes\" Fusion Monster from your Extra Deck to the Graveyard; this card can attack again in a row. You can use this effect of \"Neo Blue-Eyes Ultimate Dragon\" up to twice per turn. During either player's turn, when a card or effect is activated that targets a \"Blue-Eyes\" monster(s) you control: You can banish this card from your Graveyard; negate the activation, and if you do, destroy that card.",
+      "race": "Dragon",
+      "atk": 4500,
+      "def": 3800,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-blue-eyes-ultimate-dragon-4811",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Blue-Eyes White Destiny",
+          "set_code": "SDWD-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.48"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS01",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.84"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG01",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "3.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56532353,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56532353.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56532353.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56532353.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "5.99",
+          "amazon_price": "3.30",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1011766,
+          "viewsweek": 42,
+          "upvotes": 159,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12484,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

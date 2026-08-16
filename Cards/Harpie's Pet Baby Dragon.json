@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 6924874,
+      "name": "Harpie's Pet Baby Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains effects based on the number of \"Harpie\" monsters you control, except \"Harpie's Pet Baby Dragon\".\n● 1 or more: Your opponent cannot target \"Harpie\" monsters you control for attacks, except \"Harpie's Pet Baby Dragon\".\n● 2 or more: Double the original ATK and DEF of this card.\n● 3 or more: Once per turn: You can target 1 card your opponent controls; destroy that target.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": 600,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-s-pet-baby-dragon-596",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN193",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "62.5"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN013",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6924874,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6924874.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6924874.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6924874.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "0.99",
+          "amazon_price": "3.66",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 109413,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6686,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

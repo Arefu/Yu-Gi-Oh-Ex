@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 42632209,
+      "name": "Geomathmech Final Sigma",
+      "typeline": [
+        "Cyberse",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nUnaffected by card effects, except \"Mathmech\" cards, while in the Extra Monster Zone. If this card in the Extra Monster Zone battles an opponent's monster, any battle damage it inflicts to your opponent is doubled. If this card is destroyed by battle, or if this card in its owner's possession is destroyed by an opponent's card effect: You can add 1 \"Mathmech\" card from your Deck to your hand. You can only use this effect of \"Geomathmech Final Sigma\" once per turn.",
+      "race": "Cyberse",
+      "atk": 3000,
+      "def": 0,
+      "level": 12,
+      "attribute": "FIRE",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geomathmech-final-sigma-10418",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN134",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42632209,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42632209.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42632209.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42632209.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "3.15",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Processor Final Sigma",
+          "views": 425591,
+          "viewsweek": 0,
+          "upvotes": 25,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423008,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14751,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

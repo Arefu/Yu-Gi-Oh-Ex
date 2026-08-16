@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 78053598,
+      "name": "Dark Designator",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Declare 1 Monster Card name. If the declared card is in your opponent's Deck, add 1 of that card to your opponent's hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-designator-6563",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-079",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.13"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78053598,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78053598.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78053598.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78053598.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.49",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 132528,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5480,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 98169343,
+      "name": "Trickstar Corobane",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, or all monsters you control are \"Trickstar\" monsters: You can Special Summon this card from your hand. During the Damage Step, when your \"Trickstar\" monster battles an opponent's monster (Quick Effect): You can send this card from your hand to the GY; that monster you control gains ATK equal to its original ATK until the end of this turn. You can only use 1 \"Trickstar Corobane\" effect per turn, and only once that turn.",
+      "race": "Fairy",
+      "atk": 2000,
+      "def": 1000,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-corobane-9083",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN048",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "4.07"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN095",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98169343,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98169343.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98169343.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98169343.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "2.68",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trickstar Carobein",
+          "views": 316537,
+          "viewsweek": 0,
+          "upvotes": 26,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2017-12-16",
+          "konami_id": 13555,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

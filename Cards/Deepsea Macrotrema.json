@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 13314457,
+      "name": "Deepsea Macrotrema",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent from the field to the Graveyard, all face-up WATER monsters you control gain 500 ATK until the end of this turn.",
+      "race": "Fish",
+      "atk": 600,
+      "def": 100,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deepsea-macrotrema-1144",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13314457,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13314457.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13314457.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13314457.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30828,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7564,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

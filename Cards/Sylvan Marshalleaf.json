@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 36046926,
+      "name": "Sylvan Marshalleaf",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can choose either 1 or 2, then excavate that many cards from the top of your Deck, send any excavated Plant-Type monsters to the Graveyard, also place the other cards on the bottom of your Deck in any order. If this card is excavated from the Deck and sent to the Graveyard by a card effect: You can target 1 monster on the field; destroy that target.",
+      "race": "Plant",
+      "atk": 1500,
+      "def": 1200,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sylvan-marshalleaf-3051",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN198",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36046926,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36046926.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36046926.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36046926.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.71",
+          "tcgplayer_price": "1.82",
+          "ebay_price": "2.94",
+          "amazon_price": "3.18",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43153,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10903,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

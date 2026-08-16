@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 45593826,
+      "name": "Draghig, Malebranche of the Burning Abyss",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a monster that is not a \"Burning Abyss\" monster, destroy this card. You can only use 1 of these effects of \"Draghig, Malebranche of the Burning Abyss\" per turn, and only once that turn.\n● If you control no Spell/Trap Cards: You can Special Summon this card from your hand.\n● If this card is sent to the Graveyard: You can choose 1 \"Burning Abyss\" card from your Deck and place it on top of your Deck.",
+      "race": "Fiend",
+      "atk": 1100,
+      "def": 900,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draghig-malebranche-of-the-burning-abyss-3885",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN053",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45593826,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45593826.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45593826.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45593826.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.69",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53664,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11772,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

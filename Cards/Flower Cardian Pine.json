@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 81752019,
+      "name": "Flower Cardian Pine",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Draw 1 card, show it, then send it to the Graveyard unless it is a \"Flower Cardian\" monster. You can only use this effect of \"Flower Cardian Pine\" once per turn. If this card is destroyed by battle and sent to the Graveyard, or if this card in your possession is destroyed by an opponent's card effect and sent to your Graveyard: You can draw 1 card.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-pine-6858",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN127",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81752019,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81752019.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81752019.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81752019.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.50",
+          "amazon_price": "1.62",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69165,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12554,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

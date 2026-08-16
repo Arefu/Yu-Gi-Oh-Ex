@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 4335427,
+      "name": "Sophia, Goddess of Rebirth",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 1 face-up Ritual, Fusion, Synchro, and Xyz Monster from anywhere on the field, and cannot be Special Summoned by other ways. This card's Special Summon cannot be negated. When this card is Special Summoned: Banish all other cards from both players' hands, fields, and Graveyards. Cards and effects cannot be activated in response to this effect's activation.",
+      "race": "Fairy",
+      "atk": 3600,
+      "def": 3400,
+      "level": 11,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sophia-goddess-of-rebirth-391",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN056",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN079",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN055",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4335427,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4335427.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4335427.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4335427.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "7.99",
+          "amazon_price": "7.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61320,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9997,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

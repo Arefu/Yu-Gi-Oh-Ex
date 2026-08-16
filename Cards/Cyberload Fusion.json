@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 55704856,
+      "name": "Cyberload Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Fusion Summon 1 Fusion Monster from your Extra Deck that lists a \"Cyber Dragon\" monster as material, by shuffling the Fusion Materials listed on it into the Deck, from among your cards on the field and/or your face-up banished cards, but monsters you control cannot attack for the rest of this turn, except that Fusion Summoned monster. You can only activate 1 \"Cyberload Fusion\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberload-fusion-9529",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55704856,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55704856.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55704856.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55704856.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.80",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 477508,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13849,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

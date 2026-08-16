@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 68339286,
+      "name": "Metal Guardian",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A fiend guarding the treasures of the netherworld, it's most at home in the dark.",
+      "race": "Fiend",
+      "atk": 1150,
+      "def": 2150,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metal-guardian-5742",
+      "card_sets": [
+        {
+          "set_name": "McDonald's Promotional Cards 2",
+          "set_code": "MDP2-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68339286,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68339286.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68339286.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68339286.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.30",
+          "tcgplayer_price": "1.77",
+          "ebay_price": "0.99",
+          "amazon_price": "1.51",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47324,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-12-22",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4094,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

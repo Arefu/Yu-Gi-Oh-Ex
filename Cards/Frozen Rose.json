@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 53503015,
+      "name": "Frozen Rose",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Send 1 face-up monster you control to the GY; apply this effect, depending on the Type it had on the field.\r\n● Plant: During the End Phase of this turn, draw 2 cards, then discard 1 card.\r\n● Non-Plant: Add 1 Level 4 or lower Plant monster from your Deck to your hand.\r\nYou can only activate 1 \"Frozen Rose\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Rose Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frozen-rose-9892",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENA21",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN119",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53503015,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53503015.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53503015.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53503015.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.24",
+          "amazon_price": "4.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Frozen Roars",
+          "views": 203783,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14178,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

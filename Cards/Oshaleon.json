@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71519605,
+      "name": "Oshaleon",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control this face-up Attack Position card, your opponent cannot select a monster other than \"Oshaleon\" as an attack target. When this card is destroyed by battle and sent to the Graveyard, you can add 1 Reptile-Type monster with 500 or less ATK from your Deck to your hand.",
+      "race": "Reptile",
+      "atk": 1400,
+      "def": 800,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oshaleon-6006",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN036",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71519605,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71519605.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71519605.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71519605.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69889,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8471,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

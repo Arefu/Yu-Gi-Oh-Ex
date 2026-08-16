@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 64325438,
+      "name": "Generaider Boss Room",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a card or effect in response to the activation of your \"Generaider\" card or effect: You can discard 1 card; your opponent's activated effect becomes \"each player draws 1 card\". You can only use this effect of \"Generaider Boss Room\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/generaider-boss-room-10494",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64325438,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64325438.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64325438.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64325438.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Generaider Territory",
+          "views": 82358,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423038,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14781,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "data": [
+    {
+      "id": 27911549,
+      "name": "Parasite Paracide",
+      "typeline": [
+        "Insect",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Put this card face-up in your opponent's Deck and shuffle it. When your opponent draws this card, it is Special Summoned to their side of the field in face-up Defense Position, and inflicts 1000 damage to them. Then, while this card is face-up on the field, all monsters your opponent controls become Insect-Type monsters.",
+      "race": "Insect",
+      "atk": 500,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Parasite",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/parasite-paracide-2374",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.13"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "14.93"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-END02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-END02",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2022 A",
+          "set_code": "LART-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27911549,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27911549.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27911549.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27911549.jpg"
+        },
+        {
+          "id": 27911550,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27911550.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27911550.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27911550.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.95",
+          "amazon_price": "4.16",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 234856,
+          "viewsweek": 22,
+          "upvotes": 12,
+          "downvotes": 7,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Parasite Paracide",
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4769,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

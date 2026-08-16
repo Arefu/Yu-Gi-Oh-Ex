@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 60668166,
+      "name": "Naturia Cherries",
+      "typeline": [
+        "Plant",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the field to the Graveyard by your opponent's card (including by battle, card effect, or by being destroyed), you can Special Summon up to 2 \"Naturia Cherries\" from your Deck in face-down Defense Position.",
+      "race": "Plant",
+      "atk": 200,
+      "def": 200,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-cherries-5148",
+      "card_sets": [
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN116",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60668166,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60668166.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60668166.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60668166.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "13.89",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72919,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9107,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 77584012,
+      "name": "Pseudo Space",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can banish 1 Field Spell Card from your Graveyard; until the End Phase, this card's name becomes that card's original name, and replace this effect with that card's original effects.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pseudo-space-6527",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77584012,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77584012.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77584012.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77584012.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "2.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 120681,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8528,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

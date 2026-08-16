@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 61420130,
+      "name": "Paleozoic Hallucigenia",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster on the field; its ATK/DEF become half its current ATK/DEF until the end of this turn. Once per Chain, when a Trap Card is activated while this card is in your GY: You can Special Summon this card as a Normal Monster (Aqua/WATER/Level 2/ATK 1200/DEF 0). (This card is NOT treated as a Trap.) If Summoned this way, this card is unaffected by monster effects, also banish it when it leaves the field.",
+      "race": "Normal",
+      "archetype": "Paleozoic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paleozoic-hallucigenia-5205",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61420130,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61420130.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61420130.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61420130.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "3.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Burgesstoma Hallucigenia",
+          "views": 101430,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12083,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

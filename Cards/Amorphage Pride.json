@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 6283472,
+      "name": "Amorphage Pride",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhile you control an \"Amorphage\" monster, neither player takes any effect damage. Once per turn, during your Standby Phase, Tribute 1 monster or destroy this card.\n\n[ Monster Effect ] \nIf this card is Pendulum Summoned or flipped face-up, neither player can Special Summon monsters from the Extra Deck while this card is face-up on the field, except \"Amorphage\" monsters.",
+      "race": "Dragon",
+      "pend_desc": "While you control an \"Amorphage\" monster, neither player takes any effect damage. Once per turn, during your Standby Phase, Tribute 1 monster or destroy this card.",
+      "monster_desc": "If this card is Pendulum Summoned or flipped face-up, neither player can Special Summon monsters from the Extra Deck while this card is face-up on the field, except \"Amorphage\" monsters.",
+      "atk": 1750,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Amorphage",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amorphage-pride-551",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6283472,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6283472.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6283472.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6283472.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.07",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44827,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12301,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 84740193,
+      "name": "Buster Rancher",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Only a monster with an ATK of 1000 points or less can be equipped with this card. During damage calculation, increase the ATK of the monster equipped with this card by 2500 points if the opponent's monster that battles it is in Attack Position and its ATK is 2500 or more, OR if the opponent's monster that battles it is in Defense Position and its DEF is 2500 or more.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/buster-rancher-7105",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84740193,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84740193.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84740193.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84740193.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85077,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5534,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

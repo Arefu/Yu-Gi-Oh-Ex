@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 7183277,
+      "name": "Aurkus, Lightsworn Druid",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Neither player can target \"Lightsworn\" monsters (anywhere) with card effects. During each of your End Phases: Send the top 2 cards of your Deck to the Graveyard.",
+      "race": "Beast-Warrior",
+      "atk": 1200,
+      "def": 1800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aurkus-lightsworn-druid-617",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN250",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN081",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7183277,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7183277.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7183277.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7183277.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "2.99",
+          "amazon_price": "4.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161246,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7796,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

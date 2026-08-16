@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 62188962,
+      "name": "Vampire Kingdom",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Zombie-Type monsters gain 500 ATK during damage calculation only. Once per turn, when a card(s) is sent from your opponent's Deck to the Graveyard: Target 1 card on the field; send 1 DARK \"Vampire\" monster from your hand or Deck to the Graveyard, and if you do, destroy that target.",
+      "race": "Field",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-kingdom-5261",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN171",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN157",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Judgment of the Light: Deluxe Edition",
+          "set_code": "JOTL-ENDE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.56"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62188962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62188962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62188962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62188962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150210,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-09-27",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10795,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

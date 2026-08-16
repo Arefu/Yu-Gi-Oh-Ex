@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 26211048,
+      "name": "Inzektor Exa-Stag",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 Insect-Type monsters\nOnce per turn: You can detach 1 Xyz Material from this card to target 1 monster your opponent controls or in their Graveyard; equip that target to this card. This card gains ATK and DEF equal to half the original ATK and DEF of the monster(s) equipped by this effect.",
+      "race": "Insect",
+      "atk": 800,
+      "def": 800,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-exa-stag-2253",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN050",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26211048,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26211048.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26211048.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26211048.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "4.00",
+          "amazon_price": "1.62",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63044,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10073,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

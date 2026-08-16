@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 3784434,
+      "name": "Rampaging Rhynos",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, this card can move to an adjacent (horizontal) unoccupied Monster Card Zone. If this card attacks the monster in its same column, this card gains 500 ATK during the Damage Step.",
+      "race": "Beast-Warrior",
+      "atk": 1500,
+      "def": 1500,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rampaging-rhynos-338",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3784434,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3784434.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3784434.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3784434.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "4.46",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33435,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6895,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

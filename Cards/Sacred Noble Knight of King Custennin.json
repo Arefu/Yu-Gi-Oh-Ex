@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 78876707,
+      "name": "Sacred Noble Knight of King Custennin",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 4 \"Noble Knight\" monsters\r\nYou can detach any number of materials from this card, then target that many cards your opponent controls; return them to the hand. If this card is destroyed by battle or card effect and sent to the GY: You can Special Summon 1 \"Noble Knight\" Xyz Monster from your Extra Deck, except \"Sacred Noble Knight of King Custennin\", and if you do, attach this card from the GY to that monster as material. (This is treated as an Xyz Summon.) You can only use each effect of \"Sacred Noble Knight of King Custennin\" once per turn.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 2500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sacred-noble-knight-of-king-custennin-9647",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN142",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78876707,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78876707.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78876707.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78876707.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.35",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 113392,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13985,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 83764996,
+      "name": "The Illusory Gentleman",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Wearing odd fashions, this gentleman is very fickle. He sometimes saves people and at other times commits crimes.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-illusory-gentleman-7029",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83764996,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83764996.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83764996.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83764996.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78822,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5019,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

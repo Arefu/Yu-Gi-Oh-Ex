@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 17358176,
+      "name": "Lady of Faith",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Soothes the souls of others by chanting a mysterious spell.",
+      "race": "Spellcaster",
+      "atk": 1100,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lady-of-faith-1502",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.14"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17358176,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17358176.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17358176.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17358176.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "1.46",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 175027,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4618,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

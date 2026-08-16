@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 22666164,
+      "name": "Commander Covington",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 1 face-up \"Machina Soldier\", \"Machina Sniper\", and \"Machina Defender\" you control to the GY; Special Summon 1 \"Machina Force\" from your hand or Deck.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 600,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Machina",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/commander-covington-1951",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN167",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22666164,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22666164.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22666164.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22666164.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "4.00",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23910,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-19",
+          "ocg_date": "2005-12-17",
+          "konami_id": 6307,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

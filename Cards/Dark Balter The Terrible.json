@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 80071763,
+      "name": "Dark Balter the Terrible",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Possessed Dark Soul\" + \"Frontier Wiseman\"\nA Fusion Summon of this monster can only be conducted with the above Fusion Material Monsters. When a Normal Spell Card is activated, negate the effect by paying 1000 Life Points. The effect of an Effect Monster that this monster destroys as a result of battle is negated.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 1200,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-balter-the-terrible-6713",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN125",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.53"
+        },
+        {
+          "set_name": "Hobby League 3 participation card G",
+          "set_code": "HL03-EN007",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "15.18"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.22"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Tournament Pack 6",
+          "set_code": "TP6-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80071763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80071763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80071763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80071763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.34",
+          "tcgplayer_price": "6.92",
+          "ebay_price": "2.95",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 443354,
+          "viewsweek": 42,
+          "upvotes": 19,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5302,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

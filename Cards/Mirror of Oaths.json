@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 46656406,
+      "name": "Mirror of Oaths",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent Special Summons a monster(s) from their Main Deck: Destroy that monster(s), and if you do, draw 1 card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mirror-of-oaths-3977",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Eight",
+          "set_code": "TU08-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46656406,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46656406.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46656406.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46656406.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.55",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35518,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8232,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 79185500,
+      "name": "Ironhammer the Giant",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control \"D.D. Esper Star Sparrow\", \"Beast-Warrior Puma\" and \"Phoenix Beast Gairuda\", you can Special Summon this card (from your hand). While this card is face-up on the field, it cannot change its battle position. Once per turn: You can target 1 monster you control; it can attack your opponent directly this turn.",
+      "race": "Rock",
+      "atk": 900,
+      "def": 3500,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ironhammer-the-giant-6647",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN054",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN034",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79185500,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79185500.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79185500.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79185500.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19341,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9976,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

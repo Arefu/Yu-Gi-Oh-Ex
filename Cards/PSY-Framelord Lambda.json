@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 8802510,
+      "name": "PSY-Framelord Lambda",
+      "typeline": [
+        "Psychic",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters, except Tokens\r\nYou can activate the effects of \"PSY-Framegear\" monsters in your hand even while you control a monster(s). If a face-up Psychic monster you control is banished face-up while you control this monster (except during the Damage Step): You can activate this effect; during the End Phase of this turn, add 1 \"PSY-Frame\" card from your Deck to your hand. You can only use this effect of \"PSY-Framelord Lambda\" once per turn.",
+      "race": "Psychic",
+      "atk": 1700,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "PSY-Frame",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psy-framelord-lambda-9939",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "13.92"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN077",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8802510,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8802510.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8802510.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8802510.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.23",
+          "amazon_price": "12.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 385621,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14207,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

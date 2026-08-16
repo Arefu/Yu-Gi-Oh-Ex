@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 99645428,
+      "name": "Gem-Knight Lapis",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The best of friends with Lazuli, this soldier deeply cares about the well-being of her friends.",
+      "race": "Rock",
+      "atk": 1200,
+      "def": 100,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-lapis-8273",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN202",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99645428,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99645428.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99645428.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99645428.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.50",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94791,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11532,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

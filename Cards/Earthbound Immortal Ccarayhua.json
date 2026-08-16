@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 79798060,
+      "name": "Earthbound Immortal Ccarayhua",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "There can only be 1 \"Earthbound Immortal\" monster on the field. If there is no face-up Field Spell Card on the field, destroy this card. Your opponent cannot target this card for attacks. This card can attack your opponent directly. If this card is destroyed by a card effect, except by its own effect: Destroy all cards on the field.",
+      "race": "Reptile",
+      "atk": 2800,
+      "def": 1800,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthbound-immortal-ccarayhua-6691",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN151",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN024",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79798060,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79798060.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79798060.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79798060.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65655,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8459,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

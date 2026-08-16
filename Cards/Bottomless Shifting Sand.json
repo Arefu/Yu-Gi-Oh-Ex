@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 76532077,
+      "name": "Bottomless Shifting Sand",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "At the end of your opponent's turn, destroy the face-up monster(s) with the highest ATK on the field. During your own Standby Phase, if you have 4 or less cards in your hand, this card is destroyed.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bottomless-shifting-sand-6440",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN240",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76532077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76532077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76532077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76532077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115210,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5440,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

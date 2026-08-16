@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 88412339,
+      "name": "Abyss Actor - Extras",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf your opponent controls a monster: You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Abyss Actor - Extras\" once per turn.\n\n[ Monster Effect ] \nYou can Tribute this card; place 1 \"Abyss Actor\" Pendulum Monster from your Deck in your Pendulum Zone, also for the rest of this turn, you cannot Special Summon monsters, except \"Abyss Actor\" monsters, nor activate the Pendulum Effect of \"Abyss Actor - Extras\". You can only use this effect of \"Abyss Actor - Extras\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "If your opponent controls a monster: You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Abyss Actor - Extras\" once per turn.",
+      "monster_desc": "You can Tribute this card; place 1 \"Abyss Actor\" Pendulum Monster from your Deck in your Pendulum Zone, also for the rest of this turn, you cannot Special Summon monsters, except \"Abyss Actor\" monsters, nor activate the Pendulum Effect of \"Abyss Actor - Extras\". You can only use this effect of \"Abyss Actor - Extras\" once per turn.",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-extras-7396",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88412339,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88412339.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88412339.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88412339.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83579,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12714,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

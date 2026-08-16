@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 70278545,
+      "name": "Pot of Generosity",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Return 2 cards from your hand to your Deck. Then shuffle your Deck.",
+      "race": "Normal",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pot-of-generosity-5913",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "The Pot Collection",
+          "set_code": "TBC1-EN002",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70278545,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70278545.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70278545.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70278545.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103914,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6436,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 57354389,
+      "name": "Sentry Soldier of Stone",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If all monsters you control are Rock-Type monsters (min. 1) while this card is in your Graveyard: You can Special Summon this card. You can only use this effect of \"Sentry Soldier of Stone\" once per turn.",
+      "race": "Rock",
+      "atk": 1300,
+      "def": 2000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sentry-soldier-of-stone-4887",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS12",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG12",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57354389,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57354389.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57354389.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57354389.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.49",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 186392,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12495,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

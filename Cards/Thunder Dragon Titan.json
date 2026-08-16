@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 41685633,
+      "name": "Thunder Dragon Titan",
+      "typeline": [
+        "Thunder",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 \"Thunder Dragon\" monsters\r\nMust be either Fusion Summoned, or Special Summoned by banishing 1 Thunder monster from your hand and 1 Thunder Fusion Monster you control, except \"Thunder Dragon Titan\" (in which case you do not use \"Polymerization\"). When a Thunder monster's effect is activated in the hand, even during the Damage Step (Quick Effect): You can destroy 1 card on the field. If this card would be destroyed by card effect, you can banish 2 cards from your GY instead.",
+      "race": "Thunder",
+      "atk": 3200,
+      "def": 3200,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Thunder Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunder-dragon-titan-9611",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN182",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN036",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41685633,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41685633.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41685633.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41685633.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.35",
+          "tcgplayer_price": "4.56",
+          "ebay_price": "6.95",
+          "amazon_price": "1.87",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Thunder Dragon Lord",
+          "views": 456811,
+          "viewsweek": 0,
+          "upvotes": 26,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13924,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

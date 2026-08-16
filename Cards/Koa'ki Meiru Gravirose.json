@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 41201555,
+      "name": "Koa'ki Meiru Gravirose",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Plant-Type monster in you hand. During each of your Standby Phases, you can send 1 Level 3 or lower monster from your Deck to your Graveyard.",
+      "race": "Plant",
+      "atk": 1900,
+      "def": 1300,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-gravirose-3515",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN083",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41201555,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41201555.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41201555.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41201555.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.87",
+          "tcgplayer_price": "12.68",
+          "ebay_price": "11.39",
+          "amazon_price": "1.90",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61779,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8524,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

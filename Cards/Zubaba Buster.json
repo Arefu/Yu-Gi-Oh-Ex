@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 57036718,
+      "name": "Zubaba Buster",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card inflicts battle damage to your opponent, at the end of that Damage Step: Destroy the 1 face-up monster on the field that has the lowest ATK (your choice, if tied), and if you do, this card loses 800 ATK.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zubaba-buster-4860",
+      "card_sets": [
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN019",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57036718,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57036718.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57036718.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57036718.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.25",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18160,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2011-10-21",
+          "konami_id": 9960,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

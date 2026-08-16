@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 89055154,
+      "name": "Power Angel Valkyria",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you negate the activation of a Spell/Trap Card, or monster effect: Add 1 LIGHT Fairy monster from your Deck to your hand. You can only use this effect of \"Power Angel Valkyria\" once per turn.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1050,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Fairy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/power-angel-valkyria-8793",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89055154,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89055154.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89055154.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89055154.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "1.15",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103785,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-01-18",
+          "ocg_date": "2017-09-23",
+          "konami_id": 13352,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

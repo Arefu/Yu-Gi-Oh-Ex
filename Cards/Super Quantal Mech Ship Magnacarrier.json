@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 10424147,
+      "name": "Super Quantal Mech Ship Magnacarrier",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 card, then target 1 \"Super Quantum\" monster you control; Special Summon from your Extra Deck, 1 \"Super Quantal Mech Beast\" Xyz Monster with the same Attribute as that monster you control by using it as material. (This is treated as an Xyz Summon.) You can send this card from the Field Zone to the GY, then target 3 \"Super Quantal Mech Beast\" Xyz Monsters with different names you control and/or in your GY; Special Summon 1 \"Super Quantal Mech King Great Magnus\" from your Extra Deck, and if you do, attach the targeted monsters and their materials to it as material.",
+      "race": "Field",
+      "archetype": "Super Quant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-quantal-mech-ship-magnacarrier-902",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10424147,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10424147.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10424147.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10424147.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "2.50",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131668,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12223,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "data": [
+    {
+      "id": 52927340,
+      "name": "Altergeist Kunquery",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares an attack, if you control an \"Altergeist\" card: You can Special Summon this card from your hand, and if you do, negate that attack. If this card is Special Summoned: You can target 1 face-up card your opponent controls; negate the effects of that card while it and this monster are face-up on the field.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 2400,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Altergeist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/altergeist-kunquery-8909",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN029",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN029",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52927340,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52927340.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52927340.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52927340.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.84",
+          "amazon_price": "0.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 137963,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13231,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

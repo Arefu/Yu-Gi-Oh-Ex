@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 27337596,
+      "name": "Hieratic Dragon King of Atum",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 Dragon monsters\r\nOnce per turn: You can detach 1 material from this card; Special Summon 1 Dragon monster from your Deck, but make its ATK/DEF 0. This card cannot attack during the turn you activate this effect.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2100,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Hieratic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieratic-dragon-king-of-atum-2335",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.52"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27337596,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27337596.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27337596.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27337596.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261787,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10070,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

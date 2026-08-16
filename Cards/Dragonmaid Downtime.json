@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 77515704,
+      "name": "Dragonmaid Downtime",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can target 1 \"Dragonmaid\" monster you control, then activate 1 of these effects;\r\n● Return it to the hand, and if you do, add 1 \"Dragonmaid\" card from your Deck to your hand, except \"Dragonmaid Downtime\".\r\n● Return it to the hand, and if you do, return 1 Spell/Trap your opponent controls to the hand.\r\nYou can only use this effect of \"Dragonmaid Downtime\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonmaid-downtime-10539",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN068",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77515704,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77515704.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77515704.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77515704.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "3.79",
+          "amazon_price": "2.33",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaid Relaxation",
+          "views": 240156,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423026,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14769,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

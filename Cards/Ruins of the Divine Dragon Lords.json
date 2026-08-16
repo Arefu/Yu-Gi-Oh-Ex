@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 69868555,
+      "name": "Ruins of the Divine Dragon Lords",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If a monster(s) is Special Summoned, except from the GY while you control a Level 7 or 8 Dragon monster: Negate that face-up Special Summoned monster(s)'s effects until the end of this turn (even if this card leaves the field). Once per turn: You can send 1 other face-up card you control to the GY; Special Summon 1 \"Dragon Lord Token\" (Dragon/LIGHT/Level 1/ATK 0/DEF 0). If this card is in your GY: You can send 1 Level 7 or 8 Dragon monster from your hand or face-up field to the GY; add this card to your hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ruins-of-the-divine-dragon-lords-5874",
+      "card_sets": [
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69868555,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69868555.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69868555.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69868555.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93737,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-07",
+          "ocg_date": "2016-02-06",
+          "konami_id": 12363,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

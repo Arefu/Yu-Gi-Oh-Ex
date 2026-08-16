@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 68663748,
+      "name": "Fortune's Future",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 of your banished \"Fortune Lady\" monsters; return it to the GY, then draw 2 cards.",
+      "race": "Normal",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-s-future-5771",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68663748,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68663748.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68663748.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68663748.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.29",
+          "amazon_price": "0.52",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108799,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8486,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

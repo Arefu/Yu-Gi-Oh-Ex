@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 41463181,
+      "name": "Salamangreat Heatleo",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ FIRE Effect Monsters\r\nIf this card is Link Summoned: You can target 1 card in your opponent's Spell & Trap Zone; shuffle it into the Deck. Once per turn, during your Main Phase, if this card was Link Summoned using \"Salamangreat Heatleo\" as material: You can target 1 face-up monster on the field and 1 monster in your GY; the ATK of the first target becomes equal to the other target's, until the end of this turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-heatleo-9594",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN186",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.38"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41463181,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41463181.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41463181.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41463181.jpg"
+        },
+        {
+          "id": 41463182,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41463182.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41463182.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41463182.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 381730,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Salamangreat Heatleo",
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13927,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

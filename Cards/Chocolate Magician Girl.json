@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 7198399,
+      "name": "Chocolate Magician Girl",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can discard 1 Spellcaster-Type monster; draw 1 card. Once per turn, if this card is targeted for an attack: You can target 1 Spellcaster-Type monster in your Graveyard, except \"Chocolate Magician Girl\"; Special Summon it, then change the attack target to it, and if you do, the attacking monster's ATK becomes half its current ATK.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Magician Girl",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chocolate-magician-girl-619",
+      "card_sets": [
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2022",
+          "set_code": "LART-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.57"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS52",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.98"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG52",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "6.66"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7198399,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7198399.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7198399.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7198399.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.06",
+          "tcgplayer_price": "4.05",
+          "ebay_price": "19.99",
+          "amazon_price": "4.30",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 402074,
+          "viewsweek": 0,
+          "upvotes": 28,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-21",
+          "konami_id": 12358,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

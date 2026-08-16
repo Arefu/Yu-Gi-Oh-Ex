@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 22026707,
+      "name": "Curtain of the Dark Ones",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A curtain that a spellcaster made, it is said to raise a dark power.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/curtain-of-the-dark-ones-1897",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "8.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22026707,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22026707.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22026707.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22026707.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.77",
+          "tcgplayer_price": "14.99",
+          "ebay_price": "5.00",
+          "amazon_price": "2.19",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22333,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-09-13",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4110,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

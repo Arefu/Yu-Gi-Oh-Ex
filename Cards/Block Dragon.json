@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 94689206,
+      "name": "Block Dragon",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand or GY) by banishing 3 EARTH monsters from your hand and/or GY. Rock monsters you control cannot be destroyed, except by battle. If this card is sent from the field to the GY: You can add up to 3 Rock monsters from your Deck to your hand, whose total Levels equal 8. You can only use this effect of \"Block Dragon\" once per turn.",
+      "race": "Rock",
+      "atk": 2500,
+      "def": 3000,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/block-dragon-7878",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN268",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN268",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 94689206,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94689206.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94689206.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94689206.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "3.50",
+          "amazon_price": "1.89",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 315365,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12433,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

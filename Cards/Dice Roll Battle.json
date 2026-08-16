@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 88482761,
+      "name": "Dice Roll Battle",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack: Target 1 \"Speedroid\" monster in your Graveyard; banish both it and 1 \"Speedroid\" Tuner monster in your hand, and if you do, Special Summon from your Extra Deck, 1 Synchro Monster whose Level equals the total original Levels of those 2 monsters. During your opponent's Battle Step: You can banish this card from your Graveyard, then target 1 face-up Attack Position Synchro Monster on each side of the field; make that face-up Attack Position monster your opponent controls attack that monster you control, and perform damage calculation.",
+      "race": "Normal",
+      "archetype": "Dice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dice-roll-battle-7400",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88482761,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88482761.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88482761.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88482761.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.09",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26667,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12059,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

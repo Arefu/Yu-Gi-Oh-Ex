@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 89019964,
+      "name": "Unchained Soul of Disaster",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains 300 ATK for each \"Unchained\" card in your GY. You can only use each of the following effects of \"Unchained Soul of Disaster\" once per turn.\r\n● You can target 1 face-up monster your opponent controls; immediately after this effect resolves, Link Summon 1 DARK Link Monster using only this card you control and that opponent's monster as material.\r\n● If this card on the field is destroyed by battle or card effect: You can target 1 \"Unchained\" monster in your GY, except \"Unchained Soul of Disaster\"; Special Summon it.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Unchained",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unchained-soul-of-disaster-10403",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN154",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89019964,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89019964.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89019964.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89019964.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.95",
+          "amazon_price": "2.90",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakaishin no Magatama",
+          "views": 253744,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010010,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14637,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

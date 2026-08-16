@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 23851033,
+      "name": "Odd-Eyes Gravity Dragon",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Odd-Eyes Advent\". When this card is Special Summoned: You can return all Spells and Traps your opponent controls to the hand. Your opponent cannot activate cards or effects in response to this effect's activation. You can only use this effect of \"Odd-Eyes Gravity Dragon\" once per turn. Your opponent must pay 500 LP to activate card effects.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2500,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-gravity-dragon-2055",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23851033,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23851033.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23851033.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23851033.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.95",
+          "amazon_price": "1.34",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 142610,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12151,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

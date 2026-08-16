@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 67045745,
+      "name": "F.A. Sonic Meister",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gains ATK equal to its Level x 300. Cannot be destroyed by battle with an opponent's monster whose original Level/Rank is lower than this card's Level. Each time a \"F.A.\" Spell/Trap Card or effect is activated: You can increase this card's Level by 1. If this card is Level 7 or higher, it can make up to 2 attacks on monsters during each Battle Phase.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-sonic-meister-8762",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67045745,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67045745.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67045745.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67045745.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48909,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 13213,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

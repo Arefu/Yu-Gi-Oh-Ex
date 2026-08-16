@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 847915,
+      "name": "Number Wall",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate only if you control a \"Number\" monster. \"Number\" monsters on the field cannot be destroyed by card effects, and cannot be destroyed by battle except with another \"Number\" monster. When a \"Number\" monster you control is destroyed, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-wall-75",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN058",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 847915,
+          "image_url": "https://images.ygoprodeck.com/images/cards/847915.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/847915.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/847915.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.53",
+          "tcgplayer_price": "1.17",
+          "ebay_price": "2.98",
+          "amazon_price": "8.79",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45325,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10727,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

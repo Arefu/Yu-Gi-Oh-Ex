@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 10383554,
+      "name": "Frightfur Leo",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Edge Imp Saw\" + 1 \"Fluffal\" monster\nMust be Fusion Summoned and cannot be Special Summoned by other ways. You can target 1 face-up monster your opponent controls; destroy it, and if you do, inflict damage to your opponent equal to the destroyed monster's original ATK. You can only use this effect of \"Frightfur Leo\" once per turn. This card cannot attack your opponent directly during the turn you activate this effect.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-leo-897",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN037",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2020 M",
+          "set_code": "LART-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10383554,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10383554.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10383554.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10383554.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "2.68",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86377,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11716,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

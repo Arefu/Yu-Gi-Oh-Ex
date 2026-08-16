@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 96029574,
+      "name": "Black Brutdrago",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner Gemini monsters\nOnce per turn, you can send 1 Gemini monster from your hand to the Graveyard to select and destroy 1 Spell or Trap Card your opponent controls. When this card is destroyed and sent to the Graveyard, you can select 1 Gemini monster in your Graveyard and Special Summon it. The Special Summoned Gemini monster is treated as an Effect Monster, and gains its effect.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2600,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/black-brutdrago-7997",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96029574,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96029574.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96029574.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96029574.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "3.50",
+          "amazon_price": "3.19",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 109920,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8478,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

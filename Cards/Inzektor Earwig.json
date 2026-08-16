@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 38450736,
+      "name": "Inzektor Earwig",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can equip 1 \"Inzektor\" monster from your hand or Graveyard to this card. While this card is equipped to a monster, that monster gains ATK and DEF equal to this card's ATK and DEF. When this card is sent to the Graveyard while equipped to a monster: The monster this card was equipped to gains 1000 ATK, until the End Phase.",
+      "race": "Insect",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-earwig-3256",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38450736,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38450736.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38450736.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38450736.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28104,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10053,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

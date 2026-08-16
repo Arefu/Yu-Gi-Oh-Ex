@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 57201737,
+      "name": "Leodrake's Mane",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up \"Naturia\" monster you control. Its ATK becomes 3000, and its effects are negated, until the End Phase.",
+      "race": "Normal",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leodrake-s-mane-4874",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57201737,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57201737.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57201737.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57201737.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.76",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29826,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9130,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

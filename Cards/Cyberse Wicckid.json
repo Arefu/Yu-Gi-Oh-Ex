@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 52698008,
+      "name": "Cyberse Wicckid",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Cyberse monsters\r\nThis Link Summoned card cannot be destroyed by battle or card effects. Cyberse monsters this card points to cannot be destroyed by card effects. If a monster(s) is Special Summoned to a zone(s) this card points to while you control this monster (except during the Damage Step): You can banish 1 Cyberse monster from your GY; add 1 Cyberse Tuner from your Deck to your hand. You can only use this effect of \"Cyberse Wicckid\" once per turn.",
+      "race": "Cyberse",
+      "atk": 800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-wicckid-9865",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52698008,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52698008.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52698008.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52698008.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "0.99",
+          "ebay_price": "2.20",
+          "amazon_price": "1.05",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cyberse Wickid",
+          "views": 475510,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14121,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

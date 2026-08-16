@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 33455338,
+      "name": "Maniacal Servant",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn during your opponent's Standby Phase, you can remove from play any number of DARK monsters from your Graveyard. This monster gains 500 DEF for each monster you removed, until the End Phase.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/maniacal-servant-2841",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33455338,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33455338.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33455338.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33455338.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18113,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2009-09-19",
+          "konami_id": 7800,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

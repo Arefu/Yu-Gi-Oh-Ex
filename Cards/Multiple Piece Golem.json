@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 71628381,
+      "name": "Multiple Piece Golem",
+      "typeline": [
+        "Rock",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Big Piece Golem\" + \"Medium Piece Golem\"\nAt the end of the Battle Phase, if this card attacked or was attacked, you can return it to the Extra Deck. Then, if all of the Fusion Material Monsters that were used for the Fusion Summon of this card are in your Graveyard, you can Special Summon them.",
+      "race": "Rock",
+      "atk": 2600,
+      "def": 1300,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/multiple-piece-golem-6018",
+      "card_sets": [
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71628381,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71628381.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71628381.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71628381.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.62",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "4.95",
+          "amazon_price": "2.94",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48729,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7732,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

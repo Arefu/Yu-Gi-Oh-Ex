@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 2843014,
+      "name": "Nimble Sunfish",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, send 1 Fish-Type monster from your Deck to the Graveyard. Then, you can Special Summon 1 \"Nimble Sunfish\" from your Deck.",
+      "race": "Fish",
+      "atk": 1000,
+      "def": 100,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Nimble",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nimble-sunfish-255",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN084",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2843014,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2843014.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2843014.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2843014.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.84",
+          "tcgplayer_price": "2.15",
+          "ebay_price": "7.79",
+          "amazon_price": "3.70",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62587,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9038,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

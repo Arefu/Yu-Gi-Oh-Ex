@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 75292259,
+      "name": "Great Poseidon Beetle",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card targets an opponent's face-up Attack Position monster for an attack, and that monster is not destroyed by the battle, this card can attack the same monster again in a row. This effect can only be used twice per turn.",
+      "race": "Insect",
+      "atk": 2500,
+      "def": 2300,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/great-poseidon-beetle-6333",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75292259,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75292259.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75292259.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75292259.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Poseidon Giant Beetle",
+          "views": 12048,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2010-03-20",
+          "konami_id": 8745,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

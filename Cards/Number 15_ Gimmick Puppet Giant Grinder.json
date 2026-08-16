@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 88120966,
+      "name": "Number 15: Gimmick Puppet Giant Grinder",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nUp to twice per turn, during your Main Phase 1: You can detach 1 Xyz Material from this card, then target 1 Special Summoned monster your opponent controls; destroy it, then if it was an Xyz Monster, inflict damage to your opponent equal to its original ATK.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-15-gimmick-puppet-giant-grinder-7368",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN032",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88120966,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88120966.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88120966.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88120966.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "6.03",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 15",
+          "views": 230841,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2012-02-21",
+          "konami_id": 10130,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

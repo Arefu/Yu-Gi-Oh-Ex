@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44341034,
+      "name": "Dark Bug",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, select and Special Summon 1 Level 3 Tuner monster from your Graveyard. The effect(s) of that monster is negated.",
+      "race": "Insect",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-bug-3781",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44341034,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44341034.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44341034.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44341034.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "2.49",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31435,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8621,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

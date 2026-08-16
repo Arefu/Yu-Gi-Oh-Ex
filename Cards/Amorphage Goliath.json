@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 69072185,
+      "name": "Amorphage Goliath",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhile you control an \"Amorphage\" monster, any card sent to the GY is banished instead, except \"Amorphage\" cards. Once per turn, during your Standby Phase, Tribute 1 monster or destroy this card.\n\n[ Monster Effect ] \nNeither player can Special Summon monsters from the Extra Deck, except \"Amorphage\" monsters.",
+      "race": "Dragon",
+      "pend_desc": "While you control an \"Amorphage\" monster, any card sent to the GY is banished instead, except \"Amorphage\" cards. Once per turn, during your Standby Phase, Tribute 1 monster or destroy this card.",
+      "monster_desc": "Neither player can Special Summon monsters from the Extra Deck, except \"Amorphage\" monsters.",
+      "atk": 2750,
+      "def": 0,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Amorphage",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amorphage-goliath-5805",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69072185,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69072185.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69072185.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69072185.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 421549,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12303,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

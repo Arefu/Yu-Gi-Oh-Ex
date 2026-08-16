@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 18563744,
+      "name": "Silent Sword Slash",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Silent Swordsman\" monster you control; that monster you control gains 1500 ATK and DEF, and if it does, until the end of this turn, it is unaffected by your opponent's card effects. This card's activation and effect cannot be negated. You can banish this card from your Graveyard; add 1 \"Silent Swordsman\" monster from your Deck to your hand.",
+      "race": "Quick-Play",
+      "archetype": "Silent Swordsman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silent-sword-slash-1607",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18563744,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18563744.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18563744.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18563744.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.74",
+          "tcgplayer_price": "4.39",
+          "ebay_price": "2.99",
+          "amazon_price": "11.72",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95938,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-15",
+          "ocg_date": "2016-06-04",
+          "konami_id": 12566,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

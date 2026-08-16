@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 74879881,
+      "name": "Mimikuril",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can excavate the top card of your Deck, and if it is a monster, Special Summon it, and if you do, place this card on the bottom of the Deck. If it wasn't a monster, or couldn't be Special Summoned, place it on the bottom of the Deck. Place the monster Special Summoned by this effect on the bottom of the Deck during the End Phase. You can only use this effect of \"Mimikuril\" once per turn.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mimikuril-10476",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74879881,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74879881.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74879881.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74879881.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mimickuril",
+          "views": 17420,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010031,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14658,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

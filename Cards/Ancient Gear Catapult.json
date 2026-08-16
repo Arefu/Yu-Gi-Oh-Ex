@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 44052074,
+      "name": "Ancient Gear Catapult",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "While you control no monsters: Target 1 face-up card you control; destroy it, and if you do, Special Summon 1 \"Ancient Gear\" monster from your Deck, ignoring its Summoning conditions. You can banish this card from your Graveyard, then target 1 face-up card you control; destroy it, and if you do, Special Summon 1 \"Ancient Gear Token\" (Machine-Type/EARTH/Level 1/ATK 0/DEF 0). You can only use 1 \"Ancient Gear Catapult\" effect per turn, and only once that turn.",
+      "race": "Normal",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-catapult-3759",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44052074,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44052074.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44052074.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44052074.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.71",
+          "tcgplayer_price": "2.03",
+          "ebay_price": "4.95",
+          "amazon_price": "2.33",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 311074,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-13",
+          "ocg_date": "2016-09-24",
+          "konami_id": 12679,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

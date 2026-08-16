@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 45215453,
+      "name": "Vylon Delta",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner LIGHT monsters\r\nIf this card is in face-up Defense Position during your End Phase, you can add 1 Equip Spell Card from your Deck to your hand.",
+      "race": "Fairy",
+      "atk": 1700,
+      "def": 2800,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-delta-3855",
+      "card_sets": [
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45215453,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45215453.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45215453.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45215453.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.28",
+          "tcgplayer_price": "4.43",
+          "ebay_price": "2.75",
+          "amazon_price": "1.21",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32949,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9188,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

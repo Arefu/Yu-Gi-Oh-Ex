@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 82005435,
+      "name": "Lady Ninja Yae",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "By discarding 1 WIND monster from your hand to the Graveyard, return all Spell and Trap Cards on your opponent's side of the field to the owner's hand.",
+      "race": "Warrior",
+      "atk": 1100,
+      "def": 200,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lady-ninja-yae-6890",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-030",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.83"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN142",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82005435,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82005435.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82005435.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82005435.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "1.70",
+          "ebay_price": "5.00",
+          "amazon_price": "1.64",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92510,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5972,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

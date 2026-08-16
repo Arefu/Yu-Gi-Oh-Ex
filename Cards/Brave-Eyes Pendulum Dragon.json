@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 88305705,
+      "name": "Brave-Eyes Pendulum Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Pendulum Dragon\" monster + 1 Warrior-Type monster\nWhen this card is Fusion Summoned: You can change the ATK of all face-up monsters your opponent currently controls to 0, also, for the rest of this turn, other monsters you control cannot attack. Negate the activated effects of monsters with 0 ATK. At the end of the Damage Step, when this card attacks an opponent's monster, but the opponent's monster was not destroyed by the battle: You can banish that opponent's monster.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Pendulum Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brave-eyes-pendulum-dragon-7388",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN039",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88305705,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88305705.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88305705.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88305705.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "21.85",
+          "tcgplayer_price": "13.55",
+          "ebay_price": "11.85",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 172427,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12774,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

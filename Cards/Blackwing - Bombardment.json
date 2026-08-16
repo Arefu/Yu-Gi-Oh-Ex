@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 25435080,
+      "name": "Blackwing - Bombardment",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 \"Blackwing\" monster to select 1 face-up Synchro Monster you control. That Synchro Monster gains ATK equal to the Tributed monster's ATK, until the End Phase.",
+      "race": "Normal",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-bombardment-2189",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25435080,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25435080.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25435080.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25435080.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38531,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8840,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 78274190,
+      "name": "Superheavy Samurai General Coral",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhile you have a Spell/Trap Card(s) in your Graveyard, this card's Pendulum Scale becomes 4. Once per turn, when a \"Superheavy Samurai\" monster you control destroys an opponent's monster by battle: You can activate this effect; that monster can make a second attack in a row (even if this card leaves the field).\n\n[ Monster Effect ] \nIf you have no Spell/Trap Cards in your Graveyard: You can Tribute up to 2 \"Superheavy Samurai\" monsters; draw that many cards. You can only use this effect of \"Superheavy Samurai General Coral\" once per turn.",
+      "race": "Machine",
+      "pend_desc": "While you have a Spell/Trap Card(s) in your Graveyard, this card's Pendulum Scale becomes 4. Once per turn, when a \"Superheavy Samurai\" monster you control destroys an opponent's monster by battle: You can activate this effect; that monster can make a second attack in a row (even if this card leaves the field).",
+      "monster_desc": "If you have no Spell/Trap Cards in your Graveyard: You can Tribute up to 2 \"Superheavy Samurai\" monsters; draw that many cards. You can only use this effect of \"Superheavy Samurai General Coral\" once per turn.",
+      "atk": 300,
+      "def": 500,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-general-coral-6577",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN182",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78274190,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78274190.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78274190.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78274190.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81640,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12119,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

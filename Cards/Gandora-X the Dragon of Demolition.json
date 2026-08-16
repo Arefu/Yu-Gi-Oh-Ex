@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 71525232,
+      "name": "Gandora-X the Dragon of Demolition",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned from the hand: You can destroy as many other monsters on the field as possible, and if you do, inflict damage to your opponent equal to the highest original ATK on the field among those destroyed monsters (your choice, if tied). This card's ATK becomes equal to the damage inflicted to your opponent by this effect. Once per turn, during your End Phase: Halve your LP.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gandora-x-the-dragon-of-demolition-6007",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS49",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.5"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG49",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71525232,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71525232.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71525232.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71525232.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.49",
+          "amazon_price": "4.74",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gandora-X the Dragon of Demolition",
+          "views": 176268,
+          "viewsweek": 0,
+          "upvotes": 33,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12354,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

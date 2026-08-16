@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 38480590,
+      "name": "Lady Panther",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute this face-up card to return 1 of your monsters destroyed as a result of battle during this turn to the top of your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 1400,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lady-panther-3259",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38480590,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38480590.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38480590.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38480590.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114111,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5193,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

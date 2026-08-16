@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 75361204,
+      "name": "Graydle Split",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster you control; equip this card to it. It gains 500 ATK. During your Main Phase: You can send this card equipped to a monster by this effect to the Graveyard; destroy the monster this card was equipped to, and if you do, Special Summon 2 \"Graydle\" monsters with different names from your Deck, but destroy them during the End Phase. You can only use this effect of \"Graydle Split\" once per turn.",
+      "race": "Normal",
+      "archetype": "Graydle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/graydle-split-6338",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75361204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75361204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75361204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75361204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39678,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12019,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

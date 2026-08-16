@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 47295267,
+      "name": "Cybernetic Zone",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up Machine-Type Fusion Monster you control and remove it from play until the End Phase of this turn. When that monster is returned to the field, double its ATK. During your next Standby Phase, destroy it.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cybernetic-zone-4033",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47295267,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47295267.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47295267.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47295267.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.55",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48932,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7451,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

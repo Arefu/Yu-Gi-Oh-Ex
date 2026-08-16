@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 50720316,
+      "name": "Elemental HERO Shadow Mist",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can add 1 \"Change\" Quick-Play Spell Card from your Deck to your hand. If this card is sent to the GY: You can add 1 \"HERO\" monster from your Deck to your hand, except \"Elemental HERO Shadow Mist\". You can only use 1 \"Elemental HERO Shadow Mist\" effect per turn, and only once that turn.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-shadow-mist-4321",
+      "card_sets": [
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA15",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50720316,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50720316.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50720316.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50720316.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.05",
+          "tcgplayer_price": "3.62",
+          "ebay_price": "3.77",
+          "amazon_price": "4.60",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1102886,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-29",
+          "ocg_date": "2014-06-21",
+          "konami_id": 11308,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 9910360,
+      "name": "D.3.S. Frog",
+      "typeline": [
+        "Aqua",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Des Frog\" + \"Des Frog\" + \"Des Frog\"\nA Fusion Summon of this card can only be conducted with the above Fusion Material Monsters. This card gains 500 ATK for each \"Treeborn Frog\" in your Graveyard.",
+      "race": "Aqua",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-3-s-frog-837",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN156",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.7"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9910360,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9910360.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9910360.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9910360.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "1.60",
+          "amazon_price": "4.50",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110014,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6614,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 57769391,
+      "name": "Altergeist Pixiel",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute this card; excavate the top 3 cards of your Deck, add 1 excavated \"Altergeist\" card to your hand, also send the rest to the GY. You can only use this effect of \"Altergeist Pixiel\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Altergeist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/altergeist-pixiel-9262",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57769391,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57769391.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57769391.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57769391.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33439,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13569,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

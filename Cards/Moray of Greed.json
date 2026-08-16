@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 22123627,
+      "name": "Moray of Greed",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Shuffle 2 WATER monsters from your hand into the Deck, then draw 3 cards.",
+      "race": "Normal",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/moray-of-greed-1908",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Realm of the Sea Emperor Structure Deck",
+          "set_code": "SDRE-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.08"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.07"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN058",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Pot Collection",
+          "set_code": "TBC1-EN013",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22123627,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22123627.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22123627.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22123627.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.71",
+          "tcgplayer_price": "2.45",
+          "ebay_price": "2.49",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 431911,
+          "viewsweek": 42,
+          "upvotes": 14,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8493,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

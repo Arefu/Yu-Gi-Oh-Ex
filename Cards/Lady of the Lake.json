@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 10736540,
+      "name": "Lady of the Lake",
+      "typeline": [
+        "Aqua",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as a Synchro Material, except for the Synchro Summon of a Warrior-Type monster. If this card is used for a Synchro Summon, banish it. When this card is Normal Summoned: You can target 1 \"Noble Knight\" Normal Monster in your Graveyard; Special Summon that target. If this card is in your Graveyard: You can target 1 Level 5 \"Noble Knight\" monster you control; reduce its Level by 1, and if you do, Special Summon this card from the Graveyard.",
+      "race": "Aqua",
+      "atk": 200,
+      "def": 1800,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lady-of-the-lake-926",
+      "card_sets": [
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN013",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "5.66"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN084",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10736540,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10736540.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10736540.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10736540.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "1.35",
+          "ebay_price": "2.25",
+          "amazon_price": "4.25",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38592,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10875,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

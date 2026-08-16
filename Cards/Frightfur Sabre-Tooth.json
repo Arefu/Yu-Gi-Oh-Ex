@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 80889750,
+      "name": "Frightfur Sabre-Tooth",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Frightfur\" Fusion Monster + 1+ \"Fluffal\" and/or \"Edge Imp\" monsters\nWhen this card is Fusion Summoned: You can target 1 \"Frightfur\" monster in your GY; Special Summon it. All \"Frightfur\" monsters you control gain 400 ATK. If this card was Fusion Summoned using 3 or more Fusion Materials, it cannot be destroyed by battle or card effects.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-sabre-tooth-6788",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN137",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80889750,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80889750.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80889750.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80889750.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.49",
+          "amazon_price": "3.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 248271,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11987,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71415349,
+      "name": "Humpty Grumpty",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can change this card to face-down Defense Position. If this card is Flip Summoned: It gains 800 ATK until the end of this turn.",
+      "race": "Zombie",
+      "atk": 1400,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/humpty-grumpty-5998",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71415349,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71415349.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71415349.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71415349.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11237,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10995,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 83241722,
+      "name": "Dice Re-Roll",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "One time, during the rest of this turn, if either player(s) rolls a die (or dice), you can have the player(s) re-roll. (You can only gain this effect once per turn.)",
+      "race": "Normal",
+      "archetype": "Dice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dice-re-roll-6989",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-100",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN100",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN262",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN271",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83241722,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83241722.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83241722.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83241722.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "0.99",
+          "amazon_price": "2.92",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111084,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5797,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

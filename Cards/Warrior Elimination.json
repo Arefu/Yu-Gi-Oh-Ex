@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 90873992,
+      "name": "Warrior Elimination",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy all Warrior monsters on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/warrior-elimination-7586",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "43.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90873992,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90873992.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90873992.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90873992.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29833,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-01",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4659,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

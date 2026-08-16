@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 55624610,
+      "name": "Scrap Hunter",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can select 1 face-up \"Scrap\" monster you control, except this card. Destroy it and send 1 Tuner monster from your Deck to the Graveyard.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 400,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-hunter-4738",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55624610,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55624610.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55624610.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55624610.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23494,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8953,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

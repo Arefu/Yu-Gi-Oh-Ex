@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 64605089,
+      "name": "Swordsman of Revealing Light",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares a direct attack: You can Special Summon this card from your hand, then if this card's DEF is higher than the attacking monster's ATK, destroy that attacking monster. An Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\n● Each turn, the first time this card would be destroyed by battle, it is not destroyed.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 2400,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swordsman-of-revealing-light-5453",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN245",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN095",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64605089,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64605089.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64605089.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64605089.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.89",
+          "tcgplayer_price": "1.14",
+          "ebay_price": "4.75",
+          "amazon_price": "1.31",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74583,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 17,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2013-09-21",
+          "konami_id": 10835,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

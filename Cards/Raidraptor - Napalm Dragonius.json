@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 60508057,
+      "name": "Raidraptor - Napalm Dragonius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can inflict 600 damage to your opponent, also monsters in your possession cannot activate their effects for the rest of this turn, except \"Raidraptor\" monsters. When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 \"Raidraptor\" monster from your Deck, but it has its effects negated.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-napalm-dragonius-5134",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60508057,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60508057.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60508057.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60508057.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31777,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12532,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

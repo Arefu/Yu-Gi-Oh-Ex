@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 49033797,
+      "name": "Forbidden Trapezohedron",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control exactly 2 monster card types (among Fusion, Synchro, and/or Xyz): Apply the following effect based on those types.\r\n● Fusion and Synchro: Special Summon 1 \"Outer Entity\" Xyz Monster from your Extra Deck, and if you do, attach this card to it as material.\r\n● Synchro and Xyz: Special Summon 1 \"Elder Entity\" Fusion Monster from your Extra Deck.\r\n● Xyz and Fusion: Special Summon 1 \"Old Entity\" Synchro Monster from your Extra Deck.\r\nYou can only activate 1 \"Forbidden Trapezohedron\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/forbidden-trapezohedron-4186",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49033797,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49033797.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49033797.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49033797.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "5.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "The Unspeakable Trapezohedron",
+          "views": 32892,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11437,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

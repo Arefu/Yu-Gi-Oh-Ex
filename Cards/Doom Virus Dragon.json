@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 22804644,
+      "name": "Doom Virus Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"The Fang of Critias\", using \"Crush Card Virus\". If this card is Special Summoned: Look at your opponent's hand, all monsters they control, and all cards they draw until the end of their 3rd turn after this effect's activation, and destroy all those monsters with 1500 or more ATK.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Legendary Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doom-virus-dragon-1960",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "10.81"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN057",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN064",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA37",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22804644,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22804644.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22804644.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22804644.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 188445,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11882,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

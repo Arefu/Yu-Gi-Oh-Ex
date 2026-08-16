@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 96457619,
+      "name": "Xyz Veil",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Face-up Xyz Monsters with Xyz Material cannot be targeted by card effects.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-veil-8026",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force Sneak Peek Participation Card",
+          "set_code": "GENF-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96457619,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96457619.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96457619.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96457619.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.95",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32639,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9840,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

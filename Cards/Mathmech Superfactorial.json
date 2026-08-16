@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 87804365,
+      "name": "Mathmech Superfactorial",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target up to 3 \"Mathmech\" monsters in your GY with different names, then activate 1 of these effects;\r\n● Special Summon them, but their effects are negated, then, immediately after this effect resolves, Synchro Summon 1 \"Mathmech\" Synchro Monster using only those monsters, and shuffle the materials into the Deck instead of sending them to the GY.\r\n● Special Summon them, but their effects are negated, then, immediately after this effect resolves, Xyz Summon 1 \"Mathmech\" Xyz Monster using only those monsters.\r\nYou can only activate 1 \"Mathmech Superfactorial\" per turn.",
+      "race": "Normal",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mathmech-superfactorial-10422",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN287",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN012",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "12.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87804365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87804365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87804365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87804365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "10.49",
+          "amazon_price": "10.94",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Processlayer Superfactorial",
+          "views": 159156,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423012,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14755,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

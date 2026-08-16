@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 40364916,
+      "name": "Shiranui Style Solemnity",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "This card's name becomes \"Shiranui Style Synthesis\" while in the Spell & Trap Zone. Once per turn, you can activate 1 of these effects.\r\n● Banish 1 Zombie monster from your GY; the Normal and Special Summons of your Zombie monsters cannot be negated for the rest of this turn (even if this card leaves the field).\r\n● Target 1 Zombie monster you control; banish it, then you can send 1 Zombie monster with 0 DEF from your Deck to the GY.",
+      "race": "Continuous",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-style-solemnity-9787",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40364916,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40364916.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40364916.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40364916.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shiranui Style Succession",
+          "views": 86942,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14141,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

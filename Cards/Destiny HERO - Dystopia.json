@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 90579153,
+      "name": "Destiny HERO - Dystopia",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"Destiny HERO\" monsters\r\nIf this card is Special Summoned: You can target 1 Level 4 or lower \"Destiny HERO\" monster in your GY; inflict damage to your opponent equal to that target's ATK. If this card's current ATK is different from its original ATK (except during the Damage Step) (Quick Effect): You can target 1 card on the field; destroy it, and if you do, this card's ATK becomes equal to this card's original ATK. You can only use each effect of \"Destiny HERO - Dystopia\" once per turn.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2400,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-dystopia-7566",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.86"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA33",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90579153,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90579153.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90579153.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90579153.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "7.49",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 413752,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12705,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

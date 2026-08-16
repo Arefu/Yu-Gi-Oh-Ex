@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 90452877,
+      "name": "Kozmojo",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Kozmo\" monster you control; destroy it, and if you do, banish 1 card your opponent controls or in their Graveyard. You can only activate 1 \"Kozmojo\" per turn.",
+      "race": "Normal",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmojo-7556",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN086",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN123",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90452877,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90452877.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90452877.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90452877.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "4.08",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87794,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12247,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

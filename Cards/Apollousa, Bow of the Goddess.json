@@ -1,0 +1,166 @@
+{
+  "data": [
+    {
+      "id": 4280258,
+      "name": "Apollousa, Bow of the Goddess",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters with different names, except Tokens\r\nYou can only control 1 \"Apollousa, Bow of the Goddess\". The original ATK of this card becomes 800 x the number of Link Materials used for its Link Summon. Once per Chain, when your opponent activates a monster effect (Quick Effect): You can make this card lose exactly 800 ATK, and if you do, negate the activation.",
+      "race": "Fairy",
+      "atk": -1,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/apollousa-bow-of-the-goddess-10242",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN126",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "19.76"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Rarity Collection II",
+          "set_code": "RA02-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN041",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN048",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 4280258,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4280258.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4280258.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4280258.jpg"
+        },
+        {
+          "id": 4280259,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4280259.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4280259.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4280259.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "10.99",
+          "amazon_price": "49.88",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Summoned Divine Bow - Apolloursa",
+          "staple": "Yes",
+          "views": 3164109,
+          "viewsweek": 42,
+          "upvotes": 62,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009048,
+          "treated_as": "Apollousa, Bow of the Goddess",
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14496,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

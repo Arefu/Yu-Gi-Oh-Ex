@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 34379489,
+      "name": "Performapal Bubblebowwow",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a face-up non-Pendulum Monster(s) you control that was Special Summoned from the Extra Deck would be destroyed by battle or card effect, you can destroy this card instead.\n\n[ Monster Effect ] \nWhen this card is Special Summoned from the Extra Deck: You can activate this effect; for the rest of this turn, Pendulum Monsters you control that were Special Summoned from the Extra Deck cannot be destroyed by card effects.",
+      "race": "Beast",
+      "pend_desc": "If a face-up non-Pendulum Monster(s) you control that was Special Summoned from the Extra Deck would be destroyed by battle or card effect, you can destroy this card instead.",
+      "monster_desc": "When this card is Special Summoned from the Extra Deck: You can activate this effect; for the rest of this turn, Pendulum Monsters you control that were Special Summoned from the Extra Deck cannot be destroyed by card effects.",
+      "atk": 2300,
+      "def": 1000,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-bubblebowwow-2921",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34379489,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34379489.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34379489.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34379489.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22474,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12405,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

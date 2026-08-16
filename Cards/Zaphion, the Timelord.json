@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 28929131,
+      "name": "Zaphion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. If you control no monsters, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. You take no battle damage from attacks involving this card. At the end of the Battle Phase, if this card battled: Shuffle all Spells and Traps your opponent controls into the Deck. If this card is sent from the field to the GY: You can draw 1 card. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "WATER",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zaphion-the-timelord-8515",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28929131,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28929131.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28929131.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28929131.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184003,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13158,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

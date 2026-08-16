@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 15286412,
+      "name": "Nordic Relic Gungnir",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish 1 \"Aesir\" or \"Nordic\" monster you control, then target 1 card on the field; destroy it, also during your 2nd End Phase after activation, return the monster you banished to activate this card to the field in face-up Attack Position.",
+      "race": "Normal",
+      "archetype": "Aesir",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nordic-relic-gungnir-1311",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN200",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15286412,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15286412.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15286412.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15286412.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66678,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9361,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

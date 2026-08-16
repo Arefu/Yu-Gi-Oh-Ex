@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 69181753,
+      "name": "Performapal Kuribohble",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares a direct attack: You can Special Summon this card from your hand, and if you do, change the attack target to this card, and proceed to damage calculation. If you would take battle damage from that battle, you gain that much LP instead.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-kuribohble-9961",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN064",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar",
+          "set_code": "AC19-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69181753,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69181753.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69181753.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69181753.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "1.29",
+          "amazon_price": "0.46",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Kuriborder",
+          "views": 126046,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14341,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

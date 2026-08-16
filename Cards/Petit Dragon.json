@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 75356564,
+      "name": "Petit Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A very small dragon known for its vicious attacks.",
+      "race": "Dragon",
+      "atk": 600,
+      "def": 700,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/petit-dragon-6337",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.05"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.43"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75356564,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75356564.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75356564.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75356564.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.00",
+          "amazon_price": "2.34",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184745,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4206,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

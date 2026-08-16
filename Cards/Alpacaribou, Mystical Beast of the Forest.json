@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 77797992,
+      "name": "Alpacaribou, Mystical Beast of the Forest",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "● While in Attack Position: Attack Position Winged Beast, Insect, and Plant-Type monsters you control cannot be destroyed by battle.\n● While in Defense Position: Defense Position Winged Beast, Insect, and Plant-Type monsters you control cannot be targeted by, or be destroyed by, card effects.",
+      "race": "Beast",
+      "atk": 2700,
+      "def": 2100,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Mystical Beast of the Forest",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alpacaribou-mystical-beast-of-the-forest-6545",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN244",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77797992,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77797992.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77797992.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77797992.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34545,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2011-12-17",
+          "konami_id": 10105,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

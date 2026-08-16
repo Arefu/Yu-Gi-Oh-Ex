@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 79766336,
+      "name": "Trap of Darkness",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If your LP is 3000 or less: Pay 1000 LP, then target 1 Normal Trap in your GY, except \"Trap of Darkness\"; this card's effect becomes that target's activated effect, then banish that target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trap-of-darkness-6686",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79766336,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79766336.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79766336.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79766336.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39693,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2005-05-21",
+          "konami_id": 6453,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

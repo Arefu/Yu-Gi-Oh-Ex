@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 11067666,
+      "name": "White Wing Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when an activated card or effect resolves that targets a DARK Spellcaster-Type monster you control, negate that effect, then destroy this card.\n\n[ Monster Effect ] \n(This card is always treated as a \"Synchro Dragon\" card.)\r\nIf this Pendulum Summoned card is used for a Synchro Summon, banish it.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn, when an activated card or effect resolves that targets a DARK Spellcaster-Type monster you control, negate that effect, then destroy this card.",
+      "monster_desc": "(This card is always treated as a \"Synchro Dragon\" card.)\r\nIf this Pendulum Summoned card is used for a Synchro Summon, banish it.",
+      "atk": 1600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Magician",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-wing-magician-8320",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11067666,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11067666.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11067666.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11067666.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "33.00",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 254489,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-06-22",
+          "ocg_date": "2016-12-23",
+          "konami_id": 12910,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

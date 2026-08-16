@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 14729426,
+      "name": "Interplanetary Invader \"A\"",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Gain control of a monster that attacks this face-up Attack Position card, at the end of the Battle Phase.",
+      "race": "Reptile",
+      "atk": 0,
+      "def": 500,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/interplanetary-invader-a-1257",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14729426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14729426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14729426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14729426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Interplanetary Invader A",
+          "views": 36019,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7607,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

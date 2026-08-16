@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45702014,
+      "name": "Elementsaber Molehu",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn (Quick Effect): You can send 1 \"Elementsaber\" monster from your hand to the GY, then target 1 face-up monster on the field; change it to face-down Defense Position. Once per turn, if this card is in the GY: You can declare 1 Attribute; this card in the GY becomes that Attribute until the end of this turn.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Elementsaber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elementsaber-molehu-9216",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45702014,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45702014.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45702014.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45702014.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.30",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67741,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13578,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

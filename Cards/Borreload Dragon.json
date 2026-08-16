@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 31833038,
+      "name": "Borreload Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3+ Effect Monsters\r\nNeither player can target this card with monster effects. Once per turn (Quick Effect): You can target 1 face-up monster on the field; it loses 500 ATK/DEF. Your opponent cannot activate cards or effects in response to this effect's activation. At the start of the Damage Step, if this card attacks an opponent's monster: You can place that opponent's monster in a zone this card points to and take control of it, but send it to the GY during the End Phase of the next turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Borrel",
+      "linkval": 4,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/borreload-dragon-8725",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN131",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "10.24"
+        },
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN048",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN042",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "22.07"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN074",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.28"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31833038,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31833038.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31833038.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31833038.jpg"
+        },
+        {
+          "id": 31833039,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31833039.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31833039.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31833039.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "1.39",
+          "amazon_price": "2.86",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Varrel Lord Dragon",
+          "staple": "Yes",
+          "views": 2378123,
+          "viewsweek": 0,
+          "upvotes": 75,
+          "downvotes": 18,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Borreload Dragon",
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13258,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

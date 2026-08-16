@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 22339232,
+      "name": "Wightmare",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Skull Servant\" while in the GY. You can discard this card, then activate 1 of the following effects.\n● Target 1 of your banished \"Skull Servant\" or \"Wightmare\"; return it to the GY.\n● Target 1 of your banished \"The Lady in Wight\" or \"King of the Skull Servants\"; Special Summon it.",
+      "race": "Zombie",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Skull Servant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wightmare-1919",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN035",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22339232,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22339232.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22339232.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22339232.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.29",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 228046,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9112,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

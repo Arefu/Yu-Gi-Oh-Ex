@@ -1,0 +1,132 @@
+{
+  "data": [
+    {
+      "id": 55863245,
+      "name": "Tatsunoko",
+      "typeline": [
+        "Wyrm",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this Synchro Summoned monster would be used as a Synchro Material, 1 monster in your hand can be used as 1 of the other materials. Unaffected by other monsters' effects.",
+      "race": "Wyrm",
+      "atk": 1700,
+      "def": 500,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tatsunoko-4757",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN103",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.74"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "PLatinum Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55863245,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55863245.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55863245.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55863245.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "2.24",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160124,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2014-12-20",
+          "konami_id": 11660,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 67968069,
+      "name": "Junk Puppet",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Gimmick Puppet\" monster in your GY; Special Summon it. You can only activate 1 \"Junk Puppet\" per turn.",
+      "race": "Normal",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-puppet-5711",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN007",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67968069,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67968069.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67968069.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67968069.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.39",
+          "amazon_price": "0.94",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96562,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2013-03-16",
+          "konami_id": 10454,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

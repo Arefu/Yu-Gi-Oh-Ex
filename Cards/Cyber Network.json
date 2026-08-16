@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 12670770,
+      "name": "Cyber Network",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Destroy this card during your 3rd Standby Phase after activation. Once per turn, if \"Cyber Dragon\" is on the field: You can banish 1 LIGHT Machine monster from your Deck. When this card is sent from the field to the GY: Special Summon as many of your banished LIGHT Machine monsters as possible, and if you do, destroy all Spells and Traps you control. Monsters that were Special Summoned by this effect cannot activate their effects. You cannot conduct your Battle Phase the turn you activate this effect.",
+      "race": "Continuous",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-network-1095",
+      "card_sets": [
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.57"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB20",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENG20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12670770,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12670770.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12670770.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12670770.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151649,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-02-06",
+          "ocg_date": "2013-12-07",
+          "konami_id": 10869,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

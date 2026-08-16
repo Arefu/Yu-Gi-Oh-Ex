@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 50588353,
+      "name": "Crystron Halqifibrax",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters, including a Tuner\r\nIf this card is Link Summoned: You can Special Summon 1 Level 3 or lower Tuner from your hand or Deck in Defense Position, but it cannot activate its effects this turn. During your opponent's Main Phase or Battle Phase (Quick Effect): You can banish this card you control; Special Summon 1 Tuner Synchro Monster from your Extra Deck. (This is treated as a Synchro Summon.) You can only use each effect of \"Crystron Halqifibrax\" once per turn.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": null,
+      "level": 0,
+      "attribute": "WATER",
+      "archetype": "Crystron",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystron-halqifibrax-9068",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.7"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN149",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.24"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN003",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT003",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 50588353,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50588353.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50588353.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50588353.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.37",
+          "amazon_price": "3.24",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Crystron Needlefiber",
+          "staple": "Yes",
+          "views": 2684331,
+          "viewsweek": 21,
+          "upvotes": 139,
+          "downvotes": 109,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13508,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

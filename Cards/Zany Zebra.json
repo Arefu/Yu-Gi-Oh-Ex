@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 97466438,
+      "name": "Zany Zebra",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, during your Main Phase, if this card was activated this turn: You can choose 1 unused Main Monster Zone or Spell & Trap Zone; while this card is in the Pendulum Zone, that chosen Zone cannot be used.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can choose 1 unused Main Monster Zone or Spell & Trap Zone; while this card is face-up in the Monster Zone, that Zone cannot be used.",
+      "race": "Beast",
+      "pend_desc": "Once per turn, during your Main Phase, if this card was activated this turn: You can choose 1 unused Main Monster Zone or Spell & Trap Zone; while this card is in the Pendulum Zone, that chosen Zone cannot be used.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can choose 1 unused Main Monster Zone or Spell & Trap Zone; while this card is face-up in the Monster Zone, that Zone cannot be used.",
+      "atk": 0,
+      "def": 2000,
+      "level": 2,
+      "attribute": "DARK",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zany-zebra-8106",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN209",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN042",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97466438,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97466438.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97466438.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97466438.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25264,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12150,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

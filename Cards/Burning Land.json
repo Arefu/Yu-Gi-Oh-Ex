@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 24294108,
+      "name": "Burning Land",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: If there are any Field Spell Cards on the field, destroy them. During each player's Standby Phase: The turn player takes 500 damage.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/burning-land-2098",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN177",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.23"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA31",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24294108,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24294108.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24294108.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24294108.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 242515,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5126,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

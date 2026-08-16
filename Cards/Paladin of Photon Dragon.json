@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 85346853,
+      "name": "Paladin of Photon Dragon",
+      "typeline": [
+        "Warrior",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Luminous Dragon Ritual\". You can Tribute this card; Special Summon 1 \"Galaxy-Eyes Photon Dragon\" from your hand or Deck. When this card destroys an opponent's monster by battle and sends it to the Graveyard: Draw 1 card.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paladin-of-photon-dragon-7154",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85346853,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85346853.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85346853.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85346853.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "2.95",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43466,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10931,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

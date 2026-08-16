@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 6142213,
+      "name": "Turbo Rocket",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "While attacking, this card cannot be destroyed by battle. If this card attacks, after damage calculation, inflict damage equal to half the ATK of the attack target to your opponent.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/turbo-rocket-538",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6142213,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6142213.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6142213.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6142213.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "2.50",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27547,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8306,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

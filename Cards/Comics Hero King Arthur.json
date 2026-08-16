@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 77631175,
+      "name": "Comics Hero King Arthur",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Warrior-Type monsters\nIf this card would be destroyed by battle, you can detach 1 Xyz Material from this card instead. When you do: It gains 500 ATK, and if it does, inflict 500 damage to your opponent.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/comics-hero-king-arthur-6535",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77631175,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77631175.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77631175.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77631175.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "2.63",
+          "amazon_price": "1.13",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80760,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10714,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

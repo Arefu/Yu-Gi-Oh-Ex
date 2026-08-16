@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 76382116,
+      "name": "Dovelgus, Generaider Boss of Iron",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Dovelgus, Generaider Boss of Iron\". (Quick Effect): You can Tribute any number of \"Generaider\" monsters and/or Machine monsters; Special Summon, from your hand, in Defense Position, exactly that many \"Generaider\" monsters and/or Machine monsters, all with different names from each other and from the Tributed monsters. You can only use this effect of \"Dovelgus, Generaider Boss of Iron\" once per turn.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 2500,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dovelgus-generaider-boss-of-iron-10485",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76382116,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76382116.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76382116.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76382116.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "3.20",
+          "amazon_price": "1.43",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dvergs, Generaider Boss of Iron",
+          "views": 82800,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423029,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14772,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

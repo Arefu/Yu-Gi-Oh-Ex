@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 89423971,
+      "name": "Infernoid Patrulea",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 1 \"Infernoid\" monster from your hand or Graveyard while the total Levels and Ranks of all Effect Monsters you control are 8 or lower, and cannot be Special Summoned by other ways. Once per turn: You can target 1 Spell/Trap Card on the field; destroy it. This card cannot attack the turn you activate this effect. Once per turn, during your opponent's turn: You can Tribute 1 monster, then target 1 card in your opponent's Graveyard; banish it (this is a Quick Effect).",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernoid-patrulea-7468",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN205",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN061",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 1",
+          "set_code": "OP01-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89423971,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89423971.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89423971.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89423971.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.27",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105083,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11535,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

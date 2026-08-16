@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 65079854,
+      "name": "Thorn of Malice",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to \"Black Rose Dragon\" or a Plant-Type monster. It gains 600 ATK. If the equipped monster attacks a Defense Position monster, inflict piercing battle damage to your opponent. If the equipped monster attacks a monster, after damage calculation: The attacked monster loses 600 ATK and DEF. An opponent's monster that battles with the equipped monster cannot be destroyed by that battle.",
+      "race": "Equip",
+      "archetype": "Rose Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thorn-of-malice-5486",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENA20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN103",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN117",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.96"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65079854,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65079854.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65079854.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65079854.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "1.33",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83385,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8199,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

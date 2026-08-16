@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 64689404,
+      "name": "Sword Breaker",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nOnce per turn: You can detach 1 Xyz Material from this card to declare 1 Monster Type; this card gains the following effect. At the start of the Damage Step, if this card battles a monster of a Type that has been declared: Destroy that monster.",
+      "race": "Warrior",
+      "atk": 2700,
+      "def": 1000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sword-breaker-5459",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64689404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64689404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64689404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64689404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.85",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.64",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40475,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10180,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

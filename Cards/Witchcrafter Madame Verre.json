@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 21522601,
+      "name": "Witchcrafter Madame Verre",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation, if your Spellcaster monster battles an opponent's monster (Quick Effect): You can reveal any number of Spells with different names in your hand, and if you do, your battling monster gains 1000 ATK/DEF for each card revealed, until the end of this turn. (Quick Effect): You can discard 1 Spell; negate the effects of all face-up monsters your opponent currently controls, until the end of this turn. You can only use each effect of \"Witchcrafter Madame Verre\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-madame-verre-10140",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN224",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.3"
+        },
+        {
+          "set_name": "Magnificent Maestros",
+          "set_code": "MAMS-EN122",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Maestros",
+          "set_code": "MAMS-EN122",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21522601,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21522601.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21522601.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21522601.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.95",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcraft Master Verre",
+          "views": 310242,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 11,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412019,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14409,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

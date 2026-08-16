@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 8384771,
+      "name": "Performapal Gumgumouton",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when an attack is declared involving a monster you control and an opponent's monster: You can activate this effect; that monster you control cannot be destroyed by that battle.\n\n[ Monster Effect ] \nOnce per turn, when an attack is declared involving a monster you control and an opponent's monster: You can activate this effect; that monster you control cannot be destroyed by that battle.",
+      "race": "Beast",
+      "pend_desc": "Once per turn, when an attack is declared involving a monster you control and an opponent's monster: You can activate this effect; that monster you control cannot be destroyed by that battle.",
+      "monster_desc": "Once per turn, when an attack is declared involving a monster you control and an opponent's monster: You can activate this effect; that monster you control cannot be destroyed by that battle.",
+      "atk": 900,
+      "def": 2400,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-gumgumouton-711",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8384771,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8384771.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8384771.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8384771.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44481,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12404,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

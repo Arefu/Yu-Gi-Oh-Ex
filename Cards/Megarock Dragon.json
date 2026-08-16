@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 71544954,
+      "name": "Megarock Dragon",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by removing from play a Rock-Type monster(s) in your Graveyard. The original ATK and DEF of this card become the number of Rock-Type monsters you removed from play when you Special Summoned this card x 700.",
+      "race": "Rock",
+      "atk": -1,
+      "def": -1,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megarock-dragon-6009",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN195",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Invincible Fortress",
+          "set_code": "SD7-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.82"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN015",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71544954,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71544954.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71544954.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71544954.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.62",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "1.94",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104082,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6324,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

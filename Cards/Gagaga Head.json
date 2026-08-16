@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 67120578,
+      "name": "Gagaga Head",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a monster and you control no monsters, you can Normal Summon this card without Tributing as a Level 4 monster. When this card is Normal Summoned: You can target up to 2 \"Gagaga\" monsters in your Graveyard, except \"Gagaga Head\"; Special Summon them, also you cannot Special Summon monsters for the rest of this turn, except by an Xyz Summon that uses only \"Gagaga\" monsters as materials. An Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\n● If it is Xyz Summoned: Draw 1 card.",
+      "race": "Spellcaster",
+      "atk": 2100,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Gagaga",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gagaga-head-5641",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 29",
+          "set_code": "OP29-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 9 promotional card",
+          "set_code": "YZ09-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "17.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67120578,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67120578.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67120578.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67120578.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "12.99",
+          "amazon_price": "19.99",
+          "coolstuffinc_price": "15.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63297,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-06",
+          "ocg_date": "2015-10-03",
+          "konami_id": 12097,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

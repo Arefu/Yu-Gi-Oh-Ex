@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 64910482,
+      "name": "T.G. Cyber Magician",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card you control would be used as Synchro Material for a \"T.G.\" monster, \"T.G.\" monsters in your hand can be used as the non-Tuner Synchro Materials. Once per turn, during the End Phase, if this card is in the GY because it was destroyed on the field and sent there this turn: You can add 1 \"T.G.\" monster from your Deck to your hand, except \"T.G. Cyber Magician\".",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-cyber-magician-5474",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN205",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9",
+          "set_code": "OP09-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64910482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64910482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64910482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64910482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "1.88",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55171,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9487,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 81863068,
+      "name": "Hiro's Shadow Scout",
+      "typeline": [
+        "Fiend",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Your opponent draws 3 cards. Both players look at the cards. If there are any Spell Cards among them, discard all those Spell Card(s) to the Graveyard.",
+      "race": "Fiend",
+      "atk": 650,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hiro-s-shadow-scout-6871",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.03"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81863068,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81863068.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81863068.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81863068.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.29",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 218096,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4617,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 74713516,
+      "name": "Dark Mimic LV1",
+      "typeline": [
+        "Fiend",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Draw 1 card.\nOnce per turn, during your Standby Phase: You can send this card to the GY; Special Summon 1 \"Dark Mimic LV3\" from your hand or Deck.",
+      "race": "Fiend",
+      "atk": 100,
+      "def": 1000,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-mimic-lv1-6285",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENA18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74713516,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74713516.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74713516.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74713516.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "1.49",
+          "amazon_price": "2.47",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 245933,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6101,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

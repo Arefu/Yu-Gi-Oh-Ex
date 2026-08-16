@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 22993208,
+      "name": "Onslaught of the Fire Kings",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls a monster and you control no monsters: Special Summon 1 FIRE Beast, Beast-Warrior, or Winged Beast monster from your Deck. Its effects are negated, also it is destroyed during the End Phase. You can only activate 1 \"Onslaught of the Fire Kings\" per turn.",
+      "race": "Normal",
+      "archetype": "Fire King",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/onslaught-of-the-fire-kings-1976",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22993208,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22993208.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22993208.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22993208.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 143241,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-08",
+          "ocg_date": "2012-12-08",
+          "konami_id": 10348,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

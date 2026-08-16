@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 9264485,
+      "name": "Horus' Servant",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot target face-up \"Horus the Black Flame Dragon\" monsters with Spells, Traps, or card effects.",
+      "race": "Beast-Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Horus the Black Flame Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/horus-servant-783",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN206",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9264485,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9264485.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9264485.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9264485.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89443,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6108,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

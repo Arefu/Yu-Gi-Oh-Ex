@@ -1,0 +1,130 @@
+{
+  "data": [
+    {
+      "id": 36021814,
+      "name": "King of the Skull Servants",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The original ATK of this card is the combined number of \"King of the Skull Servants\" and \"Skull Servant\" in your GY x 1000. When this card is destroyed by battle and sent to the GY: You can banish 1 other \"King of the Skull Servants\" or 1 \"Skull Servant\" from your GY; Special Summon this card.",
+      "race": "Zombie",
+      "atk": -1,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Skull Servant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/king-of-the-skull-servants-3045",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN212",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16",
+          "set_code": "OP16-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 2",
+          "set_code": "STP2-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.32"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Four",
+          "set_code": "TU04-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36021814,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36021814.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36021814.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36021814.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "1.56",
+          "ebay_price": "3.34",
+          "amazon_price": "2.69",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 382816,
+          "viewsweek": 42,
+          "upvotes": 30,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6341,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

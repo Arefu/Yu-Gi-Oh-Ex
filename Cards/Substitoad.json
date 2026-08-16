@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 20663556,
+      "name": "Substitoad",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 monster to Special Summon 1 \"Frog\" monster from your Deck, except \"Frog the Jam\". \"Frog\" monsters, except \"Frog the Jam\", cannot be destroyed by battle.",
+      "race": "Aqua",
+      "atk": 100,
+      "def": 2000,
+      "level": 1,
+      "attribute": "WATER",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/substitoad-1775",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN054",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN197",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN197",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 20663556,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20663556.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20663556.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20663556.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.56",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "16.99",
+          "amazon_price": "24.66",
+          "coolstuffinc_price": "15.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 204556,
+          "viewsweek": 42,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7601,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

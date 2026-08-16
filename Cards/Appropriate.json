@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 48539234,
+      "name": "Appropriate",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent draws a card(s) outside of either Draw Phase. After that, each time your opponent draws a card(s) outside of either Draw Phase, immediately draw 2 cards.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/appropriate-4144",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48539234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48539234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48539234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48539234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.50",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 286971,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4947,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

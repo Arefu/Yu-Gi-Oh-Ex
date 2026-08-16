@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 55599882,
+      "name": "Bujintervention",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Bujin\" monster on the field; apply this effect to it for the rest of this turn. Each time it destroys a monster by battle whose current ATK is greater than or equal to the targeted monster's original ATK, and sends it to the Graveyard: Banish the destroyed monster, and if you do, banish all monsters from your opponent's hand, Main Deck, Extra Deck, and Graveyard with the same name that the destroyed monster had in the Graveyard.",
+      "race": "Normal",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujintervention-4733",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant: Deluxe Edition",
+          "set_code": "LVAL-ENDE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.54"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55599882,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55599882.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55599882.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55599882.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19200,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-07",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11093,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

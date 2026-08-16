@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 25614410,
+      "name": "Legacy of a HERO",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Return 2 Fusion Monsters from your Graveyard to the Extra Deck that list a \"HERO\" monster as Material; draw 3 cards. You can only activate 1 \"Legacy of a HERO\" per turn.",
+      "race": "Normal",
+      "archetype": "HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legacy-of-a-hero-8310",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25614410,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25614410.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25614410.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25614410.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.75",
+          "tcgplayer_price": "2.30",
+          "ebay_price": "5.38",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77101,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 8150,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

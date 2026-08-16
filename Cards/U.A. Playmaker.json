@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 98229575,
+      "name": "U.A. Playmaker",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by returning 1 \"U.A.\" monster you control to the hand, except \"U.A. Playmaker\". You can only Special Summon \"U.A. Playmaker\" once per turn this way. When another \"U.A.\" monster you control declares an attack: You can have this card lose exactly 800 ATK, and if it does, your attacking monster gains 800 ATK.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "U.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/u-a-playmaker-8161",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98229575,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98229575.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98229575.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98229575.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "3.49",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29686,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11637,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

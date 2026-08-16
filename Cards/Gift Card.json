@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 39526584,
+      "name": "Gift Card",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Your opponent gains 3000 Life Points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gift-card-3349",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39526584,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39526584.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39526584.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39526584.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.21",
+          "tcgplayer_price": "5.93",
+          "ebay_price": "1.00",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 176921,
+          "viewsweek": 22,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7234,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

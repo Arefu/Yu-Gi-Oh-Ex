@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 2930675,
+      "name": "World Legacy Key",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can target 1 of your banished \"Mekk-Knight\" monsters or \"World Legacy\" cards; add it to your hand. Negate any opponent's Trap effect that activates in the same column as a \"Mekk-Knight\" monster you control.",
+      "race": "Continuous",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-key-8956",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN206",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2930675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2930675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2930675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2930675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Key to the World Legacy",
+          "views": 120101,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13428,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

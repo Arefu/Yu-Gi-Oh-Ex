@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 59057152,
+      "name": "Noble Knight Medraut",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field. While equipped with a \"Noble Arms\" Equip Spell, this card becomes an Effect Monster with this effect.\n● This card becomes DARK and its Level is increased by 1. Once per turn, if you control no other monsters: You can Special Summon 1 \"Noble Knight\" monster from your Deck in Defense Position, except \"Noble Knight Medraut\", and if you do, destroy 1 Equip Spell you control.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-medraut-5026",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN006",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "5.34"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN205",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN205",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59057152,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59057152.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59057152.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59057152.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.09",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150724,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10469,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 26841274,
+      "name": "D-Fusion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters you control as Fusion Material, and if you do, it cannot be destroyed by battle or card effects this turn. Only \"Destiny HERO\" monsters can be used as Fusion Material for a Fusion Summon using this card's effect.",
+      "race": "Normal",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-fusion-2298",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA30",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26841274,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26841274.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26841274.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26841274.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.48",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56672,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12709,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

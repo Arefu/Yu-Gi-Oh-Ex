@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 75937826,
+      "name": "B.E.S. Big Core MK-2",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Normal Summon this card without Tributing. When this card is Special Summoned, place 3 counters on it. This card cannot be destroyed by battle. If this card attacks or is attacked, remove 1 counter from this card at the end of the Damage Step. If you cannot, destroy it.",
+      "race": "Machine",
+      "atk": 2400,
+      "def": 1100,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "B.E.S.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/b-e-s-big-core-mk-2-6391",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75937826,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75937826.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75937826.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75937826.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.49",
+          "amazon_price": "2.29",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58090,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 7678,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

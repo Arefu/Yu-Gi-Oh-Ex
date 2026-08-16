@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 34906152,
+      "name": "Mass Driver",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 monster on your side of the field to inflict 400 points of damage to your opponent's Life Points.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mass-driver-2964",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN143",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.58"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 34906152,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34906152.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34906152.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34906152.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "2.10",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126453,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5671,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

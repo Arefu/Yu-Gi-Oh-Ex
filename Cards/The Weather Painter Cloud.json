@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 28806532,
+      "name": "The Weather Painter Cloud",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If another face-up \"The Weather\" card you control is sent to the GY: You can target up to 2 \"The Weather\" Spells/Traps in your GY; place them face-up in your Spell & Trap Zone. You can only use this effect of \"The Weather Painter Cloud\" once per turn. Once per turn, during the Standby Phase of the turn after this card was banished from the field to activate a \"The Weather\" card's effect: You can Special Summon this banished card.",
+      "race": "Fairy",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "The Weather",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-painter-cloud-8797",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28806532,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28806532.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28806532.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28806532.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.20",
+          "tcgplayer_price": "3.26",
+          "ebay_price": "10.55",
+          "amazon_price": "15.78",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cloudy Weathery Sleet",
+          "views": 101709,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13330,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

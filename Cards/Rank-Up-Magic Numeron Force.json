@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 48333324,
+      "name": "Rank-Up-Magic Numeron Force",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up Xyz Monster you control; Special Summon from your Extra Deck, 1 \"Number C\" monster with the same Type as that monster you control, but 1 Rank higher, by using it as the Xyz Material. (This Special Summon is treated as an Xyz Summon. Xyz Materials attached to it also become Xyz Materials on the Summoned monster.) Then, if any face-up cards are on the field other than this card and the monster Summoned by it, negate the effects of those other cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rank-up-magic-numeron-force-4124",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN101",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN059",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN059",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48333324,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48333324.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48333324.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48333324.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.88",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "4.99",
+          "amazon_price": "3.30",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 248547,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10662,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

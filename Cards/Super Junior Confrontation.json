@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 29590905,
+      "name": "Super Junior Confrontation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when an opponent's monster declares an attack. Negate the battle, and 1 monster with the lowest ATK in face-up Attack Position your opponent controls battles against 1 monster with the lowest DEF in face-up Defense Position you control. After that battle, end the Battle Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-junior-confrontation-2507",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN169",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29590905,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29590905.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29590905.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29590905.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.95",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39230,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6579,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

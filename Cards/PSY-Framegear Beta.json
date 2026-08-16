@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 2810642,
+      "name": "PSY-Framegear Beta",
+      "typeline": [
+        "Psychic",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect, and cannot be Special Summoned by other ways. When an opponent's monster declares an attack while you control no monsters: You can Special Summon both this card from your hand and 1 \"PSY-Frame Driver\" from your hand, Deck, or Graveyard, and if you do, destroy the attacking monster, then end the Battle Phase. During the End Phase, banish the face-up monsters Special Summoned by this effect.",
+      "race": "Psychic",
+      "atk": 700,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "PSY-Frame",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psy-framegear-beta-251",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN030",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2810642,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2810642.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2810642.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2810642.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.58",
+          "tcgplayer_price": "2.41",
+          "ebay_price": "3.69",
+          "amazon_price": "5.76",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62984,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12069,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

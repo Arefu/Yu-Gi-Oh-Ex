@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 50304345,
+      "name": "Evil HERO Infernal Prodigy",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters, you can Special Summon this card (from your hand) in Attack Position. Once per turn, during the End Phase, if this card was Tributed this turn to Tribute Summon a \"HERO\" monster: Draw 1 card.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 600,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Evil HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-hero-infernal-prodigy-4287",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 3",
+          "set_code": "DP06-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.71"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.18"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENA08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50304345,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50304345.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50304345.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50304345.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.50",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 303237,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-10-20",
+          "konami_id": 7376,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

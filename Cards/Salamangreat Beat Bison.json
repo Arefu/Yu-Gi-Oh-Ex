@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 25166510,
+      "name": "Salamangreat Beat Bison",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 3 or more \"Salamangreat\" monsters in your GY: You can Special Summon this card from your hand in Defense Position. You can target FIRE Link Monsters in your GY, up to the number of face-up cards your opponent controls; return them to the Extra Deck, then, you can negate the effects of face-up cards your opponent controls until the end of this turn, up to the number of cards you returned. You can only use each effect of \"Salamangreat Beat Bison\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-beat-bison-9944",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25166510,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25166510.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25166510.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25166510.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73153,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14243,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

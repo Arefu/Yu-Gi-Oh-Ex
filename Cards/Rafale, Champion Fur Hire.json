@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 38916526,
+      "name": "Rafale, Champion Fur Hire",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can excavate the top cards of your Deck equal to the number of monsters \"Fur Hire\" you control with different names, except \"Rafale, Champion Fur Hire\", and if you do, add 1 of them to your hand, also shuffle the rest back into your Deck. When your opponent activates a monster effect (Quick Effect): You can discard 1 card \"Fur Hire\"; negate the activation. You can only use each effect of \"Rafale, Champion Fur Hire\" once per turn.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Fur Hire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rafale-champion-fur-hire-9277",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN253",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN023",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38916526,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38916526.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38916526.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38916526.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.61",
+          "tcgplayer_price": "1.37",
+          "ebay_price": "8.00",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lafarl, Hero of the Skyfang Brigade",
+          "views": 279490,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13664,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

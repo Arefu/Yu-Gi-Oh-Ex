@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 91646304,
+      "name": "Crusadia Arboria",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) in Defense Position to your zone a Link Monster points to. You can only Special Summon \"Crusadia Arboria\" once per turn this way. If a \"Crusadia\" monster(s) you control would be destroyed by battle or card effect, you can banish this card from your field or GY instead. You can only use this effect of \"Crusadia Arboria\" once per turn.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 1800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Crusadia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crusadia-arboria-9438",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN078",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91646304,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91646304.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91646304.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91646304.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.65",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Palladion of the Sacred Tree",
+          "views": 419993,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13727,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

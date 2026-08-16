@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 35330871,
+      "name": "Malacoda, Netherlord of the Burning Abyss",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Good & Evil in the Burning Abyss\". Must be Ritual Summoned, and cannot be Special Summoned by other ways. Once per turn, during either player's turn: You can send 1 \"Burning Abyss\" monster from your hand to the Graveyard, then target 1 face-up monster your opponent controls; until the end of this turn, that target loses ATK and DEF equal to the ATK and DEF of the \"Burning Abyss\" monster sent to the Graveyard this way. If this card is sent from the field to the Graveyard: You can target 1 card on the field; send it to the Graveyard.",
+      "race": "Fiend",
+      "atk": 2700,
+      "def": 2200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malacoda-netherlord-of-the-burning-abyss-2999",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN085",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35330871,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35330871.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35330871.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35330871.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "10.63",
+          "tcgplayer_price": "8.27",
+          "ebay_price": "12.99",
+          "amazon_price": "48.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48025,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11635,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 94773007,
+      "name": "Jirai Gumo",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card declares an attack: Toss a coin and call it. If you call it wrong, lose half your Life Points.",
+      "race": "Insect",
+      "atk": 2200,
+      "def": 100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jirai-gumo-7886",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN227",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.16"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-END05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94773007,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94773007.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94773007.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94773007.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 489571,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4373,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 9391354,
+      "name": "Gravi-Crush Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 1 face-up Continuous Spell Card you control to the Graveyard, then target 1 monster your opponent controls; destroy that target.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravi-crush-dragon-797",
+      "card_sets": [
+        {
+          "set_name": "Dark Legion Starter Deck",
+          "set_code": "YS15-ENL04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Duelist Pack: Jesse Anderson",
+          "set_code": "DP07-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9391354,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9391354.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9391354.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9391354.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.02",
+          "ebay_price": "2.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58537,
+          "viewsweek": 105,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7121,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

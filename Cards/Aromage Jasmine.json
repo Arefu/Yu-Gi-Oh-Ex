@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 96789758,
+      "name": "Aromage Jasmine",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, while your LP are higher than your opponent's, you can Normal Summon 1 Plant monster in addition to your Normal Summon/Set, except \"Aromage Jasmine\". (You can only gain this effect once per turn.) Once per turn, if you gain LP: Draw 1 card.",
+      "race": "Plant",
+      "atk": 100,
+      "def": 1900,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aromage-jasmine-8052",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96789758,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96789758.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96789758.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96789758.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "1.09",
+          "ebay_price": "1.48",
+          "amazon_price": "1.91",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 269619,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11818,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

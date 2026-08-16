@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 31383545,
+      "name": "XX-Saber Darksoul",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase, if this card was sent from your side of the field to your Graveyard this turn: You can add 1 \"X-Saber\" monster from your Deck to your hand.",
+      "race": "Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xx-saber-darksoul-2659",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2011 Wave 2",
+          "set_code": "CT08-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.43"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN081",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31383545,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31383545.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31383545.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31383545.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "3.65",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79335,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9031,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

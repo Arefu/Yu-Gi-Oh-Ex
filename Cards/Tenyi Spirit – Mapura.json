@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 60942444,
+      "name": "Tenyi Spirit - Mapura",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. When your opponent activates a card or effect that targets a face-up non-Effect Monster(s) you control (Quick Effect): You can banish this card from your hand or GY; negate the activation, and if you do, destroy that card. You can only use each effect of \"Tenyi Spirit - Mapura\" once per turn.",
+      "race": "Wyrm",
+      "atk": 600,
+      "def": 1500,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Tenyi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tenyi-spirit-mapura-10211",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60942444,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60942444.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60942444.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60942444.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tenyi Dragon Manira",
+          "views": 182184,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009014,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14458,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

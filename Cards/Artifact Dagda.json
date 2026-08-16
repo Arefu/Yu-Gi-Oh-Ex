@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 7480763,
+      "name": "Artifact Dagda",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different names\r\nWhen an effect of another card on the field is activated (Quick Effect): You can Set 1 \"Artifact\" monster from your hand or Deck to your Spell & Trap Zone as a Spell, but destroy it during your opponent's next End Phase. During your opponent's turn, if this Link Summoned card is destroyed: You can Special Summon 1 \"Artifact\" monster from your GY in Defense Position. You can only use each effect of \"Artifact Dagda\" once per turn.",
+      "race": "Fairy",
+      "atk": 1500,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Artifact",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/artifact-dagda-10737",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7480763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7480763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7480763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7480763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.20",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "3.85",
+          "amazon_price": "12.95",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 301825,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257061,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14942,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

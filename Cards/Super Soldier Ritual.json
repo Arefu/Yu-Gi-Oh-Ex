@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 14094090,
+      "name": "Super Soldier Ritual",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card can be used to Ritual Summon any \"Black Luster Soldier\" Ritual Monster. You must also Tribute monsters from your hand or field whose total Levels exactly equal 8. During your Main Phase, except the turn this card was sent to the Graveyard: You can banish this card, 1 LIGHT monster, and 1 DARK monster from your Graveyard; Special Summon 1 \"Black Luster Soldier\" Ritual Monster from your hand, ignoring its Summoning conditions. You can only use this effect of \"Super Soldier Ritual\" once per turn.",
+      "race": "Ritual",
+      "archetype": "Black Luster Soldier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-soldier-ritual-1209",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN146",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14094090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14094090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14094090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14094090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "2.56",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 172563,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12000,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

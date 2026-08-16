@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 13893596,
+      "name": "Exodius the Ultimate Forbidden Lord",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by shuffling all monsters in your Graveyard into the Deck, and cannot be Special Summoned by other ways. When this card declares an attack: Send 1 monster from your hand or Deck to the Graveyard. This card gains 1000 ATK for each Normal Monster in your Graveyard. If this face-up card would leave the field, banish it instead. If there are 5 different \"Forbidden One\" cards in your Graveyard that were sent there by this card's effect, you win the Duel.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Exodia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exodius-the-ultimate-forbidden-lord-1190",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN063",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2010 Wave 2",
+          "set_code": "CT07-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.22"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Shonen Jump May 2008 subscription bonus",
+          "set_code": "JUMP-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13893596,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13893596.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13893596.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13893596.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.68",
+          "tcgplayer_price": "0.72",
+          "ebay_price": "3.95",
+          "amazon_price": "4.69",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 318981,
+          "viewsweek": 0,
+          "upvotes": 28,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-02",
+          "ocg_date": "2007-07-30",
+          "konami_id": 7392,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

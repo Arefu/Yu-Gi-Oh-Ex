@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 7953868,
+      "name": "Blue-Blooded Oni",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Flip Summoned: It is changed to Defense Position. Once per turn: You can detach 1 Xyz Material you control to target 1 Level 4 Zombie-Type monster in your Graveyard; Special Summon that target.",
+      "race": "Zombie",
+      "atk": 1000,
+      "def": 1700,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-blooded-oni-679",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN034",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7953868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7953868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7953868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7953868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.70",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23428,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9651,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

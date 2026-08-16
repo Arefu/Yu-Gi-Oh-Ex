@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 16255173,
+      "name": "The Grand Jupiter",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can discard 2 cards, then target 1 face-up monster your opponent controls; equip that face-up monster to this card. This card gains ATK equal to the combined original ATK of the monsters equipped to it by this effect. Once per turn, during the End Phase: You can target 1 Monster Card equipped to this card by this card's effect; Special Summon it to your field.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-grand-jupiter-1400",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN104",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16255173,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16255173.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16255173.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16255173.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24408,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 9467,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

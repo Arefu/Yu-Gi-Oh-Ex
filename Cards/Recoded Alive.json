@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 70238111,
+      "name": "Recoded Alive",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Link-3 Cyberse Link Monster you control or is in your GY; banish it, and if you do, Special Summon 1 \"Code Talker\" monster from your Extra Deck. If you control no monsters in the Extra Monster Zone: You can banish this card from your GY, then target 1 of your banished \"Code Talker\" monsters; Special Summon it.",
+      "race": "Normal",
+      "archetype": "Code Talker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/recoded-alive-9036",
+      "card_sets": [
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70238111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70238111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70238111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70238111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67500,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13201,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

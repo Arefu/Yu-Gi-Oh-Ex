@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 15661378,
+      "name": "Trishula, the Dragon of Icy Imprisonment",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 monsters with different names\r\nMust first be either Fusion Summoned using only monsters in your hand and/or field, or Special Summoned (from your Extra Deck) by banishing the above cards you control (in which case you do not use \"Polymerization\"). If this card was Special Summoned using only monsters that were originally Dragons: You can reveal and banish 3 cards (1 from your Deck, 1 from the top of your opponent's Deck, and 1 from their Extra Deck). You can only use this effect of \"Trishula, the Dragon of Icy Imprisonment\" once per turn.",
+      "race": "Dragon",
+      "atk": 2700,
+      "def": 2000,
+      "level": 9,
+      "attribute": "WATER",
+      "archetype": "Ice Barrier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trishula-the-dragon-of-icy-imprisonment-9500",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN048",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Weekly Shonen Jump December 2018 membership promotional cards",
+          "set_code": "JUMP-EN088",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "12.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15661378,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15661378.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15661378.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15661378.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.12",
+          "tcgplayer_price": "2.81",
+          "ebay_price": "2.49",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trishula, the Ice Prison Dragon",
+          "views": 237783,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-12-01",
+          "ocg_date": "2018-05-21",
+          "konami_id": 13972,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

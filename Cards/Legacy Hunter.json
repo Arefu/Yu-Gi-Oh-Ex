@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 87010442,
+      "name": "Legacy Hunter",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card attacks a face-down Defense Position monster and destroys it and sends it to the Graveyard as a result of battle, your opponent returns 1 random card from their hand to their Deck. Their Deck is then shuffled.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legacy-hunter-7283",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-067",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.6"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN180",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87010442,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87010442.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87010442.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87010442.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "7.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37259,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6029,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

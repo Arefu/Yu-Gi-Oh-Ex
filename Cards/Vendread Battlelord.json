@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 3909436,
+      "name": "Vendread Battlelord",
+      "typeline": [
+        "Zombie",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Vendread\" Ritual Spell. You can banish 1 \"Vendread\" card from your GY and declare 1 type of card (Monster, Spell, or Trap); for the rest of this turn, your opponent cannot activate cards or effects of that type. If this Ritual Summoned card is sent to the GY: You can add 1 Ritual Monster from your Deck to your hand, and if you do, send 1 \"Vendread\" monster from your Deck to the GY. You can only use each effect of \"Vendread Battlelord\" once per turn.",
+      "race": "Zombie",
+      "atk": 2700,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vendread-battlelord-9288",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3909436,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3909436.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3909436.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3909436.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "1.73",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149446,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13534,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 74093656,
+      "name": "Tune Warrior",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Normal"
+      ],
+      "type": "Normal Tuner Monster",
+      "humanReadableCardType": "Tuner Normal Monster",
+      "frameType": "normal",
+      "desc": "The Warrior's antenna can attune it to any energy wave. It can monitor transmissions from miles away but always suffers from bad reception.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 200,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tune-warrior-6227",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Duelist Toolbox",
+          "set_code": "5DS3-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's",
+          "set_code": "5DS1-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74093656,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74093656.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74093656.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74093656.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "1.69",
+          "amazon_price": "2.10",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58574,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-05",
+          "ocg_date": "2008-03-15",
+          "konami_id": 7684,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

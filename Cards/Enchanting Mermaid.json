@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 75376965,
+      "name": "Enchanting Mermaid",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A beautiful mermaid that lures voyagers to a watery grave.",
+      "race": "Fish",
+      "atk": 1200,
+      "def": 900,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/enchanting-mermaid-6343",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.09"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 3",
+          "set_code": "OP03-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75376965,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75376965.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75376965.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75376965.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "5.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 223691,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4257,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

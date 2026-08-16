@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 38723936,
+      "name": "Question",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "When activating this card, your opponent cannot check cards in the Graveyard. Your opponent calls the name of the first monster found at the bottom of your Graveyard. If he/she calls it right, the monster is removed from play. If he/she calls it wrong, the monster is Special Summoned to your side of the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/question-3282",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-104",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38723936,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38723936.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38723936.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38723936.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.03",
+          "tcgplayer_price": "2.70",
+          "ebay_price": "4.68",
+          "amazon_price": "4.50",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117660,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5494,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

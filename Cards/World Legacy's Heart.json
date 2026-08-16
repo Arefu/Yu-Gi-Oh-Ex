@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 97648103,
+      "name": "World Legacy's Heart",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 2 \"World Chalice\" monsters in your GY with different names; add them to your hand. If your linked Link Monster would be destroyed by battle, you can banish this card from your GY instead. You can only activate 1 \"World Legacy's Heart\" per turn.",
+      "race": "Normal",
+      "archetype": "World Chalice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-s-heart-8810",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97648103,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97648103.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97648103.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97648103.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.25",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy's Aegis",
+          "views": 77972,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13097,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

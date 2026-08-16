@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 83518674,
+      "name": "Danger! Ogopogo!",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand; your opponent randomly chooses 1 card from your entire hand, then you discard the chosen card. Then, if the discarded card was not \"Danger! Ogopogo!\", Special Summon 1 \"Danger! Ogopogo!\" from your hand, and if you do, draw 1 card. If this card is discarded: You can send 1 \"Danger!\" card from your Deck to the GY, except \"Danger! Ogopogo!\". You can only use this effect of \"Danger! Ogopogo!\" once per turn.",
+      "race": "Sea Serpent",
+      "atk": 1200,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-ogopogo-10124",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83518674,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83518674.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83518674.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83518674.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.95",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "2.95",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 225072,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14351,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

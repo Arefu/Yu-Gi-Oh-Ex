@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 16304628,
+      "name": "Elemental HERO Gaia",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Elemental HERO\" monster + 1 EARTH monster\nMust be Fusion Summoned and cannot be Special Summoned by other ways. When this card is Fusion Summoned: Target 1 face-up monster your opponent controls; until the End Phase, its ATK is halved and this card gains the same amount of ATK.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 2600,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-gaia-1407",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN154",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2011 Wave 1",
+          "set_code": "CT08-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.78"
+        },
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN034",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16304628,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16304628.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16304628.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16304628.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.33",
+          "tcgplayer_price": "1.74",
+          "ebay_price": "7.90",
+          "amazon_price": "9.36",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 230233,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2008-09-21",
+          "konami_id": 8122,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

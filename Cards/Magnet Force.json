@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 17841166,
+      "name": "Magnet Force",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "This turn, all monsters on the field whose original Types are Machine or Rock, are unaffected by your opponent's monster effects (except their own).",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magnet-force-1549",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.72"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17841166,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17841166.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17841166.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17841166.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "1.17",
+          "ebay_price": "2.99",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71572,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-15",
+          "ocg_date": "2016-06-04",
+          "konami_id": 12569,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

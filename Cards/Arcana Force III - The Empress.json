@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 35781051,
+      "name": "Arcana Force III - The Empress",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, toss a coin: ● Heads: Each time your opponent Normal Summons or Sets a monster, you can Special Summon 1 \"Arcana Force\" monster from your hand. ● Tails: Each time your opponent Normal Summons or Sets a monster, send 1 card from your hand to the Graveyard.",
+      "race": "Fairy",
+      "atk": 1300,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-force-iii-the-empress-3028",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35781051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35781051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35781051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35781051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "5.00",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87879,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7583,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

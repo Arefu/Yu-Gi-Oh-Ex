@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 76589815,
+      "name": "Battlin' Boxer Cheat Commissioner",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nAll monsters your opponent controls must attack, if able. While you control another \"Battlin' Boxer\" monster, your opponent cannot target this card for attacks. When an attack is declared involving another \"Battlin' Boxer\" monster you control: You can detach 2 Xyz Materials from this card; look at your opponent's hand, then Set 1 Spell Card from their hand to your side of the field.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 1300,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlin-boxer-cheat-commissioner-6445",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN160",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76589815,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76589815.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76589815.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76589815.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.40",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52418,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10780,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

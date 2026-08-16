@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 52963531,
+      "name": "Performapal Splashmammoth",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when a Fusion Monster(s) is Special Summoned to your side of the field (except during the Damage Step): You can Special Summon 1 face-up \"Odd-Eyes\" Pendulum Monster from your Extra Deck.\n\n[ Monster Effect ] \nDuring your Main Phase: You can Fusion Summon 1 Dragon-Type Fusion Monster from your Extra Deck, using monsters you control as Fusion Materials. You can only use this effect of \"Performapal Splashmammoth\" once per Duel.",
+      "race": "Beast",
+      "pend_desc": "Once per turn, when a Fusion Monster(s) is Special Summoned to your side of the field (except during the Damage Step): You can Special Summon 1 face-up \"Odd-Eyes\" Pendulum Monster from your Extra Deck.",
+      "monster_desc": "During your Main Phase: You can Fusion Summon 1 Dragon-Type Fusion Monster from your Extra Deck, using monsters you control as Fusion Materials. You can only use this effect of \"Performapal Splashmammoth\" once per Duel.",
+      "atk": 1900,
+      "def": 2300,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Performapal",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-splashmammoth-4510",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN106",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52963531,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52963531.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52963531.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52963531.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36643,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11946,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

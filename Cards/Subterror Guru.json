@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 16428514,
+      "name": "Subterror Guru",
+      "typeline": [
+        "Dragon",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can add 1 \"Subterror\" card from your Deck to your hand, except \"Subterror Guru\". You can target 1 other face-up monster on the field; change that monster, also this card, to face-down Defense Position. This is a Quick Effect if you control another \"Subterror\" card. You can only use each effect of \"Subterror Guru\" once per turn.",
+      "race": "Dragon",
+      "atk": 1600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-guru-8977",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN084",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16428514,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16428514.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16428514.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16428514.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.82",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 295067,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 27,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2017-09-21",
+          "konami_id": 13459,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

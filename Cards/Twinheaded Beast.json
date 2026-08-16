@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 82035781,
+      "name": "Twinheaded Beast",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack twice during the same Battle Phase.",
+      "race": "Beast",
+      "atk": 1700,
+      "def": 1900,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twinheaded-beast-6893",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! Destiny Board Traveler promotional cards",
+          "set_code": "DBT-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82035781,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82035781.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82035781.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82035781.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.34",
+          "tcgplayer_price": "0.85",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14066,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-26",
+          "ocg_date": "2004-02-05",
+          "konami_id": 5923,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

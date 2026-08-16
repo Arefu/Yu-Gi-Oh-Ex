@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 65472618,
+      "name": "Dragodies, the Empowered Warrior",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAt the start of the Damage Step, if a monster you control battles an opponent's face-up monster: You can discard 1 card; the opponent's battling monster's ATK and DEF become half its current ATK and DEF (even if this card leaves the field).\n\n[ Monster Effect ] \nIf this card in its owner's Monster Zone is destroyed by your opponent's attack or card effect: You can add 1 Warrior or Spellcaster-Type monster with 2000 or less ATK from your Deck to your hand, except \"Dragodies, the Empowered Warrior\", during the End Phase of this turn.",
+      "race": "Warrior",
+      "pend_desc": "At the start of the Damage Step, if a monster you control battles an opponent's face-up monster: You can discard 1 card; the opponent's battling monster's ATK and DEF become half its current ATK and DEF (even if this card leaves the field).",
+      "monster_desc": "If this card in its owner's Monster Zone is destroyed by your opponent's attack or card effect: You can add 1 Warrior or Spellcaster-Type monster with 2000 or less ATK from your Deck to your hand, except \"Dragodies, the Empowered Warrior\", during the End Phase of this turn.",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Empowered Warrior",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragodies-the-empowered-warrior-5518",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN120",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65472618,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65472618.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65472618.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65472618.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "20.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76548,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11871,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

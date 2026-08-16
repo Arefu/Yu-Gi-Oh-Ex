@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 13903402,
+      "name": "Mardel, Generaider Boss of Light",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Mardel, Generaider Boss of Light\". If this card is Normal or Special Summoned: You can add 1 \"Generaider\" card or 1 Plant monster from your Deck to your hand, except \"Mardel, Generaider Boss of Light\". You can only use this effect of \"Mardel, Generaider Boss of Light\" once per turn.",
+      "race": "Plant",
+      "atk": 2400,
+      "def": 2400,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mardel-generaider-boss-of-light-10483",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "14.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13903402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13903402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13903402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13903402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "8.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mardell, Generaider Boss of Light",
+          "views": 325120,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423027,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14770,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

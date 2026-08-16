@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 36841733,
+      "name": "Elemental HERO Grandmerge",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"HERO\" Normal Monsters\r\nMust be Fusion Summoned. Gains ATK/DEF equal to the combined original Levels of the materials used for its Fusion Summon x 300. When this card destroys an opponent's monster by battle: You can Tribute this card; Special Summon 1 \"Elemental HERO\" Fusion Monster from your Extra Deck, ignoring its Summoning conditions, but it cannot attack monsters with an equal or lower Level than it.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-grandmerge-9919",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36841733,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36841733.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36841733.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36841733.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "2.07",
+          "ebay_price": "3.09",
+          "amazon_price": "3.47",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Elemental HERO Grandman",
+          "views": 164103,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14216,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

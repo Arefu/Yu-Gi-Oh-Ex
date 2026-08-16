@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 63845230,
+      "name": "Eater of Millions",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 5 or more cards from your hand, field, and/or Extra Deck, face-down. This card gains 100 ATK/DEF for each face-down banished card. This card cannot be Tributed, nor used as material for a Fusion, Synchro, or Xyz Summon. Once per turn, at the start of the Damage Step, if this card battles an opponent's monster: You can banish that opponent's monster, face-down.",
+      "race": "Fiend",
+      "atk": -1,
+      "def": -1,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eater-of-millions-5392",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN196",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN078",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63845230,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63845230.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63845230.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63845230.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.29",
+          "amazon_price": "0.85",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 723568,
+          "viewsweek": 42,
+          "upvotes": 22,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12767,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

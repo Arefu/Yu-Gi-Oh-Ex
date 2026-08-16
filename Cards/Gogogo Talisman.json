@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 63583431,
+      "name": "Gogogo Talisman",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "While you control 2 or more \"Gogogo\" monsters, you take no effect damage. Once per turn, when an attack is declared involving a \"Gogogo\" monster you control: You can activate this effect; that monster you control cannot be destroyed by that battle.",
+      "race": "Continuous",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gogogo-talisman-5371",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63583431,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63583431.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63583431.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63583431.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18893,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2013-09-21",
+          "konami_id": 10838,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

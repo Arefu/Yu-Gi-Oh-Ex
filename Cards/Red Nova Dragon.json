@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 97489701,
+      "name": "Red Nova Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "2 Tuners + \"Red Dragon Archfiend\"\nThis card gains 500 ATK for each Tuner monster in your Graveyard. Cannot be destroyed by an opponent's card effects. When an opponent's monster declares an attack: You can target the attacking monster; banish this card, and if you do, negate that attack. During the next End Phase: Special Summon this card banished by this effect.",
+      "race": "Dragon",
+      "atk": 3500,
+      "def": 3000,
+      "level": 12,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-nova-dragon-8107",
+      "card_sets": [
+        {
+          "set_name": "Blazing Dominion",
+          "set_code": "BLZD-EN101",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2010 Wave 2",
+          "set_code": "CT07-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "9.24"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN073",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97489701,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97489701.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97489701.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97489701.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "3.99",
+          "amazon_price": "6.90",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 326699,
+          "viewsweek": 21,
+          "upvotes": 29,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-02",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9119,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

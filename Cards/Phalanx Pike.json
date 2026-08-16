@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 42709949,
+      "name": "Phalanx Pike",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The equipped monster gains 900 ATK for each card in either Graveyard that has the same name it does.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phalanx-pike-3645",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42709949,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42709949.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42709949.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42709949.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.17",
+          "tcgplayer_price": "1.44",
+          "ebay_price": "3.49",
+          "amazon_price": "5.02",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44090,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7222,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "id": 50277355,
+      "name": "Cross-Sheep",
+      "typeline": [
+        "Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different names\r\nIf a monster is Special Summoned to a zone this card points to: You can apply the following effects, in sequence, based on the card types of the monster(s) this card points to.\r\n● Ritual: Draw 2 cards, then discard 2 cards. ● Fusion: Special Summon 1 Level 4 or lower monster from your GY. ● Synchro: All monsters you control gain 700 ATK. ● Xyz: All monsters your opponent controls lose 700 ATK.\r\nYou can only use this effect of \"Cross-Sheep\" once per turn.",
+      "race": "Beast",
+      "atk": 700,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cross-sheep-10668",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN018",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL40",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN106",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN106",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50277355,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50277355.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50277355.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50277355.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "3.45",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Clotheep",
+          "views": 1557213,
+          "viewsweek": 126,
+          "upvotes": 33,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011047,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14856,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

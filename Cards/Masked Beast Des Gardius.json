@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 48948935,
+      "name": "Masked Beast Des Gardius",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 2 monsters, including at least 1 \"Grand Tiki Elder\" or \"Melchid the Four-Face Beast\". When this card is sent from the field to the Graveyard, equip 1 \"The Mask of Remnants\" from your Deck to 1 monster on the field.",
+      "race": "Fiend",
+      "atk": 3300,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Mask",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-beast-des-gardius-4177",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN107",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN107",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.54"
+        },
+        {
+          "set_name": "Tactical Evolution: Special Edition",
+          "set_code": "TAEV-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48948935,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48948935.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48948935.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48948935.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "2.88",
+          "amazon_price": "5.88",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 169546,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-09-12",
+          "ocg_date": "2001-08-08",
+          "konami_id": 5097,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

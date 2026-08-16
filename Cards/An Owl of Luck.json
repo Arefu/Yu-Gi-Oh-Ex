@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 23927567,
+      "name": "An Owl of Luck",
+      "typeline": [
+        "Winged Beast",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Select 1 Field Spell Card from your Deck and place it on top of your Deck. If \"Necrovalley\" is on the field, you can add the selected Field Spell Card to your hand instead.",
+      "race": "Winged Beast",
+      "atk": 300,
+      "def": 500,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/an-owl-of-luck-2063",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23927567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23927567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23927567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23927567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "3.95",
+          "amazon_price": "1.64",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96657,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5523,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

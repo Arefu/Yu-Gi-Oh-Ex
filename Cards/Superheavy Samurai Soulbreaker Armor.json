@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 77679716,
+      "name": "Superheavy Samurai Soulbreaker Armor",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Superheavy Samurai\" monster you control; equip this monster from your hand or your side of the field to that target. It loses 1000 DEF, also it cannot be destroyed by battle. If this card is in your Graveyard: You can banish all \"Superheavy Samurai Soulbreaker Armors\" from your Graveyard, then target 1 \"Superheavy Samurai\" monster on the field whose current DEF is lower than its original DEF; inflict damage to your opponent equal to the difference between its current and original DEF.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 500,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-soulbreaker-armor-6537",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 77679716,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77679716.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77679716.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77679716.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37992,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11344,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

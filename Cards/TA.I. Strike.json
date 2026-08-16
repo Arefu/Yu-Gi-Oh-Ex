@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 86449372,
+      "name": "TA.I. Strike",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "During damage calculation, if your monster battles an opponent's monster: Your battling monster's ATK becomes that opponent's monster's ATK, during that damage calculation only, also, the controller of any monster destroyed by that battle takes damage equal to its original ATK, at the end of the Damage Step. If your \"@Ignister\" monster would be destroyed by battle, you can banish this card from your GY instead. You can only activate 1 \"TA.I. Strike\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ta-i-strike-10554",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.94"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86449372,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86449372.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86449372.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86449372.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66247,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011051,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-08-22",
+          "konami_id": 14860,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 74431740,
+      "name": "Assault Reboot",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 \"/Assault Mode\" monster; Special Summon 1 \"/Assault Mode\" monster from your Deck with a different name in Defense Position, ignoring its Summoning conditions. You can banish this card from your GY, then target any number of cards in your GY, with different names, that are \"Assault Mode Activate\" and/or specifically list \"Assault Mode Activate\" in their text, except \"Assault Reboot\"; shuffle them into the Deck. You can only use each effect of \"Assault Reboot\" once per turn.",
+      "race": "Normal",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-reboot-10009",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74431740,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74431740.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74431740.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74431740.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31180,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14320,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

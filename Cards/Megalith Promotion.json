@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 40204620,
+      "name": "Megalith Promotion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can target 1 Level 4 or lower monster you control; its Level becomes double its original Level until the end of this turn (even if this card leaves the field). You can only use this effect of \"Megalith Promotion\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-promotion-10631",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40204620,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40204620.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40204620.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40204620.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28638,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011071,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14880,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

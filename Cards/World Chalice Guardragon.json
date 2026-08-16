@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 84899094,
+      "name": "World Chalice Guardragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a card or effect is activated that targets your linked monster (Quick Effect): You can send this card from your hand or field to the GY; negate the activation, and if you do, destroy that card. You can banish this card from your GY, then target 1 Normal Monster in your GY; Special Summon it in Defense Position to your zone a Link Monster points to. You can only use this effect of \"World Chalice Guardragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 400,
+      "def": 400,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "World Chalice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-chalice-guardragon-8809",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84899094,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84899094.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84899094.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84899094.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Chalice's Protector Dragon",
+          "views": 320455,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13060,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

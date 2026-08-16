@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 32295838,
+      "name": "Digitron",
+      "typeline": [
+        "Cyberse",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A subspecies found in electronic space. There's little information on it.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": 0,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/digitron-8779",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32295838,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32295838.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32295838.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32295838.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59269,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13192,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

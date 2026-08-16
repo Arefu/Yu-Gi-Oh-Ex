@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 24668830,
+      "name": "Germ Infection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The ATK of a non Machine-Type monster equipped with this card is decreased by 300 points at each of its Standby Phases.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/germ-infection-2131",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.68"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24668830,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24668830.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24668830.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24668830.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.99",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 212115,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4877,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

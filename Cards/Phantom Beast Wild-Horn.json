@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 7576264,
+      "name": "Phantom Beast Wild-Horn",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.",
+      "race": "Beast-Warrior",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantom-beast-wild-horn-650",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force promotional cards",
+          "set_code": "GX02-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "14.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7576264,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7576264.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7576264.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7576264.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "2.37",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28426,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-16",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6955,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

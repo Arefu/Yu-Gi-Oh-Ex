@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 12255007,
+      "name": "Performapal Fireflux",
+      "typeline": [
+        "Insect",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when an opponent's monster declares an attack: You can Tribute 1 \"Performapal\" monster; negate the attack, then end the Battle Phase.\n\n[ Monster Effect ] \nIf a \"Performapal\" or \"Odd-Eyes\" monster you control attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step.",
+      "race": "Insect",
+      "pend_desc": "Once per turn, when an opponent's monster declares an attack: You can Tribute 1 \"Performapal\" monster; negate the attack, then end the Battle Phase.",
+      "monster_desc": "If a \"Performapal\" or \"Odd-Eyes\" monster you control attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step.",
+      "atk": 1200,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Performapal",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-fireflux-1058",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN034",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12255007,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12255007.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12255007.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12255007.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32612,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12277,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 23085002,
+      "name": "Number 68: Sanaphond the Sky Prison",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nGains 100 ATK and DEF for each monster in the GYs. Once per turn: You can detach 1 material from this card; until the end of your opponent's next turn, this card cannot be destroyed by card effects, also neither player can Special Summon monsters from the GYs.",
+      "race": "Rock",
+      "atk": 2100,
+      "def": 2700,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-68-sanaphond-the-sky-prison-8533",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tins",
+          "set_code": "CT14-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.38"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23085002,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23085002.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23085002.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23085002.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.91",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 68",
+          "views": 356017,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-24",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13164,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

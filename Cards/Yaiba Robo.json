@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 10315429,
+      "name": "Yaiba Robo",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A cubical machine equipped with cutting blades for shredding an opponent to mincemeat.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yaiba-robo-892",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10315429,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10315429.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10315429.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10315429.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "5.00",
+          "amazon_price": "1.22",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12551,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-05-14",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4412,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

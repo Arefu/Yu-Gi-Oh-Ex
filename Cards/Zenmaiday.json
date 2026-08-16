@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 83319610,
+      "name": "Zenmaiday",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn: You can target 1 Machine-Type Xyz Monster you control; attach 1 \"Wind-Up\" monster from your hand or field to that monster as an Xyz Material. You can send this face-up card from the field to the Graveyard, then target 1 \"Wind-Up\" Xyz Monster you control; Special Summon, from your Extra Deck, 1 \"Wind-Up\" monster that is 1 Rank higher than that target, by using that target as Xyz Material. (This Special Summon is treated as an Xyz Summon. Xyz Materials attached to it also become Xyz Materials on the Summoned monster.) You cannot activate these effects in the same Chain.",
+      "race": "Continuous",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zenmaiday-6998",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83319610,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83319610.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83319610.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83319610.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20772,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11595,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

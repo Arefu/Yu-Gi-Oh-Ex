@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 92854392,
+      "name": "Staunch Defender",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when your opponent declares an attack. Select 1 face-up monster on your side of the field. During this turn, your opponent can only designate the selected monster as an attack target and your opponent must attack the selected monster with all face-up monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/staunch-defender-7729",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.36"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN208",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92854392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92854392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92854392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92854392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89741,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5737,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

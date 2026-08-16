@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 58383100,
+      "name": "Cipher Mirror Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Cipher\" monster you control is destroyed by battle and sent to your Graveyard: You can discard this card; send 1 card from your hand or field to the Graveyard, and if you do, Special Summon that destroyed monster. During the End Phase, if this card is in the Graveyard because it was sent there this turn: You can add 1 \"Cipher\" card from your Deck to your hand. You can only use this effect of \"Cipher Mirror Knight\" once per turn.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Cipher",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cipher-mirror-knight-4964",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58383100,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58383100.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58383100.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58383100.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69834,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12601,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

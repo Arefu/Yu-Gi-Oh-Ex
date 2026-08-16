@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 92821268,
+      "name": "Gimmick Puppet Twilight Joker",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Gimmick Puppet\" monster you control is destroyed by battle and sent to your Graveyard: You can banish that monster; Special Summon this card from your hand. You can only use the effect of \"Gimmick Puppet Twilight Joker\" once per turn.",
+      "race": "Machine",
+      "atk": 800,
+      "def": 1600,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gimmick-puppet-twilight-joker-7726",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92821268,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92821268.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92821268.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92821268.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43273,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10693,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

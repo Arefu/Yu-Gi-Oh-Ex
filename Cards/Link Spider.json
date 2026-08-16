@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 98978921,
+      "name": "Link Spider",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Normal Monster\r\nOnce per turn: You can Special Summon 1 Level 4 or lower Normal Monster from your hand to your zone this card points to.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-spider-8436",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN045",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Advanced Demo Deck Extra Pack",
+          "set_code": "DEM4-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ultimate Tournament Pack 1",
+          "set_code": "UP01-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98978921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98978921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98978921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98978921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "5.95",
+          "amazon_price": "3.96",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1762315,
+          "viewsweek": 42,
+          "upvotes": 31,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-20",
+          "ocg_date": "2017-03-25",
+          "konami_id": 13034,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

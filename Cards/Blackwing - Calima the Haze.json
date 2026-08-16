@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 88305978,
+      "name": "Blackwing - Calima the Haze",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's Battle Phase, if you control no monsters: You can banish this card from the Graveyard, then target 1 Synchro Monster in your Graveyard; Special Summon that target, but banish it at the end of the Battle Phase (this is a Quick Effect).",
+      "race": "Winged Beast",
+      "atk": 600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-calima-the-haze-7389",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88305978,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88305978.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88305978.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88305978.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36097,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9300,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

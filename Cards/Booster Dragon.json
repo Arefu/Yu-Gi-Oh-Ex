@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 12023931,
+      "name": "Booster Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Rokket\" monsters\nOnce per turn: You can target 1 other face-up monster on the field; it gains 500 ATK/DEF. Your opponent cannot activate cards or effects in response to this effect's activation. If this Link Summoned card is destroyed by battle or card effect and sent to the GY: You can target 1 other Dragon monster in your GY; Special Summon it. You can only use this effect of \"Booster Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Rokket",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/booster-dragon-9201",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12023931,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12023931.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12023931.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12023931.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131428,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-12-23",
+          "konami_id": 13516,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

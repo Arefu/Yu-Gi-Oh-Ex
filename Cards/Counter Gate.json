@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 94561645,
+      "name": "Counter Gate",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares a direct attack: Negate the attack, and if you do, draw 1 card, then if it is a monster, immediately after this effect resolves, you can Normal Summon it in face-up Attack Position.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/counter-gate-7864",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN010",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS10",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG10",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94561645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94561645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94561645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94561645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.38",
+          "amazon_price": "1.36",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69208,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12493,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

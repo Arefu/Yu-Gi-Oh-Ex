@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 26920296,
+      "name": "Dreamland",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "This card can activate these effects depending on the monster card types on the field.\n● Fusion: Once per turn, if a monster(s) is sent from your hand or field to the GY by a card effect (except during the Damage Step): You can draw 1 card.\n● Synchro: When a monster(s) is Normal or Special Summoned (except during the Damage Step): You can increase their Levels by 1.\n● Xyz: Once per turn, during your End Phase: Destroy the monster(s) on the field with the highest Level.\nYou can only activate 1 \"Dreamland\" per turn.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dreamland-2304",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tins",
+          "set_code": "CT14-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26920296,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26920296.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26920296.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26920296.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35792,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-24",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11879,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

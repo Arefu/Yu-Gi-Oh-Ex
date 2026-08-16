@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 13143275,
+      "name": "Guardragon Pisty",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower Dragon monster\r\nYou cannot Special Summon monsters, except Dragon monsters. During your Main Phase: You can target 1 of your Dragon monsters that is banished or in your GY; Special Summon it to your zone that 2 or more Link Monsters point to. You can only use this effect of \"Guardragon Pisty\" once per turn. You can only Special Summon \"Guardragon Pisty(s)\" once per turn.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Guardragon",
+      "linkval": 1,
+      "linkmarkers": [
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-pisty-9843",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN022",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2.38"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13143275,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13143275.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13143275.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13143275.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.97",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "1.46",
+          "amazon_price": "1.66",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pisty the Guardragon",
+          "views": 825275,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14129,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

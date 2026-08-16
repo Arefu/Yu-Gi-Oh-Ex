@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 81105204,
+      "name": "Blackwing - Kris the Crack of Dawn",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Blackwing\" monster other than \"Blackwing - Kris the Crack of Dawn\", you can Special Summon this card (from your hand). You can only Special Summon \"Blackwing - Kris the Crack of Dawn\" once per turn this way. Once per turn, this card cannot be destroyed by Spell/Trap effects.",
+      "race": "Winged Beast",
+      "atk": 1900,
+      "def": 300,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-kris-the-crack-of-dawn-6807",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN061",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN143",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENC05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN006",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81105204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81105204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81105204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81105204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.89",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 307439,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 9460,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

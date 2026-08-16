@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27784944,
+      "name": "The Weather Painter Aurora",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can place 1 \"The Weather\" Spell/Trap from your hand, Deck, or GY face-up in your Spell & Trap Zone. Your opponent cannot target \"The Weather\" Spells/Traps you control with card effects, also they cannot be destroyed by your opponent's card effects. Once per turn, during the Standby Phase of the turn after this card was banished from the field to activate a \"The Weather\" card's effect: You can Special Summon this banished card.",
+      "race": "Fairy",
+      "atk": 2200,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "The Weather",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-painter-aurora-8800",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27784944,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27784944.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27784944.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27784944.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "1.11",
+          "ebay_price": "1.95",
+          "amazon_price": "3.86",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Polar Weathery Lampla",
+          "views": 94258,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13333,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}
