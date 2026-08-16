@@ -108,9 +108,11 @@ namespace Types
 
         public static void Save(string Path)
         {
-            var Packed_File = new FileInfo(Path.Replace("!", string.Empty));
-
-            Writer = new BinaryWriter(File.Open($"{Packed_File}", FileMode.Create, FileAccess.Write, FileShare.ReadWrite));
+            var Packed_File = new FileInfo(Path.Replace(
+                System.IO.Path.GetExtension(Path),
+                string.Empty
+            ));
+            Writer = new BinaryWriter(File.Open($"{Packed_File}", FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite));
             Dictionary<string, long> FileOffsets = new Dictionary<string, long>();
 
             var CurrentOffset = (uint)(Directory.GetFiles(Path).Length) * 64 + 16;
