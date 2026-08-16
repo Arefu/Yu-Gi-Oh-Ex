@@ -92,9 +92,9 @@ namespace WolfX
             if (ZIB._Loaded == false)
                 return;
 
-            new DirectoryInfo($"!{new FileInfo(ZIB._Archive).Name}").Create();
+            new DirectoryInfo($".{new FileInfo(ZIB._Archive).Name}").Create();
 
-            File.WriteAllBytes($"!{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", ZIB.Get_SpecificItemFromArchive(ARCHIVE_LV_ArchiveItems.SelectedItems[0].Text).ToArray());
+            File.WriteAllBytes($".{new FileInfo(ZIB._Archive).Name}/{ZIB._Items[ARCHIVE_LV_ArchiveItems.SelectedItems[0].Index].Name}", ZIB.Get_SpecificItemFromArchive(ARCHIVE_LV_ArchiveItems.SelectedItems[0].Text).ToArray());
         }
 
         private void ARCHIVE_BTN_ExtractZIB_Click(object sender, EventArgs e)
@@ -102,11 +102,11 @@ namespace WolfX
             if (ZIB._Loaded == false)
                 return;
 
-            new DirectoryInfo($"!{new FileInfo(ZIB._Archive).Name}").Create();
+            new DirectoryInfo($".{new FileInfo(ZIB._Archive).Name}").Create();
 
             foreach (var Item in ZIB._Items)
             {
-                File.WriteAllBytes($"!{new FileInfo(ZIB._Archive).Name}/{Item.Name}", ZIB.Get_SpecificItemFromArchive(Item.Name).ToArray());
+                File.WriteAllBytes($".{new FileInfo(ZIB._Archive).Name}/{Item.Name}", ZIB.Get_SpecificItemFromArchive(Item.Name).ToArray());
             }
 
             MessageBox.Show("Archive Extraction Complete", "Extraction Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
